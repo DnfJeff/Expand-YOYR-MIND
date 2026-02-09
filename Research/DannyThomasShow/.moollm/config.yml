@@ -5,7 +5,7 @@ bootstrap:
   world: WORLD.yml
   version: "0.1.0"
   engine_compatibility: "moollm >= 0.1"
-  
+
   # Reading protocol — progressive disclosure order
   reading_order:
     tier_1_glance:

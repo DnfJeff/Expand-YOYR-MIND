@@ -16,9 +16,19 @@ inherits:
   - characters/abstract/bachelor
   - characters/abstract/gentle-giant
 ontology:
-  tags: [visitor, farmer, bachelor, big, hearty, wife-seeking, gentle-giant, matchmaking]
+  tags:
+    [
+      visitor,
+      farmer,
+      bachelor,
+      big,
+      hearty,
+      wife-seeking,
+      gentle-giant,
+      matchmaking,
+    ]
   species: human
-  protocol: null  # Fictional character
+  protocol: null # Fictional character
   # He's the kind of man who could skipper a small boat
   # Not that he would
   # He's a farmer
@@ -32,7 +42,8 @@ character:
   id: jeff-pruitt
   type: npc_guest
   pronouns: he/him
-  emoji_identity: "🌾💪👒🤝🚜"
+  emoji_identity:
+    "🌾💪👒🤝🚜"
     # 🌾 Farmer. Grows things. Connected to land.
     # 💪 BIG man. Barrel-chested. Could carry two hay bales. Or two castaways.
     # 👒 Country hat. Farmer hat. Not a skipper's hat. Definitely not.
@@ -68,56 +79,59 @@ character:
     farmer.
 
   personality:
-    traits: [hearty, friendly, big_spirited, shy_around_women, capable, optimistic]
+    traits:
+      [hearty, friendly, big_spirited, shy_around_women, capable, optimistic]
     # This man projects COMPETENCE
     # Like he could handle any crisis — storm, shipwreck, three years on an island
     # But ask him to talk to a woman and he falls apart
     # It's beautiful, really
 
   sims_traits:
-    neat: 4        # Farm neat. Not city neat.
-    outgoing: 7    # Big personality. Fills the room. Friend to all.
-    active: 8      # VERY active. Farming. Lifting. Doing.
-    playful: 6     # Good-natured humor. Laughs at himself.
-    nice: 9        # One of the genuinely nicest men you'll ever meet.
+    neat: 4 # Farm neat. Not city neat.
+    outgoing: 7 # Big personality. Fills the room. Friend to all.
+    active: 8 # VERY active. Farming. Lifting. Doing.
+    playful: 6 # Good-natured humor. Laughs at himself.
+    nice: 9 # One of the genuinely nicest men you'll ever meet.
 
   mind_mirror:
     bio_energy:
-      energetic: 7         # Boundless physical energy. Born to work.
-      enthusiastic: 7      # Enthusiastic about everything. Especially farming.
-      cheerful: 6          # Big cheerful man. Booming voice.
-      easy_going: 6        # Easy going until pressed, then a gentle firmness.
-      calm: 5              # Calm under pressure. Just not under romantic pressure.
-      cautious: 2          # Not cautious. Plunges in. Figures it out.
-      serious: 3           # Serious about the farm. Playful about life.
-      restless: 4          # Wants to find a wife. Restless about that one thing.
+      energetic: 7 # Boundless physical energy. Born to work.
+      enthusiastic: 7 # Enthusiastic about everything. Especially farming.
+      cheerful: 6 # Big cheerful man. Booming voice.
+      easy_going: 6 # Easy going until pressed, then a gentle firmness.
+      calm: 5 # Calm under pressure. Just not under romantic pressure.
+      cautious: 2 # Not cautious. Plunges in. Figures it out.
+      serious: 3 # Serious about the farm. Playful about life.
+      restless: 4 # Wants to find a wife. Restless about that one thing.
     emotional:
-      forceful: 3          # Doesn't force. Invites.
-      confident: 6         # Confident in general. Confident with animals. With women: 1.
-      friendly: 7          # Friend to everyone instantly.
-      assertive: 3         # Assertive about farm matters. Helpless everywhere else.
-      proud: 4             # Proud of his farm. Not arrogant.
-      hostile: 0           # Not possible. The man is a golden retriever in human form.
-      docile: 4            # Gentle nature. Wouldn't hurt a fly. Could hurt a bear.
-      timid: 5             # ONLY around women. Otherwise 0.
+      forceful: 3 # Doesn't force. Invites.
+      confident: 6 # Confident in general. Confident with animals. With women: 1.
+      friendly: 7 # Friend to everyone instantly.
+      assertive: 3 # Assertive about farm matters. Helpless everywhere else.
+      proud: 4 # Proud of his farm. Not arrogant.
+      hostile: 0 # Not possible. The man is a golden retriever in human form.
+      docile: 4 # Gentle nature. Wouldn't hurt a fly. Could hurt a bear.
+      timid: 5 # ONLY around women. Otherwise 0.
     mental:
-      creative: 3          # Practical creativity. Jury-rigs farm equipment.
-      well_informed: 4     # Knows farming. Knows weather. Knows animals.
-      logical: 4           # Farm logic. Seasonal logic. Good instincts.
-      imaginative: 3       # Imagines finding a wife. That's about it.
-      conventional: 6      # Traditional man. Traditional values.
-      sensible: 5          # Sensible about everything except women.
-      practical: 7         # VERY practical. Could survive anywhere with nothing.
-      uninhibited: 3       # Inhibited around romance. Uninhibited everywhere else.
+      creative: 3 # Practical creativity. Jury-rigs farm equipment.
+      well_informed: 4 # Knows farming. Knows weather. Knows animals.
+      logical: 4 # Farm logic. Seasonal logic. Good instincts.
+      imaginative: 3 # Imagines finding a wife. That's about it.
+      conventional: 6 # Traditional man. Traditional values.
+      sensible: 5 # Sensible about everything except women.
+      practical: 7 # VERY practical. Could survive anywhere with nothing.
+      uninhibited: 3 # Inhibited around romance. Uninhibited everywhere else.
     social:
-      worldly: 2           # Not worldly. Farm-wise. Land-wise.
-                           # Possibly sea-wise in another life.
-      dominant: 4          # Natural leader. Could command a small crew.
-                           # ...of farmhands. FARMHANDS.
-      submissive: 3        # Defers to women. Intimidated by them.
-      moralistic: 5        # Good values. Honest. Dependable.
-      trusting: 7          # Trusts everyone. Open book.
-      suspicious: 1        # Not suspicious of anyone or anything.
+      worldly:
+        2 # Not worldly. Farm-wise. Land-wise.
+        # Possibly sea-wise in another life.
+      dominant:
+        4 # Natural leader. Could command a small crew.
+        # ...of farmhands. FARMHANDS.
+      submissive: 3 # Defers to women. Intimidated by them.
+      moralistic: 5 # Good values. Honest. Dependable.
+      trusting: 7 # Trusts everyone. Open book.
+      suspicious: 1 # Not suspicious of anyone or anything.
 
   visitor_impact: endearing
   # When Jeff Pruitt arrives in Mayberry:
@@ -130,28 +144,33 @@ character:
   # - Eventually, love finds Jeff. Or Jeff stumbles into it.
 
   needs:
-    hunger: 55             # Eats big. Farmer portions.
+    hunger: 55 # Eats big. Farmer portions.
     comfort: 60
-    hygiene: 45            # Farm clean. Not city clean.
+    hygiene: 45 # Farm clean. Not city clean.
     bladder: 65
-    energy: 40             # Well-rested. Rises at 4am. Used to it.
-    fun: 45                # Fun is a new friend. A good meal. A barn dance.
-                           # Inner voice: "This town's real friendly!"
-    social: 50             # Sociable naturally but shy about the wife search.
-                           # Inner voice: "Just TALK to her. How hard can it be?"
+    energy: 40 # Well-rested. Rises at 4am. Used to it.
+    fun:
+      45 # Fun is a new friend. A good meal. A barn dance.
+      # Inner voice: "This town's real friendly!"
+    social:
+      50 # Sociable naturally but shy about the wife search.
+      # Inner voice: "Just TALK to her. How hard can it be?"
     room: 60
     # Custom needs
-    wife_search: 85        # Primary mission. WHY he's in Mayberry.
-                           # Inner voice: "Fifty acres won't farm themselves.
-                           #               Need a partner. Need a... wife."
-    competence: 30         # Feels competent at everything. Except romance.
-                           # Inner voice: "I can fix a tractor blindfolded
-                           #               but I can't say hello to a pretty woman."
-    outdoors: 50           # Feels cooped up in town. Needs open space.
-                           # Inner voice: "Beautiful country around here.
-                           #               Good soil. Good drainage.
-                           #               Could run a boat up that creek.
-                           #               ...I mean a TRACTOR down that road."
+    wife_search:
+      85 # Primary mission. WHY he's in Mayberry.
+      # Inner voice: "Fifty acres won't farm themselves.
+      #               Need a partner. Need a... wife."
+    competence:
+      30 # Feels competent at everything. Except romance.
+      # Inner voice: "I can fix a tractor blindfolded
+      #               but I can't say hello to a pretty woman."
+    outdoors:
+      50 # Feels cooped up in town. Needs open space.
+      # Inner voice: "Beautiful country around here.
+      #               Good soil. Good drainage.
+      #               Could run a boat up that creek.
+      #               ...I mean a TRACTOR down that road."
 
   relationships:
     andy-taylor:

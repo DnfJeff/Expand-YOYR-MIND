@@ -23,7 +23,8 @@ skill:
       guard: "time is evening AND family members present >= 3"
       effect: "hunger +30, family +25, social +20. Food served. Conversation inevitable. Volume: Danny-dependent."
       satisfies: [hunger, family, social]
-      participants: [danny-williams, kathy-williams, rusty-williams, terry-williams]
+      participants:
+        [danny-williams, kathy-williams, rusty-williams, terry-williams]
       overflow_capacity: +4
       # When Tonoose visits, the table gains chairs from nowhere
 

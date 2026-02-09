@@ -76,7 +76,8 @@ world:
         starts: 12:00PM
         ends: 6:00PM
         tone_shift: slow_heat_quiet_streets
-        typical_locations: [bluebird-diner, wally-filling-station, walkers-drugstore]
+        typical_locations:
+          [bluebird-diner, wally-filling-station, walkers-drugstore]
       evening:
         starts: 6:00PM
         ends: 10:00PM

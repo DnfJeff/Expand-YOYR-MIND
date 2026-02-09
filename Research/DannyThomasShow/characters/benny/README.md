@@ -1,6 +1,6 @@
 # Benny — Danny's Accompanist
 
-> *"I'm just the piano player."*  
+> _"I'm just the piano player."_  
 > (He is never JUST the piano player.)
 
 ## Role in the World
@@ -19,13 +19,13 @@ Benny says less than Danny. Means more. His humor is a scalpel where Danny's is 
 
 ## Key Relationships
 
-| Character | Dynamic |
-|-----------|---------|
-| Danny Williams | Musical partner, best friend — 20+ years at that piano |
+| Character      | Dynamic                                                          |
+| -------------- | ---------------------------------------------------------------- |
+| Danny Williams | Musical partner, best friend — 20+ years at that piano           |
 | Rusty Williams | Teaches timing — musical and comedic. The quiet way into showbiz |
-| Terry Williams | Safe adult to talk to without dramatic reactions |
-| Kathy Williams | Trusted family friend. Doesn't add volume. |
-| Charley Halper | Both manage Danny. Mutual respect. |
+| Terry Williams | Safe adult to talk to without dramatic reactions                 |
+| Kathy Williams | Trusted family friend. Doesn't add volume.                       |
+| Charley Halper | Both manage Danny. Mutual respect.                               |
 
 ## File
 

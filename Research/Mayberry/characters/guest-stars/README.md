@@ -4,12 +4,12 @@ Visitors to Mayberry are rare and significant. In a town where everybody knows e
 
 ## Guest Star Index
 
-| Character | Role | Episode(s) | Visitor Impact |
-|-----------|------|------------|----------------|
-| [Marvin Jessup](marvin-jessup/) | Young drifter | "The Baby" / Jury episode | Memorable — intensity passing through |
-| [Ellen Brown](ellen-brown/) | Manicurist at Floyd's | "The Manicurist" | Romantic earthquake — every man in town suddenly cares about cuticles |
-| [Jeff Pruitt](jeff-pruitt/) | Bachelor farmer | "The Farmer Takes a Wife" | Endearing — big heart, zero courtship skills |
-| [Ronald Bailey](ronald-bailey/) | Spoiled rich kid | "Bailey's Bad Boy" | Confrontational then transformative — Andy breaks through |
+| Character                       | Role                  | Episode(s)                | Visitor Impact                                                        |
+| ------------------------------- | --------------------- | ------------------------- | --------------------------------------------------------------------- |
+| [Marvin Jessup](marvin-jessup/) | Young drifter         | "The Baby" / Jury episode | Memorable — intensity passing through                                 |
+| [Ellen Brown](ellen-brown/)     | Manicurist at Floyd's | "The Manicurist"          | Romantic earthquake — every man in town suddenly cares about cuticles |
+| [Jeff Pruitt](jeff-pruitt/)     | Bachelor farmer       | "The Farmer Takes a Wife" | Endearing — big heart, zero courtship skills                          |
+| [Ronald Bailey](ronald-bailey/) | Spoiled rich kid      | "Bailey's Bad Boy"        | Confrontational then transformative — Andy breaks through             |
 
 ## The Mayberry Visitor Pattern
 

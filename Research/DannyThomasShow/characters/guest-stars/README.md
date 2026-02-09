@@ -4,13 +4,13 @@ The Danny Thomas Show was a magnet for the biggest names in entertainment. These
 
 ## Guest Star Index
 
-| Character | Played By | Episode(s) | Visitor Impact |
-|-----------|-----------|------------|----------------|
-| [Bob Hope](bob-hope/) | Bob Hope | Multiple appearances | Elevated — comedy royalty meets comedy royalty |
-| [Dean Martin](dean-martin/) | Dean Martin | "Terry's Crush" | Magnetic — the coolest man alive meets a teenage fan |
-| [Lucy & Desi](lucy-and-desi/) | Lucille Ball & Desi Arnaz | Crossover special (1959) | Catastrophic — Lucy's schemes + Danny's apartment = disaster |
-| [Sammy Davis Jr.](sammy-davis-jr/) | Sammy Davis Jr. | Multiple appearances | Electric — multi-talent who could do everything Danny does, better |
-| [Jack Benny](jack-benny/) | Jack Benny | "Jack Benny Takes Danny's Job" (1958) | Surgical — timing deity who conquers through silence |
+| Character                          | Played By                 | Episode(s)                            | Visitor Impact                                                     |
+| ---------------------------------- | ------------------------- | ------------------------------------- | ------------------------------------------------------------------ |
+| [Bob Hope](bob-hope/)              | Bob Hope                  | Multiple appearances                  | Elevated — comedy royalty meets comedy royalty                     |
+| [Dean Martin](dean-martin/)        | Dean Martin               | "Terry's Crush"                       | Magnetic — the coolest man alive meets a teenage fan               |
+| [Lucy & Desi](lucy-and-desi/)      | Lucille Ball & Desi Arnaz | Crossover special (1959)              | Catastrophic — Lucy's schemes + Danny's apartment = disaster       |
+| [Sammy Davis Jr.](sammy-davis-jr/) | Sammy Davis Jr.           | Multiple appearances                  | Electric — multi-talent who could do everything Danny does, better |
+| [Jack Benny](jack-benny/)          | Jack Benny                | "Jack Benny Takes Danny's Job" (1958) | Surgical — timing deity who conquers through silence               |
 
 ## The Guest Star Pattern
 

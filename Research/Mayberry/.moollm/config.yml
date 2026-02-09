@@ -5,7 +5,7 @@ bootstrap:
   world: WORLD.yml
   version: "0.1.0"
   engine_compatibility: "moollm >= 0.1"
-  
+
   # Reading protocol — progressive disclosure order
   reading_order:
     # The engine reads the cheapest files first
@@ -30,14 +30,14 @@ bootstrap:
   # What to load on cold start
   cold_start:
     load_first:
-      - WORLD.yml                    # World rules and simulation config
-      - characters/**/GLANCE.yml     # All character mipmaps
-      - "**/ROOM.yml"                # Room definitions (with container inheritance)
+      - WORLD.yml # World rules and simulation config
+      - characters/**/GLANCE.yml # All character mipmaps
+      - "**/ROOM.yml" # Room definitions (with container inheritance)
     load_on_demand:
-      - characters/**/CHARACTER.yml  # Full character data (when character acts)
-      - "**/CARD.yml"                # Room advertisements (when character enters room)
-      - characters/**/GLANCE.yml     # Already loaded, but refresh check
-    
+      - characters/**/CHARACTER.yml # Full character data (when character acts)
+      - "**/CARD.yml" # Room advertisements (when character enters room)
+      - characters/**/GLANCE.yml # Already loaded, but refresh check
+
   # Warm start — resume from saved state
   warm_start:
     state_file: .moollm/state.yml
@@ -58,4 +58,4 @@ bootstrap:
     max_concurrent_locations: 3
     ad_evaluation_strategy: score_descending_guard_checked
     epoch_boundary_action: persist_state
-    speed_of_light: 8  # max turns per LLM call
+    speed_of_light: 8 # max turns per LLM call

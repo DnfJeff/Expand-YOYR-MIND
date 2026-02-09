@@ -18,7 +18,7 @@ Each entry follows this structure:
 
 **Advertisements evaluated:**
 - AD_NAME (score: N, guard: passed/failed) → selected/skipped
-  
+
 **Actions taken:**
 - character_id: action_description
   - effect: what_changed
@@ -35,4 +35,3 @@ Each entry follows this structure:
 ## Session Log
 
 <!-- Simulation entries append below this line -->
-

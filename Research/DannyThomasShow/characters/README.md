@@ -24,22 +24,22 @@ The cast breaks into three tiers: the core family who live in the apartment, the
 
 ### Professional Circle
 
-| Character                   | Role                  | Function                                   |
-| --------------------------- | --------------------- | ------------------------------------------ |
-| [Benny](benny/)             | Accompanist/Sidekick  | Danny's musical other half, uncle to kids  |
-| [Phil Brokaw](phil-brokaw/) | Copa Club manager     | Danny's professional anchor                |
+| Character                   | Role                 | Function                                  |
+| --------------------------- | -------------------- | ----------------------------------------- |
+| [Benny](benny/)             | Accompanist/Sidekick | Danny's musical other half, uncle to kids |
+| [Phil Brokaw](phil-brokaw/) | Copa Club manager    | Danny's professional anchor               |
 
 ### Guest Stars
 
 The biggest names in showbiz visiting Danny's world. See [guest-stars/](guest-stars/) for full details.
 
-| Character | Visitor Impact |
-|-----------|----------------|
-| [Bob Hope](guest-stars/bob-hope/) | Elevated — comedy royalty meets comedy royalty |
-| [Dean Martin](guest-stars/dean-martin/) | Magnetic — the coolest man alive |
-| [Lucy & Desi](guest-stars/lucy-and-desi/) | Catastrophic — Lucy's schemes meet Danny's apartment |
-| [Sammy Davis Jr.](guest-stars/sammy-davis-jr/) | Electric — does everything Danny does, better |
-| [Jack Benny](guest-stars/jack-benny/) | Surgical — conquers through silence |
+| Character                                      | Visitor Impact                                       |
+| ---------------------------------------------- | ---------------------------------------------------- |
+| [Bob Hope](guest-stars/bob-hope/)              | Elevated — comedy royalty meets comedy royalty       |
+| [Dean Martin](guest-stars/dean-martin/)        | Magnetic — the coolest man alive                     |
+| [Lucy & Desi](guest-stars/lucy-and-desi/)      | Catastrophic — Lucy's schemes meet Danny's apartment |
+| [Sammy Davis Jr.](guest-stars/sammy-davis-jr/) | Electric — does everything Danny does, better        |
+| [Jack Benny](guest-stars/jack-benny/)          | Surgical — conquers through silence                  |
 
 ## The Visitor System
 

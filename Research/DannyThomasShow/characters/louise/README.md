@@ -1,6 +1,6 @@
 # Louise — The Williams Family Housekeeper
 
-> *"Mm-hmm."*  
+> _"Mm-hmm."_  
 > (Translation varies. Never good for Danny.)
 
 ## Role in the World
@@ -20,14 +20,14 @@ Louise sees through Danny's performances instantly. She's been here long enough 
 
 ## Key Relationships
 
-| Character | Dynamic |
-|-----------|---------|
-| Danny Williams | Employer on paper. She manages HIM. THE LOOK stops everything. |
-| Kathy Williams | Co-pilots the household. Mutual respect. Shared eye-rolls. |
+| Character      | Dynamic                                                          |
+| -------------- | ---------------------------------------------------------------- |
+| Danny Williams | Employer on paper. She manages HIM. THE LOOK stops everything.   |
+| Kathy Williams | Co-pilots the household. Mutual respect. Shared eye-rolls.       |
 | Rusty Williams | Gets him to clean his room. THE LOOK works on ten-year-olds too. |
-| Terry Williams | Safe confidante. Listens. Advises. Doesn't gossip. |
-| Uncle Tonoose | Tolerant coexistence. He stays out of her kitchen. |
-| Benny | Only visitor who doesn't make more work. She appreciates this. |
+| Terry Williams | Safe confidante. Listens. Advises. Doesn't gossip.               |
+| Uncle Tonoose  | Tolerant coexistence. He stays out of her kitchen.               |
+| Benny          | Only visitor who doesn't make more work. She appreciates this.   |
 
 ## Historical Note
 

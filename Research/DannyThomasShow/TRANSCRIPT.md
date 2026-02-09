@@ -35,15 +35,16 @@ The transcript reads like a teleplay:
 ## Guidelines
 
 - Dialogue should match each character's voice (see CHARACTER.yml `dialogue_style`)
-- Stage directions use *italics*
+- Stage directions use _italics_
 - Character names in **bold** before dialogue
 - Scene breaks use `---` between scenes
 - Each scene names its location (matches ROOM.yml `room.name`)
 - Narrator notes in `> blockquotes` — used sparingly
 - Danny's ceiling monologues get their own formatting:
+
   ```
   *Danny looks up at the ceiling.*
-  
+
   **DANNY:** *(to the ceiling)* "Why me? Of all the fathers..."
   ```
 
@@ -52,4 +53,3 @@ The transcript reads like a teleplay:
 ## Transcript
 
 <!-- Simulation transcript appends below this line -->
-
