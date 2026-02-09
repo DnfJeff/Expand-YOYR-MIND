@@ -24,18 +24,18 @@ room:
     # Danny does not govern here
     # He is a guest in his own kitchen
     # He knows this
-    
+
     cultural_blend: true
     # The spice rack tells the story:
     # Cumin next to oregano
     # Za'atar next to garlic salt
     # Two food traditions in one kitchen
-    
+
     diplomacy_center: true
     # Kathy and Bunny solve EVERYTHING over coffee here
     # While Danny and Charley yell in the living room,
     # the actual solutions happen at this table
-    
+
     tonoose_override: true
     # When Tonoose visits, he takes over this kitchen
     # Kathy lets him because fighting it is pointless

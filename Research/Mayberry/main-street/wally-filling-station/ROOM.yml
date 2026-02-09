@@ -23,7 +23,7 @@ room:
     sound: radio_and_tools
     smell: gasoline_and_oil
     mechanical_competence: high
-    # The Pyle cousins may seem dim but they can rebuild 
+    # The Pyle cousins may seem dim but they can rebuild
     # any engine in town blindfolded
 
   occupants:

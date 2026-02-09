@@ -10,8 +10,8 @@ These locations are **Tardis directories** — they're sparse in files but repre
 
 New York serves the show the way Mt. Pilot serves Mayberry — as the wider world that provides contrast and pressure. But where Mt. Pilot is a boundary (the edge of Mayberry's gentle influence), New York is an ocean (the chaos that the apartment floats in).
 
-| Space | Function |
-|-------|----------|
-| [Theater District](theater-district/) | Danny's professional world — Copa, agents, other clubs |
-| [Central Park](central-park/) | The family's outdoor space — the closest thing to Mayberry |
-| [Neighborhood](neighborhood/) | The everyday — delis, dry cleaners, the walk to the subway |
+| Space                                 | Function                                                   |
+| ------------------------------------- | ---------------------------------------------------------- |
+| [Theater District](theater-district/) | Danny's professional world — Copa, agents, other clubs     |
+| [Central Park](central-park/)         | The family's outdoor space — the closest thing to Mayberry |
+| [Neighborhood](neighborhood/)         | The everyday — delis, dry cleaners, the walk to the subway |

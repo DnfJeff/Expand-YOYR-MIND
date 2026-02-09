@@ -1,6 +1,6 @@
 # Make Room for Daddy — The Danny Thomas Show
 
-> *"No matter how big the world gets, it all comes back to that apartment."*
+> _"No matter how big the world gets, it all comes back to that apartment."_
 
 **Setting:** New York City (primarily Manhattan)
 **Era:** 1953–1965
@@ -14,8 +14,8 @@ This directory IS Danny Williams' world. It's a very different world than Mayber
 
 The Danny Thomas Show has fewer named locations but a completely different social architecture:
 
-- **Mayberry** is *centripetal* — everything pulls inward toward Main Street and the porch
-- **Danny's world** is *centrifugal* — Danny is constantly being pulled outward by work, the city, visitors, and obligations, then snapping back to the apartment like a rubber band
+- **Mayberry** is _centripetal_ — everything pulls inward toward Main Street and the porch
+- **Danny's world** is _centrifugal_ — Danny is constantly being pulled outward by work, the city, visitors, and obligations, then snapping back to the apartment like a rubber band
 
 ```
 DannyThomasShow/
@@ -52,14 +52,14 @@ DannyThomasShow/
 
 Mayberry is static and stable. Danny's world is dynamic and chaotic. The visitor system is the engine:
 
-| Dynamic | Mayberry | Danny Thomas |
-|---------|----------|--------------|
-| **Social pulse** | Slow, gossip-driven | Fast, visitor-driven |
-| **Home function** | Rest and reflection | Battleground and refuge |
-| **Outside world** | Kept at arm's length | Constantly invading |
-| **Characters** | Permanent residents | Core family + rotating guests |
-| **Conflict source** | Misunderstandings | Obligations colliding |
-| **Resolution** | Porch conversations | Danny's exasperated surrender |
+| Dynamic             | Mayberry             | Danny Thomas                  |
+| ------------------- | -------------------- | ----------------------------- |
+| **Social pulse**    | Slow, gossip-driven  | Fast, visitor-driven          |
+| **Home function**   | Rest and reflection  | Battleground and refuge       |
+| **Outside world**   | Kept at arm's length | Constantly invading           |
+| **Characters**      | Permanent residents  | Core family + rotating guests |
+| **Conflict source** | Misunderstandings    | Obligations colliding         |
+| **Resolution**      | Porch conversations  | Danny's exasperated surrender |
 
 ## The Visitor Pattern
 

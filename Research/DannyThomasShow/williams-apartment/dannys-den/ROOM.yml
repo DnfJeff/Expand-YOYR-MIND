@@ -28,13 +28,13 @@ room:
     # Or Kathy has a question
     # Or the doorbell rings
     # Or Tonoose finds him
-    
+
     privacy: theoretical
     # The den has a door
     # The door has no lock
     # Even if it had a lock, it wouldn't work
     # Because the Williams family doesn't believe in closed doors
-    
+
     contrast_with_fishing_hole: true
     # Andy's fishing hole WORKS as a retreat
     # Because it's miles from town

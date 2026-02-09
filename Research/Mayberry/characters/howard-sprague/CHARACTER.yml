@@ -11,11 +11,11 @@ character:
     # His mother's opinion governs his life
 
   sims_traits:
-    neat: 9        # Everything in its place
-    outgoing: 4    # Wants connection, afraid to seek it
-    active: 3      # Very sedentary
-    playful: 3     # Serious by default
-    nice: 8        # Unfailingly polite
+    neat: 9 # Everything in its place
+    outgoing: 4 # Wants connection, afraid to seek it
+    active: 3 # Very sedentary
+    playful: 3 # Serious by default
+    nice: 8 # Unfailingly polite
 
   needs:
     order:

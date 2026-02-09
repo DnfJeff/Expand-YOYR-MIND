@@ -8,4 +8,4 @@ No arrest. No booking. No paperwork. No judgment. The system works because Otis 
 
 Barney finds this arrangement personally offensive. Andy finds it entirely reasonable.
 
-**The design insight:** Otis demonstrates *self-check-in architecture* — a system where the user manages their own state transitions. Nobody forces Otis through the system; he navigates it voluntarily. In MOOLLM terms, Otis is a character whose autonomous behavior loop includes self-correction without external intervention.
+**The design insight:** Otis demonstrates _self-check-in architecture_ — a system where the user manages their own state transitions. Nobody forces Otis through the system; he navigates it voluntarily. In MOOLLM terms, Otis is a character whose autonomous behavior loop includes self-correction without external intervention.

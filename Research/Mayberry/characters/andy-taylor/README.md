@@ -6,4 +6,4 @@ Andy doesn't carry a gun. He doesn't need one. He governs through listening, thr
 
 He's a single father raising Opie with the help of his Aunt Bee. He fishes at Myers Lake when he needs to think. He sits on the front porch when he needs to talk. He lets Barney believe he's indispensable, because that's what Barney needs.
 
-**The design insight:** Andy is the *governance model*. He demonstrates that authority works best when it's invisible — when the system runs on empathy and trust rather than rules and enforcement. In MOOLLM terms, Andy is the ethical framing that cascades down through every room in Mayberry.
+**The design insight:** Andy is the _governance model_. He demonstrates that authority works best when it's invisible — when the system runs on empathy and trust rather than rules and enforcement. In MOOLLM terms, Andy is the ethical framing that cascades down through every room in Mayberry.

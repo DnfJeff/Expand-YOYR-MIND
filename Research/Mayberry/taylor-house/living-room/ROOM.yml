@@ -13,7 +13,7 @@ room:
     porch: ../front-porch
     kitchen: ../kitchen
     upstairs: ../opies-room
-    front_door: ../  # Taylor House exterior
+    front_door: ../ # Taylor House exterior
 
   objects:
     - sofa.yml

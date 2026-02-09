@@ -7,21 +7,21 @@ skill:
       satisfies: [hunger, comfort]
       description: "Sit-down meal or counter service"
       participants: [any]
-    
+
     COFFEE:
       satisfies: [energy, social, routine]
       description: "Cup of coffee at the counter"
       participants: [any]
       duration: 15_minutes_to_forever
       # Nobody gets rushed out of the Bluebird
-    
+
     MEET:
       satisfies: [social, planning]
       description: "Meet someone at the diner for a conversation"
       participants: [any, any]
       # Booths provide semi-privacy
       # Counter is public performance
-    
+
     PIE:
       satisfies: [comfort, treat]
       description: "A slice of whatever's in the case"
@@ -38,7 +38,7 @@ skill:
         Barney picks it up. His voice drops half an octave.
         His hand cups the receiver. For thirty seconds he's 
         not the nervous deputy — he's someone charming.
-        
+
         The call always ends. Thelma Lou never finds out.
         Except she already knows.
       properties:

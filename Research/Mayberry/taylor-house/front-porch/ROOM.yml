@@ -11,7 +11,7 @@ room:
 
   exits:
     inside: ../living-room
-    yard: ../  # Back to Taylor House exterior
+    yard: ../ # Back to Taylor House exterior
 
   objects:
     - rocking-chairs.yml

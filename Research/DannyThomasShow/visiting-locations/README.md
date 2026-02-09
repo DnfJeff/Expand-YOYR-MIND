@@ -16,7 +16,7 @@ visiting-locations/
 ├── miami-gig/          # Created when Danny books a show
 │   ├── ROOM.yml
 │   └── CARD.yml
-├── tonoose-village/    # Created when storyline visits Lebanon  
+├── tonoose-village/    # Created when storyline visits Lebanon
 │   ├── ROOM.yml
 │   └── CARD.yml
 └── chicago-friend/     # Created for a visiting friend's home
@@ -29,7 +29,7 @@ Each directory is created on demand, used for its story, and remains in the tree
 
 Mayberry doesn't need this. Mayberry's locations are fixed because the town is fixed. The drama comes from the same people in the same places having new interactions.
 
-Danny's world needs this because the drama comes from *new elements* entering a fixed space. The apartment is the constant. The visitors are the variables. And sometimes the visitors bring their own rooms.
+Danny's world needs this because the drama comes from _new elements_ entering a fixed space. The apartment is the constant. The visitors are the variables. And sometimes the visitors bring their own rooms.
 
 ## The Visitor Pattern
 

@@ -12,11 +12,11 @@ character:
     # This is simultaneously Danny's greatest pride and terror
 
   sims_traits:
-    neat: 3        # He's ten
-    outgoing: 8    # Inherited Danny's volume
-    active: 8      # Can't sit still
-    playful: 9     # Everything is a bit
-    nice: 7        # Good kid underneath the wisecracks
+    neat: 3 # He's ten
+    outgoing: 8 # Inherited Danny's volume
+    active: 8 # Can't sit still
+    playful: 9 # Everything is a bit
+    nice: 7 # Good kid underneath the wisecracks
 
   needs:
     attention:

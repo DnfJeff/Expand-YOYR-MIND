@@ -17,11 +17,11 @@ character:
     # Every visit is an occupation
 
   sims_traits:
-    neat: 2         # Total chaos in his wake
-    outgoing: 10    # Cannot be contained by social convention
-    active: 8       # High energy despite advanced age
-    playful: 7      # Everything is a production
-    nice: 6         # Means well, steamrolls everyone
+    neat: 2 # Total chaos in his wake
+    outgoing: 10 # Cannot be contained by social convention
+    active: 8 # High energy despite advanced age
+    playful: 7 # Everything is a production
+    nice: 6 # Means well, steamrolls everyone
 
   visitor_impact: seismic
   # When Tonoose is present:
@@ -78,7 +78,7 @@ character:
     # "I am LEAVING this house!"
     # *Returns 10 minutes later for his hat*
     # "I forgot my hat. Also you're wrong about Terry's boyfriend."
-    
+
     cultural_overlay:
       proverbs: frequent
       # "In the old country, we say..."

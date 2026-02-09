@@ -11,7 +11,7 @@ room:
   exits:
     living_room: ../living-room
     porch: ../front-porch
-    back_door: ../  # Back yard
+    back_door: ../ # Back yard
 
   objects:
     - stove.yml

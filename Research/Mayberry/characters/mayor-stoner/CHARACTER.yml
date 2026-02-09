@@ -4,8 +4,8 @@ character:
   home: characters/mayor-stoner/
   location: main-street/courthouse
 
-  # Mayor Stoner is the political layer in a town that 
-  # doesn't think of itself as political. He brings the 
+  # Mayor Stoner is the political layer in a town that
+  # doesn't think of itself as political. He brings the
   # concerns of optics, elections, outside perception —
   # everything Andy instinctively ignores.
 
@@ -18,11 +18,11 @@ character:
     # That gap is the entire dynamic.
 
   sims_traits:
-    neat: 9        # Three-piece suit in a town of overalls
-    outgoing: 7    # Glad-hander, loves working a room
-    active: 4      # More talk than action
-    playful: 2     # Humor escapes him entirely
-    nice: 4        # Not mean, just self-centered
+    neat: 9 # Three-piece suit in a town of overalls
+    outgoing: 7 # Glad-hander, loves working a room
+    active: 4 # More talk than action
+    playful: 2 # Humor escapes him entirely
+    nice: 4 # Not mean, just self-centered
 
   needs:
     status:
@@ -50,7 +50,7 @@ character:
         town and Stoner runs the ribbon-cuttings. Stoner 
         knows this, resents it, and can't change it because 
         everybody loves Andy and merely tolerates Stoner.
-        
+
         Their conflict is structural: Stoner wants to 
         manage situations for optics. Andy wants to manage 
         them for people. When a reporter comes to town, 
@@ -85,7 +85,7 @@ character:
     # He has the title. Andy has the town.
     # The gap between positional and actual authority
     # is the comedy.
-    
+
     catchphrases:
       - "Now see here, Andy—"
       - "The people of this community—"
@@ -100,7 +100,7 @@ character:
       newspaper reporters, and "what will people think?" 
       enters a town that normally operates on "what's the 
       right thing to do?"
-      
+
       Without the mayor, Mayberry has no friction between 
       its internal values and external expectations. Stoner 
       IS that friction. He's not the villain — he's the 

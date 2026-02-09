@@ -1,6 +1,6 @@
 # Mayberry, North Carolina
 
-> *"You know what I like about Mayberry? Everything."*
+> _"You know what I like about Mayberry? Everything."_
 
 **Population:** ~5,000 (give or take, depending on who's visiting)
 **Era:** Early 1960s
@@ -73,13 +73,13 @@ This is prototype-based inheritance from the Self language, applied to a filesys
 
 ## Key Dynamics
 
-| Dynamic | How It Works | Where It Lives |
-|---------|-------------|----------------|
-| **Town gossip** | Information spoken at Floyd's propagates outward | `floyds-barbershop/ROOM.yml` → `ambient.gossip_flow` |
-| **Andy's governance** | Conflicts resolve through empathy, not authority | `characters/andy-taylor/CHARACTER.yml` |
-| **Otis's routine** | Self-check-in/check-out from the jail cell | `courthouse/jail-cell/ROOM.yml` |
-| **Front porch life** | Evening conversations drive the show's heart | `taylor-house/front-porch/ROOM.yml` |
-| **The lake escape** | When Andy needs to think, he goes fishing | `myers-lake/fishing-hole/ROOM.yml` |
+| Dynamic               | How It Works                                     | Where It Lives                                       |
+| --------------------- | ------------------------------------------------ | ---------------------------------------------------- |
+| **Town gossip**       | Information spoken at Floyd's propagates outward | `floyds-barbershop/ROOM.yml` → `ambient.gossip_flow` |
+| **Andy's governance** | Conflicts resolve through empathy, not authority | `characters/andy-taylor/CHARACTER.yml`               |
+| **Otis's routine**    | Self-check-in/check-out from the jail cell       | `courthouse/jail-cell/ROOM.yml`                      |
+| **Front porch life**  | Evening conversations drive the show's heart     | `taylor-house/front-porch/ROOM.yml`                  |
+| **The lake escape**   | When Andy needs to think, he goes fishing        | `myers-lake/fishing-hole/ROOM.yml`                   |
 
 ## Characters Home vs. Location
 

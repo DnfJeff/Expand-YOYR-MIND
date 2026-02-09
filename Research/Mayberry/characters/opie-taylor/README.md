@@ -8,4 +8,4 @@ Opie is the audience's proxy. When he learns something, we learn it. When he str
 
 He lives for fishing at the lake with his Pa, playing with his friends, and being taken seriously by the adults.
 
-**The design insight:** Opie represents the *Play-Learn-Lift cycle*. He plays (fishing, exploring), learns (moral lessons through experience), and lifts (internalizes the principles). He's Papert's constructionism in a straw hat.
+**The design insight:** Opie represents the _Play-Learn-Lift cycle_. He plays (fishing, exploring), learns (moral lessons through experience), and lifts (internalizes the principles). He's Papert's constructionism in a straw hat.

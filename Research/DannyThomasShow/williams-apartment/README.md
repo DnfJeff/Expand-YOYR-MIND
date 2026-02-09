@@ -8,12 +8,12 @@ The apartment serves a fundamentally different purpose than the Taylor house. Th
 
 ## Room Functions
 
-| Room | Function | Contrast with Mayberry |
-|------|----------|----------------------|
-| **Living Room** | Social battlefield, visitor reception | Taylor porch = peace; this = chaos |
-| **Kitchen** | Kathy's domain, food diplomacy | Aunt Bee's = nurturing; Kathy's = strategic |
-| **Danny's Den** | Failed retreat | Andy's fishing hole works; Danny's den doesn't |
-| **Kids' Rooms** | Growth and refuge | Similar to Opie's room but doubled |
-| **Building Lobby** | Perimeter defense | No Mayberry equivalent — Mayberry has no gates |
+| Room               | Function                              | Contrast with Mayberry                         |
+| ------------------ | ------------------------------------- | ---------------------------------------------- |
+| **Living Room**    | Social battlefield, visitor reception | Taylor porch = peace; this = chaos             |
+| **Kitchen**        | Kathy's domain, food diplomacy        | Aunt Bee's = nurturing; Kathy's = strategic    |
+| **Danny's Den**    | Failed retreat                        | Andy's fishing hole works; Danny's den doesn't |
+| **Kids' Rooms**    | Growth and refuge                     | Similar to Opie's room but doubled             |
+| **Building Lobby** | Perimeter defense                     | No Mayberry equivalent — Mayberry has no gates |
 
 The key architectural insight: Danny's apartment has **layers of defense** (lobby → front door → living room → den) because the outside world is constantly trying to get in. Mayberry doesn't need defense because the outside world is kept at arm's length by geography and culture.

@@ -15,8 +15,8 @@ character:
     neat: 9
     outgoing: 7
     active: 5
-    playful: 3        # Very serious about competitions
-    nice: 6            # Nice enough, but will win
+    playful: 3 # Very serious about competitions
+    nice: 6 # Nice enough, but will win
 
   needs:
     status:

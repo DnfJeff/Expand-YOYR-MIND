@@ -10,7 +10,7 @@ room:
 
   exits:
     fishing_hole: fishing-hole/
-    road: ../main-street  # Back toward town
+    road: ../main-street # Back toward town
 
   ambient:
     sound: birds_water_wind

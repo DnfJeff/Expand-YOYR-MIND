@@ -2,7 +2,7 @@
 
 **Schoolteacher** — the only person in Mayberry who regularly tells Andy Taylor he's wrong.
 
-Helen arrived in Mayberry as a teacher and became Andy's romantic interest, but calling her "Andy's girlfriend" misses the point entirely. Helen is smart, self-possessed, and independent in a way that nobody else in Mayberry quite is. She doesn't need Andy. She doesn't need Mayberry. She *chose* both, and she chose them on her terms.
+Helen arrived in Mayberry as a teacher and became Andy's romantic interest, but calling her "Andy's girlfriend" misses the point entirely. Helen is smart, self-possessed, and independent in a way that nobody else in Mayberry quite is. She doesn't need Andy. She doesn't need Mayberry. She _chose_ both, and she chose them on her terms.
 
 What makes Helen essential is that she doesn't defer to the badge. Every other character in Mayberry — even Barney, even Aunt Bee — orbits Andy's gentle authority. Helen stands outside that gravity. She has her own domain (the schoolhouse), her own expertise (education), and her own opinions (strong ones). When she and Andy disagree, it's a real disagreement between equals. Andy loves that about her, even when it frustrates him.
 

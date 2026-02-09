@@ -13,11 +13,11 @@ character:
     # There's dignity in honest self-assessment
 
   sims_traits:
-    neat: 3        # Not his priority
-    outgoing: 5    # Amiable when sober, quiet when not
-    active: 2      # Mostly horizontal
-    playful: 5     # Has a dry wit when conscious
-    nice: 8        # Wouldn't hurt a fly
+    neat: 3 # Not his priority
+    outgoing: 5 # Amiable when sober, quiet when not
+    active: 2 # Mostly horizontal
+    playful: 5 # Has a dry wit when conscious
+    nice: 8 # Wouldn't hurt a fly
 
   needs:
     drink:

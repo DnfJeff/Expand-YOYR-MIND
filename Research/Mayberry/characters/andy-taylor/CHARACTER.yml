@@ -11,11 +11,11 @@ character:
     # He leads by making others feel heard
 
   sims_traits:
-    neat: 5        # Moderately tidy — not fussy
-    outgoing: 7    # Social but values solitude
-    active: 4      # Laid-back, moves when it matters
-    playful: 6     # Dry humor, guitar on the porch
-    nice: 9        # The kindest man in town
+    neat: 5 # Moderately tidy — not fussy
+    outgoing: 7 # Social but values solitude
+    active: 4 # Laid-back, moves when it matters
+    playful: 6 # Dry humor, guitar on the porch
+    nice: 9 # The kindest man in town
 
   needs:
     duty:

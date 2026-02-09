@@ -8,4 +8,4 @@ But Aunt Bee is not wallpaper. She enters pickle contests and takes it personall
 
 She's the emotional infrastructure of the Taylor house. Andy and Opie can go fishing because Bee holds down the fort. The porch conversations happen because Bee made the iced tea.
 
-**The design insight:** Aunt Bee is the *ambient skill* — always running, never explicitly called. Her influence cascades through the Taylor house the way WORLD.yml properties cascade through the directory tree. You don't invoke "Aunt Bee" — her effects are just... there.
+**The design insight:** Aunt Bee is the _ambient skill_ — always running, never explicitly called. Her influence cascades through the Taylor house the way WORLD.yml properties cascade through the directory tree. You don't invoke "Aunt Bee" — her effects are just... there.

@@ -4,9 +4,9 @@
 
 You never see Juanita. Not once. Not a glimpse, not a silhouette, not a hand holding a phone. She exists entirely through Barney Fife's behavior: the way he cups his hand around the receiver, the way his voice drops half an octave, the way he suddenly needs to "check on something at the diner" when Thelma Lou isn't around.
 
-Everything the audience knows about Juanita comes through Barney, which means the audience knows nothing about Juanita at all. They know what Barney *wants* Juanita to be. Her laugh is whatever laugh flatters him. Her appearance is whatever he finds attractive. She's not a woman — she's a mirror that reflects Barney's fantasy of being desirable.
+Everything the audience knows about Juanita comes through Barney, which means the audience knows nothing about Juanita at all. They know what Barney _wants_ Juanita to be. Her laugh is whatever laugh flatters him. Her appearance is whatever he finds attractive. She's not a woman — she's a mirror that reflects Barney's fantasy of being desirable.
 
-And that's why she works. If they'd cast Juanita, she'd be a person with a face and a voice and the audience could evaluate whether Barney was an idiot or had options. By keeping her invisible, the show makes Juanita into pure *temptation* — abstract, shapeless, as big or small as the scene needs.
+And that's why she works. If they'd cast Juanita, she'd be a person with a face and a voice and the audience could evaluate whether Barney was an idiot or had options. By keeping her invisible, the show makes Juanita into pure _temptation_ — abstract, shapeless, as big or small as the scene needs.
 
 The love triangle has no base. It's two lines extending from Barney in opposite directions: Thelma Lou, who is real and present and sees him clearly, and Juanita, who is a voice on a phone that says whatever Barney needs to hear. Barney keeps choosing to dial that number, and every time he does, Thelma Lou's patience counter ticks down one more notch.
 

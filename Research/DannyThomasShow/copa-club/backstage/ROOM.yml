@@ -12,7 +12,7 @@ room:
 
   exits:
     stage: ../stage
-    club: ../  # Into the club floor
+    club: ../ # Into the club floor
     alley: ../../new-york-streets/theater-district
 
   objects:
@@ -29,12 +29,12 @@ room:
     # looks at the family photo, takes a breath
     # After the show: Danny decompresses
     # The family photo again — but now it pulls him back
-    
+
     pre_show_ritual: true
     # Every performer has a ritual
     # Danny's involves the photo, the coffee, and a moment
     # of absolute stillness — the only stillness in his life
-    
+
     post_show_state: relief_and_exhaustion
     # The show went well (it always does)
     # Now he goes home

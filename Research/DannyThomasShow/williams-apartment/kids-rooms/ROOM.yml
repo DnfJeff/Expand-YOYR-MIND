@@ -17,7 +17,7 @@ room:
       objects: [vanity, bookshelf, record-player, phone-extension]
       # Terry has her own phone extension
       # This is a source of ongoing domestic legislation
-    
+
     rustys_room:
       mood: boy_inventor
       objects: [model-trains, comics, chemistry-set, baseball-glove]
@@ -26,7 +26,7 @@ room:
 
   ambient:
     growth_space: true
-    # Like Opie's room, but two kids processing two different 
+    # Like Opie's room, but two kids processing two different
     # stages of growing up simultaneously
     privacy: generational_conflict
     # Terry wants a closed door (Danny says no)

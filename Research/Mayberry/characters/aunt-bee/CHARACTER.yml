@@ -11,11 +11,11 @@ character:
     # She just wraps it in pie crust
 
   sims_traits:
-    neat: 9        # Immaculate house, immaculate kitchen
-    outgoing: 6    # Social within her circle
-    active: 7      # Always cooking, cleaning, entering contests
-    playful: 4     # Mostly serious about her domains
-    nice: 8        # Very kind, except during pickle season
+    neat: 9 # Immaculate house, immaculate kitchen
+    outgoing: 6 # Social within her circle
+    active: 7 # Always cooking, cleaning, entering contests
+    playful: 4 # Mostly serious about her domains
+    nice: 8 # Very kind, except during pickle season
 
   needs:
     purpose:
@@ -55,13 +55,13 @@ character:
 
   behavioral_patterns:
     conflict: passive_aggressive_hospitality
-    # "Oh, you're not hungry? That's fine. I only 
+    # "Oh, you're not hungry? That's fine. I only
     # spent three hours on this roast."
     decision_making: consult_then_act
     stress_response: cook_something
     domain: kitchen_and_household
     # The kitchen is sovereign territory
-    
+
   skills:
     cooking: expert
     baking: master

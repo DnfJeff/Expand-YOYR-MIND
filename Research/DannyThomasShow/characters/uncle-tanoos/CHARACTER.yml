@@ -6,16 +6,16 @@ character:
 
   personality:
     traits: [quiet, sly, observant, traditional, underestimated]
-    # Tanoos is what happens when you take Tonoose's 
+    # Tanoos is what happens when you take Tonoose's
     # personality and turn the volume to 3
     # Same agenda, different delivery
     # People relax around him — that's his advantage
 
   sims_traits:
     neat: 4
-    outgoing: 5       # Compared to Tonoose, he's a hermit
+    outgoing: 5 # Compared to Tonoose, he's a hermit
     active: 4
-    playful: 6        # Sly humor
+    playful: 6 # Sly humor
     nice: 7
 
   visitor_impact: moderate

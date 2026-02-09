@@ -26,7 +26,7 @@ room:
     # Helen runs this room with competence and warmth
     # The children respect her because she respects them
     social_register: children_and_teacher
-    
+
   schedule:
     school_day: 8:00AM-3:00PM
     recess: 10:30AM

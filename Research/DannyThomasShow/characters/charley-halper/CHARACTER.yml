@@ -15,7 +15,7 @@ character:
     neat: 6
     outgoing: 7
     active: 6
-    playful: 3         # Business is serious
+    playful: 3 # Business is serious
     nice: 6
 
   needs:

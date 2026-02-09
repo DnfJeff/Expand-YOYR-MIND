@@ -8,4 +8,4 @@ Floyd is a worrier. He worries about the weather, the economy, communists, his b
 
 His barbershop has the `gossip_flow: true` ambient property, meaning anything said in that room propagates through the town. Floyd IS the town's information infrastructure.
 
-**The design insight:** Floyd's shop is the *advertisement hub*. Its CARD.yml advertises satisfaction for social, grooming, and information needs. Characters gravitate there not just for haircuts but because the room itself broadcasts social opportunity. Floyd is the human embodiment of a broadcast protocol.
+**The design insight:** Floyd's shop is the _advertisement hub_. Its CARD.yml advertises satisfaction for social, grooming, and information needs. Characters gravitate there not just for haircuts but because the room itself broadcasts social opportunity. Floyd is the human embodiment of a broadcast protocol.

@@ -11,11 +11,11 @@ character:
     # He's the town's most honest liar
 
   sims_traits:
-    neat: 6        # Keeps the shop tidy, personal life less so
-    outgoing: 8    # Talks to everyone, about everything
-    active: 5      # Stays put — the world comes to him
-    playful: 5     # Unintentionally funny
-    nice: 7        # Genuinely likes everyone
+    neat: 6 # Keeps the shop tidy, personal life less so
+    outgoing: 8 # Talks to everyone, about everything
+    active: 5 # Stays put — the world comes to him
+    playful: 5 # Unintentionally funny
+    nice: 7 # Genuinely likes everyone
 
   needs:
     social:

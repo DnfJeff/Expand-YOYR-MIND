@@ -11,11 +11,11 @@ character:
     # Danny is the weather; Kathy is the house
 
   sims_traits:
-    neat: 7        # Keeps the apartment running
-    outgoing: 6    # Social but not performative
-    active: 6      # Steady, not frantic
-    playful: 5     # Can appreciate humor without needing the spotlight
-    nice: 8        # Patient with Danny, warm with everyone
+    neat: 7 # Keeps the apartment running
+    outgoing: 6 # Social but not performative
+    active: 6 # Steady, not frantic
+    playful: 5 # Can appreciate humor without needing the spotlight
+    nice: 8 # Patient with Danny, warm with everyone
 
   needs:
     stability:

@@ -7,6 +7,7 @@ Floyd has one chair (the other hasn't been used since his partner left). He give
 ## Social Mechanics
 
 Floyd's has `gossip_flow: true` in its ambient properties. This means:
+
 - Anything said here propagates through Mayberry
 - Accuracy degrades with each hop
 - By evening, a simple comment about the weather becomes a tornado warning

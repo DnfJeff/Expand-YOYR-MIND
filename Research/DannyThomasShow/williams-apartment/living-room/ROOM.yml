@@ -12,7 +12,7 @@ room:
   exits:
     kitchen: ../kitchen
     den: ../dannys-den
-    hall: ../  # Back to apartment hallway
+    hall: ../ # Back to apartment hallway
     kids: ../kids-rooms
 
   objects:
@@ -33,16 +33,16 @@ room:
     # Reconciliations happen here (after Danny's ceiling monologue)
     # Holiday celebrations happen here
     # Everything happens here
-    
+
     social_gravity: maximum
     # Like Floyd's Barbershop but louder
     # Everything in the Williams world converges on this couch
-    
+
     gossip_flow: false
     # Unlike Floyd's, what happens here is family business
     # It stays inside these walls
     # (Unless Bunny Halper is visiting)
-    
+
     volume: danny_dependent
     # Ambient noise correlates directly with Danny's mood
     # Calm Danny: jazz on the phonograph

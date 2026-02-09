@@ -11,11 +11,11 @@ character:
     # The world is exactly what it appears to be
 
   sims_traits:
-    neat: 4        # Gets greasy at work, doesn't mind
-    outgoing: 7    # Talks to everyone, happily
-    active: 6      # Willing and able
-    playful: 7     # Everything delights him
-    nice: 10       # Cannot be mean — it's not in the code
+    neat: 4 # Gets greasy at work, doesn't mind
+    outgoing: 7 # Talks to everyone, happily
+    active: 6 # Willing and able
+    playful: 7 # Everything delights him
+    nice: 10 # Cannot be mean — it's not in the code
 
   needs:
     helpfulness:
@@ -43,18 +43,18 @@ character:
       dynamic: |
         Barney's schemes confuse Gomer. Gomer's literalness 
         destroys Barney's schemes. Neither understands why.
-        
+
         The cycle: Barney has a plan. He explains it to Gomer 
         with elaborate hand gestures. Gomer nods. Gomer then 
         executes the plan exactly as stated, ignoring every 
         implied instruction, unspoken assumption, and wink-wink 
         nuance that Barney thought was obvious. The plan 
         collapses. Barney yells. Gomer is bewildered.
-        
+
         "But you SAID to tell him, Barn."
         "I said to tell him QUIETLY!"
         "Well, you didn't say quietly."
-        
+
         Despite this, Barney keeps recruiting Gomer. 
         This says more about Barney than about Gomer.
     goober-pyle:
@@ -66,14 +66,14 @@ character:
         touched him yet. Goober is the one who's been 
         touched by the world and decided to be simple 
         anyway. The difference is subtle but real.
-        
+
         They share the station. They share customers. 
         They share a family sweetness that comes from 
         the same Pyle kitchen table. But Gomer processes 
         the world literally (input = face value) while 
         Goober processes it socially (input = what does 
         the group think?). Two different simplicity modes.
-        
+
         When Gomer leaves for the Marines, Goober inherits 
         the station and the role. The town doesn't skip a 
         beat, which is either comforting or sad.

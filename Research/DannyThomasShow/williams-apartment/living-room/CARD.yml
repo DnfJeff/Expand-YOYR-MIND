@@ -6,7 +6,8 @@ skill:
     FAMILY_DINNER:
       satisfies: [hunger, family, social]
       description: "Everyone at the table — or the coffee table when Tonoose is here"
-      participants: [danny-williams, kathy-williams, rusty-williams, terry-williams]
+      participants:
+        [danny-williams, kathy-williams, rusty-williams, terry-williams]
       overflow_capacity: +4
       # When Tonoose visits, the table gains chairs from nowhere
 

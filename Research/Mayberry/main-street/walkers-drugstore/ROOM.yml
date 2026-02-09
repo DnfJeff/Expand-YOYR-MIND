@@ -26,7 +26,7 @@ room:
     # One of the few places where generations mix freely
     gossip_flow: true
     gossip_accuracy: 55%
-    # Better accuracy than Floyd's — the pharmacist 
+    # Better accuracy than Floyd's — the pharmacist
     # corrects the worst misinformation
 
   capacity: 15

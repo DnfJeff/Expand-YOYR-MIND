@@ -14,7 +14,7 @@ character:
     neat: 7
     outgoing: 6
     active: 6
-    playful: 4        # More serious than playful
+    playful: 4 # More serious than playful
     nice: 7
 
   needs:

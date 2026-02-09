@@ -6,22 +6,22 @@ character:
 
   # JUANITA IS NEVER SEEN ON SCREEN.
   # She exists only as a voice on the phone, a name
-  # spoken in hushed tones, a laugh Barney describes 
+  # spoken in hushed tones, a laugh Barney describes
   # but the audience never hears directly.
   # She is television's most effective absent character.
 
   personality:
     traits: [flirtatious, mysterious, unseen, free-spirited]
-    # Everything we know about Juanita comes through 
+    # Everything we know about Juanita comes through
     # Barney's descriptions, which means we know nothing
     # reliable about Juanita at all.
 
   sims_traits:
-    neat: 5        # Unknown — inferred from diner work
-    outgoing: 8    # She flirts back, so: high
-    active: 6      # Works on her feet all day
-    playful: 9     # The flirtation is play, not pursuit
-    nice: 6        # Pleasant, not invested
+    neat: 5 # Unknown — inferred from diner work
+    outgoing: 8 # She flirts back, so: high
+    active: 6 # Works on her feet all day
+    playful: 9 # The flirtation is play, not pursuit
+    nice: 6 # Pleasant, not invested
 
   needs:
     fun:
@@ -59,7 +59,7 @@ character:
     visibility: zero
     # Juanita's defining characteristic IS her absence.
     # She is pure inference. The audience constructs her
-    # entirely from Barney's behavior when he's on the 
+    # entirely from Barney's behavior when he's on the
     # phone with her.
 
   narrative_function:

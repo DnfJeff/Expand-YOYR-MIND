@@ -10,13 +10,13 @@ For Danny, the Copa is the release valve. At home he's at the mercy of family ch
 
 The Copa has a fundamentally different spatial logic than the apartment:
 
-| Apartment | Copa Club |
-|-----------|-----------|
-| Danny is out of control | Danny is in total control |
-| Visitors invade | Audience is invited |
-| Plans fail | Acts succeed |
+| Apartment                 | Copa Club                     |
+| ------------------------- | ----------------------------- |
+| Danny is out of control   | Danny is in total control     |
+| Visitors invade           | Audience is invited           |
+| Plans fail                | Acts succeed                  |
 | Identity: father, husband | Identity: entertainer, artist |
-| Volume: reactive | Volume: calibrated |
-| Tone: chaotic warm | Tone: professional warm |
+| Volume: reactive          | Volume: calibrated            |
+| Tone: chaotic warm        | Tone: professional warm       |
 
 This is the **dual-identity pattern** in physical space. The commute between these two locations is Danny switching between behavioral modes.

@@ -27,14 +27,14 @@ room:
     # The spotlight is on HIM
     # He sets the tempo, the mood, the timing
     # For 90 minutes he is exactly who he is
-    
+
     mode: performance
     # Danny's CHARACTER.yml switches to stage_mode here
     # Confidence: maximum
     # Control: absolute
     # Stress: zero
     # This is not escapism — this is Danny most himself
-    
+
     audience_distance: intimate
     # The nearness matters
     # Danny can see their faces

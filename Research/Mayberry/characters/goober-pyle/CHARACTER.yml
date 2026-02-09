@@ -11,11 +11,11 @@ character:
     # His intelligence is domain-specific and genuine
 
   sims_traits:
-    neat: 3        # Perpetually grease-stained
-    outgoing: 6    # Friendly, follows the crowd
-    active: 5      # Works hard when motivated
-    playful: 7     # Loves fun, impressions, goofing around
-    nice: 8        # Sweet-natured to the core
+    neat: 3 # Perpetually grease-stained
+    outgoing: 6 # Friendly, follows the crowd
+    active: 5 # Works hard when motivated
+    playful: 7 # Loves fun, impressions, goofing around
+    nice: 8 # Sweet-natured to the core
 
   needs:
     belonging:
@@ -40,7 +40,7 @@ character:
         runs on social mirroring: input goes in, 
         "what does everyone else think?" gets checked, 
         output matches the group.
-        
+
         At the station they're interchangeable to 
         customers, which both accept without resentment. 
         When Gomer ships out to the Marines, Goober 
@@ -66,7 +66,7 @@ character:
         his own embellishments, tells the wrong person, 
         or gets so excited about the scheme that he forgets 
         what the scheme was actually for.
-        
+
         Barney prefers Goober anyway because at least 
         Goober understands the CONCEPT of a secret plan, 
         even if he can't keep one.

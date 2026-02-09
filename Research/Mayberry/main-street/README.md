@@ -6,15 +6,15 @@ Main Street is walkable — you can stroll from the courthouse to Floyd's to Wal
 
 ## Locations
 
-| Place | Function | Social Role |
-|-------|----------|-------------|
-| [Courthouse](courthouse/) | Law enforcement, county records | Andy's base, Otis's hotel |
-| [Floyd's Barbershop](floyds-barbershop/) | Haircuts | Town nerve center, gossip hub |
-| [Wally's Filling Station](wally-filling-station/) | Gas, auto repair | Gomer & Goober's domain |
-| [Walker's Drugstore](walkers-drugstore/) | Pharmacy, soda fountain | Teen hangout, casual social |
-| [Weaver's Department Store](weavers-dept-store/) | Dry goods, clothing | Commercial backbone |
-| [Bluebird Diner](bluebird-diner/) | Food, coffee | Communal table |
-| [Mayberry Bank](mayberry-bank/) | Banking | Anxiety generator |
+| Place                                             | Function                        | Social Role                   |
+| ------------------------------------------------- | ------------------------------- | ----------------------------- |
+| [Courthouse](courthouse/)                         | Law enforcement, county records | Andy's base, Otis's hotel     |
+| [Floyd's Barbershop](floyds-barbershop/)          | Haircuts                        | Town nerve center, gossip hub |
+| [Wally's Filling Station](wally-filling-station/) | Gas, auto repair                | Gomer & Goober's domain       |
+| [Walker's Drugstore](walkers-drugstore/)          | Pharmacy, soda fountain         | Teen hangout, casual social   |
+| [Weaver's Department Store](weavers-dept-store/)  | Dry goods, clothing             | Commercial backbone           |
+| [Bluebird Diner](bluebird-diner/)                 | Food, coffee                    | Communal table                |
+| [Mayberry Bank](mayberry-bank/)                   | Banking                         | Anxiety generator             |
 
 ## Information Flow
 

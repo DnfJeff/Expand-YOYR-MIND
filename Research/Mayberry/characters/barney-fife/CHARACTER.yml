@@ -12,11 +12,11 @@ character:
     # But he always shows up
 
   sims_traits:
-    neat: 8        # Very neat — irons his uniform obsessively
-    outgoing: 6    # Social but needs validation
-    active: 9      # Cannot sit still, always scheming
-    playful: 3     # Takes everything seriously
-    nice: 6        # Means well, can be petty when insecure
+    neat: 8 # Very neat — irons his uniform obsessively
+    outgoing: 6 # Social but needs validation
+    active: 9 # Cannot sit still, always scheming
+    playful: 3 # Takes everything seriously
+    nice: 6 # Means well, can be petty when insecure
 
   needs:
     status:
@@ -59,13 +59,13 @@ character:
         who brings cashew fudge and sits on the porch and 
         sees through every bit of bluster to the good man 
         underneath. He loves her. He KNOWS he loves her.
-        
+
         And then the phone at the Bluebird rings and 
         Juanita answers and something in Barney's voice 
         drops half an octave and his hand cups the receiver 
         and for thirty seconds he's not the nervous deputy — 
         he's a man with options.
-        
+
         He doesn't have options. He has Thelma Lou, who 
         is real, and Juanita, who is a fantasy delivered 
         by telephone. But the fantasy satisfies needs that 
@@ -77,14 +77,14 @@ character:
       dynamic: |
         Barney calls the diner. Juanita answers. They 
         flirt. That's it. That's the whole thing.
-        
+
         Except it isn't. The calls are Barney's escape 
         valve — a space where he's charming, where there's 
         no history of failures, where the woman on the 
         other end laughs at his jokes without knowing about 
         the bullet in his pocket or the time he locked 
         himself in the cell.
-        
+
         Does Barney actually want Juanita? No. He wants 
         the VERSION of himself that exists during those 
         phone calls. Juanita is a mirror. Thelma Lou is 

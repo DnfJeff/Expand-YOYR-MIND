@@ -15,11 +15,11 @@ character:
     # That's not naivety — that's decision
 
   sims_traits:
-    neat: 7        # Put-together, always presentable
-    outgoing: 6    # Social but not the center of attention
-    active: 4      # Content to sit on the porch, go to a movie
-    playful: 5     # Dry humor, aimed at Barney when he needs deflating
-    nice: 8        # Genuinely kind, but not a pushover
+    neat: 7 # Put-together, always presentable
+    outgoing: 6 # Social but not the center of attention
+    active: 4 # Content to sit on the porch, go to a movie
+    playful: 5 # Dry humor, aimed at Barney when he needs deflating
+    nice: 8 # Genuinely kind, but not a pushover
 
   needs:
     commitment:

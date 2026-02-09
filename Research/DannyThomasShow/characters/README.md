@@ -6,26 +6,26 @@ The cast breaks into three tiers: the core family who live in the apartment, the
 
 ### Core Family
 
-| Character | Role | Personality Summary |
-|-----------|------|-------------------|
+| Character                         | Role               | Personality Summary                        |
+| --------------------------------- | ------------------ | ------------------------------------------ |
 | [Danny Williams](danny-williams/) | Entertainer/Father | Dramatic, loving, exasperated, big-hearted |
-| [Kathy Williams](kathy-williams/) | Wife | Grounded, patient, the real authority |
-| [Rusty Williams](rusty-williams/) | Son | Smart-mouthed, quick, Danny's mirror |
-| [Terry Williams](terry-williams/) | Daughter | Older, sensible, caught between worlds |
+| [Kathy Williams](kathy-williams/) | Wife               | Grounded, patient, the real authority      |
+| [Rusty Williams](rusty-williams/) | Son                | Smart-mouthed, quick, Danny's mirror       |
+| [Terry Williams](terry-williams/) | Daughter           | Older, sensible, caught between worlds     |
 
 ### Recurring Visitors
 
-| Character | Role | Impact |
-|-----------|------|--------|
-| [Uncle Tonoose](uncle-tonoose/) | Lebanese patriarch | Chaos agent — uninvited, unstoppable |
-| [Uncle Tanoos](uncle-tanoos/) | Tonoose's brother | Quieter Tonoose — still disruptive |
-| [Charley Halper](charley-halper/) | Danny's agent | Business pressure, professional stress |
-| [Bunny Halper](bunny-halper/) | Charley's wife, Kathy's friend | Social circuit, couple dynamics |
+| Character                         | Role                           | Impact                                 |
+| --------------------------------- | ------------------------------ | -------------------------------------- |
+| [Uncle Tonoose](uncle-tonoose/)   | Lebanese patriarch             | Chaos agent — uninvited, unstoppable   |
+| [Uncle Tanoos](uncle-tanoos/)     | Tonoose's brother              | Quieter Tonoose — still disruptive     |
+| [Charley Halper](charley-halper/) | Danny's agent                  | Business pressure, professional stress |
+| [Bunny Halper](bunny-halper/)     | Charley's wife, Kathy's friend | Social circuit, couple dynamics        |
 
 ### Professional Circle
 
-| Character | Role | Function |
-|-----------|------|----------|
+| Character                   | Role              | Function                    |
+| --------------------------- | ----------------- | --------------------------- |
 | [Phil Brokaw](phil-brokaw/) | Copa Club manager | Danny's professional anchor |
 
 ## The Visitor System
