@@ -1,0 +1,36 @@
+# Taylor Living Room — The Family Room
+# Between the kitchen and the porch, the living room is transition space.
+
+inherits:
+  - locations/abstract/domestic-hub
+ontology:
+  tags: [living-room, family, television, radio, homework, evenings]
+  framing: domestic
+
+skill:
+  name: "Taylor Living Room Activities"
+  id: taylor-living-room
+  location: taylor-house/living-room
+
+  advertisements:
+    FAMILY_EVENING:
+      description: "The family gathers after supper — radio, reading, conversation"
+      score: 75
+      guard: "time is evening AND family members present >= 2"
+      effect: "family +25, comfort +20, social +15. Quiet togetherness."
+      satisfies: [family, comfort, routine]
+
+    HOMEWORK:
+      description: "Opie does homework at the desk — with occasional help from Andy"
+      score: 70
+      guard: "opie-taylor is present AND schoolwork exists"
+      effect: "duty +20, growth +15. Math attempted. Questions asked. Andy helps Socratically."
+      satisfies: [duty, growth]
+      participants: [opie-taylor]
+
+    ENTERTAIN_GUEST:
+      description: "Receive a visitor in the living room — Mayberry social protocol"
+      score: 70
+      guard: "visitor arrives AND living room is available"
+      effect: "social +20, hospitality +15. Guest seated. Bee brings something from the kitchen."
+      satisfies: [social, hospitality]

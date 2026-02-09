@@ -1,3 +1,20 @@
+framing:
+  context: transitional_professional
+  behavioral_expectation: preparation_and_recovery
+  conflict_style: nerves_and_honesty
+
+ambient_ads:
+  - id: MIRROR_CHECK
+    description: "The dressing room mirror — last look before the mask goes on"
+    score: 0.2
+    always_on: true
+    effect: "Vulnerability visible; persona assembling or disassembling"
+  - id: CLOCK_TICKING
+    description: "Countdown to showtime — or countdown from it"
+    score: 0.3
+    always_on: true
+    effect: "Time pressure before the show; decompression after"
+
 room:
   name: "Backstage"
   type: private

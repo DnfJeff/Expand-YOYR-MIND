@@ -1,0 +1,9 @@
+# New York's breathing room — where the Williams family remembers trees exist
+glance:
+  id: central-park
+  type: nature_urban
+  name: "Central Park"
+  emoji: "🌳🧺🏃‍♂️🌸🪑"
+  function: "Family outings, Danny's thinking walks, playground time"
+  vibe: "The urban fishing hole — no rod, same peace"
+  top_ads: [FAMILY_OUTING, DANNY_WALKS, PLAYGROUND]

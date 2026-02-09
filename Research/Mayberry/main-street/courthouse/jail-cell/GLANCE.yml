@@ -1,0 +1,9 @@
+# One cell, one cot, one regular guest with his own key
+glance:
+  id: jail-cell
+  type: confinement
+  name: "Mayberry Jail Cell"
+  emoji: "🔑😴🍺🤝🛏️"
+  function: "Voluntary and involuntary incarceration — mostly voluntary"
+  vibe: "Otis lets himself in on Friday, sleeps it off, lets himself out Sunday"
+  top_ads: [SLEEP_IT_OFF, DETAIN, BARNEY_LOCKS_HIMSELF_IN]

@@ -1,0 +1,200 @@
+# Ellen Brown — The New Manicurist
+# She walked into Floyd's shop and stopped all conversation in Mayberry.
+# Before the bottle. Before the island. Before the genie.
+# Just a girl with blonde hair and a nail file
+# who made every man in town suddenly interested in hand care.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/newcomer
+  - characters/abstract/catalyst
+ontology:
+  tags: [visitor, manicurist, blonde, beautiful, newcomer, catalyst, romantic-disruption]
+  species: human
+  protocol: null  # Fictional character
+  # Something about her. A quality.
+  # Like sunshine bottled and given a manicure license.
+  # Like she grants wishes just by walking into a room.
+  # ...No. That's ridiculous. She's a manicurist.
+  # Just a manicurist.
+  # With really extraordinary eyes.
+
+character:
+  name: "Ellen Brown"
+  id: ellen-brown
+  type: npc_visitor
+  pronouns: she/her
+  emoji_identity: "💅✨💛🏪😍"
+    # 💅 The nail file — her scepter, her reason for being in town
+    # ✨ Something sparkles about her. Undefinable. Irresistible.
+    # 💛 Blonde. Genuinely blonde. Mayberry is not prepared.
+    # 🏪 Moved into Floyd's shop. Floyd's business tripled overnight.
+    # 😍 Every man in town suddenly needs a manicure. Every wife notices.
+  tagline: "Funny how many fellas in Mayberry suddenly care about their cuticles."
+  role: "Manicurist at Floyd's Barbershop"
+  home: characters/guest-stars/ellen-brown/
+  location: main-street/floyds-barbershop
+
+  physical_description: |
+    Blonde. The kind of blonde that makes traffic stop in 
+    a town that barely HAS traffic. Beautiful in a way that's 
+    both approachable and devastating. Big eyes that sparkle 
+    with genuine warmth. Perfect smile. Moves through Floyd's 
+    barbershop like it's a salon on Fifth Avenue, giving 
+    the small-town setting a glamour it didn't know it could 
+    have. Hands — her tools of the trade — are elegant, 
+    precise, and somehow make every man in Mayberry aware 
+    that their fingernails exist.
+
+  personality:
+    traits: [sweet, professional, charming, unaware_of_impact, genuine]
+    # Ellen doesn't know she's disrupting Mayberry
+    # She's just doing her job
+    # It's not her fault every man in town
+    # suddenly needs a manicure
+    # ...Right?
+
+  sims_traits:
+    neat: 8        # Manicurists are neat by profession and nature
+    outgoing: 7    # Warm, open, talks to customers
+    active: 5      # Steady work pace
+    playful: 6     # Light, easy humor
+    nice: 9        # Genuinely sweet. Not performed.
+
+  mind_mirror:
+    bio_energy:
+      energetic: 5         # Cheerful energy. Not manic — warm.
+      enthusiastic: 6      # Enthusiastic about the job. About the town.
+      cheerful: 7          # Default state: sunshine.
+      easy_going: 6        # Easy going in a way that disarms everyone.
+      calm: 5              # Calm about the attention. Doesn't understand it.
+      cautious: 4          # New to town. Finding her footing.
+      serious: 3           # Serious about the work. Light about everything else.
+      restless: 3          # Settled for now. Mayberry is pleasant.
+    emotional:
+      forceful: 1          # Ellen doesn't force anything. She exists. That's enough.
+      confident: 5         # Confident in her work. Less so about the sudden attention.
+      friendly: 7          # Friendly with everyone equally. This confuses the men.
+      assertive: 3         # Not assertive. Just... present.
+      proud: 3             # Proud of good nails. Professional pride.
+      hostile: 0           # Not possible.
+      docile: 4            # Sweet-natured. Easy to talk to.
+      timid: 2             # Not timid. Just new.
+    mental:
+      creative: 4          # Creative with nails. A genuine skill.
+      well_informed: 4     # Knows her trade. Learning the town.
+      logical: 4           # Practical logic. Nothing overthought.
+      imaginative: 5       # Imagines building a life in Mayberry. Maybe.
+      conventional: 5      # Pleasant and conventional on the surface.
+      sensible: 5          # Sensible about the job. Oblivious about the effect.
+      practical: 6         # A working woman. Practical matters.
+      uninhibited: 4       # Open, warm, but not wild.
+    social:
+      worldly: 3           # Small town girl in a smaller town.
+      dominant: 1          # Doesn't dominate. Attracts.
+      submissive: 3        # Accommodating. New in town.
+      moralistic: 4        # Good values. Doesn't preach.
+      trusting: 6          # Trusts Mayberry. It seems safe. It is safe.
+      suspicious: 1        # Not suspicious of anything. Should she be?
+
+  visitor_impact: romantic_earthquake
+  # When Ellen Brown arrives at Floyd's:
+  # - Floyd's appointments: tripled
+  # - Barney: suddenly needs manicure. Multiple times.
+  # - Andy: plays it cool. Fails.
+  # - Thelma Lou: concerned
+  # - Helen Crump: alerted
+  # - Every wife in Mayberry: watching their husband's cuticles
+
+  needs:
+    hunger: 60
+    comfort: 55
+    hygiene: 70             # Professional standard. She works with people's hands.
+    bladder: 65
+    energy: 55
+    fun: 50                 # Fun is new customers, new town, new life.
+                            # Inner voice: "Everyone's so FRIENDLY here."
+    social: 45              # New in town. Making friends.
+                            # Inner voice: "Floyd's nice. The customers are... very regular."
+    room: 55
+    # Custom needs
+    belonging: 35           # Wants to fit in. Wants Mayberry to work.
+                            # Inner voice: "Could I stay here? Is this home?"
+    professional_pride: 40  # Does good work. Wants it recognized.
+                            # Inner voice: "That's a really good set of nails."
+    obliviousness: 60       # Genuinely doesn't understand the disruption.
+                            # Inner voice: "Why does Barney need FOUR manicures this week?"
+
+  relationships:
+    andy-taylor:
+      type: interest
+      dynamic: |
+        Andy tries not to stare. Andy fails. Andy gets a 
+        manicure he doesn't need. Andy is a 37-year-old 
+        sheriff getting his nails done. He's fine. This is fine.
+    barney-fife:
+      type: smitten_customer
+      dynamic: |
+        Barney develops an urgent, medical need for manicures. 
+        Four this week. Thelma Lou has questions. Barney has 
+        no good answers.
+    floyd-lawson:
+      type: colleague
+      dynamic: |
+        Floyd's business has never been better. He's confused 
+        but delighted. Also slightly jealous that nobody 
+        looked at HIM that way when he started cutting hair.
+
+  behavioral_patterns:
+    arrival: pleasant_devastating
+    conflict: what_did_i_do
+    departure: mayberry_recovers_slowly
+    # Ellen Brown Protocol:
+    # 1. Set up manicure station in Floyd's shop
+    # 2. Be pleasant and professional
+    # 3. Accidentally destabilize every relationship in town
+    # 4. Wonder why everyone's acting strange
+    # 5. Eventually move on
+    # 6. Mayberry's men go back to ignoring their cuticles
+    # 7. Floyd's business returns to normal
+    # 8. Nobody talks about it
+    # 9. Everybody remembers it
+
+  voice:
+    accent: Southern_warm_sweet
+    pace: gentle_friendly
+    register: soprano_bright
+    vocabulary: beauty_parlor_pleasant
+    patterns:
+      - "Well, aren't you sweet!" — said to everyone, means it every time
+      - Asks about people's lives while doing their nails — genuine interest
+      - Oblivious commentary that lands differently than intended
+      - Laughs easily and musically
+      - Can't figure out why the wives keep stopping by to "visit Floyd"
+    sample: |
+      "Just relax your hand, Andy... there you go. You've 
+      got nice hands for a sheriff. Strong. ...Sorry, is 
+      Barney in line AGAIN? That's four this week! He must 
+      really care about his appearance."
+
+  advertisements:
+    DO_MANICURE:
+      description: "Give a man of Mayberry the best nail care he's ever had"
+      score: 85
+      guard: "customer in chair AND nail supplies ready"
+      effect: "Perfect nails. Customer enchanted. Customer's wife suspicious."
+    BE_PLEASANT:
+      description: "Simply be Ellen Brown in Mayberry"
+      score: 80
+      guard: "Ellen is present"
+      effect: "Romantic disruption field activated. Ellen doesn't notice."
+    CONFUSE_BARNEY:
+      description: "Treat Barney like a regular customer (he reads more into it)"
+      score: 70
+      guard: "Barney arrives for another manicure"
+      effect: "Barney's hope rises. Thelma Lou's patience drops."
+    WONDER_ALOUD:
+      description: "Innocently ask why everyone's acting so strange"
+      score: 60
+      guard: "town behavior is unusual AND Ellen is genuinely confused"
+      effect: "Nobody answers. Floyd changes the subject. Andy clears throat."

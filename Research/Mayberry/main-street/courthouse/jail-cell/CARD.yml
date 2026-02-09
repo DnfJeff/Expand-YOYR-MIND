@@ -1,0 +1,44 @@
+# Jail Cell — Mayberry's Gentlest Incarceration
+# One cell. One cot. One regular guest.
+
+inherits:
+  - locations/abstract/confinement
+ontology:
+  tags: [jail, cell, confinement, otis, voluntary, self-governance]
+  framing: compassionate_justice
+
+skill:
+  name: "Mayberry Jail Cell"
+  id: jail-cell
+  location: main-street/courthouse/jail-cell
+
+  advertisements:
+    SLEEP_IT_OFF:
+      description: "Otis lets himself in, sleeps it off, lets himself out in the morning"
+      score: 95
+      guard: "otis-campbell is drunk AND jail cell is empty AND it's Friday or Saturday night"
+      effect: "comfort +20, safety +30, self-governance demonstrated. Otis wakes clean. Nobody judged."
+      satisfies: [safety, comfort, self_regulation]
+      participants: [otis-campbell]
+      # Otis has his own key
+      # He lets himself in
+      # He hangs up his hat
+      # He sleeps
+      # He lets himself out
+      # This is Mayberry's justice system working perfectly
+
+    DETAIN:
+      description: "Hold someone in the cell — rare, usually brief, always with coffee"
+      score: 70
+      guard: "suspect is arrested AND cell is available"
+      effect: "justice +20, suspect contained. Coffee offered. This isn't cruel."
+      satisfies: [justice, order, safety]
+
+    BARNEY_LOCKS_HIMSELF_IN:
+      description: "Barney accidentally locks himself in the cell — routine occurrence"
+      score: 60
+      guard: "barney-fife is demonstrating the lock OR showing off"
+      effect: "fun +20 (for everyone else). Barney embarrassed. Andy gets the key."
+      satisfies: [comedy, humiliation]
+      participants: [barney-fife]
+      frequency: regular

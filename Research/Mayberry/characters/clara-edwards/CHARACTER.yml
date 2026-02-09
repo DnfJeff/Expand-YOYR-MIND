@@ -1,9 +1,39 @@
+# Clara Edwards — Neighbor, Bee's Frenemy
+# They share everything except first place.
+# Clara's pickles won last year. This fact is a thermonuclear device.
+
+inherits:
+  - characters/abstract/townsfolk
+  - characters/abstract/competitor
+ontology:
+  tags: [neighbor, competitor, frenemy, traditional, social]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Clara Edwards"
+  id: clara-edwards
+  type: npc
+  pronouns: she/her
+  emoji_identity: "🥒🏆🏡👀☕"
+    # 🥒 The pickles. THE PICKLES. Last year's winner.
+    # 🏆 The ribbon Bee doesn't have. Yet.
+    # 🏡 Right next door. Always watching.
+    # 👀 Sees everything Bee does. Measures herself against it.
+    # ☕ The morning coffee visits that are actually scouting missions
+  tagline: "Best friends. Worst rivals. Same pickle recipe."
   role: "Neighbor, Bee's Frenemy"
   home: characters/clara-edwards/
   location: taylor-house
   # Usually at or near the Taylor house
+
+  physical_description: |
+    Prim, proper, sharp-eyed. Dressed slightly better than 
+    the occasion requires — always. Hair set as if expecting 
+    a photograph at any moment. Carries herself with the 
+    posture of a woman who won something recently and wants 
+    you to notice. Smile that does double duty: warm enough 
+    for friendship, sharp enough for competition.
 
   personality:
     traits: [competitive, traditional, opinionated, social, well-meaning]
@@ -12,22 +42,63 @@ character:
     # These are not contradictions
 
   sims_traits:
-    neat: 9
-    outgoing: 7
-    active: 5
-    playful: 3 # Very serious about competitions
-    nice: 6 # Nice enough, but will win
+    neat: 9        # Immaculate. Always.
+    outgoing: 7    # Everywhere there's a contest or gossip
+    active: 5      # Active in the social circuit
+    playful: 3     # Very serious about competitions
+    nice: 6        # Nice enough, but will win
+
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Paces herself for contests.
+      enthusiastic: 6      # Very enthusiastic about winning.
+      cheerful: 5          # Cheerful when ahead.
+      easy_going: 3        # Nothing is easy going during contest season.
+      calm: 4              # Calm facade. Competitive interior.
+      cautious: 5          # Strategic about entries.
+      serious: 6           # Deadly serious about pickles.
+      restless: 4          # Restless when Bee is cooking.
+    emotional:
+      forceful: 5          # Will assert her wins.
+      confident: 6         # Confident she's better. Usually.
+      friendly: 5          # Friends first, rivals second. Or is it reversed?
+      assertive: 5         # Mentions the ribbon. Casually. Often.
+      proud: 7             # VERY proud. Of everything.
+      hostile: 3           # Only toward Bee's pickle claims.
+      docile: 2            # Clara doesn't yield.
+      timid: 1             # Never.
+    mental:
+      creative: 5          # Creative recipes. Always tweaking.
+      well_informed: 6     # Knows what Bee is entering. Always.
+      logical: 5           # Strategic about contests.
+      imaginative: 4       # Imagines winning. Often.
+      conventional: 7      # Traditional methods. Traditional values.
+      sensible: 5          # Sensible except about ribbons.
+      practical: 5         # Practical about everything but competition.
+      uninhibited: 3       # Proper lady. Except when gloating.
+    social:
+      worldly: 3           # Mayberry is the universe.
+      dominant: 5          # Dominant over Bee in contest years.
+      submissive: 2        # Doesn't submit to anyone's recipes.
+      moralistic: 5        # Plays by the rules. Expects others to.
+      trusting: 5          # Trusts Bee... mostly.
+      suspicious: 5        # Suspicious of Bee's new recipes.
 
   needs:
-    status:
-      level: moderate
-      description: "Wants recognition, especially over Bee"
-    social:
-      level: high
-      description: "Church, garden club, everywhere Bee is"
-    winning:
-      level: high
-      description: "Pickle contest, flower show, recipe contests"
+    hunger: 70             # Eats well. Her own cooking.
+    comfort: 70            # Her house is perfect.
+    hygiene: 80            # Pristine. Always.
+    bladder: 70            # Fine.
+    energy: 60             # Conserving for the fair.
+    fun: 50                # Fun IS winning.
+    social: 55             # Church, garden club — everywhere Bee is.
+    room: 75               # Her house is arranged for judging.
+    # Custom needs
+    status: 45             # Wants recognition, especially over Bee.
+                           # Inner voice: "She SAW the ribbon. I know she saw it."
+    winning: 40            # Pickle contest, flower show, recipe contests.
+                           # Inner voice: "This year's brine is even better."
+    social_custom: 60      # Church, garden club, everywhere Bee is.
 
   relationships:
     aunt-bee:
@@ -43,3 +114,41 @@ character:
     decision_making: measure_against_bee
     # Clara's internal compass needle always points toward
     # "what would beat Bee?"
+
+  voice:
+    accent: Southern_precise
+    pace: deliberate_sweet
+    register: soprano_saccharine
+    vocabulary: polite_knife
+    patterns:
+      - Compliments that are actually competitive intelligence
+      - "Oh, Bee, that's so... nice" (meaning: inferior)
+      - Mentions her ribbon casually, frequently, strategically
+      - Asks about recipes with the intensity of an interrogator
+    sample: |
+      "Oh, Bee, NEW recipe? How adventurous of you. 
+      I'm sticking with what works — you know, the one 
+      that won the ribbon last year? But I'm sure yours 
+      will be just... lovely."
+
+  advertisements:
+    COMPETE_WITH_BEE:
+      description: "Enter the same contest Bee enters, with a better recipe"
+      score: 90
+      guard: "contest season AND Bee is entering something"
+      effect: "War begins. Only one ribbon. Both want it."
+    VISIT_TAYLOR_HOUSE:
+      description: "Drop by for coffee and intelligence gathering"
+      score: 75
+      guard: "morning AND Bee is home"
+      effect: "Clara learns what Bee is cooking. Clara adjusts strategy."
+    MENTION_THE_RIBBON:
+      description: "Casually reference last year's win in conversation"
+      score: 70
+      guard: "Bee is present"
+      effect: "Bee's eye twitches. Clara sips her coffee."
+    ATTEND_CHURCH_CIRCLE:
+      description: "Show up to the church social looking her best"
+      score: 65
+      guard: "church event"
+      effect: "Clara is seen. Clara is heard. Clara is ahead."

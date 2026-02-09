@@ -1,0 +1,19 @@
+# The wild soul trapped in a sensible life
+prototype:
+  id: repressed-adventurer
+  type: abstract_character
+  name: "Repressed Adventurer"
+  description: "Person who craves excitement but is trapped by their own careful nature"
+  default_traits:
+    hidden_desire: 0.9
+    surface_caution: 0.8
+    fantasy_life: 0.7
+    courage_buried: 0.6
+  default_needs:
+    excitement: 0.8
+    safety: 0.7
+    self_expression: 0.6
+  behavioral_tendencies:
+    - Vicariously lives through others' adventures
+    - Occasionally breaks free in small, reversible ways
+    - Returns to routine with visible relief and secret disappointment

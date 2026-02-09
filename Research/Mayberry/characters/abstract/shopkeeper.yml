@@ -1,0 +1,19 @@
+# The fixed point — always there, always open, always talking
+prototype:
+  id: shopkeeper
+  type: abstract_character
+  name: "Shopkeeper"
+  description: "Business owner rooted to one spot, seeing everyone who passes"
+  default_traits:
+    sociability: 0.8
+    rootedness: 0.9
+    nosiness: 0.6
+    reliability: 0.8
+  default_needs:
+    customers: 0.7
+    social_contact: 0.9
+    routine: 0.8
+  behavioral_tendencies:
+    - Shop is social hub disguised as business
+    - Knows everyone's schedule and habits
+    - Closing time is suggestion, not rule

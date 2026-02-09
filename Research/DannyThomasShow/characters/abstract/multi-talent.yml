@@ -1,0 +1,19 @@
+# Can do everything — and wants you to know it
+prototype:
+  id: multi-talent
+  type: abstract_character
+  name: "Multi-Talent"
+  description: "Performer who excels across multiple disciplines — singing, dancing, acting, comedy"
+  default_traits:
+    versatility: 0.95
+    showmanship: 0.9
+    competitive_drive: 0.7
+    generosity: 0.6
+  default_needs:
+    full_showcase: 0.8
+    appreciation_of_range: 0.8
+    worthy_challenge: 0.7
+  behavioral_tendencies:
+    - Cannot resist adding another talent to any performance
+    - Raises the bar for everyone else on stage
+    - Makes the impossible look casual, the casual look transcendent

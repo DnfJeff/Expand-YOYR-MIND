@@ -1,0 +1,19 @@
+# The connector — moves between worlds that don't otherwise meet
+prototype:
+  id: bridge-character
+  type: abstract_character
+  name: "Bridge Character"
+  description: "Character who connects separate social spheres, carrying information and relationships between them"
+  default_traits:
+    social_mobility: 0.9
+    adaptability: 0.8
+    dual_loyalty: 0.7
+    cultural_fluency: 0.7
+  default_needs:
+    access_to_both_worlds: 0.8
+    being_valued: 0.7
+    not_choosing_sides: 0.6
+  behavioral_tendencies:
+    - Comfortable in spaces where others feel foreign
+    - Translates between cultures, classes, or social groups
+    - Loyalty tested when the worlds they bridge come into conflict

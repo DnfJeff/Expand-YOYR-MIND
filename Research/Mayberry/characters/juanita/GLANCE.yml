@@ -1,0 +1,10 @@
+# She exists in phone calls and pauses
+glance:
+  id: juanita
+  type: npc_phantom
+  name: "Juanita"
+  emoji: "📞✨🍽️🌙💭"
+  role: "Diner waitress, Barney's phone fantasy, never seen"
+  vibe: "The most powerful character in Mayberry is the one you never see"
+  top_ads: [ANSWER_PHONE, BE_IMAGINED, NOT_APPEAR]
+  location: main-street/bluebird-diner

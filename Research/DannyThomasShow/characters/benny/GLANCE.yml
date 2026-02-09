@@ -1,0 +1,10 @@
+# The piano man who bridges the Copa and the living room
+glance:
+  id: benny
+  type: npc_resident
+  name: "Benny"
+  emoji: "🎹😄🎵👔💛"
+  role: "Accompanist, sidekick, honorary uncle"
+  vibe: "Plays piano behind Danny's words and lives between the Copa and the kitchen table"
+  top_ads: [ACCOMPANY, UNCLE_BENNY, BRIDGE_WORLDS]
+  location: copa-club/stage

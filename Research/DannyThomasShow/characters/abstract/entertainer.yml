@@ -1,0 +1,19 @@
+# The stage is home — everything else is between shows
+prototype:
+  id: entertainer
+  type: abstract_character
+  name: "Entertainer"
+  description: "Person who is most truly themselves under a spotlight"
+  default_traits:
+    charisma: 0.9
+    need_for_audience: 0.8
+    dual_identity: 0.7
+    work_addiction: 0.7
+  default_needs:
+    applause: 0.8
+    creative_outlet: 0.9
+    audience_love: 0.8
+  behavioral_tendencies:
+    - Cannot turn off the performance instinct
+    - Home life becomes material
+    - Stage version and real version in constant negotiation

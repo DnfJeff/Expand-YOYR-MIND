@@ -1,3 +1,37 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/contemplative-space
+
+defaults:
+  tone: reflective
+  social_pressure: none
+  sound_baseline: birds_water_wind
+  time_awareness: seasonal
+  gossip_flow: false
+  reflection_depth: maximum
+  # Nobody comes here for company.
+  # They come here to escape company.
+  # That's why it works.
+
+framing:
+  context: natural_contemplative
+  behavioral_expectation: quiet_honesty
+  conflict_style: silence_then_truth
+  # Nature strips away pretense.
+  # The fishing hole is where real conversations happen.
+
+ambient_ads:
+  - id: LISTEN_TO_WATER
+    description: "The lake sounds fill any silence — no need to speak"
+    score: 0.2
+    always_on: true
+    effect: "Comfortable silence is the default state"
+  - id: SLOW_DOWN
+    description: "Everything moves at nature's pace here"
+    score: 0.3
+    always_on: true
+    effect: "Characters decompress — town urgency dissolves"
+
 room:
   name: "Myers Lake"
   type: natural

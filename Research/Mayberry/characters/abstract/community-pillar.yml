@@ -1,0 +1,19 @@
+# The load-bearing wall of social infrastructure
+prototype:
+  id: community-pillar
+  type: abstract_character
+  name: "Community Pillar"
+  description: "Person who holds the social fabric together through presence and participation"
+  default_traits:
+    reliability: 0.9
+    social_investment: 0.8
+    volunteerism: 0.8
+    moral_authority: 0.7
+  default_needs:
+    community_standing: 0.8
+    being_consulted: 0.7
+    tradition_maintenance: 0.7
+  behavioral_tendencies:
+    - Organizes events nobody asked for but everyone needs
+    - Opinion carries weight in town decisions
+    - Measures self-worth through community contribution

@@ -1,0 +1,10 @@
+# Big farmer, big heart, zero courtship skills
+glance:
+  id: jeff-pruitt
+  type: npc_guest
+  name: "Jeff Pruitt"
+  emoji: "🌾💪👒🤝🚜"
+  role: "Bachelor farmer looking for a wife"
+  vibe: "Could skipper a small boat through a storm but can't say hello to a pretty woman"
+  top_ads: [TALK_ABOUT_THE_FARM, ATTEMPT_COURTSHIP, ACCIDENTAL_CHARM]
+  location: main-street/courthouse

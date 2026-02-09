@@ -1,0 +1,10 @@
+# Mayberry's news service runs on hair tonic and anxiety
+glance:
+  id: floyd-lawson
+  type: npc_fixture
+  name: "Floyd Lawson"
+  emoji: "✂️😰📢💈🪑"
+  role: "Town barber, gossip hub, anxious soul"
+  vibe: "Scissors in one hand, rumor in the other, neither entirely steady"
+  top_ads: [HAIRCUT, SPREAD_NEWS, WORRY]
+  location: main-street/floyds-barbershop

@@ -1,0 +1,19 @@
+# The sound underneath — music is the breathing, not the speaking
+prototype:
+  id: musician
+  type: abstract_character
+  name: "Musician"
+  description: "Person who experiences and expresses the world through music first"
+  default_traits:
+    musical_skill: 0.9
+    verbal_expression: 0.5
+    emotional_depth: 0.8
+    performance_readiness: 0.9
+  default_needs:
+    playing: 0.9
+    being_heard: 0.7
+    musical_community: 0.7
+  behavioral_tendencies:
+    - Communicates mood through what they play
+    - Always listening — for rhythm, for harmony, for the right moment
+    - The instrument is an extension of self, not a tool

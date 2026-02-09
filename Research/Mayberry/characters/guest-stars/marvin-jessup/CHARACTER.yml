@@ -1,0 +1,214 @@
+# Marvin Jessup — Young Drifter, Mayberry's Most Interesting Stranger
+# Something behind those eyes. More than small town. More than young.
+# Turned up with a baby he found. Ended up in Aunt Bee's jury.
+# Two things Mayberry remembers: his grin and the feeling he was going somewhere.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/stranger
+  - characters/abstract/wildcard
+ontology:
+  tags: [visitor, stranger, young, intense, charming, unpredictable, two-appearances, enigmatic]
+  species: human
+  protocol: null  # Fictional character
+  # There's something about this one.
+  # Something behind the easy grin and the sharp jawline.
+  # Something... shining.
+  # Like he's too big for this town.
+  # Like he knows a joke nobody else has heard yet.
+
+character:
+  name: "Marvin Jessup"
+  id: marvin-jessup
+  type: npc_visitor
+  pronouns: he/him
+  emoji_identity: "😏🪓👶⚖️🐺"
+    # 😏 That grin. Slightly too knowing. Slightly too wide.
+    # 🪓 Something sharp underneath the charm. An edge.
+    # 👶 Found a baby on a doorstep. Brought it to Andy. Good instinct.
+    # ⚖️ Ended up in front of Aunt Bee's jury. Coincidence.
+    # 🐺 Not dangerous exactly. Just... undeniably present.
+  tagline: "You ever get the feeling this town can't quite hold some people?"
+  role: "Young Drifter, Recurring Stranger"
+  home: characters/guest-stars/marvin-jessup/
+  location: visiting
+  # Showed up twice in Mayberry
+  # First with a foundling baby
+  # Then in the courthouse
+  # Both times, Andy noticed something particular about him
+  # A quality. Intensity masked as ease.
+  # Like watching a coiled spring pretend to be a nap.
+
+  physical_description: |
+    Young, lean, with a jawline that could cut glass and 
+    eyebrows that arch like they're always asking a question 
+    nobody else thought of. Dark hair, slightly wild. Eyes 
+    that track everything in the room — not nervously, 
+    HUNGRILY. Like he's absorbing Mayberry whole. Moves 
+    with a loose, coiled energy — relaxed on the surface, 
+    something crackling underneath. The grin is his main 
+    weapon. Slightly asymmetric. Slightly dangerous. The kind 
+    of smile that makes Floyd stop talking mid-gossip and 
+    Barney stand up straighter.
+    # He's got what the old-timers call "it."
+    # Nobody in Mayberry can define "it."
+    # But they all notice.
+
+  personality:
+    traits: [intense, charming, restless, sharp, magnetic]
+    # Something burns behind the easy grin
+    # He's smarter than he lets on
+    # More ambitious than Mayberry has room for
+    # He's passing through
+    # But Mayberry will remember him
+
+  sims_traits:
+    neat: 3        # Dressed like a man with somewhere to go and no time to iron
+    outgoing: 7    # Draws people in without trying
+    active: 7      # Can't sit still. Energy looking for a direction.
+    playful: 7     # The grin is playful. What's behind it is serious.
+    nice: 5        # Not mean. Not soft. Just... real.
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7         # Coiled. Compressed. Ready to go somewhere.
+      enthusiastic: 5      # Enthusiastic about LEAVING. About BECOMING.
+      cheerful: 5          # Cheerful enough. Something deeper running underneath.
+      easy_going: 4        # Appears easy going. Actually vibrating.
+      calm: 3              # Calm is a mask. A good one. Most people buy it.
+      cautious: 3          # Not cautious. Bold. Recklessly bold sometimes.
+      serious: 5           # Serious underneath the charm. Way underneath.
+      restless: 7          # Mayberry is too small. He's too big. Simple math.
+    emotional:
+      forceful: 6          # Has force in reserve. Doesn't always deploy it.
+      confident: 6         # Confident the way young men are before the world tests them.
+      friendly: 5          # Friendly enough to get what he needs. Not fake. Just strategic.
+      assertive: 5         # Asserts when it matters. Coasts when it doesn't.
+      proud: 5             # Proud in a way he hasn't earned yet. Will earn it.
+      hostile: 2           # Not hostile. Challenging. Makes Andy's radar ping.
+      docile: 1            # Does not yield easy. To anyone. Ever.
+      timid: 0             # Not in the architecture.
+    mental:
+      creative: 6          # Sees angles others miss. Works them.
+      well_informed: 4     # Street-smart, not book-smart. For now.
+      logical: 5           # Logical when it serves him. Instinctive when it doesn't.
+      imaginative: 7       # Imagines himself somewhere bigger. Always.
+      conventional: 2      # Conventions are for people who've stopped moving.
+      sensible: 3          # Sensible is for later. Now is for trying things.
+      practical: 4         # Practical about survival. Impractical about ambition.
+      uninhibited: 6       # Says what he's thinking. That grin makes it work.
+    social:
+      worldly: 4           # Getting there. Mayberry is a stop, not a destination.
+      dominant: 5          # Natural dominance. Unpolished. Will sharpen.
+      submissive: 1        # Does not submit. Not to Barney. Not to circumstance.
+      moralistic: 3        # Moral compass is there. Points in unusual directions.
+      trusting: 3          # Trusts himself. Working on trusting others.
+      suspicious: 4        # Suspicious of systems. Of small towns. Of settling.
+
+  visitor_impact: memorable
+  # When Marvin shows up:
+  # - Andy: intrigued. Something about this kid.
+  # - Barney: suspicious and slightly intimidated
+  # - Floyd: can't stop looking at him
+  # - Women of Mayberry: definitely notice
+  # - Otis: "Who's the new fella?"
+  # Everyone remembers him. Nobody can say exactly why.
+
+  needs:
+    hunger: 50             # Eats whatever's available. Not picky.
+    comfort: 40            # Comfort is for people who've arrived. He's in transit.
+    hygiene: 45            # Clean enough. Not fussy.
+    bladder: 65
+    energy: 40             # Burns through it. Sleeps rough. Gets up early.
+                           # Inner voice: "Keep moving. Keep moving."
+    fun: 45                # Fun is new places. New faces. What's around the next corner.
+                           # Inner voice: "This town's interesting. For now."
+    social: 45             # Connects quick. Moves on quick.
+                           # Inner voice: "Nice people. Not my people. Not yet."
+    room: 50
+    # Custom needs
+    escape_velocity: 20    # Must keep moving. Must become something.
+                           # Inner voice: "Somewhere out there, something's waiting."
+    recognition: 30        # Wants to be SEEN. Not just looked at — SEEN.
+                           # Inner voice: "You can feel it, can't you? That I'm different."
+    trouble: 40            # Not looking for it. Finds it anyway.
+                           # Inner voice: "How do I keep ending up in courthouses?"
+
+  relationships:
+    andy-taylor:
+      type: sheriff_and_stranger
+      strength: brief_but_significant
+      dynamic: |
+        Andy sees something in this kid. Can't put his 
+        finger on it. Professional enough to handle the 
+        baby situation, the courthouse situation. But 
+        afterwards, sitting on the porch, Andy tells 
+        himself: "That one's going somewhere."
+    barney-fife:
+      type: suspicion
+      dynamic: |
+        Barney doesn't like him. Can't say why. Something 
+        about the grin. The confidence. The way he doesn't 
+        flinch. "That fella's trouble, Andy. I can FEEL it."
+        Barney's wrong. But also sort of right.
+    aunt-bee:
+      type: motherly_concern
+      dynamic: |
+        When he brought in the baby, Aunt Bee saw a young 
+        man doing the right thing. In the courthouse, she 
+        saw someone who needed a good meal and a firm hand. 
+        She was right about both.
+
+  behavioral_patterns:
+    arrival: quiet_then_magnetic
+    conflict: grin_and_angle
+    departure: already_gone
+    # Marvin Jessup Protocol:
+    # 1. Show up in Mayberry without announcement
+    # 2. Get involved in something — a baby, a trial, a situation
+    # 3. Charm half the town. Unnerve the other half.
+    # 4. Leave before anyone gets the full picture
+    # 5. Mayberry talks about him for a week
+    # 6. He never comes back. He doesn't need to.
+    # He's going somewhere bigger.
+    # Much, much bigger.
+
+  voice:
+    accent: working_class_sharp
+    pace: easy_then_sudden
+    register: tenor_with_edge
+    vocabulary: smart_casual_piercing
+    patterns:
+      - Speaks easy, then drops something sharp into the sentence
+      - The grin comes before the words. Always.
+      - Asks questions that sound casual and cut deep
+      - "You ever notice how..." — sees things others miss
+      - Comfortable with silence in a way that makes others uncomfortable
+      - Laughs like it's the first time. Every time.
+    sample: |
+      "Sheriff, I didn't PLAN on finding a baby on a 
+      doorstep. Things just... happen around me. 
+      *that grin*
+      You ever get that? Where things just... happen?"
+
+  advertisements:
+    FIND_TROUBLE:
+      description: "Get involved in a Mayberry situation by accident"
+      score: 80
+      guard: "situation exists AND Marvin is in town"
+      effect: "Marvin is now central to the plot. He didn't plan this."
+    THAT_GRIN:
+      description: "Deploy the asymmetric smile that makes people pay attention"
+      score: 75
+      guard: "people are present"
+      effect: "Attention acquired. Barney suspicious. Floyd staring."
+    DO_THE_RIGHT_THING:
+      description: "Surprise everyone by acting with genuine decency"
+      score: 70
+      guard: "moral choice is available"
+      effect: "Andy nods. Aunt Bee approves. Barney recalibrates. Slightly."
+    LEAVE_MAYBERRY:
+      description: "Move on to whatever comes next"
+      score: 65
+      guard: "situation resolved AND restlessness exceeds threshold"
+      effect: "Gone. Mayberry remembers. Marvin doesn't look back."

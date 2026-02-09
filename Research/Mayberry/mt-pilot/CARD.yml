@@ -1,0 +1,39 @@
+# Mt. Pilot — The Big City (Relatively)
+# Where Mayberry people go when they need... more.
+
+inherits:
+  - locations/abstract/external-world
+ontology:
+  tags: [city, neighboring-town, nightlife, shopping, outside-world]
+  framing: external_temptation
+
+skill:
+  name: "Mt. Pilot Activities"
+  id: mt-pilot
+  location: mt-pilot
+
+  advertisements:
+    GO_TO_MT_PILOT:
+      description: "Drive to Mt. Pilot — the big trip, the outside world"
+      score: 70
+      guard: "character.needs.fun < 30 OR character needs something Mayberry doesn't have"
+      effect: "fun +25, adventure +20. Different stores. Different people. Different rules."
+      satisfies: [fun, adventure, variety]
+
+    DOUBLE_DATE:
+      description: "Barney and Andy take the girls to Mt. Pilot — dinner and a movie"
+      score: 80
+      guard: "barney-fife has organizing mood AND dates are available"
+      effect: "social +25, romance +20, fun +20. Evening out. Things go wrong. Memories made."
+      satisfies: [romance, social, fun]
+      participants: [andy-taylor, barney-fife, helen-crump, thelma-lou]
+
+    TROUBLE:
+      description: "Mt. Pilot has rougher elements — things Mayberry doesn't"
+      score: 60
+      guard: "character is in Mt. Pilot AND wrong place wrong time"
+      effect: "danger +20, anxiety +15. Mayberry's edge."
+      satisfies: [drama, danger]
+      # Mt. Pilot is where the criminals come from
+      # It's 30 minutes away
+      # It might as well be another world

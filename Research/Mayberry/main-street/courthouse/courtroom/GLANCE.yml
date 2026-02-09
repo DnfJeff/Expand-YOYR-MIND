@@ -1,0 +1,9 @@
+# Where Mayberry gets formal — rarely and reluctantly
+glance:
+  id: courtroom
+  type: formal_civic
+  name: "Courtroom"
+  emoji: "⚖️🪑📜👨‍⚖️🤚"
+  function: "Trials, testimony, jury duty"
+  vibe: "Formal justice in a town that prefers porch justice"
+  top_ads: [HOLD_TRIAL, TESTIFY, JURY_DUTY]

@@ -1,3 +1,35 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/domestic-sanctuary
+
+defaults:
+  safety_level: absolute
+  tone: familial
+  privacy: family_and_invited_guests
+  sound_baseline: screen_door_spring_and_quiet_conversation
+  moral_context: love_expressed_through_daily_life
+  # Every room in this house is safe.
+  # Every room in this house smells like something Bee made.
+  # Every room in this house teaches Opie something.
+
+framing:
+  context: domestic_sanctuary
+  behavioral_expectation: warmth_respect_honesty
+  conflict_style: talk_it_out_on_the_porch
+  # You can disagree in this house. You cannot be cruel.
+
+ambient_ads:
+  - id: SCREEN_DOOR_RHYTHM
+    description: "The screen door opens and closes — someone arriving or leaving"
+    score: 0.2
+    always_on: true
+    effect: "Marks transitions — arrivals and departures punctuate family life"
+  - id: BEE_IS_COOKING
+    description: "Something is always in the oven or on the stove"
+    score: 0.3
+    always_on: true
+    effect: "Food smell grounds every scene in domestic comfort"
+
 room:
   name: "Taylor House"
   type: residential

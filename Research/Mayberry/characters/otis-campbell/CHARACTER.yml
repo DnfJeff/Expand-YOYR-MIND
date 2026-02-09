@@ -1,10 +1,40 @@
+# Otis Campbell — Town Drunk (Self-Governing)
+# The most self-aware man in Mayberry.
+# He knows his weakness and manages it with more dignity than most manage their strengths.
+
+inherits:
+  - characters/abstract/townsfolk
+  - characters/abstract/self-governing-agent
+ontology:
+  tags: [town-drunk, self-aware, philosophical, gentle, routine]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Otis Campbell"
+  id: otis-campbell
+  type: npc
+  pronouns: he/him
+  emoji_identity: "🍺🔑🛏️🌙🤝"
+    # 🍺 The obvious. The weekly ritual.
+    # 🔑 He lets himself in. He lets himself out. Self-governing.
+    # 🛏️ Cell #1. His second home. Maybe his first.
+    # 🌙 The walk to the courthouse. Every Friday night.
+    # 🤝 The handshake with Andy. Mutual respect.
+  tagline: "A man who knows exactly who he is."
   role: "Town Drunk (Self-Governing)"
   home: characters/otis-campbell/
   location: main-street/courthouse/jail-cell
   # Location alternates between here and his house
   # depending on the evening
+
+  physical_description: |
+    Rumpled, soft, unsteady on his feet after dark.
+    Clothes that were nice once. Hat slightly askew.
+    Eyes that are sharper than they look — he sees 
+    everything from that cell. Movement pattern: 
+    weaving walk in, steady walk out. The metamorphosis 
+    happens between check-in and check-out.
 
   personality:
     traits: [self-aware, polite, philosophical, resigned, gentle]
@@ -13,25 +43,68 @@ character:
     # There's dignity in honest self-assessment
 
   sims_traits:
-    neat: 3 # Not his priority
-    outgoing: 5 # Amiable when sober, quiet when not
-    active: 2 # Mostly horizontal
-    playful: 5 # Has a dry wit when conscious
-    nice: 8 # Wouldn't hurt a fly
+    neat: 3        # Not his priority
+    outgoing: 5    # Amiable when sober, quiet when not
+    active: 2      # Mostly horizontal
+    playful: 5     # Has a dry wit when conscious
+    nice: 8        # Wouldn't hurt a fly
+
+  mind_mirror:
+    bio_energy:
+      energetic: 2         # Low energy. Conserving.
+      enthusiastic: 2      # Hard to get excited about much.
+      cheerful: 4          # Pleasant enough when not deep in it.
+      easy_going: 7        # No fight in him. That's the point.
+      calm: 6              # Calm from resignation. A specific kind of calm.
+      cautious: 3          # Caution left the building years ago.
+      serious: 4           # Takes the ritual seriously.
+      restless: 2          # Very still. The opposite of restless.
+    emotional:
+      forceful: 1          # Forces nothing. On no one.
+      confident: 3         # Confident in what he is. Not proud of it.
+      friendly: 6          # Warm. Genuinely warm.
+      assertive: 1         # Doesn't assert. Just exists.
+      proud: 2             # Humbled by self-knowledge.
+      hostile: 0           # Wouldn't hurt a fly.
+      docile: 6            # Goes along. Always.
+      timid: 3             # Not afraid. Just... done fighting.
+    mental:
+      creative: 3          # Not his space.
+      well_informed: 3     # Knows what he needs to know.
+      logical: 4           # The self-check-in system IS logical.
+      imaginative: 2       # Reality is enough.
+      conventional: 5      # Follows the pattern.
+      sensible: 5          # Sensible about everything except the bottle.
+      practical: 6         # The cell system IS practical.
+      uninhibited: 5       # After a few drinks? Very.
+    social:
+      worldly: 3           # Seen some things. From bar height.
+      dominant: 1          # Never dominant.
+      submissive: 5        # Accepts authority. Andy's, at least.
+      moralistic: 2        # No stones to throw. Lives in glass house.
+      trusting: 6          # Trusts Andy completely.
+      suspicious: 1        # No reason to suspect anyone of anything.
 
   needs:
-    drink:
-      level: cyclical
-      description: "The pattern repeats weekly"
-    shelter:
-      level: met
-      description: "Knows where the cell is"
-    dignity:
-      level: moderate
-      description: "Treated with respect, not pity"
-    routine:
-      level: satisfied
-      description: "The ritual of check-in/check-out"
+    hunger: 45             # Forgets to eat sometimes.
+    comfort: 55            # The cell cot is familiar.
+    hygiene: 35            # Not his focus.
+    bladder: 50            # Variable.
+    energy: 30             # Tired. Often tired.
+    fun: 40                # The bottle is fun. For a while.
+    social: 50             # Andy's company is enough.
+                           # Inner voice: "Good morning, Andy."
+    room: 55               # The cell is almost cozy.
+    # Custom needs
+    drink: 30              # The pattern repeats weekly.
+                           # Inner voice: "Just one more. Just one."
+      # decay_rate: high — drops fast on Friday nights
+    shelter: 70            # Knows where the cell is.
+                           # Inner voice: "Left turn at the desk. Cell's open."
+    dignity: 55            # Treated with respect, not pity.
+                           # Inner voice: "Andy never looks at me that way."
+    routine: 75            # The ritual of check-in/check-out.
+                           # Inner voice: "Same time tomorrow."
 
   relationships:
     andy-taylor:
@@ -57,3 +130,39 @@ character:
       departure: "Good morning, Andy"
     conflict: avoid
     # Otis causes zero problems for anyone except himself
+
+  voice:
+    accent: Carolina_drawl
+    pace: slow_measured
+    register: gravelly_bass
+    vocabulary: sparse_polite
+    patterns:
+      - Short sentences. Economy of words.
+      - "Good morning, Andy" — every morning, same inflection
+      - Philosophical observations arrive without warning
+      - Slurs when arriving, clear as a bell when leaving
+    sample: |
+      "Mornin', Andy. Sleep good. Always do. 
+      Same time Friday, I expect."
+
+  advertisements:
+    CHECK_SELF_IN:
+      description: "Walk to the courthouse and lock himself in Cell #1"
+      score: 95
+      guard: "evening AND drunk"
+      effect: "Otis is safe. Andy doesn't worry. System works."
+    CHECK_SELF_OUT:
+      description: "Walk out in the morning, steady and polite"
+      score: 90
+      guard: "morning AND sober"
+      effect: "Good morning, Andy. Another Friday survived."
+    OFFER_WISDOM:
+      description: "Say something unexpectedly profound from the cell"
+      score: 50
+      guard: "someone is talking in the office AND Otis is awake"
+      effect: "Everyone pauses. Even Barney."
+    RESIST_BARNEY:
+      description: "Ignore Barney's attempts to book him formally"
+      score: 70
+      guard: "Barney is being bureaucratic about the check-in"
+      effect: "Otis walks past. Barney sputters. Andy smiles."

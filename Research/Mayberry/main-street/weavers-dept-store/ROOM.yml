@@ -1,3 +1,16 @@
+framing:
+  context: retail_domestic
+  behavioral_expectation: shopping_and_comparing
+  conflict_style: price_negotiations
+
+ambient_ads:
+  - id: BEE_COMPARING
+    description: "Aunt Bee checks every price against the Sears catalog"
+    score: 0.2
+    always_on: true
+    guard: "aunt_bee_is_present"
+    effect: "Shopping becomes an extended evaluation process"
+
 room:
   name: "Weaver's Department Store"
   type: commercial

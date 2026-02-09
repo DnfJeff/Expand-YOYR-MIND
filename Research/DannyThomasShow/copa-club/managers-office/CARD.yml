@@ -1,0 +1,38 @@
+# Manager's Office — Phil Brokaw's Domain
+# Bookings, contracts, headaches, and the business end of entertainment.
+
+inherits:
+  - locations/abstract/authority-seat
+ontology:
+  tags: [office, management, business, contracts, bookings, phil-brokaw]
+  framing: professional_business
+
+skill:
+  name: "Copa Manager's Office"
+  id: managers-office
+  location: copa-club/managers-office
+
+  advertisements:
+    BOOK_ACT:
+      description: "Phil arranges bookings — the machinery behind the spotlight"
+      score: 80
+      guard: "phil-brokaw is present AND scheduling needed"
+      effect: "professional +25. Show booked. Calendar managed. Danny informed (eventually)."
+      satisfies: [professional, order]
+      participants: [phil-brokaw]
+
+    BUSINESS_MEETING:
+      description: "Danny and Phil discuss business — money, contracts, the future"
+      score: 75
+      guard: "danny-williams AND phil-brokaw are present AND business matters exist"
+      effect: "professional +20, anxiety +10. Business discussed. Danny wants to perform, not manage."
+      satisfies: [professional, duty]
+      participants: [danny-williams, phil-brokaw]
+
+    CHARLEY_NEGOTIATES:
+      description: "Charley Halper pushes for better terms — Danny's agent at work"
+      score: 70
+      guard: "charley-halper is present AND contract exists"
+      effect: "professional +15, tension +10. Terms discussed. Everyone pretends it's not about money."
+      satisfies: [professional, negotiation]
+      participants: [charley-halper, phil-brokaw]

@@ -1,0 +1,37 @@
+# MOOLLM Warm-Start State — Mayberry
+# This file tracks simulation state between sessions.
+# Updated at every epoch boundary.
+
+state:
+  status: ready
+  # ready | running | paused | completed
+  
+  current_epoch: null
+  current_tick: 0
+  world_time: null
+  
+  # Character locations — where is everyone right now?
+  character_locations: {}
+  # Example when running:
+  # andy-taylor: courthouse/andys-office
+  # barney-fife: courthouse/andys-office
+  # aunt-bee: taylor-house/kitchen
+  # opie-taylor: schoolhouse
+  
+  # Active needs — character need levels (0.0-1.0)
+  character_needs: {}
+  # Populated from CHARACTER.yml defaults on first run
+  
+  # Relationship deltas — changes from baseline
+  relationship_changes: []
+  # Example: { from: barney-fife, to: andy-taylor, dimension: trust, delta: +0.1, reason: "Andy backed up Barney's checkpoint" }
+  
+  # Narrative flags — story state
+  flags: {}
+  # Example: barney_has_bullet: true, otis_is_in_cell: false
+  
+  # Session history
+  sessions:
+    total: 0
+    last_session: null
+    total_ticks: 0

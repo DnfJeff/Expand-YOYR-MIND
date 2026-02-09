@@ -1,3 +1,35 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/sacred-communal
+
+defaults:
+  tone: reverent_but_warm
+  behavior: communal_respectful
+  moral_context: values_stated_aloud
+  competition_permitted: church_supper_only
+  social_register: congregation
+  # The church names the values that Andy practices.
+  # The fellowship hall tests them with bake-offs.
+
+framing:
+  context: sacred_communal
+  behavioral_expectation: reverence_and_community
+  conflict_style: passive_aggressive_casseroles
+  # Disagreements here are expressed through competitive cooking
+  # and pointed hymn selections.
+
+ambient_ads:
+  - id: LOWER_YOUR_VOICE
+    description: "Sacred space demands quieter tones"
+    score: 0.2
+    always_on: true
+    effect: "Characters speak more softly and formally here"
+  - id: COMMUNITY_GATHERS
+    description: "The church is where Mayberry sees itself as a whole"
+    score: 0.3
+    always_on: true
+    effect: "Social dynamics heightened — everyone watching everyone"
+
 room:
   name: "All Souls Church"
   type: civic_religious

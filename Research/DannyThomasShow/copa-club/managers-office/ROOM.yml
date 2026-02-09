@@ -1,3 +1,20 @@
+framing:
+  context: business_backstage
+  behavioral_expectation: professional_negotiation
+  conflict_style: contracts_and_compromise
+
+ambient_ads:
+  - id: BOOKS_OPEN
+    description: "The ledger tells the truth the audience never sees"
+    score: 0.2
+    always_on: true
+    effect: "Business reality grounds artistic ambition"
+  - id: PHONE_RINGING
+    description: "Agents, acts, problems — Phil handles them all"
+    score: 0.3
+    always_on: true
+    effect: "New opportunities or crises arrive by phone"
+
 room:
   name: "Manager's Office"
   type: office

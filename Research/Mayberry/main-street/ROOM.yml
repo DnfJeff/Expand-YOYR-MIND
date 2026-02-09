@@ -1,3 +1,35 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/public-space
+
+defaults:
+  visibility: high
+  accessibility: open_during_business_hours
+  tone: communal
+  gossip_flow: true
+  social_register: everyone_in_mayberry
+  # Every business on Main Street is a social institution first
+  # and a commercial enterprise second.
+  # Shopping is the excuse. Talking is the purpose.
+
+framing:
+  context: communal_public
+  behavioral_expectation: friendliness_familiarity
+  conflict_style: public_politeness_private_gossip
+  # On Main Street you wave. Always.
+
+ambient_ads:
+  - id: WAVE_AND_NOD
+    description: "Acknowledge everyone you pass — it's Mayberry"
+    score: 0.2
+    always_on: true
+    effect: "Social lubrication — nobody is a stranger on Main Street"
+  - id: SMALL_TOWN_PACE
+    description: "Nobody rushes — there's always time to stop and talk"
+    score: 0.3
+    always_on: true
+    effect: "Conversations happen naturally; hurrying draws attention"
+
 room:
   name: "Main Street"
   type: thoroughfare

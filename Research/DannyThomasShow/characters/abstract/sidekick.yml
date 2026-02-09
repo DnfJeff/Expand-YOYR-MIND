@@ -1,0 +1,19 @@
+# Second banana — but the show doesn't work without them
+prototype:
+  id: sidekick
+  type: abstract_character
+  name: "Sidekick"
+  description: "Supporting character whose loyalty and complementary skills make the lead work"
+  default_traits:
+    loyalty: 0.9
+    complementary_skill: 0.8
+    self_effacement: 0.6
+    indispensability: 0.8
+  default_needs:
+    belonging: 0.8
+    being_needed: 0.8
+    recognition: 0.5
+  behavioral_tendencies:
+    - Enables the lead without competing
+    - Occasional moments of independent brilliance
+    - Relationship is more equal than either admits

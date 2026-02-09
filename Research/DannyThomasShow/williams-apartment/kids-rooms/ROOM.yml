@@ -1,3 +1,16 @@
+framing:
+  context: private_youthful
+  behavioral_expectation: homework_and_schemes
+  conflict_style: generational_negotiation
+
+ambient_ads:
+  - id: PHONE_OCCUPIED
+    description: "Terry is on the phone. Terry is always on the phone."
+    score: 0.3
+    always_on: true
+    guard: "terry_is_present"
+    effect: "Phone line tied up; Danny can't make calls; conflict ensues"
+
 room:
   name: "Kids' Rooms"
   type: bedrooms

@@ -1,0 +1,9 @@
+# Where the mask comes off — before and after
+glance:
+  id: copa-backstage
+  type: transitional
+  name: "Copa Backstage"
+  emoji: "🎭🪞😤😮‍💨🚪"
+  function: "Pre-show nerves, post-show decompression, guest handoffs"
+  vibe: "The last deep breath before the stage and the first exhale after"
+  top_ads: [PREPARE, DECOMPRESS, GUEST_STAR_HANDOFF]

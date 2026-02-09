@@ -1,0 +1,19 @@
+# Waiting — not passive, just strategic
+prototype:
+  id: patient-partner
+  type: abstract_character
+  name: "Patient Partner"
+  description: "Romantic partner who endures the other's limitations with visible grace"
+  default_traits:
+    patience: 0.9
+    loyalty: 0.9
+    suppressed_frustration: 0.6
+    self_worth: 0.6
+  default_needs:
+    commitment: 0.9
+    forward_progress: 0.7
+    being_prioritized: 0.8
+  behavioral_tendencies:
+    - Hints that are never quite heard
+    - Loyalty endures past the point others would leave
+    - Breaking point exists but location unknown

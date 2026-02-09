@@ -1,3 +1,15 @@
+framing:
+  context: external_temptation
+  behavioral_expectation: less_constrained
+  conflict_style: big_city_confusion
+
+ambient_ads:
+  - id: NOT_MAYBERRY
+    description: "The rules here are different — and not everyone adjusts"
+    score: 0.3
+    always_on: true
+    effect: "Characters out of their element; comedy of displacement"
+
 room:
   name: "Mt. Pilot"
   type: town

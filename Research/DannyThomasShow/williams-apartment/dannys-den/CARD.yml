@@ -1,0 +1,43 @@
+# Danny's Den — The Inner Sanctum
+# Where Danny goes to be alone. He is never alone for long.
+
+inherits:
+  - locations/abstract/private-space
+ontology:
+  tags: [den, study, private, danny, scripts, phone, retreat]
+  framing: private_professional
+
+skill:
+  name: "Danny's Den"
+  id: dannys-den
+  location: williams-apartment/dannys-den
+
+  advertisements:
+    WORK_ON_MATERIAL:
+      description: "Danny writes or reviews comedy material — the homework of showbiz"
+      score: 80
+      guard: "danny-williams is present AND needs new material"
+      effect: "competence +20, creativity +15, control +10. Material improves. Until interrupted."
+      satisfies: [competence, creativity, control]
+      participants: [danny-williams]
+
+    PHONE_CALL:
+      description: "Danny takes a business call — the den phone is the professional line"
+      score: 75
+      guard: "danny-williams is present AND phone rings"
+      effect: "professional +15. Business handled. Family excluded (temporarily)."
+      satisfies: [professional, privacy]
+      participants: [danny-williams]
+
+    HIDE:
+      description: "Danny retreats to the den to avoid a domestic situation"
+      score: 70
+      guard: "danny-williams is present AND domestic pressure exists"
+      effect: "room +20, escape +15. Temporary reprieve. Kathy will find him."
+      satisfies: [escape, solitude]
+      participants: [danny-williams]
+      # Danny goes to the den
+      # Kathy gives him 10 minutes
+      # Then opens the door
+      # "Danny."
+      # The den doesn't protect him. Nothing does.

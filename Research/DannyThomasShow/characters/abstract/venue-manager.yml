@@ -1,0 +1,19 @@
+# The space-keeper — making the show possible from behind the scenes
+prototype:
+  id: venue-manager
+  type: abstract_character
+  name: "Venue Manager"
+  description: "Person who manages a performance space, bridging talent and audience"
+  default_traits:
+    business_acumen: 0.8
+    show_knowledge: 0.7
+    crisis_management: 0.8
+    diplomacy: 0.7
+  default_needs:
+    venue_success: 0.9
+    talent_management: 0.7
+    smooth_operations: 0.8
+  behavioral_tendencies:
+    - Solves problems the audience never knows about
+    - Balances artistic demands with commercial reality
+    - Loyalty to the venue exceeds loyalty to any single act

@@ -1,0 +1,29 @@
+# Records Room — Barney's Paper Kingdom
+# Filing cabinets, dust, and one deputy who takes it all seriously.
+
+inherits:
+  - locations/abstract/storage
+ontology:
+  tags: [records, filing, archive, dust, barney, paperwork]
+  framing: bureaucratic
+
+skill:
+  name: "Records Room"
+  id: records-room
+  location: main-street/courthouse/records-room
+
+  advertisements:
+    FILE:
+      description: "File a report, record, or document — Barney's sacred duty"
+      score: 70
+      guard: "document exists AND filing system is... functional (debatable)"
+      effect: "duty +20, order +15. Document filed. Findability: uncertain."
+      satisfies: [duty, order]
+      participants: [barney-fife]
+
+    RESEARCH:
+      description: "Look up old records — if you can find them"
+      score: 60
+      guard: "character needs historical information AND patience exists"
+      effect: "information found (eventually). Dust inhaled. Sneezing."
+      satisfies: [information, research]

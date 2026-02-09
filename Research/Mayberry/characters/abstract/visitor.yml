@@ -1,0 +1,19 @@
+# The one who arrives — catalyst, witness, disruption
+prototype:
+  id: visitor
+  type: abstract_character
+  name: "Visitor"
+  description: "Outsider who arrives in the community and forces the regulars to see themselves"
+  default_traits:
+    otherness: 0.7
+    catalyst_potential: 0.8
+    permanence: 0.1
+    comparison_value: 0.8
+  default_needs:
+    acceptance: 0.5
+    purpose_for_visit: 0.7
+    departure_trigger: 0.6
+  behavioral_tendencies:
+    - Reveals things about the community by being different
+    - Either absorbed by the community or ejected by it
+    - Leaves the town slightly changed

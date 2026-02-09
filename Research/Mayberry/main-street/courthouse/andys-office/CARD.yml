@@ -1,17 +1,33 @@
+# Andy's Office — Where Justice Runs on Coffee and Conversation
+# The law in Mayberry is a man sitting at a desk,
+# listening to both sides, and asking the right question.
+
+inherits:
+  - locations/abstract/authority-seat
+ontology:
+  tags: [office, sheriff, law, justice, coffee, disputes, filing, barney]
+  framing: gentle_authority
+
 skill:
   name: "Sheriff's Office Operations"
+  id: andys-office
   location: main-street/courthouse/andys-office
 
   advertisements:
-    # What this room offers to characters with matching needs
     REPORT_IN:
-      satisfies: [duty, social, information]
       description: "Report to the sheriff about town business"
+      score: 75
+      guard: "andy-taylor is present AND character has information or complaint"
+      effect: "social +15, duty +20. Andy listens. Information filed mentally."
+      satisfies: [duty, social, information]
       participants: [andy-taylor, any]
 
     SETTLE_DISPUTE:
+      description: "Bring a complaint to Andy — two sides, one conversation, no courtroom needed"
+      score: 90
+      guard: "andy-taylor is present AND two parties disagree"
+      effect: "peace +30, social +20. Both sides heard. Handshake."
       satisfies: [peace, justice, social]
-      description: "Bring a complaint to Andy for resolution"
       participants: [andy-taylor, any, any]
       method: conversation
       # Andy listens to both sides
@@ -19,12 +35,31 @@ skill:
       # Verdict: usually both were a little right
 
     FILE_REPORT:
-      satisfies: [duty, order]
-      description: "File an incident report (Barney loves these)"
+      description: "Barney fills out an incident report — in triplicate, with annotations"
+      score: 65
+      guard: "barney-fife is present AND incident has occurred (or Barney thinks one has)"
+      effect: "duty +25, importance +20. Report filed. Barney feels validated."
+      satisfies: [duty, order, self_importance]
       participants: [barney-fife]
+      # Barney LOVES reports
 
     DRINK_COFFEE:
-      satisfies: [comfort, social]
-      description: "Sit and have a cup"
+      description: "Sit and have a cup — half of Mayberry's business happens here"
+      score: 70
+      guard: "coffee is made AND character is present"
+      effect: "comfort +20, social +15, energy +10. Problems discussed."
+      satisfies: [comfort, social, energy]
       participants: [any]
       # Half of Mayberry's business gets done over this coffee
+      # The coffee is terrible. Nobody cares.
+
+    BARNEY_PATROL_BRIEFING:
+      description: "Barney delivers his daily security assessment of Mayberry"
+      score: 60
+      guard: "barney-fife is present AND time is morning"
+      effect: "duty +15, fun +10 (for Andy). Barney presents threat analysis. Andy nods."
+      satisfies: [duty, self_importance, routine]
+      participants: [barney-fife, andy-taylor]
+      # Barney has identified 3-7 threats
+      # None of them are real
+      # Andy listens to all of them

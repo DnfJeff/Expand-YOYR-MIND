@@ -1,0 +1,10 @@
+# Kathy's friend, social circuit, accidental gossip
+glance:
+  id: bunny-halper
+  type: npc_resident
+  name: "Bunny Halper"
+  emoji: "👛💅🗣️🍸💕"
+  role: "Charley's wife, Kathy's friend, social broadcaster"
+  vibe: "Everything told in confidence to Bunny exits through Bunny"
+  top_ads: [SOCIALIZE, SHARE_SECRET, COUPLE_DINNER]
+  location: new-york-streets/neighborhood

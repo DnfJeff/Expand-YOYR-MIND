@@ -1,0 +1,10 @@
+# The loudest, most loving father in television
+glance:
+  id: danny-williams
+  type: npc_resident
+  name: "Danny Williams"
+  emoji: "🎤😤👨‍👧‍👦🎹💫"
+  role: "Nightclub entertainer, father, professional complainer"
+  vibe: "Argues with God through the ceiling, loses every argument with Kathy, kills at the Copa"
+  top_ads: [PERFORM, CEILING_MONOLOGUE, ARGUE]
+  location: williams-apartment/living-room

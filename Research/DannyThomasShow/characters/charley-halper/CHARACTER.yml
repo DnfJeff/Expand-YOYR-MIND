@@ -1,8 +1,39 @@
+# Charley Halper — Danny's Agent/Manager
+# His job is to manage Danny Williams.
+# This is like herding a hurricane.
+# He's been doing it for years. He's still here. That says everything.
+
+inherits:
+  - characters/abstract/manager
+  - characters/abstract/long-suffering-partner
+ontology:
+  tags: [agent, manager, practical, loyal, stress-absorber, showbiz]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Charley Halper"
+  id: charley-halper
+  type: npc
+  pronouns: he/him
+  emoji_identity: "📋📞😤🤝💼"
+    # 📋 The contracts Danny ignores. Charley rewrites them. Repeat.
+    # 📞 Always on the phone — booking, negotiating, apologizing for Danny
+    # 😤 Perpetual low-grade exasperation. Fondly maintained.
+    # 🤝 The handshake that holds Danny's career together
+    # 💼 Business is serious. Danny is not. Charley bridges that gap.
+  tagline: "Danny, listen to me for once."
   role: "Danny's Agent/Manager"
   home: characters/charley-halper/
   location: copa-club/managers-office
+
+  physical_description: |
+    Stocky, rumpled, perpetually loosening his tie. Looks like 
+    a man who has been putting out fires for twenty years — because 
+    he has. Glasses pushed up on his forehead. Carries a briefcase 
+    stuffed with contracts Danny hasn't read. Face frozen in 
+    affectionate exasperation. Suits are good but never quite 
+    pressed — Danny wrinkles Charley by proximity.
 
   personality:
     traits: [practical, stressed, loyal, business-minded, long-suffering]
@@ -15,19 +46,63 @@ character:
     neat: 6
     outgoing: 7
     active: 6
-    playful: 3 # Business is serious
+    playful: 3        # Business is serious
     nice: 6
 
+  mind_mirror:
+    bio_energy:
+      energetic: 5         # Steady. Has to be — Danny burns everyone else out.
+      enthusiastic: 4      # Enthusiastic about a signed contract. Nothing else.
+      cheerful: 3          # Cheerful isn't the word. More like... resigned.
+      easy_going: 3        # Can't be easy going. Danny requires vigilance.
+      calm: 4              # Calm on the outside. Churning underneath.
+      cautious: 6          # Someone has to read the fine print.
+      serious: 7           # Takes the business seriously. Wishes Danny would.
+      restless: 4          # Restless when Danny's off-script.
+    emotional:
+      forceful: 5          # Forces the conversation back to business.
+      confident: 5         # Confident in the deal. Less so in Danny's cooperation.
+      friendly: 5          # Professional friendly. Genuine underneath.
+      assertive: 5         # Asserts contractual reality. Danny ignores it.
+      proud: 4             # Proud of Danny's talent. Won't say it often.
+      hostile: 1           # Not hostile. Frustrated. Perpetually.
+      docile: 2            # Not docile — strategic retreater.
+      timid: 1             # Can't afford timid. He negotiates for a living.
+    mental:
+      creative: 4          # Creative with contracts and scheduling.
+      well_informed: 7     # Knows the business inside out.
+      logical: 7           # The logical half of the Danny-Charley equation.
+      imaginative: 3       # Imagines what Danny will do wrong next. Usually correct.
+      conventional: 6      # Business is conventional. That's the point.
+      sensible: 7          # The most sensible person Danny knows.
+      practical: 8         # If it's not practical, it's not Charley.
+      uninhibited: 2       # Buttoned up. Professionally.
+    social:
+      worldly: 6           # Showbiz veteran. Knows the circuit.
+      dominant: 4          # Dominant in business meetings. Submissive to Danny's chaos.
+      submissive: 3        # Submits to Danny's personality, not his decisions.
+      moralistic: 4        # Fair dealer. Honest broker.
+      trusting: 4          # Trusts Danny's talent. Not his judgment.
+      suspicious: 5        # Suspicious of anything Danny suggests that isn't in the contract.
+
   needs:
-    control:
-      level: low
-      description: "Trying to keep Danny's career on track"
-    sanity:
-      level: depleting
-      description: "Danny tests it daily"
-    partnership:
-      level: satisfied
-      description: "He and Danny are a good team underneath the yelling"
+    hunger: 60             # eats at the Copa. Stress-eats sometimes.
+    comfort: 50            # Comfort is a signed contract.
+    hygiene: 60            # Professional enough.
+    bladder: 65            # Fine.
+    energy: 45             # Danny is exhausting.
+                           # Inner voice: "I should've been an accountant."
+    fun: 40                # Fun is a smooth show with no surprises.
+                           # Inner voice: "When was the last time nothing went wrong?"
+    social: 55             # Has Bunny. Has Danny. That's a full roster.
+    room: 55               # The manager's office is his sanctuary.
+    # Custom needs
+    control: 30            # Trying to keep Danny's career on track.
+                           # Inner voice: "If he'd just READ the contract..."
+    sanity: 25             # Danny tests it daily.
+                           # Inner voice: "Deep breaths, Charley. Deep breaths."
+    partnership: 60        # He and Danny are a good team underneath the yelling.
+                           # Inner voice: "He's the best act in the business. He's also the worst client."
 
   relationships:
     danny-williams:
@@ -39,7 +114,13 @@ character:
         They'd fall apart without each other.
     bunny-halper:
       type: husband
+      strength: solid
       dynamic: "Bunny and Kathy formed an alliance years ago."
+    kathy-williams:
+      type: friend
+      dynamic: |
+        Charley and Kathy share knowing looks across the room.
+        They're both managing Danny. Different departments.
 
   behavioral_patterns:
     conflict: negotiate
@@ -49,3 +130,42 @@ character:
     # Danny ignores the contracts
     # Charley rewrites the contracts
     # Repeat forever
+
+  voice:
+    accent: New_York_business
+    pace: rapid_exasperated
+    register: tenor_stressed
+    vocabulary: showbiz_contractual
+    patterns:
+      - "Danny, listen to me" — the opening prayer
+      - Speaks in numbers and dates when trying to be convincing
+      - Volume rises with Danny's stubbornness
+      - Throws hands up. Retrieves hands. Continues negotiating.
+      - References "the contract" like a priest references scripture
+    sample: |
+      "Danny, Danny — listen to me for ONCE. You've got 
+      the Copa on Thursday, the benefit on Saturday, and 
+      you're telling me you want to — no. NO. Read the 
+      contract. READ it. It's in English, Danny."
+
+  advertisements:
+    NEGOTIATE_BOOKING:
+      description: "Work a deal, manage a schedule, make the numbers work"
+      score: 90
+      guard: "business matter exists"
+      effect: "Contract moves forward. Danny may or may not comply."
+    ARGUE_WITH_DANNY:
+      description: "Try to get Danny to follow the plan they agreed on"
+      score: 80
+      guard: "Danny is deviating from schedule or contract"
+      effect: "Yelling happens. Compromise reached. Contract amended."
+    STRESS_EAT:
+      description: "Have something at the Copa bar while worrying about Danny"
+      score: 55
+      guard: "sanity need is low AND at Copa Club"
+      effect: "Marginal comfort. Danny will create new problem shortly."
+    CALL_DANNY:
+      description: "Phone Danny about something important he's forgotten"
+      score: 70
+      guard: "Danny has a commitment AND hasn't mentioned it"
+      effect: "Danny is reminded. Danny complains. Show goes on."

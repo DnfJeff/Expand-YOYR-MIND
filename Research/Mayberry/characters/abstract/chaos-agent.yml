@@ -1,0 +1,19 @@
+# Entropy in human form — disruption is the advertisement
+prototype:
+  id: chaos-agent
+  type: abstract_character
+  name: "Chaos Agent"
+  description: "Person whose primary effect on any system is to destabilize it"
+  default_traits:
+    unpredictability: 0.95
+    destructiveness: 0.6
+    innocence_of_intent: 0.5
+    energy: 0.9
+  default_needs:
+    attention: 0.9
+    excitement: 0.8
+    belonging_paradox: 0.7
+  behavioral_tendencies:
+    - Enters through windows, never doors
+    - Every plan they touch becomes comedy
+    - Genuinely confused when others are upset

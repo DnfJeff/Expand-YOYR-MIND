@@ -1,3 +1,21 @@
+framing:
+  context: urban_communal
+  behavioral_expectation: familiarity_in_the_city
+  conflict_style: public_recognition
+
+ambient_ads:
+  - id: SOMEONE_RECOGNIZES_DANNY
+    description: "'Hey, aren't you Danny Williams?' — it happens every walk"
+    score: 0.3
+    always_on: true
+    guard: "danny_is_present"
+    effect: "Private moment becomes public; Danny performs automatically"
+  - id: NEIGHBORHOOD_RHYTHM
+    description: "Delis, dry cleaners, doormen — daily familiar faces"
+    score: 0.2
+    always_on: true
+    effect: "Small-town vibes in the biggest city"
+
 room:
   name: "The Neighborhood"
   type: residential_commercial

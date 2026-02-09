@@ -1,0 +1,9 @@
+# The fortress, the stage, the home that never stays calm
+glance:
+  id: williams-apartment
+  type: residence
+  name: "Williams Apartment"
+  emoji: "🏠🗽🚪🌪️💕"
+  function: "Family life, visitor intake, argument arena"
+  vibe: "Three locks on the door, none of them used — because someone's always arriving"
+  top_ads: [COME_HOME, HOST, FAMILY_LIFE]

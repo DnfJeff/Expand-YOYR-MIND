@@ -1,18 +1,35 @@
+# The Fishing Hole — Mayberry's Chapel
+# No walls. No roof. No congregation.
+# Just water, willows, and the truth.
+
+inherits:
+  - locations/abstract/contemplative-space
+ontology:
+  tags: [fishing, lake, solitude, father-son, reflection, peace, nature]
+  framing: contemplative
+
 skill:
   name: "Fishing Hole Activities"
+  id: fishing-hole
   location: myers-lake/fishing-hole
 
   advertisements:
     FISH:
+      description: "Cast a line and wait — the act of fishing as meditation"
+      score: 75
+      guard: "character.needs.energy < 40 OR character needs solitude"
+      effect: "energy +25, room +30, peace +40. Time slows. Fish may or may not bite."
       satisfies: [peace, solitude, patience]
-      description: "Cast a line and wait"
       participants: [any]
       catch_rate: irrelevant
       # The fishing is the excuse, not the goal
 
     TALK:
+      description: "Father-son conversation at the water's edge — the real lessons"
+      score: 95
+      guard: "andy-taylor is present AND opie-taylor is present AND opie has a question"
+      effect: "social +30, family +40, wisdom transferred. Opie learns something."
       satisfies: [connection, reflection, teaching]
-      description: "Father-son conversation while fishing"
       participants: [andy-taylor, opie-taylor]
       depth: soul_level
       # Opie: "Pa, why do people...?"
@@ -20,9 +37,20 @@ skill:
       # Andy: "Well, Opie, I think..."
 
     THINK:
+      description: "Sit alone and work through a hard problem — Andy's process"
+      score: 85
+      guard: "character.id == 'andy-taylor' AND character has unresolved problem"
+      effect: "mental clarity +35, energy +15. Solution emerges from the quiet."
       satisfies: [solitude, processing]
-      description: "Sit alone and work through a problem"
       participants: [andy-taylor]
       prerequisite: complex_problem
       # When Andy's at the lake alone,
       # Mayberry has a hard problem
+
+    ESCAPE:
+      description: "Get away from town for a while — anyone's refuge"
+      score: 65
+      guard: "character.needs.room > 60 OR character.needs.social > 80"
+      effect: "room +35, social need paused, energy +20. Mayberry can wait."
+      satisfies: [solitude, escape, nature]
+      participants: [any]

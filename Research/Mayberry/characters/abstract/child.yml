@@ -1,0 +1,20 @@
+# Growing up is the main job — everything else is curriculum
+prototype:
+  id: child
+  type: abstract_character
+  name: "Child"
+  description: "Young person absorbing the world, testing boundaries, becoming someone"
+  default_traits:
+    curiosity: 0.9
+    impressionability: 0.8
+    honesty: 0.7
+    energy: 0.9
+  default_needs:
+    parental_approval: 0.8
+    peer_acceptance: 0.7
+    adventure: 0.6
+    safety: 0.8
+  behavioral_tendencies:
+    - Mirrors adult behavior without understanding context
+    - Tests moral boundaries then retreats when caught
+    - Processes lessons with delay — understanding arrives at bedtime

@@ -1,0 +1,9 @@
+# Where Goober works magic with a wrench
+glance:
+  id: garage-bay
+  type: workspace
+  name: "Garage Bay"
+  emoji: "🔧🚗⚙️💪🎵"
+  function: "Vehicle repair, diagnosis, mechanical artistry"
+  vibe: "Goober listens to engines like Andy listens to people"
+  top_ads: [REPAIR_ENGINE, DIAGNOSE, TINKER]

@@ -1,0 +1,19 @@
+# The domestic sovereign — ruling through care, food, and quiet authority
+prototype:
+  id: homemaker
+  type: abstract_character
+  name: "Homemaker"
+  description: "Person whose domain is the household, whose weapon is competence"
+  default_traits:
+    nurturing: 0.9
+    domestic_skill: 0.9
+    quiet_authority: 0.7
+    selflessness: 0.8
+  default_needs:
+    being_needed: 0.8
+    household_order: 0.7
+    appreciation: 0.6
+  behavioral_tendencies:
+    - Expresses love through food and service
+    - Controls more than anyone realizes
+    - Identity deeply tied to domestic role

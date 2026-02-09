@@ -1,0 +1,36 @@
+# Central Park — New York's Breathing Room
+# Where the Williams family goes to remember trees exist.
+
+inherits:
+  - locations/abstract/contemplative-space
+ontology:
+  tags: [park, nature, family, recreation, walks, benches, escape]
+  framing: natural_urban
+
+skill:
+  name: "Central Park Activities"
+  id: central-park
+  location: new-york-streets/central-park
+
+  advertisements:
+    FAMILY_OUTING:
+      description: "Williams family trip to the park — the urban version of the fishing hole"
+      score: 80
+      guard: "weather is good AND family is available"
+      effect: "family +25, fun +20, room +15. Fresh air. Open sky. Danny relaxes (briefly)."
+      satisfies: [family, fun, room]
+
+    DANNY_WALKS:
+      description: "Danny walks the park alone — thinking about material, life, both"
+      score: 75
+      guard: "danny-williams is present AND needs to think"
+      effect: "room +25, creativity +15. Material appears. Problems shrink."
+      satisfies: [solitude, creativity]
+      participants: [danny-williams]
+
+    PLAYGROUND:
+      description: "Rusty plays while Danny and Kathy sit on a bench — parenting in the park"
+      score: 70
+      guard: "rusty-williams is present AND parents available"
+      effect: "fun +20, family +15. Childhood in the city."
+      satisfies: [fun, family, parenting]

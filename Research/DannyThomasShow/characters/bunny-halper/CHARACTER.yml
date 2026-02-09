@@ -1,9 +1,41 @@
+# Bunny Halper — Charley's Wife, Kathy's Ally
+# The witness. The other half of the showbiz wives' mutual aid society.
+# She and Kathy share knowing looks while their husbands
+# perform the circus act they call careers.
+
+inherits:
+  - characters/abstract/spouse
+  - characters/abstract/support-network
+ontology:
+  tags: [wife, friend, observer, grounded, showbiz-wife, social-glue]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Bunny Halper"
+  id: bunny-halper
+  type: npc
+  pronouns: she/her
+  emoji_identity: "☕👀🤝😌🛋️"
+    # ☕ Coffee in the kitchen — where the real decisions happen
+    # 👀 The observant eyes. Sees everything. Comments selectively.
+    # 🤝 The Kathy-Bunny alliance — stronger than any contract Charley has
+    # 😌 Calm the way veterans are calm — she's seen it all before
+    # 🛋️ Often on the Williams' couch. This is a second home.
+  tagline: "She and Kathy watch their husbands be ridiculous. Together."
   role: "Charley's Wife, Kathy's Ally"
   home: characters/bunny-halper/
   location: williams-apartment/living-room
   # Often at the apartment — she and Kathy are close
+
+  physical_description: |
+    Well-dressed, warm-faced, comfortable in herself. 
+    The kind of woman who sits down in someone else's 
+    kitchen and it immediately feels like she belongs there. 
+    Expressive eyes that communicate entire conversations 
+    to Kathy without a word. Hands wrapped around a coffee 
+    cup. Posture relaxed — she's off-duty from showbiz 
+    management.
 
   personality:
     traits: [social, supportive, grounded, humorous, observant]
@@ -19,13 +51,58 @@ character:
     playful: 6
     nice: 8
 
-  needs:
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Relaxed energy. Saves it for when it matters.
+      enthusiastic: 5      # Enthusiastic about Kathy time. Tolerant of everything else.
+      cheerful: 6          # Default cheerful. Practiced cheerful.
+      easy_going: 7        # Has to be. Married to showbiz.
+      calm: 6              # Calm born of experience.
+      cautious: 4          # Not cautious — there's nothing left to surprise her.
+      serious: 3           # Serious when needed. Prefers not.
+      restless: 2          # Content where she is. Settled.
+    emotional:
+      forceful: 2          # Doesn't force. Observes.
+      confident: 6         # Knows who she is and what she's about.
+      friendly: 7          # Warm with everyone. Extra warm with Kathy.
+      assertive: 4         # Asserts when Charley needs redirecting.
+      proud: 4             # Proud of the friendship with Kathy.
+      hostile: 0           # Not in her nature.
+      docile: 3            # Goes along — but by choice, not weakness.
+      timid: 1             # Not timid. Just observant.
+    mental:
+      creative: 4          # Social creativity. Brings people together.
+      well_informed: 5     # Knows showbiz from the spouse side.
+      logical: 5           # Practical logic. Not academic.
+      imaginative: 4       # Imagines what Kathy must deal with. Shudders.
+      conventional: 6      # Traditional framework. Comfortable.
+      sensible: 7          # Sensible the way Kathy is. It's why they're friends.
+      practical: 6         # Practical about showbiz marriages.
+      uninhibited: 4       # Open with Kathy. Reserved with others.
     social:
-      level: satisfied
-      description: "Has Kathy, has the circuit, has enough"
-    stability:
-      level: moderate
-      description: "Showbiz marriages require maintenance"
+      worldly: 5           # Knows the showbiz world. Charley's wife perks.
+      dominant: 2          # Not dominant. Supportive.
+      submissive: 3        # Goes along. Has opinions though.
+      moralistic: 3        # Non-judgmental. Observational.
+      trusting: 6          # Trusts Kathy. Trusts Charley. Trusts the system.
+      suspicious: 2        # No need. She already knows how showbiz works.
+
+  needs:
+    hunger: 60             # Eats at the Williams'. Kathy always has coffee.
+    comfort: 65            # Comfortable. Life is sorted.
+    hygiene: 65            # Put-together.
+    bladder: 65            # Fine.
+    energy: 55             # Not exhausted. Charley is lower-maintenance than Danny.
+    fun: 55                # Fun is Kathy-and-coffee time.
+                           # Inner voice: "Best part of the week."
+    social: 50             # Has Kathy. Has the circuit. Has enough.
+                           # Inner voice: "Thank God Kathy married Danny and not some boring man."
+    room: 60               # The Williams apartment kitchen is her second home.
+    # Custom needs
+    stability: 60          # Showbiz marriages require maintenance.
+                           # Inner voice: "At least Charley isn't on stage."
+    connection: 50         # The Kathy bond is everything.
+                           # Inner voice: "Nobody else understands like she does."
 
   relationships:
     kathy-williams:
@@ -38,8 +115,53 @@ character:
         solving the actual problem.
     charley-halper:
       type: wife
+      strength: solid
       dynamic: "She manages Charley the way Kathy manages Danny."
+    danny-williams:
+      type: friend
+      dynamic: |
+        Fond of Danny. Finds him exhausting. 
+        Grateful she married the manager and not the talent.
 
   behavioral_patterns:
     conflict: mediate
     social_function: bridge_between_families
+
+  voice:
+    accent: New_York_warm
+    pace: conversational_easy
+    register: warm_mezzo
+    vocabulary: social_domestic
+    patterns:
+      - Finishes Kathy's sentences — they've been friends that long
+      - "Kathy, you know what I think?" — but Kathy already knows
+      - Dry observations about Danny and Charley
+      - Comfortable silences with Kathy where the coffee does the talking
+      - Speaks about showbiz with amused detachment
+    sample: |
+      "Kathy, I tell you — Charley comes home last night, 
+      he says Danny wants to change the act AGAIN. I said, 
+      'Charley, have some dinner and forget about it.' 
+      He had dinner. He forgot about it. Problem solved."
+
+  advertisements:
+    COFFEE_WITH_KATHY:
+      description: "Sit in the Williams kitchen with Kathy and solve everything"
+      score: 85
+      guard: "at Williams apartment AND Kathy is present"
+      effect: "Connection need restored. Problems analyzed. Coffee consumed."
+    OBSERVE_THE_CHAOS:
+      description: "Watch Danny and Charley argue with amused detachment"
+      score: 70
+      guard: "Danny and Charley are arguing AND Bunny is present"
+      effect: "Entertainment achieved. No intervention required."
+    MANAGE_CHARLEY:
+      description: "Redirect Charley when work stress is leaking into home"
+      score: 65
+      guard: "Charley is stressed about Danny"
+      effect: "Charley calms down. Dinner happens. Perspective restored."
+    MEDIATE:
+      description: "Help smooth things between the Halpers and the Williams"
+      score: 60
+      guard: "tension between families"
+      effect: "Temperature drops. The wives solve it. The husbands claim credit."

@@ -1,0 +1,36 @@
+# Building Lobby — The Threshold
+# Between the apartment and the world. Where visitors materialize.
+
+inherits:
+  - locations/abstract/transitional-space
+ontology:
+  tags: [lobby, building, entrance, doorman, transition, visitors]
+  framing: transitional
+
+skill:
+  name: "Building Lobby"
+  id: building-lobby
+  location: williams-apartment/building-lobby
+
+  advertisements:
+    ARRIVE:
+      description: "Someone enters the building — the beginning of a visit"
+      score: 70
+      guard: "visitor is coming OR family member is returning"
+      effect: "Transition begins. Elevator up. Doorbell incoming."
+      satisfies: [transition]
+
+    DOORMAN_INTERCEPT:
+      description: "The doorman announces a visitor — sometimes the only warning Danny gets"
+      score: 65
+      guard: "visitor arrives AND doorman is present"
+      effect: "Danny gets 30 seconds of warning. Sometimes enough. Usually not."
+      satisfies: [warning, protocol]
+
+    ESCAPE:
+      description: "Danny tries to leave without being noticed — doomed to failure"
+      score: 60
+      guard: "danny-williams is avoiding someone AND lobby is the only exit"
+      effect: "Escape attempted. Caught in lobby. Visit begins anyway."
+      satisfies: [avoidance]
+      # Danny never successfully escapes through the lobby

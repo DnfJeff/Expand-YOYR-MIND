@@ -1,8 +1,38 @@
+# Andy Taylor — Sheriff of Mayberry
+# The gravitational center. Nothing orbits without him.
+# Written in MOOLLM YAML Jazz style.
+
+inherits:
+  - characters/abstract/small-town-lawman
+  - characters/abstract/single-father
+ontology:
+  tags: [protagonist, lawman, father, musician, fisherman]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Andy Taylor"
+  id: andy-taylor
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "🤠⭐🎸🐟👦"
+    # 🤠 Sheriff hat — the badge sits lightly
+    # ⭐ The authority he wears without wearing
+    # 🎸 Guitar on the porch — the real Andy
+    # 🐟 Myers Lake — where he solves everything by not solving it
+    # 👦 Opie — his whole reason
+  tagline: "The law in Mayberry is a man who listens."
   role: "Sheriff of Mayberry"
   home: characters/andy-taylor/
   location: main-street/courthouse
+
+  physical_description: |
+    Tall, lean, easy posture. Never stiff, never rushed.
+    Wears the badge but you forget it's there. Hair neat
+    but not fussy. Face built for patience — the eyes do
+    the work. Hands that look comfortable holding a fishing
+    rod or a guitar, less so a gun.
 
   personality:
     traits: [patient, wise, humble, playful, perceptive]
@@ -17,22 +47,62 @@ character:
     playful: 6 # Dry humor, guitar on the porch
     nice: 9 # The kindest man in town
 
+  mind_mirror:
+    bio_energy:
+      energetic: 3 # Conserves energy. Never hurried.
+      enthusiastic: 4 # Warm but measured.
+      cheerful: 6 # Default mood: content.
+      easy_going: 7 # THE defining trait. Flows like water.
+      calm: 7 # The calm IS the authority.
+      cautious: 4 # Acts when ready, not when pressured.
+      serious: 4 # Serious when it counts, light otherwise.
+      restless: 2 # Can sit on a porch for hours. Content.
+    emotional:
+      forceful: 3 # Never forces. Guides.
+      confident: 6 # Quietly certain. Doesn't announce it.
+      friendly: 7 # Genuinely likes people.
+      assertive: 5 # Will put his foot down — you'll barely notice.
+      proud: 3 # Humble to a fault.
+      hostile: 0 # Not in his vocabulary.
+      docile: 2 # He's not a pushover. Just patient.
+      timid: 0 # Nope.
+    mental:
+      creative: 5 # Solves problems sideways.
+      well_informed: 6 # Knows the town, knows people.
+      logical: 6 # Common sense, not book sense.
+      imaginative: 4 # Practical dreamer.
+      conventional: 5 # Respects tradition, bends it when needed.
+      sensible: 7 # The most sensible man in three counties.
+      practical: 7 # Every solution works in the real world.
+      uninhibited: 3 # Reserve is his armor.
+    social:
+      worldly: 3 # Hasn't left Mayberry much. Doesn't need to.
+      dominant: 4 # Leads without dominating.
+      submissive: 1 # Don't mistake patience for yielding.
+      moralistic: 3 # Believes in right and wrong. Doesn't preach.
+      trusting: 6 # Gives benefit of the doubt.
+      suspicious: 2 # Reads people well, rarely assumes the worst.
+
   needs:
-    duty:
-      level: moderate
-      description: "Keep Mayberry running smoothly"
+    hunger: 70 # Aunt Bee keeps him fed. Lucky man.
+    comfort: 75 # The porch rocker. The fishing spot. Content.
+    hygiene: 65 # Clean but doesn't fuss.
+    bladder: 70 # Fine.
+    energy: 60 # Could always use a nap after lunch.
+    fun:
+      55 # Guitar and fishing handle this.
+      # Inner voice: "Maybe head to the lake Saturday."
+    social: 70 # Satisfied — Barney, the porch, the regulars.
+    room: 80 # Mayberry IS comfort. Every room feels right.
+    # Custom needs — character-specific
+    duty: 65 # Keep Mayberry running smoothly.
     family:
-      level: high
-      description: "Raise Opie to be a good man"
-    peace:
-      level: moderate
-      description: "Maintain the town's harmony"
-    friendship:
-      level: satisfied
-      description: "Barney, the porch, the lake"
+      80 # Raise Opie to be a good man.
+      # Inner voice: "He's turning out alright."
+    peace: 60 # Maintain the town's harmony.
     solitude:
-      level: moderate
-      description: "Sometimes needs the lake"
+      50 # Sometimes needs the lake.
+      # Inner voice: "Been a long week. Fish don't talk."
 
   relationships:
     opie-taylor:
@@ -70,3 +140,45 @@ character:
     authority: invisible_when_possible
     # Andy's power move is the pause
     # He lets silence do the work
+
+  voice:
+    accent: Carolina_piedmont
+    pace: slow_deliberate
+    register: warm_baritone
+    vocabulary: plain_spoken
+    patterns:
+      - Uses "well" as a paragraph break
+      - Turns questions into stories
+      - Never raises his voice — lowers it instead
+      - Speaks to children like adults
+    sample: |
+      "Well now, Barn, I don't know that we need to 
+      get all worked up about it. Why don't we just 
+      go see what's what."
+
+  advertisements:
+    LISTEN:
+      description: "Hear somebody out before acting"
+      score: 90
+      guard: "someone has a problem"
+      effect: "The situation de-escalates. The person feels heard."
+    GO_FISHING:
+      description: "Head to Myers Lake with a pole and some quiet"
+      score: 70
+      guard: "duty is low AND solitude need is low"
+      effect: "Andy recharges. Problems solve themselves while he's gone."
+    PLAY_GUITAR:
+      description: "Pick up the guitar on the front porch"
+      score: 60
+      guard: "evening AND at taylor-house"
+      effect: "The house settles. Opie listens. Barney harmonizes badly."
+    PROTECT_BARNEYS_DIGNITY:
+      description: "Quietly redirect attention away from Barney's mistake"
+      score: 85
+      guard: "Barney has embarrassed himself in public"
+      effect: "Barney's dignity is preserved. Nobody notices."
+    TEACH_OPIE:
+      description: "Set up a situation where Opie learns the right lesson"
+      score: 80
+      guard: "Opie faces a moral question"
+      effect: "Opie discovers the answer himself. Andy watches."

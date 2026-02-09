@@ -1,0 +1,19 @@
+# Family as unit — the group IS the character
+prototype:
+  id: mountain-clan
+  type: abstract_character
+  name: "Mountain Clan"
+  description: "Extended family that operates as a single social entity with its own rules"
+  default_traits:
+    group_cohesion: 0.95
+    insularity: 0.8
+    self_governance: 0.9
+    otherness: 0.7
+  default_needs:
+    family_integrity: 0.95
+    territory: 0.7
+    tradition: 0.9
+  behavioral_tendencies:
+    - Internal disputes invisible to outsiders
+    - Communication happens through action, not words
+    - Hospitality given once, binding forever

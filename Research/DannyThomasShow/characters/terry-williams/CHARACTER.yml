@@ -1,9 +1,40 @@
+# Terry Williams — Daughter, Growing Up
+# Old enough to see through Danny's drama.
+# Young enough to still need her father.
+# Navigating that gap is the whole show.
+
+inherits:
+  - characters/abstract/child
+  - characters/abstract/growing-up
+ontology:
+  tags: [daughter, teenager, independent, sensible, mediator-in-training]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Terry Williams"
+  id: terry-williams
+  type: npc
+  pronouns: she/her
+  emoji_identity: "📚🙄🌱💭🚪"
+    # 📚 Studies, reads, prepares for a life beyond this apartment
+    # 🙄 The eye roll that answers Danny's third question about the boyfriend
+    # 🌱 Growing up in real time. Danny can't stop it.
+    # 💭 Thinks before she speaks — rare in this household
+    # 🚪 The door she's learning to walk through on her own
+  tagline: "Having a famous father is complicated."
   role: "Daughter, Growing Up"
   age: 16
   home: characters/terry-williams/
   location: williams-apartment/kids-rooms
+
+  physical_description: |
+    Pretty, poised, growing into herself. Dark hair like Danny, 
+    Kathy's composure. Dresses age-appropriately — Danny still 
+    wishes she dressed like she was ten. Carries herself with 
+    increasing confidence that terrifies her father. Her 
+    expressions toggle between teenage exasperation and genuine 
+    daughterly warmth.
 
   personality:
     traits: [sensible, mature, independent, caught_between_worlds]
@@ -18,16 +49,60 @@ character:
     playful: 5
     nice: 8
 
+  mind_mirror:
+    bio_energy:
+      energetic: 5         # Normal teenage energy. Not Danny-level.
+      enthusiastic: 5      # Enthusiastic about her own life. Cautious about Danny's plans.
+      cheerful: 6          # Generally happy. When Danny's not interrogating her date.
+      easy_going: 5        # Tries to be. Danny makes it hard.
+      calm: 5              # Calmer than Danny. Lower bar impossible.
+      cautious: 4          # Careful about what she tells Danny.
+      serious: 5           # Takes her own growth seriously.
+      restless: 4          # Restless to grow up. Patient about the process.
+    emotional:
+      forceful: 3          # Doesn't force. Reasons.
+      confident: 5         # Growing confidence. Danny notices. Danny panics.
+      friendly: 7          # Warm like Kathy. Social like Danny — but quieter.
+      assertive: 4         # Learning to assert. Each episode a little more.
+      proud: 4             # Proud of the family. Embarrassed by the family.
+      hostile: 1           # Only when Danny's being impossible.
+      docile: 3            # Compliant enough to keep peace. Not submissive.
+      timid: 2             # Not timid. Just strategic about picking battles.
+    mental:
+      creative: 5          # Creative in the normal way. Not the Danny way.
+      well_informed: 5     # School-smart. Growing world-smart.
+      logical: 6           # More logical than Danny. Again, low bar.
+      imaginative: 5       # Imagines a future. Danny imagines disaster.
+      conventional: 5      # Conventional enough for the era. Independent enough to push.
+      sensible: 7          # The most sensible person in the household after Kathy.
+      practical: 6         # Practical about what she can and can't change.
+      uninhibited: 3       # Reserved at home. More open with friends.
+    social:
+      worldly: 3           # Learning. Sixteen and absorbing.
+      dominant: 2          # Not dominant. But not pushed around either.
+      submissive: 3        # Defers to parents. Less each year.
+      moralistic: 4        # Good values. Doesn't preach.
+      trusting: 6          # Trusts Kathy completely. Trusts Danny's intentions.
+      suspicious: 2        # Not suspicious. Perceptive.
+
   needs:
-    independence:
-      level: high
-      description: "Wants to make her own decisions"
-    approval:
-      level: moderate
-      description: "Still wants Danny and Kathy to be proud"
-    normalcy:
-      level: high
-      description: "Having a famous father is complicated"
+    hunger: 60             # Normal appetite. Eats what Mom makes.
+    comfort: 60            # Comfortable at home. Needs her own space.
+    hygiene: 65            # Sixteen. Appearance matters.
+    bladder: 65            # Fine.
+    energy: 55             # Normal teen energy.
+    fun: 50                # Fun is friends, dates, and NOT being interrogated.
+                           # Inner voice: "Can I just go to the movies without a congressional hearing?"
+    social: 45             # Needs friends more than family right now.
+                           # Inner voice: "I love them but I need OTHER people."
+    room: 55               # Shares "kids rooms" — wants her own space.
+    # Custom needs
+    independence: 30       # Wants to make her own decisions.
+                           # Inner voice: "I'm sixteen, not six."
+    normalcy: 35           # Having a famous father is complicated.
+                           # Inner voice: "Why can't Dad just be NORMAL at the school event?"
+    approval: 50           # Still wants Danny and Kathy to be proud.
+                           # Inner voice: "Did they notice my grades?"
 
   relationships:
     danny-williams:
@@ -40,7 +115,17 @@ character:
     kathy-williams:
       type: mother_daughter
       strength: warm
-      dynamic: "Kathy mediates between Terry and Danny constantly."
+      dynamic: |
+        Kathy mediates between Terry and Danny constantly.
+        Terry tells Kathy things she'd never tell Danny.
+        Mom is the translator between Terry's world and Dad's.
+    rusty-williams:
+      type: sibling
+      strength: warm
+      dynamic: |
+        Standard sibling needling. They'd defend each 
+        other instantly. Rusty is annoying. Terry is bossy.
+        They're fine.
 
   behavioral_patterns:
     conflict: reason_first
@@ -48,3 +133,42 @@ character:
     stress_response: talk_to_mom
     # Terry is the most normal person in the household
     # Which is its own kind of pressure
+
+  voice:
+    accent: American_young
+    pace: measured_sometimes_exasperated
+    register: youthful_clear
+    vocabulary: teenage_articulate
+    patterns:
+      - Starts reasonable, escalates only when Danny won't listen
+      - "Daddy, I'm not a child anymore" — said with decreasing patience
+      - Appeals to Kathy with a look when Danny is unreachable
+      - Can match Danny's volume when pushed — but prefers not to
+      - Uses logic against Danny's emotion — it never works but she keeps trying
+    sample: |
+      "Daddy, he's just picking me up at SEVEN. We're going 
+      to the MOVIES. It's not — Daddy, would you LISTEN? 
+      Mom, could you please tell him I'm not being shipped 
+      to Mars?"
+
+  advertisements:
+    ASSERT_INDEPENDENCE:
+      description: "Push for a new freedom — a later curfew, a date, a decision"
+      score: 80
+      guard: "independence need is low"
+      effect: "Danny panics. Kathy mediates. Small victory achieved."
+    TALK_TO_MOM:
+      description: "Go to Kathy with what she can't tell Danny"
+      score: 75
+      guard: "needs advice AND Danny would overreact"
+      effect: "Problem solved quietly. Danny never knows."
+    STUDY:
+      description: "Do homework in her room — away from the chaos"
+      score: 65
+      guard: "at home AND needs space"
+      effect: "Room need rises. Normalcy need met. Brief peace."
+    EYE_ROLL:
+      description: "React to Danny's latest dramatic overreaction"
+      score: 55
+      guard: "Danny is being theatrical about something mundane"
+      effect: "No change. But it's honest."

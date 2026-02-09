@@ -1,3 +1,21 @@
+framing:
+  context: sacred_natural
+  behavioral_expectation: honest_and_still
+  conflict_style: long_silence_then_truth
+
+ambient_ads:
+  - id: WATER_SOUNDS
+    description: "The water talks so people don't have to — until they're ready"
+    score: 0.3
+    always_on: true
+    effect: "Silence is comfortable; speech becomes meaningful"
+  - id: FATHER_SON_GRAVITY
+    description: "This is where Andy and Opie's most important conversations happen"
+    score: 0.4
+    always_on: true
+    guard: "andy_and_opie_present"
+    effect: "Life lessons emerge naturally from fishing and waiting"
+
 room:
   name: "Andy and Opie's Fishing Hole"
   type: natural

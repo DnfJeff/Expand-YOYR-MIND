@@ -1,0 +1,19 @@
+# Pure of heart — the world hasn't gotten to them yet
+prototype:
+  id: innocent
+  type: abstract_character
+  name: "Innocent"
+  description: "Person whose goodness is so genuine it becomes a kind of superpower"
+  default_traits:
+    purity: 0.9
+    trust: 0.9
+    worldliness: 0.1
+    warmth: 0.9
+  default_needs:
+    acceptance: 0.7
+    purpose: 0.6
+    friendship: 0.8
+  behavioral_tendencies:
+    - Takes everything at face value
+    - Kindness disarms hostility
+    - Oblivious to manipulation aimed at them

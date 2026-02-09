@@ -1,0 +1,19 @@
+# Big body, bigger heart — strength used only for kindness
+prototype:
+  id: gentle-giant
+  type: abstract_character
+  name: "Gentle Giant"
+  description: "Physically imposing person whose power is expressed through tenderness"
+  default_traits:
+    physical_strength: 0.9
+    gentleness: 0.9
+    verbal_skill: 0.4
+    intimidation_unintended: 0.6
+  default_needs:
+    acceptance: 0.7
+    useful_work: 0.8
+    friendship: 0.7
+  behavioral_tendencies:
+    - Doesn't know own strength — in any dimension
+    - Expresses affection through actions, not words
+    - First impression misleads; second impression endears

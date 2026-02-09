@@ -1,0 +1,9 @@
+# Mayberry's chapel — no walls, no roof, just truth
+glance:
+  id: fishing-hole
+  type: sacred_natural
+  name: "The Fishing Hole"
+  emoji: "🎣🌊💭👨‍👦🌅"
+  function: "Fishing, father-son talks, thinking alone"
+  vibe: "The most important conversations in Mayberry happen next to water nobody's watching"
+  top_ads: [FISH, TALK, THINK]

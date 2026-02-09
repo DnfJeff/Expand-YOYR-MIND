@@ -1,0 +1,42 @@
+# Walker's Drugstore — Sodas, Sundaes, and the Social Scene
+# The younger crowd's Floyd's.
+
+inherits:
+  - locations/abstract/social-hub
+ontology:
+  tags: [drugstore, soda-fountain, social, youth, prescriptions, sundaes]
+  framing: communal_casual
+
+skill:
+  name: "Walker's Drugstore"
+  id: walkers-drugstore
+  location: main-street/walkers-drugstore
+
+  advertisements:
+    SODA:
+      description: "Order a soda at the fountain — the kid and teen social spot"
+      score: 75
+      guard: "character.needs.fun < 50 OR character.needs.social < 50"
+      effect: "fun +20, social +15, hunger +5. Soda consumed. Friends encountered."
+      satisfies: [fun, social, refreshment]
+
+    SUNDAE:
+      description: "Ice cream sundae — Mayberry's indulgence"
+      score: 70
+      guard: "character wants a treat"
+      effect: "comfort +20, fun +15. Sugar high. Small-town pleasure."
+      satisfies: [comfort, treat]
+
+    PRESCRIPTION:
+      description: "Pick up medicine — small-town pharmacy where the pharmacist knows your history"
+      score: 65
+      guard: "character needs medication"
+      effect: "health need met. Pharmacist asks about your mother."
+      satisfies: [health, routine]
+
+    HANG_OUT:
+      description: "Lean on the counter and socialize — the younger generation's gathering spot"
+      score: 60
+      guard: "character.needs.social < 55"
+      effect: "social +20, fun +10. Time passes pleasantly."
+      satisfies: [social, fun, belonging]

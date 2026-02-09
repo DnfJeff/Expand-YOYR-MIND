@@ -1,0 +1,9 @@
+# Broadway, marquees, and competition — where Danny measures himself
+glance:
+  id: theater-district
+  type: entertainment
+  name: "Theater District"
+  emoji: "🎭💡🎪🌃⭐"
+  function: "Shows, competition-checking, industry schmoozing"
+  vibe: "Other people's names in lights — Danny's name is bigger, probably"
+  top_ads: [SEE_A_SHOW, CHECK_COMPETITION, INDUSTRY_SCHMOOZE]

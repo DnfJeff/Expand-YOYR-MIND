@@ -1,3 +1,15 @@
+framing:
+  context: bureaucratic_forgotten
+  behavioral_expectation: filing_and_dust
+  conflict_style: passive_neglect
+
+ambient_ads:
+  - id: DUST_SETTLES
+    description: "Nobody comes here unless they have to"
+    score: 0.1
+    always_on: true
+    effect: "Isolation — conversations here are private by accident"
+
 room:
   name: "Records Room"
   type: office

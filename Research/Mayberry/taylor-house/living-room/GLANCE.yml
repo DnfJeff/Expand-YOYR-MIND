@@ -1,0 +1,9 @@
+# The family room — between the kitchen and the porch
+glance:
+  id: taylor-living-room
+  type: domestic
+  name: "Taylor Living Room"
+  emoji: "🛋️📻📚🏠💡"
+  function: "Evening gathering, homework, visitors, quiet time"
+  vibe: "The transition space where family flows between meals and the porch"
+  top_ads: [FAMILY_EVENING, HOMEWORK, ENTERTAIN_GUEST]

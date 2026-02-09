@@ -1,0 +1,9 @@
+# The big city — relatively speaking
+glance:
+  id: mt-pilot
+  type: external
+  name: "Mt. Pilot"
+  emoji: "🌆🚗🎬🍷😰"
+  function: "Date nights, shopping, the outside world, occasional trouble"
+  vibe: "Thirty minutes from Mayberry but a different universe"
+  top_ads: [GO_TO_MT_PILOT, DOUBLE_DATE, TROUBLE]

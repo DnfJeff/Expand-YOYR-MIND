@@ -1,0 +1,10 @@
+# Comedy royalty dropping by to one-up Danny
+glance:
+  id: bob-hope
+  type: npc_guest
+  name: "Bob Hope"
+  emoji: "⛳👑😎🎤✨"
+  role: "Comedy legend, friendly rival"
+  vibe: "Arrives, outperforms Danny, is gracious about it — which makes it worse"
+  top_ads: [ONE_UP_DANNY, GOLF_ANECDOTE, GRACIOUS_EXIT]
+  location: williams-apartment/living-room

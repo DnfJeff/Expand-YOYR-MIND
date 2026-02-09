@@ -1,0 +1,10 @@
+# Caught between childhood and the world outside the apartment
+glance:
+  id: terry-williams
+  type: npc_resident
+  name: "Terry Williams"
+  emoji: "📞👧🎓💭🌟"
+  role: "Danny's daughter, teenager, phone-line occupier"
+  vibe: "Old enough to see through Danny's drama, young enough to have her own"
+  top_ads: [TIE_UP_PHONE, CHALLENGE_DANNY, GROW_UP]
+  location: williams-apartment/kids-rooms

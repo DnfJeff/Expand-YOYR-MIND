@@ -1,0 +1,19 @@
+# Bad behavior, recoverable soul — the arc demands transformation
+prototype:
+  id: redeemable
+  type: abstract_character
+  name: "Redeemable"
+  description: "Character whose flaws are genuine but whose core can be reached"
+  default_traits:
+    surface_problem: 0.8
+    buried_goodness: 0.7
+    resistance_to_change: 0.6
+    transformation_potential: 0.8
+  default_needs:
+    being_seen_truly: 0.8
+    second_chance: 0.7
+    grace: 0.7
+  behavioral_tendencies:
+    - Pushes away the help they need
+    - Small moments of vulnerability reveal true self
+    - Community's kindness is the redemption mechanism

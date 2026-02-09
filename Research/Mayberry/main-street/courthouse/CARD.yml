@@ -1,0 +1,31 @@
+# Courthouse — Mayberry's Center of Gravity
+# Three things happen here: justice, loitering, and coffee.
+
+inherits:
+  - locations/abstract/authority-seat
+ontology:
+  tags: [courthouse, law, justice, government, community, hub]
+  framing: civic_gentle
+
+skill:
+  name: "Mayberry Courthouse"
+  id: courthouse
+  location: main-street/courthouse
+
+  advertisements:
+    CONDUCT_BUSINESS:
+      description: "Official town business — permits, complaints, paperwork"
+      score: 75
+      guard: "character has civic business AND courthouse is open"
+      effect: "duty +20, bureaucracy endured. Andy handles it personally."
+      satisfies: [duty, civic_obligation]
+
+    LOITER:
+      description: "Hang around the courthouse because there's nothing else to do"
+      score: 60
+      guard: "character.needs.social < 50 OR character.needs.fun < 40"
+      effect: "social +15, boredom -10. Time passed. Coffee consumed."
+      satisfies: [social, boredom]
+      # Half the town's business happens here
+      # The other half happens at Floyd's
+      # The two halves don't always agree

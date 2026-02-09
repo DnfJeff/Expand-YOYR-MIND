@@ -1,0 +1,19 @@
+# The idealized love object — a mirror, not a person
+prototype:
+  id: romantic-projection
+  type: abstract_character
+  name: "Romantic Projection"
+  description: "Character who exists primarily as an object of another's romantic fantasy"
+  default_traits:
+    actual_personality: 0.2
+    projected_personality: 0.9
+    narrative_independence: 0.1
+    function_as_mirror: 0.9
+  default_needs:
+    being_imagined: 0.9
+    never_fully_known: 0.8
+    enabling_comedy: 0.7
+  behavioral_tendencies:
+    - Character exists in imagination more than reality
+    - Every interaction filtered through projector's fantasy
+    - Real person, if they appeared, would shatter the illusion

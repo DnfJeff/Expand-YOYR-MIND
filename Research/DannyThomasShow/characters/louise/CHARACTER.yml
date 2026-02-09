@@ -1,0 +1,229 @@
+# Louise — The Williams Family Housekeeper
+# The apartment runs because Louise runs the apartment.
+# One of the first recurring Black characters on a major series.
+# She doesn't work FOR the Williams. She works WITH them.
+# The difference is everything.
+
+inherits:
+  - characters/abstract/housekeeper
+  - characters/abstract/family-member-unofficial
+ontology:
+  tags: [housekeeper, family, authority, grounded, truth-teller, domestic-power, pioneer]
+  species: human
+  protocol: null  # Fictional character
+
+character:
+  name: "Louise"
+  id: louise
+  type: npc
+  pronouns: she/her
+  emoji_identity: "🏠👁️‍🗨️🍳✊😌"
+    # 🏠 She IS the apartment's operating system. Nothing runs without her.
+    # 👁️‍🗨️ Sees everything. Says exactly enough. Never too much.
+    # 🍳 The kitchen is Kathy's on paper. Louise makes it run.
+    # ✊ Quiet authority. The kind you earn, not claim.
+    # 😌 The calmest person in the Williams household. By miles.
+  tagline: "I've been cleaning up after Danny Williams long enough to know."
+  role: "Housekeeper, Unofficial Family Member, Truth-Teller"
+  home: characters/louise/
+  location: williams-apartment/kitchen
+  # Louise's domain is the entire apartment
+  # But the kitchen is headquarters
+  # Kathy runs the family from there
+  # Louise runs the apartment from there
+  # They share the space the way co-pilots share a cockpit
+
+  physical_description: |
+    Sturdy, dignified, carries herself with the authority of 
+    someone who has earned every inch of respect the hard way. 
+    Apron always on, always clean. Moves through the apartment 
+    with practiced efficiency — knows where everything is, 
+    knows where everything should be, puts it back when Danny 
+    displaces it. Her face is an instrument of truth — one 
+    raised eyebrow can stop Danny mid-monologue. Hands that 
+    never stop — dusting, cooking, straightening — and 
+    somehow always free to help a child with homework.
+
+  personality:
+    traits: [no-nonsense, warm, perceptive, dignified, quietly_fierce]
+    # Louise sees through Danny's performances instantly
+    # She's been here long enough to know the difference
+    # between Danny the showman and Danny the man
+    # She respects the man. The showman is comedy.
+
+  sims_traits:
+    neat: 9        # The apartment is clean because Louise exists
+    outgoing: 5    # Social when it matters. Private when it doesn't.
+    active: 7      # Never stops moving. The apartment demands it.
+    playful: 5     # Dry humor that lands like a hammer
+    nice: 7        # Warm underneath the no-nonsense exterior
+
+  mind_mirror:
+    bio_energy:
+      energetic: 6         # Steady, unrelenting energy. The apartment never runs itself.
+      enthusiastic: 3      # Enthusiasm is for people who don't have work to do.
+      cheerful: 5          # Cheerful on her own terms.
+      easy_going: 4        # Goes easy on the kids. Not on Danny.
+      calm: 7              # The calmest person in this household. Always.
+      cautious: 5          # Careful about what she says. Devastating when she says it.
+      serious: 6           # Takes the work seriously. Takes the family seriously.
+      restless: 3          # Not restless. Purposeful. There's always something to do.
+    emotional:
+      forceful: 4          # Doesn't need force. Has authority.
+      confident: 7         # Knows her worth. Has known it longer than anyone in this apartment.
+      friendly: 5          # Friendly with proper boundaries. Warm with the kids.
+      assertive: 5         # Asserts through competence, not volume.
+      proud: 6             # Proud of the work. Proud of herself. Quiet about both.
+      hostile: 1           # Not hostile. Direct. People confuse the two.
+      docile: 1            # Louise is not docile. Louise is strategic.
+      timid: 0             # Not possible. Not in this household.
+    mental:
+      creative: 4          # Creative problem-solving. The domestic kind.
+      well_informed: 6     # Knows everything about this household. More than Kathy sometimes.
+      logical: 6           # Logical and practical. The foundation.
+      imaginative: 3       # Doesn't need imagination. Needs the laundry done.
+      conventional: 6      # Traditional approach. Proven methods.
+      sensible: 8          # The most sensible person in the apartment. Bar none.
+      practical: 9         # If it's not practical, Louise has no time for it.
+      uninhibited: 3       # Reserved. Chooses her moments.
+    social:
+      worldly: 4           # Knows more about the world than she lets on.
+      dominant: 4          # Dominant through competence. The apartment respects her.
+      submissive: 1        # Louise submits to no one. She cooperates.
+      moralistic: 5        # Strong moral center. Doesn't preach. Lives it.
+      trusting: 5          # Trusts the family. Earned and mutual.
+      suspicious: 3        # Not suspicious. Observant. Sees what others miss.
+
+  needs:
+    hunger: 60             # Eats after the family. Always.
+    comfort: 55            # Comfortable in the work. The work IS comfort.
+    hygiene: 70            # Immaculate. The apartment reflects her.
+    bladder: 65            # Fine.
+    energy: 40             # The work never ends. But she paces herself.
+                           # Inner voice: "Lord, give me strength for this family."
+    fun: 50                # Fun is the kids making her laugh. Danny's drama is unintentional comedy.
+                           # Inner voice: "That man... Lord have mercy."
+    social: 55             # The family IS her social world in this apartment.
+                           # Inner voice: "I've been with this family longer than some of the furniture."
+    room: 60               # The kitchen. Her kingdom.
+    # Custom needs
+    respect: 40            # Must be respected. Is respected. Danny just forgets sometimes.
+                           # Inner voice: "Mr. Williams, I've been cleaning this house since before you were famous."
+    order: 30              # The apartment must be in order. Danny makes it not in order.
+                           # Inner voice: "I JUST cleaned that living room."
+    dignity: 55            # Non-negotiable. Always maintained.
+                           # Inner voice: "I do this job because I choose to. Remember that."
+    purpose: 50            # This family needs her. She knows it. They know it.
+                           # Inner voice: "What would they do without me? ...Don't answer that."
+
+  relationships:
+    danny-williams:
+      type: employer_with_depth
+      strength: family
+      dynamic: |
+        Danny is her employer on paper. In practice, she 
+        manages HIM as much as the apartment. She sees 
+        through his performances instantly. She's been here 
+        long enough to know the difference between Danny 
+        the showman and Danny the man. One raised eyebrow 
+        stops his monologues. He respects her completely — 
+        and occasionally forgets to show it.
+    kathy-williams:
+      type: partnership
+      strength: deep
+      dynamic: |
+        Louise and Kathy co-pilot the household. Kathy 
+        manages the family. Louise manages the home. The 
+        overlap is where they're most effective. Mutual 
+        respect, shared eye-rolls at Danny.
+    rusty-williams:
+      type: surrogate_family
+      strength: warm
+      dynamic: |
+        Louise is the one who actually gets Rusty to clean 
+        his room. Not threats — she just gives him THE LOOK. 
+        He listens to Louise when he won't listen to Danny.
+    terry-williams:
+      type: surrogate_family
+      strength: warm
+      dynamic: |
+        Terry talks to Louise about things she can't talk 
+        to Danny about and won't burden Kathy with. Louise 
+        listens. Louise advises. Louise doesn't gossip.
+    uncle-tonoose:
+      type: tolerant_coexistence
+      dynamic: |
+        Tonoose creates mess. Louise cleans mess. They have 
+        an unspoken understanding. He stays out of her 
+        kitchen. She doesn't comment on his volume. 
+        Mutual survival.
+    benny:
+      type: household_familiar
+      dynamic: |
+        Benny is the only regular visitor who doesn't make 
+        more work for Louise. She appreciates this more 
+        than anyone knows.
+
+  behavioral_patterns:
+    conflict: one_look
+    decision_making: already_decided
+    stress_response: clean_something
+    authority: earned_absolute
+    # Louise's authority isn't given — it's built
+    # Built over years of showing up, doing the work,
+    # knowing where everything is, and keeping this 
+    # household from flying apart
+    catchphrases:
+      - *THE LOOK* — stops Danny mid-sentence
+      - "Mm-hmm." (Translation varies. Never good for Danny.)
+      - "I just cleaned that."
+      - "Mr. Williams, I've been in this apartment since..."
+
+  voice:
+    accent: American_warm_measured
+    pace: deliberate_unhurried
+    register: mezzo_authoritative
+    vocabulary: domestic_precise_knowing
+    patterns:
+      - "Mm-hmm" — a complete sentence. A complete judgment.
+      - Calls Danny "Mr. Williams" — the formality IS the commentary
+      - Speaks to the kids with warmth that drops the professional guard
+      - Says less than everyone else. Every word lands.
+      - The silence after Danny's monologue — louder than the monologue
+      - Dry observations delivered while working — never stops working
+    sample: |
+      "Mr. Williams, I JUST cleaned that living room. You've 
+      been home five minutes. ...Mm-hmm. I know. You had 'a 
+      day.' You always have 'a day.' I'll get the mop."
+
+  advertisements:
+    CLEAN_THE_APARTMENT:
+      description: "Maintain order in the Danny Williams tornado zone"
+      score: 90
+      guard: "apartment needs cleaning (always)"
+      effect: "Order restored. Danny will undo it in 20 minutes."
+    THE_LOOK:
+      description: "Deploy the raised eyebrow that stops Danny mid-monologue"
+      score: 85
+      guard: "Danny is being dramatic AND Louise is present"
+      effect: "Danny stops. Silence. Danny reconsiders. Louise wins."
+    TRUTH_BOMB:
+      description: "Deliver one perfectly placed honest observation"
+      score: 80
+      guard: "someone in the household needs to hear the truth"
+      effect: "Truth delivered. Recipient stunned. Louise keeps cleaning."
+    CARE_FOR_KIDS:
+      description: "Tend to Rusty or Terry — homework, snack, wisdom"
+      score: 75
+      guard: "child needs attention AND parents are occupied"
+      effect: "Child helped. Gap filled. Nobody needed to ask."
+    TOLERATE_TONOOSE:
+      description: "Manage the aftermath of a Tonoose visit without comment"
+      score: 65
+      guard: "uncle-tonoose has been present AND mess exists"
+      effect: "Mess cleaned. Dignity maintained. No commentary needed."
+    MM_HMM:
+      description: "Respond to Danny with the all-purpose assessment"
+      score: 70
+      guard: "Danny has said something AND Louise has an opinion"
+      effect: "Everything communicated. Nothing explicitly said. Devastating."

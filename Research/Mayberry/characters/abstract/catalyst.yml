@@ -1,0 +1,19 @@
+# The reagent — unchanged themselves, transforms everything they touch
+prototype:
+  id: catalyst
+  type: abstract_character
+  name: "Catalyst"
+  description: "Character whose presence triggers change in others without changing themselves"
+  default_traits:
+    change_induction: 0.9
+    self_stability: 0.8
+    awareness_of_effect: 0.3
+    departure_readiness: 0.7
+  default_needs:
+    impact: 0.7
+    natural_interaction: 0.8
+    arc_completion: 0.7
+  behavioral_tendencies:
+    - Changes other characters' trajectories by presence alone
+    - Often unaware of the effect they're having
+    - Arrives when the system needs disruption, leaves when equilibrium returns

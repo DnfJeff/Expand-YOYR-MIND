@@ -1,0 +1,9 @@
+# Home — the safest place in the safest town
+glance:
+  id: taylor-house
+  type: residence
+  name: "Taylor House"
+  emoji: "🏠💛🎸🍎✨"
+  function: "Family home — where warmth, meals, and life lessons happen"
+  vibe: "Screen door spring, Bee's cooking, guitar on the porch — the sound of Mayberry"
+  top_ads: [COME_HOME, FAMILY_MEAL, SHELTER]

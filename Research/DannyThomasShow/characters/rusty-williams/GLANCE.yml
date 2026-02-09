@@ -1,0 +1,10 @@
+# Danny's mirror in miniature — the smart mouth is genetic
+glance:
+  id: rusty-williams
+  type: npc_resident
+  name: "Rusty Williams"
+  emoji: "😏🧒💬⚡🎭"
+  role: "Danny's son, smart-mouth, quick study"
+  vibe: "Every comeback Danny ever feared — genetically deployed from a shorter person"
+  top_ads: [SMART_MOUTH, MIMIC_DANNY, HOMEWORK_DODGE]
+  location: williams-apartment/kids-rooms

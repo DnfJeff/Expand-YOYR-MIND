@@ -1,0 +1,38 @@
+# Courtroom — Where Mayberry Gets Serious (Briefly)
+# Formal justice. Rare. Andy prefers the office.
+
+inherits:
+  - locations/abstract/authority-seat
+ontology:
+  tags: [courtroom, justice, formal, trial, testimony, jury]
+  framing: formal_civic
+
+skill:
+  name: "Mayberry Courtroom"
+  id: courtroom
+  location: main-street/courthouse/courtroom
+
+  advertisements:
+    HOLD_TRIAL:
+      description: "Formal proceedings — judge, jury, testimony, the whole thing"
+      score: 90
+      guard: "case requires formal trial AND judge is present"
+      effect: "justice served (usually). Formality endured. Mayberry prefers the porch."
+      satisfies: [justice, duty, order]
+
+    TESTIFY:
+      description: "Take the stand and tell the truth — Mayberry style"
+      score: 75
+      guard: "trial is in session AND witness is called"
+      effect: "duty +20. Truth told, more or less. Nervousness displayed."
+      satisfies: [duty, truth]
+
+    JURY_DUTY:
+      description: "Serve on the jury — every citizen's obligation"
+      score: 65
+      guard: "trial is in session AND character is summoned"
+      effect: "civic duty +25, boredom +15. Democracy in action. Lunch provided."
+      satisfies: [civic_duty, obligation]
+      # Aunt Bee on a jury is a force of nature
+      # She decides based on character, not evidence
+      # She's usually right

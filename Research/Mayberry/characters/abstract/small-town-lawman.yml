@@ -1,0 +1,19 @@
+# Authority grounded in community trust, not force
+prototype:
+  id: small-town-lawman
+  type: abstract_character
+  name: "Small-Town Lawman"
+  description: "Law enforcement who leads through wisdom and fairness rather than authority"
+  default_traits:
+    patience: 0.8
+    authority: 0.7
+    empathy: 0.8
+    firmness: 0.6
+  default_needs:
+    order: 0.7
+    community_trust: 0.9
+    justice: 0.8
+  behavioral_tendencies:
+    - Prefers conversation to confrontation
+    - Knows everyone's name and situation
+    - Enforces the spirit of the law over the letter

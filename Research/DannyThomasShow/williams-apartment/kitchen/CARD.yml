@@ -1,0 +1,53 @@
+# Williams Kitchen — Where Hospitality Happens
+# Lebanese and American cooking collide. Everyone gets fed.
+
+inherits:
+  - locations/abstract/domestic-hub
+ontology:
+  tags: [kitchen, cooking, hospitality, lebanese, family, meals, louise]
+  framing: domestic_nurturing
+
+skill:
+  name: "Williams Kitchen"
+  id: williams-kitchen
+  location: williams-apartment/kitchen
+
+  advertisements:
+    COOK:
+      description: "Prepare a meal — Kathy or Louise at the stove"
+      score: 85
+      guard: "time is approaching mealtime AND kitchen staff present"
+      effect: "hunger +35 (when served), comfort +20. Food prepared. Quantity: always too much."
+      satisfies: [nurturing, duty]
+      participants: [kathy-williams, louise]
+
+    TONOOSE_FEAST:
+      description: "When Tonoose arrives, the kitchen goes into overdrive"
+      score: 90
+      guard: "uncle-tonoose is visiting AND hospitality protocol: maximum"
+      effect: "food production +50%, chaos +30. Lebanese dishes appear. Regular dinner plan: abandoned."
+      satisfies: [hospitality, cultural_obligation]
+      # Tonoose expects the food of his homeland
+      # Kathy and Louise adapt
+      # The kitchen smells like Lebanon for two days
+
+    LOUISE_TRUTH:
+      description: "Louise delivers a truth bomb while chopping vegetables"
+      score: 75
+      guard: "louise is present AND family member needs honest advice"
+      effect: "truth delivered. Vegetable chopped for emphasis. Recipient changed."
+      satisfies: [honesty, guidance, nurturing]
+      participants: [louise]
+      # Louise's best wisdom comes from the kitchen
+      # She doesn't stop working to give advice
+      # The chopping continues
+      # The truth continues
+      # Both are sharp
+
+    MIDNIGHT_SNACK:
+      description: "Danny raids the fridge after the Copa — the late-night ritual"
+      score: 70
+      guard: "danny-williams is home late AND refrigerator has leftovers"
+      effect: "hunger +20, comfort +15. Danny eats alone. Kathy left a plate."
+      satisfies: [hunger, comfort]
+      participants: [danny-williams]

@@ -1,0 +1,9 @@
+# Where money matters — to some people
+glance:
+  id: mayberry-bank
+  type: institution
+  name: "Mayberry Bank"
+  emoji: "🏦💰🔒💼👀"
+  function: "Deposits, withdrawals, occasional robbery attempts"
+  vibe: "Conservative, cautious, and Mabel wants to know what the money's for"
+  top_ads: [DEPOSIT, WITHDRAW, BANK_ROBBERY]

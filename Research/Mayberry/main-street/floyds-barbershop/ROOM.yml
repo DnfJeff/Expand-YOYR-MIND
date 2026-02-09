@@ -1,3 +1,20 @@
+framing:
+  context: social_hub_commercial
+  behavioral_expectation: gossip_and_grooming
+  conflict_style: rumor_escalation
+
+ambient_ads:
+  - id: CHAIR_OPEN
+    description: "Floyd's chair is the town confessional"
+    score: 0.3
+    always_on: true
+    effect: "Anyone in the chair talks; Floyd repeats"
+  - id: NEWS_CIRCULATING
+    description: "Whatever was said ten minutes ago is already a story"
+    score: 0.3
+    always_on: true
+    effect: "Information degrades with each retelling; drama multiplies"
+
 room:
   name: "Floyd's Barbershop"
   type: commercial

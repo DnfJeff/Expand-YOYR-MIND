@@ -1,11 +1,28 @@
+# The Copa Stage — Where Danny Becomes Danny
+# The spotlight hits and everything domestic drops away.
+# This is the other Danny. The real Danny. The first Danny.
+
+inherits:
+  - locations/abstract/performance-space
+ontology:
+  tags: [stage, nightclub, performance, comedy, singing, spotlight, audience]
+  framing: performance
+  # Performance framing: characters in this space 
+  # operate under show-business rules.
+  # Timing matters. Audience matters. The bit matters.
+
 skill:
   name: "Copa Club Stage Performance"
+  id: copa-stage
   location: copa-club/stage
 
   advertisements:
     PERFORM:
+      description: "Danny's nightly show — stand-up, songs, storytelling, the whole package"
+      score: 95
+      guard: "danny-williams is present AND time is evening AND audience is seated"
+      effect: "identity +40, control +30, fun +25, energy -20. Danny becomes the unchained version. Domestic anxiety: zero."
       satisfies: [audience, identity, control, expression]
-      description: "Danny's nightly show — stand-up, songs, storytelling"
       participants: [danny-williams]
       duration: 90_minutes
       mode: stage_mode
@@ -14,31 +31,56 @@ skill:
       # All domestic anxiety drops away
       # He's a different person — or rather,
       # he's the SAME person, unchained
-
       components:
         - monologue
         - songs
         - audience_banter
         - callbacks
-        # Danny works the crowd like a conversation
-        # Picks someone at a front table
-        # Builds a bit around something that just happened
-        # Makes it seem spontaneous (it's 80% rehearsed)
 
     REHEARSE:
+      description: "Danny runs material in an empty room — where the real work happens"
+      score: 80
+      guard: "danny-williams is present AND time is afternoon AND copa is empty"
+      effect: "competence +25, control +20. Material tightened. Confidence built."
       satisfies: [competence, control]
-      description: "Danny runs material in an empty room"
       participants: [danny-williams]
       time: afternoon
       # The empty room is where the work happens
       # The full room is where it looks easy
 
     SING:
+      description: "Danny sings — his first love, the thing before the comedy"
+      score: 85
+      guard: "danny-williams is present AND audience is present"
+      effect: "expression +35, joy +25. The room goes quiet. Nobody laughs. That's the point."
       satisfies: [expression, joy, audience]
-      description: "Danny sings — his first love, really"
       participants: [danny-williams]
       # Danny started as a singer
       # The comedy came later
       # When he sings, the room goes quiet
       # It's the one moment nobody's laughing
       # And that's the point
+
+    GUEST_PERFORMANCE:
+      description: "A guest star takes the Copa stage — Danny watches from the wings"
+      score: 90
+      guard: "guest_star is present AND copa is open AND danny-williams has invited them"
+      effect: "social +20, anxiety +15. Guest kills. Danny proud and threatened simultaneously."
+      satisfies: [social, professional_obligation, showmanship]
+      participants: [any]
+      # When Bob Hope or Sammy Davis Jr. takes this stage
+      # Danny stands in the wings
+      # Pride and terror in equal measure
+      # "They're KILLING" / "They're killing ME"
+
+    BENNY_ACCOMPANIMENT:
+      description: "Benny plays piano behind Danny — the musical partnership"
+      score: 75
+      guard: "benny is present AND danny-williams is performing"
+      effect: "competence +20, comfort +15. The music lifts the comedy. Danny is supported."
+      satisfies: [support, rhythm, partnership]
+      participants: [danny-williams, benny]
+      # Benny knows Danny's rhythms
+      # A chord under the punchline
+      # A sting after the callback
+      # They don't talk about it — it just works

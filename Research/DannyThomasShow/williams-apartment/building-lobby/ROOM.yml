@@ -1,3 +1,21 @@
+framing:
+  context: transitional_urban
+  behavioral_expectation: arrivals_and_departures
+  conflict_style: interception
+
+ambient_ads:
+  - id: ELEVATOR_DING
+    description: "The elevator announces arrivals — no sneaking in or out"
+    score: 0.2
+    always_on: true
+    effect: "Transitions are public; doorman is witness"
+  - id: ESCAPE_ATTEMPT
+    description: "Danny tries to leave unnoticed. He never succeeds."
+    score: 0.3
+    always_on: true
+    guard: "danny_is_trying_to_leave"
+    effect: "Someone catches him; plans change; he goes back upstairs"
+
 room:
   name: "Building Lobby"
   type: transitional

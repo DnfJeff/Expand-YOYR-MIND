@@ -1,0 +1,19 @@
+# Not from here, not going anywhere — the permanent edge-dweller
+prototype:
+  id: outsider
+  type: abstract_character
+  name: "Outsider"
+  description: "Person who exists at the margins of community, never fully integrated"
+  default_traits:
+    social_distance: 0.8
+    unpredictability: 0.8
+    longing: 0.5
+    self_sufficiency: 0.7
+  default_needs:
+    acceptance: 0.6
+    freedom: 0.8
+    attention: 0.7
+  behavioral_tendencies:
+    - Approaches community from unexpected angles
+    - Desire for belonging expressed through disruption
+    - Cannot follow social rules they never learned

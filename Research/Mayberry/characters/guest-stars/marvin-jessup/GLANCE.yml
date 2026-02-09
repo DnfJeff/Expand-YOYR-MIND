@@ -1,0 +1,10 @@
+# A young drifter with intensity that doesn't fit this town
+glance:
+  id: marvin-jessup
+  type: npc_guest
+  name: "Marvin Jessup"
+  emoji: "😏🌀🔥🛤️✨"
+  role: "Drifter, baby finder, coiled spring"
+  vibe: "Too much energy for Mayberry, too much intensity for one small town — heading somewhere bigger"
+  top_ads: [THAT_GRIN, FIND_TROUBLE, LEAVE_MAYBERRY]
+  location: main-street/courthouse

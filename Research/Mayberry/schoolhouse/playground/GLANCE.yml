@@ -1,0 +1,9 @@
+# Recess — where kids sort out what adults can't
+glance:
+  id: playground
+  type: recreation
+  name: "School Playground"
+  emoji: "⚾🏃‍♂️🤝👊🌞"
+  function: "Games, disputes, team-picking, childhood"
+  vibe: "Opie mediates like his father here — he doesn't know it yet"
+  top_ads: [PLAY, SETTLE_THINGS, PICK_TEAMS]

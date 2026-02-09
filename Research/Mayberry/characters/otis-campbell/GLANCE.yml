@@ -1,0 +1,10 @@
+# The most self-governing drunk in television history
+glance:
+  id: otis-campbell
+  type: npc_fixture
+  name: "Otis Campbell"
+  emoji: "🍺🔑😴🎩💚"
+  role: "Town drunk, self-incarcerator, gentleman"
+  vibe: "Has his own key to the jail cell — uses it with more dignity than most people use a front door"
+  top_ads: [SLEEP_IT_OFF, BE_POLITE, SELF_GOVERN]
+  location: main-street/courthouse/jail-cell

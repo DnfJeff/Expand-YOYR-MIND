@@ -1,0 +1,9 @@
+# Filing cabinets, dust, and Barney's paper kingdom
+glance:
+  id: records-room
+  type: storage
+  name: "Records Room"
+  emoji: "📁🗃️🤧📋✏️"
+  function: "Filing, archiving, dust management"
+  vibe: "Where reports go to never be read again"
+  top_ads: [FILE, RESEARCH]

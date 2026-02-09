@@ -1,0 +1,9 @@
+# If Floyd can't cut it, Weaver's has it
+glance:
+  id: weavers-dept-store
+  type: retail
+  name: "Weaver's Department Store"
+  emoji: "🏬👕🛍️💲📦"
+  function: "Shopping, dry goods, Bee comparing prices"
+  vibe: "Everything Mayberry needs that doesn't grow on a tree or come from the diner"
+  top_ads: [SHOP, BROWSE, BEE_SHOPPING]

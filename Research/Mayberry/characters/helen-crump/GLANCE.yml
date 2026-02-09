@@ -1,0 +1,10 @@
+# Andy's equal — and she knows it before he does
+glance:
+  id: helen-crump
+  type: npc_resident
+  name: "Helen Crump"
+  emoji: "📚💪👩‍🏫💕🎯"
+  role: "Schoolteacher, Andy's girlfriend, grounded intellect"
+  vibe: "Smart enough to challenge Andy, secure enough to let him figure things out"
+  top_ads: [TEACH, CHALLENGE_ANDY, STAND_GROUND]
+  location: schoolhouse

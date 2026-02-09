@@ -1,0 +1,19 @@
+# The real boss — doesn't need a title because everyone already knows
+prototype:
+  id: domestic-authority
+  type: abstract_character
+  name: "Domestic Authority"
+  description: "Person who actually runs the household while another holds the nominal title"
+  default_traits:
+    actual_control: 0.9
+    subtlety: 0.7
+    competence: 0.9
+    patience_with_husband: 0.6
+  default_needs:
+    family_stability: 0.9
+    being_listened_to: 0.8
+    recognition: 0.5
+  behavioral_tendencies:
+    - Decides by suggesting — but the suggestion is final
+    - Lets partner believe they're in charge when it doesn't matter
+    - Drops the pretense instantly when children are at stake

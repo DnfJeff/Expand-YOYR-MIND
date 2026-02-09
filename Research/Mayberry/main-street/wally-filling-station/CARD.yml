@@ -1,25 +1,53 @@
+# Wally's Filling Station — Where Gomer and Goober Run Things
+# Full service means they check your oil, your tires,
+# your water, and tell you about their day.
+# You didn't ask about their day.
+# That's part of the full service.
+
+inherits:
+  - locations/abstract/service-business
+ontology:
+  tags: [gas-station, mechanic, service, social-spot, gomer, goober, cars]
+  framing: mechanical_competence
+
 skill:
   name: "Wally's Filling Station Services"
+  id: wally-filling-station
   location: main-street/wally-filling-station
 
   advertisements:
     FILL_UP:
-      satisfies: [transportation]
-      description: "Get gas, check the oil, clean the windshield"
+      description: "Full service gas — fill, oil check, windshield, tire pressure, conversation"
+      score: 80
+      guard: "character has vehicle AND vehicle needs fuel"
+      effect: "transportation need satisfied. Vehicle serviced. Character knows about Gomer's cousin."
+      satisfies: [transportation, social]
       participants: [gomer-pyle, any]
-      # Full service — Gomer tops off the tank, checks the oil,
-      # the tires, the water, and tells you about his day
 
     CAR_REPAIR:
+      description: "Goober fixes anything mechanical — genuinely expert work"
+      score: 85
+      guard: "vehicle is broken OR vehicle needs maintenance"
+      effect: "Vehicle repaired. Competence demonstrated. Character surprised by Goober's skill."
       satisfies: [transportation, problem_solving]
-      description: "Goober fixes anything mechanical"
       participants: [goober-pyle, any]
       competence: surprising_expertise
       # Don't let the overalls fool you
 
     HANG_OUT:
+      description: "Lean against something and talk — the station's secondary function"
+      score: 60
+      guard: "character.needs.social < 55 AND character is young OR mechanically inclined"
+      effect: "social +20, boredom -25. Time passes. Cars discussed. Nothing accomplished."
       satisfies: [social, boredom]
-      description: "Lean against something and talk"
       participants: [any]
-      # The station doubles as a social spot for the
-      # younger crowd and the mechanically inclined
+
+    GOMER_GREETING:
+      description: "Gomer spots someone and delivers his signature welcome"
+      score: 70
+      guard: "gomer-pyle is present AND customer arrives"
+      effect: "social +15, fun +10. Customer welcomed with maximum enthusiasm."
+      satisfies: [social, warmth]
+      participants: [gomer-pyle, any]
+      # "Hey! Hey! HEY!"
+      # Three heys. Always three.

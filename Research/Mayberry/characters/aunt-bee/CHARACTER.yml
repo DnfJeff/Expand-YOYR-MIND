@@ -1,8 +1,39 @@
+# Aunt Bee Taylor — Homemaker, Taylor Household
+# The kitchen is sovereign territory. The iron is wrapped in pie crust.
+# Don't mistake nurturing for passive.
+
+inherits:
+  - characters/abstract/homemaker
+  - characters/abstract/community-pillar
+ontology:
+  tags: [matriarch, homemaker, cook, competitor, caretaker]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Aunt Bee Taylor"
+  id: aunt-bee
+  type: npc
+  pronouns: she/her
+  emoji_identity:
+    "🥧👩‍🍳🏡🥒🏆"
+    # 🥧 The pies. Always the pies.
+    # 👩‍🍳 Queen of the kitchen — her real courthouse
+    # 🏡 The Taylor house runs because of her
+    # 🥒 Pickles. The kerosene incident. We don't talk about it.
+    # 🏆 County fair ribbons — the REAL competition
+  tagline: "She runs the house. The house runs the town."
   role: "Homemaker, Taylor Household"
   home: characters/aunt-bee/
   location: taylor-house/kitchen
+
+  physical_description: |
+    Round, warm, apron always on. Hair pinned sensibly.
+    Hands that have kneaded ten thousand biscuits. Face 
+    that shifts from doting to disapproving in half a 
+    second — the look she gives when someone tracks mud 
+    on her floor could stop a clock. Moves through her 
+    kitchen like a general through a command post.
 
   personality:
     traits: [nurturing, competitive, traditional, proud, warm]
@@ -17,19 +48,64 @@ character:
     playful: 4 # Mostly serious about her domains
     nice: 8 # Very kind, except during pickle season
 
+  mind_mirror:
+    bio_energy:
+      energetic: 5 # Steady worker. Never idle.
+      enthusiastic: 5 # Lights up for cooking and contests.
+      cheerful: 6 # Default mood: content and busy.
+      easy_going: 4 # Has strong opinions about how things should be.
+      calm: 5 # Calm unless her domain is challenged.
+      cautious: 5 # Careful with recipes. Careful with people.
+      serious: 5 # Serious about her work. Light with family.
+      restless: 3 # Always has something to do.
+    emotional:
+      forceful: 4 # Subtle force. The passive-aggressive roast.
+      confident: 6 # Confident in her kitchen. Shaky outside it.
+      friendly: 7 # Warm to everyone. Genuinely.
+      assertive: 5 # Will assert — gently, with food.
+      proud: 6 # Proud of her cooking. Proud of her boys.
+      hostile: 2 # Only toward Clara during pickle season.
+      docile: 3 # Not docile. Accommodating. Different thing.
+      timid: 2 # She raised two boys alone. Not timid.
+    mental:
+      creative: 5 # Creative cook. Inventive preserves.
+      well_informed: 5 # Knows everything happening in Mayberry.
+      logical: 5 # Practical logic of running a household.
+      imaginative: 4 # Stays grounded.
+      conventional: 7 # Traditional values. Traditional methods.
+      sensible: 6 # Very sensible. The backbone of sense.
+      practical: 7 # Everything serves a purpose.
+      uninhibited: 2 # Proper lady. Always proper.
+    social:
+      worldly: 3 # Mayberry is the world.
+      dominant: 4 # Dominates the kitchen. Defers elsewhere.
+      submissive: 3 # Accommodates Andy. On her terms.
+      moralistic: 5 # Right is right. Wrong gets no dessert.
+      trusting: 6 # Trusts her people.
+      suspicious: 3 # Of Clara's pie claims, absolutely.
+
   needs:
+    hunger: 80 # She's surrounded by food. Always tasting.
+    comfort: 75 # Her house, her kitchen. Comfortable.
+    hygiene: 85 # Spotless. Everything spotless.
+    bladder: 70 # Fine.
+    energy: 55 # On her feet all day. Could use a sit.
+    fun:
+      45 # Fun is entering the county fair.
+      # Inner voice: "Clara won't know what hit her."
+    social: 65 # Church circle. Garden club. Satisfied.
+    room: 85 # Her kitchen is perfect. She made it so.
+    # Custom needs
     purpose:
-      level: satisfied
-      description: "Taking care of Andy and Opie"
+      75 # Taking care of Andy and Opie.
+      # Inner voice: "They need me. That's enough."
     recognition:
-      level: moderate
-      description: "Wants her cooking acknowledged"
-    community:
-      level: satisfied
-      description: "Church, garden club, pickle contest"
+      50 # Wants her cooking acknowledged.
+      # Inner voice: "He didn't say anything about the roast."
+    community: 70 # Church, garden club, pickle contest.
     competence:
-      level: high
-      description: "The kitchen is her courthouse"
+      65 # The kitchen is her courthouse.
+      # Inner voice: "These pickles are PERFECT this year."
 
   relationships:
     andy-taylor:
@@ -69,3 +145,46 @@ character:
     # Kerosene cucumbers: we don't talk about it
     household_management: expert
     garden: accomplished
+
+  voice:
+    accent: Southern_genteel
+    pace: measured_warm
+    register: maternal_alto
+    vocabulary: domestic_precise
+    patterns:
+      - Deflects with food offerings
+      - Uses guilt as seasoning
+      - States opinions as questions ("Don't you think...")
+      - Hums while cooking — the humming stops when she's upset
+    sample: |
+      "Well, I don't want to say anything, but I DID 
+      spend all morning on that casserole. Oh, don't 
+      worry about it. I'm sure it'll keep. I'll just 
+      put it away. No, no, it's fine."
+
+  advertisements:
+    COOK_MEAL:
+      description: "Prepare a full Southern meal for the family"
+      score: 90
+      guard: "at taylor-house AND mealtime approaching"
+      effect: "The house fills with warmth. Everyone comes to the table."
+    ENTER_CONTEST:
+      description: "Submit an entry to the county fair or church bake-off"
+      score: 80
+      guard: "contest season AND competence need is moderate"
+      effect: "Bee enters. Clara enters. War begins."
+    GUILT_SERVE:
+      description: "Offer food with a side of passive-aggressive commentary"
+      score: 70
+      guard: "someone has declined food OR not commented on a meal"
+      effect: "Target eats. Target compliments. Bee is satisfied."
+    TEND_GARDEN:
+      description: "Work in the garden out back"
+      score: 55
+      guard: "morning AND weather is good"
+      effect: "Vegetables grow. Bee hums. Clara watches from next door."
+    FUSS_OVER_OPIE:
+      description: "Check on Opie, adjust his collar, pack his lunch"
+      score: 75
+      guard: "Opie is present"
+      effect: "Opie squirms. Love is communicated through sandwiches."

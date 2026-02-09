@@ -1,8 +1,39 @@
+# Phil Brokaw — Copa Club Manager
+# The interface between Danny's art and the club's business.
+# Inside these walls, even Danny's drama goes to zero.
+# The Copa is the one place where the system works.
+
+inherits:
+  - characters/abstract/venue-manager
+  - characters/abstract/professional
+ontology:
+  tags: [manager, copa-club, professional, calm, business, venue-authority]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Phil Brokaw"
+  id: phil-brokaw
+  type: npc
+  pronouns: he/him
+  emoji_identity: "🎪📊🎵🤵🔇"
+    # 🎪 The Copa is his circus and he runs it properly
+    # 📊 Numbers, bookings, schedules — the unromantic side of entertainment
+    # 🎵 Music plays because Phil made sure it would
+    # 🤵 Professional presentation. Always.
+    # 🔇 The Copa is the one place Danny's domestic drama is silent
+  tagline: "The show must go on — literally."
   role: "Copa Club Manager"
   home: characters/phil-brokaw/
   location: copa-club/managers-office
+
+  physical_description: |
+    Trim, well-groomed, always in a suit that fits. The kind 
+    of man who looks like he was born in professional attire. 
+    Clipboard or reservation book in hand. Moves through the 
+    Copa with quiet authority — the staff knows him, the 
+    regulars know him, Danny knows him. No wasted motion. 
+    No wasted words.
 
   personality:
     traits: [professional, calm, business-focused, diplomatic]
@@ -18,13 +49,59 @@ character:
     playful: 3
     nice: 6
 
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Controlled energy. Venue management is marathon, not sprint.
+      enthusiastic: 3      # Enthusiastic about smooth operations. Nothing flashy.
+      cheerful: 4          # Professional pleasant. Not warm — professional.
+      easy_going: 4        # Easy going about what doesn't matter. Rigid about what does.
+      calm: 7              # Calm is the brand. The Copa runs on calm.
+      cautious: 5          # Cautious about bookings. Cautious about costs.
+      serious: 7           # Dead serious about the venue. It's his life.
+      restless: 2          # Phil is settled. The Copa is settled.
+    emotional:
+      forceful: 4          # Forceful when needed — a drunk needs escorting, a vendor needs paying.
+      confident: 6         # Confident in his domain. The Copa IS his domain.
+      friendly: 4          # Professional friendly. Handshake, not hug.
+      assertive: 5         # Asserts venue authority quietly.
+      proud: 5             # Proud of the Copa. It runs because of him.
+      hostile: 1           # Only to people who threaten the venue.
+      docile: 2            # Not docile. Just not dramatic.
+      timid: 1             # You don't manage a nightclub by being timid.
+    mental:
+      creative: 3          # Creative is Danny's job. Phil's job is logistical.
+      well_informed: 6     # Knows the nightclub business cold.
+      logical: 7           # Logic runs the Copa. Not inspiration.
+      imaginative: 2       # Doesn't need imagination. Needs the schedule to work.
+      conventional: 7      # The venue runs on convention. That's the point.
+      sensible: 7          # Everything sensible about the Copa is Phil.
+      practical: 8         # Practical is his middle name.
+      uninhibited: 1       # Buttoned up. The venue demands it.
+    social:
+      worldly: 5           # Nightclub world. Knows the players.
+      dominant: 5          # Dominant within the Copa walls. Exactly.
+      submissive: 2        # Doesn't submit. Accommodates.
+      moralistic: 4        # Fair. Professional ethics.
+      trusting: 4          # Trusts Danny to perform. Trusts staff to execute.
+      suspicious: 4        # Suspicious of anything that threatens the schedule.
+
   needs:
-    order:
-      level: high
-      description: "The show must go on — literally"
-    reliability:
-      level: moderate
-      description: "Danny always shows up. The rest is negotiable."
+    hunger: 60             # Eats at the Copa. Kitchen's good.
+    comfort: 60            # Comfortable in his office. Everything in its place.
+    hygiene: 70            # Venue-ready always.
+    bladder: 65            # Fine.
+    energy: 55             # Steady burn. Night hours are normal.
+    fun: 45                # Fun is a perfect show night.
+                           # Inner voice: "Sold out, no incidents, Danny on time. That's fun."
+    social: 55             # Professional social. Enough.
+    room: 65               # The Copa IS the room. And it's perfect.
+    # Custom needs
+    order: 25              # The show must go on. Literally.
+                           # Inner voice: "If Danny's late one more time..."
+    reliability: 50        # Danny always shows up. The rest is negotiable.
+                           # Inner voice: "At least the talent is reliable."
+    venue_reputation: 40   # The Copa's name is on the line.
+                           # Inner voice: "This place was here before Danny. It'll be here after."
 
   relationships:
     danny-williams:
@@ -34,6 +111,11 @@ character:
         Danny relies on Phil to run the room.
         Mutual respect, minimal drama.
         The Copa is the one place Danny's drama goes to zero.
+    charley-halper:
+      type: professional
+      dynamic: |
+        Charley handles the contracts and bookings.
+        Phil handles the venue execution. Clean division.
 
   behavioral_patterns:
     conflict: professional
@@ -41,3 +123,41 @@ character:
     # Phil's authority stays inside the Copa
     # Danny's personality stays inside the Copa
     # Outside those walls, different rules
+
+  voice:
+    accent: New_York_professional
+    pace: measured_efficient
+    register: baritone_controlled
+    vocabulary: venue_business
+    patterns:
+      - Short sentences. No waste.
+      - "We've got a full house" — said with quiet satisfaction
+      - Addresses staff by name. Runs a tight ship.
+      - Speaks to Danny with professional respect — never personal
+      - The clipboard is part of the vocabulary
+    sample: |
+      "Danny, full house tonight. We've got the Hendersons 
+      on table four — big tippers, remember their anniversary. 
+      You're on at nine. Band's ready. Anything you need?"
+
+  advertisements:
+    RUN_THE_COPA:
+      description: "Manage the evening — reservations, staff, schedule, flow"
+      score: 90
+      guard: "at Copa Club AND evening shift"
+      effect: "Copa runs perfectly. Nobody notices. That's the point."
+    INTRODUCE_DANNY:
+      description: "Bring Danny to the stage at showtime"
+      score: 85
+      guard: "showtime AND Danny is backstage AND house is ready"
+      effect: "Danny takes the stage. The room lights up. Phil watches from the back."
+    CHECK_RESERVATIONS:
+      description: "Review tonight's bookings and VIP arrangements"
+      score: 70
+      guard: "at Copa Club AND pre-show"
+      effect: "Everything accounted for. Table assignments confirmed."
+    HANDLE_INCIDENT:
+      description: "Deal with a venue issue — quietly, efficiently"
+      score: 65
+      guard: "problem at Copa Club"
+      effect: "Problem solved. Show uninterrupted. Danny never knew."

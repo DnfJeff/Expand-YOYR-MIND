@@ -1,0 +1,9 @@
+# Where Mayberry exhales — the most important room in the show
+glance:
+  id: front-porch
+  type: liminal_space
+  name: "Taylor Front Porch"
+  emoji: "🪑🎸🌙🫖💫"
+  function: "Evening conversations, guitar, iced tea, truth"
+  vibe: "Between inside and outside, between day and night — where the armor comes off"
+  top_ads: [SIT_AND_TALK, PLAY_GUITAR, TEACH_OPIE]

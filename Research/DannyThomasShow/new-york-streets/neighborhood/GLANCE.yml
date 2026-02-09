@@ -1,0 +1,9 @@
+# Upper West Side daily life — delis, doormen, and 'Hey, aren't you Danny Williams?'
+glance:
+  id: neighborhood
+  type: community
+  name: "The Neighborhood"
+  emoji: "🏘️🥯👋🛒☀️"
+  function: "Errands, recognition, Kathy's social world"
+  vibe: "Small-town vibes in the biggest city — everybody knows Danny"
+  top_ads: [ERRANDS, BE_RECOGNIZED, KATHY_SOCIAL]

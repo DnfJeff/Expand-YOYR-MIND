@@ -1,11 +1,31 @@
+# The Front Porch — Where Mayberry Exhales
+# This is the most important room in the show.
+# Not the courthouse. Not Floyd's. The porch.
+# This is where the armor comes off.
+
+inherits:
+  - locations/abstract/contemplative-space
+  - locations/abstract/domestic-sanctuary
+ontology:
+  tags: [porch, family, friendship, guitar, evening, reflection, iced-tea]
+  framing: intimate_domestic
+  # The porch is liminal — between inside and outside,
+  # between private and public, between day and night.
+  # The conversations that happen here couldn't happen
+  # anywhere else.
+
 skill:
   name: "Front Porch Activities"
+  id: front-porch
   location: taylor-house/front-porch
 
   advertisements:
     SIT_AND_TALK:
+      description: "Rock on the porch and talk about the day — where subtext becomes text"
+      score: 95
+      guard: "time is evening AND (andy-taylor OR barney-fife) is present"
+      effect: "social +35, energy +20, emotional burden -30. Masks drop. Truth surfaces. Friendship deepens."
       satisfies: [social, peace, friendship, reflection]
-      description: "Rock on the porch and talk about the day"
       participants: [andy-taylor, barney-fife]
       time: evening
       depth: deep
@@ -13,26 +33,51 @@ skill:
       # Where Barney admits he's scared
       # Where Andy admits he's tired
       # Where neither has to pretend
+      # The rocking chairs do half the work
 
     PLAY_GUITAR:
+      description: "Andy picks up the guitar — no particular song, just playing"
+      score: 85
+      guard: "andy-taylor is present AND time is evening AND guitar is accessible"
+      effect: "peace +30, family +25, creativity +15. Music does what words can't."
       satisfies: [peace, creativity, family]
-      description: "Andy picks up the guitar"
       participants: [andy-taylor, opie-taylor]
       # No particular song — just playing
       # Opie sits and listens
       # Music does what words can't
+      # The guitar doesn't ask questions
 
     EVENING_TEA:
+      description: "Aunt Bee brings out the iced tea — the ritual that says 'you're home'"
+      score: 80
+      guard: "aunt-bee is present AND time is evening AND someone is on the porch"
+      effect: "comfort +25, family +20, hunger +10. The ritual IS the love."
       satisfies: [comfort, family, routine]
-      description: "Aunt Bee brings out the iced tea"
       participants: [aunt-bee, any]
       # The tea is the ritual
       # The ritual is the love
+      # Nobody says "I love you" in Mayberry
+      # They bring iced tea instead
 
     TEACH_OPIE:
-      satisfies: [family, duty, growth]
       description: "Andy and Opie have a conversation about right and wrong"
+      score: 90
+      guard: "andy-taylor is present AND opie-taylor is present AND opie has a moral question"
+      effect: "family +30, wisdom +25. Opie finds the answer. Andy guided without telling."
+      satisfies: [family, duty, growth]
       participants: [andy-taylor, opie-taylor]
       method: socratic
       # Andy never tells Opie the answer
       # He asks questions until Opie finds it
+      # The porch is the classroom
+      # The lesson is always the same: be good
+
+    WATCH_EVENING:
+      description: "Sit and watch the street go quiet — Mayberry's closing ritual"
+      score: 60
+      guard: "time is evening AND character is on porch"
+      effect: "peace +25, energy +15, room +20. Day ends. Tomorrow will be similar. That's the point."
+      satisfies: [peace, routine, contentment]
+      participants: [any]
+      # Lightning bugs. Cricket song. Screen door spring.
+      # The sound of a town that trusts tomorrow.

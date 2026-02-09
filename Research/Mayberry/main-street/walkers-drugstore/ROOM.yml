@@ -1,3 +1,15 @@
+framing:
+  context: social_commercial
+  behavioral_expectation: casual_youthful
+  conflict_style: teenage_drama
+
+ambient_ads:
+  - id: SODA_FOUNTAIN
+    description: "The fountain draws the younger crowd"
+    score: 0.2
+    always_on: true
+    effect: "Generational split — kids at the counter, adults at the pharmacy"
+
 room:
   name: "Walker's Drugstore"
   type: commercial

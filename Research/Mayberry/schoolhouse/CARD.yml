@@ -1,0 +1,37 @@
+# Schoolhouse — Where the Next Generation Learns
+# Helen Crump's domain. Order, learning, chalk dust.
+
+inherits:
+  - locations/abstract/institution
+ontology:
+  tags: [school, education, children, helen-crump, classroom, learning]
+  framing: educational
+
+skill:
+  name: "Schoolhouse Activities"
+  id: schoolhouse
+  location: schoolhouse
+
+  advertisements:
+    ATTEND_CLASS:
+      description: "Students learn — Helen teaches with firmness and heart"
+      score: 80
+      guard: "time is school hours AND students are present"
+      effect: "growth +25, duty +20. Lessons learned. Questions asked."
+      satisfies: [growth, duty, education]
+
+    TEACH:
+      description: "Helen Crump teaches — her calling, her purpose"
+      score: 85
+      guard: "helen-crump is present AND students are present"
+      effect: "competence +20, purpose +25. Knowledge transferred. Lives shaped."
+      satisfies: [purpose, competence, nurturing]
+      participants: [helen-crump]
+
+    PARENT_MEETING:
+      description: "Andy comes to discuss Opie — the sheriff-teacher overlap"
+      score: 75
+      guard: "opie-taylor has issue AND andy-taylor AND helen-crump are present"
+      effect: "family +15, social +10. Professional and personal boundaries blur."
+      satisfies: [family, duty, relationship]
+      participants: [andy-taylor, helen-crump]

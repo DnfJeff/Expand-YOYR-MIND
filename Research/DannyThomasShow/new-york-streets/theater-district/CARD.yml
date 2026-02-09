@@ -1,0 +1,36 @@
+# Theater District — Broadway, Marquees, and Competition
+# Where Danny sees what everyone else is doing.
+
+inherits:
+  - locations/abstract/entertainment-venue
+ontology:
+  tags: [broadway, theater, marquees, shows, competition, showbiz]
+  framing: performance_competitive
+
+skill:
+  name: "Theater District"
+  id: theater-district
+  location: new-york-streets/theater-district
+
+  advertisements:
+    SEE_A_SHOW:
+      description: "Danny and Kathy see a Broadway show — date night and research"
+      score: 75
+      guard: "tickets exist AND evening is free (rare)"
+      effect: "fun +25, social +20, professional +10. Entertainment consumed. Notes taken."
+      satisfies: [fun, social, professional]
+
+    CHECK_COMPETITION:
+      description: "Danny walks past other clubs and theaters — measuring himself"
+      score: 65
+      guard: "danny-williams is in theater district"
+      effect: "professional +10, anxiety +5. Other people's names in lights. Danny's name is bigger. Probably."
+      satisfies: [professional, anxiety]
+      participants: [danny-williams]
+
+    INDUSTRY_SCHMOOZE:
+      description: "Pre-show or post-show drinks with other performers and producers"
+      score: 70
+      guard: "show people gathered AND danny-williams present"
+      effect: "social +15, professional +15. Stories traded. Deals floated. Egos managed."
+      satisfies: [social, professional, networking]

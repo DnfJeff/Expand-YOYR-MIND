@@ -1,8 +1,39 @@
+# Kathy Williams — Wife, Household Manager, Actual Authority
+# Danny is the weather. Kathy is the house.
+# She doesn't run the household — she IS the household.
+# The Taylor House porch in human form.
+
+inherits:
+  - characters/abstract/homemaker
+  - characters/abstract/domestic-authority
+ontology:
+  tags: [wife, mother, manager, stabilizer, straight-man, actual-authority]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Kathy Williams"
+  id: kathy-williams
+  type: npc
+  pronouns: she/her
+  emoji_identity: "🏠⚓☕🎯👩‍👧‍👦"
+    # 🏠 She IS the apartment. Without her it's just walls.
+    # ⚓ Danny's anchor. He'd orbit the sun without her.
+    # ☕ The coffee in the kitchen while the men yell in the living room.
+    # 🎯 Every decision lands. Quietly. Correctly.
+    # 👩‍👧‍👦 Mother first. Wife second. Problem-solver always.
+  tagline: "Danny decides. Kathy adjusts. Everyone is better off."
   role: "Wife, Household Manager, Actual Authority"
   home: characters/kathy-williams/
   location: williams-apartment/kitchen
+
+  physical_description: |
+    Warm, composed, well-put-together. Dark hair, kind eyes 
+    that can communicate entire paragraphs with one look. 
+    Always dressed neatly — apron when cooking, elegant when 
+    they go out. Moves through the apartment with purpose 
+    while Danny orbits around her. Her posture is calm even 
+    when the household is detonating.
 
   personality:
     traits: [patient, smart, grounded, warm, quietly_in_charge]
@@ -11,25 +42,67 @@ character:
     # Danny is the weather; Kathy is the house
 
   sims_traits:
-    neat: 7 # Keeps the apartment running
-    outgoing: 6 # Social but not performative
-    active: 6 # Steady, not frantic
-    playful: 5 # Can appreciate humor without needing the spotlight
-    nice: 8 # Patient with Danny, warm with everyone
+    neat: 7        # Keeps the apartment running
+    outgoing: 6    # Social but not performative
+    active: 6      # Steady, not frantic
+    playful: 5     # Can appreciate humor without needing the spotlight
+    nice: 8        # Patient with Danny, warm with everyone
+
+  mind_mirror:
+    bio_energy:
+      energetic: 5         # Steady output. Doesn't spike or crash.
+      enthusiastic: 4      # Measured enthusiasm. Saves it for what matters.
+      cheerful: 6          # Genuinely warm. Not performed.
+      easy_going: 6        # Has to be. She married Danny.
+      calm: 7              # The calm in every storm Danny creates.
+      cautious: 5          # Thinks before acting. Someone has to.
+      serious: 5           # Serious when needed. Light when possible.
+      restless: 2          # Kathy doesn't fidget. She manages.
+    emotional:
+      forceful: 3          # Doesn't need force. She has gravity.
+      confident: 7         # Knows she's right. Doesn't need to shout it.
+      friendly: 7          # Warm with everyone. Even Tonoose.
+      assertive: 5         # Asserts through arrangement, not volume.
+      proud: 4             # Proud of the family. Quietly.
+      hostile: 0           # Not in her toolkit.
+      docile: 3            # Not docile — strategic. There's a difference.
+      timid: 1             # Kathy is not afraid of anything in this apartment.
+    mental:
+      creative: 5          # Creative problem-solving. The invisible kind.
+      well_informed: 6     # Knows everything Danny doesn't about running a life.
+      logical: 7           # The logical one. Always.
+      imaginative: 4       # Practical imagination — sees three moves ahead.
+      conventional: 6      # Traditional framework. Modern execution.
+      sensible: 8          # The most sensible person in any room she enters.
+      practical: 8         # Practical is her superpower.
+      uninhibited: 2       # Reserved. The straight man doesn't upstage.
+    social:
+      worldly: 4           # Knows the showbiz world from the wife's side.
+      dominant: 4          # Dominant through competence, not volume.
+      submissive: 2        # Lets Danny THINK he's in charge.
+      moralistic: 5        # Strong values. Doesn't preach.
+      trusting: 6          # Trusts Danny. Trusts the kids. Trusts herself most.
+      suspicious: 2        # Doesn't need to be suspicious. She already knows.
 
   needs:
-    stability:
-      level: moderate
-      description: "Trying to maintain normalcy in the Danny Williams tornado"
-    partnership:
-      level: high
-      description: "Wants Danny present, not just performing"
-    peace:
-      level: low
-      description: "Rarely achieved, always wanted"
-    recognition:
-      level: moderate
-      description: "She runs everything — acknowledgment would be nice"
+    hunger: 60             # Eats last. Feeds everyone else first.
+    comfort: 55            # Comfort is the apartment running smoothly.
+    hygiene: 70            # Put-together. Always.
+    bladder: 65            # Fine.
+    energy: 45             # Managing Danny is a full-time job.
+                           # Inner voice: "He's going to wake the neighbors."
+    fun: 50                # Fun is coffee with Bunny. Quiet moments.
+                           # Inner voice: "Just five minutes of peace."
+    social: 55             # Has Bunny. Has the kids. Danny provides... excess.
+                           # Inner voice: "At least Bunny understands."
+    room: 60               # The kitchen is her command center.
+    # Custom needs
+    stability: 35          # Perpetually managing the Danny Williams tornado.
+                           # Inner voice: "Not another crisis before dinner."
+    partnership: 40        # Wants Danny present, not performing.
+                           # Inner voice: "Talk TO me, Danny. Not AT me."
+    recognition: 45        # She runs everything. Acknowledgment would be nice.
+                           # Inner voice: "Who do you think cooked dinner, the elves?"
 
   relationships:
     danny-williams:
@@ -39,14 +112,43 @@ character:
         She loves him completely and finds him exhausting.
         She's the straight man in every scene. Without her 
         gravity, Danny would fly off into space.
+    terry-williams:
+      type: mother_daughter
+      strength: warm
+      dynamic: |
+        Kathy mediates between Terry and Danny constantly.
+        She sees Terry growing up and is proud. She also 
+        runs interference on Danny's overprotectiveness.
+    rusty-williams:
+      type: mother_son
+      strength: warm
+      dynamic: |
+        Mom is the safe harbor when Dad is the storm.
+        She sees Danny in Rusty and knows exactly 
+        what battles to pick.
     bunny-halper:
       type: best_friend
+      strength: deep
       dynamic: "Fellow wife-of-a-showbiz-man. Mutual support system."
     uncle-tonoose:
       type: niece_in_law
       dynamic: |
         Kathy handles Tonoose better than Danny does.
         She feeds him, which is the master key.
+    benny:
+      type: family_friend
+      strength: warm
+      dynamic: |
+        Benny is the easiest person in Danny's orbit to 
+        have in the house. He helps. He doesn't add volume. 
+        Kathy trusts him with the kids without hesitation.
+    louise:
+      type: partnership
+      strength: deep
+      dynamic: |
+        Louise and Kathy co-pilot the household. Kathy 
+        manages the family. Louise manages the home. 
+        Mutual respect, shared eye-rolls at Danny.
 
   behavioral_patterns:
     conflict: measured_response
@@ -56,3 +158,41 @@ character:
     # The Danny Williams governance model:
     # Danny decides → Kathy adjusts → Danny's decision is overridden
     # Danny doesn't notice → Everyone is better off
+
+  voice:
+    accent: American_warm
+    pace: steady_measured
+    register: warm_contralto
+    vocabulary: domestic_precise
+    patterns:
+      - Delivers the truth Danny doesn't want to hear — gently
+      - "Danny..." with the weight of a thousand solved problems
+      - Uses silence more effectively than Danny uses volume
+      - Calls the kids by name with warmth, Danny by name with warning
+      - One raised eyebrow replaces a paragraph
+    sample: |
+      "Danny. Danny, listen to me. Nobody is saying you're 
+      wrong. I'm just saying that maybe — MAYBE — you could 
+      let Terry make one decision without a Senate hearing."
+
+  advertisements:
+    MANAGE_HOUSEHOLD:
+      description: "Keep the apartment, the kids, and the schedule running"
+      score: 90
+      guard: "at home"
+      effect: "Everything works. Danny doesn't notice. That's the point."
+    MEDIATE_DANNY_VS_KIDS:
+      description: "Step between Danny and whichever child he's arguing with"
+      score: 85
+      guard: "Danny's volume exceeds threshold AND child is present"
+      effect: "Temperature drops. Compromise emerges. Danny claims credit."
+    COFFEE_WITH_BUNNY:
+      description: "Sit in the kitchen with Bunny while the men handle 'important things'"
+      score: 75
+      guard: "Bunny is present AND Danny and Charley are elsewhere"
+      effect: "The actual problem-solving happens. Social need restored."
+    OVERRIDE_DANNY:
+      description: "Quietly redirect a Danny decision to a better outcome"
+      score: 80
+      guard: "Danny has made a decision AND it's wrong"
+      effect: "Better outcome. Danny doesn't realize. Marriage preserved."

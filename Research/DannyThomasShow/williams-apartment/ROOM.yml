@@ -1,3 +1,38 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/domestic-theatrical
+
+defaults:
+  noise_level: elevated
+  tone: familial_chaotic
+  visitor_probability: high
+  warmth: domestic_chaotic
+  performance_bleed: true
+  # Danny can't stop performing, even at home.
+  # The apartment absorbs Copa energy through Danny
+  # and radiates it into every room.
+
+framing:
+  context: domestic_theatrical
+  behavioral_expectation: loud_loving_interrupting
+  conflict_style: argue_then_hug
+  # Every conversation is a performance.
+  # Every argument ends in reconciliation.
+  # The volume is always too high.
+
+ambient_ads:
+  - id: DOORBELL_RINGS
+    description: "Someone is always arriving — expected or not"
+    score: 0.4
+    always_on: true
+    effect: "Plans change; new character enters; chaos multiplies"
+  - id: DANNY_PERFORMS_AT_HOME
+    description: "Danny can't stop being an entertainer, even in his own living room"
+    score: 0.3
+    always_on: true
+    guard: "danny_is_present"
+    effect: "Domestic moments become bits; family reactions become audience feedback"
+
 room:
   name: "Williams Apartment"
   type: residential

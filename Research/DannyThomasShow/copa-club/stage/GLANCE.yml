@@ -1,0 +1,9 @@
+# The spotlight — where Danny becomes Danny
+glance:
+  id: copa-stage
+  type: performance
+  name: "Copa Club Stage"
+  emoji: "💡🎤🎹👏🔥"
+  function: "Comedy, singing, the transformation zone"
+  vibe: "Every domestic anxiety drops when the light hits — this is the real Danny"
+  top_ads: [PERFORM, SING, GUEST_PERFORMANCE]

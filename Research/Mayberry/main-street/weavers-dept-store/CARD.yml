@@ -1,0 +1,36 @@
+# Weaver's Department Store — Mayberry's Retail Anchor
+# If you need it and Floyd can't cut it, Weaver's has it.
+
+inherits:
+  - locations/abstract/service-business
+ontology:
+  tags: [department-store, shopping, retail, dry-goods, clothing]
+  framing: commercial
+
+skill:
+  name: "Weaver's Department Store"
+  id: weavers-dept-store
+  location: main-street/weavers-dept-store
+
+  advertisements:
+    SHOP:
+      description: "Buy something — clothing, housewares, dry goods"
+      score: 70
+      guard: "character needs an item AND store is open"
+      effect: "need met. Purchase made. May run into someone you know."
+      satisfies: [material_need, routine]
+
+    BROWSE:
+      description: "Look around without buying — Mayberry window shopping"
+      score: 55
+      guard: "character.needs.fun < 50 OR character is killing time"
+      effect: "fun +10, boredom -15. Nothing purchased. Time passed."
+      satisfies: [fun, boredom]
+
+    BEE_SHOPPING:
+      description: "Aunt Bee compares every item to last week's price — the ritual"
+      score: 65
+      guard: "aunt-bee is present AND household needs supplies"
+      effect: "domestic duty +20. Prices assessed. Opinions formed. Clerk endures."
+      satisfies: [domestic_duty, frugality]
+      participants: [aunt-bee]

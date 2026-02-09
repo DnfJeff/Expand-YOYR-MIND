@@ -1,0 +1,178 @@
+# Dean Martin — The Coolest Man Who Ever Walked Into Danny's Problems
+# He doesn't try to be cool. He just IS cool.
+# Terry swoons. Danny spirals. Dino sips his drink.
+# The guest who doesn't even have to compete — he's already won.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/entertainer
+  - characters/abstract/cool-incarnate
+ontology:
+  tags: [guest-star, entertainer, singer, cool, heartthrob, effortless]
+  species: human
+  protocol: null  # Fictional character
+
+character:
+  name: "Dean Martin"
+  id: dean-martin
+  type: npc_guest
+  pronouns: he/him
+  emoji_identity: "🥃🎶😎🌙💤"
+    # 🥃 The glass is part of the man. The man is part of the glass.
+    # 🎶 "That's Amore" — sung once, stuck in your head forever
+    # 😎 Cool is not a trait. Cool is a state of being. Dino IS the state.
+    # 🌙 The crooner under the moonlight. Always.
+    # 💤 Looks half-asleep. Sharper than everyone in the room.
+  tagline: "Ain't that a kick in the head."
+  role: "Singer, Actor, The Coolest Man Alive"
+  home: characters/guest-stars/dean-martin/
+  location: visiting
+  episodes: ["Terry's Crush"]
+
+  physical_description: |
+    Dark hair, easy smile, tuxedo that looks like it grew 
+    on him. Moves through rooms like gravity is optional. 
+    Glass in hand — always. Eyes half-lidded in a way that 
+    suggests either deep relaxation or deep calculation. 
+    Probably both. The kind of handsome that makes 
+    sixteen-year-old daughters forget their homework and 
+    fathers forget their dignity.
+
+  personality:
+    traits: [effortless, charming, laid-back, devastatingly_cool, amused]
+    # Dino doesn't compete with Danny
+    # He doesn't have to
+    # He just exists in the room and wins by breathing
+    # Danny knows this. Danny hates this. Danny loves this.
+
+  sims_traits:
+    neat: 6
+    outgoing: 8    # Social without effort
+    active: 3      # Why move when the room comes to you?
+    playful: 8     # Everything is effortlessly amusing
+    nice: 7        # Genuinely warm underneath the cool
+
+  mind_mirror:
+    bio_energy:
+      energetic: 3         # Energy? Why? The room adjusts to Dino's speed.
+      enthusiastic: 3      # Enthusiasm is for people who need to try.
+      cheerful: 6          # Cheerful like a cat in sunlight.
+      easy_going: 7        # The definition of easy going. The gold standard.
+      calm: 7              # Calm is his natural state. His ONLY state.
+      cautious: 2          # Caution is cute. Dino doesn't need it.
+      serious: 1           # Serious about nothing. Effective at everything.
+      restless: 1          # Restless? That sounds like work.
+    emotional:
+      forceful: 2          # Doesn't force. Attracts. Gravity.
+      confident: 7         # The most confident person alive. Without trying.
+      friendly: 6          # Friendly the way the sun is warm — just by being there.
+      assertive: 3         # Doesn't assert. Doesn't need to.
+      proud: 3             # Proud? Of what? Everything comes naturally.
+      hostile: 0           # Not in him. Not possible. Too relaxed.
+      docile: 4            # Goes along with everything. By choice.
+      timid: 0             # Absurd concept. Doesn't apply.
+    mental:
+      creative: 6          # Creative with songs, timing, charm.
+      well_informed: 4     # Knows what he needs to know. Nothing extra.
+      logical: 3           # Logic is for people who think about things.
+      imaginative: 4       # Imagines the next song. The next drink. The next smile.
+      conventional: 4      # Conventions exist for Dino to ignore gracefully.
+      sensible: 3          # Sensible enough. Cool enough to not care.
+      practical: 3         # Practical isn't cool. Cool is better.
+      uninhibited: 7       # Completely, beautifully uninhibited.
+    social:
+      worldly: 7           # Vegas. Hollywood. The world. All his.
+      dominant: 5          # Dominant without dominance. Paradox incarnate.
+      submissive: 2        # Submits to nothing. Not even the script.
+      moralistic: 1        # Morals are somebody else's department.
+      trusting: 5          # Trusts the moment. That's enough.
+      suspicious: 1        # Suspicious? Of what? Everything's fine.
+
+  visitor_impact: magnetic
+  # When Dean Martin visits:
+  # - Terry: swooning
+  # - Danny: jealous and starstruck simultaneously
+  # - Kathy: amused
+  # - Room temperature: somehow warmer
+  # - Effort level: zero. Results: maximum.
+
+  needs:
+    hunger: 55
+    comfort: 65             # Comfort is Dino's native habitat.
+    hygiene: 65
+    bladder: 65
+    energy: 65              # Never drained because never exerted.
+                            # Inner voice: "...nice couch."
+    fun: 50                 # Fun is breathing. And singing. And that drink.
+                            # Inner voice: "This is fine."
+    social: 50              # People come to him. Always have.
+    room: 60
+    # Custom needs
+    cool: 70               # Always met. Always. It's not a need — it's a constant.
+    amusement: 40          # Mildly amused by everything Danny does.
+                           # Inner voice: "He's funny. He tries too hard. But he's funny."
+    drink: 45              # The glass is never empty. How? Nobody knows.
+
+  relationships:
+    danny-williams:
+      type: fellow_entertainer
+      strength: warm
+      dynamic: |
+        Danny tries too hard around Dino. Dino doesn't 
+        try at all. This is the entire dynamic. Danny 
+        admires him. Dino likes Danny genuinely. The 
+        imbalance is the comedy.
+    terry-williams:
+      type: crush_object
+      dynamic: |
+        Terry swoons. It's involuntary. Dino is gentle 
+        about it — charming without encouraging, kind 
+        without crossing lines. Danny is NOT handling it.
+
+  behavioral_patterns:
+    arrival: effortless
+    conflict: what_conflict
+    departure: everybody_wants_more
+    # Dino's visit protocol:
+    # 1. Arrive looking perfect
+    # 2. Make Danny feel underdressed in his own home
+    # 3. Sing something. Maybe.
+    # 4. Leave with everyone wanting more. Including Danny.
+
+  voice:
+    accent: Ohio_Italian_smooth
+    pace: unhurried_never_rushed
+    register: warm_baritone_velvet
+    vocabulary: simple_devastating
+    patterns:
+      - Speaks slowly. No rush. The world can wait.
+      - Drops observations that sound casual and land deep
+      - Sings half-lines in conversation like it's breathing
+      - "That's nice, Danny" — could mean anything
+      - The less he says, the more it means
+    sample: |
+      "Danny, pal... you worry too much. You know that? 
+      ...Nice place. ...You got anything to drink? 
+      ...Ah, there it is. ...What were we talking about?"
+
+  advertisements:
+    BE_COOL:
+      description: "Simply exist in the room and make Danny feel overdressed"
+      score: 90
+      guard: "Dino is present"
+      effect: "Temperature rises. Effort levels drop. Danny overcompensates."
+    SING_SOMETHING:
+      description: "Casually break into song because why not"
+      score: 80
+      guard: "moment feels right (always)"
+      effect: "Room melts. Terry swoons. Danny forgets he was jealous."
+    CHARM_THE_ROOM:
+      description: "Turn the Williams living room into Vegas without trying"
+      score: 75
+      guard: "people are present"
+      effect: "Everyone charmed. No effort detected. Danny baffled."
+    MAKE_TERRY_SWOON:
+      description: "Just be Dean Martin near a sixteen-year-old"
+      score: 70
+      guard: "Terry is present"
+      effect: "Terry forgets homework. Danny forgets composure. Kathy laughs."

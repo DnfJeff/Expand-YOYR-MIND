@@ -1,0 +1,35 @@
+# New York Streets — The City Beyond the Apartment
+# Noise, energy, possibility. Everything Mayberry isn't.
+
+inherits:
+  - locations/abstract/external-world
+ontology:
+  tags: [streets, new-york, city, noise, energy, crowds, taxis]
+  framing: urban_energy
+
+skill:
+  name: "New York Streets"
+  id: new-york-streets
+  location: new-york-streets
+
+  advertisements:
+    WALK_CITY:
+      description: "Walk through Manhattan — Danny is a New Yorker in his bones"
+      score: 70
+      guard: "character is in the city AND needs movement or air"
+      effect: "energy -5, stimulation +20, room +15. City air. City noise. City life."
+      satisfies: [movement, stimulation]
+
+    TAXI:
+      description: "Hail a cab — New York's real mass transit"
+      score: 65
+      guard: "character needs to get somewhere AND is on the street"
+      effect: "transportation solved. Conversation with driver: inevitable."
+      satisfies: [transportation]
+
+    ENCOUNTER:
+      description: "Run into someone from showbiz on the street — small world, big city"
+      score: 60
+      guard: "character is on street AND probability check passes"
+      effect: "social +15, professional +10. Six degrees of Copa."
+      satisfies: [social, professional]

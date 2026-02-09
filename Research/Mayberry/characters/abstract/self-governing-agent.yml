@@ -1,0 +1,19 @@
+# Person who enforces their own rules — judge, jury, and inmate
+prototype:
+  id: self-governing-agent
+  type: abstract_character
+  name: "Self-Governing Agent"
+  description: "Individual who has internalized community rules and enforces them on themselves"
+  default_traits:
+    self_awareness: 0.5
+    honor_code: 0.7
+    addiction: 0.8
+    civic_responsibility: 0.6
+  default_needs:
+    dignity: 0.7
+    routine: 0.8
+    acceptance: 0.6
+  behavioral_tendencies:
+    - Punishes self before anyone else can
+    - Maintains odd dignity within dysfunction
+    - Community tolerates because self-regulation reduces harm

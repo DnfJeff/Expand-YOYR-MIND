@@ -1,3 +1,36 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/civic-authority
+
+defaults:
+  authority_level: legal_but_gentle
+  tone: orderly_with_coffee
+  accessibility: public_hours
+  formality: low_despite_function
+  governing_style: conversation_before_citation
+  # Andy's approach cascades to every room in this building:
+  # the law is a tool for helping people, not punishing them.
+
+framing:
+  context: civic_authority
+  behavioral_expectation: respect_with_informality
+  conflict_style: andy_mediates_barney_escalates
+  # The courthouse is technically law enforcement
+  # but Andy keeps it feeling like a community center.
+
+ambient_ads:
+  - id: COFFEE_IS_ON
+    description: "The coffee pot is always going — come in, sit down"
+    score: 0.3
+    always_on: true
+    effect: "Transforms authority space into social space"
+  - id: BARNEY_VIGILANCE
+    description: "Barney monitors for infractions real and imagined"
+    score: 0.2
+    always_on: true
+    guard: "barney_is_present"
+    effect: "Minor infractions get noticed and cited; Andy overrules"
+
 room:
   name: "Mayberry Courthouse"
   type: civic

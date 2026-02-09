@@ -1,3 +1,15 @@
+framing:
+  context: domestic_transitional
+  behavioral_expectation: family_comfort
+  conflict_style: gentle_redirect
+
+ambient_ads:
+  - id: RADIO_LOW
+    description: "The radio plays quietly in the background"
+    score: 0.1
+    always_on: true
+    effect: "Background noise fills comfortable silence"
+
 room:
   name: "Taylor Living Room"
   type: domestic

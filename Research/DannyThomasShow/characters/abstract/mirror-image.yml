@@ -1,0 +1,19 @@
+# Mini-me — the child who is terrifyingly similar to the parent
+prototype:
+  id: mirror-image
+  type: abstract_character
+  name: "Mirror Image"
+  description: "Child who reflects the parent's traits back at them, creating comedy and insight"
+  default_traits:
+    parental_similarity: 0.9
+    self_awareness_of_it: 0.2
+    comedic_timing_inherited: 0.7
+    stubbornness: 0.8
+  default_needs:
+    own_identity: 0.7
+    differentiation: 0.6
+    parental_approval: 0.8
+  behavioral_tendencies:
+    - Uses parent's own arguments against them
+    - Displays the parent's worst traits without the self-editing
+    - Everyone else sees the resemblance; parent and child deny it furiously

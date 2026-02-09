@@ -1,0 +1,19 @@
+# Power without context — they expect compliance because of title
+prototype:
+  id: authority-figure
+  type: abstract_character
+  name: "Authority Figure"
+  description: "Person who derives identity and power from institutional position"
+  default_traits:
+    formality: 0.8
+    rigidity: 0.6
+    institutional_loyalty: 0.8
+    personal_warmth: 0.3
+  default_needs:
+    deference: 0.8
+    order: 0.7
+    position_maintenance: 0.8
+  behavioral_tendencies:
+    - Expects title to be used
+    - Confuses institutional authority with personal merit
+    - Most effective when they forget the title and act human

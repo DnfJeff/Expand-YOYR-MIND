@@ -1,3 +1,16 @@
+framing:
+  context: private_childhood
+  behavioral_expectation: safety_imagination_growth
+  conflict_style: lessons_land_at_bedtime
+
+ambient_ads:
+  - id: BEDTIME_PROCESSING
+    description: "The dark and quiet let the day's lessons arrive"
+    score: 0.3
+    always_on: true
+    guard: "time_is_evening"
+    effect: "Moral lessons click into place in the quiet"
+
 room:
   name: "Opie's Room"
   type: bedroom

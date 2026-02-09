@@ -1,0 +1,38 @@
+# Opie's Room — A Boy's World
+# Model planes, baseball cards, a window to the yard.
+
+inherits:
+  - locations/abstract/private-space
+ontology:
+  tags: [bedroom, child, private, toys, growing-up, imagination]
+  framing: domestic_private
+
+skill:
+  name: "Opie's Room Activities"
+  id: opies-room
+  location: taylor-house/opies-room
+
+  advertisements:
+    PLAY:
+      description: "Opie plays — toys, imagination, being a kid"
+      score: 80
+      guard: "opie-taylor is present AND free time exists"
+      effect: "fun +30, energy -10. Childhood happens. Imagination runs."
+      satisfies: [fun, creativity, independence]
+      participants: [opie-taylor]
+
+    SLEEP:
+      description: "Bedtime — lights out, door cracked, safe"
+      score: 85
+      guard: "time is bedtime AND opie-taylor is present"
+      effect: "energy +60, comfort +30. Andy says goodnight. Door stays cracked."
+      satisfies: [energy, comfort, safety]
+      participants: [opie-taylor]
+
+    THINK_ABOUT_THINGS:
+      description: "Opie lies in bed thinking about something Andy said"
+      score: 70
+      guard: "opie-taylor has a moral question AND time is bedtime"
+      effect: "growth +20. The lesson lands. Not immediately. In the morning."
+      satisfies: [growth, reflection]
+      participants: [opie-taylor]

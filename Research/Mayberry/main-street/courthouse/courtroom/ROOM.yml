@@ -1,3 +1,15 @@
+framing:
+  context: formal_civic
+  behavioral_expectation: legal_formality_attempt
+  conflict_style: procedures_nobody_quite_remembers
+
+ambient_ads:
+  - id: FORMALITY_PRESSURE
+    description: "Everyone tries to be formal and mostly fails"
+    score: 0.2
+    always_on: true
+    effect: "Language becomes stiff; Barney thrives; Andy tolerates"
+
 room:
   name: "Courtroom"
   type: judicial

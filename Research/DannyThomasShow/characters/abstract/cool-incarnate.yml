@@ -1,0 +1,19 @@
+# Effortlessness as art form — you can't learn this, you can't fake this
+prototype:
+  id: cool-incarnate
+  type: abstract_character
+  name: "Cool Incarnate"
+  description: "Person for whom style, ease, and charisma are as natural as breathing"
+  default_traits:
+    effortlessness: 0.95
+    charisma: 0.95
+    depth_hidden: 0.6
+    vulnerability_masked: 0.7
+  default_needs:
+    admiration: 0.6
+    authenticity: 0.5
+    good_time: 0.8
+  behavioral_tendencies:
+    - Makes everything look easy — especially the hard things
+    - Others try to imitate and fail, which makes the original cooler
+    - Genuine warmth underneath the persona, rarely shown

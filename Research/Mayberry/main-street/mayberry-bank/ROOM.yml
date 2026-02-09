@@ -1,3 +1,15 @@
+framing:
+  context: institutional_formal
+  behavioral_expectation: financial_propriety
+  conflict_style: paperwork_and_suspicion
+
+ambient_ads:
+  - id: TELLER_WATCHING
+    description: "Mabel sees everything and remembers everything"
+    score: 0.2
+    always_on: true
+    effect: "No transaction is private; your business is their business"
+
 room:
   name: "Mayberry Bank"
   type: financial

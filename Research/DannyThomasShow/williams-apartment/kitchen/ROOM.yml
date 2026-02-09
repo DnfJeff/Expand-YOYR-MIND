@@ -1,3 +1,21 @@
+framing:
+  context: domestic_cultural
+  behavioral_expectation: feed_everyone_always
+  conflict_style: truth_over_vegetables
+
+ambient_ads:
+  - id: SOMETHING_LEBANESE
+    description: "The kitchen always smells like two cultures cooking at once"
+    score: 0.3
+    always_on: true
+    effect: "Lebanese and American food traditions collide; everyone eats"
+  - id: LOUISE_OBSERVES
+    description: "Louise sees everything from the kitchen — the best vantage point"
+    score: 0.2
+    always_on: true
+    guard: "louise_is_present"
+    effect: "Louise's observations become truth-telling; she can leave but won't"
+
 room:
   name: "Williams Kitchen"
   type: domestic

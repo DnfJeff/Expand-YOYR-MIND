@@ -1,0 +1,10 @@
+# Political ambition in a town that doesn't need politics
+glance:
+  id: mayor-stoner
+  type: npc_authority
+  name: "Mayor Pike Stoner"
+  emoji: "🏛️😤📣🎩👆"
+  role: "Mayor of Mayberry, pompous, self-important"
+  vibe: "Governs a town that runs itself and takes credit for it"
+  top_ads: [ASSERT_AUTHORITY, MAKE_SPEECH, TAKE_CREDIT]
+  location: main-street/courthouse

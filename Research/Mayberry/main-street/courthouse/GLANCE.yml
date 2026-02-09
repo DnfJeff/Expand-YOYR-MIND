@@ -1,0 +1,9 @@
+# Justice, loitering, and coffee — Mayberry's center of gravity
+glance:
+  id: courthouse
+  type: civic
+  name: "Mayberry Courthouse"
+  emoji: "🏛️⚖️☕🔑😴"
+  function: "Law enforcement, town business, Otis's second home"
+  vibe: "The badge is real but the coffee is more important"
+  top_ads: [CONDUCT_BUSINESS, SETTLE_DISPUTE, DRINK_COFFEE]

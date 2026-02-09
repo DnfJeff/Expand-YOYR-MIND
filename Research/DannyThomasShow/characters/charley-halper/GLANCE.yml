@@ -1,0 +1,10 @@
+# The business end of show business
+glance:
+  id: charley-halper
+  type: npc_resident
+  name: "Charley Halper"
+  emoji: "📋💰🤝😓🎪"
+  role: "Danny's agent and manager, business pressure personified"
+  vibe: "Turns art into contracts and worries about both"
+  top_ads: [NEGOTIATE, DELIVER_BAD_NEWS, PUSH_DANNY]
+  location: copa-club/managers-office

@@ -1,0 +1,62 @@
+# MOOLLM Bootstrap Configuration — Danny Thomas Show
+# This file tells the simulation engine how to cold-start this world.
+
+bootstrap:
+  world: WORLD.yml
+  version: "0.1.0"
+  engine_compatibility: "moollm >= 0.1"
+  
+  # Reading protocol — progressive disclosure order
+  reading_order:
+    tier_1_glance:
+      pattern: "**/GLANCE.yml"
+      purpose: "5-30 line semantic mipmaps — enough to pick an ad"
+      token_budget: 50_per_entity
+    tier_2_card:
+      pattern: "**/CARD.yml"
+      purpose: "Full skill and advertisement definitions"
+      token_budget: 200_per_entity
+    tier_3_readme:
+      pattern: "**/README.md"
+      purpose: "Deep narrative context — only when needed"
+      token_budget: 500_per_entity
+    tier_4_skill:
+      pattern: "**/SKILL.md"
+      purpose: "Extended capability documentation"
+      token_budget: 300_per_entity
+
+  # What to load on cold start
+  cold_start:
+    load_first:
+      - WORLD.yml
+      - characters/**/GLANCE.yml
+      - "**/ROOM.yml"
+    load_on_demand:
+      - characters/**/CHARACTER.yml
+      - "**/CARD.yml"
+      - characters/**/GLANCE.yml
+
+  # Warm start — resume from saved state
+  warm_start:
+    state_file: .moollm/state.yml
+    log_file: LOG.md
+    transcript_file: TRANSCRIPT.md
+    resume_from: last_epoch_boundary
+
+  # Delegation rules
+  inheritance:
+    character_prototypes: characters/abstract/
+    location_prototypes: locations/abstract/
+    world_defaults: WORLD.yml → delegation.cascades
+    room_defaults: "*/ROOM.yml → defaults:"
+
+  # Simulation boundaries
+  constraints:
+    max_active_characters: 8
+    # Danny's world is more crowded
+    max_concurrent_locations: 3
+    ad_evaluation_strategy: score_descending_guard_checked
+    epoch_boundary_action: persist_state
+    speed_of_light: 8
+    interruption_probability: 0.3
+    # 30% chance any action gets interrupted — the doorbell factor

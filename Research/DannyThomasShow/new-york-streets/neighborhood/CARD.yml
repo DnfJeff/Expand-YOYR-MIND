@@ -1,0 +1,37 @@
+# The Neighborhood — Upper West Side Daily Life
+# Delis, dry cleaners, doormen, and Danny being recognized.
+
+inherits:
+  - locations/abstract/social-hub
+ontology:
+  tags: [neighborhood, upper-west-side, daily-life, shops, familiar-faces]
+  framing: communal_urban
+
+skill:
+  name: "Neighborhood Activities"
+  id: neighborhood
+  location: new-york-streets/neighborhood
+
+  advertisements:
+    ERRANDS:
+      description: "Daily errands — deli, dry cleaner, newsstand"
+      score: 65
+      guard: "character has errands AND neighborhood is accessible"
+      effect: "duty +15, social +10. Errands done. Shopkeepers say hello."
+      satisfies: [duty, routine]
+
+    BE_RECOGNIZED:
+      description: "Someone recognizes Danny on the street — the price and pleasure of fame"
+      score: 60
+      guard: "danny-williams is walking AND civilian is present"
+      effect: "social +10, ego +5. 'Hey, aren't you Danny Williams?' Yes. Always yes."
+      satisfies: [ego, social]
+      participants: [danny-williams]
+
+    KATHY_SOCIAL:
+      description: "Kathy meets friends in the neighborhood — her world outside the apartment"
+      score: 70
+      guard: "kathy-williams is present AND neighborhood friends available"
+      effect: "social +20, independence +10. Kathy's life beyond Danny."
+      satisfies: [social, independence]
+      participants: [kathy-williams]

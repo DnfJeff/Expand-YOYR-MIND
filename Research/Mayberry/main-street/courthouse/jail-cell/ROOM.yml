@@ -1,3 +1,21 @@
+framing:
+  context: confinement_voluntary
+  behavioral_expectation: dignity_within_dysfunction
+  conflict_style: self_imposed_consequences
+
+ambient_ads:
+  - id: OTIS_SCHEDULE
+    description: "Friday night arrival, Sunday morning departure — like clockwork"
+    score: 0.4
+    always_on: true
+    guard: "day_is_friday_or_saturday"
+    effect: "Otis arrives reliably; the cell is his second home"
+  - id: COT_CREAKS
+    description: "The cot, the blanket, the pillow — Otis's bedroom"
+    score: 0.1
+    always_on: true
+    effect: "The cell is simultaneously confinement and comfort"
+
 room:
   name: "Jail Cell"
   type: detention

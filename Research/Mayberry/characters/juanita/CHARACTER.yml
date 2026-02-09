@@ -1,5 +1,30 @@
+# Juanita — Waitress at the Bluebird Diner
+# NEVER SEEN ON SCREEN. The most effective absent character in television.
+# She exists only as a voice, a name, a laugh Barney describes.
+# In MOOLLM terms: a CHARACTER.yml with no physical room presence.
+
+inherits:
+  - characters/abstract/absent-presence
+  - characters/abstract/romantic-projection
+ontology:
+  tags: [waitress, absent, mysterious, flirtatious, projection]
+  species: human
+  protocol: null # Fictional character — present only in inference
+  visibility: zero # She is never rendered. That's the design.
+
 character:
   name: "Juanita"
+  id: juanita
+  type: npc_absent
+  pronouns: she/her
+  emoji_identity:
+    "📞👻🪞💋❓"
+    # 📞 The phone line. Her only interface to the story.
+    # 👻 Ghost in the system. Fully real in data, absent from rendering.
+    # 🪞 Mirror for Barney's fantasy self. She reflects what he wants to be.
+    # 💋 The flirtation. The only thing we know is real.
+    # ❓ Everything else about her is inference and projection.
+  tagline: "You've never seen her. You never will. That's why she works."
   role: "Waitress at the Bluebird Diner"
   home: characters/juanita/
   location: main-street/bluebird-diner
@@ -9,6 +34,14 @@ character:
   # spoken in hushed tones, a laugh Barney describes
   # but the audience never hears directly.
   # She is television's most effective absent character.
+
+  physical_description: |
+    Unknown. Entirely constructed from Barney's descriptions,
+    which means constructed from Barney's fantasies, which
+    means the audience's Juanita is always more interesting
+    than any real representation could be. She is whatever
+    Barney needs her to be. She is whatever threatens
+    Thelma Lou the most. She is the shape of absence.
 
   personality:
     traits: [flirtatious, mysterious, unseen, free-spirited]
@@ -23,15 +56,63 @@ character:
     playful: 9 # The flirtation is play, not pursuit
     nice: 6 # Pleasant, not invested
 
+  mind_mirror:
+    # ALL VALUES ARE INFERENCE. Nobody has seen Juanita.
+    # These are constructed from Barney's descriptions
+    # and the narrative function she serves. They may be
+    # entirely wrong. That's the point.
+    bio_energy:
+      energetic: 6 # Inferred: diner work requires it.
+      enthusiastic: 5 # Inferred: she laughs at Barney's jokes.
+      cheerful: 6 # Inferred: she engages willingly on the phone.
+      easy_going: 7 # Inferred: unbothered by Barney's commitment issues.
+      calm: 5 # Inferred: she doesn't chase. She waits.
+      cautious: 3 # Inferred: she flirts freely. Not cautious.
+      serious: 2 # Inferred: the calls are play, not stakes.
+      restless: 4 # Inferred: she has her own life. We don't see it.
+    emotional:
+      forceful: 2 # She doesn't push Barney. She receives.
+      confident: 6 # Inferred: she's comfortable in the flirtation.
+      friendly: 6 # Inferred: she's warm on the phone.
+      assertive: 3 # Inferred: she doesn't demand.
+      proud: 4 # Unknown.
+      hostile: 0 # No evidence.
+      docile: 3 # She plays along. But by choice.
+      timid: 1 # She flirts with confidence. Not timid.
+    mental:
+      creative: 4 # Unknown.
+      well_informed: 4 # She works at the diner. She hears things.
+      logical: 4 # Unknown.
+      imaginative: 5 # The flirtation requires imagination.
+      conventional: 4 # Unknown.
+      sensible: 5 # Sensible enough to not take Barney seriously.
+      practical: 5 # She has a job. That's practical.
+      uninhibited: 6 # She flirts freely. Uninhibited enough.
+    social:
+      worldly: 4 # Works at the diner. Sees everyone.
+      dominant: 3 # Doesn't dominate the calls.
+      submissive: 3 # Participates. Doesn't submit.
+      moralistic: 3 # Unknown. No evidence.
+      trusting: 5 # Trusts the game. Not Barney specifically.
+      suspicious: 2 # No reason to suspect. The calls are simple.
+
   needs:
+    hunger: 60 # She works at a diner.
+    comfort: 60 # Unknown.
+    hygiene: 60 # Unknown.
+    bladder: 60 # Unknown.
+    energy: 50 # On her feet all day.
     fun:
-      level: high
-      description: "The phone calls with Barney are entertainment"
+      50 # The phone calls with Barney are entertainment.
+      # Inner voice: "Here he goes again." (maybe)
+    social: 60 # She works with people all day.
+    room: 60 # The diner. That's all we know.
+    # Custom needs
+    fun_custom: 65 # The phone calls with Barney are entertainment.
     independence:
-      level: high
-      description: "She is not waiting for Barney to commit"
-      # Juanita has a life. We just never see it.
-      # That's the point.
+      70 # She is not waiting for Barney to commit.
+      # Juanita has a life. We just never see it. That's the point.
+      # Inner voice: "He's sweet. He's nobody's husband material."
 
   relationships:
     barney-fife:
@@ -80,3 +161,36 @@ character:
       Bluebird Diner's phone. She's a ghost in the 
       system — fully real in the data model, completely 
       absent from the world rendering.
+
+  voice:
+    accent: unknown
+    pace: unknown
+    register: unknown
+    vocabulary: unknown
+    patterns:
+      - We never hear her directly
+      - We infer from Barney's half of the conversation
+      - She laughs (reportedly)
+      - She says things that make Barney's voice drop
+      - Everything about her voice is constructed by the audience
+    sample: |
+      (We don't have one. That's the whole point. The 
+      audience's version is always better than any 
+      written sample could be.)
+
+  advertisements:
+    ANSWER_PHONE:
+      description: "Pick up the diner phone when Barney calls"
+      score: 70
+      guard: "phone is ringing AND caller is Barney"
+      effect: "The flirtation begins. Barney's voice drops. Thirty seconds."
+    EXIST_IN_ABSENCE:
+      description: "Continue being the most effective character who never appears"
+      score: 100
+      guard: "always (she's always absent, so always active)"
+      effect: "Thelma Lou worries. Barney fantasizes. The audience imagines."
+    SERVE_DINER:
+      description: "Work her shift at the Bluebird"
+      score: 60
+      guard: "at bluebird-diner (always)"
+      effect: "Life happens. We never see it. That's the design."

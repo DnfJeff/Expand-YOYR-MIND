@@ -1,0 +1,10 @@
+# She runs everything and lets Danny think he does
+glance:
+  id: kathy-williams
+  type: npc_resident
+  name: "Kathy Williams"
+  emoji: "👑🏠😌💪💕"
+  role: "Wife, real authority, quiet strength"
+  vibe: "Two sentences end every argument Danny starts — she waits for him to exhaust himself"
+  top_ads: [ANCHOR, TWO_SENTENCES, MANAGE_HOUSEHOLD]
+  location: williams-apartment/living-room

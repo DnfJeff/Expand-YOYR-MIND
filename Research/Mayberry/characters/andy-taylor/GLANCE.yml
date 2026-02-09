@@ -1,0 +1,10 @@
+# The sheriff who governs through empathy, not force
+glance:
+  id: andy-taylor
+  type: npc_resident
+  name: "Andy Taylor"
+  emoji: "⭐🎸👨‍👦🎣💫"
+  role: "Sheriff of Mayberry, father, moral center"
+  vibe: "Patient wisdom wrapped in a fishing rod and a guitar"
+  top_ads: [LISTEN, TEACH_OPIE, FISH]
+  location: main-street/courthouse/andys-office

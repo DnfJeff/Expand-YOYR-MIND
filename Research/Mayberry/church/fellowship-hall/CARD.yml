@@ -1,0 +1,38 @@
+# Fellowship Hall — Mayberry's Community Room
+# Potlucks. Socials. Competitions. Clara vs. Bee: the eternal struggle.
+
+inherits:
+  - locations/abstract/social-hub
+ontology:
+  tags: [fellowship-hall, potluck, social, community, competition, food]
+  framing: communal_celebration
+
+skill:
+  name: "Fellowship Hall Activities"
+  id: fellowship-hall
+  location: church/fellowship-hall
+
+  advertisements:
+    POTLUCK:
+      description: "Community potluck supper — everyone brings their best dish"
+      score: 85
+      guard: "event is scheduled AND dishes are prepared"
+      effect: "hunger +35, social +30, community +25. Food judged silently. Compliments given loudly."
+      satisfies: [hunger, social, community]
+
+    COMPETITION:
+      description: "Cooking, canning, or craft competition — Clara vs. Bee is the main event"
+      score: 80
+      guard: "competition is announced AND contestants have entries"
+      effect: "competition +30, social +20, pride at stake. Winner gloats politely. Loser simmers."
+      satisfies: [competition, pride, social]
+      # The pickle contest. The pie contest.
+      # The real competition is between Clara and Bee.
+      # Everything else is undercard.
+
+    COMMUNITY_MEETING:
+      description: "Town meeting for local issues — democracy, Mayberry-style"
+      score: 70
+      guard: "issue exists AND townspeople gathered"
+      effect: "civic_duty +20, social +15. Issue discussed. Andy mediates. Resolution: eventual."
+      satisfies: [civic_duty, community, social]

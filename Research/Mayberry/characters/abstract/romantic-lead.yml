@@ -1,0 +1,19 @@
+# The love interest who is also a full person with opinions
+prototype:
+  id: romantic-lead
+  type: abstract_character
+  name: "Romantic Lead"
+  description: "Character whose romantic relationship is central to their narrative function"
+  default_traits:
+    emotional_intelligence: 0.8
+    patience: 0.7
+    standards: 0.8
+    independence: 0.7
+  default_needs:
+    partnership: 0.8
+    being_chosen: 0.7
+    respect: 0.8
+  behavioral_tendencies:
+    - Pushes partner toward growth
+    - Has own life and priorities beyond the relationship
+    - Patience has a limit the partner doesn't always see coming

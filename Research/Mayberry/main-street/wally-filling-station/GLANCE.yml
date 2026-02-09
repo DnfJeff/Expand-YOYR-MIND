@@ -1,0 +1,9 @@
+# Full service means they fix your car and tell you about their day
+glance:
+  id: wally-filling-station
+  type: service
+  name: "Wally's Filling Station"
+  emoji: "⛽🔧😊🚗💪"
+  function: "Gas, repairs, Gomer's greetings, Goober's genius"
+  vibe: "Don't let the overalls fool you — genius works here"
+  top_ads: [FILL_UP, CAR_REPAIR, GOMER_GREETING]

@@ -1,0 +1,35 @@
+# Myers Lake — Mayberry's Natural Edge
+# Where town meets wilderness. Where thinking happens.
+
+inherits:
+  - locations/abstract/contemplative-space
+ontology:
+  tags: [lake, nature, swimming, boating, solitude, recreation]
+  framing: natural_contemplative
+
+skill:
+  name: "Myers Lake Activities"
+  id: myers-lake
+  location: myers-lake
+
+  advertisements:
+    SWIM:
+      description: "Swimming in the lake — summer recreation"
+      score: 70
+      guard: "time is summer AND character wants recreation"
+      effect: "fun +25, energy -10, hygiene +5. Summer in Mayberry."
+      satisfies: [fun, recreation, refreshment]
+
+    PICNIC:
+      description: "Lakeside picnic — family or couples"
+      score: 75
+      guard: "character has food AND weather is good"
+      effect: "comfort +20, family +15, fun +15. Food eaten outdoors. Ants. Worth it."
+      satisfies: [comfort, fun, family]
+
+    WALK:
+      description: "Walk along the lake — when town feels too close"
+      score: 65
+      guard: "character.needs.room > 50 OR character needs to think"
+      effect: "room +25, energy -5, peace +20. Distance from town problems."
+      satisfies: [solitude, peace, movement]

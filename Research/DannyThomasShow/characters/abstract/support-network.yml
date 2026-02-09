@@ -1,0 +1,19 @@
+# The safety net — always there when the wire breaks
+prototype:
+  id: support-network
+  type: abstract_character
+  name: "Support Network"
+  description: "Person who provides emotional and practical support to the central family"
+  default_traits:
+    reliability: 0.9
+    availability: 0.8
+    own_life_visibility: 0.3
+    warmth: 0.8
+  default_needs:
+    being_included: 0.7
+    reciprocity: 0.5
+    friendship: 0.7
+  behavioral_tendencies:
+    - Shows up without being asked
+    - Own problems rarely discussed
+    - Functions as emotional ballast for the main family

@@ -1,0 +1,35 @@
+# Taylor House — Container Card
+# The house itself advertises safety, family, and home.
+
+inherits:
+  - locations/abstract/domestic-sanctuary
+ontology:
+  tags: [house, family, home, safety, warmth]
+  framing: domestic
+
+skill:
+  name: "Taylor House"
+  id: taylor-house
+  location: taylor-house
+
+  advertisements:
+    COME_HOME:
+      description: "Return to the safest place in the safest town"
+      score: 80
+      guard: "character is taylor-family AND character is away from home"
+      effect: "comfort +30, safety +40, energy +15. Home. Screen door spring. Bee's cooking."
+      satisfies: [comfort, safety, belonging]
+
+    FAMILY_MEAL:
+      description: "Sit down together — breakfast or supper at the Taylor table"
+      score: 85
+      guard: "time is mealtime AND aunt-bee has cooked"
+      effect: "hunger +40, family +30, comfort +25. Food is love."
+      satisfies: [hunger, family, comfort]
+
+    SHELTER:
+      description: "The house protects — from weather, from trouble, from the world"
+      score: 70
+      guard: "character needs safety OR weather is bad"
+      effect: "safety +40, comfort +30. Walls keep the world at appropriate distance."
+      satisfies: [safety, comfort]

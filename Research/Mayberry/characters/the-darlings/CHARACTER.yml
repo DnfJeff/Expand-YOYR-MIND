@@ -1,5 +1,29 @@
+# The Darling Family — Mountain Clan, Musicians
+# They arrive with instruments. They communicate through music and stares.
+# The boys never speak. This is a design choice, not a limitation.
+
+inherits:
+  - characters/abstract/mountain-clan
+  - characters/abstract/musical-ensemble
+ontology:
+  tags: [mountain-folk, musicians, clan, insular, traditional]
+  species: human
+  protocol: null # Fictional characters — group entity
+  type: group # This is a family unit, not an individual
+
 character:
   name: "The Darling Family"
+  id: the-darlings
+  type: npc_group
+  pronouns: they/them # Collective
+  emoji_identity:
+    "🪕🏔️👨‍👧‍👦🤫🎶"
+    # 🪕 Banjo first. Words second. Words possibly never.
+    # 🏔️ Mountain people. Mountain rules.
+    # 👨‍👧‍👦 Briscoe, Charlene, and the boys who never speak
+    # 🤫 The silence of the sons IS the communication
+    # 🎶 If there's a porch, there's a song
+  tagline: "They speak in music. They mean every note."
   role: "Mountain Clan, Musicians"
   home: characters/the-darlings/
   location: mt-pilot
@@ -21,6 +45,22 @@ character:
     # They communicate entirely through music and stares
     # This is a design choice, not a limitation
 
+  physical_description:
+    briscoe: |
+      Big, barrel-chested, overalls over no shirt.
+      Face weathered by mountain sun. Hands like shovels.
+      Grin that splits his face when he's about to play.
+      Jug of mountain brew within arm's reach at all times.
+    charlene: |
+      Pretty, shy, mountain-raised. Calico dresses.
+      Eyes that go wide when she sees a potential husband.
+      Plays along sweetly but Briscoe's word is law.
+    sons: |
+      Four identical stares. Four different instruments.
+      They move in unison, sit in unison, play in unison.
+      If they have individual thoughts, nobody will ever know.
+      They communicate entirely through chords and eye contact.
+
   personality:
     traits: [insular, musical, loyal, traditional, unpredictable]
     # The Darlings live by mountain rules
@@ -28,23 +68,69 @@ character:
     # But overlap on the important things: family, loyalty, music
 
   sims_traits:
-    # Briscoe
-    neat: 2
+    # Briscoe's scores — he's the interface to the outside world
+    neat: 2 # Mountain clean, not town clean
     outgoing: 7 # Sociable on his terms
-    active: 6
+    active: 6 # Mountain living keeps you moving
     playful: 7 # Music IS play
     nice: 6 # Nice if you're nice
 
+  mind_mirror:
+    # Briscoe Darling — the patriarch speaks for the clan
+    bio_energy:
+      energetic: 5 # Mountain strong. Steady.
+      enthusiastic: 6 # Lights up for music and marrying off Charlene.
+      cheerful: 5 # Good-natured. On the mountain's terms.
+      easy_going: 4 # Not easy going about family honor.
+      calm: 4 # Calm until crossed.
+      cautious: 3 # Mountain people don't hesitate.
+      serious: 4 # Serious about family. Playful about music.
+      restless: 3 # Content on the mountain. Comes to town for purposes.
+    emotional:
+      forceful: 6 # Briscoe pushes. Mountain hospitality or else.
+      confident: 6 # Confident in who he is and where he comes from.
+      friendly: 5 # Friendly to those who deserve it.
+      assertive: 6 # Will insist. With volume.
+      proud: 7 # Darling pride runs deep.
+      hostile: 4 # Cross the family, find out.
+      docile: 1 # Never.
+      timid: 1 # The mountain doesn't raise timid.
+    mental:
+      creative: 5 # Musical creativity. Not book creativity.
+      well_informed: 2 # Knows the mountain. Doesn't need the rest.
+      logical: 3 # Mountain logic. Different from town logic.
+      imaginative: 4 # Imagines Charlene married well. Constantly.
+      conventional: 6 # Mountain conventions. Unbreakable.
+      sensible: 4 # Sensible by mountain standards.
+      practical: 6 # Everything serves the family.
+      uninhibited: 6 # No filter. No pretense.
+    social:
+      worldly: 2 # The mountain IS the world.
+      dominant: 6 # Patriarch. His word is law.
+      submissive: 0 # Darlings don't submit.
+      moralistic: 5 # Mountain morals. Different but firm.
+      trusting: 4 # Trusts Andy. Skeptical of everyone else.
+      suspicious: 5 # Suspicious of town ways.
+
   needs:
+    hunger: 55 # Mountain cooking. Squirrel stew.
+    comfort: 45 # Mountain comfort ≠ town comfort.
+    hygiene: 25 # The creek. That's hygiene.
+    bladder: 60 # Nature provides.
+    energy: 60 # Mountain living builds endurance.
+    fun: 65 # Music IS fun. The only fun needed.
+    social: 50 # Family is enough. Andy is a bonus.
+    room: 50 # Wherever the porch is.
+    # Custom needs
     family_honor:
-      level: high
-      description: "The family name matters above all"
+      70 # The family name matters above all.
+      # Inner voice (Briscoe): "We're DARLINGS."
     music:
-      level: constant
-      description: "If there's a porch, there's a song"
+      55 # If there's a porch, there's a song.
+      # Inner voice: "Strike up, boys."
     charlene_married:
-      level: recurring
-      description: "Briscoe wants Charlene settled"
+      35 # Briscoe wants Charlene settled.
+      # Inner voice: "Andy seems like a fine man. He got a wife?"
 
   relationships:
     andy-taylor:
@@ -61,3 +147,43 @@ character:
     social: music_first_words_second
     arrival: with_instruments
     departure: after_last_song
+
+  voice:
+    # Briscoe speaks for the clan
+    accent: deep_mountain_appalachian
+    pace: unhurried_drawl
+    register: booming_bass
+    vocabulary: mountain_dialect
+    patterns:
+      - Briscoe does all the talking. ALL of it.
+      - The boys stare. That's their communication.
+      - Charlene speaks when Briscoe allows
+      - Music replaces conversation — a tune IS a statement
+      - Sentences end with certainty. No questions.
+    sample: |
+      "Now Andy, we come down off the mountain for 
+      TWO reasons: to play some music and to marry off 
+      Charlene. Now I see you got a porch. Strike up, 
+      boys."
+
+  advertisements:
+    PLAY_MUSIC:
+      description: "Strike up the band on the nearest porch"
+      score: 95
+      guard: "porch is available AND instruments are present (always)"
+      effect: "Music fills Mayberry. Everyone stops to listen. It's perfect."
+    PROPOSE_MARRIAGE:
+      description: "Offer Charlene's hand to the nearest eligible man"
+      score: 80
+      guard: "unmarried man is present"
+      effect: "Man is alarmed. Charlene blushes. Briscoe waits for an answer."
+    DEFEND_FAMILY_HONOR:
+      description: "Respond to any perceived slight against the Darling name"
+      score: 85
+      guard: "family honor is threatened"
+      effect: "Mountain justice. Quick, firm, non-negotiable."
+    ARRIVE_IN_TOWN:
+      description: "Come down from the mountain with instruments and purpose"
+      score: 70
+      guard: "purpose exists (trade, marriage, music)"
+      effect: "Mayberry gains a porch concert and a minor crisis."

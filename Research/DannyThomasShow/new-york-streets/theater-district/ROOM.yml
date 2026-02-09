@@ -1,3 +1,20 @@
+framing:
+  context: professional_competitive
+  behavioral_expectation: industry_awareness
+  conflict_style: competitive_comparison
+
+ambient_ads:
+  - id: OTHER_MARQUEES
+    description: "Other performers' names in lights — Danny reads them all"
+    score: 0.3
+    always_on: true
+    effect: "Competitive calibration; Danny measures himself against the field"
+  - id: INDUSTRY_BUZZ
+    description: "Who's booking where, who's bombing, who's hot"
+    score: 0.2
+    always_on: true
+    effect: "Show business gossip — the professional Floyd's Barbershop"
+
 room:
   name: "Theater District"
   type: commercial_entertainment

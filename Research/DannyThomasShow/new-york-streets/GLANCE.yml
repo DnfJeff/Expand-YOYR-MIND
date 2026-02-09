@@ -1,0 +1,9 @@
+# Manhattan — noise, energy, possibility, everything Mayberry isn't
+glance:
+  id: new-york-streets
+  type: urban
+  name: "New York Streets"
+  emoji: "🗽🚕🏙️🌃👋"
+  function: "Walking, taxis, encounters, city life"
+  vibe: "The city is a character — noisy, exciting, exhausting"
+  top_ads: [WALK_CITY, TAXI, ENCOUNTER]

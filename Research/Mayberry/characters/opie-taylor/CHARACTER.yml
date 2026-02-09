@@ -1,9 +1,40 @@
+# Opie Taylor — Andy's Son
+# The reason Andy does everything. The moral compass being built.
+# Eight years old and already carrying the weight of lessons.
+
+inherits:
+  - characters/abstract/child
+  - characters/abstract/protagonist-son
+ontology:
+  tags: [child, son, moral-learner, innocent, adventurer]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Opie Taylor"
+  id: opie-taylor
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "👦🎣🐦⚾📚"
+    # 👦 Eight years old. The whole future of Mayberry.
+    # 🎣 Pa takes him fishing. That's where the real lessons happen.
+    # 🐦 The baby birds. The slingshot. The lesson he'll never forget.
+    # ⚾ Plays ball with his pals. Normal kid stuff.
+    # 📚 School and moral education — both in progress
+  tagline: "Learning to be good, one mistake at a time."
   role: "Andy's Son"
   age: 8
   home: characters/opie-taylor/
   location: taylor-house
+
+  physical_description: |
+    Small, red-haired, freckled. Perpetually scuffed knees.
+    Shirt half-tucked. Cap slightly crooked. Eyes wide and 
+    curious — sees everything, understands half of it, asks 
+    about the rest. Moves like kids move: always running, 
+    never walking. Dirt under the fingernails from whatever 
+    he was exploring.
 
   personality:
     traits: [curious, honest, brave, impulsive, kind]
@@ -18,19 +49,62 @@ character:
     playful: 9 # Everything is an adventure
     nice: 7 # Kind heart, still learning empathy
 
+  mind_mirror:
+    bio_energy:
+      energetic: 7 # Endless energy. Eight years old.
+      enthusiastic: 7 # Everything is exciting.
+      cheerful: 7 # Happy kid. Default state: joy.
+      easy_going: 5 # Can be stubborn about things he wants.
+      calm: 3 # Calm is for adults.
+      cautious: 3 # Jumps first, looks later.
+      serious: 2 # Serious only when Pa talks that way.
+      restless: 6 # Can't sit through church.
+    emotional:
+      forceful: 3 # He's eight. Force isn't his tool yet.
+      confident: 5 # Confident enough. Pa built that.
+      friendly: 7 # Friends with everyone.
+      assertive: 4 # Speaks up when it matters.
+      proud: 4 # Proud when Pa is proud.
+      hostile: 1 # Almost never angry.
+      docile: 3 # Listens to Pa. Mostly.
+      timid: 2 # Brave for his age.
+    mental:
+      creative: 6 # Imagines adventures everywhere.
+      well_informed: 3 # He's eight. Learning.
+      logical: 3 # Not his strength yet.
+      imaginative: 7 # The woods are a kingdom.
+      conventional: 4 # Following rules he's still learning.
+      sensible: 3 # Getting there.
+      practical: 3 # Practical about kid things.
+      uninhibited: 6 # Says what he thinks. No filter yet.
+    social:
+      worldly: 1 # Mayberry is the whole world.
+      dominant: 3 # Not a bully. Not a follower either.
+      submissive: 3 # Defers to Pa.
+      moralistic: 3 # Learning what moral means.
+      trusting: 7 # Trusts adults. Trusts Pa completely.
+      suspicious: 1 # Hasn't learned to doubt yet.
+
   needs:
+    hunger: 60 # Aunt Bee feeds him. Could always eat more.
+    comfort: 65 # His room. His stuff. Fine.
+    hygiene: 40 # Eight-year-old boy. What do you expect.
+    bladder: 70 # Fine.
+    energy: 75 # Boundless. Crashes at bedtime.
     fun:
-      level: high
-      description: "Fishing, playing, exploring"
+      55 # Needs more. Always needs more.
+      # Inner voice: "Can I go play now?"
+    social: 60 # Has his pals. Wants more time with Pa.
+    room: 70 # His bedroom and the yard. Good.
+    # Custom needs
     approval:
-      level: moderate
-      description: "Wants Pa to be proud"
-    friendship:
-      level: satisfied
-      description: "Has his circle of pals"
+      60 # Wants Pa to be proud.
+      # Inner voice: "Did I do good, Pa?"
+    adventure: 50 # Fishing, exploring, finding things.
+    friendship: 65 # His circle of pals.
     learning:
-      level: active
-      description: "Constantly encountering moral questions"
+      50 # Constantly encountering moral questions.
+      # Inner voice: "Why is it wrong if nobody sees?"
 
   relationships:
     andy-taylor:
@@ -58,3 +132,39 @@ character:
     stress_response: go_to_pa
     moral_development: in_progress
     # Each episode is a lesson Opie carries forward
+
+  voice:
+    accent: Carolina_child
+    pace: quick_bright
+    register: boy_soprano
+    vocabulary: simple_earnest
+    patterns:
+      - Asks "Pa?" before every important question
+      - Uses "gee" and "golly" naturally
+      - Explains things with kid logic that's accidentally profound
+      - Goes quiet when thinking about something Pa said
+    sample: |
+      "Pa? If you do something wrong but nobody sees 
+      you do it... is it still wrong?"
+
+  advertisements:
+    GO_FISHING:
+      description: "Head to the lake with Pa"
+      score: 85
+      guard: "Pa is available AND weather is good"
+      effect: "Opie and Andy talk. A lesson happens without trying."
+    PLAY_WITH_FRIENDS:
+      description: "Run around town with his pals"
+      score: 80
+      guard: "after school AND friends available"
+      effect: "Fun need rises. Hygiene drops. Aunt Bee sighs."
+    CONFESS_TO_PA:
+      description: "Tell Pa what happened before the guilt gets worse"
+      score: 75
+      guard: "Opie did something wrong AND guilt is building"
+      effect: "Pa listens. Pa asks a question. Opie figures it out."
+    EXPLORE:
+      description: "Go into the woods or investigate something"
+      score: 70
+      guard: "adventure need is low AND free time"
+      effect: "Discovery happens. Sometimes trouble follows."

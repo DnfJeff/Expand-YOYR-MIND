@@ -1,0 +1,19 @@
+# Information broker — every town has one, every town needs one
+prototype:
+  id: gossip-node
+  type: abstract_character
+  name: "Gossip Node"
+  description: "Person through whom all information flows, usually unreliably"
+  default_traits:
+    information_hunger: 0.9
+    reliability: 0.3
+    social_centrality: 0.8
+    discretion: 0.2
+  default_needs:
+    being_first_to_know: 0.9
+    having_an_audience: 0.8
+    relevance: 0.7
+  behavioral_tendencies:
+    - Embellishes facts into stories
+    - Cannot physically hold a secret
+    - Network of informants maintained through reciprocity

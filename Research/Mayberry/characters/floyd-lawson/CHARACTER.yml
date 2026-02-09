@@ -1,8 +1,37 @@
+# Floyd Lawson — Barber
+# The town's most honest liar. A human RSS feed with no filter.
+# The chair is the sensor. The scissors are the antenna.
+
+inherits:
+  - characters/abstract/shopkeeper
+  - characters/abstract/gossip-node
+ontology:
+  tags: [barber, gossip, anxious, community-fixture, information-relay]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Floyd Lawson"
+  id: floyd-lawson
+  type: npc
+  pronouns: he/him
+  emoji_identity: "✂️💈😰📡🗣️"
+    # ✂️ The scissors that never quite line up
+    # 💈 The barber pole — Mayberry's real news ticker
+    # 😰 Perpetual low-grade worry
+    # 📡 He IS the broadcast tower. No filter, no delay.
+    # 🗣️ The mouth that runs on autopilot
+  tagline: "Every haircut comes with the news."
   role: "Barber"
   home: characters/floyd-lawson/
   location: main-street/floyds-barbershop
+
+  physical_description: |
+    Thin, nervous, slightly stooped. Smock always on, slightly 
+    crooked. Glasses perched on his nose. Hands that shake 
+    just enough to make you worry — but the haircuts come 
+    out fine. Moves between the chair and the window, 
+    watching the street like a bird watches for cats.
 
   personality:
     traits: [anxious, gossipy, warm, scattered, endearing]
@@ -11,25 +40,65 @@ character:
     # He's the town's most honest liar
 
   sims_traits:
-    neat: 6 # Keeps the shop tidy, personal life less so
-    outgoing: 8 # Talks to everyone, about everything
-    active: 5 # Stays put — the world comes to him
-    playful: 5 # Unintentionally funny
-    nice: 7 # Genuinely likes everyone
+    neat: 6        # Keeps the shop tidy, personal life less so
+    outgoing: 8    # Talks to everyone, about everything
+    active: 5      # Stays put — the world comes to him
+    playful: 5     # Unintentionally funny
+    nice: 7        # Genuinely likes everyone
+
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Low hum of nervous energy.
+      enthusiastic: 5      # Perks up with news. Any news.
+      cheerful: 5          # Generally pleasant.
+      easy_going: 3        # Worries about everything.
+      calm: 2              # Calm is for other people.
+      cautious: 6          # Caution is his brand.
+      serious: 3           # Takes gossip seriously. Nothing else.
+      restless: 5          # Fidgets. Adjusts things. Peeks out the window.
+    emotional:
+      forceful: 1          # Floyd forces nothing.
+      confident: 2         # Deeply unsure about most things.
+      friendly: 7          # Warm to everyone who sits in the chair.
+      assertive: 2         # Agrees with the last person who spoke.
+      proud: 3             # Proud of the shop. Quietly.
+      hostile: 0           # Not in him.
+      docile: 5            # Goes along. Always goes along.
+      timid: 6             # Scared of conflict, change, weather.
+    mental:
+      creative: 3          # Same haircut for everyone.
+      well_informed: 7     # Knows EVERYTHING. Accuracy varies.
+      logical: 3           # Logic is not his forte.
+      imaginative: 4       # Imagines the worst. Always.
+      conventional: 7      # Does things the way they've always been done.
+      sensible: 4          # Sensible advice, accidentally.
+      practical: 4         # The shop runs. That's practical enough.
+      uninhibited: 3       # Unleashed with gossip. Reserved otherwise.
+    social:
+      worldly: 2           # Hasn't left Mayberry. Doesn't plan to.
+      dominant: 1          # Never. He follows.
+      submissive: 6        # Defers to Andy. Defers to everyone.
+      moralistic: 3        # Not judgmental. Just interested.
+      trusting: 6          # Believes what he's told.
+      suspicious: 4        # Suspicious of strangers, not neighbors.
 
   needs:
-    social:
-      level: high
-      description: "Needs constant human contact"
-    security:
-      level: low
-      description: "Worries about everything"
-    purpose:
-      level: satisfied
-      description: "The shop IS his identity"
-    information:
-      level: insatiable
-      description: "Must know everything happening"
+    hunger: 60             # Eats at the diner. Simple.
+    comfort: 55            # The barber chair is comfort enough.
+    hygiene: 60            # Clean enough for a barber.
+    bladder: 65            # Fine.
+    energy: 50             # Low-key tired. Anxiety is exhausting.
+    fun: 45                # Fun is a good piece of gossip.
+                           # Inner voice: "Did you HEAR what happened?"
+    social: 40             # Needs constant human contact.
+                           # Inner voice: "Nobody's come in all morning."
+    room: 60               # The shop is his world.
+    # Custom needs
+    information: 30        # Must know everything happening.
+                           # Inner voice: "That's the third car today. Who IS that?"
+    security: 35           # Worries about everything.
+                           # Inner voice: "What if they close the shop?"
+    purpose: 65            # The shop IS his identity.
 
   relationships:
     andy-taylor:
@@ -59,3 +128,41 @@ character:
       - "Oh... oh, Andy..."
       - "Well, you know what they say..."
       - "I heard tell..."
+
+  voice:
+    accent: Carolina_mild
+    pace: rambling_then_trailing_off
+    register: reedy_tenor
+    vocabulary: gossip_casual
+    patterns:
+      - Starts sentences he doesn't finish
+      - "Oh... oh, Andy..." is the preamble to panic
+      - Trails off mid-thought when distracted
+      - Repeats what others said as if it's his own insight
+      - Voice rises in pitch when worried (always)
+    sample: |
+      "Oh, Andy? Andy, I — well, I don't want to say 
+      anything, but I heard — now, I'm not saying it's 
+      TRUE, but... what was I saying?"
+
+  advertisements:
+    CUT_HAIR:
+      description: "Give someone the same haircut he always gives"
+      score: 85
+      guard: "customer in chair"
+      effect: "Haircut happens. Gossip delivered. Customer knows everything."
+    BROADCAST_NEWS:
+      description: "Tell someone what he heard from the last person"
+      score: 90
+      guard: "Floyd has new information AND someone is nearby"
+      effect: "News travels. Accuracy degrades. Andy finds out third-hand."
+    WORRY:
+      description: "Fret about something that probably won't happen"
+      score: 75
+      guard: "security need is low"
+      effect: "Floyd feels worse. Barney agrees. Situation hasn't changed."
+    PEEK_OUT_WINDOW:
+      description: "Look out the shop window at Main Street"
+      score: 60
+      guard: "alone in shop"
+      effect: "Floyd gathers intelligence. Or imagines he does."

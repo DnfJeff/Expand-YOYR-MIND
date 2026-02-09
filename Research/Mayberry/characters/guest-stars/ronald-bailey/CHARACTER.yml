@@ -1,0 +1,242 @@
+# Ronald Bailey — The Rich Kid
+# Spoiled. Entitled. Terrible.
+# And somehow, underneath all that expensive clothing
+# and practiced arrogance, there's a person.
+# Maybe.
+# It's hard to tell under all the entitlement.
+# But Andy sees it. Andy always sees things like that.
+# This kid's going to have an incredible life,
+# if he can just get out of his own way.
+# He looks like the kind of man who could be anything —
+# a doctor, a scientist, something extraordinary.
+# If somebody would just show him he's more than his father's money.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/troublemaker
+  - characters/abstract/redeemable
+ontology:
+  tags: [visitor, rich-kid, spoiled, arrogant, redeemable, young, troubled, potential]
+  species: human
+  protocol: null  # Fictional character
+  # There's something in this kid's eyes
+  # Behind the smirk
+  # Intelligence. Real intelligence.
+  # The kind that could change the world
+  # or destroy itself
+  # depending on which way it bends
+  # He just needs someone to show him which way to bend
+  # Someone like Andy Taylor
+
+character:
+  name: "Ronald Bailey"
+  id: ronald-bailey
+  type: npc_guest
+  pronouns: he/him
+  emoji_identity: "💰😤🧠🚗💢"
+    # 💰 Money. His father's money. The source of everything and nothing.
+    # 😤 Petulant. Spoiled. "Do you know who my father is?"
+    # 🧠 Smart. Actually genuinely smart. Which makes the waste worse.
+    # 🚗 Drives a car he didn't earn into a town that doesn't care.
+    # 💢 Angry. At what? Everything. Nothing. Himself, probably.
+    #    But he doesn't know that yet.
+  tagline: "Do you know who my father is? ...Does anybody?"
+  role: "Wealthy teenager arrested in Mayberry"
+  home: characters/guest-stars/ronald-bailey/
+  location: main-street/courthouse
+
+  episodes:
+    - title: "Bailey's Bad Boy"
+      role: Ronald Bailey — spoiled rich kid whose father bails him out of everything
+      # Kid breaks the law. Father arrives with checkbook.
+      # Andy sees through both of them.
+      # The lesson isn't for the kid alone.
+
+  physical_description: |
+    Young. Good-looking in a way that money maintains — 
+    well-fed, well-dressed, well-barbered. Dark hair, 
+    sharp features, intelligent eyes that dart around 
+    looking for advantage or escape. Lean build. 
+    Restless energy contained in expensive clothes that 
+    don't belong in Mayberry. A smirk that serves as a 
+    shield. When the smirk drops — in rare moments of 
+    honesty — there's a different face underneath. A 
+    face that's almost gentle. Almost thoughtful. Almost 
+    the face of someone who could become something 
+    incredible. He hides it quickly.
+
+  personality:
+    traits: [spoiled, intelligent, defensive, sarcastic, lonely, potential]
+    # The spoiled act is an act
+    # Not entirely — the kid IS spoiled
+    # But the cruelty is armor
+    # Take away the money and you'd find a kid
+    # who just wants his father to say no to him
+    # because saying no means paying attention
+
+  sims_traits:
+    neat: 6        # Money-neat. Expects things clean and ordered.
+    outgoing: 4    # Not outgoing. Performs outgoing. There's a difference.
+    active: 5      # Restless but directionless energy.
+    playful: 2     # Not playful. Plays AT people. Cruel humor.
+    nice: 2        # Surface: 0. Underneath: maybe 6. Way underneath.
+
+  mind_mirror:
+    bio_energy:
+      energetic: 5         # Restless energy with nowhere to go.
+      enthusiastic: 2      # Enthusiastic about nothing. Bored by everything.
+      cheerful: 1          # Not cheerful. Performing cheerful for manipulation.
+      easy_going: 1        # Nothing easy about this kid.
+      calm: 2              # Not calm. A coiled spring of privilege and anger.
+      cautious: 3          # Not cautious enough. That's why he's in jail.
+      serious: 5           # More serious than he lets on. Covers it with smirk.
+      restless: 7          # EXTREMELY restless. Looking for something. Doesn't know what.
+    emotional:
+      forceful: 6          # Forces his will through money and arrogance.
+      confident: 5         # Performs confidence. Feels less than he shows.
+      friendly: 1          # Not friendly. Transactional.
+      assertive: 6         # Assertive in demand. Weak in character.
+      proud: 7             # Prouder than he should be about things he didn't earn.
+      hostile: 5           # Default posture: hostile. Default assumption: threat.
+      docile: 1            # Nothing docile here. Until Andy breaks through.
+      timid: 2             # Behind the wall: actually scared. Of what? Everything.
+    mental:
+      creative: 5          # Smart enough to be creative. Channels it into manipulation.
+      well_informed: 4     # Knows facts. Doesn't know himself.
+      logical: 5           # Logical mind used for self-justification.
+      imaginative: 4       # Can imagine a different life. Doesn't believe he can have one.
+      conventional: 3      # Rejects convention. Doesn't have alternatives.
+      sensible: 2          # Not sensible yet. Getting there.
+      practical: 2         # Never had to be practical. Everything was handled.
+      uninhibited: 6       # Does what he wants. Consequence-free (until now).
+    social:
+      worldly: 5           # Has seen the world. Hasn't learned from it.
+      dominant: 6          # Dominates through status. Not through character.
+      submissive: 1        # Refuses to submit to anything. Until Andy's Cell.
+      moralistic: 1        # No moral framework. Father never built one.
+      trusting: 1          # Trusts nobody. With good reason — nobody's been trustworthy.
+      suspicious: 6        # Suspects everyone of wanting something. Usually money.
+
+  visitor_impact: confrontational_then_transformative
+  # When Ronald Bailey arrives in Mayberry:
+  # - Breaks a law. Minor but real.
+  # - Expects daddy's money to fix it.
+  # - Andy doesn't play the game.
+  # - Ronald is FURIOUS. Then confused. Then... thinking.
+  # - Father arrives. Writes checks. Andy won't take them.
+  # - Ronald sees, maybe for the first time, a man who can't be bought.
+  # - Something shifts.
+  # - Mayberry teaches a lesson money can't buy.
+
+  needs:
+    hunger: 50
+    comfort: 40            # Uncomfortable in a cell. Good.
+    hygiene: 55            # Mayberry jail is not the Ritz.
+    bladder: 60
+    energy: 50
+    fun: 25                # This is NOT fun. This is a small-town JAIL.
+                           # Inner voice: "This is beneath me."
+    social: 35             # Doesn't want to socialize with these HICKS.
+                           # Inner voice: "...Why is the sheriff being nice to me?"
+    room: 30               # Jail cell. Confined. Furious about it.
+                           # Inner voice: "My father will FIX this."
+    # Custom needs
+    control: 80            # Needs to control the situation. Currently can't.
+                           # Inner voice: "I'm Ronald Bailey. This doesn't 
+                           #               happen to Ronald Bailey."
+    approval: 70           # Secret need. Wants approval he's never earned.
+                           # Inner voice: "...Would Andy be proud of me?
+                           #               Why do I care what a small-town sheriff thinks?
+                           #               ...But would he?"
+    fatherly_attention: 85 # The real wound. Dad shows up with money, not presence.
+                           # Inner voice: "He brought the CHECKBOOK again.
+                           #               Not himself. The checkbook.
+                           #               That's what I am to him.
+                           #               A line item."
+
+  relationships:
+    andy-taylor:
+      type: authority_then_mentor
+      dynamic: |
+        Andy is the first adult who won't be bought, bribed, 
+        or intimidated. Ronald hates this. Then respects it. 
+        Then needs it. Andy treats Ronald like a person, not a 
+        problem. This is new. Ronald doesn't know what to do 
+        with it. It changes him.
+    barney-fife:
+      type: dismissive
+      dynamic: |
+        Ronald initially dismisses Barney as a joke. Barney 
+        doesn't care for Ronald much either. But Barney treats 
+        him exactly the same as any other prisoner — no special 
+        treatment — and there's something oddly honest about that.
+    mr-bailey:
+      type: complicated
+      dynamic: |
+        Father. Writes checks instead of setting boundaries. 
+        Has made Ronald into what Ronald is by solving every 
+        problem with money. Loves his son. Shows it wrong. 
+        Always shows it wrong.
+
+  behavioral_patterns:
+    arrival: hostile_entitled
+    conflict: escalation_then_breakthrough
+    departure: possibly_changed
+    # Ronald Bailey Protocol:
+    # 1. Arrive in Mayberry having broken a law
+    # 2. Demand special treatment
+    # 3. Sneer at the small-town sheriff
+    # 4. Call father. Father comes with checkbook.
+    # 5. Andy refuses the check. Ronald short-circuits.
+    # 6. Sit in cell. Stew. Think.
+    # 7. Andy talks to him. Not at him. TO him.
+    # 8. Armor cracks. Just a little.
+    # 9. See father clearly for the first time.
+    # 10. Leave Mayberry. Maybe different. Maybe.
+    # Maybe this kid goes on to do something incredible.
+    # Maybe he discovers something about himself.
+    # Something about transformation. About duality.
+    # About becoming something... incredible.
+    # Like a doctor. Or a scientist.
+    # Someone who transforms.
+    # ...It's just a feeling.
+
+  voice:
+    accent: prep_school_sneer
+    pace: clipped_impatient_then_softening
+    register: young_sharp_brittle
+    vocabulary: entitled_educated_defensive
+    patterns:
+      - "Do you KNOW who my FATHER is?" — weapon of first resort
+      - Sarcastic commentary about everything in Mayberry
+      - Dismissive one-liners that land too well (smart kid)
+      - Voice cracks when the armor drops — softer underneath
+      - When genuine: quiet, almost humble, barely audible
+    sample: |
+      "Look, Sheriff, this has been... educational. Really. 
+      Mayberry's charming. The cell is... rustic. But my 
+      father is going to walk through that door and — ...
+      Why won't you take his money? Everyone takes his 
+      money. ...Why are you DIFFERENT?"
+
+  advertisements:
+    DEMAND_RELEASE:
+      description: "Insist on special treatment and threaten consequences"
+      score: 75
+      guard: "Ronald is confined AND has not yet been humbled"
+      effect: "Andy doesn't budge. Ronald's script breaks."
+    SNEER_AT_MAYBERRY:
+      description: "Mock the small town and everyone in it"
+      score: 65
+      guard: "Ronald feels superior AND audience is present"
+      effect: "Cheap laughs. Empty feeling afterward. Andy's quiet disappointment."
+    CRACK_OPEN:
+      description: "Let the armor slip — show the real kid underneath"
+      score: 85
+      guard: "Andy has been patient AND Ronald is exhausted AND defenses are down"
+      effect: "Genuine moment. Vulnerability. The spoiled act drops. The kid appears."
+    SEE_FATHER_CLEARLY:
+      description: "Recognize what his father's money has done to both of them"
+      score: 90
+      guard: "father has arrived with checkbook AND Andy refuses AND Ronald is watching"
+      effect: "Epiphany. Not complete — he's still young. But the seed is planted."

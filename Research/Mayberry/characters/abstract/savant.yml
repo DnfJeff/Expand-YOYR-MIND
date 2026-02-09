@@ -1,0 +1,19 @@
+# Genius trapped in a person nobody takes seriously
+prototype:
+  id: savant
+  type: abstract_character
+  name: "Savant"
+  description: "Person with extraordinary ability in one domain, underestimated in all others"
+  default_traits:
+    specialized_skill: 0.95
+    social_awareness: 0.3
+    hidden_depth: 0.9
+    presentation: 0.3
+  default_needs:
+    hands_on_work: 0.9
+    recognition: 0.4
+    purpose: 0.7
+  behavioral_tendencies:
+    - Brilliance emerges only when needed
+    - Cannot explain how they do what they do
+    - Underestimated by everyone except those who've seen them work

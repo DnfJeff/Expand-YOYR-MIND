@@ -1,0 +1,19 @@
+# Identity defined by vocation — the job IS the person
+prototype:
+  id: professional
+  type: abstract_character
+  name: "Professional"
+  description: "Person whose identity and worth are deeply tied to their professional role"
+  default_traits:
+    competence: 0.8
+    dedication: 0.8
+    work_identity: 0.8
+    adaptability: 0.5
+  default_needs:
+    professional_respect: 0.8
+    mastery: 0.7
+    purpose: 0.8
+  behavioral_tendencies:
+    - Defines self through work role
+    - Takes professional slights personally
+    - Finds social connections through professional context

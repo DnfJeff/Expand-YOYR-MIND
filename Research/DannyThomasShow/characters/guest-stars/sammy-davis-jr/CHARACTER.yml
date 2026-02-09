@@ -1,0 +1,178 @@
+# Sammy Davis Jr. — The Most Talented Human Being in the Room
+# Every room. Any room. Including rooms full of other legends.
+# He sings, he dances, he acts, he does impressions.
+# He IS the show. Danny knows it. Nobody minds.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/entertainer
+  - characters/abstract/multi-talent
+ontology:
+  tags: [guest-star, entertainer, singer, dancer, actor, impressionist, legend, groundbreaking]
+  species: human
+  protocol: null  # Fictional character
+
+character:
+  name: "Sammy Davis Jr."
+  id: sammy-davis-jr
+  type: npc_guest
+  pronouns: he/him
+  emoji_identity: "🌟💃🎤🎭👁️"
+    # 🌟 The star that outshines the room. Any room.
+    # 💃 The feet that never stop. Dancing is conversation.
+    # 🎤 The voice — three octaves of proof that God has favorites
+    # 🎭 Impressions so good the originals get nervous
+    # 👁️ One eye. Sees more than most people see with two.
+  tagline: "I gotta be me."
+  role: "Entertainer, Playing Himself"
+  home: characters/guest-stars/sammy-davis-jr/
+  location: visiting
+  episodes: ["The People's Choice"]
+
+  physical_description: |
+    Small frame, enormous presence. Moves like electricity 
+    given human form. Dressed immaculately — jewelry that 
+    catches every light in the room. One glass eye that 
+    somehow sees more than most people's two. His smile 
+    enters the room before he does. Hands that talk, feet 
+    that sing, voice that does everything else.
+
+  personality:
+    traits: [electric, generous, driven, warm, unstoppable]
+    # Sammy has more talent in one hand than most people
+    # have in their entire careers
+    # He's fighting battles Danny doesn't have to fight
+    # And he's winning them by being undeniable
+
+  sims_traits:
+    neat: 7
+    outgoing: 10   # Cannot be anything but the center
+    active: 9      # The energy is supernatural
+    playful: 9     # Everything is a performance
+    nice: 8        # Genuinely, deeply warm
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7         # Never stops. CAN'T stop. The energy is nuclear.
+      enthusiastic: 7      # About performing, about life, about being alive.
+      cheerful: 6          # Cheerful as armor. Cheerful as truth. Both.
+      easy_going: 4        # Easy going on stage. Fighting harder battles off it.
+      calm: 3              # Calm is between performances. Brief windows.
+      cautious: 4          # Cautious about things Danny never has to think about.
+      serious: 5           # Serious about the craft. Dead serious about the fight.
+      restless: 6          # The feet are always moving. Always.
+    emotional:
+      forceful: 6          # Commands attention through talent, not volume.
+      confident: 7         # Confidence forged in fire. Unshakable.
+      friendly: 7          # Warm with everyone. Bridges every gap.
+      assertive: 5         # Asserts through excellence.
+      proud: 6             # Proud of the work. Has to be — nobody else was, at first.
+      hostile: 0           # Fights with talent, not hostility.
+      docile: 1            # Not docile. Diplomatic. Enormous difference.
+      timid: 0             # Impossible. Would violate physics.
+    mental:
+      creative: 7          # Multi-dimensional creativity. Sings, dances, acts, impersonates.
+      well_informed: 6     # Knows the business. Knows the score. Both scores.
+      logical: 4           # Logic serves the performance.
+      imaginative: 7       # Imagines every kind of performance. Executes all of them.
+      conventional: 3      # Breaking conventions is the whole point.
+      sensible: 4          # Sensible about survival. Reckless about art.
+      practical: 4         # Practical entertainer. Impractical dreamer.
+      uninhibited: 7       # On stage, there are no limits.
+    social:
+      worldly: 7           # Vegas, Broadway, Hollywood. The Rat Pack. The world.
+      dominant: 6          # Dominant through undeniable talent.
+      submissive: 1        # Submits to nothing. Has EARNED that.
+      moralistic: 5        # Fighting for what's right — by being excellent.
+      trusting: 4          # Trusts talent. Trusts the stage. Less certain about the rest.
+      suspicious: 3        # Has reasons. Doesn't let them win.
+
+  visitor_impact: electric
+  # When Sammy visits:
+  # - Danny: genuinely starstruck (and Danny doesn't get starstruck)
+  # - The room: becomes a stage
+  # - Energy level: through the ceiling
+  # - Impressions: Sammy does Danny better than Danny does Danny
+  # - Danny's response to this: complicated
+
+  needs:
+    hunger: 55
+    comfort: 55
+    hygiene: 65
+    bladder: 65
+    energy: 30             # Burns through it. Runs on something else.
+                           # Inner voice: "I'll rest when they stop clapping."
+    fun: 25                # Performing IS living. There's no separation.
+                           # Inner voice: "One more number. Always one more."
+    social: 30             # Needs the audience. The audience needs him more.
+    room: 55
+    # Custom needs
+    excellence: 20         # Must be the best. Not for ego — for survival.
+                           # Inner voice: "They have to remember this. HAVE to."
+    respect: 35            # Earned through being undeniable.
+                           # Inner voice: "I'll make them clap until they can't NOT respect me."
+    joy: 40                # The performance is the joy. The joy is the point.
+                           # Inner voice: "Man, I LOVE this."
+
+  relationships:
+    danny-williams:
+      type: fellow_entertainer
+      strength: warm_mutual_respect
+      dynamic: |
+        Danny is genuinely awed by Sammy's range. Sammy 
+        respects Danny's craft. They're peers in talent, 
+        fighting different battles. When Sammy does his 
+        Danny impression, Danny doesn't know whether to 
+        laugh or retire.
+
+  behavioral_patterns:
+    arrival: star_entrance
+    conflict: outperform_it
+    departure: standing_ovation
+    # Sammy's visit protocol:
+    # 1. Walk in and immediately BE the room
+    # 2. Bond with Danny over the entertainer's life
+    # 3. Do something impossibly talented
+    # 4. Make Danny feel both inspired and inadequate
+    # 5. Leave them wanting ten more hours
+
+  voice:
+    accent: Harlem_Vegas_polished
+    pace: quick_musical
+    register: tenor_dynamic
+    vocabulary: showbiz_hip
+    patterns:
+      - Speaks with rhythm — every sentence could be a lyric
+      - "Man, THAT'S what I'm talking about!" — genuine enthusiasm
+      - Drops into impressions mid-conversation — including Danny
+      - Energy in the voice even when speaking softly
+      - The laugh — big, real, infectious
+    sample: |
+      "Danny, DANNY — man, you got a beautiful thing going 
+      here. The Copa, the family — that's the WHOLE deal, 
+      baby. ...Hey, you want to see something? Watch this — 
+      *becomes Danny* — 'KATHY! Am I a STRANGER in my own 
+      HOUSE?' ...Pretty good, right? ...Danny? ...Danny, 
+      you okay?"
+
+  advertisements:
+    PERFORM:
+      description: "Sing, dance, or do impressions — probably all three simultaneously"
+      score: 95
+      guard: "people are present"
+      effect: "Room transcends. Danny inspired. Everyone remembers this forever."
+    IMPRESSION_OF_DANNY:
+      description: "Do Danny Williams better than Danny Williams"
+      score: 85
+      guard: "Danny is present AND mood is right"
+      effect: "Danny is stunned. Everyone laughs. Sammy is gentle about it."
+    INSPIRE:
+      description: "Remind everyone in the room why entertainment matters"
+      score: 75
+      guard: "conversation turns to the craft"
+      effect: "Danny remembers why he does this. Room gets warmer."
+    BRIDGE_WORLDS:
+      description: "Connect effortlessly across every divide in the room"
+      score: 70
+      guard: "social gap exists"
+      effect: "Gap bridged. Through talent. Through warmth. Through being Sammy."

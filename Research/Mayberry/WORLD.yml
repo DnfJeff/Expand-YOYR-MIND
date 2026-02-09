@@ -56,3 +56,59 @@ world:
       - tone
       - rules
       - governance
+
+  simulate:
+    # Speed-of-Light: how many turns per LLM call
+    speed_of_light:
+      max_turns_per_call: 8
+      # A single LLM invocation can simulate up to 8 character actions
+      # before needing to yield for state persistence
+      max_characters_per_turn: 4
+      # At most 4 characters act simultaneously per tick
+
+    epochs:
+      morning:
+        starts: 6:00AM
+        ends: 12:00PM
+        tone_shift: courthouse_opens_shops_sweep
+        typical_locations: [courthouse, floyds-barbershop, main-street]
+      afternoon:
+        starts: 12:00PM
+        ends: 6:00PM
+        tone_shift: slow_heat_quiet_streets
+        typical_locations: [bluebird-diner, wally-filling-station, walkers-drugstore]
+      evening:
+        starts: 6:00PM
+        ends: 10:00PM
+        tone_shift: front_porches_and_guitars
+        typical_locations: [taylor-house, front-porch, fishing-hole]
+      night:
+        starts: 10:00PM
+        ends: 6:00AM
+        tone_shift: crickets_and_stars
+        typical_locations: [taylor-house, jail-cell]
+        # Otis lets himself in around midnight
+
+    tick_config:
+      duration: 15_minutes_world_time
+      # Each tick represents roughly 15 minutes in Mayberry
+      actions_per_tick: 1
+      # Characters get one action per tick
+      evaluation_order: highest_scoring_ad_first
+      # Advertisements evaluated by score, guards checked, highest valid wins
+
+    persistence:
+      log: LOG.md
+      transcript: TRANSCRIPT.md
+      state_files: "**/*.yml"
+      save_frequency: every_epoch_boundary
+      # State persists at epoch transitions (morning→afternoon, etc.)
+
+    reading_protocol:
+      # Progressive disclosure for LLM context management
+      cold_start: GLANCE.yml
+      warm_start: CARD.yml
+      deep_dive: "*.md"
+      order: [GLANCE, CARD, SKILL, README]
+      # Read the cheapest file first
+      # Only read deeper when the simulation needs detail

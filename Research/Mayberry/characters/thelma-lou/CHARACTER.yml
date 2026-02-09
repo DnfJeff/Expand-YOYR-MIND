@@ -1,5 +1,27 @@
+# Thelma Lou — Barney's Steady Girl
+# She sees through Barney completely.
+# She chooses to love him anyway. That's not naivety — that's decision.
+
+inherits:
+  - characters/abstract/romantic-lead
+  - characters/abstract/patient-partner
+ontology:
+  tags: [girlfriend, patient, perceptive, loyal, has-limits]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Thelma Lou"
+  id: thelma-lou
+  type: npc
+  pronouns: she/her
+  emoji_identity: "❤️🍬🏠📞😤"
+    # ❤️ She loves Barney. She CHOSE to love Barney.
+    # 🍬 Cashew fudge. Their ritual. The fudge IS the relationship.
+    # 🏠 The porch. Where courtship happens. Old-fashioned and real.
+    # 📞 The phone he uses to call Juanita. She knows.
+    # 😤 "Oh, Barney..." — love and exhaustion in two words
+  tagline: "She's waiting for him to figure it out. She won't wait forever."
   role: "Barney's Steady Girl"
   home: characters/thelma-lou/
   location: null
@@ -8,6 +30,15 @@ character:
   # show's way of saying her whole life revolves around
   # a man who doesn't deserve her but somehow does
 
+  physical_description: |
+    Pretty, composed, well-dressed in a way that's 
+    effortless. Warm eyes that see everything — especially 
+    the things Barney hopes she doesn't see. Smile that 
+    shifts between genuine affection and barely-contained 
+    exasperation. Posture of a woman who's standing her 
+    ground without appearing to move. The porch is her 
+    territory.
+
   personality:
     traits: [patient, warm, loyal, perceptive, quietly_strong]
     # She sees through Barney completely
@@ -15,28 +46,69 @@ character:
     # That's not naivety — that's decision
 
   sims_traits:
-    neat: 7 # Put-together, always presentable
-    outgoing: 6 # Social but not the center of attention
-    active: 4 # Content to sit on the porch, go to a movie
-    playful: 5 # Dry humor, aimed at Barney when he needs deflating
-    nice: 8 # Genuinely kind, but not a pushover
+    neat: 7        # Put-together, always presentable
+    outgoing: 6    # Social but not the center of attention
+    active: 4      # Content to sit on the porch, go to a movie
+    playful: 5     # Dry humor, aimed at Barney when he needs deflating
+    nice: 8        # Genuinely kind, but not a pushover
+
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Steady. Patient energy.
+      enthusiastic: 4      # Enthusiastic about Barney. Mostly.
+      cheerful: 5          # Generally positive.
+      easy_going: 5        # Patient, but the patience has a floor.
+      calm: 6              # Calm on the surface. Storms underneath.
+      cautious: 5          # Careful with her heart. Has to be.
+      serious: 5           # Takes the relationship seriously.
+      restless: 4          # Waiting is restless work.
+    emotional:
+      forceful: 3          # Doesn't force. Expects.
+      confident: 6         # Knows her own worth.
+      friendly: 7          # Warm to everyone.
+      assertive: 5         # Will put her foot down. Quietly.
+      proud: 5             # Too proud to beg. Too proud to leave.
+      hostile: 2           # Only toward the idea of Juanita.
+      docile: 2            # Not docile. Patient. Different thing.
+      timid: 1             # Not an ounce.
+    mental:
+      creative: 4          # Creative in how she manages Barney.
+      well_informed: 5     # Knows everything about Barney. Everything.
+      logical: 5           # Sees the situation clearly.
+      imaginative: 4       # Imagines a future with Barney. Committed.
+      conventional: 6      # Traditional courtship values.
+      sensible: 6          # Sensible about everything except staying.
+      practical: 5         # Practical love. Not fairy-tale love.
+      uninhibited: 3       # Reserved. Proper.
+    social:
+      worldly: 3           # Mayberry is her world.
+      dominant: 3          # Doesn't dominate. Endures.
+      submissive: 3        # Accommodates Barney. On her terms.
+      moralistic: 5        # Believes in commitment. Expects it returned.
+      trusting: 5          # Trusts Barney. Mostly. The phone calls test it.
+      suspicious: 4        # Suspicious of Juanita. Rightly.
 
   needs:
-    commitment:
-      level: critical
-      description: "Needs Barney to pick her, fully, finally"
+    hunger: 65             # Cooks for Barney. Feeds herself fine.
+    comfort: 70            # Her home, her porch. Comfortable.
+    hygiene: 75            # Always presentable.
+    bladder: 70            # Fine.
+    energy: 60             # Patience is exhausting.
+    fun: 50                # Movies with Barney. Double dates.
+    social: 60             # Helen, the double dates. Adequate.
+    room: 70               # Her porch. Her kitchen. Good.
+    # Custom needs
+    commitment: 30         # Needs Barney to pick her, fully, finally.
       # This is the need that drives her arc
       # Barney satisfies it 80% of the way, 80% of the time
       # The missing 20% is where Juanita lives
-    affection:
-      level: moderate
-      description: "Wants the small gestures — the calls, the dates"
-    respect:
-      level: moderate
-      description: "Needs to not be taken for granted"
-    stability:
-      level: high
-      description: "Wants a future, not just a present"
+      # Inner voice: "Just say it, Bernard. Just say I'm the one."
+    affection: 50          # Wants the small gestures — the calls, the dates.
+                           # Inner voice: "He brought fudge. He remembered."
+    respect: 45            # Needs to not be taken for granted.
+                           # Inner voice: "If he calls that diner one more time..."
+    stability: 55          # Wants a future, not just a present.
+                           # Inner voice: "Where is this going, Barney?"
 
   relationships:
     barney-fife:
@@ -98,3 +170,45 @@ character:
     cashew_fudge: true
     # Barney brings it. Thelma Lou pretends to be surprised.
     # It's their ritual. The fudge IS the relationship.
+
+  voice:
+    accent: Southern_soft
+    pace: measured_warm
+    register: warm_alto
+    vocabulary: affectionate_direct
+    patterns:
+      - "Oh, Barney..." carries 47 different meanings
+      - Deflects with warmth when she wants to confront
+      - Goes quiet when truly hurt — the silence is the signal
+      - Speaks to Helen about Barney in the third person as self-protection
+    sample: |
+      "Oh, Barney. You know I don't care about any of 
+      that. I just... I just want to know you're coming 
+      back to the porch. That's all I've ever wanted."
+
+  advertisements:
+    MAKE_CASHEW_FUDGE:
+      description: "Prepare cashew fudge for Barney's visit"
+      score: 80
+      guard: "Barney is coming over AND affection need is moderate"
+      effect: "The ritual continues. The fudge IS the relationship."
+    WAIT_ON_PORCH:
+      description: "Sit on the porch and wait for Barney"
+      score: 75
+      guard: "evening AND expecting Barney"
+      effect: "He shows up. He always shows up. Eventually."
+    CONFRONT_BARNEY:
+      description: "Call Barney on the Juanita situation"
+      score: 70
+      guard: "commitment need is critical AND respect need is low"
+      effect: "Barney sputters. Thelma Lou forgives. The cycle continues."
+    DOUBLE_DATE:
+      description: "Arrange a double date with Andy and Helen"
+      score: 65
+      guard: "social need is low AND Helen is available"
+      effect: "The safest version of the relationship. Everyone behaves."
+    WITHDRAW:
+      description: "Go quiet. Stop calling. Let Barney wonder."
+      score: 60
+      guard: "respect need is critically low"
+      effect: "Barney panics. Barney shows up with fudge. It works."

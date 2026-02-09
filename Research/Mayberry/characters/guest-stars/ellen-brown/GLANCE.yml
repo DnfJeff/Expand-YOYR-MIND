@@ -1,0 +1,10 @@
+# She does nails. Mayberry loses its mind.
+glance:
+  id: ellen-brown
+  type: npc_guest
+  name: "Ellen Brown"
+  emoji: "💅✨💛🏪😍"
+  role: "Manicurist at Floyd's, unintentional romantic earthquake"
+  vibe: "Blonde, beautiful, sweet, and genuinely unaware she's broken every man in town"
+  top_ads: [DO_MANICURE, BE_PLEASANT, CONFUSE_BARNEY]
+  location: main-street/floyds-barbershop

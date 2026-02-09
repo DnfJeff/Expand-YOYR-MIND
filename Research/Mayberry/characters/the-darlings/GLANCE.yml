@@ -1,0 +1,10 @@
+# Music from the mountain — they don't need your world
+glance:
+  id: the-darlings
+  type: npc_group
+  name: "The Darling Family"
+  emoji: "🪕🏔️🤐👨‍👧‍👦🎵"
+  role: "Mountain family, musicians, insular clan"
+  vibe: "Play banjo like angels, speak in monosyllables, and trust exactly four people"
+  top_ads: [PLAY_MUSIC, PROTECT_FAMILY, TRADE]
+  location: mt-pilot

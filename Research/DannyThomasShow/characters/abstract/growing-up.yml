@@ -1,0 +1,19 @@
+# The transition — not a child, not an adult, not happy about it
+prototype:
+  id: growing-up
+  type: abstract_character
+  name: "Growing Up"
+  description: "Character in active transition from childhood to adolescence or adulthood"
+  default_traits:
+    independence_desire: 0.8
+    emotional_volatility: 0.7
+    parent_resistance: 0.6
+    self_consciousness: 0.8
+  default_needs:
+    autonomy: 0.8
+    peer_approval: 0.8
+    privacy: 0.7
+  behavioral_tendencies:
+    - Embarrassed by parents in public
+    - Swings between needing parents and pushing them away
+    - Phone becomes primary communication device

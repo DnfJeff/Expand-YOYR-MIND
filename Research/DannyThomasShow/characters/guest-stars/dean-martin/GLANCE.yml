@@ -1,0 +1,10 @@
+# The coolest man alive — he doesn't try, and that's the problem
+glance:
+  id: dean-martin
+  type: npc_guest
+  name: "Dean Martin"
+  emoji: "🥃😎🎵💫🎶"
+  role: "Entertainer, cool incarnate"
+  vibe: "Makes everything look effortless — which makes Danny look like he's working too hard"
+  top_ads: [BE_COOL, CHARM_THE_ROOM, MAKE_TERRY_SWOON]
+  location: williams-apartment/living-room

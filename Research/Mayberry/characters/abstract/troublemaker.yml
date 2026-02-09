@@ -1,0 +1,19 @@
+# The one who makes the episode necessary — without them, nothing happens
+prototype:
+  id: troublemaker
+  type: abstract_character
+  name: "Troublemaker"
+  description: "Character who creates the problem the community must solve"
+  default_traits:
+    disruptiveness: 0.8
+    self_awareness: 0.3
+    redeemability: 0.5
+    narrative_necessity: 0.9
+  default_needs:
+    attention: 0.8
+    boundary_testing: 0.7
+    consequence_discovery: 0.6
+  behavioral_tendencies:
+    - Pushes until the community pushes back
+    - May not intend harm, but causes it
+    - Resolution reveals community values through response

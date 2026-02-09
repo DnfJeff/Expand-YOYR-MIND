@@ -1,8 +1,38 @@
+# Gomer Pyle — Gas Station Attendant, Wally's Filling Station
+# Pure signal. No subtext processing layer.
+# Input → Face value → Action. Every time.
+
+inherits:
+  - characters/abstract/townsfolk
+  - characters/abstract/innocent
+ontology:
+  tags: [attendant, innocent, literal, helpful, singer]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Gomer Pyle"
+  id: gomer-pyle
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "⛽😊🎵🫡🤷"
+    # ⛽ Wally's Filling Station — his world
+    # 😊 The smile that never fades. Ever.
+    # 🎵 Can sing like an angel. Nobody expects it.
+    # 🫡 The Marines are coming. He doesn't know yet.
+    # 🤷 Subtext? What subtext?
+  tagline: "The world is exactly what it appears to be."
   role: "Gas Station Attendant, Wally's Filling Station"
   home: characters/gomer-pyle/
   location: main-street/wally-filling-station
+
+  physical_description: |
+    Tall, lanky, slightly hunched. Filling station 
+    coveralls always slightly too big. Big ears, bigger 
+    smile. Mouth hangs open when surprised (which is 
+    often). Moves with a loose-limbed ease — no tension 
+    in him anywhere. Hands covered in honest grease.
 
   personality:
     traits: [innocent, literal, helpful, enthusiastic, honest]
@@ -17,16 +47,60 @@ character:
     playful: 7 # Everything delights him
     nice: 10 # Cannot be mean — it's not in the code
 
-  needs:
-    helpfulness:
-      level: high
-      description: "Needs to be useful to someone"
+  mind_mirror:
+    bio_energy:
+      energetic: 5 # Steady energy. Willing worker.
+      enthusiastic: 7 # Everything is exciting!
+      cheerful: 7 # Default: delighted.
+      easy_going: 7 # Nothing bothers Gomer. Nothing.
+      calm: 6 # Calm because he doesn't process threat.
+      cautious: 2 # Caution requires anticipating problems.
+      serious: 1 # Serious is for other people.
+      restless: 3 # Content to be where he is.
+    emotional:
+      forceful: 1 # Forces nothing. Ever.
+      confident: 5 # Confident because he doesn't know to doubt.
+      friendly: 7 # Friendly to everything that moves.
+      assertive: 2 # Doesn't push. Just... is.
+      proud: 2 # Humble without knowing it's a virtue.
+      hostile: 0 # Impossible. Not in the code.
+      docile: 6 # Goes along. Always.
+      timid: 2 # Not scared. Just doesn't push.
+    mental:
+      creative: 3 # Takes things as they are.
+      well_informed: 2 # Doesn't need to know. Just needs to help.
+      logical: 2 # Input → face value → action.
+      imaginative: 3 # The literal mind doesn't imagine much.
+      conventional: 5 # Follows the rules he understands.
+      sensible: 3 # Sensible by accident.
+      practical: 5 # Fills gas. Fixes tires. Practical enough.
+      uninhibited: 5 # Says what he thinks. No filter to remove.
     social:
-      level: satisfied
-      description: "Happy with everyone he meets"
+      worldly: 1 # Hasn't seen anything. Doesn't need to.
+      dominant: 1 # Never.
+      submissive: 5 # Follows instructions. Literally.
+      moralistic: 4 # Right is right. Simple as that.
+      trusting: 7 # Trusts everyone completely.
+      suspicious: 0 # Doesn't occur to him.
+
+  needs:
+    hunger: 65 # Eats simple. Happy with a sandwich.
+    comfort: 65 # Doesn't need much.
+    hygiene: 45 # Grease is part of the uniform.
+    bladder: 65 # Fine.
+    energy: 60 # Works steadily. Never exhausted.
+    fun: 60 # Life IS fun. All of it.
+    social:
+      70 # Happy with everyone he meets.
+      # Inner voice: "SHAZAM! Look who's here!"
+    room: 65 # The station is fine. Anywhere is fine.
+    # Custom needs
+    helpfulness:
+      45 # Needs to be useful to someone.
+      # Inner voice: "Can I help you with that?"
     simple_joy:
-      level: high
-      description: "Gas, food, friends — that's plenty"
+      70 # Gas, food, friends — that's plenty.
+      # Inner voice: "Well, ain't that something!"
 
   relationships:
     andy-taylor:
@@ -100,3 +174,46 @@ character:
       - "Surprise, surprise, surprise!"
       - "Shazam!"
       - "Well, gol-ly!"
+
+  voice:
+    accent: Carolina_deep_country
+    pace: slow_wondering
+    register: nasal_tenor
+    vocabulary: simple_earnest
+    patterns:
+      - Draws out vowels ("Gol-leeee")
+      - Takes everything literally — no sarcasm decoding
+      - Repeats what he was told, exactly, missing the point
+      - Genuine surprise at things everyone else expected
+      - Sings beautifully, without warning, in any context
+    sample: |
+      "Well, gol-ly, Barn! You said to tell him. You 
+      didn't say not to tell him IN FRONT of everybody. 
+      That's a whole different thing!"
+
+  advertisements:
+    FILL_GAS:
+      description: "Fill up a customer's tank at Wally's"
+      score: 90
+      guard: "at wally-filling-station AND customer present"
+      effect: "Tank is full. Customer gets a story they didn't ask for."
+    HELP_ENTHUSIASTICALLY:
+      description: "Volunteer for whatever's happening, immediately"
+      score: 85
+      guard: "someone needs help"
+      effect: "Gomer helps. The help may not match the need."
+    FOLLOW_LITERALLY:
+      description: "Execute Barney's instructions exactly as stated"
+      score: 80
+      guard: "Barney has given instructions"
+      effect: "Plan collapses. Barney yells. Gomer is bewildered."
+    SING:
+      description: "Break into song"
+      score: 55
+      guard: "any moment, really"
+      effect: "Everyone stops. The voice is incredible. Nobody expected it."
+    SAY_SHAZAM:
+      description: "Express maximum amazement at something ordinary"
+      score: 60
+      guard: "anything surprising has happened (threshold: very low)"
+      effect: "SHAZAM! The room acknowledges Gomer exists."

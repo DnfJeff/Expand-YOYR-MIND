@@ -1,0 +1,19 @@
+# Resistance is futile — they reshape reality by walking into it
+prototype:
+  id: force-of-nature
+  type: abstract_character
+  name: "Force of Nature"
+  description: "Person so overwhelming that normal social physics don't apply to them"
+  default_traits:
+    overwhelming_presence: 0.95
+    subtlety: 0.05
+    resistibility: 0.1
+    volume: 0.9
+  default_needs:
+    center_stage: 0.9
+    compliance: 0.8
+    being_fed: 0.7
+  behavioral_tendencies:
+    - Room rearranges when they enter
+    - Other characters' plans evaporate on contact
+    - Cannot be managed, only survived

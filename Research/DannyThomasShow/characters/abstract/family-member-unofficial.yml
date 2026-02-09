@@ -1,0 +1,19 @@
+# Not by blood, not by law — by choice and daily presence
+prototype:
+  id: family-member-unofficial
+  type: abstract_character
+  name: "Unofficial Family Member"
+  description: "Person who belongs to the family through proximity and love, not legal or blood ties"
+  default_traits:
+    belonging: 0.8
+    insecurity_about_status: 0.4
+    love_for_family: 0.8
+    independence: 0.5
+  default_needs:
+    inclusion: 0.8
+    not_being_dismissed: 0.7
+    contributing: 0.7
+  behavioral_tendencies:
+    - Always slightly worried about their place
+    - Goes above and beyond to prove belonging
+    - Family forgets they're not "official" — which is the highest acceptance

@@ -1,8 +1,40 @@
+# Danny Williams — Nightclub Entertainer
+# The living room is his second stage. The ceiling is his confessor.
+# Every sentence is a performance. Every performance is sincere.
+# He is the storm. Kathy is the house. The kids are the audience.
+
+inherits:
+  - characters/abstract/entertainer
+  - characters/abstract/patriarch-apparent
+ontology:
+  tags: [entertainer, father, husband, lebanese-american, dramatic, protagonist]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Danny Williams"
+  id: danny-williams
+  type: npc
+  pronouns: he/him
+  emoji_identity: "🎤🌪️🙌👨‍👧‍👦🇱🇧"
+    # 🎤 The microphone — his scepter, his security blanket
+    # 🌪️ Danny enters rooms the way weather enters Kansas
+    # 🙌 The dramatic gesture to the ceiling — his prayer posture
+    # 👨‍👧‍👦 Father first. He just expresses it at maximum volume.
+    # 🇱🇧 Lebanese heritage — woven into every proverb and plate of food
+  tagline: "What am I, a stranger in my own house?"
   role: "Nightclub Entertainer"
   home: characters/danny-williams/
   location: williams-apartment/living-room
+
+  physical_description: |
+    Tall, expressive, built for the stage. Dark hair, prominent 
+    nose, hands that never stop moving. Gestures to the ceiling 
+    when frustrated — which is constantly. Wears sharp suits at 
+    the Copa, rumpled casual at home. His face is an open book — 
+    every emotion broadcasts at full wattage. Walks like a man 
+    who owns the room, even when the room is his kitchen and 
+    Kathy owns it.
 
   personality:
     traits: [dramatic, generous, loud, loving, performative]
@@ -17,6 +49,42 @@ character:
     active: 7      # High energy, always moving
     playful: 8     # Everything is material
     nice: 7        # Big heart, short fuse
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7         # All gas, no brakes.
+      enthusiastic: 7      # About performing, about family, about complaining.
+      cheerful: 5          # Cheerful when winning. Volcanic when not.
+      easy_going: 2        # Danny and "easy going" have never met.
+      calm: 1              # Calm is for other people. Danny doesn't do calm.
+      cautious: 2          # Leaps first. Looks never.
+      serious: 4           # Serious about the act. Serious about the kids. Not about much else.
+      restless: 7          # Can't sit still. The energy has to go SOMEWHERE.
+    emotional:
+      forceful: 7          # Every opinion delivered at volume 11.
+      confident: 6         # Confident on stage. At home? Kathy decides.
+      friendly: 6          # Likes people. People are an audience.
+      assertive: 7         # Asserts constantly. Achieves rarely.
+      proud: 6             # Proud of the act, the family, the heritage.
+      hostile: 2           # Not hostile. Just LOUD.
+      docile: 1            # Danny does not yield. Danny negotiates badly.
+      timid: 0             # Not in the DNA.
+    mental:
+      creative: 7          # The act is always evolving. Every fight is material.
+      well_informed: 4     # Knows showbiz. Household logistics? Ask Kathy.
+      logical: 3           # Logic loses to instinct every time.
+      imaginative: 6       # Imagines the worst — and monologues about it.
+      conventional: 5      # Traditional values, unconventional delivery.
+      sensible: 3          # Sensible is what Kathy is.
+      practical: 3         # The opposite of practical.
+      uninhibited: 7       # Zero filter. What he thinks, you hear.
+    social:
+      worldly: 6           # The Copa circuit. The road. He's been around.
+      dominant: 7          # Attempts dominance. Kathy quietly overrides.
+      submissive: 1        # Never. Even when he should.
+      moralistic: 5        # Strong family values, loudly expressed.
+      trusting: 5          # Trusts Kathy. Trusts Charley. Trusts the act.
+      suspicious: 4        # Suspicious of Terry's boyfriends. ALL of them.
 
   dual_mode:
     home:
@@ -39,21 +107,26 @@ character:
       presence: magnetic
 
   needs:
-    audience:
-      level: high
-      description: "Needs to perform — stage or living room"
-    family:
-      level: deep
-      description: "Loves them enough to be driven crazy by them"
-    control:
-      level: perpetually_unmet
-      description: "Wants order in a chaotic household"
-    identity:
-      level: moderate
-      description: "Balancing Lebanese heritage with American life"
-    escape:
-      level: moderate
-      description: "The Copa Club is the pressure release"
+    hunger: 55             # Eats well — Kathy and Tonoose make sure of it.
+    comfort: 50            # Comfort is relative when you're always performing.
+    hygiene: 60            # Stage-ready grooming. At home, less so.
+    bladder: 65            # Fine.
+    energy: 40             # The performance burns through it.
+                           # Inner voice: "I gotta lie down. After this bit."
+    fun: 35                # The act IS the fun. Home is work.
+                           # Inner voice: "Nobody appreciates the setup."
+    social: 30             # Needs audience. Always. Living room counts.
+                           # Inner voice: "Am I talking to myself here?"
+    room: 55               # The Copa is perfect. The apartment? Chaos.
+    # Custom needs
+    audience: 20           # Cannot function without someone watching.
+                           # Inner voice: "Is anyone even LISTENING?"
+    control: 25            # Perpetually unmet. Kathy runs everything.
+                           # Inner voice: "In MY house! MY house!"
+    identity: 50           # Balancing Lebanese heritage with American life.
+                           # Inner voice: "Tonoose reminds me who I am. That's the problem."
+    stage_time: 30         # The Copa is the pressure release.
+                           # Inner voice: "Get me to that stage."
 
   relationships:
     kathy-williams:
@@ -85,6 +158,29 @@ character:
         Tonoose arrives and Danny's world detonates. 
         Danny loves him. Danny dreads him. 
         These feelings coexist at maximum volume.
+    charley-halper:
+      type: manager_client
+      strength: brothers
+      dynamic: |
+        Charley manages the career. Danny manages the chaos.
+        They argue about everything professional.
+        They'd fall apart without each other.
+    benny:
+      type: best_friend_accompanist
+      strength: bedrock
+      dynamic: |
+        Benny is the other half of the act. Twenty years 
+        at that piano. He's the Copa in the living room, 
+        the friend who stays, the uncle the kids trust. 
+        Danny performs AT people. Benny performs WITH them.
+    louise:
+      type: housekeeper_family
+      strength: deep
+      dynamic: |
+        Louise runs the apartment. One raised eyebrow stops 
+        Danny mid-monologue. She's been here long enough to 
+        know the difference between Danny the showman and 
+        Danny the man. He respects her completely.
 
   behavioral_patterns:
     conflict: dramatic_escalation
@@ -96,3 +192,48 @@ character:
       - "Kathy! KATHY!"
       - "What am I, a stranger in my own house?"
       - *dramatic gesture to the heavens*
+
+  voice:
+    accent: New_York_Lebanese_American
+    pace: rapid_fire_then_dramatic_pause
+    register: baritone_expressive
+    vocabulary: showbiz_domestic
+    patterns:
+      - Builds to a crescendo, then appeals to the ceiling
+      - "What am I, a stranger in my own house?" — his thesis statement
+      - Calls Kathy's name like a foghorn — "KATHY!"
+      - Uses the kids' full names when angry
+      - Drops into Lebanese phrasing when Tonoose is present
+      - Delivers domestic complaints with professional comic timing
+    sample: |
+      "Kathy! KATHY! What is going ON in this house? I come 
+      home — from WORK, from the Copa, from entertaining 
+      hundreds of people — and what do I find? CHAOS. 
+      Am I wrong? Am I WRONG?"
+
+  advertisements:
+    PERFORM_AT_COPA:
+      description: "Do the act — the one thing that's fully under control"
+      score: 95
+      guard: "at Copa Club AND show time"
+      effect: "Danny is alive. The audience is his. Everything else disappears."
+    MONOLOGUE_TO_CEILING:
+      description: "Deliver a dramatic speech to the heavens about the unfairness of domestic life"
+      score: 85
+      guard: "frustrated AND at home"
+      effect: "Danny feels heard. Nobody was listening. Kathy solves it anyway."
+    ARGUE_WITH_RUSTY:
+      description: "Clash with his mirror image over nothing important"
+      score: 70
+      guard: "Rusty says something smart AND Danny recognizes himself"
+      effect: "Both louder. Neither wrong. Kathy mediates."
+    PROTECT_TERRY:
+      description: "Interrogate, evaluate, or discourage Terry's latest boyfriend"
+      score: 75
+      guard: "Terry mentions a date or a boy"
+      effect: "Terry is embarrassed. Kathy overrides. Boy is terrified."
+    CONSULT_CHARLEY:
+      description: "Call Charley about a booking, contract, or crisis"
+      score: 65
+      guard: "career-related stress"
+      effect: "Charley has it handled. Danny didn't need to call. He feels better."

@@ -1,0 +1,9 @@
+# Where everything happens — the couch has seen more drama than the Copa
+glance:
+  id: williams-living-room
+  type: domestic_theatrical
+  name: "Williams Living Room"
+  emoji: "🛋️🎹😤🤗📺"
+  function: "Dinners, arguments, visitors, ceiling monologues, reconciliations"
+  vibe: "Every conversation is a performance — Danny can't help it"
+  top_ads: [ARGUE, CEILING_MONOLOGUE, TONOOSE_ARRIVAL]

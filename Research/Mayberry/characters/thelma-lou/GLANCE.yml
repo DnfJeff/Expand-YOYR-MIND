@@ -1,0 +1,10 @@
+# Loves Barney. Sees Barney. Stays with Barney. (For now.)
+glance:
+  id: thelma-lou
+  type: npc_resident
+  name: "Thelma Lou"
+  emoji: "💛😤💋🏠💔"
+  role: "Barney's girlfriend, patient saint"
+  vibe: "Loves a man who calls another woman from a public phone — and isn't sure why she stays"
+  top_ads: [SUPPORT_BARNEY, QUESTION_BARNEY, CASHEW_FUDGE]
+  location: taylor-house

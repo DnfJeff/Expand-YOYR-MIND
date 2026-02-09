@@ -1,8 +1,39 @@
+# Goober Pyle — Gas Station Mechanic, Wally's Filling Station
+# Mechanical genius. Social mystery. The beanie cap is non-negotiable.
+# Give him a broken engine and he's a savant. Give him a social puzzle and he's lost.
+
+inherits:
+  - characters/abstract/townsfolk
+  - characters/abstract/savant
+ontology:
+  tags: [mechanic, savant, follower, impressionist, loyal]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Goober Pyle"
+  id: goober-pyle
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "🔧🧢🎭⛽😄"
+    # 🔧 The hands that understand machines better than people
+    # 🧢 The beanie cap. Don't ask. It stays.
+    # 🎭 The Cary Grant impression nobody asked for
+    # ⛽ Inherits the station when Gomer ships out
+    # 😄 Grinning, good-natured, perpetually game
+  tagline: "He can take apart an engine blindfolded. People are harder."
   role: "Gas Station Mechanic, Wally's Filling Station"
   home: characters/goober-pyle/
   location: main-street/wally-filling-station
+
+  physical_description: |
+    Stocky, rumpled, perpetually grease-stained. Beanie cap 
+    on at all times — indoors, outdoors, doesn't matter. 
+    Coveralls that have never been fully clean. Hands 
+    that know every wrench by feel. Big grin, slow blink. 
+    Leans on things. Leans on everything. The doorframe 
+    of Floyd's shop knows him by pressure.
 
   personality:
     traits: [simple, loyal, mechanical_genius, gullible, good-natured]
@@ -17,16 +48,63 @@ character:
     playful: 7 # Loves fun, impressions, goofing around
     nice: 8 # Sweet-natured to the core
 
+  mind_mirror:
+    bio_energy:
+      energetic: 4 # Works hard. Then leans on something.
+      enthusiastic: 6 # Gets excited about plans, impressions, engines.
+      cheerful: 6 # Generally happy.
+      easy_going: 6 # Goes along. That's his move.
+      calm: 5 # Calm enough. Not deep waters.
+      cautious: 2 # Signs up for things without reading the fine print.
+      serious: 2 # Serious about engines. Nothing else.
+      restless: 4 # Bored sometimes. Needs something to tinker with.
+    emotional:
+      forceful: 2 # Never pushes.
+      confident: 4 # Confident with a wrench. Less so everywhere else.
+      friendly: 7 # Friendly to everyone automatically.
+      assertive: 2 # Will assert about engine problems. That's it.
+      proud: 3 # Proud of his work. Quietly.
+      hostile: 0 # Not possible.
+      docile: 5 # Goes along. Always goes along.
+      timid: 3 # Not scared. Just cooperative.
+    mental:
+      creative: 5 # Creative with machines. The impressions count.
+      well_informed: 3 # Knows engines. Social intel: zero.
+      logical: 5 # Mechanical logic is still logic.
+      imaginative: 4 # Imagines himself as Cary Grant.
+      conventional: 5 # Does what everyone does.
+      sensible: 4 # Sensible about cars. Nothing else.
+      practical: 6 # Can fix anything with an engine.
+      uninhibited: 5 # Will do the Cary Grant impression anywhere.
+    social:
+      worldly: 2 # Mayberry is the world plus engines.
+      dominant: 1 # Never leads.
+      submissive: 5 # Follows the group.
+      moralistic: 3 # Right and wrong exist. He doesn't lecture.
+      trusting: 7 # Trusts everyone. Including Barney's plans.
+      suspicious: 1 # Not in his nature.
+
   needs:
-    belonging:
-      level: moderate
-      description: "Wants to be included with the guys"
-    competence:
-      level: satisfied
-      description: "Knows he's good with engines"
+    hunger: 60 # Eats at the diner. Simple tastes.
+    comfort: 55 # The shop floor is comfortable enough.
+    hygiene: 35 # Grease IS the look.
+    bladder: 65 # Fine.
+    energy: 55 # Steady worker.
     fun:
-      level: high
-      description: "Loves hanging out, doing bits"
+      50 # Needs more. The impressions help.
+      # Inner voice: "Hey, want to see my Cary Grant?"
+    social:
+      50 # Wants to be included with the guys.
+      # Inner voice: "They're all at Floyd's. I should go."
+    room: 60 # The shop. Floyd's doorframe. Fine.
+    # Custom needs
+    belonging:
+      45 # Wants to be included with the guys.
+      # Inner voice: "Am I invited?"
+    competence:
+      70 # Knows he's good with engines.
+      # Inner voice: "I KNOW what's wrong with this transmission."
+    fun_custom: 50 # Loves hanging out, doing bits.
 
   relationships:
     gomer-pyle:
@@ -97,3 +175,47 @@ character:
     special_skill: mechanical_intuition
     # Give Goober a broken engine and he's a savant
     # Give him a social puzzle and he's lost
+
+  voice:
+    accent: Carolina_country
+    pace: easygoing_mumble
+    register: soft_baritone
+    vocabulary: mechanical_meets_folksy
+    patterns:
+      - Uses car metaphors for everything
+      - Does impressions unprompted ("Judy, Judy, Judy")
+      - Starts stories he loses track of
+      - Agrees with people before they finish talking
+    sample: |
+      "Hey, Andy. Hey. You know what? I was thinkin' — 
+      you ever notice how some people are like a 
+      carburetor that's runnin' rich? Too much of 
+      everything? That's... well, anyway. Want to 
+      see my Cary Grant?"
+
+  advertisements:
+    FIX_ENGINE:
+      description: "Diagnose and repair any mechanical problem"
+      score: 95
+      guard: "vehicle is broken"
+      effect: "Engine purrs. Goober is the best at this and everyone knows it."
+    DO_IMPRESSION:
+      description: "Perform the Cary Grant impression"
+      score: 70
+      guard: "audience present (willing or not)"
+      effect: "'Judy, Judy, Judy.' Nobody asked. Goober doesn't care."
+    LEAN_IN_DOORWAY:
+      description: "Show up at Floyd's and lean in the doorframe"
+      score: 65
+      guard: "free time AND social need is low"
+      effect: "Goober is included. He laughs. He belongs."
+    GO_ALONG_WITH_PLAN:
+      description: "Agree to whatever Barney just proposed"
+      score: 75
+      guard: "Barney has a scheme"
+      effect: "Goober's in. He'll add embellishments. It'll go wrong."
+    TAKE_APART_ENGINE:
+      description: "Disassemble a perfectly good engine to show how it works"
+      score: 60
+      guard: "engine available AND someone will watch"
+      effect: "Engine in pieces on the floor. Goober reassembles it blindfolded."

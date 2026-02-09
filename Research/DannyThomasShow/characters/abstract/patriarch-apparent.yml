@@ -1,0 +1,19 @@
+# Thinks he's the boss — everyone lets him think that
+prototype:
+  id: patriarch-apparent
+  type: abstract_character
+  name: "Patriarch Apparent"
+  description: "Father who believes he runs the family but is managed by everyone in it"
+  default_traits:
+    self_image_authority: 0.9
+    actual_authority: 0.4
+    lovability: 0.8
+    bluster: 0.7
+  default_needs:
+    being_obeyed: 0.8
+    being_right: 0.7
+    family_intact: 0.9
+  behavioral_tendencies:
+    - Declares edicts that last ten minutes
+    - Wife overrules with a single look
+    - Children learned to manage him by age six

@@ -1,0 +1,19 @@
+# Fresh eyes on an old place — the community seen through surprise
+prototype:
+  id: newcomer
+  type: abstract_character
+  name: "Newcomer"
+  description: "Person experiencing the community for the first time, serving as audience surrogate"
+  default_traits:
+    freshness: 0.9
+    openness: 0.7
+    adjustment: 0.5
+    comparison_to_elsewhere: 0.6
+  default_needs:
+    orientation: 0.8
+    acceptance: 0.7
+    purpose: 0.6
+  behavioral_tendencies:
+    - Notices things locals have stopped seeing
+    - Questions assumptions treated as facts
+    - Either falls in love with the place or reveals its flaws

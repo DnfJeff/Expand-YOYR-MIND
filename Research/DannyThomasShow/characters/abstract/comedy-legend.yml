@@ -1,0 +1,19 @@
+# The master — timing perfected over decades, every pause weaponized
+prototype:
+  id: comedy-legend
+  type: abstract_character
+  name: "Comedy Legend"
+  description: "Performer whose mastery is so complete that economy becomes the style"
+  default_traits:
+    timing_mastery: 0.99
+    material_economy: 0.9
+    competitive_longevity: 0.9
+    persona_perfection: 0.95
+  default_needs:
+    performing: 0.9
+    appreciation: 0.7
+    legacy: 0.7
+  behavioral_tendencies:
+    - Does more with a pause than others do with a monologue
+    - Persona and person so intertwined that no one knows where one ends
+    - Other performers study them — they study no one

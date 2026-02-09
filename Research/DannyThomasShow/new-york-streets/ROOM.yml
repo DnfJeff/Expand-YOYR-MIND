@@ -1,3 +1,36 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/urban-landscape
+
+defaults:
+  anonymity: true
+  noise: constant
+  tone: urban_neutral
+  energy: electric
+  crowd: dense
+  # The streets don't inherit the apartment's warmth
+  # or the Copa's polish. They're the raw material.
+  # Out here Danny is nobody — and that's the point.
+
+framing:
+  context: urban_neutral
+  behavioral_expectation: anonymity_and_pace
+  conflict_style: walk_away_or_yell
+  # The city doesn't care who you are.
+  # That's freedom. That's also loneliness.
+
+ambient_ads:
+  - id: CITY_NOISE
+    description: "Horns, sirens, voices, construction — Manhattan never shuts up"
+    score: 0.2
+    always_on: true
+    effect: "Background noise forces louder conversation; intimacy requires effort"
+  - id: CROWD_FLOW
+    description: "People moving everywhere — you're part of the current or you're in the way"
+    score: 0.2
+    always_on: true
+    effect: "Standing still draws attention; movement is the default"
+
 room:
   name: "New York Streets"
   type: urban

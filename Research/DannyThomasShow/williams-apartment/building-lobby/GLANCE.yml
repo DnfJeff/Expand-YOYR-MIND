@@ -1,0 +1,9 @@
+# The threshold — where visitors materialize and escapes fail
+glance:
+  id: building-lobby
+  type: transitional
+  name: "Building Lobby"
+  emoji: "🚪🛗🧥👋😰"
+  function: "Arrivals, departures, failed escapes"
+  vibe: "Danny never successfully escapes through the lobby"
+  top_ads: [ARRIVE, DOORMAN_INTERCEPT, ESCAPE]

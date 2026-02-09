@@ -1,0 +1,9 @@
+# One chair, one barber, every secret in town
+glance:
+  id: floyds-barbershop
+  type: social_hub
+  name: "Floyd's Barbershop"
+  emoji: "✂️💈📢🪑😰"
+  function: "Haircuts, gossip, the town's central nervous system"
+  vibe: "Information enters through the door and exits through every other door in Mayberry"
+  top_ads: [HAIRCUT, SPREAD_NEWS, HANG_OUT]

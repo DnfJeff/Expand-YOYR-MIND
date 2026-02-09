@@ -1,0 +1,9 @@
+# Helen Crump's domain — order, learning, chalk dust
+glance:
+  id: schoolhouse
+  type: institution
+  name: "Mayberry Schoolhouse"
+  emoji: "🏫📚✏️👩‍🏫🔔"
+  function: "Education, growing up, Helen's calling"
+  vibe: "Where the next generation learns what Mayberry values"
+  top_ads: [ATTEND_CLASS, TEACH, PARENT_MEETING]

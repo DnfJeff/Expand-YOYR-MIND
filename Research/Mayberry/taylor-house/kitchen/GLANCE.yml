@@ -1,0 +1,9 @@
+# Aunt Bee's kingdom — she who controls the stove controls Mayberry
+glance:
+  id: taylor-kitchen
+  type: domestic
+  name: "Taylor Kitchen"
+  emoji: "🍳👑🍪🥧🔥"
+  function: "Cooking, feeding, nurturing — sovereignty through food"
+  vibe: "Bee is sheriff in here, Andy is just a man who wants breakfast"
+  top_ads: [COOK, SNEAK_COOKIE, BEE_PICKLES]

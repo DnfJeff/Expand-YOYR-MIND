@@ -1,27 +1,50 @@
+# Williams Living Room — Where Everything Happens
+# Family meals. Arguments. Visitors. Reconciliations.
+# The couch has seen more drama than the Copa stage.
+
+inherits:
+  - locations/abstract/domestic-hub
+ontology:
+  tags: [living-room, family, social, piano, arguments, visitors, couch, drama]
+  framing: domestic_theatrical
+  # This room operates under BOTH domestic and theatrical framing.
+  # Danny can't help it. Every conversation is a performance.
+  # Every argument has a monologue. Every reconciliation has a curtain call.
+
 skill:
   name: "Williams Living Room Activities"
+  id: williams-living-room
   location: williams-apartment/living-room
 
   advertisements:
     FAMILY_DINNER:
+      description: "Everyone at the table — or the coffee table when Tonoose brings extras"
+      score: 85
+      guard: "time is evening AND family members present >= 3"
+      effect: "hunger +30, family +25, social +20. Food served. Conversation inevitable. Volume: Danny-dependent."
       satisfies: [hunger, family, social]
-      description: "Everyone at the table — or the coffee table when Tonoose is here"
-      participants:
-        [danny-williams, kathy-williams, rusty-williams, terry-williams]
+      participants: [danny-williams, kathy-williams, rusty-williams, terry-williams]
       overflow_capacity: +4
       # When Tonoose visits, the table gains chairs from nowhere
 
     RECEIVE_VISITOR:
-      satisfies: [social, obligation, hospitality]
       description: "Someone's at the door. There's always someone at the door."
+      score: 80
+      guard: "doorbell rings OR visitor arrives (probability: 60% on any given evening)"
+      effect: "social +15, obligation +20, danny.anxiety +10. Visitor enters. Plans change. Food offered."
+      satisfies: [social, obligation, hospitality]
       participants: [any]
       danny_reaction: exasperated_hospitality
       # Danny opens the door, sighs, then feeds them
       # Because that's what you do
+      # Lebanese hospitality is not optional
 
     ARGUE:
+      description: "A Danny Williams-grade domestic discussion — five acts, one couch"
+      score: 75
+      guard: "danny-williams is present AND disagreement exists"
+      effect: "tension released. Expression +20. Volume: escalating→resolved. Hug at end."
       satisfies: [expression, tension_release]
-      description: "A Danny Williams-grade domestic discussion"
       participants: [danny-williams, any]
       volume: escalating
       resolution: inevitable
@@ -33,9 +56,40 @@ skill:
       # 5. Danny deflates
       # 6. Hug
 
+    CEILING_MONOLOGUE:
+      description: "Danny addresses God/ceiling about his impossible family"
+      score: 85
+      guard: "danny-williams is frustrated AND danny is looking up"
+      effect: "expression +30, frustration vented. God does not answer. Family waits."
+      satisfies: [expression, spiritual_complaint]
+      participants: [danny-williams]
+      # Danny tilts his head back
+      # Addresses the ceiling directly
+      # "You see what I deal with? YOU SEE?"
+      # The ceiling has no comment
+      # Kathy has plenty
+
     PIANO:
-      satisfies: [escape, creativity, stalling]
       description: "Danny sits at the piano to avoid dealing with things"
+      score: 70
+      guard: "danny-williams is present AND danny is avoiding a conversation"
+      effect: "escape +20, creativity +15. Avoidance successful temporarily. Kathy sees through it."
+      satisfies: [escape, creativity, stalling]
       participants: [danny-williams]
       # "I'm not avoiding anything, I'm PLAYING"
       # He's avoiding something
+      # The piano knows
+      # Kathy knows
+      # Danny knows they know
+
+    TONOOSE_ARRIVAL:
+      description: "Uncle Tonoose arrives unannounced — apartment enters crisis mode"
+      score: 90
+      guard: "uncle-tonoose appears at door (no prior warning)"
+      effect: "chaos +40, hospitality +30, danny.control -50. Apartment re-centers around Tonoose."
+      satisfies: [family_obligation, cultural_duty, chaos]
+      participants: [uncle-tonoose, danny-williams, kathy-williams]
+      # The door opens.
+      # Tonoose fills the doorway.
+      # Danny's evening is over.
+      # A new evening has begun — Tonoose's evening.

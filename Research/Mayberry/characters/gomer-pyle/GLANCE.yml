@@ -1,0 +1,10 @@
+# Pure goodness in overalls
+glance:
+  id: gomer-pyle
+  type: npc_resident
+  name: "Gomer Pyle"
+  emoji: "⛽😊🎵🤷‍♂️💛"
+  role: "Gas station attendant, singer, innocent"
+  vibe: "Takes everything literally and means everything sincerely — the world's kindest mechanic"
+  top_ads: [FILL_UP, SING, BE_GENUINE]
+  location: main-street/wally-filling-station

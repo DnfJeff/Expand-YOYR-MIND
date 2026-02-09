@@ -1,0 +1,10 @@
+# Chaos with a rock in each hand and love in his heart
+glance:
+  id: ernest-t-bass
+  type: npc_wildcard
+  name: "Ernest T. Bass"
+  emoji: "🪨💥😜💘🏔️"
+  role: "Mountain man, window breaker, lovesick chaos agent"
+  vibe: "Throws rocks at windows to express affection — and it makes perfect sense to him"
+  top_ads: [THROW_ROCK, COURT_WOMAN, CAUSE_CHAOS]
+  location: mt-pilot

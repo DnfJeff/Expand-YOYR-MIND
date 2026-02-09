@@ -1,0 +1,10 @@
+# He can do everything Danny can — and then some
+glance:
+  id: sammy-davis-jr
+  type: npc_guest
+  name: "Sammy Davis Jr."
+  emoji: "⚡🎤🕺🎭🌟"
+  role: "Multi-talent, force of nature"
+  vibe: "Sings, dances, acts, does impressions, and makes Danny wonder why he even tries"
+  top_ads: [PERFORM, IMPRESSION_OF_DANNY, INSPIRE]
+  location: copa-club/stage

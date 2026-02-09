@@ -1,0 +1,36 @@
+# Mayberry Bank — Where Money Matters (To Some People)
+# Conservative. Cautious. Exactly one teller.
+
+inherits:
+  - locations/abstract/service-business
+ontology:
+  tags: [bank, money, savings, trust, conservative, small-town]
+  framing: financial_conservative
+
+skill:
+  name: "Mayberry Bank Services"
+  id: mayberry-bank
+  location: main-street/mayberry-bank
+
+  advertisements:
+    DEPOSIT:
+      description: "Put money in the bank — the town's piggy bank"
+      score: 65
+      guard: "character has money to deposit AND bank is open"
+      effect: "financial security +20, duty +10. Savings grow. Slowly."
+      satisfies: [security, responsibility]
+
+    WITHDRAW:
+      description: "Take money out — requires ID, small talk, and a reason Mabel finds acceptable"
+      score: 60
+      guard: "character has account AND character needs money"
+      effect: "financial need met. Mabel asks what it's for. Town knows by 3pm."
+      satisfies: [financial_need]
+
+    BANK_ROBBERY:
+      description: "Someone tries to rob the Mayberry bank — episodic crisis"
+      score: 95
+      guard: "criminals are present AND bank has money AND Barney has his bullet"
+      effect: "chaos +50, duty activated. Barney's moment. Andy resolves it."
+      satisfies: [crisis, drama]
+      frequency: rare_but_memorable

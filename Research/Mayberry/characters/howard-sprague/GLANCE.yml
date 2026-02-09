@@ -1,0 +1,10 @@
+# Proper on the outside, yearning on the inside
+glance:
+  id: howard-sprague
+  type: npc_resident
+  name: "Howard Sprague"
+  emoji: "📋🤓🎩😔🌍"
+  role: "County clerk, bachelor, quiet dreamer"
+  vibe: "Files perfectly, dresses correctly, and lies awake wondering if this is all there is"
+  top_ads: [FILE, FOLLOW_RULES, DREAM_OF_ADVENTURE]
+  location: main-street/courthouse

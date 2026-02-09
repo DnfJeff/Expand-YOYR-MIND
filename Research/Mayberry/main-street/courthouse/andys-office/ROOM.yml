@@ -1,3 +1,20 @@
+framing:
+  context: civic_personal
+  behavioral_expectation: wisdom_over_authority
+  conflict_style: listen_then_advise
+
+ambient_ads:
+  - id: DESK_GRAVITY
+    description: "The desk draws people in — anyone with a problem ends up here"
+    score: 0.3
+    always_on: true
+    effect: "Characters bring problems to Andy; the desk is a magnet"
+  - id: PHONE_RINGS
+    description: "The phone connects Andy to every crisis in town"
+    score: 0.2
+    always_on: true
+    effect: "New problems arrive by phone; plans change"
+
 room:
   name: "Andy's Office"
   type: office

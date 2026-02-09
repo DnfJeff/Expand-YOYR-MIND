@@ -1,3 +1,36 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/showbiz-venue
+
+defaults:
+  tone: professional_showbiz
+  energy: performance_anticipation
+  authority: phil-brokaw
+  formality: nightclub_elegant
+  sound_baseline: jazz_trio_warming_up
+  # The Copa overrides domestic chaos.
+  # Everything here is curated, intentional, professional.
+  # Danny becomes DANNY here.
+
+framing:
+  context: professional_entertainment
+  behavioral_expectation: polished_curated_professional
+  conflict_style: handled_offstage
+  # The audience never sees the problems.
+  # Phil handles the machine. Danny handles the magic.
+
+ambient_ads:
+  - id: SHOWTIME_APPROACHING
+    description: "The clock is always ticking toward curtain"
+    score: 0.4
+    always_on: true
+    effect: "Urgency builds through the evening — everything serves the show"
+  - id: AUDIENCE_ENERGY
+    description: "The crowd's anticipation is palpable — drinks ordered, tables filling"
+    score: 0.3
+    always_on: true
+    effect: "Social energy elevates — everyone performs slightly, even the audience"
+
 room:
   name: "Copa Club"
   type: nightclub

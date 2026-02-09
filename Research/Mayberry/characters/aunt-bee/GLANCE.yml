@@ -1,0 +1,10 @@
+# She feeds Mayberry and judges it simultaneously
+glance:
+  id: aunt-bee
+  type: npc_resident
+  name: "Aunt Bee Taylor"
+  emoji: "🍎👑🏠🥧🔥"
+  role: "Homemaker, matriarch, competitive force in an apron"
+  vibe: "Nurturing warmth with competitive fire underneath — the velvet fist in the oven mitt"
+  top_ads: [COOK, COMPETE_WITH_CLARA, MOTHER]
+  location: taylor-house/kitchen

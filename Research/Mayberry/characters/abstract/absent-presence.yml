@@ -1,0 +1,19 @@
+# Never seen, always felt — the character who exists through implication
+prototype:
+  id: absent-presence
+  type: abstract_character
+  name: "Absent Presence"
+  description: "Character who is never physically present but shapes behavior and narrative"
+  default_traits:
+    visibility: 0.0
+    influence: 0.7
+    mystery: 0.9
+    narrative_function: 0.8
+  default_needs:
+    referenced: 0.7
+    mythologized: 0.6
+    never_appeared: 1.0
+  behavioral_tendencies:
+    - Exists only in other characters' dialogue
+    - Grows more interesting the less we know
+    - Absence IS the characterization

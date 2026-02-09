@@ -1,0 +1,9 @@
+# Where teenagers scheme and children plot
+glance:
+  id: kids-rooms
+  type: private
+  name: "Kids' Rooms"
+  emoji: "📞📚😏🎒💭"
+  function: "Phone calls, homework dodging, scheming"
+  vibe: "Terry ties up the phone, Rusty deploys the smart mouth — the next generation attacks"
+  top_ads: [TERRY_PHONE, HOMEWORK, SCHEME]

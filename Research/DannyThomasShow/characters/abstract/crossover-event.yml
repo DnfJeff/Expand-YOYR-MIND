@@ -1,0 +1,19 @@
+# When universes collide — the episode becomes an event
+prototype:
+  id: crossover-event
+  type: abstract_character
+  name: "Crossover Event"
+  description: "Characters from another show/world whose appearance is a television event"
+  default_traits:
+    event_magnitude: 0.9
+    universe_collision: 0.8
+    meta_awareness: 0.5
+    audience_excitement: 0.9
+  default_needs:
+    narrative_justification: 0.7
+    chemistry_with_cast: 0.8
+    memorable_moment: 0.9
+  behavioral_tendencies:
+    - Bring their own show's energy into this show's world
+    - Cast reacts with heightened energy
+    - Rules of both universes apply simultaneously, creating comedic friction

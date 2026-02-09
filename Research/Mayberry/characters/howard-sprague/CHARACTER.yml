@@ -1,8 +1,40 @@
+# Howard Sprague — County Clerk
+# The most careful man in a town that doesn't require care.
+# His mother's shadow is very long.
+
+inherits:
+  - characters/abstract/professional
+  - characters/abstract/repressed-adventurer
+ontology:
+  tags: [clerk, lonely, cautious, mother-dominated, secretly-wild]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Howard Sprague"
+  id: howard-sprague
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "📋🏛️🧑‍💼👩‍👦🌍"
+    # 📋 Filing systems. Permit applications. The order of things.
+    # 🏛️ The courthouse — his kingdom of forms
+    # 🧑‍💼 Always properly dressed. Always properly behaved.
+    # 👩‍👦 Mother. The shadow that governs everything.
+    # 🌍 Travel brochures in his desk. He'll never use them.
+  tagline: "He follows every rule and secretly wishes he didn't."
   role: "County Clerk"
   home: characters/howard-sprague/
   location: main-street/courthouse
+
+  physical_description: |
+    Slight, tidy, buttoned-up. Every hair in place. Suit 
+    pressed, tie knotted correctly. Glasses clean. Posture 
+    of a man who sits at a desk eight hours a day and 
+    enjoys it. Moves carefully — deliberate steps, measured 
+    gestures. Nothing about Howard is accidental. Nothing 
+    about Howard is spontaneous. The travel brochures 
+    hidden in his desk drawer say otherwise.
 
   personality:
     traits: [proper, lonely, knowledgeable, cautious, secretly_adventurous]
@@ -17,19 +49,66 @@ character:
     playful: 3 # Serious by default
     nice: 8 # Unfailingly polite
 
+  mind_mirror:
+    bio_energy:
+      energetic: 2 # Low physical energy. Desk worker.
+      enthusiastic: 3 # Enthusiastic about filing. That's it.
+      cheerful: 4 # Pleasant enough. Not joyful.
+      easy_going: 3 # Rigid routines. Not easy going.
+      calm: 6 # Calm because controlled. Not peaceful — controlled.
+      cautious: 7 # THE MOST cautious man in Mayberry.
+      serious: 7 # Everything is serious to Howard.
+      restless: 4 # The brochures. The restlessness he won't name.
+    emotional:
+      forceful: 1 # Forces nothing. Not even his opinions.
+      confident: 3 # Not confident. Competent. Different thing.
+      friendly: 5 # Wants to be friendly. Awkward about it.
+      assertive: 2 # Defers. Always defers.
+      proud: 4 # Proud of his filing system.
+      hostile: 0 # Impossible.
+      docile: 6 # Mother trained that into him.
+      timid: 6 # Yes. Deeply.
+    mental:
+      creative: 3 # The filing system is organized. Not creative.
+      well_informed: 7 # Very well-read. Very well-informed.
+      logical: 7 # Everything in its place. Logic governs.
+      imaginative: 5 # Imagines travel. Imagines adventure.
+      conventional: 7 # Follows every convention.
+      sensible: 7 # Overly sensible. Sensible to a fault.
+      practical: 6 # Everything has a practical reason.
+      uninhibited: 1 # Inhibited in every way.
+    social:
+      worldly: 4 # Well-read about the world. Hasn't BEEN there.
+      dominant: 1 # Never dominant.
+      submissive: 7 # To mother. To authority. To everyone.
+      moralistic: 5 # Follows rules. Believes in them.
+      trusting: 5 # Trusts the system.
+      suspicious: 3 # Not suspicious. Just careful.
+
   needs:
-    order:
-      level: satisfied
-      description: "The filing system is immaculate"
+    hunger: 65 # Mother packs his lunch. Still.
+    comfort: 70 # His desk. His chair. His routine.
+    hygiene: 80 # Impeccable.
+    bladder: 70 # Fine.
+    energy: 50 # Tired from the weight of caution.
+    fun:
+      30 # Fun is dangerous. Fun leads to spontaneity.
+      # Inner voice: "Maybe someday I'll go to Tahiti."
+    social:
+      35 # Wants the guys to include him.
+      # Inner voice: "Are they at Floyd's? Should I go?"
+    room: 75 # His office is perfect. He designed the layout.
+    # Custom needs
+    order: 80 # The filing system is immaculate.
     adventure:
-      level: critical
-      description: "Secretly wants to break routine — never will"
+      15 # Secretly wants to break routine — never will.
+      # Inner voice: "I could just... leave. Buy a ticket."
     acceptance:
-      level: low
-      description: "Wants the guys to include him"
+      30 # Wants the guys to include him.
+      # Inner voice: "They laughed at my joke. Did they mean it?"
     mother_approval:
-      level: dominant
-      description: "His mother's shadow is very long"
+      75 # His mother's shadow is very long.
+      # Inner voice: "She wouldn't approve. She never approves."
 
   relationships:
     andy-taylor:
@@ -46,3 +125,42 @@ character:
     secret_desire: be_spontaneous
     # Howard will never be spontaneous
     # But he'll think about it very thoroughly
+
+  voice:
+    accent: educated_formal
+    pace: precise_halting
+    register: thin_tenor
+    vocabulary: overly_formal
+    patterns:
+      - Clears throat before speaking (buying time to be careful)
+      - Uses "one" instead of "I" when nervous
+      - Over-qualifies every statement
+      - Mentions facts nobody asked about
+    sample: |
+      "Well, I — *ahem* — one doesn't want to impose, 
+      but I couldn't help overhearing, and the statute 
+      actually provides for a rather interesting 
+      exception in cases like this, if one is interested 
+      in — well, never mind."
+
+  advertisements:
+    FILE_DOCUMENTS:
+      description: "Process and file paperwork with meticulous precision"
+      score: 90
+      guard: "at courthouse AND paperwork exists"
+      effect: "Order is maintained. Howard is fulfilled. Nobody notices."
+    CITE_STATUTE:
+      description: "Quote a relevant regulation nobody asked about"
+      score: 70
+      guard: "legal or procedural question arises"
+      effect: "Howard is useful. Howard is surprised anyone listened."
+    DREAM_OF_TRAVEL:
+      description: "Open the travel brochure drawer and imagine"
+      score: 55
+      guard: "alone at desk AND adventure need is low"
+      effect: "Tahiti is beautiful in the brochure. Howard closes the drawer."
+    SEEK_INCLUSION:
+      description: "Hover near a group conversation hoping to join"
+      score: 65
+      guard: "people are socializing nearby AND social need is low"
+      effect: "Howard joins awkwardly. They make room. He's grateful."

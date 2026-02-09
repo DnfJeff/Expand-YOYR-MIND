@@ -1,0 +1,38 @@
+# Playground — Where Kids Are Kids
+# Recess. The most important part of the school day.
+
+inherits:
+  - locations/abstract/recreation
+ontology:
+  tags: [playground, recess, children, games, fights, friendship]
+  framing: childhood_social
+
+skill:
+  name: "Playground Activities"
+  id: playground
+  location: schoolhouse/playground
+
+  advertisements:
+    PLAY:
+      description: "Recess — running, games, being kids"
+      score: 85
+      guard: "time is recess AND children are present"
+      effect: "fun +30, energy -15, social +20. Childhood happens at full volume."
+      satisfies: [fun, social, energy_release]
+
+    SETTLE_THINGS:
+      description: "Kid disputes resolved on the playground — Opie's jurisdiction"
+      score: 70
+      guard: "two kids disagree AND recess is happening"
+      effect: "social +10. Issue resolved or postponed. Opie increasingly handles it like Andy."
+      satisfies: [social, conflict_resolution]
+      # Opie mediates like his father
+      # He doesn't know he's doing it
+      # But he is
+
+    PICK_TEAMS:
+      description: "Choosing sides for baseball or football — the social hierarchy revealed"
+      score: 75
+      guard: "enough kids present AND game proposed"
+      effect: "social dynamics displayed. Last pick remembered forever."
+      satisfies: [social, competition, belonging]

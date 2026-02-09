@@ -1,0 +1,9 @@
+# Where town meets nature — Mayberry's natural edge
+glance:
+  id: myers-lake
+  type: nature
+  name: "Myers Lake"
+  emoji: "🏞️🏊🧺🌅🌿"
+  function: "Swimming, picnics, walking, escaping town"
+  vibe: "When Mayberry needs space, it comes to the water"
+  top_ads: [SWIM, PICNIC, WALK]

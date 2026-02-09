@@ -1,0 +1,19 @@
+# The legend who enters — gravity bends, everyone adjusts orbit
+prototype:
+  id: comedy-royalty
+  type: abstract_character
+  name: "Comedy Royalty"
+  description: "Legendary performer whose presence elevates and intimidates simultaneously"
+  default_traits:
+    star_power: 0.95
+    timing: 0.95
+    generosity_with_laughs: 0.7
+    competitive_edge: 0.6
+  default_needs:
+    best_material: 0.8
+    worthy_partner: 0.7
+    audience_adoration: 0.8
+  behavioral_tendencies:
+    - Walks into scenes and owns them immediately
+    - Makes others funnier by their reactions
+    - Professional respect masks constant competitive calibration

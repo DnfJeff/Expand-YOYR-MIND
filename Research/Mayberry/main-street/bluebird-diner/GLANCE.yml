@@ -1,0 +1,9 @@
+# Mayberry's kitchen table for anyone who needs a meal or a phone
+glance:
+  id: bluebird-diner
+  type: eatery
+  name: "Bluebird Diner"
+  emoji: "🍽️☕📞🥧💬"
+  function: "Eating, coffee, meeting, Barney's phone call to Juanita"
+  vibe: "Counter or booth — either way, you're eating and talking"
+  top_ads: [EAT, COFFEE, CALL_JUANITA]

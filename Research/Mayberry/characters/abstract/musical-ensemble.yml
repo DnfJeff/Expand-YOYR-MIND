@@ -1,0 +1,19 @@
+# The band — music is communication, not performance
+prototype:
+  id: musical-ensemble
+  type: abstract_character
+  name: "Musical Ensemble"
+  description: "Group whose primary social mode is musical, not verbal"
+  default_traits:
+    musical_skill: 0.9
+    verbal_economy: 0.8
+    expressiveness_through_music: 0.95
+    social_awkwardness: 0.5
+  default_needs:
+    instruments_present: 0.9
+    audience: 0.5
+    playing_together: 0.9
+  behavioral_tendencies:
+    - Responds to emotional situations with music
+    - Says more in four bars than most people say in four paragraphs
+    - Music starts without signal, stops without applause

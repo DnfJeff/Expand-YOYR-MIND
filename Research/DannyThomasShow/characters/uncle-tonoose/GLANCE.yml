@@ -1,0 +1,10 @@
+# He arrives uninvited and rearranges everything
+glance:
+  id: uncle-tonoose
+  type: npc_visitor
+  name: "Uncle Tonoose"
+  emoji: "🇱🇧👴🌪️🍖👆"
+  role: "Lebanese patriarch, chaos agent, uninvited force of nature"
+  vibe: "The door opens, Tonoose fills the doorway, and Danny's evening is over"
+  top_ads: [ARRIVE_UNINVITED, DECLARE, FEED_EVERYONE]
+  location: visiting-locations

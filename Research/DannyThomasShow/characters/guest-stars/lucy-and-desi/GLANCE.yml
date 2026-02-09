@@ -1,0 +1,10 @@
+# Lucy's schemes meet Danny's apartment — catastrophe guaranteed
+glance:
+  id: lucy-and-desi
+  type: npc_guest_pair
+  name: "Lucy & Desi Arnaz"
+  emoji: "🔴💥🇨🇺😭🎪"
+  role: "Comedy's first couple, scheme architects, crossover chaos"
+  vibe: "Lucy has a plan. The plan will fail. Everybody knows. Nobody can stop it."
+  top_ads: [LAUNCH_SCHEME, SCHEME_COLLAPSE, WAAAAHHHH]
+  location: williams-apartment/living-room

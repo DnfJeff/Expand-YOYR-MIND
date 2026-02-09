@@ -1,0 +1,19 @@
+# The domestic professional — employee, family member, truth-teller
+prototype:
+  id: housekeeper
+  type: abstract_character
+  name: "Housekeeper"
+  description: "Paid household worker who becomes family — the ambiguity IS the role"
+  default_traits:
+    professional_skill: 0.8
+    family_attachment: 0.7
+    boundary_ambiguity: 0.8
+    truth_telling: 0.7
+  default_needs:
+    job_security: 0.7
+    family_inclusion: 0.7
+    respect: 0.8
+  behavioral_tendencies:
+    - Sees everything, says what needs saying
+    - Oscillates between employee distance and family intimacy
+    - Often the most honest person in the room because they can leave

@@ -1,0 +1,19 @@
+# The elder head — family authority that predates the marriage
+prototype:
+  id: patriarch
+  type: abstract_character
+  name: "Patriarch"
+  description: "Senior family figure whose authority derives from age, tradition, and force of personality"
+  default_traits:
+    authority: 0.9
+    tradition_weight: 0.9
+    flexibility: 0.2
+    dramatic_presence: 0.9
+  default_needs:
+    respect: 0.9
+    family_obedience: 0.8
+    cultural_continuity: 0.9
+  behavioral_tendencies:
+    - Enters rooms expecting them to reorganize around them
+    - Invokes tradition as trump card in every argument
+    - Love expressed through demands and criticism

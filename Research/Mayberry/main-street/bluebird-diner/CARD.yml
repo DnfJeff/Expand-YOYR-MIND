@@ -1,46 +1,83 @@
+# Bluebird Diner — Mayberry's Kitchen Table
+# Where everybody eats, everybody talks,
+# and one phone on the wall ruins everything.
+
+inherits:
+  - locations/abstract/public-eatery
+ontology:
+  tags: [diner, food, social-hub, gossip, phone, counter, booths]
+  framing: communal_nourishment
+  # The Bluebird feeds the body.
+  # Floyd's feeds the gossip.
+  # The porch feeds the soul.
+  # Mayberry's three food groups.
+
 skill:
   name: "Bluebird Diner Services"
+  id: bluebird-diner
   location: main-street/bluebird-diner
 
   advertisements:
     EAT:
+      description: "Sit-down meal or counter service — meat loaf, chicken, daily special"
+      score: 85
+      guard: "character.needs.hunger < 50 OR time is mealtime"
+      effect: "hunger +40, comfort +15, social +10. Meal served. Conversation unavoidable."
       satisfies: [hunger, comfort]
-      description: "Sit-down meal or counter service"
       participants: [any]
+      # You came for the food.
+      # You stayed because Floyd sat down across from you.
 
     COFFEE:
+      description: "Cup of coffee at the counter — the Bluebird's real product"
+      score: 70
+      guard: "character is awake AND character is in Mayberry"
+      effect: "energy +20, social +10, routine +15. Time passes pleasantly."
       satisfies: [energy, social, routine]
-      description: "Cup of coffee at the counter"
       participants: [any]
       duration: 15_minutes_to_forever
       # Nobody gets rushed out of the Bluebird
+      # The refills are free
+      # The conversation comes with them
 
     MEET:
+      description: "Meet someone at the diner for a conversation — booth or counter"
+      score: 75
+      guard: "character.needs.social < 60 OR character has arrangement to meet someone"
+      effect: "social +25, comfort +10. Information exchanged. Plans made or broken."
       satisfies: [social, planning]
-      description: "Meet someone at the diner for a conversation"
       participants: [any, any]
       # Booths provide semi-privacy
       # Counter is public performance
+      # Choose according to what you want overheard
 
     PIE:
+      description: "A slice of whatever's in the case — apple, cherry, chocolate"
+      score: 60
+      guard: "character.needs.comfort < 50 OR character wants a treat"
+      effect: "comfort +20, fun +10, hunger +15. Small pleasure. Big satisfaction."
       satisfies: [comfort, treat]
-      description: "A slice of whatever's in the case"
       participants: [any]
       # Not as good as Aunt Bee's
       # Don't tell Aunt Bee it's close
+      # Actually it might be better on Tuesdays
+      # DEFINITELY don't tell Aunt Bee that
 
     CALL_JUANITA:
+      description: "Barney calls Juanita from the wall phone. Voice drops. Persona shifts."
+      score: 90
+      guard: "character.id == 'barney-fife' AND phone is free AND thelma-lou is NOT present"
+      effect: "validation +30, fun +20. Barney becomes charming for 30 seconds. Everyone hears. Everyone pretends they don't."
       satisfies: [validation, romance, fantasy]
       available_to: barney-fife
-      cost: [thelma-lou-patience]
-      description: |
-        The phone on the wall by the kitchen pass-through.
-        Barney picks it up. His voice drops half an octave.
-        His hand cups the receiver. For thirty seconds he's 
-        not the nervous deputy — he's someone charming.
-
-        The call always ends. Thelma Lou never finds out.
-        Except she already knows.
+      cost: "thelma-lou.trust -= 5 (if she finds out)"
+      # The phone on the wall by the kitchen pass-through.
+      # Barney picks it up. His voice drops half an octave.
+      # His hand cups the receiver. For thirty seconds he's
+      # not the nervous deputy — he's someone charming.
+      #
+      # The call always ends. Thelma Lou never finds out.
+      # Except she already knows.
       properties:
         location_in_room: wall_by_kitchen_pass
         visibility: public
@@ -49,3 +86,15 @@ skill:
         # Barney uses it like it's in a booth.
         # It isn't. Everyone can hear.
         # Everyone pretends they can't.
+
+    EAVESDROP:
+      description: "Listen to other people's conversations from the counter"
+      score: 55
+      guard: "character is at counter AND other conversation is happening in booth"
+      effect: "social +10, information gained. Gossip chain activated."
+      satisfies: [curiosity, social]
+      participants: [any]
+      # The acoustics in the Bluebird are terrible for privacy
+      # Perfect for eavesdropping
+      # Everyone knows this
+      # Everyone uses the booths anyway

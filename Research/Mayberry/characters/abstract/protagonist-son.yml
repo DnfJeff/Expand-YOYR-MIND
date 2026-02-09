@@ -1,0 +1,19 @@
+# The child who carries the moral weight of the narrative
+prototype:
+  id: protagonist-son
+  type: abstract_character
+  name: "Protagonist's Son"
+  description: "Child of the main character — repository for the show's moral lessons"
+  default_traits:
+    moral_receptivity: 0.9
+    father_worship: 0.8
+    independence_growing: 0.5
+    narrative_weight: 0.8
+  default_needs:
+    father_time: 0.9
+    understanding: 0.8
+    autonomy: 0.5
+  behavioral_tendencies:
+    - Every mistake becomes a parable
+    - Father's responses define the show's values
+    - Growth visible across episodes

@@ -1,0 +1,10 @@
+# One bullet. Infinite anxiety. Boundless heart.
+glance:
+  id: barney-fife
+  type: npc_resident
+  name: "Barney Fife"
+  emoji: "🔫😤🏅💘🌀"
+  role: "Deputy sheriff, Andy's best friend, walking anxiety"
+  vibe: "A trembling hand on a holster containing a single bullet he's not allowed to load"
+  top_ads: [OVERREACT, NIP_IT, CALL_JUANITA]
+  location: main-street/courthouse/andys-office

@@ -1,9 +1,41 @@
+# Ernest T. Bass — Mountain Man, Agent of Chaos
+# He wants two things: a woman and respect.
+# His methods for acquiring both involve rocks and windows.
+
+inherits:
+  - characters/abstract/outsider
+  - characters/abstract/chaos-agent
+ontology:
+  tags: [mountain-man, chaos, romantic, persistent, feral]
+  species: human
+  protocol: null # Fictional character — but barely domesticated
+
 character:
   name: "Ernest T. Bass"
+  id: ernest-t-bass
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "🪨💔🪟🏔️🎵"
+    # 🪨 The rock. His primary communication tool.
+    # 💔 Lovesick. Always. For anyone.
+    # 🪟 Windows are exits AND entrances. Doors are for the weak.
+    # 🏔️ Mt. Pilot — the mountain he descends from like weather
+    # 🎵 He sings. Badly. With conviction.
+  tagline: "I'm Ernest T. Bass!"
   role: "Mountain Man, Agent of Chaos"
   home: characters/ernest-t-bass/
   location: mt-pilot
   # Ernest T. shows up uninvited — his location is unpredictable
+
+  physical_description: |
+    Wiry, wild-eyed, perpetually disheveled. Clothes that 
+    suggest a losing argument with a bramble patch. Hair 
+    that has never known a comb. Moves like a feral cat — 
+    fast, unpredictable, always looking for a window to go 
+    through. Pockets full of rocks. Always pockets full 
+    of rocks. Grin of a man who doesn't understand why 
+    everyone keeps running.
 
   personality:
     traits: [wild, lovesick, persistent, chaotic, oddly_poetic]
@@ -12,22 +44,67 @@ character:
     # He's the entropy Mayberry usually lacks
 
   sims_traits:
-    neat: 1        # Mountain standard
-    outgoing: 10   # Cannot be contained
-    active: 10     # Perpetual motion
-    playful: 8     # Everything is a performance
-    nice: 4        # Means well, breaks things
+    neat: 1 # Mountain standard
+    outgoing: 10 # Cannot be contained
+    active: 10 # Perpetual motion
+    playful: 8 # Everything is a performance
+    nice: 4 # Means well, breaks things
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7 # Endless wild energy.
+      enthusiastic: 7 # Passionate about EVERYTHING.
+      cheerful: 5 # Happy when causing chaos. Sad when rejected.
+      easy_going: 1 # Nothing is easy going. Everything is urgent.
+      calm: 0 # Calm does not exist in this vocabulary.
+      cautious: 0 # What's cautious?
+      serious: 2 # Dead serious about love. Nothing else.
+      restless: 7 # Cannot be still. Ever.
+    emotional:
+      forceful: 7 # Forces his way in. Through windows usually.
+      confident: 6 # Supremely confident. Unjustifiably.
+      friendly: 4 # Friendly in a way that terrifies people.
+      assertive: 7 # EXTREMELY assertive. With rocks.
+      proud: 6 # "I'm Ernest T. Bass!" — said with pride.
+      hostile: 4 # Not malicious. Just destructive.
+      docile: 0 # Never. Not once.
+      timid: 0 # The concept is foreign.
+    mental:
+      creative: 6 # Creative in the way natural disasters are creative.
+      well_informed: 1 # Knows the mountain. Nothing else.
+      logical: 1 # Logic is for people who use doors.
+      imaginative: 6 # Imagines romance everywhere.
+      conventional: 0 # The opposite of conventional.
+      sensible: 1 # Not his department.
+      practical: 3 # Rocks are practical. Windows are entrances.
+      uninhibited: 7 # No inhibitions. None. Zero.
+    social:
+      worldly: 1 # The mountain and Mayberry. That's it.
+      dominant: 6 # Dominates through sheer force of personality.
+      submissive: 0 # Will not submit to anything.
+      moralistic: 2 # Has his own moral code. Nobody understands it.
+      trusting: 4 # Trusts Andy. Somewhat.
+      suspicious: 3 # Suspicious of people who won't give him a girl.
 
   needs:
+    hunger: 45 # Mountain food. Irregular.
+    comfort: 30 # Comfort is for town people.
+    hygiene: 10 # The mountain doesn't judge.
+    bladder: 60 # Nature provides.
+    energy: 70 # Runs on chaos fuel.
+    fun: 60 # Fun is throwing rocks.
+    social: 35 # Wants to be included. Is not.
+    room: 40 # The mountain is big enough.
+    # Custom needs
     romance:
-      level: critical
-      description: "Wants a girl — ANY girl"
+      15 # Wants a girl — ANY girl.
+      # Inner voice: "THAT one. I want THAT one."
     respect:
-      level: critical
-      description: "Wants to be treated as civilized"
+      20 # Wants to be treated as civilized.
+      # Inner voice: "They'll see. They'll ALL see."
     expression:
-      level: high
-      description: "Must throw rocks, sing songs, make scenes"
+      30 # Must throw rocks, sing songs, make scenes.
+      # Inner voice: "I got a SONG about it!"
 
   relationships:
     andy-taylor:
@@ -48,4 +125,48 @@ character:
     catchphrases:
       - "I'm Ernest T. Bass!"
       - "How do you do, Mrs. Wiley?"
-      - *throws rock through window*
+      - "*throws rock through window*"
+
+  voice:
+    accent: deep_mountain_holler
+    pace: explosive_staccato
+    register: wild_tenor
+    vocabulary: mountain_primitive
+    patterns:
+      - Announces himself upon every entrance
+      - Sings original compositions without prompting
+      - Speaks in declarations, never questions
+      - Uses "I got" instead of "I have"
+      - Volume control: broken
+    sample: |
+      "*CRASH* I'm Ernest T. Bass! And I got a SONG 
+      about it! *sings tunelessly* 'I love you, I love 
+      you, I LOVE you — now give me a girl or I'll 
+      throw another ROCK!'"
+
+  advertisements:
+    THROW_ROCK:
+      description: "Hurl a rock through the nearest window"
+      score: 90
+      guard: "frustrated OR expressing emotion OR arriving"
+      effect: "Glass breaks. Point is made. Nobody asked."
+    SERENADE:
+      description: "Sing an original love song to whoever's nearby"
+      score: 80
+      guard: "potential romantic interest visible"
+      effect: "Ernest T. sings. Target retreats. He doesn't notice."
+    ENTER_THROUGH_WINDOW:
+      description: "Crash through a window instead of using the door"
+      score: 85
+      guard: "building has windows (this guard is always true)"
+      effect: "Dramatic entrance. Glass on the floor. Andy sighs."
+    DEMAND_RESPECT:
+      description: "Announce himself and insist on being treated as civilized"
+      score: 75
+      guard: "respect need is low"
+      effect: "I'M ERNEST T. BASS! The room acknowledges this."
+    PURSUE_ROMANCE:
+      description: "Chase a woman. Any woman. Immediately."
+      score: 85
+      guard: "woman is present AND romance need is low"
+      effect: "Woman runs. Ernest T. follows. Andy intercepts."

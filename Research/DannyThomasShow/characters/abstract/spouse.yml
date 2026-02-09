@@ -1,0 +1,19 @@
+# The partner — equal, different, enduring
+prototype:
+  id: spouse
+  type: abstract_character
+  name: "Spouse"
+  description: "Married partner whose identity is intertwined with but distinct from their partner's"
+  default_traits:
+    partnership: 0.8
+    independence: 0.6
+    social_skill: 0.7
+    compromise: 0.7
+  default_needs:
+    relationship_health: 0.8
+    own_friendships: 0.7
+    family_stability: 0.8
+  behavioral_tendencies:
+    - Maintains separate social world while supporting partner's
+    - Translates between partner and outside world
+    - Knows partner better than partner knows themselves

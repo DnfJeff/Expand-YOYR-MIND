@@ -1,0 +1,9 @@
+# The business end of show business — Phil's domain
+glance:
+  id: managers-office
+  type: office
+  name: "Manager's Office"
+  emoji: "📋💰📞🤝📅"
+  function: "Bookings, contracts, negotiations, the machinery behind the spotlight"
+  vibe: "Phil keeps the lights on and the acts booked — the Copa runs because Phil runs the Copa"
+  top_ads: [BOOK_ACT, BUSINESS_MEETING, CHARLEY_NEGOTIATES]

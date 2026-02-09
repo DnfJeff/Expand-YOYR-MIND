@@ -1,0 +1,37 @@
+# Backstage — Where the Mask Comes Off
+# Before the show: nerves. After the show: exhaustion. During: magic.
+
+inherits:
+  - locations/abstract/transitional-space
+ontology:
+  tags: [backstage, dressing-room, preparation, nerves, transition]
+  framing: liminal_performance
+
+skill:
+  name: "Copa Backstage"
+  id: copa-backstage
+  location: copa-club/backstage
+
+  advertisements:
+    PREPARE:
+      description: "Danny gets ready for the show — the ritual before the spotlight"
+      score: 85
+      guard: "danny-williams is present AND show is approaching"
+      effect: "anxiety +10, competence +15. Tie checked. Material reviewed. Deep breath."
+      satisfies: [preparation, ritual]
+      participants: [danny-williams]
+
+    DECOMPRESS:
+      description: "Post-show wind-down — the adrenaline burn-off"
+      score: 80
+      guard: "danny-williams is present AND show has ended"
+      effect: "energy -15, satisfaction +25. Show replayed mentally. Good nights glow."
+      satisfies: [recovery, reflection]
+      participants: [danny-williams]
+
+    GUEST_STAR_HANDOFF:
+      description: "Meet guest stars before or after their appearance"
+      score: 75
+      guard: "guest_star is present AND backstage is accessible"
+      effect: "social +20, professional +15. Handshakes. Compliments. Competition masked as friendship."
+      satisfies: [social, professional]

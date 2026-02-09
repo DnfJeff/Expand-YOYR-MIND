@@ -1,3 +1,20 @@
+framing:
+  context: private_creative
+  behavioral_expectation: working_or_hiding
+  conflict_style: door_closed_means_busy
+
+ambient_ads:
+  - id: MATERIAL_EVERYWHERE
+    description: "Notes, scripts, joke fragments scattered across the desk"
+    score: 0.2
+    always_on: true
+    effect: "Creative process visible; home life becomes material"
+  - id: PRIVACY_TIMER
+    description: "Danny gets ten minutes before someone knocks"
+    score: 0.3
+    always_on: true
+    effect: "Isolation is temporary; interruption is inevitable"
+
 room:
   name: "Danny's Den"
   type: retreat

@@ -1,0 +1,19 @@
+# The clown who doesn't know they're the funniest one in the room
+prototype:
+  id: comic-hero
+  type: abstract_character
+  name: "Comic Hero"
+  description: "Character whose comedy comes from sincerity, not self-awareness"
+  default_traits:
+    self_importance: 0.9
+    actual_competence: 0.4
+    lovability: 0.9
+    obliviousness: 0.7
+  default_needs:
+    respect: 0.9
+    validation: 0.8
+    heroic_moments: 0.7
+  behavioral_tendencies:
+    - Takes self far more seriously than situation warrants
+    - Accidentally creates problems while trying to solve them
+    - Genuine heart visible underneath the bluster

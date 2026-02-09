@@ -1,0 +1,37 @@
+# Kids' Rooms — Terry and Rusty's Territory
+# Where teenagers scheme and children plot.
+
+inherits:
+  - locations/abstract/private-space
+ontology:
+  tags: [bedroom, children, teenagers, homework, phone, growing-up]
+  framing: domestic_private
+
+skill:
+  name: "Kids' Rooms"
+  id: kids-rooms
+  location: williams-apartment/kids-rooms
+
+  advertisements:
+    TERRY_PHONE:
+      description: "Terry ties up the phone line — the teenager's primary function"
+      score: 80
+      guard: "terry-williams is present AND phone is available AND evening"
+      effect: "social +25, fun +15. Phone occupied. Danny can't make calls. This is war."
+      satisfies: [social, fun, independence]
+      participants: [terry-williams]
+
+    HOMEWORK:
+      description: "Rusty does or avoids homework — the nightly negotiation"
+      score: 70
+      guard: "rusty-williams is present AND schoolwork exists"
+      effect: "duty +15 (if done), fun -10. Homework attempted. Smart mouth deployed."
+      satisfies: [duty, growth]
+      participants: [rusty-williams]
+
+    SCHEME:
+      description: "The kids plan something Danny won't approve of"
+      score: 65
+      guard: "terry OR rusty have an idea AND danny is distracted"
+      effect: "fun +20, risk +15. Plan hatched. Execution: imminent. Discovery: inevitable."
+      satisfies: [fun, independence, mischief]

@@ -1,0 +1,19 @@
+# Unpredictable element — the one variable nobody planned for
+prototype:
+  id: wildcard
+  type: abstract_character
+  name: "Wildcard"
+  description: "Character whose actions cannot be predicted by other characters or the audience"
+  default_traits:
+    unpredictability: 0.95
+    pattern_defiance: 0.9
+    entertainment_value: 0.8
+    danger_level: 0.5
+  default_needs:
+    freedom_of_action: 0.9
+    audience_surprise: 0.8
+    narrative_disruption: 0.7
+  behavioral_tendencies:
+    - Chooses the option nobody considered
+    - Makes rational planning by others impossible
+    - May be brilliant, may be chaotic — distinction unclear

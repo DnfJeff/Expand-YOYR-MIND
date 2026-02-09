@@ -1,0 +1,19 @@
+# The one who endures — loyalty as lifestyle
+prototype:
+  id: long-suffering-partner
+  type: abstract_character
+  name: "Long-Suffering Partner"
+  description: "Person whose devotion to another is tested constantly but never extinguished"
+  default_traits:
+    patience: 0.95
+    loyalty: 0.95
+    suppressed_resentment: 0.5
+    exit_strategy: 0.0
+  default_needs:
+    acknowledgment: 0.7
+    stability: 0.8
+    occasional_gratitude: 0.6
+  behavioral_tendencies:
+    - Takes the abuse because the alternative is unthinkable
+    - Occasional eruptions of honest frustration
+    - Everyone wonders why they stay; they never wonder

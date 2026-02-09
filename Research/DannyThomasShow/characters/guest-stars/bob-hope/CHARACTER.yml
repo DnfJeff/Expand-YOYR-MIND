@@ -1,0 +1,176 @@
+# Bob Hope — Comedy Royalty Visiting Danny's Turf
+# When Hope walks in, even Danny knows he's outranked.
+# Two entertainers, one living room, zero chance of silence.
+# The guest who makes the host work harder.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/entertainer
+  - characters/abstract/comedy-royalty
+ontology:
+  tags: [guest-star, entertainer, comedian, legend, rival-friendly, recurring-visitor]
+  species: human
+  protocol: null  # Fictional character
+
+character:
+  name: "Bob Hope"
+  id: bob-hope
+  type: npc_guest
+  pronouns: he/him
+  emoji_identity: "⛳🎤👃😎✈️"
+    # ⛳ The golf. Always the golf. It's not a hobby — it's a religion.
+    # 🎤 The microphone knows his hand better than his own wife does
+    # 👃 The most famous profile in American comedy
+    # 😎 Cool in any room. Even Danny's living room.
+    # ✈️ Just flew in from somewhere. His arms are tired.
+  tagline: "I just flew in from the coast. Boy, are my arms tired."
+  role: "Comedy Legend, Frequent Guest"
+  home: characters/guest-stars/bob-hope/
+  location: visiting
+  episodes: ["The Bob Hope Show", "Bob Hope and Danny Become Directors"]
+
+  physical_description: |
+    The ski-slope nose, the easy stance, the chin that leads 
+    him into a room before the rest of him arrives. Moves 
+    with the looseness of a man who's been funny in front of 
+    presidents. Always looks like he just stepped off a plane 
+    and into a joke. Golf tan. Easy grin. Eyes that are 
+    calculating the next line while delivering the current one.
+
+  personality:
+    traits: [quick, confident, competitive, charming, relentless]
+    # Hope doesn't do second place
+    # When he and Danny are in the same room
+    # It's a comedy arms race
+    # Both men know it. Both men love it.
+
+  sims_traits:
+    neat: 6
+    outgoing: 10   # There is no room Bob Hope doesn't own
+    active: 7      # Still touring. Still moving. Always moving.
+    playful: 9     # Everything is material. EVERYTHING.
+    nice: 6        # Nice enough. Competitive first.
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7         # Tireless. Comedy is cardio.
+      enthusiastic: 6      # Enthusiastic about winning the room.
+      cheerful: 6          # Cheerful is the brand. The brand is iron.
+      easy_going: 5        # Easy going on the surface. Calculating underneath.
+      calm: 5              # Calm like a shark is calm.
+      cautious: 3          # Caution is for people who aren't Bob Hope.
+      serious: 3           # Serious about the craft. Never about himself.
+      restless: 5          # Always moving to the next show, next joke, next room.
+    emotional:
+      forceful: 6          # Commands rooms. Doesn't ask.
+      confident: 7         # The most confident man in entertainment. Maybe.
+      friendly: 5          # Friendly in the way legends are friendly — from above.
+      assertive: 6         # Asserts through material, not volume.
+      proud: 6             # Proud of the career. Shows it by working harder.
+      hostile: 1           # Not hostile. Competitive. There's a line.
+      docile: 0            # Bob Hope defers to nobody alive.
+      timid: 0             # Not in any universe.
+    mental:
+      creative: 7          # The joke machine never stops.
+      well_informed: 6     # Knows everyone, knows everything in showbiz.
+      logical: 5           # Logic serves the bit. Always.
+      imaginative: 6       # Imagines the perfect setup. Delivers it.
+      conventional: 6      # The formula works. Why change it?
+      sensible: 5          # Sensible about career. Reckless about golf.
+      practical: 5         # Practical entertainer. Knows the business.
+      uninhibited: 6       # On stage, completely unleashed.
+    social:
+      worldly: 7           # Has performed for troops worldwide. Seen it all.
+      dominant: 7          # Dominant by reputation alone.
+      submissive: 0        # Not possible. Not even theoretically.
+      moralistic: 3        # Morals are for the audience. He provides material.
+      trusting: 4          # Trusts his timing. Trusts little else.
+      suspicious: 3        # Not suspicious. Just aware.
+
+  visitor_impact: elevated
+  # When Hope visits:
+  # - Danny's competitive instinct: activated
+  # - Living room becomes: comedy arena
+  # - One-upmanship: mutual and escalating
+  # - Kathy's role: referee
+  # - Winner: the audience
+
+  needs:
+    hunger: 60
+    comfort: 60
+    hygiene: 65
+    bladder: 65
+    energy: 40             # Performing is fuel, not drain.
+                           # Inner voice: "I'll sleep on the plane."
+    fun: 30                # The competition IS the fun.
+                           # Inner voice: "Danny thinks he can keep up. That's cute."
+    social: 35             # Needs an audience. Any size. Always.
+    room: 55
+    # Custom needs
+    spotlight: 20          # Must be the funniest person in the room.
+                           # Inner voice: "Nice bit, Danny. Watch this."
+    competition: 25        # Needs a worthy opponent. Danny qualifies.
+                           # Inner voice: "He's good. I'm better. He knows it."
+    touring: 50            # Always heading somewhere. The road is home.
+
+  relationships:
+    danny-williams:
+      type: friendly_rival
+      strength: deep
+      dynamic: |
+        Two entertainment titans in one living room. They 
+        love each other. They compete with each other. 
+        Every conversation is a set. Every visit is a bout. 
+        Hope has the edge in movies. Danny has the edge at 
+        home. Both know the score.
+    kathy-williams:
+      type: charmed_acquaintance
+      dynamic: "Hope flirts. Kathy deflects. Danny fumes. Hope winks."
+
+  behavioral_patterns:
+    arrival: grand_entrance
+    conflict: out_joke_you
+    departure: leaves_them_wanting_more
+    # Hope's visit protocol:
+    # 1. Arrive with a bit
+    # 2. One-up Danny for 22 minutes
+    # 3. Let Danny win one round (generosity)
+    # 4. Exit with the best line
+
+  voice:
+    accent: American_smooth
+    pace: rapid_practiced
+    register: nasal_baritone
+    vocabulary: one_liner_arsenal
+    patterns:
+      - Opens with a topical reference — "I just flew in from..."
+      - Delivers one-liners like breathing — effortless and endless
+      - Undercuts Danny's setups with better punchlines
+      - The timing is supernatural — pauses measured in milliseconds
+    sample: |
+      "Danny, you've got a beautiful home here. Beautiful. 
+      Reminds me of a place I stayed in once — what was it 
+      called — oh, right. A Holiday Inn. But YOURS has 
+      better towels."
+
+  advertisements:
+    ONE_UP_DANNY:
+      description: "Top Danny's last joke with a better one"
+      score: 90
+      guard: "Danny just delivered a punchline"
+      effect: "Danny recalibrates. Audience laughs harder. Arms race continues."
+    WORK_THE_ROOM:
+      description: "Turn the Williams living room into a comedy club"
+      score: 85
+      guard: "people are present"
+      effect: "Everyone entertained. Danny both appreciates and resents this."
+    GOLF_ANECDOTE:
+      description: "Bring any conversation back to golf"
+      score: 60
+      guard: "conversation exists"
+      effect: "Golf referenced. Nobody asked. Nobody minds."
+    GRACIOUS_EXIT:
+      description: "Leave on the biggest laugh"
+      score: 75
+      guard: "visit complete AND perfect exit line available"
+      effect: "Hope exits. Laughter continues. Danny stares at closing door."

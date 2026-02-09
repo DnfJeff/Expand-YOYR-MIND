@@ -1,0 +1,9 @@
+# Sunday mornings and Wednesday evenings — Mayberry's soul
+glance:
+  id: church
+  type: sacred
+  name: "Mayberry Church"
+  emoji: "⛪🎵🙏🌸🕊️"
+  function: "Worship, choir, weddings, community"
+  vibe: "Where the town dresses up and sits still — the opposite of Floyd's"
+  top_ads: [ATTEND_SERVICE, CHOIR_PRACTICE, WEDDING]

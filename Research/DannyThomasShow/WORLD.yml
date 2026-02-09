@@ -67,3 +67,60 @@ world:
       - tone
       - rules
       - cultural_blend
+
+  simulate:
+    # Speed-of-Light: how many turns per LLM call
+    speed_of_light:
+      max_turns_per_call: 8
+      max_characters_per_turn: 5
+      # Danny's world is louder — more people talking at once
+
+    epochs:
+      morning:
+        starts: 7:00AM
+        ends: 12:00PM
+        tone_shift: family_breakfast_chaos
+        typical_locations: [williams-apartment, kitchen, kids-rooms]
+      afternoon:
+        starts: 12:00PM
+        ends: 5:00PM
+        tone_shift: kathy_manages_danny_rehearses
+        typical_locations: [williams-apartment, copa-club, new-york-streets]
+      pre_show:
+        starts: 5:00PM
+        ends: 8:00PM
+        tone_shift: getting_ready_anticipation_builds
+        typical_locations: [copa-club, backstage, dannys-den]
+      show_time:
+        starts: 8:00PM
+        ends: 11:00PM
+        tone_shift: spotlight_on_danny_becomes_DANNY
+        typical_locations: [copa-club, stage]
+      late_night:
+        starts: 11:00PM
+        ends: 1:00AM
+        tone_shift: danny_comes_home_exhausted
+        typical_locations: [williams-apartment, living-room, building-lobby]
+        # The door opens. Kathy is still up.
+        # "How was the show?" "You wouldn't believe..."
+
+    tick_config:
+      duration: 10_minutes_world_time
+      # Danny's world moves faster than Mayberry
+      actions_per_tick: 1
+      evaluation_order: highest_scoring_ad_first
+      interruption_probability: 0.3
+      # 30% chance any action gets interrupted
+      # Because the doorbell is always ringing
+
+    persistence:
+      log: LOG.md
+      transcript: TRANSCRIPT.md
+      state_files: "**/*.yml"
+      save_frequency: every_epoch_boundary
+
+    reading_protocol:
+      cold_start: GLANCE.yml
+      warm_start: CARD.yml
+      deep_dive: "*.md"
+      order: [GLANCE, CARD, SKILL, README]

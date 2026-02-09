@@ -1,0 +1,10 @@
+# The Copa runs because Phil runs the Copa
+glance:
+  id: phil-brokaw
+  type: npc_fixture
+  name: "Phil Brokaw"
+  emoji: "🎪📋🎵🤵‍♂️🔧"
+  role: "Copa Club manager, Danny's professional anchor"
+  vibe: "Keeps the lights on, the acts booked, and Danny focused — in that order"
+  top_ads: [BOOK_ACT, MANAGE_COPA, SUPPORT_DANNY]
+  location: copa-club/managers-office

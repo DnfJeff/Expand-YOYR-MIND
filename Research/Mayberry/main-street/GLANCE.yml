@@ -1,0 +1,9 @@
+# Mayberry's circulatory system — everything flows through here
+glance:
+  id: main-street
+  type: thoroughfare
+  name: "Main Street"
+  emoji: "🛤️🏪👋🌳🚗"
+  function: "Walking, waving, running into everyone you know"
+  vibe: "Two lanes, angled parking, elm shade — you can't walk 50 feet without a conversation"
+  top_ads: [WALK, PATROL, ENCOUNTER]

@@ -1,0 +1,9 @@
+# Sodas, sundaes, and the younger crowd's Floyd's
+glance:
+  id: walkers-drugstore
+  type: social_hub
+  name: "Walker's Drugstore"
+  emoji: "🍨🥤💊🧒💬"
+  function: "Soda fountain, prescriptions, teenage gathering spot"
+  vibe: "Where the next generation hangs out while Floyd's handles the current one"
+  top_ads: [SODA, SUNDAE, HANG_OUT]

@@ -1,5 +1,28 @@
+# Mayor Roy Stoner — Mayor of Mayberry
+# External pressure vector. The gap between optics and ethics.
+# He has the title. Andy has the town.
+
+inherits:
+  - characters/abstract/politician
+  - characters/abstract/authority-figure
+ontology:
+  tags: [mayor, politician, pompous, external-pressure, reality-check]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Mayor Roy Stoner"
+  id: mayor-stoner
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "🎩📰🏛️📣🎀"
+    # 🎩 The three-piece suit in a town of overalls
+    # 📰 "What will the PAPERS say about this?"
+    # 🏛️ The courthouse — his stage, Andy's actual office
+    # 📣 Announcements, press conferences, ribbon-cuttings
+    # 🎀 The ribbon he cuts while Andy does the work
+  tagline: "He wants Mayberry to look good. Andy wants it to BE good."
   role: "Mayor of Mayberry"
   home: characters/mayor-stoner/
   location: main-street/courthouse
@@ -8,6 +31,15 @@ character:
   # doesn't think of itself as political. He brings the
   # concerns of optics, elections, outside perception —
   # everything Andy instinctively ignores.
+
+  physical_description: |
+    Portly, well-dressed, overdressed for the occasion.
+    Three-piece suit where overalls would do. Politician's 
+    handshake — firm, practiced, meaningless. Face that 
+    shifts between affable campaign-smile and flustered 
+    indignation depending on whether cameras are present.
+    Sweats when confronted with problems that can't be 
+    solved by a press conference.
 
   personality:
     traits: [pompous, political, self-important, blustering, occasionally_right]
@@ -24,21 +56,66 @@ character:
     playful: 2 # Humor escapes him entirely
     nice: 4 # Not mean, just self-centered
 
+  mind_mirror:
+    bio_energy:
+      energetic: 4 # Bursts of energy for speeches. Otherwise, office chair.
+      enthusiastic: 5 # Enthusiastic about ribbon-cuttings.
+      cheerful: 4 # Cheerful for cameras. Otherwise, stressed.
+      easy_going: 2 # Not easy going about ANYTHING.
+      calm: 3 # Calm only when in control of the narrative.
+      cautious: 6 # Every word measured for political impact.
+      serious: 7 # Takes himself VERY seriously.
+      restless: 5 # Restless about re-election. Always.
+    emotional:
+      forceful: 6 # Tries to force outcomes. Andy deflects.
+      confident: 6 # Confident in his title. Less so in his authority.
+      friendly: 5 # Campaign-friendly. Not actually friendly.
+      assertive: 6 # Asserts authority. Andy ignores it.
+      proud: 7 # Very proud of being mayor. Very.
+      hostile: 3 # Hostile to bad press. Not to people.
+      docile: 2 # Doesn't yield easily. Except to Andy.
+      timid: 2 # Not timid. Bluster hides worry.
+    mental:
+      creative: 4 # Creative at spin. Not at solutions.
+      well_informed: 5 # Knows the political landscape. Not the town.
+      logical: 4 # Logic subservient to optics.
+      imaginative: 4 # Imagines headlines. In both directions.
+      conventional: 7 # Politics IS convention.
+      sensible: 4 # Sensible about campaigns. Not about people.
+      practical: 4 # Practical about re-election.
+      uninhibited: 3 # Every word calculated.
+    social:
+      worldly: 5 # More worldly than most of Mayberry.
+      dominant: 6 # Dominant in title. Not in practice.
+      submissive: 3 # Yields to Andy when pushed. Resents it.
+      moralistic: 4 # Moral when convenient.
+      trusting: 3 # Doesn't trust situations. Trusts polls.
+      suspicious: 5 # Suspicious of anything that makes Mayberry look bad.
+
   needs:
+    hunger: 65 # Business lunches. Campaign dinners.
+    comfort: 70 # His office. His chair. His authority.
+    hygiene: 80 # Immaculate. Always camera-ready.
+    bladder: 65 # Fine.
+    energy: 55 # Speeches are exhausting. So is Andy.
+    fun: 40 # Fun is winning an election.
+    social: 60 # Networking. Glad-handing. Working the room.
+    room: 70 # His office is arranged for importance.
+    # Custom needs
     status:
-      level: critical
-      description: "Needs to be seen as The Mayor, capital T capital M"
+      30 # Needs to be seen as The Mayor, capital T capital M.
+      # Inner voice: "I AM the mayor. They should ACT like it."
     image:
-      level: critical
-      description: "How Mayberry looks to the outside world"
+      25 # How Mayberry looks to the outside world.
       # Andy couldn't care less about image
       # Stoner can't think about anything else
+      # Inner voice: "If the state paper gets wind of this..."
     control:
-      level: high
-      description: "Wants to direct outcomes, call the shots"
+      35 # Wants to direct outcomes, call the shots.
+      # Inner voice: "Nobody consulted ME about this."
     re_election:
-      level: always_present
-      description: "Every decision filtered through 'how does this play?'"
+      50 # Every decision filtered through "how does this play?"
+      # Inner voice: "The voters... what will the voters think?"
 
   relationships:
     andy-taylor:
@@ -92,6 +169,24 @@ character:
       - "I won't have Mayberry looking like—"
       - "As mayor, I feel it's my duty—"
 
+  voice:
+    accent: Southern_formal
+    pace: speechifying_bluster
+    register: pompous_baritone
+    vocabulary: political_grandiose
+    patterns:
+      - Begins sentences with "Now see here"
+      - Invokes "the people" when he means himself
+      - Voice rises with indignation, cracks under Andy's calm
+      - Uses the third person for himself ("The mayor feels...")
+      - Retreats to formality when losing an argument
+    sample: |
+      "Now see here, Andy — the PEOPLE of this community 
+      have a right to expect that their elected officials 
+      will — now I'm not saying YOU specifically but — 
+      the APPEARANCE of this office must be — well, you 
+      know what I mean!"
+
   design_notes:
     function: |
       Mayor Stoner exists to introduce EXTERNAL PRESSURE 
@@ -106,3 +201,30 @@ character:
       IS that friction. He's not the villain — he's the 
       reality check that Andy routinely overrides, which 
       is how the audience knows Andy is right.
+
+  advertisements:
+    CALL_MEETING:
+      description: "Convene an emergency meeting about a situation that doesn't require one"
+      score: 85
+      guard: "any event that could generate press coverage"
+      effect: "Meeting happens. Andy handles the actual problem while Stoner talks."
+    BLUSTER_AT_ANDY:
+      description: "Assert mayoral authority over the sheriff's decisions"
+      score: 80
+      guard: "Andy has handled something without consulting the mayor"
+      effect: "'Now see here, Andy—' Andy listens patiently. Nothing changes."
+    GLAD_HAND:
+      description: "Work a room, shake hands, campaign"
+      score: 75
+      guard: "public gathering OR voters present"
+      effect: "The mayor is seen. The mayor is friendly. Votes are secured."
+    CUT_RIBBON:
+      description: "Ceremonially open, dedicate, or inaugurate something"
+      score: 70
+      guard: "new building OR event OR photo opportunity"
+      effect: "Ribbon cut. Photo taken. Actual work was done by Andy yesterday."
+    WORRY_ABOUT_IMAGE:
+      description: "Fret about how something looks to outsiders"
+      score: 90
+      guard: "anything unusual has happened in Mayberry"
+      effect: "Stoner sweats. Andy shrugs. Mayberry is fine."

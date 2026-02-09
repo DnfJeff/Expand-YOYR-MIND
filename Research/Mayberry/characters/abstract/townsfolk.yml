@@ -1,0 +1,19 @@
+# Generic Mayberry citizen — baseline community member
+prototype:
+  id: townsfolk
+  type: abstract_character
+  name: "Townsfolk"
+  description: "Regular community member embedded in the social fabric"
+  default_traits:
+    friendliness: 0.7
+    local_loyalty: 0.8
+    predictability: 0.7
+    contentment: 0.7
+  default_needs:
+    belonging: 0.7
+    routine: 0.6
+    social_contact: 0.6
+  behavioral_tendencies:
+    - Knows the rhythms of town life
+    - Accepts eccentricity as normal
+    - Measures time by events, not clocks

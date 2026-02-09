@@ -1,0 +1,9 @@
+# Danny's inner sanctum — he is never alone here for long
+glance:
+  id: dannys-den
+  type: private
+  name: "Danny's Den"
+  emoji: "📝🎤📞🚪😰"
+  function: "Writing material, business calls, hiding from domestic situations"
+  vibe: "Danny retreats here. Kathy gives him ten minutes. Then opens the door."
+  top_ads: [WORK_ON_MATERIAL, PHONE_CALL, HIDE]

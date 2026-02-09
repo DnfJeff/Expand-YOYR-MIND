@@ -1,0 +1,37 @@
+# Mayberry Church — Spiritual Center
+# Sunday mornings. Wednesday evenings. The community's soul.
+
+inherits:
+  - locations/abstract/sacred-space
+ontology:
+  tags: [church, worship, community, Sunday, choir, sermons, weddings]
+  framing: spiritual_communal
+
+skill:
+  name: "Mayberry Church"
+  id: church
+  location: church
+
+  advertisements:
+    ATTEND_SERVICE:
+      description: "Sunday morning worship — the whole town dressed up"
+      score: 85
+      guard: "time is Sunday morning AND character is a churchgoer"
+      effect: "spiritual +30, social +20, community +25. Sermon heard. Neighbors seen."
+      satisfies: [spiritual, social, routine, community]
+
+    CHOIR_PRACTICE:
+      description: "The choir rehearses — Clara and Bee compete for soprano dominance"
+      score: 70
+      guard: "time is Wednesday evening AND choir members present"
+      effect: "creativity +15, social +20, competition +10. Notes hit and missed."
+      satisfies: [creativity, social, competition]
+      # Clara and Bee in the same choir: detente with sheet music
+
+    WEDDING:
+      description: "A Mayberry wedding — the whole town attends"
+      score: 95
+      guard: "wedding is scheduled AND couple is present"
+      effect: "community +40, joy +30, social +25. Everybody cries. Bee most of all."
+      satisfies: [community, celebration, joy]
+      frequency: rare_but_significant

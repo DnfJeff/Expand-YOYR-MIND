@@ -1,3 +1,20 @@
+framing:
+  context: domestic_sovereign
+  behavioral_expectation: bees_rules_bees_kitchen
+  conflict_style: food_as_weapon_and_peace_offering
+
+ambient_ads:
+  - id: SOMETHING_COOKING
+    description: "The stove is always on — Bee is always ahead of mealtime"
+    score: 0.3
+    always_on: true
+    effect: "Food smell anchors every scene"
+  - id: KITCHEN_TRUTH
+    description: "Honest conversations happen while hands are busy"
+    score: 0.2
+    always_on: true
+    effect: "Characters say things they wouldn't say facing each other"
+
 room:
   name: "Taylor Kitchen"
   type: domestic

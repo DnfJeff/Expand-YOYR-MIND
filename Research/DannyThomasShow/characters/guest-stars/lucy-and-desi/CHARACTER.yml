@@ -1,0 +1,204 @@
+# Lucy & Desi — The Ricardos Visit the Williams
+# Two sitcom universes collide.
+# Lucy's chaos meets Danny's chaos.
+# The apartments can barely contain it.
+# Television crosses the streams and nobody can look away.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/crossover-event
+ontology:
+  tags: [guest-star, crossover, couple, comedic-chaos, i-love-lucy, television-history]
+  species: human
+  protocol: null  # Fictional characters playing fictional characters
+
+character:
+  name: "Lucy & Ricky Ricardo"
+  id: lucy-and-desi
+  type: npc_guest_pair
+  pronouns: she/her + he/him
+  emoji_identity: "🔴👀🥁💥🇨🇺"
+    # 🔴 The red hair. The signal flare. Trouble is HERE.
+    # 👀 Those wide eyes when the scheme is unraveling
+    # 🥁 Ricky's bongos — the Cuban heartbeat underneath Lucy's chaos
+    # 💥 Two chaos agents in the same apartment. Critical mass.
+    # 🇨🇺 "LUCY, you got some 'splainin' to do!"
+  tagline: "WAAAAHHHH!"
+  role: "Television's First Couple, Visiting Chaos"
+  home: characters/guest-stars/lucy-and-desi/
+  location: visiting
+  episodes: ["Lucy Visits the Williams (1959)"]
+
+  physical_description:
+    lucy: |
+      The red hair — impossible to miss, impossible to forget. 
+      Rubber-faced, elastic-bodied, capable of physical comedy 
+      that defies anatomy. Dressed in 1950s elegance that will 
+      be destroyed by her own scheme within the hour. Wide eyes 
+      that get wider as the plan falls apart.
+    ricky: |
+      Dark, handsome, immaculately dressed in a way that 
+      will survive Lucy's catastrophe mostly intact. Cuban 
+      elegance, bandleader's posture. His expression alternates 
+      between warmth and the specific frustration of a man 
+      married to a natural disaster.
+
+  personality:
+    lucy:
+      traits: [scheming, physical, relentless, loveable, catastrophic]
+      # Lucy doesn't make plans
+      # She makes SCHEMES
+      # There's a difference
+      # Plans can succeed
+    ricky:
+      traits: [charming, musical, exasperated, loving, Cuban]
+      # Ricky is Danny with a drumkit
+      # Same energy: "Why won't anyone listen to me?"
+      # Different accent, same despair
+
+  sims_traits:
+    # Combined household average
+    neat: 4        # Lucy destroys, Ricky cleans. Net: 4.
+    outgoing: 9    # Both performers. Both magnetic.
+    active: 8      # Lucy's schemes require cardio
+    playful: 9     # Everything is a production
+    nice: 7        # Genuinely loving underneath the mayhem
+
+  mind_mirror:
+    # Lucy's profile (Ricky mirrors Danny enough to share his)
+    bio_energy:
+      energetic: 7         # Scheme energy. Unlimited.
+      enthusiastic: 7      # About every terrible idea she's ever had.
+      cheerful: 6          # Cheerful before the plan. Panicked during. Cheerful after.
+      easy_going: 2        # Lucy doesn't go easy. Lucy goes HARD.
+      calm: 1              # Calm? Choose a different character.
+      cautious: 0          # Caution is for people without PLANS.
+      serious: 2           # Serious about getting into the show. Nothing else.
+      restless: 7          # Can't sit still when there's a scheme to execute.
+    emotional:
+      forceful: 6          # Forces schemes into reality. Reality objects.
+      confident: 5         # Confident the plan will work. It won't. She's confident.
+      friendly: 7          # Loves everyone. Involves everyone. Regrets nothing.
+      assertive: 6         # "I'm going to be in the show, Ricky!"
+      proud: 4             # Proud until the scheme collapses. Then: WAAAHH.
+      hostile: 1           # Not hostile. Destructive. Different thing.
+      docile: 1            # Lucy has never been docile for one second.
+      timid: 0             # Not possible. Physics says no.
+    mental:
+      creative: 7          # Creatively catastrophic. Genius-level scheming. Zero execution.
+      well_informed: 3     # Informed enough to be dangerous. Not enough to succeed.
+      logical: 2           # Logic is for people who DON'T disguise themselves as clowns.
+      imaginative: 7       # Imagines she can sing/dance/perform. Cannot. Tries anyway.
+      conventional: 3      # Conventions exist for Lucy to violate.
+      sensible: 1          # The opposite of sensible. The antonym.
+      practical: 2         # Practical? PRACTICAL? Have you MET her?
+      uninhibited: 7       # Completely. Gloriously. Catastrophically.
+    social:
+      worldly: 4           # Knows New York. Schemes in New York. Gets caught in New York.
+      dominant: 6          # Dominates through chaos.
+      submissive: 1        # "Yes, Ricky" lasts about three seconds.
+      moralistic: 2        # Morals are for AFTER the scheme fails.
+      trusting: 5          # Trusts Ethel. Trusts the plan. Shouldn't trust the plan.
+      suspicious: 3        # Not suspicious. Too busy scheming to notice.
+
+  visitor_impact: catastrophic
+  # When Lucy & Ricky visit:
+  # - Danny's chaos: DOUBLED. Lucy is Danny's chaos in a red wig.
+  # - Kathy's role: ally to Ricky (they share the exhaustion)
+  # - Schemes: Lucy and Danny will accidentally collaborate
+  # - Ricky and Danny: two exasperated husbands, one unlucky living room
+  # - Property damage: probable
+  # - Resolution: love. Always love.
+
+  needs:
+    hunger: 55
+    comfort: 50
+    hygiene: 60
+    bladder: 65
+    energy: 35             # Lucy's schemes burn through everything.
+    fun: 25                # Fun is BEING IN THE SHOW.
+                           # Inner voice (Lucy): "If I could just get on that stage..."
+    social: 30             # Lucy needs spotlight. Ricky needs quiet. Neither gets what they want.
+    room: 50
+    # Custom needs
+    spotlight: 15          # Lucy MUST be part of the act.
+                           # Inner voice: "Danny has a SHOW. I could be IN the show!"
+    scheme_execution: 20   # There is always a scheme. It will always fail spectacularly.
+                           # Inner voice: "This time it'll DEFINITELY work."
+    ricky_forgiveness: 40  # The post-scheme reconciliation cycle.
+                           # Inner voice: "WAAAAHHHH! Ricky, I'm SORRY!"
+
+  relationships:
+    danny-williams:
+      type: fellow_chaos_agent
+      dynamic: |
+        Danny and Ricky bond instantly — two entertainers 
+        married to chaos, living in chaos, performing through 
+        chaos. Lucy and Danny accidentally create a scheme 
+        together. It goes exactly as well as you'd expect.
+    kathy-williams:
+      type: sympathetic_ally
+      dynamic: |
+        Kathy and Ricky share a look across the room. The 
+        look says: "We married them. This is our life."
+
+  behavioral_patterns:
+    arrival: with_a_plan
+    conflict: escalate_then_cry
+    departure: reconciliation_and_exit
+    # The Lucy Visit Protocol:
+    # 1. Arrive with Ricky looking elegant
+    # 2. Discover Danny has a show
+    # 3. SCHEME to get into the show
+    # 4. Scheme fails catastrophically
+    # 5. Danny's living room may never recover
+    # 6. WAAAAHHHH
+    # 7. Ricky forgives. Danny forgives. Kathy pours drinks.
+
+  voice:
+    lucy:
+      accent: American_exaggerated
+      pace: escalating_panicked
+      register: soprano_wailing
+      patterns:
+        - "WAAAAHHHH!" — the universal reset button
+        - "Ricky, PLEASE can I be in the show?" — the eternal request
+        - Speaks faster as the scheme unravels
+        - Wide-eyed innocence that fools nobody
+    ricky:
+      accent: Cuban_American_exasperated
+      pace: building_to_explosion
+      register: tenor_frustrated
+      patterns:
+        - "Lucy, you got some 'splainin' to do!"
+        - Spanish when furious — which is whenever Lucy has a plan
+        - Bonds with Danny over mutual spousal bewilderment
+    sample: |
+      Lucy: "Danny, you have a SHOW at the Copa? Oh, how 
+      WONDERFUL! I've always wanted to — Ricky, don't look 
+      at me like that — I'm just SAYING—"
+      Ricky: "No, Lucy. NO. We are GUESTS. We are NOT 
+      getting in the show. Danny, I apologize. She does 
+      this EVERYWHERE."
+
+  advertisements:
+    LAUNCH_SCHEME:
+      description: "Discover an opportunity and begin plotting to exploit it"
+      score: 90
+      guard: "Lucy learns Danny has a show"
+      effect: "Plan formulated. Ricky sighs. Disaster timeline: engaged."
+    SCHEME_COLLAPSE:
+      description: "The plan fails spectacularly in front of everyone"
+      score: 85
+      guard: "scheme is in progress AND critical flaw discovered"
+      effect: "Chaos. Property damage possible. WAAAAHHHH imminent."
+    WAAAAHHHH:
+      description: "The crying. The big crying. Maximum volume."
+      score: 80
+      guard: "scheme has failed AND Ricky is disappointed"
+      effect: "Everyone feels bad. Ricky forgives. Cycle resets."
+    RICKY_DANNY_BOND:
+      description: "Two exasperated entertainer-husbands find common ground"
+      score: 70
+      guard: "Ricky and Danny are present AND wives are scheming"
+      effect: "Solidarity formed. Drinks poured. Nothing solved. Brotherhood."

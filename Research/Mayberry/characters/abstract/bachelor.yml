@@ -1,0 +1,19 @@
+# Single by circumstance, defined by it — the eligible question mark
+prototype:
+  id: bachelor
+  type: abstract_character
+  name: "Bachelor"
+  description: "Unmarried person in a family-oriented community — walking question mark"
+  default_traits:
+    independence: 0.7
+    romantic_awkwardness: 0.6
+    community_pressure: 0.7
+    hidden_loneliness: 0.5
+  default_needs:
+    companionship: 0.6
+    autonomy: 0.7
+    proving_self_sufficient: 0.6
+  behavioral_tendencies:
+    - Community treats them as a problem to be solved
+    - Displays contentment that may or may not be real
+    - Romantic interest from the town slightly terrifying

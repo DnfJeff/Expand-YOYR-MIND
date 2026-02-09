@@ -1,0 +1,9 @@
+# Potlucks, competitions, and Clara vs. Bee — the eternal battle
+glance:
+  id: fellowship-hall
+  type: community
+  name: "Fellowship Hall"
+  emoji: "🥧🏆🍽️👩‍🍳💪"
+  function: "Potlucks, cooking contests, community meetings"
+  vibe: "Where pies are judged and friendships tested"
+  top_ads: [POTLUCK, COMPETITION, COMMUNITY_MEETING]

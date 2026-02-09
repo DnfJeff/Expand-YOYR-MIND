@@ -1,0 +1,19 @@
+# Unknown quantity — community must decide: threat or guest?
+prototype:
+  id: stranger
+  type: abstract_character
+  name: "Stranger"
+  description: "Person whose true nature is unknown, forcing the community to project meaning"
+  default_traits:
+    mystery: 0.9
+    ambiguity: 0.8
+    watchfulness: 0.7
+    disclosure: 0.2
+  default_needs:
+    assessment_period: 0.7
+    reveal_timing: 0.8
+    narrative_tension: 0.8
+  behavioral_tendencies:
+    - Says less than they know
+    - Community fills silence with assumptions
+    - True nature revealed at dramatically useful moment

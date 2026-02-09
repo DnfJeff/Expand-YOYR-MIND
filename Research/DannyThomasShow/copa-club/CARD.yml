@@ -1,0 +1,35 @@
+# Copa Club — The Professional Home
+# Danny's office is a nightclub. His desk is a microphone.
+
+inherits:
+  - locations/abstract/entertainment-venue
+ontology:
+  tags: [nightclub, copa, entertainment, music, cocktails, showbiz]
+  framing: performance
+
+skill:
+  name: "Copa Club"
+  id: copa-club
+  location: copa-club
+
+  advertisements:
+    ENTER_CLUB:
+      description: "Walk into the Copa — the atmosphere shifts to showbiz"
+      score: 75
+      guard: "character is entering AND copa is open"
+      effect: "identity shift for Danny. Social mode for everyone else."
+      satisfies: [identity, social, entertainment]
+
+    WATCH_SHOW:
+      description: "Audience watches Danny perform — the exchange that pays the bills"
+      score: 80
+      guard: "show is happening AND audience is seated"
+      effect: "entertainment +30, social +20. Laughter. Applause. Danny needs this."
+      satisfies: [entertainment, social]
+
+    NETWORK:
+      description: "Showbiz networking — agents, producers, other acts"
+      score: 65
+      guard: "industry people present AND copa is open"
+      effect: "professional +20, social +15. Deals discussed. Cards exchanged."
+      satisfies: [professional, social]

@@ -1,0 +1,10 @@
+# Every lesson lands. Eventually.
+glance:
+  id: opie-taylor
+  type: npc_resident
+  name: "Opie Taylor"
+  emoji: "🧒🎣⚾🌱💡"
+  role: "Andy's son, moral apprentice, Mayberry's future"
+  vibe: "A boy learning right from wrong one fishing trip at a time"
+  top_ads: [ASK_PA, PLAY, GROW]
+  location: taylor-house/opies-room

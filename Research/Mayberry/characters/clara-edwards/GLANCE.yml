@@ -1,0 +1,10 @@
+# Bee's best friend and worst rival — simultaneously
+glance:
+  id: clara-edwards
+  type: npc_resident
+  name: "Clara Edwards"
+  emoji: "🏆😏🌹🥒👀"
+  role: "Neighbor, frenemy, competition"
+  vibe: "Compliments your pickles with one hand and enters hers in the contest with the other"
+  top_ads: [COMPETE, GOSSIP, ONE_UP_BEE]
+  location: taylor-house

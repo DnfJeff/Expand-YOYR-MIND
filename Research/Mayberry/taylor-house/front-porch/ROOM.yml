@@ -1,3 +1,20 @@
+framing:
+  context: liminal_domestic
+  behavioral_expectation: honesty_and_reflection
+  conflict_style: truth_emerges_at_dusk
+
+ambient_ads:
+  - id: EVENING_SETTLES
+    description: "The day's heat lifts — porch time begins"
+    score: 0.3
+    always_on: true
+    effect: "Characters relax; guards drop; real talk happens"
+  - id: GUITAR_AVAILABLE
+    description: "Andy's guitar leans against the rail"
+    score: 0.2
+    always_on: true
+    effect: "Music can fill any pause"
+
 room:
   name: "Taylor Front Porch"
   type: social

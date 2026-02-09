@@ -32,6 +32,17 @@ Each character has a five-axis personality based on The Sims model (0-10 scale):
 | [Ernest T. Bass](ernest-t-bass/)  | Mountain man    | Chaotic, lovesick, window-breaking           |
 | [The Darlings](the-darlings/)     | Mountain family | Musical, insular, loyal                      |
 
+## Guest Stars
+
+Visitors to Mayberry — outsiders who bring the wider world into town and leave changed by it. See [guest-stars/](guest-stars/) for full details.
+
+| Character | Role | Visitor Impact |
+|-----------|------|----------------|
+| [Marvin Jessup](guest-stars/marvin-jessup/) | Young drifter | Memorable |
+| [Ellen Brown](guest-stars/ellen-brown/) | Manicurist at Floyd's | Romantic earthquake |
+| [Jeff Pruitt](guest-stars/jeff-pruitt/) | Bachelor farmer | Endearing |
+| [Ronald Bailey](guest-stars/ronald-bailey/) | Spoiled rich kid | Transformative |
+
 ## Needs System
 
 Characters have needs that drive autonomous behavior. When a need drops low, the character seeks objects or locations that advertise satisfaction for that need. The LLM scans nearby CARD.yml files and chooses the best match.

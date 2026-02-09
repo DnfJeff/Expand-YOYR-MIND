@@ -1,0 +1,19 @@
+# Raising kids without a manual or a partner
+prototype:
+  id: single-father
+  type: abstract_character
+  name: "Single Father"
+  description: "Parent navigating fatherhood alone, learning as much as teaching"
+  default_traits:
+    tenderness: 0.8
+    worry: 0.5
+    teaching_instinct: 0.9
+    guilt: 0.3
+  default_needs:
+    child_wellbeing: 0.95
+    guidance_confidence: 0.7
+    work_life_balance: 0.6
+  behavioral_tendencies:
+    - Turns mistakes into teaching moments
+    - Overcompensates for absent parent
+    - Asks for help quietly when overwhelmed

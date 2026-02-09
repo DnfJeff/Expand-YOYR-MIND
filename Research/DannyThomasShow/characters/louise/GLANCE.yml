@@ -1,0 +1,10 @@
+# The apartment's operating system — truth-teller in an apron
+glance:
+  id: louise
+  type: npc_resident
+  name: "Louise"
+  emoji: "🏠💪🔪💬✊"
+  role: "Housekeeper, truth-teller, family backbone"
+  vibe: "Chops vegetables and drops truth bombs with equal precision"
+  top_ads: [TRUTH_BOMB, MANAGE_HOUSEHOLD, COOK]
+  location: williams-apartment/kitchen

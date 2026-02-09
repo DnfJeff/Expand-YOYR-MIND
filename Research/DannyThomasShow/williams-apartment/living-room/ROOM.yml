@@ -1,3 +1,21 @@
+framing:
+  context: domestic_theatrical
+  behavioral_expectation: every_conversation_is_a_scene
+  conflict_style: argue_then_reconcile
+
+ambient_ads:
+  - id: CEILING_AVAILABLE
+    description: "The ceiling is always there when Danny needs to address it"
+    score: 0.3
+    always_on: true
+    guard: "danny_is_present"
+    effect: "Danny's ceiling monologues become performance pieces"
+  - id: COUCH_GRAVITY
+    description: "Everyone ends up on or around the couch eventually"
+    score: 0.2
+    always_on: true
+    effect: "Physical proximity forces emotional engagement"
+
 room:
   name: "Williams Living Room"
   type: social

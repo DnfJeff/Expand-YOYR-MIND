@@ -1,3 +1,36 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/educational-ground
+
+defaults:
+  authority: helen-crump
+  tone: structured_with_warmth
+  schedule_bound: true
+  social_register: children_and_teacher
+  moral_context: learning_through_experience
+  # Helen runs everything in this building's orbit.
+  # Even the playground answers to her whistle.
+
+framing:
+  context: educational_structured
+  behavioral_expectation: learning_and_growth
+  conflict_style: lessons_and_consequences
+  # Helen teaches. The children learn.
+  # Sometimes the lesson is in the textbook.
+  # Usually it isn't.
+
+ambient_ads:
+  - id: SCHOOL_RULES
+    description: "Raise your hand. Wait your turn. Respect the teacher."
+    score: 0.2
+    always_on: true
+    effect: "Structure constrains behavior — even Opie follows the rules here"
+  - id: BELL_RHYTHM
+    description: "The school bell marks time — class, recess, dismissal"
+    score: 0.2
+    always_on: true
+    effect: "Time is externally enforced; transitions are sharp"
+
 room:
   name: "Mayberry Schoolhouse"
   type: educational

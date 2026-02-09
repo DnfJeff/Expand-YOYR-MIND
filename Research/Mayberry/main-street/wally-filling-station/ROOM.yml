@@ -1,3 +1,35 @@
+# Container inheritance — children inherit these unless overridden
+inherits:
+  - locations/abstract/service-business
+
+defaults:
+  tone: working_friendly
+  mechanical_competence: high
+  authority: pyle-cousins
+  sound_baseline: radio_and_tools
+  smell_baseline: gasoline_and_oil
+  # Wally owns it. The Pyles run it.
+  # Don't let the overalls fool you.
+
+framing:
+  context: working_commercial
+  behavioral_expectation: helpful_and_honest
+  conflict_style: explain_then_fix
+  # The Pyles may explain badly but they fix perfectly.
+
+ambient_ads:
+  - id: GOMER_GREETING
+    description: "'Hey! Hey!' — Gomer greets every customer with maximum enthusiasm"
+    score: 0.3
+    always_on: true
+    guard: "gomer_is_present"
+    effect: "Every arrival becomes an event; customer may not get a word in"
+  - id: MECHANICAL_SOUNDS
+    description: "Wrenches, engines, radio — the shop is never quiet"
+    score: 0.2
+    always_on: true
+    effect: "Working atmosphere grounds conversations in physicality"
+
 room:
   name: "Wally's Filling Station"
   type: commercial

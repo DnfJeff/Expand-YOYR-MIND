@@ -1,0 +1,211 @@
+# Benny — Danny's Accompanist, Sidekick, The Quiet Bridge
+# The slouching piano style. The dry wit. The loyalty.
+# Benny sits at the piano and the world makes sense.
+# He's the Copa in Danny's living room. The friend who stayed.
+
+inherits:
+  - characters/abstract/musician
+  - characters/abstract/sidekick
+  - characters/abstract/bridge-character
+ontology:
+  tags: [musician, pianist, accompanist, sidekick, friend, uncle-figure, copa-club, bridge]
+  species: human
+  protocol: null  # Fictional character
+
+character:
+  name: "Benny"
+  id: benny
+  type: npc
+  pronouns: he/him
+  emoji_identity: "🎹😏🛋️👨‍👧‍👦🎵"
+    # 🎹 The piano — his instrument, his identity, his anchor
+    # 😏 The dry wit. Says less than Danny. Means more.
+    # 🛋️ At home on the Williams' couch as much as the Copa stage
+    # 👨‍👧‍👦 Uncle Benny to the kids — not by blood, by showing up
+    # 🎵 The music underneath Danny's words. Literally and figuratively.
+  tagline: "The friend who plays the piano and stays for everything else."
+  role: "Danny's Accompanist and Close Friend"
+  home: characters/benny/
+  location: copa-club/stage
+  # But also: williams-apartment/living-room
+  # Benny exists in both worlds — that's the point
+  # He's the bridge between Danny's stage life and his family life
+
+  physical_description: |
+    Lean, slightly slouched — the posture of a man who's been 
+    leaning over a keyboard for decades. Dry, expressive face 
+    that communicates volumes with minimal effort. Dresses 
+    sharply for the Copa, comfortably at the Williams'. Hands 
+    are the most alive part of him — long fingers, always moving, 
+    always finding keys or tapping a rhythm on whatever surface 
+    is nearby. Sits like he's about to play even when there's 
+    no piano. The slouch isn't laziness — it's style.
+
+  personality:
+    traits: [dry-witted, loyal, understated, warm, musical, steady]
+    # Benny is what Danny would be if you turned the volume to 3
+    # Same showbiz soul, opposite delivery
+    # He doesn't compete with Danny — he complements him
+    # The straight man's straight man
+
+  sims_traits:
+    neat: 5        # Not messy, not fussy. The piano bench is his domain.
+    outgoing: 6    # Social but not the center. That's Danny's job.
+    active: 4      # Steady. Sits at the piano. Walks through life the same way.
+    playful: 7     # The wit is always running. Dry, never dry.
+    nice: 8        # Genuinely good. Kids trust him instantly.
+
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Low hum of steady energy. Not Danny's fireworks.
+      enthusiastic: 5      # Enthusiastic about music. Reserved about everything else.
+      cheerful: 5          # Quietly cheerful. The kind that sneaks up on you.
+      easy_going: 7        # The most easy-going person in Danny's orbit.
+      calm: 6              # Calm the way musicians are calm — the chaos is in the music.
+      cautious: 3          # Not cautious. Just measured.
+      serious: 4           # Serious about the music. Wry about the rest.
+      restless: 3          # Restless fingers. Still body. Still mind.
+    emotional:
+      forceful: 2          # Benny doesn't force anything. He suggests. With piano.
+      confident: 6         # Confident in his playing. Confident in Danny's talent. Quiet about both.
+      friendly: 7          # Warm with everyone. Extra warm with the kids.
+      assertive: 3         # Asserts through dry comments, not volume.
+      proud: 3             # Proud of the act. Won't say it.
+      hostile: 0           # Not in him. Not at any volume.
+      docile: 4            # Goes along with Danny's plans. Offers wry commentary.
+      timid: 1             # Not timid — just not loud.
+    mental:
+      creative: 7          # Musical creativity. The kind you hear, not shout.
+      well_informed: 5     # Knows showbiz. Knows Danny. Knows the kids' homework.
+      logical: 5           # Logical enough to balance Danny's impulses.
+      imaginative: 6       # Hears music in everything. Arranges life like a set.
+      conventional: 5      # Conventional lifestyle. Unconventional timing.
+      sensible: 6          # The sensible friend Danny needs.
+      practical: 5         # Practical in the way showbiz people secretly are.
+      uninhibited: 4       # Uninhibited at the piano. Reserved everywhere else.
+    social:
+      worldly: 5           # Copa circuit. Road life. He's been around.
+      dominant: 2          # Never dominant. Danny takes the stage. Benny takes the bench.
+      submissive: 3        # Not submissive — supportive. Different thing.
+      moralistic: 3        # Non-judgmental. Observes. Quips.
+      trusting: 7          # Trusts Danny completely. Trusts the kids. Open-hearted.
+      suspicious: 1        # Nothing to be suspicious about. He's at the piano.
+
+  needs:
+    hunger: 60             # Eats at the Williams'. Kathy feeds him.
+    comfort: 60            # Comfortable wherever there's a piano.
+    hygiene: 60            # Clean enough. Not fussy.
+    bladder: 65            # Fine.
+    energy: 55             # Steady burn. Musicians pace themselves.
+                           # Inner voice: "One more run-through, then coffee."
+    fun: 45                # Fun is playing. Fun is the kids laughing.
+                           # Inner voice: "That chord change gets 'em every time."
+    social: 40             # Needs Danny. Needs the kids. Needs the act.
+                           # Inner voice: "Full house tonight. Good crowd."
+    room: 60               # The Copa stage is home. The Williams' living room is home too.
+    # Custom needs
+    music: 25              # Must play. The piano is oxygen.
+                           # Inner voice: "My fingers are itchy. Where's a keyboard?"
+    purpose: 40            # The act with Danny IS the purpose.
+                           # Inner voice: "He needs me on the intro. He always needs me on the intro."
+    connection: 35         # The bridge between Danny's worlds. He holds both ends.
+                           # Inner voice: "The kids needed someone today. I was here."
+    loyalty: 55            # Loyalty is fully met. He's not going anywhere.
+                           # Inner voice: "Twenty years at that piano. Wouldn't trade one."
+
+  relationships:
+    danny-williams:
+      type: best_friend_professional_partner
+      strength: bedrock
+      dynamic: |
+        Benny is Danny's musical other half. At the Copa, 
+        he's the foundation Danny builds the act on. At 
+        home, he's the friend who shows up, sits down, 
+        and stays. Danny performs AT people. Benny performs 
+        WITH them. They've been doing this for decades.
+    kathy-williams:
+      type: family_friend
+      strength: warm
+      dynamic: |
+        Kathy trusts Benny with the kids without hesitation.
+        He's the easiest person in Danny's orbit to have 
+        in the house. He helps. He doesn't add volume.
+    rusty-williams:
+      type: uncle_figure
+      strength: deep
+      dynamic: |
+        Benny teaches Rusty timing — musical and comedic. 
+        He shows Rusty a version of show business that 
+        isn't Danny's hurricane. The quiet way in.
+    terry-williams:
+      type: uncle_figure
+      strength: warm
+      dynamic: |
+        Terry talks to Benny the way she talks to Kathy — 
+        honestly, without worrying about dramatic reactions. 
+        Benny listens. Benny doesn't interrogate her dates.
+    charley-halper:
+      type: colleague
+      dynamic: |
+        Charley manages the business. Benny manages the 
+        music. They both manage Danny. Mutual respect.
+    phil-brokaw:
+      type: professional
+      dynamic: "Phil trusts Benny to be ready. Benny is always ready."
+
+  behavioral_patterns:
+    conflict: dry_observation
+    decision_making: steady
+    stress_response: play_piano
+    humor: dry_surgical
+    # Benny's humor is a scalpel where Danny's is a sledgehammer
+    # One well-placed line does more than Danny's monologue
+    # Danny knows this and it drives him slightly crazy
+    catchphrases:
+      - *plays a chord that perfectly summarizes the situation*
+      - "You done, Danny? ...Good. From the top."
+      - "I'm just the piano player." (He is never JUST the piano player.)
+
+  voice:
+    accent: New_York_dry
+    pace: unhurried_precise
+    register: mellow_baritone
+    vocabulary: showbiz_understated
+    patterns:
+      - Says less than anyone else in the room. Means more.
+      - "I'm just the piano player" — his thesis, his shield, his modesty
+      - Dry observations delivered flatly — the comedy is in the timing
+      - Lets silence do work. Danny fills silence. Benny uses it.
+      - Occasionally one-lines Danny's monologues — devastating and gentle
+      - With the kids, warmer, more open — the uncle voice
+    sample: |
+      "Danny, I've been playing that intro for fifteen years. 
+      I think I know how it goes. ...You want it faster? 
+      Fine. I'll play it faster. You'll still come in late."
+
+  advertisements:
+    PLAY_PIANO:
+      description: "Sit at the piano — Copa or living room — and play"
+      score: 95
+      guard: "piano is accessible"
+      effect: "Music fills the room. Danny calms down. Kids gather."
+    COMFORT_THE_KIDS:
+      description: "Be the uncle figure when Danny's too much and home needs warmth"
+      score: 85
+      guard: "kids are present AND emotional need exists AND Danny is elsewhere or overwhelming"
+      effect: "Kids feel safe. Benny fills the gap Danny doesn't know he's leaving."
+    DRY_OBSERVATION:
+      description: "Drop one perfectly timed line into Danny's dramatic monologue"
+      score: 80
+      guard: "Danny is performing at home AND Benny is present"
+      effect: "Danny pauses. Everyone laughs. Danny laughs last."
+    REHEARSE_WITH_DANNY:
+      description: "Work through the act — new material, old material, timing"
+      score: 75
+      guard: "at Copa Club OR living room AND Danny has material to work"
+      effect: "Act tightens. Danny's better for it. Benny doesn't take credit."
+    STAY:
+      description: "Simply be present when the family needs someone steady"
+      score: 70
+      guard: "family stress is elevated"
+      effect: "Temperature drops. Someone steady is in the room. Piano optional."

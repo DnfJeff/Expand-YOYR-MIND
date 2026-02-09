@@ -1,0 +1,53 @@
+# Taylor Kitchen — Aunt Bee's Kingdom
+# She who controls the stove controls Mayberry.
+
+inherits:
+  - locations/abstract/domestic-hub
+ontology:
+  tags: [kitchen, cooking, family, meals, cookie-jar, aunt-bee]
+  framing: domestic_nurturing
+
+skill:
+  name: "Taylor Kitchen Activities"
+  id: taylor-kitchen
+  location: taylor-house/kitchen
+
+  advertisements:
+    COOK:
+      description: "Aunt Bee prepares a meal — the Taylor house's primary function"
+      score: 90
+      guard: "aunt-bee is present AND time is approaching mealtime"
+      effect: "hunger +40 (when served), comfort +20, family +15. The kitchen works."
+      satisfies: [nurturing, duty, creativity]
+      participants: [aunt-bee]
+
+    SNEAK_COOKIE:
+      description: "Opie opens the cookie jar quietly — or tries to"
+      score: 75
+      guard: "opie-taylor is present AND cookie-jar has cookies AND aunt-bee is distracted"
+      effect: "fun +20, hunger +10, risk +5. Success rate: 60%. Bee hears: 80%."
+      satisfies: [fun, hunger, mischief]
+      participants: [opie-taylor]
+      # Opie knows exactly how to open it quietly
+      # "Quietly" is relative
+      # Aunt Bee has ears like a bat
+
+    MORNING_COFFEE:
+      description: "Andy and Bee start the day at the kitchen table"
+      score: 80
+      guard: "time is early morning AND andy-taylor is present"
+      effect: "energy +20, comfort +15, family +10. Day starts right."
+      satisfies: [energy, routine, family]
+      participants: [andy-taylor, aunt-bee]
+
+    BEE_PICKLES:
+      description: "Aunt Bee works on her famous/infamous pickles"
+      score: 65
+      guard: "aunt-bee is present AND pickling season OR competitive urge activated"
+      effect: "pride +20, creativity +15. Pickles produced. Quality: debatable. Telling Bee: impossible."
+      satisfies: [pride, creativity, competition]
+      participants: [aunt-bee]
+      # The kerosene cucumbers
+      # Nobody can tell her
+      # Nobody will tell her
+      # Clara's are better and everybody knows

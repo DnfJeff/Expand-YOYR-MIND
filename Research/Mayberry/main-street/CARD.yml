@@ -1,0 +1,38 @@
+# Main Street — Mayberry's Circulatory System
+# Everything flows through here. Everyone passes through here.
+
+inherits:
+  - locations/abstract/thoroughfare
+ontology:
+  tags: [street, thoroughfare, social, walking, shops, community, public]
+  framing: communal_public
+
+skill:
+  name: "Main Street Activities"
+  id: main-street
+  location: main-street
+
+  advertisements:
+    WALK:
+      description: "Walk down Main Street — wave at people, check on shops"
+      score: 65
+      guard: "character is in Mayberry AND character.needs.social < 60"
+      effect: "social +15, energy -5. Everyone you know waves. You wave back."
+      satisfies: [social, movement, routine]
+
+    PATROL:
+      description: "Andy or Barney walk Main Street — the law making itself visible"
+      score: 75
+      guard: "(andy-taylor OR barney-fife) is present AND time is daytime"
+      effect: "duty +20, social +15. Town sees the badge. Town feels safe."
+      satisfies: [duty, order, visibility]
+      participants: [andy-taylor, barney-fife]
+
+    ENCOUNTER:
+      description: "Run into someone you know — because you know everyone"
+      score: 70
+      guard: "character is on Main Street AND another character is on Main Street"
+      effect: "social +10, information exchanged. Five-minute conversation about nothing important."
+      satisfies: [social, connection]
+      # In Mayberry you can't walk 50 feet without running into someone
+      # Every trip is a social event

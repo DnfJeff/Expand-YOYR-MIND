@@ -1,3 +1,15 @@
+framing:
+  context: recreational_developmental
+  behavioral_expectation: play_and_learn
+  conflict_style: kids_sort_it_out
+
+ambient_ads:
+  - id: RECESS_FREEDOM
+    description: "Released from the classroom — energy explodes"
+    score: 0.3
+    always_on: true
+    effect: "Social hierarchies form and reform; Opie mediates like his father"
+
 room:
   name: "School Playground"
   type: outdoor

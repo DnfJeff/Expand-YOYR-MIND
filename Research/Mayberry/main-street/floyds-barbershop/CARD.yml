@@ -1,41 +1,86 @@
+# Floyd's Barbershop — Mayberry's News Bureau
+# One chair. One barber. Every secret in town.
+# The haircut is the cover charge for the intelligence briefing.
+
+inherits:
+  - locations/abstract/social-hub
+ontology:
+  tags: [barbershop, gossip, social-hub, haircut, shave, community, information]
+  framing: communal_grooming
+  # Floyd's is the town's central nervous system.
+  # Information enters through the door
+  # and exits through every other door in Mayberry.
+
 skill:
   name: "Floyd's Barbershop Services"
+  id: floyds-barbershop
   location: main-street/floyds-barbershop
 
   advertisements:
     HAIRCUT:
+      description: "Get a haircut from Floyd — comes with 45 minutes of conversation"
+      score: 80
+      guard: "character.needs.hygiene < 60 OR character wants information OR character wants social contact"
+      effect: "hygiene +25, social +20, fun +10. Character learns 2-3 pieces of town gossip. Accuracy: 40%."
       satisfies: [grooming, social]
-      description: "Get a haircut from Floyd"
-      duration: 30_minutes
-      # Plus however long Floyd talks
-      # So really: 45-90 minutes
+      duration: 30_to_90_minutes
       participants: [floyd-lawson, any]
       side_effects:
         - gossip_exposure
         - mood_boost
+      # Plus however long Floyd talks
+      # So really: 45-90 minutes
+      # Floyd's scissors slow down when the story gets good
+      # The haircut takes exactly as long as the gossip requires
 
     HANG_OUT:
+      description: "Sit in the waiting chairs and listen to Floyd talk"
+      score: 65
+      guard: "character.needs.social < 55 OR character.needs.fun < 50"
+      effect: "social +20, fun +15, boredom -30. Character absorbs town news. May spread it further."
       satisfies: [social, boredom, information]
-      description: "Sit and listen to Floyd talk"
       participants: [any]
       # No purchase necessary
       # Floyd doesn't care — he needs the audience
+      # The waiting chairs are as important as the barber chair
+      # Half of Mayberry's men come here with no intention of getting a haircut
 
     SPREAD_NEWS:
+      description: "Tell Floyd something — guarantee the whole town knows by sundown"
+      score: 75
+      guard: "character has news AND floyd-lawson is present"
+      effect: "social +15, importance +20. News enters Mayberry's gossip network. Propagation: town-wide. Accuracy loss: 60% per retelling."
       satisfies: [social, importance]
-      description: "Tell Floyd something — guarantee it spreads"
       participants: [any, floyd-lawson]
       propagation: town_wide
       accuracy_loss: 60%
       # If you want Mayberry to know something,
       # tell Floyd. If you DON'T want Mayberry to know,
       # do NOT tell Floyd.
+      # There is no in-between.
 
     SHAVE:
-      satisfies: [grooming]
-      description: "Hot lather and a straight razor"
+      description: "Hot lather and a straight razor — Floyd's premium service"
+      score: 70
+      guard: "character.needs.hygiene < 50 AND character trusts floyd"
+      effect: "hygiene +30, comfort +20. Character is clean-shaven and relaxed. Floyd's steady despite the gossip."
+      satisfies: [grooming, comfort]
       participants: [floyd-lawson, any]
       risk: low
       # Floyd's hands shake when he gossips
       # But he's been doing this 40 years
       # The muscle memory compensates
+      # Mostly
+
+    MANICURE:
+      description: "Ellen Brown does your nails at the new station"
+      score: 85
+      guard: "ellen-brown is present AND character is male AND character.needs.social < 70"
+      effect: "hygiene +20, social +25. Character is enchanted. Character's wife is suspicious."
+      satisfies: [grooming, social, romantic_confusion]
+      participants: [any]
+      available_when: ellen-brown in town
+      # This advertisement only exists when Ellen Brown is in Mayberry
+      # When she is, it outscores everything else in the shop
+      # Floyd's never been busier
+      # Floyd's never been more confused about why

@@ -1,3 +1,20 @@
+framing:
+  context: performance_sacred
+  behavioral_expectation: be_brilliant
+  conflict_style: upstaging
+
+ambient_ads:
+  - id: SPOTLIGHT_ON
+    description: "The light finds Danny and everything else disappears"
+    score: 0.5
+    always_on: true
+    effect: "Domestic Danny vanishes; Stage Danny ignites"
+  - id: AUDIENCE_REACTS
+    description: "Every joke gets a response — laughter, silence, or gasp"
+    score: 0.3
+    always_on: true
+    effect: "Real-time feedback loop; Danny adjusts his act in the moment"
+
 room:
   name: "Copa Club Stage"
   type: performance

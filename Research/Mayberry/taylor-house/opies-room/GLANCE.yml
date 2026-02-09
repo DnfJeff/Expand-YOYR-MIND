@@ -1,0 +1,9 @@
+# A boy's world — models, cards, and thinking about what Pa said
+glance:
+  id: opies-room
+  type: private
+  name: "Opie's Room"
+  emoji: "🧒✈️⚾🛏️💭"
+  function: "Play, sleep, process the day's lessons"
+  vibe: "Door cracked, light off — moral lessons land in the dark before sleep"
+  top_ads: [PLAY, SLEEP, THINK_ABOUT_THINGS]

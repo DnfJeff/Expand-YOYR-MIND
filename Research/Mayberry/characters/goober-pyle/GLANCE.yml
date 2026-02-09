@@ -1,0 +1,10 @@
+# Don't let the beanie fool you — the man's a genius with engines
+glance:
+  id: goober-pyle
+  type: npc_resident
+  name: "Goober Pyle"
+  emoji: "🧢🔧😄🚗💪"
+  role: "Mechanic, Gomer's cousin, hidden savant"
+  vibe: "Looks simple, is simple, but put an engine in front of him and he's Mozart with a wrench"
+  top_ads: [CAR_REPAIR, IMITATE, HANG_OUT]
+  location: main-street/wally-filling-station

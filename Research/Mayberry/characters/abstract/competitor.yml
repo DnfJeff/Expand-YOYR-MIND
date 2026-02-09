@@ -1,0 +1,19 @@
+# Life is a contest — and they're keeping score
+prototype:
+  id: competitor
+  type: abstract_character
+  name: "Competitor"
+  description: "Person who turns everything into a competition, especially friendly activities"
+  default_traits:
+    competitiveness: 0.9
+    pride: 0.8
+    skill: 0.7
+    sportsmanship: 0.4
+  default_needs:
+    winning: 0.8
+    recognition: 0.8
+    proving_worth: 0.7
+  behavioral_tendencies:
+    - Keeps score when nobody else is
+    - Turns potlucks into tournaments
+    - Graceful losing is a skill they have not acquired

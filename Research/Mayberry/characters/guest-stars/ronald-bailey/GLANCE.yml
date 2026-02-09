@@ -1,0 +1,10 @@
+# Rich, spoiled, redeemable — if the right person cares enough
+glance:
+  id: ronald-bailey
+  type: npc_guest
+  name: "Ronald Bailey"
+  emoji: "💰😤🧠🚗💢"
+  role: "Spoiled rich kid, arrested, in need of real boundaries"
+  vibe: "His father sends checkbooks instead of love — Andy is the first adult who says no"
+  top_ads: [DEMAND_RELEASE, CRACK_OPEN, SEE_FATHER_CLEARLY]
+  location: main-street/courthouse/jail-cell

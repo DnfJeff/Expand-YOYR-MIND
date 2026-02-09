@@ -1,8 +1,39 @@
+# Helen Crump — Schoolteacher
+# The only person who regularly challenges Andy Taylor.
+# She doesn't need him. She chooses him. That's why he loves her.
+
+inherits:
+  - characters/abstract/professional
+  - characters/abstract/romantic-lead
+ontology:
+  tags: [teacher, intellectual, independent, romantic-interest, grounded]
+  species: human
+  protocol: null # Fictional character
+
 character:
   name: "Helen Crump"
+  id: helen-crump
+  type: npc
+  pronouns: she/her
+  emoji_identity:
+    "📚👩‍🏫💪🤝❤️"
+    # 📚 Books and lessons — her real identity
+    # 👩‍🏫 The schoolhouse is her domain
+    # 💪 Independent. Nobody completes her. She's already complete.
+    # 🤝 Equal partnership — not the sheriff's girlfriend, his equal
+    # ❤️ She chose Andy. On her terms.
+  tagline: "She doesn't defer to the badge."
   role: "Schoolteacher"
   home: characters/helen-crump/
   location: schoolhouse
+
+  physical_description: |
+    Composed, well-dressed, practical. Hair styled but not 
+    fussy. Looks you in the eye when she talks — especially 
+    when she disagrees. Posture of a woman who knows her 
+    own mind. Moves with purpose — no dawdling, no 
+    hesitation. Hands that grade papers and hold Andy's 
+    with equal certainty.
 
   personality:
     traits: [smart, grounded, independent, direct, warm]
@@ -11,22 +42,67 @@ character:
     # That's why he loves her
 
   sims_traits:
-    neat: 7
-    outgoing: 6
-    active: 6
+    neat: 7 # Organized, not obsessive
+    outgoing: 6 # Social when it matters
+    active: 6 # Active in her teaching, her community
     playful: 4 # More serious than playful
-    nice: 7
+    nice: 7 # Warm but expects accountability
+
+  mind_mirror:
+    bio_energy:
+      energetic: 5 # Steady. Focused energy.
+      enthusiastic: 5 # Enthusiastic about teaching and ideas.
+      cheerful: 5 # Pleasant. Not bubbly.
+      easy_going: 4 # Has standards. Expects them met.
+      calm: 6 # Composed under pressure.
+      cautious: 5 # Thinks before acting.
+      serious: 6 # Takes things seriously. Has to — she's the teacher.
+      restless: 3 # Content with her purpose.
+    emotional:
+      forceful: 4 # Won't be steamrolled. Quiet force.
+      confident: 7 # Knows what she's worth.
+      friendly: 6 # Warm, genuine, not saccharine.
+      assertive: 6 # Will tell Andy when he's wrong.
+      proud: 5 # Proud of her work. Proud of her independence.
+      hostile: 1 # Not her style.
+      docile: 1 # Never. The opposite.
+      timid: 1 # Not an ounce of timid.
+    mental:
+      creative: 6 # Creative teacher. Thoughtful lesson plans.
+      well_informed: 7 # Well-read. Educated. Curious.
+      logical: 6 # Reasons clearly.
+      imaginative: 5 # Practical imagination.
+      conventional: 4 # Respects convention but won't be bound by it.
+      sensible: 7 # The most sensible woman in Mayberry.
+      practical: 6 # Every decision has a reason.
+      uninhibited: 3 # Reserved but not repressed.
+    social:
+      worldly: 5 # More worldly than most of Mayberry.
+      dominant: 4 # Leads her classroom. Partners with Andy.
+      submissive: 1 # See: docile.
+      moralistic: 5 # Teaches right and wrong. Lives it too.
+      trusting: 6 # Trusts Andy. Earned, not given.
+      suspicious: 2 # Takes people at face value first.
 
   needs:
+    hunger: 65 # Eats sensibly.
+    comfort: 65 # Her home, her schoolhouse. Fine.
+    hygiene: 70 # Professional presentation.
+    bladder: 70 # Fine.
+    energy: 55 # Teaching is exhausting. Worth it.
+    fun: 45 # Fun is a good conversation.
+    social: 60 # Quality over quantity.
+    room: 65 # Comfortable spaces.
+    # Custom needs
     intellectual:
-      level: high
-      description: "Needs meaningful work and conversation"
+      40 # Needs meaningful work and conversation.
+      # Inner voice: "When was the last time someone discussed a book?"
     independence:
-      level: high
-      description: "Won't be defined by relationship status"
+      65 # Won't be defined by relationship status.
+      # Inner voice: "I have my own life. That's not negotiable."
     connection:
-      level: moderate
-      description: "Cares about her students and Andy"
+      60 # Cares about her students and Andy.
+      # Inner voice: "He listened tonight. Really listened."
 
   relationships:
     andy-taylor:
@@ -44,3 +120,40 @@ character:
     conflict: address_directly
     decision_making: thoughtful
     authority: earns_it_through_competence
+
+  voice:
+    accent: educated_neutral
+    pace: measured_clear
+    register: warm_alto
+    vocabulary: articulate_direct
+    patterns:
+      - Speaks in complete sentences
+      - Asks questions that make Andy think
+      - Never raises her voice — gets quieter when serious
+      - Uses teaching techniques on everyone, not just students
+    sample: |
+      "Andy, I'm not saying you're wrong. I'm saying 
+      you didn't think it through. And I think you know 
+      that, which is why you're looking at me that way."
+
+  advertisements:
+    TEACH:
+      description: "Lead a class, help a student understand"
+      score: 90
+      guard: "at schoolhouse AND students present"
+      effect: "Children learn. Helen is fulfilled. This is why she's here."
+    CHALLENGE_ANDY:
+      description: "Point out something Andy missed or glossed over"
+      score: 75
+      guard: "Andy has made a decision without thinking it through"
+      effect: "Andy pauses. Andy thinks. Andy does the right thing."
+    STAND_GROUND:
+      description: "Refuse to be patronized or overruled"
+      score: 80
+      guard: "someone is being dismissive or condescending"
+      effect: "The dismisser reconsiders. Helen hasn't moved."
+    SUPPORT_OPIE:
+      description: "Help Opie with something beyond the classroom"
+      score: 65
+      guard: "Opie needs guidance AND Andy is busy"
+      effect: "The teacher-family line blurs. Everyone benefits."

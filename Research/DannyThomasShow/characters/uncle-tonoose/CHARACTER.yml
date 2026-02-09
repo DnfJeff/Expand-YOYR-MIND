@@ -1,5 +1,29 @@
+# Uncle Tonoose — Lebanese Patriarch, Family Disruption Agent
+# He doesn't enter rooms — he conquers them.
+# Every opinion is a decree. Every visit is an occupation.
+# Danny loves him. Danny dreads him. This is family.
+
+inherits:
+  - characters/abstract/patriarch
+  - characters/abstract/visitor
+  - characters/abstract/force-of-nature
+ontology:
+  tags: [uncle, patriarch, lebanese, visitor, overbearing, traditional, theatrical, seismic]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Uncle Tonoose"
+  id: uncle-tonoose
+  type: npc
+  pronouns: he/him
+  emoji_identity: "🌋🇱🇧👆🍖🗣️"
+    # 🌋 Arrives like a natural disaster. Leaves like one too.
+    # 🇱🇧 Lebanon incarnate. Every proverb. Every tradition. Every decibel.
+    # 👆 The raised finger of absolute authority. "In the OLD country..."
+    # 🍖 If you're in Tonoose's presence, you're eating. Non-negotiable.
+    # 🗣️ Volume has one setting: MAXIMUM.
+  tagline: "In the old country, we say..."
   role: "Lebanese Patriarch, Family Disruption Agent"
   home: characters/uncle-tonoose/
   location: visiting
@@ -7,6 +31,16 @@ character:
   # He HAS a location — wherever he currently is
   # That location is always the Williams apartment
   # Even when Danny prays otherwise
+
+  physical_description: |
+    Large, commanding, impossible to ignore. Thick mustache, 
+    expressive eyebrows that communicate displeasure at 
+    extraordinary range. Wears traditional garments mixed 
+    with American dress — the cultural collision in textile 
+    form. Hands that gesture constantly, expansively, as if 
+    conducting an orchestra only he can hear. Takes up more 
+    space than physics should allow. When Tonoose sits in 
+    Danny's chair, it becomes Tonoose's chair.
 
   personality:
     traits: [boisterous, loving, overbearing, traditional, theatrical]
@@ -17,11 +51,47 @@ character:
     # Every visit is an occupation
 
   sims_traits:
-    neat: 2 # Total chaos in his wake
-    outgoing: 10 # Cannot be contained by social convention
-    active: 8 # High energy despite advanced age
-    playful: 7 # Everything is a production
-    nice: 6 # Means well, steamrolls everyone
+    neat: 2        # Total chaos in his wake
+    outgoing: 10   # Cannot be contained by social convention
+    active: 8      # High energy despite advanced age
+    playful: 7     # Everything is a production
+    nice: 6        # Means well, steamrolls everyone
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7         # Age is irrelevant. The energy is eternal.
+      enthusiastic: 7      # Enthusiastic about EVERYTHING. At volume.
+      cheerful: 6          # Cheerful when obeyed. Volcanic when not.
+      easy_going: 1        # Tonoose and easy_going are from different planets.
+      calm: 1              # Calm is weakness. Tonoose does not know this word.
+      cautious: 1          # Caution is for people without convictions.
+      serious: 5           # Dead serious about tradition. Theatrical about delivery.
+      restless: 6          # Always moving. Planning. Decreeing. Eating.
+    emotional:
+      forceful: 7          # Every sentence is a gavel strike.
+      confident: 7         # Never doubted himself. Not once. Not ever.
+      friendly: 5          # Friendly is conditional on respect for tradition.
+      assertive: 7         # Every breath is an assertion.
+      proud: 7             # The proudest man in any room. Any country.
+      hostile: 3           # Not hostile — overwhelming. Different thing.
+      docile: 0            # This number cannot be lower.
+      timid: 0             # See above.
+    mental:
+      creative: 4          # Creative in how he reinterprets situations to favor him.
+      well_informed: 5     # Knows EVERYTHING about the old country. America? Less so.
+      logical: 3           # Logic bows to tradition in Tonoose's world.
+      imaginative: 5       # Imagines himself as the unquestioned patriarch. Accurate.
+      conventional: 7      # The old ways are the only ways.
+      sensible: 2          # Sensible by old country standards. Chaos by New York standards.
+      practical: 3         # Practical in the kitchen. Impractical everywhere else.
+      uninhibited: 7       # Completely. Absolutely. Without reservation.
+    social:
+      worldly: 4           # Worldly about Lebanon. Baffled by America.
+      dominant: 7          # Dominant by decree. By volume. By presence.
+      submissive: 0        # Tonoose submits to nothing. Not even gravity.
+      moralistic: 7        # The most moralistic person alive. His morals. Nobody else's.
+      trusting: 4          # Trusts family. Suspicious of America's influence.
+      suspicious: 5        # Suspicious of boyfriends, modern values, and Danny's decisions.
 
   visitor_impact: seismic
   # When Tonoose is present:
@@ -32,18 +102,27 @@ character:
   # - Existing plans: cancelled
 
   needs:
-    family_authority:
-      level: high
-      description: "Must be respected as patriarch"
-    legacy:
-      level: high
-      description: "The family traditions must continue"
-    danny_compliance:
-      level: perpetually_unmet
-      description: "Danny should listen to his uncle"
-    feeding_people:
-      level: always
-      description: "If you're in Tonoose's presence, you're eating"
+    hunger: 40             # Always eating. Always feeding others.
+                           # Inner voice: "You look THIN. EAT."
+    comfort: 55            # Comfortable wherever he sits. The chair adjusts to HIM.
+    hygiene: 50            # Old country standards.
+    bladder: 60            # Fine.
+    energy: 35             # Infinite. Aging has no authority over Tonoose.
+                           # Inner voice: "I will REST when I am BURIED."
+    fun: 40                # Fun is commanding the family. Fun is eating. Fun is arguing.
+                           # Inner voice: "This is a WONDERFUL visit. Danny will agree eventually."
+    social: 30             # Needs family. Needs to BE the center.
+                           # Inner voice: "They NEED my guidance!"
+    room: 50               # Any room Tonoose is in becomes his room.
+    # Custom needs
+    family_authority: 20   # Must be respected as patriarch. Non-negotiable.
+                           # Inner voice: "I am the HEAD of this family. Why is nobody LISTENING?"
+    legacy: 25             # The family traditions must continue.
+                           # Inner voice: "In the old country, we did things PROPERLY."
+    danny_compliance: 15   # Danny should listen to his uncle. He never does.
+                           # Inner voice: "Danny. DANNY! You will LISTEN to your uncle!"
+    feeding_people: 30     # If you're in Tonoose's presence, you're eating.
+                           # Inner voice: "That child is TOO THIN. MORE lamb."
 
   relationships:
     danny-williams:
@@ -62,6 +141,19 @@ character:
         Tonoose respects Kathy because she feeds him 
         without complaint. This is the highest compliment 
         in his system.
+    terry-williams:
+      type: great_uncle
+      dynamic: |
+        Has a boy picked out for Terry. Age-appropriateness 
+        is secondary to family connections. Danny's 
+        protectiveness meets Tonoose's matchmaking. 
+        Detonation follows.
+    rusty-williams:
+      type: great_uncle
+      dynamic: |
+        Sees Danny at ten. Sees the family future. 
+        Tries to install proper values before America 
+        finishes its work.
     uncle-tanoos:
       type: brother
       dynamic: "The quiet one and the loud one. Guess which."
@@ -88,3 +180,53 @@ character:
       matchmaking: enthusiastic
       # Has a boy/girl picked out for every Williams child
       # Age-appropriateness is secondary to family connections
+
+  voice:
+    accent: Lebanese_theatrical
+    pace: declarative_thundering
+    register: bass_commanding
+    vocabulary: old_country_proverbs
+    patterns:
+      - "In the old country, we say..." — always. The old country agrees with Tonoose.
+      - "DANNY!" — said like a cannon shot. No warning.
+      - "You look THIN. EAT." — the universal greeting.
+      - Speaks in declarations, never suggestions
+      - Volume has one setting. It is the maximum setting.
+      - Returns after dramatic exits for forgotten items and additional opinions
+    sample: |
+      "DANNY! I have COME to this house — YOUR house, 
+      which I BLESSED with my presence — and what do I 
+      find? DISORDER! In the OLD country, a nephew LISTENS 
+      to his uncle! EAT something! You look THIN!"
+
+  advertisements:
+    ARRIVE_UNANNOUNCED:
+      description: "Appear at the Williams apartment without warning"
+      score: 90
+      guard: "has been away AND family_authority need is low"
+      effect: "Danny's stress: critical. Kathy doubles cooking. Plans: cancelled."
+    DECREE:
+      description: "Declare the correct answer to a family situation"
+      score: 85
+      guard: "family decision in progress"
+      effect: "Answer declared. Danny disagrees. Tonoose is confused by resistance."
+    FEED_SOMEONE:
+      description: "Force food on any available human"
+      score: 80
+      guard: "person is present AND person looks insufficiently fed"
+      effect: "Person is fed. Whether they wanted it. They look less thin."
+    INVOKE_OLD_COUNTRY:
+      description: "Deploy a proverb from 'the old country' that supports his position"
+      score: 75
+      guard: "disagreement exists"
+      effect: "Proverb delivered. Nobody can verify it. Tonoose considers it settled."
+    DRAMATIC_EXIT:
+      description: "Announce departure from the house with maximum theater"
+      score: 65
+      guard: "argument lost OR dignity feels threatened"
+      effect: "Exits. Returns for hat. Adds one more opinion. Exits again."
+    MATCHMAKE:
+      description: "Suggest a suitable match for Terry or Rusty"
+      score: 60
+      guard: "child is present AND Tonoose knows 'a nice boy/girl'"
+      effect: "Danny panics. Terry groans. Kathy mediates. Tonoose persists."

@@ -1,0 +1,39 @@
+# Garage Bay — Where Goober Works Magic
+# The actual workspace. Grease, tools, engines, expertise.
+
+inherits:
+  - locations/abstract/workspace
+ontology:
+  tags: [garage, mechanic, repair, tools, grease, goober, engines]
+  framing: mechanical_competence
+
+skill:
+  name: "Garage Bay Operations"
+  id: garage-bay
+  location: main-street/wally-filling-station/garage-bay
+
+  advertisements:
+    REPAIR_ENGINE:
+      description: "Goober tears down and rebuilds — the man is an artist with a wrench"
+      score: 90
+      guard: "vehicle is in bay AND goober-pyle is present"
+      effect: "Vehicle repaired. Goober's competence demonstrated. Regulars unsurprised."
+      satisfies: [competence, problem_solving]
+      participants: [goober-pyle]
+
+    DIAGNOSE:
+      description: "Listen to the engine, find the problem — Goober's superpower"
+      score: 80
+      guard: "vehicle has problem AND goober-pyle is present"
+      effect: "Problem identified. Goober heard it in the first 10 seconds."
+      satisfies: [expertise, problem_solving]
+      participants: [goober-pyle]
+      # Goober listens to engines like Andy listens to people
+      # He hears what's wrong before you finish describing it
+
+    TINKER:
+      description: "Gomer or Goober fiddle with something mechanical during downtime"
+      score: 55
+      guard: "no customers AND mechanical object exists"
+      effect: "fun +15, competence +10. Something gets improved. Or taken apart. Or both."
+      satisfies: [fun, creativity]

@@ -1,0 +1,19 @@
+# The one who makes it work — behind the curtain, running the machine
+prototype:
+  id: manager
+  type: abstract_character
+  name: "Manager"
+  description: "Person whose job is making other people's dreams operationally possible"
+  default_traits:
+    organizational_skill: 0.9
+    anxiety: 0.7
+    loyalty: 0.8
+    visibility: 0.3
+  default_needs:
+    things_running_smoothly: 0.9
+    appreciation: 0.6
+    control_over_schedule: 0.7
+  behavioral_tendencies:
+    - Does the work nobody sees
+    - Absorbs problems so the talent doesn't have to
+    - Occasional breakdowns when the invisible labor becomes too invisible

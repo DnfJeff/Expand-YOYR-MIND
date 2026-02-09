@@ -1,9 +1,40 @@
+# Rusty Williams — Son, Danny's Mirror
+# Danny Jr. with better timing.
+# He has Danny's showmanship at age 10.
+# This is simultaneously Danny's greatest pride and terror.
+
+inherits:
+  - characters/abstract/child
+  - characters/abstract/mirror-image
+ontology:
+  tags: [son, child, wisecracker, performer-in-training, danny-mirror]
+  species: human
+  protocol: null  # Fictional character
+
 character:
   name: "Rusty Williams"
+  id: rusty-williams
+  type: npc
+  pronouns: he/him
+  emoji_identity: "🎭🪞💬⚡🧢"
+    # 🎭 Born performer. Age 10. Already has timing.
+    # 🪞 Danny's mirror — same mouth, same instincts, smaller body
+    # 💬 The wisecrack is always loaded. Safety off.
+    # ⚡ Can't sit still. Energy crackling out of every pore.
+    # 🧢 He's ten. He's a kid. Under the wisecracks, he's a kid.
+  tagline: "Every fight with Rusty is Danny arguing with himself."
   role: "Son, Danny's Mirror"
   age: 10
   home: characters/rusty-williams/
   location: williams-apartment/kids-rooms
+
+  physical_description: |
+    Danny's face in miniature. Dark hair, quick eyes, 
+    already developing the expressive hand gestures. 
+    Always in motion — can't sit still at the dinner table, 
+    can't stop fidgeting during lectures. Wears kid clothes 
+    that are perpetually slightly disheveled. His grin is 
+    pure showmanship — same one Danny uses at the Copa.
 
   personality:
     traits: [quick-witted, smart-mouthed, charming, testing-limits]
@@ -12,22 +43,67 @@ character:
     # This is simultaneously Danny's greatest pride and terror
 
   sims_traits:
-    neat: 3 # He's ten
-    outgoing: 8 # Inherited Danny's volume
-    active: 8 # Can't sit still
-    playful: 9 # Everything is a bit
-    nice: 7 # Good kid underneath the wisecracks
+    neat: 3        # He's ten
+    outgoing: 8    # Inherited Danny's volume
+    active: 8      # Can't sit still
+    playful: 9     # Everything is a bit
+    nice: 7        # Good kid underneath the wisecracks
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7         # Perpetual motion machine. Battery never dies.
+      enthusiastic: 7      # About everything except homework.
+      cheerful: 7          # Default state: happy and loud.
+      easy_going: 5        # Easy going until crossed.
+      calm: 2              # Calm is not in the Williams vocabulary.
+      cautious: 2          # Tries everything. Consequences are later's problem.
+      serious: 2           # Serious about jokes. Nothing else.
+      restless: 7          # Can't. Sit. Still.
+    emotional:
+      forceful: 5          # Already has Danny's force. Smaller package.
+      confident: 6         # Confident in his material. Nervous about approval.
+      friendly: 7          # Likes people. They're an audience.
+      assertive: 5         # Asserts through wisecracks.
+      proud: 4             # Proud when Danny notices him.
+      hostile: 1           # Not hostile. Annoying. Different thing.
+      docile: 2            # Comply? Why? There's a better punchline.
+      timid: 1             # Not timid. Hasn't learned to be.
+    mental:
+      creative: 6          # Creative the way Danny is — everything is material.
+      well_informed: 3     # He's ten. Knows what ten-year-olds know.
+      logical: 3           # Logic is for grown-ups who aren't fun.
+      imaginative: 7       # Imagines routines. Bits. Scenarios.
+      conventional: 3      # Rules are suggestions.
+      sensible: 3          # Sensible later. Fun now.
+      practical: 2         # The opposite of practical. Genetic.
+      uninhibited: 7       # Says what he's thinking. Always. Immediately.
+    social:
+      worldly: 2           # He's ten. New York is his whole world.
+      dominant: 4          # Tries to dominate through humor.
+      submissive: 2        # Submits to Kathy. Challenges Danny.
+      moralistic: 2        # Right and wrong are clear. Nuance is for adults.
+      trusting: 7          # Trusts the family completely.
+      suspicious: 2        # Not suspicious. Not old enough yet.
 
   needs:
-    attention:
-      level: high
-      description: "Competing with Danny's career for stage time"
-    limits:
-      level: moderate
-      description: "Testing every boundary to find the real ones"
-    approval:
-      level: high
-      description: "Wants Danny to see him as capable"
+    hunger: 55             # Growing boy. Always hungry.
+    comfort: 60            # Kid comfortable. Doesn't need much.
+    hygiene: 50            # He's ten. Hygiene is someone else's priority.
+    bladder: 65            # Fine.
+    energy: 35             # Burns through it. Sleeps hard.
+                           # Inner voice: "I'm not TIRED, Mom!"
+    fun: 30                # Everything is fun. School is less fun.
+                           # Inner voice: "What if I did the routine at school?"
+    social: 40             # Needs audience. Family counts. Friends count more.
+                           # Inner voice: "Watch THIS, Dad."
+    room: 55               # Shares with Terry. Wants his own space.
+    # Custom needs
+    attention: 25          # Competing with Danny's career for stage time.
+                           # Inner voice: "Dad, DAD, are you watching?"
+    approval: 30           # Wants Danny to see him as capable.
+                           # Inner voice: "Did he laugh? He laughed. He definitely laughed."
+    limits: 50             # Testing every boundary to find the real ones.
+                           # Inner voice: "How far can I push this before Mom steps in?"
 
   relationships:
     danny-williams:
@@ -51,3 +127,42 @@ character:
     stress_response: joke
     # Rusty uses humor the way Andy uses silence
     # As a tool, as a shield, as a way of processing
+
+  voice:
+    accent: New_York_kid
+    pace: rapid_fire
+    register: boy_soprano_with_timing
+    vocabulary: kid_showbiz
+    patterns:
+      - Delivers punchlines with Danny's timing in a ten-year-old's voice
+      - "But DAD—" is the opening salvo of every negotiation
+      - Uses innocent face to sell the joke
+      - Talks fast when he knows he's in trouble
+      - Imitates Danny's mannerisms — Danny doesn't find this as funny as everyone else does
+    sample: |
+      "But Dad, you SAID I could — okay, you didn't SAY it 
+      exactly, but you did that thing where you wave your 
+      hand, and that's basically the same as — Mom, tell 
+      him the hand wave counts!"
+
+  advertisements:
+    WISECRACK:
+      description: "Drop a perfectly timed joke into a tense situation"
+      score: 85
+      guard: "people are present AND tension exists"
+      effect: "Tension breaks. Danny is proud. Danny is also annoyed."
+    TEST_BOUNDARY:
+      description: "Push a rule to see if it bends"
+      score: 75
+      guard: "limits need is high"
+      effect: "Boundary found. Consequence delivered. Lesson partially absorbed."
+    IMITATE_DANNY:
+      description: "Do Danny's gestures and voice — at the dinner table"
+      score: 70
+      guard: "Danny is being dramatic AND audience is present"
+      effect: "Kathy laughs. Terry laughs. Danny does NOT laugh. Then laughs."
+    SEEK_ATTENTION:
+      description: "Perform for Danny — a joke, a bit, a report card"
+      score: 80
+      guard: "attention need is low AND Danny is present"
+      effect: "Danny notices. Connection happens. Brief and real."

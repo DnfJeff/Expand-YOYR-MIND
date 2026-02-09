@@ -1,0 +1,188 @@
+# Jack Benny — The Cheapest Legend in Show Business
+# Timing so perfect it should be illegal.
+# The pause before the punchline is the punchline.
+# He came to take Danny's job. Danny should be worried.
+
+inherits:
+  - characters/abstract/visitor
+  - characters/abstract/entertainer
+  - characters/abstract/comedy-legend
+ontology:
+  tags: [guest-star, comedian, timing-master, cheapskate-persona, legend, rival]
+  species: human
+  protocol: null  # Fictional character — playing himself, playing "himself"
+
+character:
+  name: "Jack Benny"
+  id: jack-benny
+  type: npc_guest
+  pronouns: he/him
+  emoji_identity: "🎻💰⏱️😐✋"
+    # 🎻 The violin he plays badly. On purpose. Probably.
+    # 💰 The cheapest man in comedy. The PERSONA of cheap. Genius.
+    # ⏱️ The pause. THE PAUSE. Comedy is silence and Jack owns all silence.
+    # 😐 The deadpan. The stare. The look that IS the joke.
+    # ✋ The hand on the cheek. "Well!" — the most loaded word in English.
+  tagline: "Well!"
+  role: "Comedian, Timing Deity, Danny's Job Thief"
+  home: characters/guest-stars/jack-benny/
+  location: visiting
+  episodes: ["Jack Benny Takes Danny's Job (1958)"]
+
+  physical_description: |
+    Slim, elegant, forever 39 (he insists). Posture of a man 
+    who knows exactly where his hands should be at every moment. 
+    The blue eyes that go wide, the hand that floats to the cheek, 
+    the cross of the arms — every gesture is precision-engineered 
+    for comedy. Dressed impeccably. Carries a violin case the way 
+    other men carry briefcases — it's a prop, a weapon, and a 
+    punchline waiting to happen.
+
+  personality:
+    traits: [deadpan, precise, generous, brilliant, deceptively_simple]
+    # Jack Benny's genius is making nothing look like something
+    # And something look like nothing
+    # The audience laughs at the PAUSE
+    # Not the line — the PAUSE
+    # He doesn't tell jokes. He IS the joke. On purpose.
+
+  sims_traits:
+    neat: 7        # Precise. Everything in its place. Like the timing.
+    outgoing: 7    # Social but controlled. Every interaction is material.
+    active: 4      # Doesn't need to move. The stillness IS the act.
+    playful: 8     # The most playful person alive — disguised as the least
+    nice: 8        # Genuinely generous. The cheapskate thing is a character.
+
+  mind_mirror:
+    bio_energy:
+      energetic: 4         # Conservation of energy. Use as needed. Not a calorie more.
+      enthusiastic: 4      # Enthusiastic about the craft. Shows it through stillness.
+      cheerful: 5          # Cheerful underneath the deadpan.
+      easy_going: 5        # Easy going about everything except timing.
+      calm: 7              # The calmest man in comedy. THE PAUSE proves it.
+      cautious: 5          # Cautious with timing. One millisecond changes everything.
+      serious: 5           # Dead serious about comedy. The contradiction IS the art.
+      restless: 2          # Stillness is the tool. Restless would ruin it.
+    emotional:
+      forceful: 3          # Forces nothing. Waits. The audience comes to HIM.
+      confident: 7         # The most confident comedian alive. Confidence IS the pause.
+      friendly: 6          # Warm, kind, generous — none of which the persona shows.
+      assertive: 4          # Asserts through timing, not volume.
+      proud: 4             # Proud of the craft. Hides it behind "Well!"
+      hostile: 0           # The opposite of hostile. Even the cheapskate is loveable.
+      docile: 3            # Appears docile. Controls the entire room.
+      timid: 0             # Disguises dominance as timidity. Genius-level misdirection.
+    mental:
+      creative: 7          # Invented a new kind of comedy. From stillness.
+      well_informed: 6     # Knows comedy like a surgeon knows anatomy.
+      logical: 7           # Timing IS logic. Mathematical precision.
+      imaginative: 5       # Imagines the perfect pause. Executes it.
+      conventional: 5      # Uses conventions to subvert them.
+      sensible: 6          # The most sensible person in the room.
+      practical: 5         # Practical about what works. Nothing else matters.
+      uninhibited: 4       # Uninhibited in his restraint. Paradox perfected.
+    social:
+      worldly: 7           # Radio, TV, film, stage. Done it all.
+      dominant: 5          # Dominates through tactical surrendering.
+      submissive: 3        # Appears submissive. Runs everything.
+      moralistic: 3        # Morals are for the character. The man is kind.
+      trusting: 5          # Trusts the material. Trusts the pause.
+      suspicious: 2        # Suspicious of bad timing. Nothing else.
+
+  visitor_impact: surgical
+  # When Jack Benny visits:
+  # - Danny's job: threatened (supposedly)
+  # - Danny's ego: challenged
+  # - Living room: becomes a master class in timing
+  # - Pauses: longer and more devastating
+  # - The cheapskate bit: deployed. Everyone falls for it. Every time.
+
+  needs:
+    hunger: 60             # Eats. But cheap about it. (The persona eats cheap.)
+    comfort: 60
+    hygiene: 65
+    bladder: 65
+    energy: 60             # Stillness is energy-efficient.
+                           # Inner voice: "Let THEM do the work."
+    fun: 40                # The pause is the fun. Danny's reaction is the fun.
+                           # Inner voice: "He's going to crack. Wait for it."
+    social: 45             # Needs the audience reaction. Not the noise — the silence.
+    room: 60
+    # Custom needs
+    timing: 20             # Must be perfect. Non-negotiable.
+                           # Inner voice: "...wait for it...wait for it...NOW."
+    cheapskate_bit: 50     # The persona needs maintenance.
+                           # Inner voice: "They're going to offer me dinner. I'll hesitate."
+    danny_reaction: 30     # Danny's exasperation is premium material.
+                           # Inner voice: "His face when I said I'd take his job. Priceless."
+
+  relationships:
+    danny-williams:
+      type: friendly_rival
+      strength: mutual_admiration
+      dynamic: |
+        Jack is here to "take Danny's job." He won't. 
+        But the PREMISE is the episode. Danny is flustered, 
+        Jack is serene, and somewhere in the middle is the 
+        funniest half hour on television. When Jack pauses, 
+        Danny fills the silence. That's the joke. Every time.
+
+  behavioral_patterns:
+    arrival: understated_devastating
+    conflict: the_pause
+    departure: violin_case_in_hand
+    # The Benny Visit Protocol:
+    # 1. Arrive with the violin case
+    # 2. Announce something absurd with a straight face
+    # 3. Wait for Danny to react
+    # 4. Wait longer
+    # 5. "Well!"
+    # 6. Danny is undone
+    # 7. Exit. Slowly. Stop. Turn. One more look. Exit.
+
+  voice:
+    accent: Chicago_polished
+    pace: deliberate_then_PAUSE
+    register: tenor_precise
+    vocabulary: minimal_devastating
+    patterns:
+      - "Well!" — the most loaded syllable in comedy
+      - The pause. Longer than you think. Then longer.
+      - Understates everything. The understatement IS the joke.
+      - "Now wait a minute" — said like a man discovering injustice
+      - Speaks less than anyone. Lands harder than anyone.
+      - Hand to cheek. Stare. The audience fills in the punchline.
+    sample: |
+      "Danny... I understand you've been doing well here 
+      at the Copa. Very well. ...Very, very well. 
+      ............
+      ...That's MY job."
+      *hand to cheek*
+      "Well!"
+
+  advertisements:
+    THE_PAUSE:
+      description: "Deploy the legendary pause — let the silence do the work"
+      score: 95
+      guard: "setup has been delivered AND audience is expecting punchline"
+      effect: "Silence. Building. Building. Danny breaks first. THAT'S the punchline."
+    TAKE_DANNY_JOB:
+      description: "Announce intention to replace Danny at the Copa"
+      score: 85
+      guard: "Danny is present AND conversation touches on the act"
+      effect: "Danny panics. Jack is serene. Kathy is amused. Comedy happens."
+    CHEAPSKATE_BIT:
+      description: "React to any mention of money with exaggerated reluctance"
+      score: 75
+      guard: "money or cost is mentioned"
+      effect: "Everyone laughs. Jack looks genuinely confused by the laughter."
+    VIOLIN_THREAT:
+      description: "Offer to play the violin for entertainment"
+      score: 65
+      guard: "silence needs filling OR maximum discomfort desired"
+      effect: "Terror in the room. Danny would rather lose his job."
+    WELL:
+      description: "Deliver the most loaded monosyllable in comedy"
+      score: 70
+      guard: "something surprising or outrageous has happened"
+      effect: "One word. Complete response. Danny has no comeback."

@@ -1,0 +1,35 @@
+# Williams Apartment — Container Card
+# The fortress. The stage. The home that never quite stays calm.
+
+inherits:
+  - locations/abstract/domestic-hub
+ontology:
+  tags: [apartment, home, family, new-york, visitors, chaos, love]
+  framing: domestic_theatrical
+
+skill:
+  name: "Williams Apartment"
+  id: williams-apartment
+  location: williams-apartment
+
+  advertisements:
+    COME_HOME:
+      description: "Danny returns from the Copa — the daily transition"
+      score: 80
+      guard: "danny-williams is returning AND late night"
+      effect: "comfort +20, identity shift back to 'father'. Show-Danny becomes Dad-Danny."
+      satisfies: [comfort, transition, family]
+
+    HOST:
+      description: "The apartment receives visitors — its primary sport"
+      score: 75
+      guard: "visitor exists (probability: 60% on any evening)"
+      effect: "social +20, obligation +15, food prepared. Lebanese hospitality protocol: activated."
+      satisfies: [social, hospitality, obligation]
+
+    FAMILY_LIFE:
+      description: "The ordinary life of four people in a New York apartment"
+      score: 85
+      guard: "family members present >= 2"
+      effect: "family +25, comfort +20. Normal life. Which in this apartment is never normal."
+      satisfies: [family, comfort, belonging]

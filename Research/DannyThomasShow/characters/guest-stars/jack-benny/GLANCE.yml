@@ -1,0 +1,10 @@
+# The pause before the punchline — timing as weapon
+glance:
+  id: jack-benny
+  type: npc_guest
+  name: "Jack Benny"
+  emoji: "🎻⏱️💰😐✨"
+  role: "Comedy's timing deity, Danny's job taker"
+  vibe: "Conquers through silence — Danny runs at 100 mph, Benny conquers at zero"
+  top_ads: [THE_PAUSE, CHEAPSKATE_BIT, WELL]
+  location: williams-apartment/living-room

@@ -1,0 +1,31 @@
+# MOOLLM Warm-Start State — Danny Thomas Show
+# This file tracks simulation state between sessions.
+# Updated at every epoch boundary.
+
+state:
+  status: ready
+  
+  current_epoch: null
+  current_tick: 0
+  world_time: null
+  
+  character_locations: {}
+  # Example when running:
+  # danny-williams: copa-club/backstage
+  # kathy-williams: williams-apartment/living-room
+  # terry-williams: williams-apartment/kids-rooms
+  # rusty-williams: williams-apartment/kids-rooms
+  # uncle-tonoose: (not present — visitor, arrives when summoned by narrative)
+  # charley-halper: copa-club/managers-office
+  
+  character_needs: {}
+  
+  relationship_changes: []
+  
+  flags: {}
+  # Example: tonoose_is_visiting: false, show_tonight: true, terry_grounded: false
+  
+  sessions:
+    total: 0
+    last_session: null
+    total_ticks: 0

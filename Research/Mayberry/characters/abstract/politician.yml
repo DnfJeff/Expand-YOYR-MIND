@@ -1,0 +1,19 @@
+# The office, not the person — political identity consumes personal identity
+prototype:
+  id: politician
+  type: abstract_character
+  name: "Politician"
+  description: "Person whose identity is consumed by their elected position"
+  default_traits:
+    self_importance: 0.9
+    actual_power: 0.4
+    speechifying: 0.8
+    accountability: 0.3
+  default_needs:
+    respect: 0.9
+    re_election: 0.8
+    appearance_of_control: 0.8
+  behavioral_tendencies:
+    - Takes credit for things they didn't do
+    - Avoids blame for things they did
+    - Opinions follow public opinion with a two-beat delay

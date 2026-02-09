@@ -1,3 +1,20 @@
+framing:
+  context: public_eatery
+  behavioral_expectation: casual_communal
+  conflict_style: overheard_and_misunderstood
+
+ambient_ads:
+  - id: COUNTER_TALK
+    description: "Side-by-side at the counter, conversations happen sideways"
+    score: 0.3
+    always_on: true
+    effect: "Information shared casually; eavesdropping inevitable"
+  - id: PIE_AVAILABLE
+    description: "There's always pie"
+    score: 0.2
+    always_on: true
+    effect: "Pie anchors any scene; ordering provides social cover"
+
 room:
   name: "Bluebird Diner"
   type: restaurant
