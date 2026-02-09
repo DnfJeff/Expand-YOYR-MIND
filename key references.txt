@@ -1,0 +1,195 @@
+Let me pull the key references from the main README you shared earlier and the designs README:
+
+## **Philosophy & Education (The Foundation)**
+
+**Core Thinkers:**
+1. **Seymour Papert** - Constructionism, Logo, "learn by building"
+   - Book: *Mindstorms* (1980)
+   - Concept: Microworlds, debugging as learning
+   
+2. **Alan Kay** - Smalltalk, "The computer revolution hasn't happened yet"
+   - Dynabook vision, messaging, children programming
+   - Look up: "Doing with Images Makes Symbols" talk
+   
+3. **Marvin Minsky** - Society of Mind, K-lines (knowledge lines)
+   - Book: *The Society of Mind* (1986)
+   - Concept: Frames, agents, K-lines as symbolic activators
+
+**Educational Tech:**
+4. **Ken Kahn** - ToonTalk, AI blocks for Snap!
+   - Book: *The Learner's Apprentice* (generative AI in education)
+   - Work: Bringing LLMs into visual programming
+
+5. **Logo** - The turtle graphics language (1967)
+   - Papert's educational programming language
+   - Learn by commanding a turtle to draw
+
+---
+
+## **Game Design & Simulation (The Practical)**
+
+**Will Wright & The Sims:**
+6. **SimCity** (1989) - Urban planning simulation
+7. **The Sims** (2000) - Life simulation
+   - **SimAntics** - The behavioral VM that runs Sims
+   - Object advertisements, autonomous agents
+   
+8. **Will Wright's Design Philosophy:**
+   - "Simulator Effect" - players imagine more than exists
+   - Procedural systems over scripted content
+   - Emergent behavior from simple rules
+
+**Don Hopkins' Work:**
+9. **Micropolis** - Open source SimCity for OLPC (One Laptop Per Child)
+   - Constructionist education through city simulation
+   
+10. **Pie Menus** - Radial menus Don invented
+    - Faster, more accurate than linear menus
+
+---
+
+## **Interactive Fiction & Virtual Worlds**
+
+**Text Adventures:**
+11. **Colossal Cave Adventure** (1976) - Will Crowther & Don Woods
+    - The first text adventure
+
+12. **Zork** (1977-1979) - Infocom
+    - Gold standard parser-based interaction
+
+13. **MUD** (1978) - Richard Bartle & Roy Trubshaw
+    - First multi-user dungeon
+    - Book: *Designing Virtual Worlds* by Richard Bartle
+
+14. **LambdaMOO** (1990) - Pavel Curtis
+    - Social MUD, spatial programming
+    - Users building the world while inhabiting it
+
+15. **Habitat** (1986) - Chip Morningstar & Randy Farmer
+    - First graphical multiplayer world
+    - Paper: "The Lessons of Lucasfilm's Habitat"
+    - Where the term "avatar" was coined
+
+**Game Design Theory:**
+16. **Warren Robinette** - Atari Adventure (1979), Rocky's Boots (1982)
+    - First graphical adventure, Easter eggs, circuit logic games
+
+---
+
+## **Programming Languages & Systems**
+
+**Prototype-Based:**
+17. **Self Language** - David Ungar
+    - Prototype inheritance (no classes!)
+    - Paper: "It's About Time" - compile when understanding crystallizes
+    
+18. **JavaScript** - Uses prototype inheritance from Self
+
+**Message Passing:**
+19. **Smalltalk** - Alan Kay
+    - Everything is an object, everything is a message
+    
+20. **HyperCard** - Bill Atkinson (1987)
+    - Stacks, cards, buttons, end-user programming
+    - Revolutionary: non-programmers building interactive systems
+
+21. **HyperLook** - Arthur van Hoff & Don Hopkins
+    - HyperCard for NeWS (Sun's PostScript window system)
+
+---
+
+## **Robust Computing**
+
+22. **Dave Ackley** - Robust-First Computing
+    - Movable Feast Machine (MFM)
+    - Paper: "Beyond Efficiency" 
+    - Concept: Survivability over correctness, local repair
+
+---
+
+## **Design Philosophy**
+
+23. **Ian Bogost** - Procedural Rhetoric
+    - Book: *Persuasive Games* (2007)
+    - Games persuade through rules/systems, not just content
+    - "Unholy blend of Will Wright and Aristotle"
+
+24. **Scott McCloud** - Understanding Comics
+    - Book: *Understanding Comics* (1993)
+    - The masking effect: abstract characters, detailed backgrounds
+    - Applied to The Sims character design
+
+25. **Dieter Rams** - Industrial design
+    - "Less but better" - 10 principles of good design
+    - Minimalism, clarity
+
+26. **Ted Nelson** - Xanadu, intertwingled everything
+    - Hypertext visionary
+    - "Everything is deeply intertwingled"
+
+---
+
+## **Human-Computer Interaction**
+
+27. **Doug Engelbart** - NLS, "augmenting human intellect"
+    - The Mother of All Demos (1968)
+    - Mouse, hypertext, collaborative editing
+
+28. **Alan Cypher** - Programming by Demonstration
+    - Book: *Watch What I Do* (1993)
+    - Learn automation by watching users work
+
+29. **Henry Lieberman** - Programming by demonstration, natural programming
+
+30. **Brad Myers** - Natural programming research
+
+---
+
+## **Network Protocols**
+
+31. **Jon Postel** - Robustness Principle (Postel's Law)
+    - RFC 760 (1980)
+    - "Be liberal in what you accept, conservative in what you send"
+
+---
+
+## **Related Projects Don References**
+
+32. **Chuck Shotton** - Kilroy (data flow networks for AI)
+    - WebSTAR (early Mac web server)
+    - Decentralized swarms
+
+33. **Mike Gallaher** - Adversarial Committee methodology
+    - Characters with opposing viewpoints debate
+    - Ensemble of perspectives vs. single voice
+
+34. **Steve Yegge** - Gas Town (project Don critiques)
+    - Shows what NOT to do
+
+---
+
+## **Where to Start Reading:**
+
+**If you want the philosophy:**
+1. Papert - *Mindstorms*
+2. Kay - "Doing with Images Makes Symbols" (YouTube)
+3. Minsky - *The Society of Mind*
+
+**If you want game design:**
+1. Wright - GDC talks on YouTube ("Dynamics for Designers")
+2. Morningstar & Farmer - "Lessons of Lucasfilm's Habitat" (paper)
+3. Bartle - *Designing Virtual Worlds*
+
+**If you want programming:**
+1. Ungar - Self language documentation
+2. Kay - Smalltalk history
+3. Bogost - *Persuasive Games*
+
+**If you want it all:**
+1. Alan Kay's talk: "The Future Doesn't Have to Be Incremental"
+2. Will Wright's GDC talks
+3. The MOOLLM repo itself (learn by doing)
+
+---
+
+Want me to focus on any specific area? Like just the game design stuff, or just the education philosophy?
