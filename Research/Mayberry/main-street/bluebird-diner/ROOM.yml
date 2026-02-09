@@ -1,0 +1,38 @@
+room:
+  name: "Bluebird Diner"
+  type: restaurant
+  atmosphere: |
+    Checkered tablecloths, a counter with stools, the smell 
+    of coffee and bacon from 6 AM until closing. The daily 
+    special is written on a chalkboard by the door. You can 
+    sit at the counter for quick conversation or take a booth 
+    for longer business. Everyone's mug has their name on it.
+
+  exits:
+    out: ../ # Back to Main Street
+    kitchen: kitchen/
+
+  objects:
+    - counter.yml
+    - booths.yml
+    - chalkboard-menu.yml
+    - coffee-maker.yml
+    - pie-case.yml
+
+  ambient:
+    sound: plates_and_conversation
+    smell: coffee_bacon_pie
+    social_gravity: moderate
+    # Not as high as Floyd's but steadier traffic
+    gossip_flow: true
+    gossip_accuracy: 50%
+    # Neutral ground — people talk here but less dramatically
+
+  capacity: 25
+
+  schedule:
+    open: 6:00AM
+    close: 8:00PM
+    breakfast_rush: 7:00-8:30AM
+    lunch_rush: 11:30AM-1:00PM
+    # Andy usually grabs coffee here before the courthouse

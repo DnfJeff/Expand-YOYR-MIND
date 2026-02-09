@@ -1,0 +1,31 @@
+room:
+  name: "Central Park"
+  type: natural
+  atmosphere: |
+    The closest thing to Mayberry in Danny's world. Trees, 
+    paths, benches, and the illusion of open space in the 
+    middle of eight million people. Danny brings the kids 
+    here on Sunday mornings. Rusty runs ahead. Terry walks 
+    beside Kathy. Danny tries to relax and mostly fails.
+
+  exits:
+    streets: ../
+
+  ambient:
+    function: decompression
+    # This is Danny's attempt at a fishing hole
+    # It doesn't work as well because Central Park
+    # has 40,000 other people in it
+    # But the effort matters
+    
+    family_time: weekend
+    # Weekday Danny belongs to the Copa
+    # Weekend Danny belongs to the family
+    # Central Park is where that transfer happens
+    
+    contrast_with_myers_lake: true
+    # Myers Lake: total isolation, two chairs, silence
+    # Central Park: managed nature, crowds, sirens in the distance
+    # Both serve the same need — differently
+    # Both are where fathers and children connect
+    # The geography changes; the function doesn't

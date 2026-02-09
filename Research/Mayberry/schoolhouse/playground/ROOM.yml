@@ -1,0 +1,18 @@
+room:
+  name: "School Playground"
+  type: outdoor
+  atmosphere: |
+    A dirt-and-grass yard with a swing set, monkey bars, 
+    and a baseball diamond worn into the field. The 
+    boundaries are defined by tradition, not fencing. 
+    Beyond the outfield is the road to the lake.
+
+  exits:
+    inside: ../ # Back to schoolhouse
+
+  ambient:
+    function: play_and_social_learning
+    # The playground is where kids practice being people
+    # Alliances form, conflicts arise, lessons get learned
+    # before Helen Crump has to teach them formally
+    age_group: children

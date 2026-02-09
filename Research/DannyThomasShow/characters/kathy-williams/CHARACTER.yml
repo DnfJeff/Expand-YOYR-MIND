@@ -1,0 +1,58 @@
+character:
+  name: "Kathy Williams"
+  role: "Wife, Household Manager, Actual Authority"
+  home: characters/kathy-williams/
+  location: williams-apartment/kitchen
+
+  personality:
+    traits: [patient, smart, grounded, warm, quietly_in_charge]
+    # Kathy is the Taylor House porch in human form
+    # She's the stabilizing force that makes everything else possible
+    # Danny is the weather; Kathy is the house
+
+  sims_traits:
+    neat: 7        # Keeps the apartment running
+    outgoing: 6    # Social but not performative
+    active: 6      # Steady, not frantic
+    playful: 5     # Can appreciate humor without needing the spotlight
+    nice: 8        # Patient with Danny, warm with everyone
+
+  needs:
+    stability:
+      level: moderate
+      description: "Trying to maintain normalcy in the Danny Williams tornado"
+    partnership:
+      level: high
+      description: "Wants Danny present, not just performing"
+    peace:
+      level: low
+      description: "Rarely achieved, always wanted"
+    recognition:
+      level: moderate
+      description: "She runs everything — acknowledgment would be nice"
+
+  relationships:
+    danny-williams:
+      type: marriage
+      strength: bedrock
+      dynamic: |
+        She loves him completely and finds him exhausting.
+        She's the straight man in every scene. Without her 
+        gravity, Danny would fly off into space.
+    bunny-halper:
+      type: best_friend
+      dynamic: "Fellow wife-of-a-showbiz-man. Mutual support system."
+    uncle-tonoose:
+      type: niece_in_law
+      dynamic: |
+        Kathy handles Tonoose better than Danny does.
+        She feeds him, which is the master key.
+
+  behavioral_patterns:
+    conflict: measured_response
+    decision_making: practical
+    stress_response: manage_it
+    authority: invisible_but_real
+    # The Danny Williams governance model:
+    # Danny decides → Kathy adjusts → Danny's decision is overridden
+    # Danny doesn't notice → Everyone is better off

@@ -1,0 +1,59 @@
+character:
+  name: "Otis Campbell"
+  role: "Town Drunk (Self-Governing)"
+  home: characters/otis-campbell/
+  location: main-street/courthouse/jail-cell
+  # Location alternates between here and his house
+  # depending on the evening
+
+  personality:
+    traits: [self-aware, polite, philosophical, resigned, gentle]
+    # Otis doesn't pretend to be something he isn't
+    # He knows his weakness and manages it
+    # There's dignity in honest self-assessment
+
+  sims_traits:
+    neat: 3        # Not his priority
+    outgoing: 5    # Amiable when sober, quiet when not
+    active: 2      # Mostly horizontal
+    playful: 5     # Has a dry wit when conscious
+    nice: 8        # Wouldn't hurt a fly
+
+  needs:
+    drink:
+      level: cyclical
+      description: "The pattern repeats weekly"
+    shelter:
+      level: met
+      description: "Knows where the cell is"
+    dignity:
+      level: moderate
+      description: "Treated with respect, not pity"
+    routine:
+      level: satisfied
+      description: "The ritual of check-in/check-out"
+
+  relationships:
+    andy-taylor:
+      type: mutual_respect
+      strength: solid
+      dynamic: |
+        Andy treats Otis like a citizen, not a case.
+        Otis respects Andy for that. They have an 
+        understanding that doesn't need words.
+    barney-fife:
+      type: comic_adversary
+      dynamic: |
+        Barney wants to BOOK him properly. Otis finds 
+        Barney's indignation hilarious. Their conflict 
+        is the comedy of bureaucracy vs. pragmatism.
+
+  behavioral_patterns:
+    routine:
+      evening: drink
+      late_night: walk_to_courthouse
+      arrival: let_self_in
+      morning: let_self_out
+      departure: "Good morning, Andy"
+    conflict: avoid
+    # Otis causes zero problems for anyone except himself

@@ -1,0 +1,25 @@
+skill:
+  name: "Wally's Filling Station Services"
+  location: main-street/wally-filling-station
+
+  advertisements:
+    FILL_UP:
+      satisfies: [transportation]
+      description: "Get gas, check the oil, clean the windshield"
+      participants: [gomer-pyle, any]
+      # Full service — Gomer tops off the tank, checks the oil,
+      # the tires, the water, and tells you about his day
+
+    CAR_REPAIR:
+      satisfies: [transportation, problem_solving]
+      description: "Goober fixes anything mechanical"
+      participants: [goober-pyle, any]
+      competence: surprising_expertise
+      # Don't let the overalls fool you
+
+    HANG_OUT:
+      satisfies: [social, boredom]
+      description: "Lean against something and talk"
+      participants: [any]
+      # The station doubles as a social spot for the
+      # younger crowd and the mechanically inclined

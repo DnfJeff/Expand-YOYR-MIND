@@ -1,0 +1,38 @@
+skill:
+  name: "Front Porch Activities"
+  location: taylor-house/front-porch
+
+  advertisements:
+    SIT_AND_TALK:
+      satisfies: [social, peace, friendship, reflection]
+      description: "Rock on the porch and talk about the day"
+      participants: [andy-taylor, barney-fife]
+      time: evening
+      depth: deep
+      # This is where subtext becomes text
+      # Where Barney admits he's scared
+      # Where Andy admits he's tired
+      # Where neither has to pretend
+
+    PLAY_GUITAR:
+      satisfies: [peace, creativity, family]
+      description: "Andy picks up the guitar"
+      participants: [andy-taylor, opie-taylor]
+      # No particular song — just playing
+      # Opie sits and listens
+      # Music does what words can't
+
+    EVENING_TEA:
+      satisfies: [comfort, family, routine]
+      description: "Aunt Bee brings out the iced tea"
+      participants: [aunt-bee, any]
+      # The tea is the ritual
+      # The ritual is the love
+
+    TEACH_OPIE:
+      satisfies: [family, duty, growth]
+      description: "Andy and Opie have a conversation about right and wrong"
+      participants: [andy-taylor, opie-taylor]
+      method: socratic
+      # Andy never tells Opie the answer
+      # He asks questions until Opie finds it

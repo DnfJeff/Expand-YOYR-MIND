@@ -1,0 +1,61 @@
+character:
+  name: "Floyd Lawson"
+  role: "Barber"
+  home: characters/floyd-lawson/
+  location: main-street/floyds-barbershop
+
+  personality:
+    traits: [anxious, gossipy, warm, scattered, endearing]
+    # Floyd's mouth runs on autopilot
+    # He doesn't mean to spread rumors — they just escape
+    # He's the town's most honest liar
+
+  sims_traits:
+    neat: 6        # Keeps the shop tidy, personal life less so
+    outgoing: 8    # Talks to everyone, about everything
+    active: 5      # Stays put — the world comes to him
+    playful: 5     # Unintentionally funny
+    nice: 7        # Genuinely likes everyone
+
+  needs:
+    social:
+      level: high
+      description: "Needs constant human contact"
+    security:
+      level: low
+      description: "Worries about everything"
+    purpose:
+      level: satisfied
+      description: "The shop IS his identity"
+    information:
+      level: insatiable
+      description: "Must know everything happening"
+
+  relationships:
+    andy-taylor:
+      type: friend
+      strength: warm
+      dynamic: |
+        Andy is a calming presence. Floyd tells Andy 
+        things and feels better. Andy filters the useful 
+        from the noise.
+    barney-fife:
+      type: friend
+      strength: warm
+      dynamic: |
+        They feed each other's anxiety. Barney brings 
+        crises; Floyd amplifies them. Neither helps.
+    howard-sprague:
+      type: customer_friend
+      dynamic: "Regular. Floyd gives him the same haircut every time."
+
+  behavioral_patterns:
+    conflict: panic
+    decision_making: follow_the_crowd
+    stress_response: talk_faster
+    information_handling: broadcast
+    # Floyd is a human RSS feed with no filter
+    catchphrases:
+      - "Oh... oh, Andy..."
+      - "Well, you know what they say..."
+      - "I heard tell..."

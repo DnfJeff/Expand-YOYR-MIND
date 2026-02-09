@@ -1,0 +1,41 @@
+room:
+  name: "Backstage"
+  type: private
+  atmosphere: |
+    A narrow corridor behind the stage. Danny's dressing 
+    room door has a star on it that Rusty made from 
+    cardboard three years ago. Inside: a mirror with bulb 
+    lights, a rack of jackets, a coffee cup, and a photo 
+    of Kathy and the kids taped to the mirror corner. 
+    This is the transition space — the airlock between 
+    Danny-the-father and Danny-the-entertainer.
+
+  exits:
+    stage: ../stage
+    club: ../  # Into the club floor
+    alley: ../../new-york-streets/theater-district
+
+  objects:
+    - dressing-mirror.yml
+    - wardrobe-rack.yml
+    - cardboard-star.yml
+    - family-photo.yml
+    - coffee.yml
+
+  ambient:
+    function: identity_transition
+    # Before the show: Danny transforms
+    # He adjusts the jacket, checks the mirror,
+    # looks at the family photo, takes a breath
+    # After the show: Danny decompresses
+    # The family photo again — but now it pulls him back
+    
+    pre_show_ritual: true
+    # Every performer has a ritual
+    # Danny's involves the photo, the coffee, and a moment
+    # of absolute stillness — the only stillness in his life
+    
+    post_show_state: relief_and_exhaustion
+    # The show went well (it always does)
+    # Now he goes home
+    # The subway ride is the real transition

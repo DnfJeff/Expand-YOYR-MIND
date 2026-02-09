@@ -1,0 +1,27 @@
+room:
+  name: "Manager's Office"
+  type: office
+  atmosphere: |
+    Phil Brokaw's domain. A desk covered with booking 
+    sheets, contracts, and promotional photos. A phone 
+    that never stops ringing. Framed photos of past 
+    performers on the walls. The business side of 
+    show business — less glamorous, more math.
+
+  exits:
+    club: ../ # Into the club floor
+
+  objects:
+    - desk.yml
+    - phone.yml
+    - booking-calendar.yml
+    - contracts.yml
+    - promotional-photos.yml
+
+  ambient:
+    function: business
+    # The Copa is art in front and spreadsheets in back
+    # Phil handles the spreadsheets
+    # Danny handles the art
+    # Charley Halper shows up here to argue about money
+    occupant: phil-brokaw

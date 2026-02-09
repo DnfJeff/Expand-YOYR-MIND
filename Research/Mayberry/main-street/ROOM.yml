@@ -1,0 +1,32 @@
+room:
+  name: "Main Street"
+  type: thoroughfare
+  atmosphere: |
+    A two-lane road lined with angled parking and storefronts 
+    with awnings. Elms shade the sidewalks. People wave at 
+    passing cars because they know every driver. The pace is 
+    walking speed — nobody rushes on Main Street because 
+    there's nowhere urgent to be.
+
+  exits:
+    north: courthouse
+    east: floyds-barbershop
+    south: wally-filling-station
+    west: walkers-drugstore
+    downtown: weavers-dept-store
+    diner: bluebird-diner
+    bank: mayberry-bank
+    out_of_town_north: ../mt-pilot
+    residential: ../taylor-house
+    lake_road: ../myers-lake
+
+  ambient:
+    sound: birds_and_occasional_cars
+    time_of_day_effects: true
+    # Morning: quiet, shop owners sweeping sidewalks
+    # Midday: busiest, Floyd's chair full, cars at Wally's
+    # Afternoon: slow, heat shimmer on asphalt
+    # Evening: closing up, heading home
+
+  capacity: 30
+  # It's a small town street — never crowded

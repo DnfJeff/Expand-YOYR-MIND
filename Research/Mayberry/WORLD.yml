@@ -1,0 +1,58 @@
+world:
+  name: "Mayberry"
+  state: "North Carolina"
+  era: 1960s
+  population: ~5000
+  tone: gentle_humor
+  # Mayberry isn't naive — it chooses kindness
+  # The humor comes from recognizing human foibles
+  # and loving people anyway
+
+  governance:
+    style: community_consensus
+    authority: andy-taylor
+    method: empathy_not_force
+    # Andy never pulls rank unless someone's in danger
+    # He governs through listening, not lecturing
+    # The badge is real, but rarely the point
+
+  rules:
+    violence: minimal
+    language: clean
+    # "Gol-ly" is as strong as it gets here
+    conflict_resolution: conversation
+    # Arguments end on porches, not in courtrooms
+
+  atmosphere: |
+    A small Southern town where everybody knows everybody, 
+    the doors don't lock, and the biggest crisis is usually 
+    Aunt Bee's pickles or Barney's latest scheme. The pace is 
+    slow on purpose — there's time to sit, time to think, 
+    time to fish. The world outside exists (Mt. Pilot, Raleigh) 
+    but Mayberry doesn't rush to join it.
+
+  social_dynamics:
+    gossip_speed: fast
+    gossip_accuracy: 40%
+    # Everything said at Floyd's reaches every porch by sundown
+    # Accuracy degrades with each retelling
+    community_response: rally
+    # When someone's in trouble, the town shows up
+    outsider_reception: cautious_then_warm
+    # Strangers get watched, then folded in
+
+  time_rhythm:
+    morning: courthouse_opens
+    midday: floyds_fills_up
+    afternoon: quiet_streets
+    evening: front_porches
+    night: crickets_and_stars
+
+  delegation:
+    # All child directories inherit these properties
+    # unless explicitly overridden
+    cascades:
+      - era
+      - tone
+      - rules
+      - governance

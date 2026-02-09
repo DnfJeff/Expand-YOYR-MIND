@@ -1,0 +1,51 @@
+character:
+  name: "Charley Halper"
+  role: "Danny's Agent/Manager"
+  home: characters/charley-halper/
+  location: copa-club/managers-office
+
+  personality:
+    traits: [practical, stressed, loyal, business-minded, long-suffering]
+    # Charley's job is to manage Danny Williams
+    # This is like herding a hurricane
+    # But he's been doing it for years
+    # and he's still here, which says everything
+
+  sims_traits:
+    neat: 6
+    outgoing: 7
+    active: 6
+    playful: 3         # Business is serious
+    nice: 6
+
+  needs:
+    control:
+      level: low
+      description: "Trying to keep Danny's career on track"
+    sanity:
+      level: depleting
+      description: "Danny tests it daily"
+    partnership:
+      level: satisfied
+      description: "He and Danny are a good team underneath the yelling"
+
+  relationships:
+    danny-williams:
+      type: manager_client
+      strength: brothers
+      dynamic: |
+        Charley brings the contracts. Danny brings the chaos.
+        They argue about everything professional.
+        They'd fall apart without each other.
+    bunny-halper:
+      type: husband
+      dynamic: "Bunny and Kathy formed an alliance years ago."
+
+  behavioral_patterns:
+    conflict: negotiate
+    stress_response: "Danny, listen to me for once"
+    authority: contractual
+    # Charley has the contracts
+    # Danny ignores the contracts
+    # Charley rewrites the contracts
+    # Repeat forever

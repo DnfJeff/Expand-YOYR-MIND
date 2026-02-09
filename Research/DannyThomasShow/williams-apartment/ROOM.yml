@@ -1,0 +1,35 @@
+room:
+  name: "Williams Apartment"
+  type: residential
+  floor: 8th
+  building: "Upper West Side co-op"
+  atmosphere: |
+    A spacious New York apartment — large by Manhattan 
+    standards, modest by suburban standards. The hallway 
+    has a coat closet that's always overflowing. Mail 
+    piles up on the side table. The front door has three 
+    locks that Danny forgets to use because someone is 
+    always arriving or leaving.
+
+  exits:
+    living_room: living-room/
+    kitchen: kitchen/
+    den: dannys-den/
+    kids: kids-rooms/
+    lobby: building-lobby/
+
+  residents:
+    - danny-williams
+    - kathy-williams
+    - rusty-williams
+    - terry-williams
+
+  ambient:
+    noise_level: elevated
+    # This is New York — street noise below,
+    # Danny's voice above, kids somewhere in between
+    visitor_probability: high
+    # On any given evening, there's a 60% chance
+    # someone is ringing the doorbell
+    security: three_locks_unused
+    warmth: domestic_chaotic

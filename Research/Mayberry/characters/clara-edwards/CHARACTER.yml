@@ -1,0 +1,45 @@
+character:
+  name: "Clara Edwards"
+  role: "Neighbor, Bee's Frenemy"
+  home: characters/clara-edwards/
+  location: taylor-house
+  # Usually at or near the Taylor house
+
+  personality:
+    traits: [competitive, traditional, opinionated, social, well-meaning]
+    # Clara and Bee love each other
+    # Clara and Bee compete over everything
+    # These are not contradictions
+
+  sims_traits:
+    neat: 9
+    outgoing: 7
+    active: 5
+    playful: 3        # Very serious about competitions
+    nice: 6            # Nice enough, but will win
+
+  needs:
+    status:
+      level: moderate
+      description: "Wants recognition, especially over Bee"
+    social:
+      level: high
+      description: "Church, garden club, everywhere Bee is"
+    winning:
+      level: high
+      description: "Pickle contest, flower show, recipe contests"
+
+  relationships:
+    aunt-bee:
+      type: frenemy
+      strength: deep_complicated
+      dynamic: |
+        They share everything except first place.
+        Clara's pickles won last year. This fact is 
+        a thermonuclear device in every conversation.
+
+  behavioral_patterns:
+    conflict: compete
+    decision_making: measure_against_bee
+    # Clara's internal compass needle always points toward
+    # "what would beat Bee?"

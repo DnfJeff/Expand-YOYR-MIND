@@ -1,0 +1,32 @@
+room:
+  name: "Walker's Drugstore"
+  type: commercial
+  atmosphere: |
+    A long marble counter with spinning stools. Behind it, 
+    Ellie Walker (or her replacement) serves phosphates, 
+    sodas, and sundaes. Glass apothecary jars line the 
+    shelves. The pharmacy is in the back. Teenagers sit 
+    at the counter after school. Adults come for medicine 
+    but stay for conversation.
+
+  exits:
+    out: ../ # Back to Main Street
+    pharmacy: pharmacy/
+
+  objects:
+    - soda-fountain.yml
+    - counter-stools.yml
+    - candy-display.yml
+    - magazine-rack.yml
+    - jukebox.yml
+
+  ambient:
+    sound: jukebox_and_glasses
+    social_register: all_ages
+    # One of the few places where generations mix freely
+    gossip_flow: true
+    gossip_accuracy: 55%
+    # Better accuracy than Floyd's — the pharmacist 
+    # corrects the worst misinformation
+
+  capacity: 15

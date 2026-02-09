@@ -1,0 +1,41 @@
+skill:
+  name: "Floyd's Barbershop Services"
+  location: main-street/floyds-barbershop
+
+  advertisements:
+    HAIRCUT:
+      satisfies: [grooming, social]
+      description: "Get a haircut from Floyd"
+      duration: 30_minutes
+      # Plus however long Floyd talks
+      # So really: 45-90 minutes
+      participants: [floyd-lawson, any]
+      side_effects:
+        - gossip_exposure
+        - mood_boost
+
+    HANG_OUT:
+      satisfies: [social, boredom, information]
+      description: "Sit and listen to Floyd talk"
+      participants: [any]
+      # No purchase necessary
+      # Floyd doesn't care — he needs the audience
+
+    SPREAD_NEWS:
+      satisfies: [social, importance]
+      description: "Tell Floyd something — guarantee it spreads"
+      participants: [any, floyd-lawson]
+      propagation: town_wide
+      accuracy_loss: 60%
+      # If you want Mayberry to know something,
+      # tell Floyd. If you DON'T want Mayberry to know,
+      # do NOT tell Floyd.
+
+    SHAVE:
+      satisfies: [grooming]
+      description: "Hot lather and a straight razor"
+      participants: [floyd-lawson, any]
+      risk: low
+      # Floyd's hands shake when he gossips
+      # But he's been doing this 40 years
+      # The muscle memory compensates

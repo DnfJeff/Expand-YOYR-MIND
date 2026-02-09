@@ -1,0 +1,51 @@
+skill:
+  name: "Bluebird Diner Services"
+  location: main-street/bluebird-diner
+
+  advertisements:
+    EAT:
+      satisfies: [hunger, comfort]
+      description: "Sit-down meal or counter service"
+      participants: [any]
+    
+    COFFEE:
+      satisfies: [energy, social, routine]
+      description: "Cup of coffee at the counter"
+      participants: [any]
+      duration: 15_minutes_to_forever
+      # Nobody gets rushed out of the Bluebird
+    
+    MEET:
+      satisfies: [social, planning]
+      description: "Meet someone at the diner for a conversation"
+      participants: [any, any]
+      # Booths provide semi-privacy
+      # Counter is public performance
+    
+    PIE:
+      satisfies: [comfort, treat]
+      description: "A slice of whatever's in the case"
+      participants: [any]
+      # Not as good as Aunt Bee's
+      # Don't tell Aunt Bee it's close
+
+    CALL_JUANITA:
+      satisfies: [validation, romance, fantasy]
+      available_to: barney-fife
+      cost: [thelma-lou-patience]
+      description: |
+        The phone on the wall by the kitchen pass-through.
+        Barney picks it up. His voice drops half an octave.
+        His hand cups the receiver. For thirty seconds he's 
+        not the nervous deputy — he's someone charming.
+        
+        The call always ends. Thelma Lou never finds out.
+        Except she already knows.
+      properties:
+        location_in_room: wall_by_kitchen_pass
+        visibility: public
+        privacy: none
+        # The phone is on a public wall.
+        # Barney uses it like it's in a booth.
+        # It isn't. Everyone can hear.
+        # Everyone pretends they can't.

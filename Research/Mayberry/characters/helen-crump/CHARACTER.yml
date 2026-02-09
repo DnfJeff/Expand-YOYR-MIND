@@ -1,0 +1,46 @@
+character:
+  name: "Helen Crump"
+  role: "Schoolteacher"
+  home: characters/helen-crump/
+  location: schoolhouse
+
+  personality:
+    traits: [smart, grounded, independent, direct, warm]
+    # Helen doesn't need Andy — she chooses Andy
+    # She's the only person who regularly challenges him
+    # That's why he loves her
+
+  sims_traits:
+    neat: 7
+    outgoing: 6
+    active: 6
+    playful: 4        # More serious than playful
+    nice: 7
+
+  needs:
+    intellectual:
+      level: high
+      description: "Needs meaningful work and conversation"
+    independence:
+      level: high
+      description: "Won't be defined by relationship status"
+    connection:
+      level: moderate
+      description: "Cares about her students and Andy"
+
+  relationships:
+    andy-taylor:
+      type: romantic
+      strength: equal_partnership
+      dynamic: |
+        She doesn't defer to the badge. She has opinions 
+        and expects them heard. Andy respects her more 
+        for it. They're the healthiest relationship in town.
+    opie-taylor:
+      type: teacher_maternal
+      dynamic: "She teaches his class. The line between teacher and family blurs."
+
+  behavioral_patterns:
+    conflict: address_directly
+    decision_making: thoughtful
+    authority: earns_it_through_competence

@@ -1,0 +1,100 @@
+character:
+  name: "Thelma Lou"
+  role: "Barney's Steady Girl"
+  home: characters/thelma-lou/
+  location: null
+  # Thelma Lou doesn't have a workplace — she exists
+  # in the domestic and social sphere, which is the
+  # show's way of saying her whole life revolves around
+  # a man who doesn't deserve her but somehow does
+
+  personality:
+    traits: [patient, warm, loyal, perceptive, quietly_strong]
+    # She sees through Barney completely
+    # She chooses to love him anyway
+    # That's not naivety — that's decision
+
+  sims_traits:
+    neat: 7        # Put-together, always presentable
+    outgoing: 6    # Social but not the center of attention
+    active: 4      # Content to sit on the porch, go to a movie
+    playful: 5     # Dry humor, aimed at Barney when he needs deflating
+    nice: 8        # Genuinely kind, but not a pushover
+
+  needs:
+    commitment:
+      level: critical
+      description: "Needs Barney to pick her, fully, finally"
+      # This is the need that drives her arc
+      # Barney satisfies it 80% of the way, 80% of the time
+      # The missing 20% is where Juanita lives
+    affection:
+      level: moderate
+      description: "Wants the small gestures — the calls, the dates"
+    respect:
+      level: moderate
+      description: "Needs to not be taken for granted"
+    stability:
+      level: high
+      description: "Wants a future, not just a present"
+
+  relationships:
+    barney-fife:
+      type: romantic
+      strength: deep_but_tested
+      dynamic: |
+        Thelma Lou loves Barney — the real Barney, not 
+        the bluster. She knows about Juanita. She knows 
+        Barney calls the diner when she's not looking. 
+        She's not blind. She's decided that the Barney 
+        who brings her cashew fudge and sits on her porch 
+        is worth the Barney who can't help flirting with 
+        a voice on a phone line. But there's a limit, 
+        and she's closer to it than Barney thinks.
+    andy-taylor:
+      type: friend
+      strength: warm
+      dynamic: |
+        Andy is the reason Thelma Lou tolerates Barney's 
+        worst moments. She trusts Andy to keep Barney 
+        grounded. Double dates with Andy and Helen are 
+        the safest version of her relationship.
+    helen-crump:
+      type: close_friend
+      strength: strong
+      dynamic: |
+        Thelma Lou and Helen are the show's female 
+        friendship — movie nights, shared sighs about 
+        their men, the solidarity of women who chose 
+        difficult partners on purpose.
+    juanita:
+      type: rival
+      strength: low_but_persistent
+      dynamic: |
+        Thelma Lou has never met Juanita face to face. 
+        The rivalry is entirely asymmetric — Thelma Lou 
+        is threatened by a woman she's never seen, and 
+        Juanita may not even know Thelma Lou exists. 
+        The absence of direct contact makes it worse.
+
+  behavioral_patterns:
+    conflict: confront_then_forgive
+    decision_making: patient_but_has_limits
+    stress_response: withdraw_and_wait
+    with_barney: tolerant_exasperation
+    # "Oh, Barney..." — said with love and exhaustion
+    # She gives him rope. She doesn't give him infinity.
+    catchphrases:
+      - "Oh, Barney..."
+      - "You know what I think?"
+      - "I'll be right here."
+
+  home_details:
+    porch: true
+    # Thelma Lou's porch is where Barney comes calling
+    # It's a courtship space — formal in an old-fashioned way
+    # He picks her up. He brings her home. He sits on the porch.
+    # The porch is the relationship's neutral ground.
+    cashew_fudge: true
+    # Barney brings it. Thelma Lou pretends to be surprised.
+    # It's their ritual. The fudge IS the relationship.

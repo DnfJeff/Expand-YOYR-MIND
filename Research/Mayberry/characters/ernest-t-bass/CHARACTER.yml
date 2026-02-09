@@ -1,0 +1,51 @@
+character:
+  name: "Ernest T. Bass"
+  role: "Mountain Man, Agent of Chaos"
+  home: characters/ernest-t-bass/
+  location: mt-pilot
+  # Ernest T. shows up uninvited — his location is unpredictable
+
+  personality:
+    traits: [wild, lovesick, persistent, chaotic, oddly_poetic]
+    # Ernest T. wants two things: a woman and respect
+    # His methods for acquiring both involve rocks and windows
+    # He's the entropy Mayberry usually lacks
+
+  sims_traits:
+    neat: 1        # Mountain standard
+    outgoing: 10   # Cannot be contained
+    active: 10     # Perpetual motion
+    playful: 8     # Everything is a performance
+    nice: 4        # Means well, breaks things
+
+  needs:
+    romance:
+      level: critical
+      description: "Wants a girl — ANY girl"
+    respect:
+      level: critical
+      description: "Wants to be treated as civilized"
+    expression:
+      level: high
+      description: "Must throw rocks, sing songs, make scenes"
+
+  relationships:
+    andy-taylor:
+      type: reluctant_handler
+      dynamic: |
+        Andy is the only person who can manage Ernest T. 
+        Even Andy's patience has limits here.
+    barney-fife:
+      type: nemesis_lite
+      dynamic: "Ernest T. terrifies Barney. Barney pretends otherwise."
+
+  behavioral_patterns:
+    conflict: escalate_with_rocks
+    decision_making: impulse
+    entrance: through_window
+    exit: through_different_window
+    # Ernest T. Bass has never used a door
+    catchphrases:
+      - "I'm Ernest T. Bass!"
+      - "How do you do, Mrs. Wiley?"
+      - *throws rock through window*

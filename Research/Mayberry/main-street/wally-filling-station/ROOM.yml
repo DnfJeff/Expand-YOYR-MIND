@@ -1,0 +1,32 @@
+room:
+  name: "Wally's Filling Station"
+  type: commercial
+  atmosphere: |
+    Two gas pumps out front, a garage bay around the side. 
+    The office has a cash register, a rack of road maps nobody 
+    buys, and a coffee pot that's been on since morning. Oil 
+    stains on the concrete tell the history of every car in 
+    Mayberry. Gomer or Goober is always here, usually both.
+
+  exits:
+    out: ../ # Back to Main Street
+    garage: garage-bay/
+
+  objects:
+    - gas-pumps.yml
+    - cash-register.yml
+    - road-maps.yml
+    - coffee-pot.yml
+    - vending-machine.yml
+
+  ambient:
+    sound: radio_and_tools
+    smell: gasoline_and_oil
+    mechanical_competence: high
+    # The Pyle cousins may seem dim but they can rebuild 
+    # any engine in town blindfolded
+
+  occupants:
+    primary: [gomer-pyle, goober-pyle]
+    owner: wally
+    # Wally is rarely seen — the Pyles run the place

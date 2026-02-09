@@ -1,0 +1,31 @@
+room:
+  name: "Taylor House"
+  type: residential
+  atmosphere: |
+    A two-story frame house with white siding and green 
+    shutters. A walkway leads from the sidewalk through a 
+    small front yard to the porch steps. The mailbox says 
+    TAYLOR. There's a basketball hoop to the side that Opie 
+    uses. The house radiates warmth — not architecturally 
+    remarkable, but unmistakably a home.
+
+  exits:
+    porch: front-porch/
+    inside: living-room/
+    kitchen: kitchen/
+    upstairs: opies-room/
+    out: ../main-street # Walk to town
+    neighbor: ../characters/clara-edwards # Clara's next door
+
+  residents:
+    - andy-taylor
+    - opie-taylor
+    - aunt-bee
+
+  ambient:
+    warmth: high
+    smell: whatever_bees_cooking
+    sound: screen_door_spring
+    # That spring on the screen door is the sound of Mayberry
+    safety: absolute
+    # This is the safest place in the safest town

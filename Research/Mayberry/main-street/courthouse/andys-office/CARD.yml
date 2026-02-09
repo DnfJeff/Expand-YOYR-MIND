@@ -1,0 +1,30 @@
+skill:
+  name: "Sheriff's Office Operations"
+  location: main-street/courthouse/andys-office
+  
+  advertisements:
+    # What this room offers to characters with matching needs
+    REPORT_IN:
+      satisfies: [duty, social, information]
+      description: "Report to the sheriff about town business"
+      participants: [andy-taylor, any]
+    
+    SETTLE_DISPUTE:
+      satisfies: [peace, justice, social]
+      description: "Bring a complaint to Andy for resolution"
+      participants: [andy-taylor, any, any]
+      method: conversation
+      # Andy listens to both sides
+      # Then asks a question that makes them see each other's point
+      # Verdict: usually both were a little right
+    
+    FILE_REPORT:
+      satisfies: [duty, order]
+      description: "File an incident report (Barney loves these)"
+      participants: [barney-fife]
+    
+    DRINK_COFFEE:
+      satisfies: [comfort, social]
+      description: "Sit and have a cup"
+      participants: [any]
+      # Half of Mayberry's business gets done over this coffee

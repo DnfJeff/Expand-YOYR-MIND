@@ -1,0 +1,24 @@
+room:
+  name: "Wally's Garage Bay"
+  type: workshop
+  atmosphere: |
+    A concrete-floored garage bay with a hydraulic lift, 
+    tool chests the size of refrigerators, and a radio 
+    tuned to the same station as Floyd's. Parts hang on 
+    pegboard walls in an organization system that only 
+    Goober understands. A bare bulb hangs from the ceiling 
+    on a cord that's been retaped four times.
+
+  exits:
+    out: ../ # Back to filling station
+
+  objects:
+    - tool-chests.yml
+    - hydraulic-lift.yml
+    - parts-wall.yml
+
+  ambient:
+    expertise: goober_domain
+    # Goober in here is a different person
+    # Focused, competent, precise
+    # The mechanical savant emerges

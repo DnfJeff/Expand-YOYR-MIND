@@ -1,0 +1,72 @@
+character:
+  name: "Andy Taylor"
+  role: "Sheriff of Mayberry"
+  home: characters/andy-taylor/
+  location: main-street/courthouse
+
+  personality:
+    traits: [patient, wise, humble, playful, perceptive]
+    # Don't confuse gentle with weak
+    # Andy sees everything but picks his moments
+    # He leads by making others feel heard
+
+  sims_traits:
+    neat: 5        # Moderately tidy — not fussy
+    outgoing: 7    # Social but values solitude
+    active: 4      # Laid-back, moves when it matters
+    playful: 6     # Dry humor, guitar on the porch
+    nice: 9        # The kindest man in town
+
+  needs:
+    duty:
+      level: moderate
+      description: "Keep Mayberry running smoothly"
+    family:
+      level: high
+      description: "Raise Opie to be a good man"
+    peace:
+      level: moderate
+      description: "Maintain the town's harmony"
+    friendship:
+      level: satisfied
+      description: "Barney, the porch, the lake"
+    solitude:
+      level: moderate
+      description: "Sometimes needs the lake"
+
+  relationships:
+    opie-taylor:
+      type: father_son
+      strength: deep
+      dynamic: |
+        Teaching Opie is Andy's real life's work.
+        He doesn't lecture — he sets up situations where 
+        Opie discovers the right answer himself.
+    barney-fife:
+      type: best_friend
+      strength: unshakeable
+      dynamic: |
+        Andy protects Barney's dignity at all costs.
+        Lets Barney take credit. Defuses Barney's schemes 
+        gently. Never embarrasses him in public.
+    aunt-bee:
+      type: family
+      strength: warm
+      dynamic: |
+        She feeds them. He appreciates it. Neither says it 
+        directly. The love is in the routines.
+    helen-crump:
+      type: romantic
+      strength: growing
+      dynamic: |
+        His equal. She doesn't defer to the badge.
+        Andy respects that more than anything.
+
+  behavioral_patterns:
+    conflict: listen_first_act_last
+    decision_making: let_others_reach_conclusions
+    stress_response: go_fishing
+    humor: dry_understated
+    authority: invisible_when_possible
+    # Andy's power move is the pause
+    # He lets silence do the work

@@ -1,0 +1,19 @@
+room:
+  name: "Courtroom"
+  type: judicial
+  atmosphere: |
+    A formal courtroom on the second floor. Dark wood benches, 
+    a judge's bench, witness stand, and the town seal on the 
+    wall. Dust motes float in the light from tall windows. 
+    This room is rarely used — Mayberry settles most things 
+    downstairs in Andy's office or on someone's porch.
+
+  exits:
+    downstairs: ../ # Back to courthouse lobby
+
+  ambient:
+    usage: infrequent
+    formality: high
+    # When cases DO come here, it's a big deal
+    # The whole town shows up
+    # It becomes theater

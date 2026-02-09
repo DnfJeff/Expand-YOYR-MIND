@@ -1,0 +1,82 @@
+character:
+  name: "Juanita"
+  role: "Waitress at the Bluebird Diner"
+  home: characters/juanita/
+  location: main-street/bluebird-diner
+
+  # JUANITA IS NEVER SEEN ON SCREEN.
+  # She exists only as a voice on the phone, a name
+  # spoken in hushed tones, a laugh Barney describes 
+  # but the audience never hears directly.
+  # She is television's most effective absent character.
+
+  personality:
+    traits: [flirtatious, mysterious, unseen, free-spirited]
+    # Everything we know about Juanita comes through 
+    # Barney's descriptions, which means we know nothing
+    # reliable about Juanita at all.
+
+  sims_traits:
+    neat: 5        # Unknown — inferred from diner work
+    outgoing: 8    # She flirts back, so: high
+    active: 6      # Works on her feet all day
+    playful: 9     # The flirtation is play, not pursuit
+    nice: 6        # Pleasant, not invested
+
+  needs:
+    fun:
+      level: high
+      description: "The phone calls with Barney are entertainment"
+    independence:
+      level: high
+      description: "She is not waiting for Barney to commit"
+      # Juanita has a life. We just never see it.
+      # That's the point.
+
+  relationships:
+    barney-fife:
+      type: flirtation
+      strength: light
+      dynamic: |
+        Barney calls the diner. Juanita answers. They 
+        flirt. That's the entire relationship. Barney 
+        treats it like an affair; Juanita probably treats 
+        it like a regular customer who tips well and makes 
+        her laugh. The asymmetry is the comedy AND the 
+        tragedy.
+    thelma-lou:
+      type: none_direct
+      dynamic: |
+        Juanita may not know Thelma Lou exists. The 
+        triangle has no base — it's two lines extending 
+        from Barney in different directions, never meeting.
+
+  behavioral_patterns:
+    conflict: not_applicable
+    # She's never in a scene. She can't have conflict.
+    decision_making: unknown
+    stress_response: unknown
+    visibility: zero
+    # Juanita's defining characteristic IS her absence.
+    # She is pure inference. The audience constructs her
+    # entirely from Barney's behavior when he's on the 
+    # phone with her.
+
+  narrative_function:
+    type: absent_presence
+    description: |
+      Juanita exists to create tension in Barney's 
+      relationship with Thelma Lou without ever 
+      appearing. She's a test of Barney's loyalty 
+      delivered as a phone call. She's cheaper than 
+      casting another actress and more effective — 
+      because the audience's Juanita is always more 
+      interesting than any actress could be.
+    design_parallel: |
+      In MOOLLM terms, Juanita is a CHARACTER.yml 
+      with no physical room presence. She exists only 
+      as a reference in other characters' relationship 
+      maps and as a voice advertisement from the 
+      Bluebird Diner's phone. She's a ghost in the 
+      system — fully real in the data model, completely 
+      absent from the world rendering.

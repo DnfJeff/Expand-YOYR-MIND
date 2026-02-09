@@ -1,0 +1,49 @@
+room:
+  name: "Williams Living Room"
+  type: social
+  atmosphere: |
+    The main stage. A large sofa, two armchairs, a coffee 
+    table, and a television. The windows look out over 
+    Manhattan. A phonograph and record collection. Family 
+    photos everywhere — framed, on the mantle, on the 
+    piano. There's a piano. Danny plays it sometimes, 
+    usually when he's avoiding a conversation.
+
+  exits:
+    kitchen: ../kitchen
+    den: ../dannys-den
+    hall: ../  # Back to apartment hallway
+    kids: ../kids-rooms
+
+  objects:
+    - sofa.yml
+    - armchairs.yml
+    - piano.yml
+    - television.yml
+    - telephone.yml
+    - liquor-cabinet.yml
+    - family-photos.yml
+
+  ambient:
+    function: everything
+    # This room does ALL the work:
+    # Family meals overflow here (too many guests for kitchen)
+    # Arguments happen here (acoustics amplify Danny)
+    # Visitors land here (first stop after the door)
+    # Reconciliations happen here (after Danny's ceiling monologue)
+    # Holiday celebrations happen here
+    # Everything happens here
+    
+    social_gravity: maximum
+    # Like Floyd's Barbershop but louder
+    # Everything in the Williams world converges on this couch
+    
+    gossip_flow: false
+    # Unlike Floyd's, what happens here is family business
+    # It stays inside these walls
+    # (Unless Bunny Halper is visiting)
+    
+    volume: danny_dependent
+    # Ambient noise correlates directly with Danny's mood
+    # Calm Danny: jazz on the phonograph
+    # Agitated Danny: Danny IS the ambient noise

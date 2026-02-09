@@ -1,0 +1,36 @@
+room:
+  name: "Taylor Front Porch"
+  type: social
+  atmosphere: |
+    Two rocking chairs and a porch swing. A side table for 
+    iced tea glasses. The view is the street, the trees, the 
+    neighbors walking by. Lightning bugs in summer. The guitar 
+    leans against the wall by Andy's chair. This isn't a room — 
+    it's a philosophy. Everything important in Mayberry gets 
+    worked out on this porch.
+
+  exits:
+    inside: ../living-room
+    yard: ../  # Back to Taylor House exterior
+
+  objects:
+    - rocking-chairs.yml
+    - porch-swing.yml
+    - guitar.yml
+    - iced-tea.yml
+
+  ambient:
+    social_depth: maximum
+    # Surface conversations become real ones here
+    # The porch strips away pretense
+    # Two people rocking in silence can communicate everything
+    time: evening
+    # The porch activates at dusk
+    # Before that it's just furniture
+    # After dark it becomes the heart
+    sound: crickets_and_guitar
+    mood: reflective_warm
+    gossip_flow: false
+    # What's said on the porch stays on the porch
+    # This is the opposite of Floyd's
+    # It's the confessional, not the broadcast tower

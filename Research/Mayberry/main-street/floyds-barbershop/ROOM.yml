@@ -1,0 +1,35 @@
+room:
+  name: "Floyd's Barbershop"
+  type: commercial
+  atmosphere: |
+    Two barber chairs face a wall of mirrors, though only one 
+    chair ever sees use. The air smells of Barbicide and 
+    aftershave. A stack of magazines — the newest from 1958 — 
+    sits on a wobbly end table. Floyd's voice fills the room 
+    even when nobody asked him a question. A striped barber 
+    pole spins slowly outside.
+
+  exits:
+    out: ../ # Back to Main Street
+    back: storage/
+
+  objects:
+    - barber-chair.yml
+    - magazines.yml
+    - radio.yml
+    - coat-rack.yml
+    - cash-register.yml
+
+  ambient:
+    gossip_flow: true
+    gossip_accuracy: 40%
+    # Everything said here propagates through town
+    # But the signal degrades with each retelling
+    sound: radio_murmur
+    social_gravity: high
+    # Characters with low social needs are drawn here
+    # It's the highest-traffic social space in Mayberry
+
+  capacity: 6
+  # It's a small shop — when more than 4 people are here,
+  # someone's standing by the door

@@ -1,0 +1,63 @@
+character:
+  name: "The Darling Family"
+  role: "Mountain Clan, Musicians"
+  home: characters/the-darlings/
+  location: mt-pilot
+  # Come to town for specific purposes — trade, music, marriage proposals
+
+  family:
+    patriarch: "Briscoe Darling"
+    daughter: "Charlene Darling"
+    sons:
+      - name: "Darling Boy #1"
+        instrument: banjo
+      - name: "Darling Boy #2"
+        instrument: guitar
+      - name: "Darling Boy #3"
+        instrument: mandolin
+      - name: "Darling Boy #4"
+        instrument: bass
+    # The boys never speak
+    # They communicate entirely through music and stares
+    # This is a design choice, not a limitation
+
+  personality:
+    traits: [insular, musical, loyal, traditional, unpredictable]
+    # The Darlings live by mountain rules
+    # Which differ from Mayberry rules
+    # But overlap on the important things: family, loyalty, music
+
+  sims_traits:
+    # Briscoe
+    neat: 2
+    outgoing: 7      # Sociable on his terms
+    active: 6
+    playful: 7        # Music IS play
+    nice: 6           # Nice if you're nice
+
+  needs:
+    family_honor:
+      level: high
+      description: "The family name matters above all"
+    music:
+      level: constant
+      description: "If there's a porch, there's a song"
+    charlene_married:
+      level: recurring
+      description: "Briscoe wants Charlene settled"
+
+  relationships:
+    andy-taylor:
+      type: mountain_alliance
+      strength: respectful
+      dynamic: |
+        Andy is the one law official the Darlings respect 
+        because he respects them back. He treats mountain 
+        ways as different, not lesser.
+
+  behavioral_patterns:
+    conflict: mountain_justice
+    # Their rules. Their enforcement. Then they go home.
+    social: music_first_words_second
+    arrival: with_instruments
+    departure: after_last_song

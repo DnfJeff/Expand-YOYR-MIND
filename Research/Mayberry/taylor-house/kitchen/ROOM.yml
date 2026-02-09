@@ -1,0 +1,34 @@
+room:
+  name: "Taylor Kitchen"
+  type: domestic
+  atmosphere: |
+    Aunt Bee's kingdom. The stove is always warm. Something is 
+    always in the oven. The table seats four (five if Clara 
+    stays for supper, which she often does). The windowsill 
+    has herbs in small pots. The cookie jar is on the counter, 
+    and Opie knows exactly how to open it quietly.
+
+  exits:
+    living_room: ../living-room
+    porch: ../front-porch
+    back_door: ../  # Back yard
+
+  objects:
+    - stove.yml
+    - kitchen-table.yml
+    - cookie-jar.yml
+    - refrigerator.yml
+    - herb-windowsill.yml
+
+  ambient:
+    ruler: aunt-bee
+    # This room has a different governance model
+    # than the rest of Mayberry
+    # Andy is sheriff out there
+    # Bee is sovereign in here
+    smell: baking
+    warmth: literal_and_figurative
+    meals:
+      breakfast: 7:00AM
+      dinner: 6:00PM
+      # The Taylor house runs on Bee's schedule

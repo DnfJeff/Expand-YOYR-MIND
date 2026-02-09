@@ -1,0 +1,33 @@
+room:
+  name: "Building Lobby"
+  type: transitional
+  atmosphere: |
+    Marble floor, brass mailboxes, a doorman behind a desk. 
+    The elevator has an accordion gate that clangs. The lobby 
+    is the Williams apartment's first line of defense — and 
+    its most porous one. The doorman knows everyone by name, 
+    which means he lets everyone up, which means the defense 
+    is purely ceremonial.
+
+  exits:
+    upstairs: ../ # Up to the Williams apartment
+    street: ../../new-york-streets/neighborhood
+
+  objects:
+    - doorman-desk.yml
+    - mailboxes.yml
+    - elevator.yml
+
+  ambient:
+    function: perimeter_that_doesnt_work
+    # Mayberry has no gates because it doesn't need them
+    # The Williams apartment has gates that don't function
+    # Uncle Tonoose walks past the doorman like he's furniture
+    # "He says he's family, Mr. Williams..."
+    # "He IS family. That's the problem."
+    
+    transitional: true
+    # This is the liminal space between Danny's two worlds
+    # Through the front door: public New York
+    # Up the elevator: private family
+    # The boundary is always being crossed

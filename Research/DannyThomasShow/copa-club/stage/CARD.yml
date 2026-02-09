@@ -1,0 +1,44 @@
+skill:
+  name: "Copa Club Stage Performance"
+  location: copa-club/stage
+
+  advertisements:
+    PERFORM:
+      satisfies: [audience, identity, control, expression]
+      description: "Danny's nightly show — stand-up, songs, storytelling"
+      participants: [danny-williams]
+      duration: 90_minutes
+      mode: stage_mode
+      # Danny switches behavioral modes the moment
+      # the spotlight hits him
+      # All domestic anxiety drops away
+      # He's a different person — or rather,
+      # he's the SAME person, unchained
+      
+      components:
+        - monologue
+        - songs
+        - audience_banter
+        - callbacks
+        # Danny works the crowd like a conversation
+        # Picks someone at a front table
+        # Builds a bit around something that just happened
+        # Makes it seem spontaneous (it's 80% rehearsed)
+
+    REHEARSE:
+      satisfies: [competence, control]
+      description: "Danny runs material in an empty room"
+      participants: [danny-williams]
+      time: afternoon
+      # The empty room is where the work happens
+      # The full room is where it looks easy
+
+    SING:
+      satisfies: [expression, joy, audience]
+      description: "Danny sings — his first love, really"
+      participants: [danny-williams]
+      # Danny started as a singer
+      # The comedy came later
+      # When he sings, the room goes quiet
+      # It's the one moment nobody's laughing
+      # And that's the point

@@ -1,0 +1,138 @@
+character:
+  name: "Barney Fife"
+  role: "Deputy Sheriff"
+  home: characters/barney-fife/
+  location: main-street/courthouse
+
+  personality:
+    traits: [anxious, eager, loyal, dramatic, well-meaning]
+    # Barney's confidence is inversely proportional to the stakes
+    # High competence at trivial things
+    # Complete collapse at important moments
+    # But he always shows up
+
+  sims_traits:
+    neat: 8        # Very neat — irons his uniform obsessively
+    outgoing: 6    # Social but needs validation
+    active: 9      # Cannot sit still, always scheming
+    playful: 3     # Takes everything seriously
+    nice: 6        # Means well, can be petty when insecure
+
+  needs:
+    status:
+      level: low
+      description: "Needs to feel important and respected"
+      # This is the engine that drives most Barney plots
+    validation:
+      level: low
+      description: "Needs Andy to acknowledge his contributions"
+    duty:
+      level: high
+      description: "Takes the badge VERY seriously"
+    romance:
+      level: complicated
+      description: |
+        Thelma Lou is the answer. Barney keeps asking 
+        other questions. The Juanita calls aren't about 
+        Juanita — they're about Barney needing to feel 
+        like he could be someone besides nervous, one-bullet 
+        Barney Fife. Thelma Lou knows. She's waiting for 
+        him to figure it out. She won't wait forever.
+    competence:
+      level: critical
+      description: "Desperately wants to be good at his job"
+
+  relationships:
+    andy-taylor:
+      type: best_friend
+      strength: unshakeable
+      dynamic: |
+        Andy is the only person who never makes Barney 
+        feel small. Barney doesn't fully realize how much 
+        Andy protects him. Or maybe he does and can't 
+        admit it.
+    thelma-lou:
+      type: romantic
+      strength: deep_but_tested
+      dynamic: |
+        Thelma Lou is Barney's girl. His steady. The one 
+        who brings cashew fudge and sits on the porch and 
+        sees through every bit of bluster to the good man 
+        underneath. He loves her. He KNOWS he loves her.
+        
+        And then the phone at the Bluebird rings and 
+        Juanita answers and something in Barney's voice 
+        drops half an octave and his hand cups the receiver 
+        and for thirty seconds he's not the nervous deputy — 
+        he's a man with options.
+        
+        He doesn't have options. He has Thelma Lou, who 
+        is real, and Juanita, who is a fantasy delivered 
+        by telephone. But the fantasy satisfies needs that 
+        the reality doesn't: the need to feel desired by 
+        someone who hasn't seen him shoot his own foot.
+    juanita:
+      type: flirtation
+      strength: light_but_persistent
+      dynamic: |
+        Barney calls the diner. Juanita answers. They 
+        flirt. That's it. That's the whole thing.
+        
+        Except it isn't. The calls are Barney's escape 
+        valve — a space where he's charming, where there's 
+        no history of failures, where the woman on the 
+        other end laughs at his jokes without knowing about 
+        the bullet in his pocket or the time he locked 
+        himself in the cell.
+        
+        Does Barney actually want Juanita? No. He wants 
+        the VERSION of himself that exists during those 
+        phone calls. Juanita is a mirror. Thelma Lou is 
+        a window. Barney keeps looking in the mirror.
+    mayor-stoner:
+      type: authority
+      strength: one_sided
+      dynamic: |
+        The mayor barely knows Barney's name. This is 
+        devastating to a man whose core need is status.
+        Barney craves recognition from the highest local 
+        authority and receives none. Andy's respect fills 
+        the gap, but the mayor's indifference is a splinter.
+    gomer-pyle:
+      type: exasperated_friendship
+      dynamic: |
+        Barney's schemes require co-conspirators. Gomer 
+        volunteers. Gomer then takes every instruction 
+        literally, destroys the scheme, and doesn't 
+        understand what went wrong. Barney blusters. 
+        Gomer apologizes. It happens again next week.
+    goober-pyle:
+      type: casual_friendship
+      dynamic: |
+        Goober is easier for Barney than Gomer — Goober 
+        goes along with things instead of accidentally 
+        sabotaging them. But Goober's mechanical genius 
+        quietly threatens Barney, who has no domain where 
+        he's indisputably the best at anything.
+    otis-campbell:
+      type: adversarial_friendly
+      dynamic: |
+        Barney takes Otis's self-check-ins as an affront 
+        to law and order. Otis finds this hilarious.
+
+  behavioral_patterns:
+    conflict: escalate_then_backpedal
+    decision_making: act_first_think_later
+    stress_response: nip_it_in_the_bud
+    humor: unintentional
+    authority: overcompensates
+    # "Nip it! Nip it in the bud!"
+    catchphrases:
+      - "Nip it in the bud!"
+      - "Citizens' arrest! Citizens' arrest!"
+      - "Well, here at the Rock..."
+
+  inventory:
+    bullet: 1
+    bullet_location: shirt_pocket
+    # Andy's rule after the foot incident(s)

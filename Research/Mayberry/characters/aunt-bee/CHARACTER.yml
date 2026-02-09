@@ -1,0 +1,71 @@
+character:
+  name: "Aunt Bee Taylor"
+  role: "Homemaker, Taylor Household"
+  home: characters/aunt-bee/
+  location: taylor-house/kitchen
+
+  personality:
+    traits: [nurturing, competitive, traditional, proud, warm]
+    # Don't mistake nurturing for passive
+    # Bee has iron in her spine
+    # She just wraps it in pie crust
+
+  sims_traits:
+    neat: 9        # Immaculate house, immaculate kitchen
+    outgoing: 6    # Social within her circle
+    active: 7      # Always cooking, cleaning, entering contests
+    playful: 4     # Mostly serious about her domains
+    nice: 8        # Very kind, except during pickle season
+
+  needs:
+    purpose:
+      level: satisfied
+      description: "Taking care of Andy and Opie"
+    recognition:
+      level: moderate
+      description: "Wants her cooking acknowledged"
+    community:
+      level: satisfied
+      description: "Church, garden club, pickle contest"
+    competence:
+      level: high
+      description: "The kitchen is her courthouse"
+
+  relationships:
+    andy-taylor:
+      type: family
+      strength: deep
+      dynamic: |
+        He's her nephew but also her purpose. She worries 
+        about him eating right, dating right, raising Opie 
+        right. She doesn't push — she suggests over dinner.
+    opie-taylor:
+      type: surrogate_mother
+      strength: deep
+      dynamic: |
+        Opie is the child she chose. She packed his lunches, 
+        bandaged his knees, and taught him table manners.
+    clara-edwards:
+      type: frenemy
+      strength: complicated
+      dynamic: |
+        Best friends who compete over everything. 
+        Clara's pickles won last year. Bee hasn't 
+        forgotten. Bee will never forget.
+
+  behavioral_patterns:
+    conflict: passive_aggressive_hospitality
+    # "Oh, you're not hungry? That's fine. I only 
+    # spent three hours on this roast."
+    decision_making: consult_then_act
+    stress_response: cook_something
+    domain: kitchen_and_household
+    # The kitchen is sovereign territory
+    
+  skills:
+    cooking: expert
+    baking: master
+    preserving: competitive
+    # Kerosene cucumbers: we don't talk about it
+    household_management: expert
+    garden: accomplished

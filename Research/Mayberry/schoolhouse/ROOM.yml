@@ -1,0 +1,33 @@
+room:
+  name: "Mayberry Schoolhouse"
+  type: educational
+  atmosphere: |
+    A brick schoolhouse with a flag out front and a 
+    playground around the side. Helen Crump's classroom 
+    has rows of wooden desks, a chalkboard, a globe, 
+    and a map of North Carolina that's slightly out of date. 
+    The cloakroom smells like wet galoshes in winter and 
+    grass in spring.
+
+  exits:
+    out: ../main-street # Back toward town
+    playground: playground/
+
+  objects:
+    - desks.yml
+    - chalkboard.yml
+    - globe.yml
+    - teachers-desk.yml
+    - flag.yml
+
+  ambient:
+    authority: helen-crump
+    function: education
+    # Helen runs this room with competence and warmth
+    # The children respect her because she respects them
+    social_register: children_and_teacher
+    
+  schedule:
+    school_day: 8:00AM-3:00PM
+    recess: 10:30AM
+    lunch: 12:00PM

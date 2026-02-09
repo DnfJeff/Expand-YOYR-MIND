@@ -1,0 +1,32 @@
+room:
+  name: "Andy and Opie's Fishing Hole"
+  type: natural
+  atmosphere: |
+    A shady spot on the bank under an old oak. Two folding 
+    chairs — a big one and a small one — sit permanently 
+    here, though "permanently" means "nobody else uses them 
+    because everyone knows they're Andy and Opie's." A 
+    tackle box between the chairs. The water is just deep 
+    enough for perch and catfish.
+
+  exits:
+    lake: ../ # Back to Myers Lake shore
+
+  objects:
+    - folding-chairs.yml
+    - tackle-box.yml
+    - fishing-poles.yml
+
+  ambient:
+    owners: [andy-taylor, opie-taylor]
+    ritual: fishing
+    real_purpose: conversation_and_connection
+    # The fishing is the excuse
+    # The sitting together is the point
+    # Opie asks his hardest questions here
+    # Because the water gives them both somewhere else to look
+    
+    therapeutic_properties:
+      stress_relief: maximum
+      social_depth: deep
+      privacy: absolute

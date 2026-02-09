@@ -1,0 +1,53 @@
+character:
+  name: "Rusty Williams"
+  role: "Son, Danny's Mirror"
+  age: 10
+  home: characters/rusty-williams/
+  location: williams-apartment/kids-rooms
+
+  personality:
+    traits: [quick-witted, smart-mouthed, charming, testing-limits]
+    # Rusty is Danny Jr. with better timing
+    # He has Danny's showmanship at age 10
+    # This is simultaneously Danny's greatest pride and terror
+
+  sims_traits:
+    neat: 3        # He's ten
+    outgoing: 8    # Inherited Danny's volume
+    active: 8      # Can't sit still
+    playful: 9     # Everything is a bit
+    nice: 7        # Good kid underneath the wisecracks
+
+  needs:
+    attention:
+      level: high
+      description: "Competing with Danny's career for stage time"
+    limits:
+      level: moderate
+      description: "Testing every boundary to find the real ones"
+    approval:
+      level: high
+      description: "Wants Danny to see him as capable"
+
+  relationships:
+    danny-williams:
+      type: father_son
+      strength: deep_turbulent
+      dynamic: |
+        They're the same person at different ages.
+        Every fight is Danny arguing with himself.
+        Every proud moment is Danny seeing his future.
+    kathy-williams:
+      type: mother_son
+      strength: warm
+      dynamic: "Mom is the safe harbor when Dad is the storm."
+    terry-williams:
+      type: sibling
+      dynamic: "Standard sibling needling. They'd defend each other instantly."
+
+  behavioral_patterns:
+    conflict: wisecrack
+    decision_making: try_it_see_what_happens
+    stress_response: joke
+    # Rusty uses humor the way Andy uses silence
+    # As a tool, as a shield, as a way of processing

@@ -1,0 +1,43 @@
+room:
+  name: "Danny's Den"
+  type: retreat
+  atmosphere: |
+    A small room off the living room that Danny calls his 
+    "sanctuary." A desk, a comfortable chair, a lamp, and 
+    scripts piled on every surface. A framed Copa Club 
+    poster on the wall. This is where Danny retreats to 
+    work on material, read scripts, or hide from household 
+    chaos.
+
+  exits:
+    living_room: ../living-room
+
+  objects:
+    - desk.yml
+    - reading-chair.yml
+    - scripts.yml
+    - copa-poster.yml
+    - ashtray.yml
+
+  ambient:
+    intended_function: retreat_and_focus
+    actual_function: failed_retreat
+    # Danny comes here for quiet
+    # Quiet lasts approximately 4 minutes
+    # Then Rusty needs something
+    # Or Kathy has a question
+    # Or the doorbell rings
+    # Or Tonoose finds him
+    
+    privacy: theoretical
+    # The den has a door
+    # The door has no lock
+    # Even if it had a lock, it wouldn't work
+    # Because the Williams family doesn't believe in closed doors
+    
+    contrast_with_fishing_hole: true
+    # Andy's fishing hole WORKS as a retreat
+    # Because it's miles from town
+    # Danny's den FAILS as a retreat
+    # Because it's 15 feet from the living room
+    # Geography matters

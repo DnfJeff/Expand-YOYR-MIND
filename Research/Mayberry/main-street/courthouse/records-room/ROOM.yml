@@ -1,0 +1,25 @@
+room:
+  name: "Records Room"
+  type: office
+  atmosphere: |
+    Floor-to-ceiling filing cabinets in military formation. 
+    Howard Sprague's domain. Every birth, death, deed, and 
+    dispute in Mayberry history filed in perfect alphabetical 
+    order. The room smells like old paper and Howard's 
+    aftershave (Old Spice, applied precisely).
+
+  exits:
+    out: ../ # Back to courthouse lobby
+
+  objects:
+    - filing-cabinets.yml
+    - howards-desk.yml
+    - typewriter.yml
+
+  ambient:
+    order: immaculate
+    temperature: cool
+    # Howard keeps it at exactly 68 degrees
+    # For document preservation, he says
+    # For his comfort, if we're honest
+    occupant: howard-sprague

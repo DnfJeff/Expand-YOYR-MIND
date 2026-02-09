@@ -1,0 +1,45 @@
+character:
+  name: "Bunny Halper"
+  role: "Charley's Wife, Kathy's Ally"
+  home: characters/bunny-halper/
+  location: williams-apartment/living-room
+  # Often at the apartment — she and Kathy are close
+
+  personality:
+    traits: [social, supportive, grounded, humorous, observant]
+    # Bunny is the witness
+    # She and Kathy watch their husbands be ridiculous
+    # They share knowing looks
+    # The showbiz wives' mutual aid society
+
+  sims_traits:
+    neat: 7
+    outgoing: 7
+    active: 5
+    playful: 6
+    nice: 8
+
+  needs:
+    social:
+      level: satisfied
+      description: "Has Kathy, has the circuit, has enough"
+    stability:
+      level: moderate
+      description: "Showbiz marriages require maintenance"
+
+  relationships:
+    kathy-williams:
+      type: best_friend
+      strength: deep
+      dynamic: |
+        They are the support structure behind the circus.
+        When Danny and Charley are fighting about a contract,
+        Bunny and Kathy are having coffee in the kitchen,
+        solving the actual problem.
+    charley-halper:
+      type: wife
+      dynamic: "She manages Charley the way Kathy manages Danny."
+
+  behavioral_patterns:
+    conflict: mediate
+    social_function: bridge_between_families

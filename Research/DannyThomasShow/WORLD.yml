@@ -1,0 +1,69 @@
+world:
+  name: "Danny Williams' New York"
+  city: "New York City"
+  borough: "Manhattan"
+  era: 1950s-1960s
+  tone: warm_chaos
+  # The tone is NOT gentle like Mayberry
+  # It's warm but LOUD
+  # Love expressed through argument, dramatic gesture, 
+  # and Lebanese cooking
+
+  governance:
+    style: benevolent_chaos
+    authority: danny-williams
+    method: exasperated_love
+    # Danny tries to control his household
+    # The household has other plans
+    # Kathy actually runs things
+    # Danny knows this but can't admit it
+
+  rules:
+    volume: high
+    # Conversations in this world are PERFORMED
+    # Every discussion is a scene
+    # Even ordering dinner is an act
+    visitors: constant
+    # The door is always opening
+    # Someone is always arriving
+    # Plans are always changing
+    cultural_blend: lebanese_american
+    # Two cultures in one kitchen
+    # American practicality meets Lebanese generosity
+    # Both insist on feeding you
+
+  atmosphere: |
+    New York City in its golden age of nightclubs and TV. 
+    The apartment is on the Upper West Side, comfortable 
+    but not extravagant. Danny makes a good living but 
+    he's not rich — he's a working entertainer who takes 
+    the subway. The city is a character: noisy, exciting, 
+    exhausting, and always offering another complication.
+
+  social_dynamics:
+    visitor_frequency: high
+    visitor_impact: disruptive_loving
+    family_structure: extended_to_infinity
+    # Danny's family extends outward like radio waves
+    # Every cousin has a cousin
+    # Every cousin's cousin has a need
+    hospitality: non_negotiable
+    # You feed guests. This is not optional.
+    # Lebanese hospitality meets New York apartment size.
+    # The math doesn't work. They do it anyway.
+
+  time_rhythm:
+    morning: family_breakfast_chaos
+    daytime: kathy_manages_household
+    afternoon: danny_rehearses_or_deals_with_crisis
+    evening: copa_club_performance
+    late_night: danny_comes_home_exhausted
+    # The show's rhythm is Danny leaving and returning
+    # Each departure and return changes the equation
+
+  delegation:
+    cascades:
+      - era
+      - tone
+      - rules
+      - cultural_blend

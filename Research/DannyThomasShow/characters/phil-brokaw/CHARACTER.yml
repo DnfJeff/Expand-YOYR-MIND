@@ -1,0 +1,43 @@
+character:
+  name: "Phil Brokaw"
+  role: "Copa Club Manager"
+  home: characters/phil-brokaw/
+  location: copa-club/managers-office
+
+  personality:
+    traits: [professional, calm, business-focused, diplomatic]
+    # Phil is the interface between Danny's art and the club's business
+    # He handles the crowd, the schedule, the bookings
+    # Danny handles the stage
+    # They respect the boundary
+
+  sims_traits:
+    neat: 8
+    outgoing: 6
+    active: 5
+    playful: 3
+    nice: 6
+
+  needs:
+    order:
+      level: high
+      description: "The show must go on — literally"
+    reliability:
+      level: moderate
+      description: "Danny always shows up. The rest is negotiable."
+
+  relationships:
+    danny-williams:
+      type: professional_respect
+      dynamic: |
+        Phil relies on Danny to fill the room.
+        Danny relies on Phil to run the room.
+        Mutual respect, minimal drama.
+        The Copa is the one place Danny's drama goes to zero.
+
+  behavioral_patterns:
+    conflict: professional
+    authority: venue_based
+    # Phil's authority stays inside the Copa
+    # Danny's personality stays inside the Copa
+    # Outside those walls, different rules

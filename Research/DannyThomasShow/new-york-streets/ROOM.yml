@@ -1,0 +1,33 @@
+room:
+  name: "New York Streets"
+  type: urban
+  atmosphere: |
+    Manhattan in the late 1950s and early 1960s. Yellow cabs, 
+    steam from grates, neon signs, and the perpetual hum of 
+    a city that doesn't sleep. Hot dog vendors. Newspaper stands. 
+    The subway rumbling underneath. Eight million people with 
+    eight million problems, and Danny Williams is one of them.
+
+  exits:
+    theater_district: theater-district/
+    central_park: central-park/
+    neighborhood: neighborhood/
+    apartment: ../williams-apartment/building-lobby
+    copa: ../copa-club
+
+  overrides:
+    tone: urban_neutral
+    # The streets don't inherit the apartment's warmth
+    # or the Copa's polish
+    # They're the raw material of the city
+    # Neutral ground where anything can happen
+
+  ambient:
+    noise: constant
+    crowd: dense
+    energy: electric
+    anonymity: true
+    # On the streets, Danny is nobody
+    # In the apartment, he's Dad
+    # At the Copa, he's DANNY
+    # The streets are the in-between

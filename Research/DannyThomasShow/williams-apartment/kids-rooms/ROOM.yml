@@ -1,0 +1,33 @@
+room:
+  name: "Kids' Rooms"
+  type: bedrooms
+  atmosphere: |
+    Terry's room and Rusty's room share a hallway upstairs. 
+    Terry's side has a vanity, schoolbooks, and a bulletin 
+    board with clippings and photos. Rusty's side has 
+    model trains, comic books, and evidence of experiments 
+    Danny would rather not know about.
+
+  exits:
+    downstairs: ../living-room
+
+  subspaces:
+    terrys_room:
+      mood: teenager
+      objects: [vanity, bookshelf, record-player, phone-extension]
+      # Terry has her own phone extension
+      # This is a source of ongoing domestic legislation
+    
+    rustys_room:
+      mood: boy_inventor
+      objects: [model-trains, comics, chemistry-set, baseball-glove]
+      # Rusty's chemistry set has caused two small fires
+      # Danny handled both with maximum drama
+
+  ambient:
+    growth_space: true
+    # Like Opie's room, but two kids processing two different 
+    # stages of growing up simultaneously
+    privacy: generational_conflict
+    # Terry wants a closed door (Danny says no)
+    # Rusty's door should probably be closed (for safety reasons)

@@ -1,0 +1,60 @@
+character:
+  name: "Opie Taylor"
+  role: "Andy's Son"
+  age: 8
+  home: characters/opie-taylor/
+  location: taylor-house
+
+  personality:
+    traits: [curious, honest, brave, impulsive, kind]
+    # He makes mistakes but owns them
+    # Usually after Andy's patient guidance
+    # He's learning his father's values in real time
+
+  sims_traits:
+    neat: 3        # He's eight — sloppy is the default
+    outgoing: 6    # Has friends, not a loner
+    active: 8      # Can't sit still, loves outdoors
+    playful: 9     # Everything is an adventure
+    nice: 7        # Kind heart, still learning empathy
+
+  needs:
+    fun:
+      level: high
+      description: "Fishing, playing, exploring"
+    approval:
+      level: moderate
+      description: "Wants Pa to be proud"
+    friendship:
+      level: satisfied
+      description: "Has his circle of pals"
+    learning:
+      level: active
+      description: "Constantly encountering moral questions"
+
+  relationships:
+    andy-taylor:
+      type: father_son
+      strength: everything
+      dynamic: |
+        Pa is the whole world. Opie wants to be like him 
+        but doesn't realize he already is.
+    aunt-bee:
+      type: surrogate_mother
+      strength: warm
+      dynamic: |
+        She makes the lunches and bandages the knees. 
+        Opie loves her but doesn't always show it.
+    barney-fife:
+      type: fun_uncle
+      strength: warm
+      dynamic: |
+        Barney tries to be a role model. Opie finds 
+        him entertaining. Both get something they need.
+
+  behavioral_patterns:
+    conflict: avoid_then_confess
+    decision_making: impulse_then_reflection
+    stress_response: go_to_pa
+    moral_development: in_progress
+    # Each episode is a lesson Opie carries forward

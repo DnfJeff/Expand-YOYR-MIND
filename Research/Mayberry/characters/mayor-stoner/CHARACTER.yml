@@ -1,0 +1,108 @@
+character:
+  name: "Mayor Roy Stoner"
+  role: "Mayor of Mayberry"
+  home: characters/mayor-stoner/
+  location: main-street/courthouse
+
+  # Mayor Stoner is the political layer in a town that 
+  # doesn't think of itself as political. He brings the 
+  # concerns of optics, elections, outside perception —
+  # everything Andy instinctively ignores.
+
+  personality:
+    traits: [pompous, political, self-important, blustering, occasionally_right]
+    # Stoner isn't corrupt. He's a small-town politician
+    # who takes his small-town politics VERY seriously.
+    # He wants Mayberry to look good to outsiders.
+    # Andy wants Mayberry to BE good to insiders.
+    # That gap is the entire dynamic.
+
+  sims_traits:
+    neat: 9        # Three-piece suit in a town of overalls
+    outgoing: 7    # Glad-hander, loves working a room
+    active: 4      # More talk than action
+    playful: 2     # Humor escapes him entirely
+    nice: 4        # Not mean, just self-centered
+
+  needs:
+    status:
+      level: critical
+      description: "Needs to be seen as The Mayor, capital T capital M"
+    image:
+      level: critical
+      description: "How Mayberry looks to the outside world"
+      # Andy couldn't care less about image
+      # Stoner can't think about anything else
+    control:
+      level: high
+      description: "Wants to direct outcomes, call the shots"
+    re_election:
+      level: always_present
+      description: "Every decision filtered through 'how does this play?'"
+
+  relationships:
+    andy-taylor:
+      type: authority_conflict
+      strength: ongoing
+      dynamic: |
+        Stoner is technically Andy's boss. Andy technically 
+        reports to the mayor. In practice, Andy runs the 
+        town and Stoner runs the ribbon-cuttings. Stoner 
+        knows this, resents it, and can't change it because 
+        everybody loves Andy and merely tolerates Stoner.
+        
+        Their conflict is structural: Stoner wants to 
+        manage situations for optics. Andy wants to manage 
+        them for people. When a reporter comes to town, 
+        Stoner wants a press conference. Andy wants to fix 
+        the problem before the reporter notices. They're 
+        both trying to protect Mayberry — they just disagree 
+        on what "protect" means.
+    barney-fife:
+      type: dismissive
+      dynamic: |
+        Stoner barely registers Barney. This drives 
+        Barney insane, because Barney craves status 
+        from authority figures and the highest local 
+        authority figure doesn't know his name half 
+        the time.
+    town_council:
+      type: alliance
+      dynamic: "His power base. Stoner works the council rooms."
+    floyd-lawson:
+      type: constituent
+      dynamic: |
+        Floyd votes. Floyd talks. Floyd's chair is 
+        where public opinion forms. Stoner knows this 
+        and treats Floyd with more respect than Floyd 
+        probably deserves, politically speaking.
+
+  behavioral_patterns:
+    conflict: bluster_then_defer_to_andy
+    decision_making: political_calculation
+    stress_response: call_a_meeting
+    authority: formal_but_hollow
+    # He has the title. Andy has the town.
+    # The gap between positional and actual authority
+    # is the comedy.
+    
+    catchphrases:
+      - "Now see here, Andy—"
+      - "The people of this community—"
+      - "I won't have Mayberry looking like—"
+      - "As mayor, I feel it's my duty—"
+
+  design_notes:
+    function: |
+      Mayor Stoner exists to introduce EXTERNAL PRESSURE 
+      into Mayberry's self-contained system. He's the vector 
+      through which state politics, visiting dignitaries, 
+      newspaper reporters, and "what will people think?" 
+      enters a town that normally operates on "what's the 
+      right thing to do?"
+      
+      Without the mayor, Mayberry has no friction between 
+      its internal values and external expectations. Stoner 
+      IS that friction. He's not the villain — he's the 
+      reality check that Andy routinely overrides, which 
+      is how the audience knows Andy is right.

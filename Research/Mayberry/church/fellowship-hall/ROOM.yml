@@ -1,0 +1,26 @@
+room:
+  name: "Fellowship Hall"
+  type: social
+  atmosphere: |
+    The church basement. Folding tables, folding chairs, 
+    a kitchen pass-through, and a stage barely big enough 
+    for the nativity play. This is where Mayberry gathers 
+    for potlucks, fundraisers, talent shows, and 
+    community meetings. The acoustics are terrible but 
+    nobody cares.
+
+  exits:
+    upstairs: ../ # Back to the church
+
+  objects:
+    - folding-tables.yml
+    - stage.yml
+    - kitchen-window.yml
+
+  ambient:
+    function: community_events
+    capacity: 80
+    # Can hold most of Mayberry if needed
+    competition_probability: high
+    # Any event here has a 70% chance of becoming
+    # a competition between Bee and Clara

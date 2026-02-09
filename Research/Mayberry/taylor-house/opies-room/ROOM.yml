@@ -1,0 +1,28 @@
+room:
+  name: "Opie's Room"
+  type: bedroom
+  atmosphere: |
+    A boy's room upstairs. Model planes hang from the ceiling. 
+    A slingshot on the dresser — the one that taught him about 
+    consequences. A baseball glove on the bed. School books 
+    stacked unevenly on the desk. The window looks out at the 
+    big tree in the yard.
+
+  exits:
+    downstairs: ../living-room
+
+  objects:
+    - bed.yml
+    - desk.yml
+    - slingshot.yml
+    - model-planes.yml
+    - piggy-bank.yml
+
+  ambient:
+    growth_space: true
+    # This is where Opie processes what he learned today
+    # Every object tells a story about a lesson
+    # The slingshot: the bird he killed and buried
+    # The piggy bank: the charity dollar he struggled over
+    privacy: child_appropriate
+    # Opie has his own space but Andy can always knock

@@ -1,0 +1,90 @@
+character:
+  name: "Uncle Tonoose"
+  role: "Lebanese Patriarch, Family Disruption Agent"
+  home: characters/uncle-tonoose/
+  location: visiting
+  # Tonoose doesn't have a fixed location
+  # He HAS a location — wherever he currently is
+  # That location is always the Williams apartment
+  # Even when Danny prays otherwise
+
+  personality:
+    traits: [boisterous, loving, overbearing, traditional, theatrical]
+    # Tonoose makes Danny look subtle
+    # He doesn't enter rooms — he conquers them
+    # Every opinion is a decree
+    # Every suggestion is a command
+    # Every visit is an occupation
+
+  sims_traits:
+    neat: 2         # Total chaos in his wake
+    outgoing: 10    # Cannot be contained by social convention
+    active: 8       # High energy despite advanced age
+    playful: 7      # Everything is a production
+    nice: 6         # Means well, steamrolls everyone
+
+  visitor_impact: seismic
+  # When Tonoose is present:
+  # - Room tone overrides to: old_world_lebanese
+  # - Volume: maximum
+  # - Danny's stress: critical
+  # - Kathy's cooking: doubles
+  # - Existing plans: cancelled
+
+  needs:
+    family_authority:
+      level: high
+      description: "Must be respected as patriarch"
+    legacy:
+      level: high
+      description: "The family traditions must continue"
+    danny_compliance:
+      level: perpetually_unmet
+      description: "Danny should listen to his uncle"
+    feeding_people:
+      level: always
+      description: "If you're in Tonoose's presence, you're eating"
+
+  relationships:
+    danny-williams:
+      type: uncle_nephew
+      strength: unbreakable
+      dynamic: |
+        Tonoose loves Danny absolutely.
+        Tonoose also believes Danny is doing everything wrong.
+        Danny loves Tonoose absolutely.
+        Danny also wants Tonoose to go home.
+        This is family.
+    kathy-williams:
+      type: niece_in_law
+      strength: respectful
+      dynamic: |
+        Tonoose respects Kathy because she feeds him 
+        without complaint. This is the highest compliment 
+        in his system.
+    uncle-tanoos:
+      type: brother
+      dynamic: "The quiet one and the loud one. Guess which."
+
+  behavioral_patterns:
+    arrival: unannounced
+    entrance: dramatic
+    volume: maximum
+    conflict: decree
+    # Tonoose doesn't resolve conflicts
+    # He declares the correct answer
+    # Then is confused when nobody listens
+    departure: theatrical
+    # "I am LEAVING this house!"
+    # *Returns 10 minutes later for his hat*
+    # "I forgot my hat. Also you're wrong about Terry's boyfriend."
+    
+    cultural_overlay:
+      proverbs: frequent
+      # "In the old country, we say..."
+      # (The old country always agrees with Tonoose)
+      food: mandatory
+      # "You look thin. EAT."
+      matchmaking: enthusiastic
+      # Has a boy/girl picked out for every Williams child
+      # Age-appropriateness is secondary to family connections

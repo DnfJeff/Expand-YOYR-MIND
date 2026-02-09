@@ -1,0 +1,28 @@
+room:
+  name: "Mayberry Courthouse"
+  type: civic
+  atmosphere: |
+    A solid brick building that smells like old paper and 
+    floor polish. The bulletin board inside the front door 
+    has notices about church suppers, lost cats, and a 
+    wanted poster that hasn't been updated since 1957. 
+    Ceiling fans turn slowly. Everything about this building 
+    says "we have time."
+
+  exits:
+    out: ../ # Back to Main Street
+    office: andys-office/
+    cell: jail-cell/
+    upstairs: courtroom/
+    records: records-room/
+
+  objects:
+    - bulletin-board.yml
+    - water-cooler.yml
+    - hat-rack.yml
+
+  ambient:
+    authority_level: gentle
+    # The courthouse is technically law enforcement
+    # but it feels like a living room with filing cabinets
+    foot_traffic: moderate

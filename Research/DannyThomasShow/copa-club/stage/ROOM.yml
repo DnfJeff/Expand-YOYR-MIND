@@ -1,0 +1,42 @@
+room:
+  name: "Copa Club Stage"
+  type: performance
+  atmosphere: |
+    A small elevated stage — maybe twelve by eight feet. 
+    A stool, a microphone stand, a glass of water on the 
+    piano. The spotlight is warm. The audience is six feet 
+    away at the nearest table. This isn't a stadium — it's 
+    a living room where one person is standing and two 
+    hundred are listening.
+
+  exits:
+    wings: ../backstage
+    floor: ../ # Into the club
+
+  objects:
+    - microphone.yml
+    - stool.yml
+    - piano.yml
+    - spotlight.yml
+    - water-glass.yml
+
+  ambient:
+    ownership: danny-williams
+    # This is the one place Danny has absolute authority
+    # The audience came to see HIM
+    # The spotlight is on HIM
+    # He sets the tempo, the mood, the timing
+    # For 90 minutes he is exactly who he is
+    
+    mode: performance
+    # Danny's CHARACTER.yml switches to stage_mode here
+    # Confidence: maximum
+    # Control: absolute
+    # Stress: zero
+    # This is not escapism — this is Danny most himself
+    
+    audience_distance: intimate
+    # The nearness matters
+    # Danny can see their faces
+    # He adjusts in real time
+    # Every show is a conversation

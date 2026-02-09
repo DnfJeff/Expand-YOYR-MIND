@@ -1,0 +1,40 @@
+skill:
+  name: "Williams Living Room Activities"
+  location: williams-apartment/living-room
+
+  advertisements:
+    FAMILY_DINNER:
+      satisfies: [hunger, family, social]
+      description: "Everyone at the table — or the coffee table when Tonoose is here"
+      participants: [danny-williams, kathy-williams, rusty-williams, terry-williams]
+      overflow_capacity: +4
+      # When Tonoose visits, the table gains chairs from nowhere
+
+    RECEIVE_VISITOR:
+      satisfies: [social, obligation, hospitality]
+      description: "Someone's at the door. There's always someone at the door."
+      participants: [any]
+      danny_reaction: exasperated_hospitality
+      # Danny opens the door, sighs, then feeds them
+      # Because that's what you do
+
+    ARGUE:
+      satisfies: [expression, tension_release]
+      description: "A Danny Williams-grade domestic discussion"
+      participants: [danny-williams, any]
+      volume: escalating
+      resolution: inevitable
+      # All Danny arguments follow the same arc:
+      # 1. Topic introduced
+      # 2. Danny escalates
+      # 3. Monologue to ceiling
+      # 4. Kathy says two sentences
+      # 5. Danny deflates
+      # 6. Hug
+
+    PIANO:
+      satisfies: [escape, creativity, stalling]
+      description: "Danny sits at the piano to avoid dealing with things"
+      participants: [danny-williams]
+      # "I'm not avoiding anything, I'm PLAYING"
+      # He's avoiding something

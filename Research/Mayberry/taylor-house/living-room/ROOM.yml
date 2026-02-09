@@ -1,0 +1,31 @@
+room:
+  name: "Taylor Living Room"
+  type: domestic
+  atmosphere: |
+    A comfortable room with a sofa, an armchair, and a 
+    television set. Family photos on the mantle. A bookshelf 
+    with Reader's Digest condensed books and a set of 
+    encyclopedias. The rug has been here since before Opie 
+    was born. This is where the family starts and ends 
+    the day.
+
+  exits:
+    porch: ../front-porch
+    kitchen: ../kitchen
+    upstairs: ../opies-room
+    front_door: ../  # Taylor House exterior
+
+  objects:
+    - sofa.yml
+    - armchair.yml
+    - television.yml
+    - bookshelf.yml
+    - telephone.yml
+
+  ambient:
+    mood: domestic_normal
+    function: daily_living
+    # Less narratively charged than the porch or kitchen
+    # This is the neutral space where life just happens
+    # Mornings: getting ready
+    # Evenings: TV before bed

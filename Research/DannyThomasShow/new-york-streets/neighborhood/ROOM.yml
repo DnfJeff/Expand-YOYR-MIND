@@ -1,0 +1,33 @@
+room:
+  name: "The Neighborhood"
+  type: residential_commercial
+  atmosphere: |
+    The Upper West Side blocks around the Williams apartment. 
+    The deli where Danny picks up the morning paper. The dry 
+    cleaner who knows his jacket size. The subway entrance 
+    where he descends every evening toward the Copa. The 
+    newsstand where Mrs. Antonelli asks about the kids. 
+    It's a village within the city — not as tight as 
+    Mayberry, but not anonymous either.
+
+  exits:
+    apartment: ../../williams-apartment/building-lobby
+    streets: ../
+
+  ambient:
+    function: daily_infrastructure
+    # The mundane machinery of Danny's life
+    # Where groceries become dinner
+    # Where the subway becomes the commute
+    # Where New York shrinks to manageable size
+    
+    familiar_faces: true
+    # The neighborhood knows Danny — not as a performer,
+    # as a neighbor. "Hey Danny, how are the kids?"
+    # This is the closest he gets to Mayberry treatment
+    # in the big city
+
+  expansion: tardis
+  # The deli, the dry cleaner, the subway entrance,
+  # the newsstand — each can become a full room
+  # when the story needs it

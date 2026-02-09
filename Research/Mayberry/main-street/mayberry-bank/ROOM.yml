@@ -1,0 +1,29 @@
+room:
+  name: "Mayberry Bank"
+  type: financial
+  atmosphere: |
+    Marble floors, brass fixtures, a teller cage with frosted 
+    glass. A pendulum clock on the wall ticks loud enough to 
+    remind you that time is money. The bank manager's office 
+    has a door that's always closed — the only closed door 
+    in Mayberry, which makes people nervous.
+
+  exits:
+    out: ../ # Back to Main Street
+
+  objects:
+    - teller-cage.yml
+    - managers-office.yml
+    - pendulum-clock.yml
+    - deposit-slips.yml
+
+  ambient:
+    mood: formal
+    anxiety_generator: true
+    # The bank is where Mayberry's relaxed vibe breaks
+    # Money makes everyone in Mayberry uncomfortable
+    # They'd rather handle it through handshakes and trust
+    sound: clock_ticking
+    temperature: always_cold
+    # Banks are always cold in Mayberry
+    # Metaphor? Architecture? Yes.

@@ -1,0 +1,36 @@
+room:
+  name: "All Souls Church"
+  type: civic_religious
+  atmosphere: |
+    A white clapboard church with a steeple and a bell that 
+    rings on Sunday mornings. Wooden pews, stained glass 
+    windows donated by founding families, and a pulpit that 
+    has heard every variety of Mayberry sermon. The basement 
+    hosts church suppers, fundraisers, and the occasional 
+    town meeting when the courthouse is too small.
+
+  exits:
+    out: main-street # Back toward town
+    basement: fellowship-hall/
+
+  objects:
+    - pews.yml
+    - pulpit.yml
+    - piano.yml
+    - bell-tower.yml
+    - bulletin-board.yml
+
+  ambient:
+    moral_authority: community
+    # The church is where Mayberry's values get stated out loud
+    # Andy practices them; the church names them
+    social_function: weekly_gathering
+    competition_zone: true
+    # Church suppers → bake-offs
+    # Bake-offs → Bee vs. Clara
+    # Bee vs. Clara → the real Mayberry drama
+
+  schedule:
+    sunday_service: 10:00AM
+    church_supper: monthly
+    choir_practice: wednesday_evening

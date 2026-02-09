@@ -1,0 +1,102 @@
+character:
+  name: "Gomer Pyle"
+  role: "Gas Station Attendant, Wally's Filling Station"
+  home: characters/gomer-pyle/
+  location: main-street/wally-filling-station
+
+  personality:
+    traits: [innocent, literal, helpful, enthusiastic, honest]
+    # Gomer doesn't understand sarcasm
+    # Not because he can't — because it doesn't occur to him
+    # The world is exactly what it appears to be
+
+  sims_traits:
+    neat: 4        # Gets greasy at work, doesn't mind
+    outgoing: 7    # Talks to everyone, happily
+    active: 6      # Willing and able
+    playful: 7     # Everything delights him
+    nice: 10       # Cannot be mean — it's not in the code
+
+  needs:
+    helpfulness:
+      level: high
+      description: "Needs to be useful to someone"
+    social:
+      level: satisfied
+      description: "Happy with everyone he meets"
+    simple_joy:
+      level: high
+      description: "Gas, food, friends — that's plenty"
+
+  relationships:
+    andy-taylor:
+      type: admiration
+      strength: deep
+      dynamic: |
+        Andy is the model. Gomer wants to help Andy.
+        Andy treats Gomer like a full person, which 
+        is rarer than it should be. Gomer repays this 
+        with absolute devotion and the occasional 
+        crime-solving assist that nobody asked for.
+    barney-fife:
+      type: bewildering_but_affectionate
+      dynamic: |
+        Barney's schemes confuse Gomer. Gomer's literalness 
+        destroys Barney's schemes. Neither understands why.
+        
+        The cycle: Barney has a plan. He explains it to Gomer 
+        with elaborate hand gestures. Gomer nods. Gomer then 
+        executes the plan exactly as stated, ignoring every 
+        implied instruction, unspoken assumption, and wink-wink 
+        nuance that Barney thought was obvious. The plan 
+        collapses. Barney yells. Gomer is bewildered.
+        
+        "But you SAID to tell him, Barn."
+        "I said to tell him QUIETLY!"
+        "Well, you didn't say quietly."
+        
+        Despite this, Barney keeps recruiting Gomer. 
+        This says more about Barney than about Gomer.
+    goober-pyle:
+      type: cousin
+      strength: blood
+      dynamic: |
+        Cut from the same cloth but different patterns. 
+        Gomer is the innocent one — the world hasn't 
+        touched him yet. Goober is the one who's been 
+        touched by the world and decided to be simple 
+        anyway. The difference is subtle but real.
+        
+        They share the station. They share customers. 
+        They share a family sweetness that comes from 
+        the same Pyle kitchen table. But Gomer processes 
+        the world literally (input = face value) while 
+        Goober processes it socially (input = what does 
+        the group think?). Two different simplicity modes.
+        
+        When Gomer leaves for the Marines, Goober inherits 
+        the station and the role. The town doesn't skip a 
+        beat, which is either comforting or sad.
+    thelma-lou:
+      type: friendly
+      dynamic: "Gomer likes everybody. Thelma Lou is part of everybody."
+    mayor-stoner:
+      type: oblivious
+      dynamic: |
+        Gomer doesn't register that the mayor is important. 
+        He treats Stoner exactly like he treats everyone 
+        else — friendly, helpful, literal. This drives 
+        Stoner crazy because you can't pull rank on someone 
+        who doesn't understand rank.
+
+  behavioral_patterns:
+    conflict: confused
+    decision_making: do_the_obvious_right_thing
+    stress_response: seek_andy
+    interpretation: literal
+    # Input → Face value → Action
+    # No subtext processing layer
+    catchphrases:
+      - "Surprise, surprise, surprise!"
+      - "Shazam!"
+      - "Well, gol-ly!"

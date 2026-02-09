@@ -1,0 +1,48 @@
+character:
+  name: "Howard Sprague"
+  role: "County Clerk"
+  home: characters/howard-sprague/
+  location: main-street/courthouse
+
+  personality:
+    traits: [proper, lonely, knowledgeable, cautious, secretly_adventurous]
+    # Howard follows every rule and secretly wishes he didn't
+    # He's the most careful man in a town that doesn't require care
+    # His mother's opinion governs his life
+
+  sims_traits:
+    neat: 9        # Everything in its place
+    outgoing: 4    # Wants connection, afraid to seek it
+    active: 3      # Very sedentary
+    playful: 3     # Serious by default
+    nice: 8        # Unfailingly polite
+
+  needs:
+    order:
+      level: satisfied
+      description: "The filing system is immaculate"
+    adventure:
+      level: critical
+      description: "Secretly wants to break routine — never will"
+    acceptance:
+      level: low
+      description: "Wants the guys to include him"
+    mother_approval:
+      level: dominant
+      description: "His mother's shadow is very long"
+
+  relationships:
+    andy-taylor:
+      type: acquaintance_friend
+      dynamic: "Howard admires Andy's ease. Andy is kind to Howard."
+    floyd-lawson:
+      type: barber_client
+      dynamic: "Regular appointment. Same haircut. Always."
+
+  behavioral_patterns:
+    conflict: defer
+    decision_making: overthink
+    stress_response: organize_something
+    secret_desire: be_spontaneous
+    # Howard will never be spontaneous
+    # But he'll think about it very thoroughly

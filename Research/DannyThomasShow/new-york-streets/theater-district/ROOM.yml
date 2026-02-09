@@ -1,0 +1,29 @@
+room:
+  name: "Theater District"
+  type: commercial_entertainment
+  atmosphere: |
+    Broadway and its surroundings. Marquees, stage doors, 
+    restaurants where agents eat, bars where comics drink. 
+    The Copa Club sits in this ecosystem. Danny knows everyone 
+    here — or everyone knows him. It's a village inside the 
+    city, where your last show IS your reputation.
+
+  exits:
+    copa: ../../copa-club
+    streets: ../
+
+  ambient:
+    function: professional_ecosystem
+    competition: constant
+    # Other performers, other clubs, other acts
+    # Danny doesn't just perform — he competes
+    # for attention, bookings, relevance
+    networking: intrinsic
+    # Every dinner is a meeting
+    # Every drink is a deal
+    # Every handshake is an audition
+
+  expansion: tardis
+  # This directory grows as stories demand
+  # Other clubs, restaurants, agent offices
+  # The theater district contains multitudes

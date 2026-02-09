@@ -1,0 +1,28 @@
+skill:
+  name: "Fishing Hole Activities"
+  location: myers-lake/fishing-hole
+
+  advertisements:
+    FISH:
+      satisfies: [peace, solitude, patience]
+      description: "Cast a line and wait"
+      participants: [any]
+      catch_rate: irrelevant
+      # The fishing is the excuse, not the goal
+
+    TALK:
+      satisfies: [connection, reflection, teaching]
+      description: "Father-son conversation while fishing"
+      participants: [andy-taylor, opie-taylor]
+      depth: soul_level
+      # Opie: "Pa, why do people...?"
+      # Andy: *long pause, reels in, casts again*
+      # Andy: "Well, Opie, I think..."
+
+    THINK:
+      satisfies: [solitude, processing]
+      description: "Sit alone and work through a problem"
+      participants: [andy-taylor]
+      prerequisite: complex_problem
+      # When Andy's at the lake alone,
+      # Mayberry has a hard problem

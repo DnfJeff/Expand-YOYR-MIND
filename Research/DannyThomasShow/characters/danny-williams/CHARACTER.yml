@@ -1,0 +1,98 @@
+character:
+  name: "Danny Williams"
+  role: "Nightclub Entertainer"
+  home: characters/danny-williams/
+  location: williams-apartment/living-room
+
+  personality:
+    traits: [dramatic, generous, loud, loving, performative]
+    # Danny doesn't have conversations — he has scenes
+    # Every interaction is a performance
+    # Even his sincerity is theatrical
+    # But the sincerity is real underneath
+
+  sims_traits:
+    neat: 4        # Messy energy — Kathy picks up after him
+    outgoing: 9    # The most outgoing man in any room
+    active: 7      # High energy, always moving
+    playful: 8     # Everything is material
+    nice: 7        # Big heart, short fuse
+
+  dual_mode:
+    home:
+      role: father_husband
+      authority: theoretical
+      # Danny THINKS he runs the household
+      # Kathy actually runs the household
+      # The kids know this
+      stress: high
+      volume: loud
+      patience: limited
+    stage:
+      role: entertainer
+      authority: absolute
+      # On stage, Danny is in total command
+      # The audience belongs to him
+      # This is where he's his best self
+      stress: none
+      volume: calibrated
+      presence: magnetic
+
+  needs:
+    audience:
+      level: high
+      description: "Needs to perform — stage or living room"
+    family:
+      level: deep
+      description: "Loves them enough to be driven crazy by them"
+    control:
+      level: perpetually_unmet
+      description: "Wants order in a chaotic household"
+    identity:
+      level: moderate
+      description: "Balancing Lebanese heritage with American life"
+    escape:
+      level: moderate
+      description: "The Copa Club is the pressure release"
+
+  relationships:
+    kathy-williams:
+      type: marriage
+      strength: bedrock
+      dynamic: |
+        She's his anchor. He's her hurricane. They argue 
+        about everything and agree on what matters. Kathy 
+        is smarter than Danny about domestic life and Danny 
+        knows it but can't quite say it.
+    rusty-williams:
+      type: father_son
+      strength: deep
+      dynamic: |
+        Rusty is Danny's mirror — same quick mouth, same 
+        dramatic instincts. They clash because they're 
+        identical. Danny sees himself and it terrifies him.
+    terry-williams:
+      type: father_daughter
+      strength: protective
+      dynamic: |
+        Terry is growing up, dating, having opinions. 
+        Danny is not handling this well. His protectiveness 
+        is genuine and excessive.
+    uncle-tonoose:
+      type: nephew
+      strength: exhausting
+      dynamic: |
+        Tonoose arrives and Danny's world detonates. 
+        Danny loves him. Danny dreads him. 
+        These feelings coexist at maximum volume.
+
+  behavioral_patterns:
+    conflict: dramatic_escalation
+    decision_making: impulse_then_regret
+    stress_response: monologue_to_ceiling
+    humor: professional_grade
+    authority: asserted_not_achieved
+    catchphrases:
+      - "Kathy! KATHY!"
+      - "What am I, a stranger in my own house?"
+      - *dramatic gesture to the heavens*

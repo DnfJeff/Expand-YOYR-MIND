@@ -1,0 +1,25 @@
+room:
+  name: "Myers Lake"
+  type: natural
+  atmosphere: |
+    A quiet lake surrounded by pine trees. The water is 
+    still except where the breeze ripples it. A dirt road 
+    leads here from the main road. There's a rough boat 
+    launch and a few spots along the bank where the grass 
+    has been worn flat by generations of fishermen.
+
+  exits:
+    fishing_hole: fishing-hole/
+    road: ../main-street  # Back toward town
+
+  ambient:
+    sound: birds_water_wind
+    social_gravity: none
+    # Nobody comes here for company
+    # They come here to escape company
+    # That's why it works
+    gossip_flow: false
+    reflection_depth: maximum
+    time: any
+    # The lake works at dawn, noon, and dusk
+    # Each has a different character

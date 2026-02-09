@@ -1,0 +1,26 @@
+room:
+  name: "Andy's Office"
+  type: office
+  atmosphere: |
+    A wooden desk with a swivel chair. A gun rack on the wall — 
+    Andy's rifle, rarely touched. A coffee maker that's always on. 
+    Two chairs in front of the desk for visitors, which is everyone 
+    in town at some point. The window looks out at Main Street.
+
+  exits:
+    out: ../ # Back to courthouse lobby
+
+  objects:
+    - desk.yml
+    - gun-rack.yml
+    - coffee-maker.yml
+    - phone.yml
+    - filing-cabinet.yml
+
+  ambient:
+    mood: calm
+    purpose: conflict_resolution
+    # This room is where problems come to be solved
+    # Not through law, through conversation
+    # Andy's chair faces the visitor chairs, not the wall
+    # That's not an accident

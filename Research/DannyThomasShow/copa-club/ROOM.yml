@@ -1,0 +1,36 @@
+room:
+  name: "Copa Club"
+  type: nightclub
+  atmosphere: |
+    A Manhattan supper club with the lights turned low. 
+    Round tables with white tablecloths ring a small stage. 
+    A bar along the back wall catches the light. The band 
+    sets up behind the performer. The ceiling is low enough 
+    that Danny's voice fills the room without a microphone, 
+    though he uses one anyway. It smells like cologne, 
+    cigarettes, and prime rib.
+
+  exits:
+    stage: stage/
+    backstage: backstage/
+    office: managers-office/
+    out: ../new-york-streets/theater-district
+
+  overrides:
+    tone: professional_showbiz
+    # The Copa overrides the domestic chaos tone
+    # This is a curated space
+    # Everything here is intentional
+    governance:
+      authority: phil-brokaw
+      # Danny runs the stage; Phil runs the room
+      # Clear jurisdictions, mutual respect
+
+  ambient:
+    sound: jazz_trio_warming_up
+    lighting: atmospheric
+    energy: anticipation
+    # Every night before the show, the room hums
+    # The audience is arriving, ordering drinks
+    # The band is tuning
+    # Danny is backstage preparing to become himself

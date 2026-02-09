@@ -1,0 +1,30 @@
+room:
+  name: "Mt. Pilot"
+  type: town
+  atmosphere: |
+    A bigger town with streetlights, a bus station, and 
+    stores that stay open past 6. It's not a city by any 
+    real measure, but to Mayberry folks it feels like one. 
+    More cars, more strangers, more noise. The kind of place 
+    where you lock your car door.
+
+  exits:
+    mayberry: ../ # Back to Mayberry
+
+  overrides:
+    tone: neutral
+    # Mt. Pilot doesn't inherit Mayberry's gentle_humor
+    # It has its own rules, its own social register
+    # Characters behave differently here
+    governance: standard
+    # No Andy Taylor here — regular law enforcement
+
+  ambient:
+    contrast_function: true
+    # Mt. Pilot exists primarily as a contrast to Mayberry
+    # It shows what Mayberry ISN'T
+    # And by contrast, what Mayberry IS
+    expansion: tardis
+    # This folder can grow as needed
+    # Movie theater, restaurants, county offices
+    # The LLM fills in details on demand

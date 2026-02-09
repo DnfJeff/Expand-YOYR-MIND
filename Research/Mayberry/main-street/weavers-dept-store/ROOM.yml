@@ -1,0 +1,25 @@
+room:
+  name: "Weaver's Department Store"
+  type: commercial
+  atmosphere: |
+    Mayberry's general store and dry goods emporium. Bolts of 
+    fabric, bins of hardware, racks of sensible clothing. The 
+    wooden floor creaks in specific spots that the regulars 
+    know by heart. Mrs. Weaver runs the cash register and 
+    knows everyone's account balance from memory.
+
+  exits:
+    out: ../ # Back to Main Street
+
+  objects:
+    - fabric-section.yml
+    - hardware-bins.yml
+    - clothing-racks.yml
+    - cash-register.yml
+
+  ambient:
+    commercial: traditional
+    credit: store_accounts
+    # Nobody uses checks at Weaver's
+    # She just writes it in the book
+    # The honor system works in Mayberry

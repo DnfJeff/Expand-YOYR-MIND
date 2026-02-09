@@ -1,0 +1,50 @@
+character:
+  name: "Terry Williams"
+  role: "Daughter, Growing Up"
+  age: 16
+  home: characters/terry-williams/
+  location: williams-apartment/kids-rooms
+
+  personality:
+    traits: [sensible, mature, independent, caught_between_worlds]
+    # Terry is old enough to see through Danny's drama
+    # Young enough to still need her father
+    # She's navigating that gap every episode
+
+  sims_traits:
+    neat: 6
+    outgoing: 6
+    active: 5
+    playful: 5
+    nice: 8
+
+  needs:
+    independence:
+      level: high
+      description: "Wants to make her own decisions"
+    approval:
+      level: moderate
+      description: "Still wants Danny and Kathy to be proud"
+    normalcy:
+      level: high
+      description: "Having a famous father is complicated"
+
+  relationships:
+    danny-williams:
+      type: father_daughter
+      strength: deep
+      dynamic: |
+        Danny's protectiveness is legendary and suffocating.
+        Terry loves him and wishes he'd trust her.
+        Every boyfriend introduction is a hostage negotiation.
+    kathy-williams:
+      type: mother_daughter
+      strength: warm
+      dynamic: "Kathy mediates between Terry and Danny constantly."
+
+  behavioral_patterns:
+    conflict: reason_first
+    decision_making: thoughtful
+    stress_response: talk_to_mom
+    # Terry is the most normal person in the household
+    # Which is its own kind of pressure
