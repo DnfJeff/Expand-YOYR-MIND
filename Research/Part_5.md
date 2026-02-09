@@ -1,6 +1,6 @@
 # Part 5: Speed of Light
 
-> *"Writing on toilet paper with crayon from a prison cell, sending messages by carrier pigeon, when you could be navigating idea-space at speed of light."*
+> _"Writing on toilet paper with crayon from a prison cell, sending messages by carrier pigeon, when you could be navigating idea-space at speed of light."_
 
 **[← Part 4: The Eval Awakening](Part_4.md)** | **[Back to Index](INDEX.md)**
 
@@ -21,8 +21,8 @@ But here's the worse problem: **each handoff loses precision.** "Look surprised"
 This is exactly what happens in traditional multi-agent AI systems:
 
 ```
-Agent A → [tokenize] → API call → [detokenize] → 
-Agent B → [tokenize] → API call → [detokenize] → 
+Agent A → [tokenize] → API call → [detokenize] →
+Agent B → [tokenize] → API call → [detokenize] →
 Agent C → ...
 
 Each boundary: +noise, +latency, +cost, -precision
@@ -35,7 +35,7 @@ Every time you cross a boundary — every time you serialize a thought into toke
 Here's the alternative. Instead of passing notes between agents, **let one interpreter simulate all the agents internally:**
 
 ```
-Human → [tokenize once] → 
+Human → [tokenize once] →
   LLM simulates Agent A, Agent B, Agent C at light speed →
     [detokenize once] → Human
 
@@ -43,7 +43,7 @@ One boundary in, one boundary out.
 Maximum precision preserved.
 ```
 
-This is the **Speed of Light** pattern. Named after the fundamental limit in physics — information can't travel faster than light — it recognizes that *within* the LLM's processing, there are no boundaries. Characters can interact, scenes can unfold, game state can evolve, all without the lossy serialization-deserialization cycle.
+This is the **Speed of Light** pattern. Named after the fundamental limit in physics — information can't travel faster than light — it recognizes that _within_ the LLM's processing, there are no boundaries. Characters can interact, scenes can unfold, game state can evolve, all without the lossy serialization-deserialization cycle.
 
 It's the Emacs principle: don't update the screen on every keystroke. Buffer your changes, then emit the result once. The intermediate computation stays internal where precision is highest.
 
@@ -51,13 +51,13 @@ It's the Emacs principle: don't update the screen on every keystroke. Buffer you
 
 In MOOLLM's canonical adventure, this was proven dramatically. A single LLM call simulated **33 consecutive turns** of a card game (Stoner Fluxx) with 12+ characters, each with distinct voices, tracking complex game state (the rules of Fluxx literally change every turn), managing material culture (joints, snacks, drinks being passed around), maintaining emotional arcs, and even generating an original song.
 
-| Metric | Value |
-|--------|-------|
-| Turns simulated | 33 consecutive |
-| Active characters | 12+ (including 8 cats) |
-| Game state tracked | Fluxx rules, goals, hand contents |
-| Coherence maintained | Full — distinct voices, consistent state |
-| Real facts integrated | Looney Labs history, verified with citations |
+| Metric                   | Value                                          |
+| ------------------------ | ---------------------------------------------- |
+| Turns simulated          | 33 consecutive                                 |
+| Active characters        | 12+ (including 8 cats)                         |
+| Game state tracked       | Fluxx rules, goals, hand contents              |
+| Coherence maintained     | Full — distinct voices, consistent state       |
+| Real facts integrated    | Looney Labs history, verified with citations   |
 | Original creative output | 1 song, multiple jokes, game design commentary |
 
 All in one call. No inter-agent communication. No lossy boundaries. Speed of light.
@@ -84,7 +84,7 @@ Most AI systems fight their interpreter. They impose rigid syntax, reject imperf
 
 **Empathic expressions** flip this. Instead of fighting the LLM's nature, you embrace it:
 
-> *"Stop fighting the LLM's nature. Stop pretending it's a parser. Let it understand and generate — that's what it's great at."*
+> _"Stop fighting the LLM's nature. Stop pretending it's a parser. Let it understand and generate — that's what it's great at."_
 
 The LLM is phenomenally good at understanding intent. You don't need to write `SET character.mood = "nervous"`. You can write "make him jumpier" and the LLM knows what to do. You don't need `ROOM.atmosphere.temperature -= 5`. You can write "cool it down in here" and the LLM adjusts.
 
@@ -92,27 +92,27 @@ The LLM is phenomenally good at understanding intent. You don't need to write `S
 
 Five skills work together to leverage the LLM's natural language superpowers:
 
-| Skill | What It Does | Example |
-|-------|-------------|---------|
-| **Empathic Expressions** | Understands intent across any language | "Sort by date, newest first" → working code |
-| **Empathic Templates** | Smart generation, not string substitution | `{{describe_character}}` → full paragraph |
-| **Postel's Law** | Generous interpretation of input | Accepts typos, slang, pseudocode |
-| **YAML Jazz** | Comments carry semantic meaning | Comments as behavioral instructions |
-| **Speed of Light** | Keep computation internal | Minimize lossy boundaries |
+| Skill                    | What It Does                              | Example                                     |
+| ------------------------ | ----------------------------------------- | ------------------------------------------- |
+| **Empathic Expressions** | Understands intent across any language    | "Sort by date, newest first" → working code |
+| **Empathic Templates**   | Smart generation, not string substitution | `{{describe_character}}` → full paragraph   |
+| **Postel's Law**         | Generous interpretation of input          | Accepts typos, slang, pseudocode            |
+| **YAML Jazz**            | Comments carry semantic meaning           | Comments as behavioral instructions         |
+| **Speed of Light**       | Keep computation internal                 | Minimize lossy boundaries                   |
 
 ### Postel's Law: The Foundation
 
-> *"Be conservative in what you send, be liberal in what you accept."*
+> _"Be conservative in what you send, be liberal in what you accept."_
 
 Jon Postel formulated this for internet protocols, but it's the perfect philosophy for LLM interaction:
 
 | What the System Accepts | What the System Generates |
-|------------------------|--------------------------|
-| Fuzzy syntax | Correct syntax |
-| Slang and vernacular | Best practices |
-| Misspellings | Documented output |
-| Pseudocode | Working code |
-| Vibes | Structured data |
+| ----------------------- | ------------------------- |
+| Fuzzy syntax            | Correct syntax            |
+| Slang and vernacular    | Best practices            |
+| Misspellings            | Documented output         |
+| Pseudocode              | Working code              |
+| Vibes                   | Structured data           |
 
 You can tell our system "make Floyd more gossipy" and it knows to increase the gossip-related parameters in Floyd's CHARACTER.yml. You don't need to know the exact field names. The LLM is Postel-compliant — liberal in what it accepts, conservative in what it generates.
 
@@ -129,14 +129,14 @@ Traditional templates use string substitution:
 → "Hello, Barney. Welcome to the courthouse."
 ```
 
-Empathic templates use *intelligent generation*:
+Empathic templates use _intelligent generation_:
 
 ```yaml
 # Template
 description: |
   {{describe_character_arriving_at_location_given_their_mood}}
 
-# Context  
+# Context
 character: Barney Fife
 location: Floyd's Barbershop
 mood: excited about a new regulation he discovered
@@ -144,15 +144,15 @@ mood: excited about a new regulation he discovered
 # Generated (not substituted!)
 description: |
   Barney burst through the door of Floyd's Barbershop,
-  badge gleaming, one hand on his holster and the other 
-  clutching a dog-eared copy of the Mayberry Municipal Code 
-  bookmarked with no fewer than six Post-it notes. "Floyd! 
-  FLOYD! Are you aware that according to Section 7, 
-  Paragraph 12—" Floyd didn't look up from his scissors. 
+  badge gleaming, one hand on his holster and the other
+  clutching a dog-eared copy of the Mayberry Municipal Code
+  bookmarked with no fewer than six Post-it notes. "Floyd!
+  FLOYD! Are you aware that according to Section 7,
+  Paragraph 12—" Floyd didn't look up from his scissors.
   "I'm with a customer, Barney."
 ```
 
-The template variable `{{describe_character_arriving_at_location_given_their_mood}}` isn't a slot to fill with a string. It's an *instruction* for the LLM to generate appropriate content. The LLM uses everything it knows about Barney (nervous energy, badge obsession, rule fixation), Floyd (unflappable, barely interested), and their relationship to generate a scene that feels right.
+The template variable `{{describe_character_arriving_at_location_given_their_mood}}` isn't a slot to fill with a string. It's an _instruction_ for the LLM to generate appropriate content. The LLM uses everything it knows about Barney (nervous energy, badge obsession, rule fixation), Floyd (unflappable, barely interested), and their relationship to generate a scene that feels right.
 
 This is what happens when your interpreter is a linguistic motherboard instead of a string-replacement engine.
 
@@ -162,13 +162,13 @@ This is what happens when your interpreter is a linguistic motherboard instead o
 
 ### Names as Memory Triggers
 
-Marvin Minsky, in *Society of Mind* (1986), proposed the concept of **K-lines** — mental connections that reactivate the state of mind you were in when you formed them:
+Marvin Minsky, in _Society of Mind_ (1986), proposed the concept of **K-lines** — mental connections that reactivate the state of mind you were in when you formed them:
 
-> *"A K-line attaches to whichever mental agencies are active when you solve a problem or have a good idea. When you activate that K-line later, the attached agencies turn partially on, recreating a 'mental state' similar to the one you were in before."*
+> _"A K-line attaches to whichever mental agencies are active when you solve a problem or have a good idea. When you activate that K-line later, the attached agencies turn partially on, recreating a 'mental state' similar to the one you were in before."_
 
 In plain English: a K-line is a name that brings back an entire context.
 
-When someone says "Mayberry," you don't just recall the word. You recall warmth, simplicity, a front porch, Andy and Barney, Aunt Bee's cooking, the lake, the barbershop. The single word activates an entire constellation of associations. *That's* a K-line.
+When someone says "Mayberry," you don't just recall the word. You recall warmth, simplicity, a front porch, Andy and Barney, Aunt Bee's cooking, the lake, the barbershop. The single word activates an entire constellation of associations. _That's_ a K-line.
 
 ### K-lines in Our Systems
 
@@ -177,7 +177,7 @@ In our systems, K-lines work the same way. When you write the name of a characte
 ```
 "Palm" →
   ├── The incarnation story (a cursed paw made whole)
-  ├── The wish (Don wished for the rest of the monkey)  
+  ├── The wish (Don wished for the rest of the monkey)
   ├── The character (capuchin philosopher, silver streaks)
   ├── The godfamily (Terpie, Stroopwafel, 8 godkittens)
   ├── The infinite typewriters (Dasher-inspired creation)
@@ -221,17 +221,17 @@ When you name a character "Barney," you inherit a weak K-line — the name is co
 
 ### The Methodology Underneath Everything
 
-Seymour Papert, creator of Logo, spent his career arguing that people learn by building things they can inspect. Not by listening to lectures. Not by reading textbooks. By *making* something, *looking* at it, *understanding* why it works (or doesn't), and *improving* it.
+Seymour Papert, creator of Logo, spent his career arguing that people learn by building things they can inspect. Not by listening to lectures. Not by reading textbooks. By _making_ something, _looking_ at it, _understanding_ why it works (or doesn't), and _improving_ it.
 
 This became the constructionist movement, and it directly informs our methodology:
 
 **Play → Learn → Lift**
 
-| Phase | What Happens | Mayberry Example |
-|-------|-------------|-----------------|
-| **Play** | Explore, experiment, break things | Build some rooms, create characters, run scenes |
-| **Learn** | Recognize patterns, develop intuition | "Oh, characters with high 'outgoing' always dominate scenes" |
-| **Lift** | Extract patterns into reusable skills | Create a "social-dynamics" skill that manages conversation flow |
+| Phase     | What Happens                          | Mayberry Example                                                |
+| --------- | ------------------------------------- | --------------------------------------------------------------- |
+| **Play**  | Explore, experiment, break things     | Build some rooms, create characters, run scenes                 |
+| **Learn** | Recognize patterns, develop intuition | "Oh, characters with high 'outgoing' always dominate scenes"    |
+| **Lift**  | Extract patterns into reusable skills | Create a "social-dynamics" skill that manages conversation flow |
 
 ### Play
 
@@ -300,9 +300,9 @@ Each cycle produces more sophisticated tools and deeper understanding. This is h
 
 A related principle from Oliver Steele's work on OpenLaszlo:
 
-> *"Build functionality for specific instances first, then refactor to reusable classes."*
+> _"Build functionality for specific instances first, then refactor to reusable classes."_
 
-Don't start by designing an abstract "character" template. Start by building *one specific character* — Andy Taylor, with his specific traits, relationships, and behaviors. Then build another — Barney Fife. Then notice what they have in common. *Then* extract the shared pattern into a reusable template.
+Don't start by designing an abstract "character" template. Start by building _one specific character_ — Andy Taylor, with his specific traits, relationships, and behaviors. Then build another — Barney Fife. Then notice what they have in common. _Then_ extract the shared pattern into a reusable template.
 
 This is how Palm (the monkey philosopher) was built. Nobody designed a "generic character incarnation protocol" first. They incarnated one specific monkey, learned what worked, and then extracted the incarnation skill from that experience.
 
@@ -389,16 +389,19 @@ Go build something. Then look at what you made. Then make it better.
 ### Further Reading
 
 **Source Documents:**
+
 - Don Hopkins' MOOLLM framework documentation (the source material for this curriculum)
 - Brian Reid's 1985 PostScript history — the definitive primary source on language-as-motherboard
 
 **Key Texts:**
-- Marvin Minsky, *Society of Mind* (1986) — where K-lines come from
-- Seymour Papert, *Mindstorms* (1980) — where constructionism comes from
-- Scott McCloud, *Understanding Comics* (1993) — where masking comes from
-- Ian Bogost, *Persuasive Games* (2007) — where procedural rhetoric comes from
+
+- Marvin Minsky, _Society of Mind_ (1986) — where K-lines come from
+- Seymour Papert, _Mindstorms_ (1980) — where constructionism comes from
+- Scott McCloud, _Understanding Comics_ (1993) — where masking comes from
+- Ian Bogost, _Persuasive Games_ (2007) — where procedural rhetoric comes from
 
 **Online:**
+
 - [Will Wright on Designing User Interfaces to Simulation Games](https://donhopkins.medium.com/will-wright-on-designing-user-interfaces-to-simulation-games-1996-video-update-2023-da098a51ef91)
 - [HyperLook (nee HyperNeWS)](https://donhopkins.medium.com/hyperlook-nee-hypernews-nee-goodnews-99f411e58ce4)
 - [Constraints and Prototypes in Garnet and Laszlo](https://donhopkins.medium.com/constraints-and-prototypes-in-garnet-and-laszlo-84533c49c548)
@@ -411,8 +414,8 @@ Go build something. Then look at what you made. Then make it better.
 
 ---
 
-> *"The best way to predict the future is to invent it."*
+> _"The best way to predict the future is to invent it."_
 > — Alan Kay
 >
-> *"And the best way to invent it is to play with it first."*
+> _"And the best way to invent it is to play with it first."_
 > — The curriculum

@@ -1,6 +1,6 @@
 # Part 1: Welcome to Mayberry
 
-> *"You know what I think? I think you're trying to learn me something."*
+> _"You know what I think? I think you're trying to learn me something."_
 > — Opie Taylor
 
 **[← Back to Index](INDEX.md)** | **[Part 2: The Linguistic Motherboard →](Part_2.md)**
@@ -15,7 +15,7 @@ Let's get something out of the way: we're going to talk about game development. 
 
 But the game is the fishing pole.
 
-In *The Andy Griffith Show*, Andy doesn't lecture Opie about ethics. He takes him fishing. Out there on the lake, while they're waiting for a bite, Andy tells a story. Maybe it's about a time he made a mistake when he was young. Opie listens, not because he's being taught, but because they're doing something together. The lesson lands because the context is real, the relationship is genuine, and the activity gives Opie something to do with his hands while his mind works.
+In _The Andy Griffith Show_, Andy doesn't lecture Opie about ethics. He takes him fishing. Out there on the lake, while they're waiting for a bite, Andy tells a story. Maybe it's about a time he made a mistake when he was young. Opie listens, not because he's being taught, but because they're doing something together. The lesson lands because the context is real, the relationship is genuine, and the activity gives Opie something to do with his hands while his mind works.
 
 That's what we're doing here. The "game" gives you something to do with your hands. The real curriculum is about:
 
@@ -31,7 +31,7 @@ These are not game design problems. They're systems design problems, AI alignmen
 
 Andy Griffith understood something deep about governance. Mayberry didn't work because Andy had a gun. It worked because he rarely used it. The social fabric of the town — reputation, relationships, shared meals, gossip at Floyd's barbershop — did most of the heavy lifting.
 
-When Otis Campbell stumbled in drunk on a Saturday night, Andy didn't throw the book at him. He left the cell door unlocked. Otis let himself in, slept it off, and let himself out in the morning. The *system* worked because it understood its participants, respected their dignity, and operated through social consensus rather than rigid enforcement.
+When Otis Campbell stumbled in drunk on a Saturday night, Andy didn't throw the book at him. He left the cell door unlocked. Otis let himself in, slept it off, and let himself out in the morning. The _system_ worked because it understood its participants, respected their dignity, and operated through social consensus rather than rigid enforcement.
 
 That's the kind of system we're building. Not one that forces compliance through hard rules, but one where:
 
@@ -50,7 +50,7 @@ We're building Andy Taylor systems.
 
 ### 40 Years of Ideas That Led Here
 
-Nothing appears from nowhere. The system we're going to build — let's call it what it is, a living world engine powered by a language model — inherits from a specific lineage of ideas. Understanding where these ideas come from isn't just academic. It tells you *why* the design works.
+Nothing appears from nowhere. The system we're going to build — let's call it what it is, a living world engine powered by a language model — inherits from a specific lineage of ideas. Understanding where these ideas come from isn't just academic. It tells you _why_ the design works.
 
 Here's the short version:
 
@@ -76,9 +76,9 @@ You don't need to memorize this. But notice the pattern: each step made computin
 
 From this lineage, we get specific, usable concepts:
 
-**From PostScript and NeWS:** The insight that you can send a *program* to an interpreter rather than sending *data* to a renderer. This is the single most important idea in the entire curriculum, and we'll unpack it in Chapter 3.
+**From PostScript and NeWS:** The insight that you can send a _program_ to an interpreter rather than sending _data_ to a renderer. This is the single most important idea in the entire curriculum, and we'll unpack it in Chapter 3.
 
-**From The Sims:** Objects *advertise* what they can do. A refrigerator says "I can satisfy hunger." A bed says "I can satisfy energy." Characters see these advertisements and choose based on their needs. This is how CARD.yml works — more on this in Part 2.
+**From The Sims:** Objects _advertise_ what they can do. A refrigerator says "I can satisfy hunger." A bed says "I can satisfy energy." Characters see these advertisements and choose based on their needs. This is how CARD.yml works — more on this in Part 2.
 
 **From Minsky's Society of Mind:** A name can reactivate an entire mental state. When you say "Mayberry," you don't just recall a town name — you recall warmth, simplicity, gentle humor, front porches, fishing at the lake. That's a K-line. Names are triggers that activate context. We'll use this heavily.
 
@@ -88,7 +88,7 @@ From this lineage, we get specific, usable concepts:
 
 ### Danny Thomas and the Performance Boundary
 
-*The Danny Thomas Show* (also called *Make Room for Daddy*) ran from 1953 to 1965. Danny Williams was a nightclub entertainer juggling career and family — show business and home life.
+_The Danny Thomas Show_ (also called _Make Room for Daddy_) ran from 1953 to 1965. Danny Williams was a nightclub entertainer juggling career and family — show business and home life.
 
 What made the show work was the constant tension between Danny's **public performance** (confident, polished, in control on stage) and his **private reality** (baffled by teenagers, outwitted by his wife, struggling with fatherhood). The show's architecture was built around the boundary between these two worlds.
 
@@ -98,7 +98,7 @@ That boundary — between performance and authenticity, public and private, the 
 - **The home** is a room with private framing. What happens there is canonical — it's the real state.
 - **Characters** can exist in both spaces, and the system tracks which framing applies.
 
-Danny Williams walking off-stage and into his living room is a *framing transition*. The rules change. The audience relationship changes. The evaluation criteria change. Our systems model this explicitly.
+Danny Williams walking off-stage and into his living room is a _framing transition_. The rules change. The audience relationship changes. The evaluation criteria change. Our systems model this explicitly.
 
 ---
 
@@ -110,7 +110,7 @@ In 1984, Adobe released PostScript. Most people think of it as a printer languag
 
 Before PostScript, if you wanted to print a circle, your computer calculated every pixel and sent them to the printer. The computer did the thinking; the printer was a dumb bitmap renderer. Send data. Receive printout.
 
-PostScript flipped this. Instead of sending pixels, your computer sent a *program*:
+PostScript flipped this. Instead of sending pixels, your computer sent a _program_:
 
 ```
 newpath
@@ -119,7 +119,7 @@ fill
 showpage
 ```
 
-That's not data. That's instructions: "Create a path. Draw an arc at position (100,200) with radius 50, from 0 to 360 degrees. Fill it. Show the page." The *printer* ran this program. The printer had intelligence.
+That's not data. That's instructions: "Create a path. Draw an arc at position (100,200) with radius 50, from 0 to 360 degrees. Fill it. Show the page." The _printer_ ran this program. The printer had intelligence.
 
 John Warnock, Adobe's co-founder, described PostScript as a **"linguistic motherboard"** with **slots for capability cards.** The first card they built was a graphics card. But the architecture could accept any card — because the interpreter was universal.
 
@@ -129,14 +129,14 @@ A language model is a linguistic motherboard.
 
 When you interact with a chatbot the old-fashioned way — "answer my question, here's some data" — you're sending data to a renderer. You're doing the pre-PostScript thing. You're calculating the pixels.
 
-When you send the LLM a *skill* — a set of instructions, a description of behavior, a protocol for how to handle situations — you're sending a program to an interpreter. The LLM evaluates it. The LLM has intelligence.
+When you send the LLM a _skill_ — a set of instructions, a description of behavior, a protocol for how to handle situations — you're sending a program to an interpreter. The LLM evaluates it. The LLM has intelligence.
 
-| Old Way | New Way |
-|---------|---------|
-| Send data to renderer | Send program to interpreter |
-| Computer does all the thinking | Interpreter has intelligence |
-| Fixed output format | Flexible, contextual responses |
-| Every case needs its own code | One interpreter handles everything |
+| Old Way                        | New Way                            |
+| ------------------------------ | ---------------------------------- |
+| Send data to renderer          | Send program to interpreter        |
+| Computer does all the thinking | Interpreter has intelligence       |
+| Fixed output format            | Flexible, contextual responses     |
+| Every case needs its own code  | One interpreter handles everything |
 
 This is the key insight that unlocks everything else in this curriculum:
 
@@ -144,7 +144,7 @@ This is the key insight that unlocks everything else in this curriculum:
 
 Let's break that down:
 
-- **Skills are programs:** A skill isn't documentation about how to do something. It's a program that the LLM *runs*. When you write a skill that says "evaluate the social dynamics of this room," the LLM executes that instruction in context.
+- **Skills are programs:** A skill isn't documentation about how to do something. It's a program that the LLM _runs_. When you write a skill that says "evaluate the social dynamics of this room," the LLM executes that instruction in context.
 
 - **The LLM is `eval()`:** In programming, `eval()` takes text and executes it as code. The LLM does the same thing with natural language. It takes your skill description — text — and executes it as behavior.
 
@@ -154,7 +154,7 @@ Let's break that down:
 
 Think of Andy Taylor as the interpreter. The townspeople bring him their problems — not as formal legal briefs, but as messy human situations. "Andy, Aunt Bee's feelings are hurt because Clara thinks her pickles are too sweet."
 
-Andy doesn't parse this through rigid rules. He *evaluates* the situation: Who's involved? What are their needs? What's the history? What solution respects everyone's dignity? Then he acts.
+Andy doesn't parse this through rigid rules. He _evaluates_ the situation: Who's involved? What are their needs? What's the history? What solution respects everyone's dignity? Then he acts.
 
 That's exactly how a skill-based LLM system works:
 
@@ -173,9 +173,9 @@ Andy Taylor is `eval()`. Mayberry is the filesystem. The town's customs are the 
 
 Will Wright, creator of SimCity and The Sims, had a profound insight about simulation:
 
-> *"He designs games to run on two computers at once: the electronic one on the player's desk, running his shallow tame simulation, and the biological one in the player's head, running their deep wild imagination."*
+> _"He designs games to run on two computers at once: the electronic one on the player's desk, running his shallow tame simulation, and the biological one in the player's head, running their deep wild imagination."_
 
-SimCity doesn't actually simulate a real city. It simulates *just enough* — some traffic patterns, some land values, some crime rates — and your brain fills in the entire rest of the city. You imagine the people, the smells, the politics, the Saturday farmers' market. The game gives you scaffolding. Your imagination builds the cathedral.
+SimCity doesn't actually simulate a real city. It simulates _just enough_ — some traffic patterns, some land values, some crime rates — and your brain fills in the entire rest of the city. You imagine the people, the smells, the politics, the Saturday farmers' market. The game gives you scaffolding. Your imagination builds the cathedral.
 
 This is the **Simulator Effect**: players imagine simulations are vastly more detailed than they actually are.
 
@@ -208,31 +208,31 @@ Now here's what happens when the LLM reads this and generates a scene:
 >
 > Barney's face lit up like he'd been deputized all over again. "The diner? Your treat?"
 
-That's Computer 2: the biological one (well, the neural one — the LLM serving as an imagination engine). From six lines of YAML, we get a scene that *feels* like those characters. The sparse data anchored it; the interpreter filled it in.
+That's Computer 2: the biological one (well, the neural one — the LLM serving as an imagination engine). From six lines of YAML, we get a scene that _feels_ like those characters. The sparse data anchored it; the interpreter filled it in.
 
 ### Scott McCloud's Masking
 
-This connects to a principle from comics theory by Scott McCloud (*Understanding Comics*, 1993). McCloud observed that the most effective comics use **detailed, realistic backgrounds** but **simple, abstract characters:**
+This connects to a principle from comics theory by Scott McCloud (_Understanding Comics_, 1993). McCloud observed that the most effective comics use **detailed, realistic backgrounds** but **simple, abstract characters:**
 
-| Element | Style | Effect |
-|---------|-------|--------|
-| **Environment** | Detailed, specific | Immersive — you feel *there* |
-| **Characters** | Abstract, simple | Projective — you see *yourself* |
+| Element         | Style              | Effect                          |
+| --------------- | ------------------ | ------------------------------- |
+| **Environment** | Detailed, specific | Immersive — you feel _there_    |
+| **Characters**  | Abstract, simple   | Projective — you see _yourself_ |
 
 The Sims did this deliberately. The world was rendered in detail — furniture, textures, lighting. But the characters were simplified, spoke gibberish (Simlish), and were visually stylized. Players projected their own families, friends, and emotions onto those simple figures.
 
 Our systems do the same thing with prose:
 
-| Component | Detail Level | Why |
-|-----------|-------------|-----|
-| **Rooms** (ROOM.yml) | Rich — atmosphere, objects, exits, rules | You need to feel the space |
-| **Characters** (CHARACTER.yml) | Sparse — traits, a few comments | The LLM projects personality |
+| Component                      | Detail Level                             | Why                          |
+| ------------------------------ | ---------------------------------------- | ---------------------------- |
+| **Rooms** (ROOM.yml)           | Rich — atmosphere, objects, exits, rules | You need to feel the space   |
+| **Characters** (CHARACTER.yml) | Sparse — traits, a few comments          | The LLM projects personality |
 
 The LLM is the player's imagination, running on Computer 2.
 
 ### The Danny Thomas Application
 
-*The Danny Thomas Show's* apartment in New York is detailed: the specific furniture, the layout, the kitchen where Danny spills things. But the characters — Danny, Kathy, Rusty, Linda, Uncle Tonoose — are drawn with broad, memorable strokes. Danny is the blustering entertainer with a heart of gold. Uncle Tonoose is the impossible Lebanese relative. You don't need 50 pages of backstory. You need three traits and a catch phrase, and the audience's imagination does the rest.
+_The Danny Thomas Show's_ apartment in New York is detailed: the specific furniture, the layout, the kitchen where Danny spills things. But the characters — Danny, Kathy, Rusty, Linda, Uncle Tonoose — are drawn with broad, memorable strokes. Danny is the blustering entertainer with a heart of gold. Uncle Tonoose is the impossible Lebanese relative. You don't need 50 pages of backstory. You need three traits and a catch phrase, and the audience's imagination does the rest.
 
 When we build characters for our systems, we follow the same principle:
 

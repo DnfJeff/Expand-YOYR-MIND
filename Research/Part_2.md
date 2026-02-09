@@ -1,6 +1,6 @@
 # Part 2: The Linguistic Motherboard
 
-> *"PostScript is a linguistic 'mother board', which has 'slots' for several 'cards'. The first card we built was a graphics card. We're considering other cards..."*
+> _"PostScript is a linguistic 'mother board', which has 'slots' for several 'cards'. The first card we built was a graphics card. We're considering other cards..."_
 > — John Warnock, Adobe
 
 **[← Part 1: Welcome to Mayberry](Part_1.md)** | **[Back to Index](INDEX.md)** | **[Part 3: Building Living Worlds →](Part_3.md)**
@@ -39,7 +39,7 @@ PostScript changed the game. Instead of sending dots, you sent a program:
 (Welcome to Mayberry) show
 ```
 
-The printer reads this and *understands* it: "Find the Helvetica font, scale it to 12 points, move to position (100,700), and draw the text 'Welcome to Mayberry.'" The printer has intelligence. It knows about fonts, coordinates, curves, and fills.
+The printer reads this and _understands_ it: "Find the Helvetica font, scale it to 12 points, move to position (100,700), and draw the text 'Welcome to Mayberry.'" The printer has intelligence. It knows about fonts, coordinates, curves, and fills.
 
 The genius of PostScript was that text, graphics, and computation were all the same thing. A PostScript file is simultaneously:
 
@@ -53,7 +53,7 @@ John Warnock called this the **"linguistic motherboard"** — a universal interp
 
 ### Level 3: The Universal Interpreter (LLM)
 
-Now fast-forward forty years. A large language model is the next linguistic motherboard. Instead of understanding PostScript, it understands *everything you can express in language*:
+Now fast-forward forty years. A large language model is the next linguistic motherboard. Instead of understanding PostScript, it understands _everything you can express in language_:
 
 ```yaml
 # This is simultaneously code, data, and graphics
@@ -64,7 +64,7 @@ character:
   # Never leads with force
   # Asks questions instead of giving orders
   # Treats everyone with dignity, even Otis
-  
+
   methods:
     - MEDIATE: resolve conflict between townspeople
     - COUNSEL: guide Opie through moral dilemma
@@ -72,6 +72,7 @@ character:
 ```
 
 When the LLM reads this, it understands Andy Taylor as a character. It can:
+
 - **Execute** the methods (generate a mediation scene)
 - **Query** the data (what's Andy's approach?)
 - **Render** it visually (describe Andy walking down Main Street)
@@ -82,7 +83,7 @@ The LLM is the linguistic motherboard. Skills are the cards you plug into it.
 
 ### The NeWS Connection
 
-In 1986, James Gosling (who later created Java) built **NeWS** — the Network extensible Window System at Sun Microsystems. NeWS ran PostScript on the *server*. Your computer didn't send pixels or even drawing commands — it sent entire programs across the network. The server ran them.
+In 1986, James Gosling (who later created Java) built **NeWS** — the Network extensible Window System at Sun Microsystems. NeWS ran PostScript on the _server_. Your computer didn't send pixels or even drawing commands — it sent entire programs across the network. The server ran them.
 
 This was radical. Instead of the old model:
 
@@ -100,13 +101,13 @@ The server had intelligence. It could handle events, manage windows, run animati
 
 This is exactly what we do with LLMs. You send a skill (program) to the LLM (interpreter). The LLM understands it and executes it. Results come back as text.
 
-| NeWS (1986) | Our System (2025) |
-|-------------|-------------------|
-| Send PostScript program to server | Send skill description to LLM |
-| Server interprets and executes | LLM interprets and executes |
-| Server manages windows, events | LLM manages characters, narrative |
-| Programs sent as text over network | Skills sent as text in context |
-| Server has intelligence | LLM has intelligence |
+| NeWS (1986)                        | Our System (2025)                 |
+| ---------------------------------- | --------------------------------- |
+| Send PostScript program to server  | Send skill description to LLM     |
+| Server interprets and executes     | LLM interprets and executes       |
+| Server manages windows, events     | LLM manages characters, narrative |
+| Programs sent as text over network | Skills sent as text in context    |
+| Server has intelligence            | LLM has intelligence              |
 
 The technology changed. The architecture didn't.
 
@@ -122,7 +123,7 @@ Don Hopkins coined the phrase **"Axis of Eval"** to describe HyperLook's unifica
 - **Data** — structures to query
 - **Graphics** — visuals to render
 
-This wasn't a trick or a hack. It was fundamental. PostScript *is* text that *describes* graphics through *executable procedures*. The three dimensions aren't separate — they're three views of the same thing.
+This wasn't a trick or a hack. It was fundamental. PostScript _is_ text that _describes_ graphics through _executable procedures_. The three dimensions aren't separate — they're three views of the same thing.
 
 ### The Axis in Our Systems
 
@@ -152,7 +153,7 @@ character:
   # His stage persona is confident; at home he's bewildered
   # Kathy runs the house; Danny just thinks he does
   # Uncle Tonoose's visits are natural disasters
-  
+
   current_state:
     mood: frazzled
     reason: "Uncle Tonoose arriving tomorrow"
@@ -160,11 +161,11 @@ character:
 
 This single file is simultaneously three things:
 
-| Dimension | What the LLM Sees | Example |
-|-----------|-------------------|---------|
-| **Data** | Structured traits the LLM can query | `traits: [dramatic, loving, exasperated, generous]` |
-| **Code** | Comments that instruct behavior | `# His stage persona is confident; at home he's bewildered` |
-| **Graphics** | Descriptions that generate scenes | "Danny paced the living room, running his hand through his hair..." |
+| Dimension    | What the LLM Sees                   | Example                                                             |
+| ------------ | ----------------------------------- | ------------------------------------------------------------------- |
+| **Data**     | Structured traits the LLM can query | `traits: [dramatic, loving, exasperated, generous]`                 |
+| **Code**     | Comments that instruct behavior     | `# His stage persona is confident; at home he's bewildered`         |
+| **Graphics** | Descriptions that generate scenes   | "Danny paced the living room, running his hand through his hair..." |
 
 The LLM **pivots** between these dimensions automatically. Ask it "what are Danny's traits?" and it reads data. Ask it "how would Danny react to Tonoose arriving early?" and it executes the behavioral code. Ask it "describe the scene" and it renders graphics in prose.
 
@@ -172,11 +173,11 @@ The LLM **pivots** between these dimensions automatically. Ask it "what are Dann
 
 You can deliberately invoke different stances:
 
-| Stance | What You Ask | What the LLM Does |
-|--------|-------------|-------------------|
-| **Data** | "What's Danny's mood?" | Extract and report the YAML value |
-| **Code** | "What does Danny do when Tonoose shows up?" | Interpret the comments as behavioral instructions |
-| **Graphics** | "Describe the living room right now" | Generate a prose scene from the structured data |
+| Stance       | What You Ask                                | What the LLM Does                                 |
+| ------------ | ------------------------------------------- | ------------------------------------------------- |
+| **Data**     | "What's Danny's mood?"                      | Extract and report the YAML value                 |
+| **Code**     | "What does Danny do when Tonoose shows up?" | Interpret the comments as behavioral instructions |
+| **Graphics** | "Describe the living room right now"        | Generate a prose scene from the structured data   |
 
 This isn't three different systems. It's one system, one file, three lenses. The Axis of Eval means you never have to choose. The same YAML file is your database, your script, and your scene description.
 
@@ -196,7 +197,7 @@ room:
   # Floyd tells you what you want to hear, not what's true
   # Two chairs but only one is ever used
   # The magazines are from 1958
-  
+
   objects:
     barber_chair:
       status: occupied
@@ -212,12 +213,12 @@ This is **YAML Jazz** — using the comment channel to convey meaning, emotion, 
 
 One more distinction that matters:
 
-| Format | Best For | Why |
-|--------|----------|-----|
-| **YAML** | Representing and manipulating state | Comments carry meaning, structure is editable |
-| **Markdown** | Narrative, documentation, prose | Human-readable, embeds structure naturally |
-| **HTML/SVG** | Rendering visual output | Display-ready |
-| **JSON** | Machine-to-machine exchange | No comments = less expressive, avoid for state |
+| Format       | Best For                            | Why                                            |
+| ------------ | ----------------------------------- | ---------------------------------------------- |
+| **YAML**     | Representing and manipulating state | Comments carry meaning, structure is editable  |
+| **Markdown** | Narrative, documentation, prose     | Human-readable, embeds structure naturally     |
+| **HTML/SVG** | Rendering visual output             | Display-ready                                  |
+| **JSON**     | Machine-to-machine exchange         | No comments = less expressive, avoid for state |
 
 YAML and Markdown are **input/working formats** — you read them, write them, and the LLM manipulates them. HTML and JSON are **output formats** — generated for display or exchange. This matters because you want to work in formats that carry the most meaning (YAML Jazz) and generate into formats appropriate for the consumer.
 
@@ -233,24 +234,24 @@ In our approach, a skill is a **program the LLM executes.**
 
 The difference is not philosophical. It's operational:
 
-| Documentation | Program |
-|---------------|---------|
-| Describes what to do | IS what to do |
-| Read once, then wing it | Executed step by step |
-| Static | Can create, modify, and delete files |
-| Stateless | Tracks and persists state |
-| One-size-fits-all | Instantiated with specific parameters |
+| Documentation           | Program                               |
+| ----------------------- | ------------------------------------- |
+| Describes what to do    | IS what to do                         |
+| Read once, then wing it | Executed step by step                 |
+| Static                  | Can create, modify, and delete files  |
+| Stateless               | Tracks and persists state             |
+| One-size-fits-all       | Instantiated with specific parameters |
 
 ### The Incarnation Spectrum
 
 Skills exist on a spectrum of "aliveness":
 
-| Level | Form | Persistence | Example |
-|-------|------|-------------|---------|
-| **Mentioned** | Name invoked in conversation | Gone when chat ends | "Be polite, like Andy Taylor would" |
-| **Modeled** | Behavior enacted in session | Lives in context window | Acting as a mediator during a conversation |
-| **Embedded** | YAML data island in narrative | Lives in a document | Character traits stored in a story file |
-| **Incarnate** | Directory with state files | Lives on disk forever | A full character with history, personality, relationships |
+| Level         | Form                          | Persistence             | Example                                                   |
+| ------------- | ----------------------------- | ----------------------- | --------------------------------------------------------- |
+| **Mentioned** | Name invoked in conversation  | Gone when chat ends     | "Be polite, like Andy Taylor would"                       |
+| **Modeled**   | Behavior enacted in session   | Lives in context window | Acting as a mediator during a conversation                |
+| **Embedded**  | YAML data island in narrative | Lives in a document     | Character traits stored in a story file                   |
+| **Incarnate** | Directory with state files    | Lives on disk forever   | A full character with history, personality, relationships |
 
 The first level is what most people do with AI. The fourth level is what we're building toward.
 
@@ -268,8 +269,8 @@ An **incarnate** skill has:
 Let's compare. Here's a traditional "bartender" prompt:
 
 ```
-You are a bartender. Be friendly and knowledgeable about drinks. 
-Recommend cocktails based on customer preferences. 
+You are a bartender. Be friendly and knowledgeable about drinks.
+Recommend cocktails based on customer preferences.
 Be responsible about alcohol consumption.
 ```
 
@@ -301,7 +302,7 @@ methods:
     description: Suggest drinks based on mood/preferences
   - name: CUT-OFF
     description: Responsibly decline to serve
-    
+
 advertisements:
   TAKE-ORDER:
     visibility: public
@@ -315,11 +316,11 @@ advertisements:
 
 state:
   instance_creates:
-    - "tabs.yml"       # Running drink tabs
-    - "86ed-list.yml"  # Items currently unavailable
+    - "tabs.yml" # Running drink tabs
+    - "86ed-list.yml" # Items currently unavailable
 ```
 
-The traditional prompt is a note to yourself. The incarnate skill is a *living system* — it advertises capabilities, tracks state, has a defined interface, and can be instantiated into specific bartender characters.
+The traditional prompt is a note to yourself. The incarnate skill is a _living system_ — it advertises capabilities, tracks state, has a defined interface, and can be instantiated into specific bartender characters.
 
 ### The Mayberry Skill
 
@@ -340,7 +341,7 @@ methods:
     description: Propose a solution that preserves dignity
   - name: DE-ESCALATE
     description: Calm an escalating situation
-    
+
 advertisements:
   LISTEN:
     visibility: public
@@ -349,14 +350,14 @@ advertisements:
   SUGGEST:
     visibility: public
     satisfies: [resolution, harmony]
-    
+
 dovetails_with:
-  - needs        # Characters have emotional needs
-  - room         # Mediation happens in a place
-  - reputation   # Resolution affects standing
+  - needs # Characters have emotional needs
+  - room # Mediation happens in a place
+  - reputation # Resolution affects standing
 ```
 
-This skill can be *instantiated* into any character who needs mediation ability. Andy Taylor gets it. But so could Miss Crump, or even Floyd (who'd be terrible at it, which is also interesting).
+This skill can be _instantiated_ into any character who needs mediation ability. Andy Taylor gets it. But so could Miss Crump, or even Floyd (who'd be terrible at it, which is also interesting).
 
 ---
 
@@ -370,15 +371,15 @@ In most games, the developer hardcodes what objects do. Fridge → food. Bed →
 
 The Sims did something different. Objects **advertise** their capabilities:
 
-| Object | Advertisements | Satisfies |
-|--------|---------------|-----------|
-| Refrigerator | GET-SNACK, COOK-MEAL, GET-DRINK | Hunger |
-| Bed | SLEEP, NAP, MAKE-BED | Energy |
-| TV | WATCH, CHANGE-CHANNEL | Fun |
-| Phone | CALL-FRIEND, ORDER-PIZZA | Social |
-| Toilet | USE, CLEAN | Bladder, Hygiene |
+| Object       | Advertisements                  | Satisfies        |
+| ------------ | ------------------------------- | ---------------- |
+| Refrigerator | GET-SNACK, COOK-MEAL, GET-DRINK | Hunger           |
+| Bed          | SLEEP, NAP, MAKE-BED            | Energy           |
+| TV           | WATCH, CHANGE-CHANNEL           | Fun              |
+| Phone        | CALL-FRIEND, ORDER-PIZZA        | Social           |
+| Toilet       | USE, CLEAN                      | Bladder, Hygiene |
 
-Characters in The Sims have *needs* (hunger, energy, fun, social, etc.). When a need gets low, the character scans all nearby objects for advertisements that satisfy that need. The character then picks the best available option and queues it up.
+Characters in The Sims have _needs_ (hunger, energy, fun, social, etc.). When a need gets low, the character scans all nearby objects for advertisements that satisfy that need. The character then picks the best available option and queues it up.
 
 This is autonomous behavior from simple rules. Nobody scripted "when the Sim is hungry, walk to the kitchen." The Sim notices their own hunger, scans for advertisements, sees the fridge advertising GET-SNACK with a hunger payoff, and goes.
 
@@ -412,7 +413,7 @@ methods:
         type: list
   - name: WAIT
     description: Sit and read ancient magazines
-    
+
 advertisements:
   GET-HAIRCUT:
     visibility: public
@@ -451,7 +452,8 @@ Here's how it works in practice:
 8. Gossip accuracy degrades as news spreads
 ```
 
-Nobody scripted this sequence. It *emerged* from:
+Nobody scripted this sequence. It _emerged_ from:
+
 - A character with needs
 - Objects with advertisements
 - An interpreter (LLM) that connects them
@@ -463,7 +465,7 @@ This is what Will Wright meant when he called The Sims characters "autonomous ag
 Let's see how this works in a family sitcom context:
 
 ```yaml
-# williams-living-room/CARD.yml  
+# williams-living-room/CARD.yml
 name: williams-living-room
 tier: gameplay
 type: room
@@ -483,17 +485,17 @@ methods:
     trigger: "dramatic_tension < threshold"
     satisfies: [chaos, comedy, love]
     # This is not optional. Tonoose arrives when he arrives.
-    
+
 advertisements:
   FAMILY-DISCUSSION:
     visibility: family_only
   REHEARSE:
     visibility: [danny, kathy]
   TONOOSE-ARRIVAL:
-    visibility: ambient  # Tonoose doesn't check schedules
+    visibility: ambient # Tonoose doesn't check schedules
 ```
 
-Notice the `ambient` visibility on TONOOSE-ARRIVAL. Some advertisements aren't things characters choose — they're things that happen *to* characters. Uncle Tonoose doesn't wait for an invitation. He's an ambient event, like weather. This is how you model forces that characters can't control but must respond to.
+Notice the `ambient` visibility on TONOOSE-ARRIVAL. Some advertisements aren't things characters choose — they're things that happen _to_ characters. Uncle Tonoose doesn't wait for an invitation. He's an ambient event, like weather. This is how you model forces that characters can't control but must respond to.
 
 ### Cards as Ethical Smart Pointers
 
@@ -505,23 +507,23 @@ hero_card:
   subject: "Andy Griffith"
   type: real_person
   status: deceased
-  
+
   policies:
-    impersonation: false      # Never claim to BE them
-    tradition: true           # Can invoke their ideas
-    tribute: true             # Can honor through performance
-    quotation: verified_only  # Only cite real quotes
-    
+    impersonation: false # Never claim to BE them
+    tradition: true # Can invoke their ideas
+    tribute: true # Can honor through performance
+    quotation: verified_only # Only cite real quotes
+
   can_provide:
     - guidance: "In the spirit of Andy Griffith's gentle humor..."
     - tradition: "The Mayberry approach would be..."
-    
+
   cannot_provide:
     - dialogue: "Andy Griffith says: [made up quote]"
     - presence: "Andy Griffith is here with us"
 ```
 
-This distinction — between creating fictional characters *inspired by* real people versus *claiming to be* real people — is baked into the system at the card level. More on this in Part 4.
+This distinction — between creating fictional characters _inspired by_ real people versus _claiming to be_ real people — is baked into the system at the card level. More on this in Part 4.
 
 ### What We've Learned
 
@@ -539,7 +541,7 @@ Part 2 has established the architecture:
 
 **Exercise 2.1:** Write a CARD.yml for a location you know well. Define at least three methods (things that happen there) and their advertisements. What needs do they satisfy?
 
-**Exercise 2.2:** Take the Barney character from Part 1's exercise and add a CARD.yml. What methods does Barney advertise? What methods does he *think* he advertises versus what he actually provides? (This gap between self-image and reality is fertile ground.)
+**Exercise 2.2:** Take the Barney character from Part 1's exercise and add a CARD.yml. What methods does Barney advertise? What methods does he _think_ he advertises versus what he actually provides? (This gap between self-image and reality is fertile ground.)
 
 **Exercise 2.3:** Write the same scene two ways: first as "data" (structured YAML describing what happens), then as "graphics" (prose narrative of the scene). Notice how the same information lives on different axes.
 

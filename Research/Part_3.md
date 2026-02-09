@@ -1,6 +1,6 @@
 # Part 3: Building Living Worlds
 
-> *"The database IS the world."*
+> _"The database IS the world."_
 > — LambdaMOO principle
 
 **[← Part 2: The Linguistic Motherboard](Part_2.md)** | **[Back to Index](INDEX.md)** | **[Part 4: The Eval Awakening →](Part_4.md)**
@@ -17,13 +17,13 @@ Every virtual world since the text adventures of the 1970s has used the same bas
 
 In 1989, Jim Aspnes created **TinyMUD** at Carnegie Mellon. Players could build their own rooms with text commands:
 
-| MUD Command | What It Does | Filesystem Equivalent |
-|-------------|-------------|----------------------|
-| `@dig Kitchen` | Create a new room | `mkdir kitchen/` |
-| `@describe Kitchen = A warm, cluttered kitchen` | Set room description | Create `kitchen/ROOM.yml` |
-| `@open north = Kitchen` | Create an exit to kitchen | Add exit to `ROOM.yml` |
-| `@create coffeepot` | Make an object | Create `coffeepot.yml` |
-| `@set coffeepot = desc:A battered percolator` | Describe object | Edit the YAML file |
+| MUD Command                                     | What It Does              | Filesystem Equivalent     |
+| ----------------------------------------------- | ------------------------- | ------------------------- |
+| `@dig Kitchen`                                  | Create a new room         | `mkdir kitchen/`          |
+| `@describe Kitchen = A warm, cluttered kitchen` | Set room description      | Create `kitchen/ROOM.yml` |
+| `@open north = Kitchen`                         | Create an exit to kitchen | Add exit to `ROOM.yml`    |
+| `@create coffeepot`                             | Make an object            | Create `coffeepot.yml`    |
+| `@set coffeepot = desc:A battered percolator`   | Describe object           | Edit the YAML file        |
 
 Pavel Curtis at Xerox PARC extended this into **LambdaMOO** (1990), adding a full programming language so objects could have behaviors (verbs), not just descriptions.
 
@@ -98,25 +98,25 @@ room:
     aftershave. A stack of magazines — the newest from 1958 — 
     sits on a wobbly end table. Floyd's voice fills the room 
     even when nobody asked him a question.
-  
+
   # This is Mayberry's social nerve center
   # More news gets exchanged here than at the newspaper
   # Accuracy of gossip: approximately 40%
-  
+
   exits:
-    out: main-street  # Back to the street
-    back: storage     # Floyd's storage room (rarely visited)
-    
+    out: main-street # Back to the street
+    back: storage # Floyd's storage room (rarely visited)
+
   objects:
     - barber-chair.yml
     - magazines.yml
-    - radio.yml       # Floyd leaves it on all day
-    
+    - radio.yml # Floyd leaves it on all day
+
   ambient:
-    gossip_flow: true   # Everything said here propagates
+    gossip_flow: true # Everything said here propagates
     sound: radio_murmur # Background radio at low volume
-    
-  capacity: 6  # It's a small shop
+
+  capacity: 6 # It's a small shop
 ```
 
 Notice what's happening here:
@@ -144,7 +144,7 @@ world:
     violence: minimal
     language: clean
     # "Gol-ly" is as strong as it gets
-    
+
   governance:
     style: community_consensus
     authority: andy_taylor
@@ -164,7 +164,7 @@ room:
     bars. The door, famously, is never locked. Otis 
     Campbell's initials are carved in the wall beside 
     seven years of tally marks.
-    
+
   overrides:
     # The cell is technically a secure space
     # but the door is always unlocked because
@@ -205,15 +205,15 @@ object:
   condition: well-worn
   # The red vinyl is cracked in exactly the spots
   # where 40 years of Mayberry bottoms have sat
-  
+
   current_state:
     occupied: true
     occupant: howard_sprague
     service: haircut
-    progress: 60%  # Floyd got distracted telling a story
-    
+    progress: 60% # Floyd got distracted telling a story
+
   history:
-    total_haircuts: ~14600  # rough estimate, 40 years
+    total_haircuts: ~14600 # rough estimate, 40 years
     worst_haircut: "The time Floyd sneezed during County Commissioner Hampton's trim"
     # We don't talk about that
 ```
@@ -222,13 +222,13 @@ When something happens in the world, the state files update:
 
 ```yaml
 # After the scene resolves...
-  current_state:
-    occupied: false
-    last_occupant: howard_sprague
-    last_service: haircut
-    result: adequate
-    # Howard looked in the mirror and said "Well, that'll do"
-    # Floyd beamed as if he'd sculpted Michelangelo's David
+current_state:
+  occupied: false
+  last_occupant: howard_sprague
+  last_service: haircut
+  result: adequate
+  # Howard looked in the mirror and said "Well, that'll do"
+  # Floyd beamed as if he'd sculpted Michelangelo's David
 ```
 
 The key principle: **objects have state, and state changes are visible.** Nothing is hidden. You can open any YAML file and see exactly what's going on. This is the "open the hood" philosophy from Alan Kay — everything is inspectable.
@@ -237,11 +237,11 @@ The key principle: **objects have state, and state changes are visible.** Nothin
 
 Not all state is created equal. Some things are temporary thoughts. Some things are permanent memories. Some things are canonical facts. Our system tracks three tiers:
 
-| Tier | Name | What It Stores | Lifespan | Example |
-|------|------|----------------|----------|---------|
-| 1 | **Ephemeral** | In-session computation | Gone when conversation ends | "Andy is currently thinking about what to say" |
-| 2 | **Narrative** | Logs and transcripts | Grows forever, append-only | "Session log: Tuesday's fishing trip conversation" |
-| 3 | **State** | Canonical YAML files | Edited in place | `CHARACTER.yml`, `ROOM.yml` |
+| Tier | Name          | What It Stores         | Lifespan                    | Example                                            |
+| ---- | ------------- | ---------------------- | --------------------------- | -------------------------------------------------- |
+| 1    | **Ephemeral** | In-session computation | Gone when conversation ends | "Andy is currently thinking about what to say"     |
+| 2    | **Narrative** | Logs and transcripts   | Grows forever, append-only  | "Session log: Tuesday's fishing trip conversation" |
+| 3    | **State**     | Canonical YAML files   | Edited in place             | `CHARACTER.yml`, `ROOM.yml`                        |
 
 Think of it like Mayberry's memory systems:
 
@@ -255,18 +255,19 @@ When you build worlds, you choose which tier each piece of information lives in.
 
 Here's a practical problem: if characters are YAML files and rooms are directories, do you move the file when the character moves? **No.** Moving files wrecks version control history. Instead:
 
-| Concept | What It Is | Example |
-|---------|------------|---------|
-| **Home** | The directory where the character file physically lives | `characters/barney-fife/CHARACTER.yml` |
-| **Location** | A property in the file saying where they currently are | `location: main-street/courthouse/andys-office` |
+| Concept      | What It Is                                              | Example                                         |
+| ------------ | ------------------------------------------------------- | ----------------------------------------------- |
+| **Home**     | The directory where the character file physically lives | `characters/barney-fife/CHARACTER.yml`          |
+| **Location** | A property in the file saying where they currently are  | `location: main-street/courthouse/andys-office` |
 
 ```yaml
 # characters/barney-fife/CHARACTER.yml
 character:
   name: "Barney Fife"
-  home: characters/barney-fife/    # file never moves
-  location: main-street/courthouse/andys-office  # changes constantly
-  
+  home: characters/barney-fife/ # file never moves
+  location: main-street/courthouse/andys-office # changes constantly
+
+
   # When Barney "goes to" Floyd's Barbershop:
   # We don't move the file
   # We update location: to main-street/floyds-barbershop/
@@ -291,13 +292,13 @@ Our system does the same, but with semantic richness instead of raw numbers:
 character:
   name: "Andy Taylor"
   role: Sheriff of Mayberry
-  
+
   personality:
     traits: [patient, wise, humble, playful]
     # Don't confuse gentle with weak
     # Andy sees everything but doesn't always react
     # He waits for the right moment
-    
+
   needs:
     duty:
       level: moderate
@@ -311,7 +312,7 @@ character:
     friendship:
       level: satisfied
       description: "Barney, the porch, the lake"
-      
+
   relationships:
     opie:
       type: father_son
@@ -348,13 +349,13 @@ When the LLM needs to determine what Andy would do in a situation, it has all th
 
 The Sims used five personality axes that work surprisingly well for any character:
 
-| Axis | Low End | High End | What It Governs |
-|------|---------|----------|-----------------|
-| **Neat** | Sloppy | Tidy | Do they clean up? Are they organized? |
-| **Outgoing** | Shy | Social | Do they seek company or solitude? |
-| **Active** | Lazy | Energetic | Do they initiate or wait? |
-| **Playful** | Serious | Fun-loving | Do they joke or focus? |
-| **Nice** | Grumpy | Kind | How do they treat others? |
+| Axis         | Low End | High End   | What It Governs                       |
+| ------------ | ------- | ---------- | ------------------------------------- |
+| **Neat**     | Sloppy  | Tidy       | Do they clean up? Are they organized? |
+| **Outgoing** | Shy     | Social     | Do they seek company or solitude?     |
+| **Active**   | Lazy    | Energetic  | Do they initiate or wait?             |
+| **Playful**  | Serious | Fun-loving | Do they joke or focus?                |
+| **Nice**     | Grumpy  | Kind       | How do they treat others?             |
 
 Let's map some characters:
 
@@ -363,7 +364,7 @@ Let's map some characters:
 neat: 5, outgoing: 7, active: 4, playful: 6, nice: 9
 # Moderately tidy, social, laid-back, has fun, very kind
 
-# Barney Fife  
+# Barney Fife
 neat: 8, outgoing: 6, active: 9, playful: 3, nice: 6
 # Very neat, reasonably social, extremely active, serious about duty, decent
 
@@ -401,14 +402,14 @@ floyds-barbershop/CARD.yml → GOSSIP (satisfies: social, status)
 ↓
 Barney chooses: REPORT-IN (stronger status payoff)
 ↓
-Scene: Barney marches into Andy's office with a 6-page report 
+Scene: Barney marches into Andy's office with a 6-page report
 on jaywalking violations that Andy will pretend to read
 ↓
 Barney's status need → MODERATE
 Andy's patience need → slightly depleted
 ```
 
-Nobody scripted this. It *emerged* from needs, advertisements, and an intelligent interpreter.
+Nobody scripted this. It _emerged_ from needs, advertisements, and an intelligent interpreter.
 
 ---
 
@@ -420,11 +421,11 @@ Not all boundaries between spaces are the same. In the real world, a kitchen cou
 
 Our system models three types of boundaries:
 
-| Boundary | Type | Who Can Cross | Interaction Across |
-|----------|------|---------------|-------------------|
-| **Counter** | Social | Staff | Conversation, orders, service |
-| **Stage** | Visual | Performers | Audience can watch, heckle, cheer |
-| **Wall** | Physical | Nobody (without a door) | Privacy, no interaction |
+| Boundary    | Type     | Who Can Cross           | Interaction Across                |
+| ----------- | -------- | ----------------------- | --------------------------------- |
+| **Counter** | Social   | Staff                   | Conversation, orders, service     |
+| **Stage**   | Visual   | Performers              | Audience can watch, heckle, cheer |
+| **Wall**    | Physical | Nobody (without a door) | Privacy, no interaction           |
 
 In Mayberry terms:
 
@@ -453,13 +454,13 @@ town-hall/stage:
 courthouse/andys-office:
   boundary:
     type: wall
-    access: [door]  # Must come through the door
+    access: [door] # Must come through the door
     interaction_across: none
     # But Barney barges in anyway
     # Because Barney
 ```
 
-In *The Danny Thomas Show*, the critical boundary is between Danny's nightclub stage and his home. On stage: counter-type boundary (audience can react, Danny can play to them). At home: wall-type (the family drama is private, the audience of the *TV show* sees it but the *in-world* audience doesn't).
+In _The Danny Thomas Show_, the critical boundary is between Danny's nightclub stage and his home. On stage: counter-type boundary (audience can react, Danny can play to them). At home: wall-type (the family drama is private, the audience of the _TV show_ sees it but the _in-world_ audience doesn't).
 
 ### The Tardis Pattern
 
@@ -474,11 +475,11 @@ kitchen:
     exterior_impression: "a normal kitchen"
     interior_reality:
       real_spaces:
-        - cooking-area/     # Where Aunt Bee works
-        - breakfast-nook/   # Where they eat
-        - pantry/          # Where the pickles live
+        - cooking-area/ # Where Aunt Bee works
+        - breakfast-nook/ # Where they eat
+        - pantry/ # Where the pickles live
       virtual_spaces:
-        - "Aunt Bee's domain"    # Implied authority zone
+        - "Aunt Bee's domain" # Implied authority zone
         - "the forgiveness table" # Where conflicts resolve over pie
         # These aren't directories — they're narrative spaces
         # The LLM knows they exist from the comments
@@ -495,11 +496,11 @@ Characters move through exits. Exits are defined in ROOM.yml:
 room:
   name: "Main Street, Mayberry"
   exits:
-    north: courthouse/        
-    east: floyds-barbershop/  
-    south: diner/             
-    west: residential/        
-    lake_road: lake/          # Named exits work too
+    north: courthouse/
+    east: floyds-barbershop/
+    south: diner/
+    west: residential/
+    lake_road: lake/ # Named exits work too
 ```
 
 When a character goes somewhere, the LLM reads the destination's ROOM.yml and generates the transition. The character's `location:` property updates. Simple.
@@ -516,7 +517,8 @@ Let's see the three persistence tiers working together during a Mayberry scene.
 
 **Tier 1 — Ephemeral (Runtime):**
 The LLM's internal reasoning during the scene. This is never saved:
-> *"Aunt Bee's nice trait is 8 but she's competitive about cooking. Clara's critique will hit her pride. Andy will need to mediate. Check: does the mediator skill apply here? Yes. Run LISTEN → REFRAME → SUGGEST pattern."*
+
+> _"Aunt Bee's nice trait is 8 but she's competitive about cooking. Clara's critique will hit her pride. Andy will need to mediate. Check: does the mediator skill apply here? Yes. Run LISTEN → REFRAME → SUGGEST pattern."_
 
 This reasoning happens and vanishes. It served its purpose in the moment.
 
@@ -527,25 +529,25 @@ The session log records what happened:
 ## Session: Pickle Contest, County Fair
 
 Aunt Bee entered her kerosene cucumbers in the fair.
-Clara entered her own pickles, commenting that "some people 
+Clara entered her own pickles, commenting that "some people
 just throw vinegar at cucumbers and hope for the best."
 
-Aunt Bee's jaw tightened but she smiled and said "Well, Clara, 
+Aunt Bee's jaw tightened but she smiled and said "Well, Clara,
 I'm sure the judges will sort it all out."
 
-Andy noticed the tension from across the fairground. He ambled 
-over with two lemonades and said "You know, Aunt Bee, I was 
-reading that there's been a real shortage of quality pickles 
+Andy noticed the tension from across the fairground. He ambled
+over with two lemonades and said "You know, Aunt Bee, I was
+reading that there's been a real shortage of quality pickles
 up in Mt. Pilot. Might be a business opportunity."
 
-The conversation shifted. Crisis averted. Clara's pickles won 
+The conversation shifted. Crisis averted. Clara's pickles won
 second place. Aunt Bee's won third. Neither mentioned it again.
 
-*At home that evening, Aunt Bee made Andy his favorite pie 
-without explaining why.*
+_At home that evening, Aunt Bee made Andy his favorite pie
+without explaining why._
 ```
 
-This log is permanent and append-only. You can read it back. You can't change it. It *happened*.
+This log is permanent and append-only. You can read it back. You can't change it. It _happened_.
 
 **Tier 3 — State (Mutable):**
 The character files update:
@@ -560,10 +562,10 @@ character:
       current_status: cordial_tension
       # Clara won again. It stings.
       # But they'll be at bridge club Thursday like nothing happened.
-      
+
   recent_events:
     - pickle_contest_loss
-    - made_andy_pie  # Emotional processing through baking
+    - made_andy_pie # Emotional processing through baking
 ```
 
 These state changes persist and influence future interactions. Next time Clara and Aunt Bee are in the same room, the LLM checks the relationship and knows there's `cordial_tension`. The scene will feel different than if they were on good terms.
@@ -578,14 +580,14 @@ guest_book:
   description: |
     A leather-bound book at the Mayberry city limits sign.
     Visitors sign in. Residents remember.
-    
+
   entries:
     - name: "Malcolm Tucker"
       visit_date: "1962-03-15"
       purpose: "Passing through on the way to Raleigh"
       impression: "Nice town. Too quiet. Made me nervous."
       standing_invitation: false
-      
+
     - name: "The Fun Girls from Mt. Pilot"
       visit_date: "recurring"
       purpose: "Looking for fun"

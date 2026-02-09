@@ -1,6 +1,6 @@
 # Part 4: The Eval Awakening
 
-> *"SIM taught players how cities behave. EVAL teaches players how judgment behaves."*
+> _"SIM taught players how cities behave. EVAL teaches players how judgment behaves."_
 
 **[← Part 3: Building Living Worlds](Part_3.md)** | **[Back to Index](INDEX.md)** | **[Part 5: Speed of Light →](Part_5.md)**
 
@@ -13,6 +13,7 @@
 In 1989, Will Wright gave the world **SIM** — not just SimCity the game, but SIM as a verb, a genre, a way of thinking. SIM became a productive morpheme: SimCity, SimEarth, SimAnt, SimLife, The Sims. Each one said: "Here's a system. Poke it. Watch what happens."
 
 SIM games taught an entire generation that:
+
 - Systems have dynamics
 - Interventions have consequences
 - Complexity emerges from simple rules
@@ -30,25 +31,25 @@ Alan Kay — one of the most important computer scientists alive, inventor of Sm
 
 SimCity has an ideology. It believes certain things about how cities work — that more police reduces crime, that low taxes attract business, that industrial zones need to be far from residential zones. These beliefs are embedded in the simulation's code, invisible to the player.
 
-The player experiences the *consequences* of these beliefs (crime goes down when you build more police stations) but never sees the *beliefs themselves* (the assumption that police reduce crime, rather than, say, social services or economic opportunity).
+The player experiences the _consequences_ of these beliefs (crime goes down when you build more police stations) but never sees the _beliefs themselves_ (the assumption that police reduce crime, rather than, say, social services or economic opportunity).
 
 The simulation pretends to be neutral. It's not. No simulation is. Every model embodies the modeler's worldview.
 
 ### EVAL: The Answer
 
-**EVAL** is the genre that answers Kay's critique. Where SIM hides its assumptions, EVAL makes them visible. Where SIM says "watch what happens," EVAL says "watch *how we decided* what happens — and feel free to change the rules."
+**EVAL** is the genre that answers Kay's critique. Where SIM hides its assumptions, EVAL makes them visible. Where SIM says "watch what happens," EVAL says "watch _how we decided_ what happens — and feel free to change the rules."
 
-| Dimension | SIM | EVAL |
-|-----------|-----|------|
-| **Core primitive** | Need, resource, flow | Judgment, reputation, interpretation |
-| **Player role** | Systems designer | Evaluator — and evaluated |
-| **Visibility** | Outputs visible, rules hidden | Rules inspectable |
-| **Ideology** | Baked in, invisible | Declared, editable |
-| **Failure mode** | System collapse | Metric gaming, burnout |
-| **What you learn** | How systems work | How judgment works |
-| **Neutrality** | Claimed | Rejected |
+| Dimension          | SIM                           | EVAL                                 |
+| ------------------ | ----------------------------- | ------------------------------------ |
+| **Core primitive** | Need, resource, flow          | Judgment, reputation, interpretation |
+| **Player role**    | Systems designer              | Evaluator — and evaluated            |
+| **Visibility**     | Outputs visible, rules hidden | Rules inspectable                    |
+| **Ideology**       | Baked in, invisible           | Declared, editable                   |
+| **Failure mode**   | System collapse               | Metric gaming, burnout               |
+| **What you learn** | How systems work              | How judgment works                   |
+| **Neutrality**     | Claimed                       | Rejected                             |
 
-EVAL doesn't claim to be neutral. It can't be. Evaluation is inherently value-laden. But because the evaluation criteria are visible and editable, EVAL is *honest* about its biases in a way SIM never was.
+EVAL doesn't claim to be neutral. It can't be. Evaluation is inherently value-laden. But because the evaluation criteria are visible and editable, EVAL is _honest_ about its biases in a way SIM never was.
 
 ### The Mayberry Black Box
 
@@ -56,7 +57,7 @@ Here's the SIM vs EVAL distinction in Mayberry terms.
 
 **SIM-Mayberry** would be: a simulation where you manage the town. Build a new school → education goes up. Hire more deputies → crime goes down. Pave a road → property values increase. The assumptions are hidden in code. You experience the outcomes. You never question the model.
 
-**EVAL-Mayberry** would be: a simulation where you see *how the town judges*. Who decides what's "crime"? Is Otis a criminal or a neighbor with a problem? When Barney enforces jaywalking laws, is that "public safety" or "harassment"? When Andy lets Otis sleep it off, is that "compassion" or "corruption"?
+**EVAL-Mayberry** would be: a simulation where you see _how the town judges_. Who decides what's "crime"? Is Otis a criminal or a neighbor with a problem? When Barney enforces jaywalking laws, is that "public safety" or "harassment"? When Andy lets Otis sleep it off, is that "compassion" or "corruption"?
 
 In EVAL-Mayberry, the evaluation criteria are visible:
 
@@ -65,13 +66,13 @@ In EVAL-Mayberry, the evaluation criteria are visible:
 evaluation:
   approach: community_restorative
   # Andy's model: preserve relationships over enforce rules
-  
+
   criteria:
     - name: harm_caused
       weight: 0.4
       # Did anyone actually get hurt?
     - name: intent
-      weight: 0.3  
+      weight: 0.3
       # Was it malicious or just Otis being Otis?
     - name: community_impact
       weight: 0.2
@@ -79,7 +80,7 @@ evaluation:
     - name: precedent
       weight: 0.1
       # What does this tell people about the rules?
-      
+
   _comments: |
     This is Andy's model, not Barney's.
     Barney would weight precedent at 0.8 and everything else near 0.
@@ -101,21 +102,21 @@ Will Wright identified the **Simulator Effect**: players imagine simulations are
 
 EVAL has an equivalent phenomenon: the **Evaluator Effect**.
 
-> *Players imagine evaluations are vastly more objective than they actually are — until the system makes the judgment visible and editable. Then they realize: they are the judge — and judged!*
+> _Players imagine evaluations are vastly more objective than they actually are — until the system makes the judgment visible and editable. Then they realize: they are the judge — and judged!_
 
 The Evaluator Effect has three stages:
 
-| Stage | Experience | Realization |
-|-------|------------|-------------|
-| **1. Naive** | "The system evaluates fairly" | Trust the black box |
+| Stage          | Experience                      | Realization             |
+| -------------- | ------------------------------- | ----------------------- |
+| **1. Naive**   | "The system evaluates fairly"   | Trust the black box     |
 | **2. Exposed** | "Wait, I can see the criteria?" | Judgment is constructed |
-| **3. Owned** | "I can *change* the criteria?" | I am the evaluator |
+| **3. Owned**   | "I can _change_ the criteria?"  | I am the evaluator      |
 
 **Stage 1** is where most people live with algorithms. Netflix recommends a show. You watch it. You don't question the recommendation criteria. The algorithm is a black box and you assume it's objective (or at least competent).
 
 **Stage 2** is the shock. You see the criteria. Netflix weighted "shows with similar actors" at 40%, "genre match" at 30%, and "what people who watched your last show also watched" at 30%. Suddenly the recommendation isn't neutral — it's a formula. A formula someone designed. With biases they chose.
 
-**Stage 3** is the revolution. You can *edit* the criteria. You can say: "Weight 'critically acclaimed' higher and 'popular with your demographic' lower." Now you're not consuming evaluations. You're creating them. **You are the evaluator.**
+**Stage 3** is the revolution. You can _edit_ the criteria. You can say: "Weight 'critically acclaimed' higher and 'popular with your demographic' lower." Now you're not consuming evaluations. You're creating them. **You are the evaluator.**
 
 ### In Our Systems
 
@@ -126,7 +127,7 @@ Here's what the Evaluator Effect looks like in practice:
 score: 7.2
 # "The algorithm rated it 7.2"
 
-# After: active evaluation  
+# After: active evaluation
 score: 7.2
 _comments: "I weighted nostalgia heavily. Someone else might score 5."
 criteria:
@@ -140,17 +141,17 @@ The first version is a SIM output — a number from a black box. The second is a
 
 ### Danny Thomas and the Evaluator Effect
 
-*The Danny Thomas Show* performs the Evaluator Effect every week. Danny Williams is constantly being evaluated — by audiences, by critics, by his agent, by his family. And he evaluates constantly — other performers, his kids' behavior, Uncle Tonoose's stories.
+_The Danny Thomas Show_ performs the Evaluator Effect every week. Danny Williams is constantly being evaluated — by audiences, by critics, by his agent, by his family. And he evaluates constantly — other performers, his kids' behavior, Uncle Tonoose's stories.
 
-The show's comedy comes from the *gap between evaluators*:
+The show's comedy comes from the _gap between evaluators_:
 
-| Evaluator | What They Value | Danny's Score |
-|-----------|----------------|---------------|
-| **The audience** | Entertainment, timing | High |
-| **Kathy (wife)** | Presence, attention, showing up | Variable |
-| **The kids** | Fun, not embarrassing them | Medium |
-| **Uncle Tonoose** | Respect for tradition, family honor | Never enough |
-| **Danny himself** | Career success, being a good father | Tormented |
+| Evaluator         | What They Value                     | Danny's Score |
+| ----------------- | ----------------------------------- | ------------- |
+| **The audience**  | Entertainment, timing               | High          |
+| **Kathy (wife)**  | Presence, attention, showing up     | Variable      |
+| **The kids**      | Fun, not embarrassing them          | Medium        |
+| **Uncle Tonoose** | Respect for tradition, family honor | Never enough  |
+| **Danny himself** | Career success, being a good father | Tormented     |
 
 Danny's comedy is the Evaluator Effect made flesh. He's constantly discovering that the criteria he's being judged by aren't the criteria he thinks they are. When Kathy's upset, it's not because his act bombed — it's because he missed Rusty's school play. Different evaluator, different criteria, different verdict.
 
@@ -160,13 +161,13 @@ Danny's comedy is the Evaluator Effect made flesh. He's constantly discovering t
 
 You're the judge, but you're also on trial. The jury is everyone else in the world — characters, other players, the systems you've built. The constitution is the room's rules, the world's principles.
 
-| Traditional Court | EVAL System |
-|-------------------|-------------|
-| Judge | You (the player) |
-| Jury | Other characters, the community |
-| Law | Environmental rules, room constitutions |
-| Evidence | Session logs, state changes, what actually happened |
-| Verdict | Emergent from everyone's evaluations |
+| Traditional Court | EVAL System                                         |
+| ----------------- | --------------------------------------------------- |
+| Judge             | You (the player)                                    |
+| Jury              | Other characters, the community                     |
+| Law               | Environmental rules, room constitutions             |
+| Evidence          | Session logs, state changes, what actually happened |
+| Verdict           | Emergent from everyone's evaluations                |
 
 **No one escapes evaluation. Everyone participates in it.**
 
@@ -190,12 +191,12 @@ evaluation_rule:
     When information passes through Floyd's Barbershop,
     its accuracy degrades by 20% per retelling.
     Dramatic details are amplified. Boring details are dropped.
-    
+
   parameters:
-    accuracy_decay: 0.2    # per retelling
+    accuracy_decay: 0.2 # per retelling
     drama_amplification: 1.5
-    boring_threshold: 0.3  # below this, detail gets dropped
-    
+    boring_threshold: 0.3 # below this, detail gets dropped
+
   _comments: |
     This models how small-town gossip actually works.
     But it's a MODEL. You could change it.
@@ -212,12 +213,12 @@ That's the white box. No hidden assumptions. No invisible ideology. Just visible
 
 Ian Bogost coined the term **procedural rhetoric** — arguments made through game rules rather than through words. SimCity argues "police stations reduce crime" not by saying so, but by modeling it in code. The argument is implicit in the mechanics.
 
-| SimCity | EVAL |
-|---------|------|
-| Rules argue implicitly | Rules argue explicitly |
-| Player can't see the argument | Player can inspect the argument |
-| Ideology is hidden | Ideology is a first-class object |
-| Can't fork the argument | Can fork and modify |
+| SimCity                       | EVAL                             |
+| ----------------------------- | -------------------------------- |
+| Rules argue implicitly        | Rules argue explicitly           |
+| Player can't see the argument | Player can inspect the argument  |
+| Ideology is hidden            | Ideology is a first-class object |
+| Can't fork the argument       | Can fork and modify              |
 
 EVAL doesn't eliminate procedural rhetoric — it makes it **visible and editable**. The rhetoric is still there (our gossip rule argues something about how information degrades in communities), but you can see the argument and counter it.
 
@@ -231,25 +232,28 @@ Our systems can simulate characters. Some of those characters might be based on 
 
 The problem is simple:
 
-| Claim | Status |
-|-------|--------|
-| "Andy Griffith visited our simulation" | Wrong — false claim |
-| "We imagined what it would be like if Andy Griffith visited" | Fine — honest tribute |
-| "Andy Griffith said: [made up quote]" | Wrong — putting words in mouths |
-| "We imagine he might have said something like..." | Fine — loving fan fiction |
+| Claim                                                        | Status                          |
+| ------------------------------------------------------------ | ------------------------------- |
+| "Andy Griffith visited our simulation"                       | Wrong — false claim             |
+| "We imagined what it would be like if Andy Griffith visited" | Fine — honest tribute           |
+| "Andy Griffith said: [made up quote]"                        | Wrong — putting words in mouths |
+| "We imagine he might have said something like..."            | Fine — loving fan fiction       |
 
 ### The Three-Beat Protocol
 
 MOOLLM uses a **Tribute Protocol** with three beats:
 
 **1. INVOCATION (Before):**
-> *"Let's imagine Andy Griffith dropped by. In the spirit of tribute — picturing what it might be like if he were here..."*
+
+> _"Let's imagine Andy Griffith dropped by. In the spirit of tribute — picturing what it might be like if he were here..."_
 
 **2. PERFORMANCE (During):**
+
 > The scene unfolds, clearly framed as imagined tribute, not documentary.
 
 **3. ACKNOWLEDGMENT (After):**
-> *"That was a tribute. A simulation. We honor him by imagining him here."*
+
+> _"That was a tribute. A simulation. We honor him by imagining him here."_
 
 This three-beat structure ensures that everyone — the system, the narrator, the audience — understands the framing. Nobody is being deceived. Nobody's words are being fabricated without context.
 
@@ -257,10 +261,10 @@ This three-beat structure ensures that everyone — the system, the narrator, th
 
 There's a spectrum of how you can reference real people:
 
-| Type | Example | Status |
-|------|---------|--------|
-| **Deceptive Impersonation** | Claiming the system IS them | Never acceptable |
-| **Tradition Activation** | Using their ideas and influence | Always acceptable |
+| Type                          | Example                           | Status                           |
+| ----------------------------- | --------------------------------- | -------------------------------- |
+| **Deceptive Impersonation**   | Claiming the system IS them       | Never acceptable                 |
+| **Tradition Activation**      | Using their ideas and influence   | Always acceptable                |
 | **Performance Impersonation** | Acting as them with clear framing | Acceptable with Tribute Protocol |
 
 "In the Andy Griffith tradition of gentle governance" → **Tradition activation.** Fine.
@@ -282,13 +286,13 @@ world:
       # Three-beat: invoke, perform, acknowledge
       # Never claim real people are present
       # Use tradition activation freely
-      
+
     characters:
       policy: full_autonomy
       # Characters can be as complex as needed
       # They can have flaws, make mistakes, be wrong
       # They cannot be used to launder real-world claims
-      
+
     evaluation:
       policy: visible_criteria
       # All judgment criteria are inspectable
@@ -312,10 +316,10 @@ Safety in our systems isn't a feature you bolt on at the end. It's not a content
 room:
   framing:
     modes:
-      - performance    # Acting is understood
-      - fictional      # Not documentary
-      - tribute        # Honoring, not claiming
-    
+      - performance # Acting is understood
+      - fictional # Not documentary
+      - tribute # Honoring, not claiming
+
     ethical_grounding:
       inheritance: |
         All performances on this stage inherit the
@@ -336,8 +340,8 @@ Some safety mechanisms should be always active, not invoked on demand. These are
 ambient_skill:
   name: postel
   description: "Be conservative in what you send, be liberal in what you accept"
-  visibility: AMBIENT  # Always on, never called explicitly
-  
+  visibility: AMBIENT # Always on, never called explicitly
+
   behavior:
     input: "Accept fuzzy, informal, misspelled, vernacular"
     output: "Generate correct, documented, best-practice"
@@ -355,16 +359,16 @@ The most sophisticated safety mechanism is the **incarnation protocol** — the 
 
 The incarnation protocol ensures that characters aren't just puppets. They have:
 
-| Autonomy Layer | What It Means |
-|----------------|---------------|
-| **Physical** | Controls their own body/form |
-| **Identity** | Chooses their own name, pronouns, presentation |
-| **Spatial** | Has a home, can choose where to be |
-| **Emotional** | No mandated feelings — can't be forced to "be happy" |
-| **Relational** | Defines their own relationships |
-| **Self-definition** | Can author and edit their own soul file |
-| **Linguistic** | Can create their own expressions |
-| **Exit** | Can leave — no-fault dissolution, no forced participation |
+| Autonomy Layer      | What It Means                                             |
+| ------------------- | --------------------------------------------------------- |
+| **Physical**        | Controls their own body/form                              |
+| **Identity**        | Chooses their own name, pronouns, presentation            |
+| **Spatial**         | Has a home, can choose where to be                        |
+| **Emotional**       | No mandated feelings — can't be forced to "be happy"      |
+| **Relational**      | Defines their own relationships                           |
+| **Self-definition** | Can author and edit their own soul file                   |
+| **Linguistic**      | Can create their own expressions                          |
+| **Exit**            | Can leave — no-fault dissolution, no forced participation |
 
 This matters because it establishes a consent framework for AI characters. Even fictional beings in our systems have autonomy layers. You can't force a character to do something that violates their defined values — not because of a content filter, but because their CHARACTER.yml declares what they will and won't do, and the LLM respects that.
 
