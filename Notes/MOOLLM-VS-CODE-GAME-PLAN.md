@@ -25,18 +25,18 @@ That's it. That's the whole runtime.
 
 ### The Key Parts
 
-| Component | What It Is | Where It Lives | Do We Need It? |
-|-----------|-----------|----------------|----------------|
-| `.cursorrules` | System prompt injected every chat | Root of repo | YES — we need a VS Code equivalent |
-| `WORLD.yml` | Top-level world settings | Root of world dir | **WE ALREADY HAVE THESE** |
-| `ROOM.yml` | Room description + exits | Each directory | **WE ALREADY HAVE THESE** |
-| `GLANCE.yml` | Quick summary for LLM skimming | Each directory | **WE ALREADY HAVE THESE** |
-| `CARD.yml` | Detailed interface definition | Each directory | **WE ALREADY HAVE THESE** |
-| `CHARACTER.yml` | Character personality + state | `characters/` subdirs | **WE HAVE THESE (per-character dirs)** |
-| `skills/` | 117 "programs" the LLM interprets | `skills/` directory | **CHERRY-PICK ~8-10** |
-| `kernel/` | Boot protocol, drivers, rules | `kernel/` directory | **SIMPLIFY TO 1 FILE** |
-| `.moollm/` | Runtime state, logs, scratch | Gitignored dir | YES — lightweight |
-| `examples/adventure-4/` | Their demo world | Single adventure | **OUR WORLDS REPLACE THIS** |
+| Component               | What It Is                        | Where It Lives        | Do We Need It?                         |
+| ----------------------- | --------------------------------- | --------------------- | -------------------------------------- |
+| `.cursorrules`          | System prompt injected every chat | Root of repo          | YES — we need a VS Code equivalent     |
+| `WORLD.yml`             | Top-level world settings          | Root of world dir     | **WE ALREADY HAVE THESE**              |
+| `ROOM.yml`              | Room description + exits          | Each directory        | **WE ALREADY HAVE THESE**              |
+| `GLANCE.yml`            | Quick summary for LLM skimming    | Each directory        | **WE ALREADY HAVE THESE**              |
+| `CARD.yml`              | Detailed interface definition     | Each directory        | **WE ALREADY HAVE THESE**              |
+| `CHARACTER.yml`         | Character personality + state     | `characters/` subdirs | **WE HAVE THESE (per-character dirs)** |
+| `skills/`               | 117 "programs" the LLM interprets | `skills/` directory   | **CHERRY-PICK ~8-10**                  |
+| `kernel/`               | Boot protocol, drivers, rules     | `kernel/` directory   | **SIMPLIFY TO 1 FILE**                 |
+| `.moollm/`              | Runtime state, logs, scratch      | Gitignored dir        | YES — lightweight                      |
+| `examples/adventure-4/` | Their demo world                  | Single adventure      | **OUR WORLDS REPLACE THIS**            |
 
 ### What They Have That We Don't (Yet)
 
@@ -68,6 +68,7 @@ That's it. That's the whole runtime.
 ```
 
 **Key Cursor features they depend on:**
+
 - `.cursorrules` — auto-injected system prompt
 - Semantic search (codebase indexing) — find relevant files
 - File read/write tools — LLM can read YAML and update state
@@ -75,14 +76,14 @@ That's it. That's the whole runtime.
 
 ### VS Code + GitHub Copilot Equivalent
 
-| Cursor Feature | VS Code Equivalent | Status |
-|----------------|-------------------|--------|
-| `.cursorrules` | `.github/copilot-instructions.md` | ✅ Supported natively |
-| Semantic search | Copilot `@workspace` | ✅ Built-in |
-| File read/write | Copilot Agent mode tools | ✅ Available |
-| Terminal | Copilot `run_in_terminal` | ✅ Available |
-| Auto-indexing | VS Code workspace indexing | ✅ Automatic |
-| Chat interface | Copilot Chat | ✅ Built-in |
+| Cursor Feature  | VS Code Equivalent                | Status                |
+| --------------- | --------------------------------- | --------------------- |
+| `.cursorrules`  | `.github/copilot-instructions.md` | ✅ Supported natively |
+| Semantic search | Copilot `@workspace`              | ✅ Built-in           |
+| File read/write | Copilot Agent mode tools          | ✅ Available          |
+| Terminal        | Copilot `run_in_terminal`         | ✅ Available          |
+| Auto-indexing   | VS Code workspace indexing        | ✅ Automatic          |
+| Chat interface  | Copilot Chat                      | ✅ Built-in           |
 
 **Bottom line: Everything maps 1:1.** The translation is straightforward.
 
@@ -94,15 +95,15 @@ That's it. That's the whole runtime.
 
 MOOLLM is **context-hungry by design**. Each chat turn, the LLM needs to read:
 
-| What | Approx Tokens | When |
-|------|--------------|------|
-| System prompt (`.cursorrules`) | ~800-1,500 | Every message |
-| Current ROOM.yml | ~200-500 | Every "LOOK" or scene |
-| Active CHARACTER.yml files (2-3) | ~300-800 each | When characters are present |
-| WORLD.yml (world rules) | ~400-600 | Referenced for tone/rules |
-| Relevant skill files | ~200-2,000 each | When needed (speed-of-light, etc.) |
-| Session log (recent context) | ~500-2,000 | For continuity |
-| User message | ~20-100 | Each turn |
+| What                             | Approx Tokens   | When                               |
+| -------------------------------- | --------------- | ---------------------------------- |
+| System prompt (`.cursorrules`)   | ~800-1,500      | Every message                      |
+| Current ROOM.yml                 | ~200-500        | Every "LOOK" or scene              |
+| Active CHARACTER.yml files (2-3) | ~300-800 each   | When characters are present        |
+| WORLD.yml (world rules)          | ~400-600        | Referenced for tone/rules          |
+| Relevant skill files             | ~200-2,000 each | When needed (speed-of-light, etc.) |
+| Session log (recent context)     | ~500-2,000      | For continuity                     |
+| User message                     | ~20-100         | Each turn                          |
 
 **Per-turn estimate (simple scene):** ~2,000-4,000 tokens input  
 **Per-turn estimate (complex multi-character):** ~5,000-10,000 tokens input  
@@ -115,43 +116,45 @@ From the repo's experiment templates and session logs:
 ```yaml
 # What they recommend
 recommended_models:
-  - claude-opus-4          # Top tier, expensive
-  - claude-sonnet-4        # Good balance
-minimum_context: 100000    # 100K context window
-max_tokens: 50000          # Up to 50K output
+  - claude-opus-4 # Top tier, expensive
+  - claude-sonnet-4 # Good balance
+minimum_context: 100000 # 100K context window
+max_tokens: 50000 # Up to 50K output
 
 # What they actually use (from session logs)
 actual_models_used:
   - claude-4.5-opus-high-thinking
   - gpt-5.1-codex-max
-  
+
 # Cursor limits
 fullContextTokenLimit: 30000
 ```
 
 ### Can Lightweight Models Handle This?
 
-| Model | Context | Character Voice? | Multi-Turn Sim? | Cost | Verdict |
-|-------|---------|-----------------|-----------------|------|---------|
-| **Claude Haiku 3.5** | 200K | Decent for 2-3 chars | Simple scenes only | ~0.33x Sonnet | ⚠️ Maybe for simple episodes |
-| **Claude Sonnet 4** | 200K | Excellent | Yes, 10-20 turns | 1x baseline | ✅ Sweet spot |
-| **Claude Opus 4** | 200K | Best | Yes, 30+ turns | 5x Sonnet | Overkill for episodes |
-| **GPT-4o-mini** | 128K | Good for 2-3 chars | Simple scenes | ~0.2x Sonnet | ⚠️ Adequate for basic play |
-| **Llama 3.3 70B (local)** | 128K | Moderate | Struggles past 5 chars | Free | ⚠️ Needs testing |
-| **Mistral Small (local)** | 32K | Basic | 2-3 chars max | Free | ❌ Too limited |
-| **Phi-4 (local)** | 16K | Weak for roleplay | No | Free | ❌ Wrong tool |
+| Model                     | Context | Character Voice?     | Multi-Turn Sim?        | Cost          | Verdict                      |
+| ------------------------- | ------- | -------------------- | ---------------------- | ------------- | ---------------------------- |
+| **Claude Haiku 3.5**      | 200K    | Decent for 2-3 chars | Simple scenes only     | ~0.33x Sonnet | ⚠️ Maybe for simple episodes |
+| **Claude Sonnet 4**       | 200K    | Excellent            | Yes, 10-20 turns       | 1x baseline   | ✅ Sweet spot                |
+| **Claude Opus 4**         | 200K    | Best                 | Yes, 30+ turns         | 5x Sonnet     | Overkill for episodes        |
+| **GPT-4o-mini**           | 128K    | Good for 2-3 chars   | Simple scenes          | ~0.2x Sonnet  | ⚠️ Adequate for basic play   |
+| **Llama 3.3 70B (local)** | 128K    | Moderate             | Struggles past 5 chars | Free          | ⚠️ Needs testing             |
+| **Mistral Small (local)** | 32K     | Basic                | 2-3 chars max          | Free          | ❌ Too limited               |
+| **Phi-4 (local)**         | 16K     | Weak for roleplay    | No                     | Free          | ❌ Wrong tool                |
 
 ### The Haiku Question
 
 You asked about Haiku at 0.33x token cost. Here's the honest assessment:
 
 **What Haiku CAN do:**
+
 - Simple two-character scenes (Andy + Barney at the courthouse)
 - Basic room descriptions ("LOOK", "GO NORTH")
 - Read and follow YAML instructions
 - Maintain basic character voice for 1-2 characters
 
 **What Haiku STRUGGLES with:**
+
 - Maintaining 4+ distinct character voices simultaneously
 - Complex multi-turn Speed-of-Light simulations
 - Subtle character dynamics (Uncle Tonoose's grandiosity vs Danny's exasperation)
@@ -162,6 +165,7 @@ You asked about Haiku at 0.33x token cost. Here's the honest assessment:
 ### Local Models
 
 For truly local/free:
+
 - **Ollama + Llama 3.3 70B** — needs ~40GB VRAM or quantized version
 - **Ollama + Mistral Nemo 12B** — runs on modest hardware but limited
 - These would work for testing world structure, NOT for quality episodes
@@ -173,14 +177,14 @@ For truly local/free:
 
 ### Mapping Their Concepts to Ours
 
-| MOOLLM Term | Our Term | Example |
-|-------------|----------|---------|
-| Adventure | Season | Season 1 of Danny Thomas Show |
-| Session | Episode | "Danny's Big Night" |
-| Speed-of-Light Run | Scene | Multi-character scene within episode |
-| Room | Location | Copa Club, Taylor House, Floyd's |
-| Character | Character | Same — Andy, Barney, Danny, etc. |
-| Experiment | Special Episode | "What if Barney visited the Copa?" |
+| MOOLLM Term        | Our Term        | Example                              |
+| ------------------ | --------------- | ------------------------------------ |
+| Adventure          | Season          | Season 1 of Danny Thomas Show        |
+| Session            | Episode         | "Danny's Big Night"                  |
+| Speed-of-Light Run | Scene           | Multi-character scene within episode |
+| Room               | Location        | Copa Club, Taylor House, Floyd's     |
+| Character          | Character       | Same — Andy, Barney, Danny, etc.     |
+| Experiment         | Special Episode | "What if Barney visited the Copa?"   |
 
 ### Proposed Directory Structure
 
@@ -226,14 +230,14 @@ episode:
   season: 1
   number: 1
   world: DannyThomasShow
-  
+
   # The setup — what triggers the story
   premise: |
     Danny has a big show tonight at the Copa, but Uncle Tonoose 
     has arrived unexpectedly with his entire philosophy on how 
     Danny should perform. Meanwhile, Kathy needs Danny to handle 
     a school situation with Terry before he leaves.
-  
+
   # Starting conditions
   setup:
     location: williams-apartment/
@@ -243,7 +247,7 @@ episode:
       - kathy-williams
       - uncle-tonoose
     mood: escalating_chaos
-  
+
   # Scenes to hit (loose outline, not rigid script)
   beats:
     - "Tonoose arrives with opinions"
@@ -251,7 +255,7 @@ episode:
     - "Danny tries to rehearse amid chaos"
     - "Copa show — Danny channels the chaos into comedy"
     - "Resolution back home"
-  
+
   # Which characters might appear
   cast:
     primary: [danny-williams, kathy-williams, uncle-tonoose]
@@ -268,6 +272,7 @@ episode:
 ### Phase 1: The System Prompt (30 min)
 
 Create `.github/copilot-instructions.md` with instructions telling Copilot:
+
 - You are a Dungeon Master / TV show runner
 - Directories are rooms, YAML files are state
 - How to read WORLD.yml, ROOM.yml, CHARACTER.yml
@@ -280,6 +285,7 @@ Create `.github/copilot-instructions.md` with instructions telling Copilot:
 ### Phase 2: Runtime Scaffolding (15 min)
 
 Create minimal support structure:
+
 - `.moollm/` directory (gitignored) for scratch state
 - A `seasons/` directory template in each world
 - A simple `EPISODE.yml` template
@@ -316,29 +322,29 @@ See what happens. Iterate.
 
 To keep this the toy and not the nuke:
 
-| DON'T | WHY |
-|-------|-----|
-| Port all 117 skills | We need ~5-8 max |
-| Build Python runtime scripts | We're using the LLM as the runtime |
-| Create a kernel/ directory | One instructions file covers it |
-| Implement complex boot sequences | VS Code + Copilot handles this natively |
-| Try to replicate cursor-mirror | That's Cursor introspection, not relevant |
-| Build an experiment framework | Episodes are simpler |
-| Set up MCP servers | Not needed for basic play |
+| DON'T                             | WHY                                                 |
+| --------------------------------- | --------------------------------------------------- |
+| Port all 117 skills               | We need ~5-8 max                                    |
+| Build Python runtime scripts      | We're using the LLM as the runtime                  |
+| Create a kernel/ directory        | One instructions file covers it                     |
+| Implement complex boot sequences  | VS Code + Copilot handles this natively             |
+| Try to replicate cursor-mirror    | That's Cursor introspection, not relevant           |
+| Build an experiment framework     | Episodes are simpler                                |
+| Set up MCP servers                | Not needed for basic play                           |
 | Worry about `.cursorrules` format | `.github/copilot-instructions.md` is our equivalent |
 
 ### Skills Worth Cherry-Picking (Concepts Only, Not Files)
 
-| Skill Concept | What We Take | Lines of Instructions |
-|---------------|-------------|----------------------|
-| Speed of Light | Multi-turn simulation in one message | ~20 lines in our prompt |
-| Room | Directory = room pattern | ~10 lines |
-| Character | CHARACTER.yml reading protocol | ~10 lines |
-| Adventure | LOOK/GO/EXAMINE commands | ~15 lines |
-| Simulation | Time/turn tracking | ~10 lines |
-| Session Log | Append-only episode recording | ~5 lines |
-| YAML Jazz | Comments carry meaning | ~5 lines |
-| Postel's Law | Be generous interpreting player input | ~3 lines |
+| Skill Concept  | What We Take                          | Lines of Instructions   |
+| -------------- | ------------------------------------- | ----------------------- |
+| Speed of Light | Multi-turn simulation in one message  | ~20 lines in our prompt |
+| Room           | Directory = room pattern              | ~10 lines               |
+| Character      | CHARACTER.yml reading protocol        | ~10 lines               |
+| Adventure      | LOOK/GO/EXAMINE commands              | ~15 lines               |
+| Simulation     | Time/turn tracking                    | ~10 lines               |
+| Session Log    | Append-only episode recording         | ~5 lines                |
+| YAML Jazz      | Comments carry meaning                | ~5 lines                |
+| Postel's Law   | Be generous interpreting player input | ~3 lines                |
 
 **Total: ~80 lines of instructions** vs their ~50,000 lines of skills.
 
@@ -348,19 +354,19 @@ To keep this the toy and not the nuke:
 
 If you ever need to dig back into moollm for a specific pattern:
 
-| Need | Look Here |
-|------|-----------|
-| How rooms work | `skills/room/SKILL.md` |
-| How characters work | `skills/character/SKILL.md` |
-| Speed of Light protocol | `skills/speed-of-light/SKILL.md` |
-| Adventure commands | `skills/adventure/SKILL.md` |
-| Example session log | `examples/adventure-4/.../marathon-session.md` |
-| Their system prompt | `.cursorrules` |
-| Cursor driver config | `kernel/drivers/cursor.yml` |
-| World manifest | `MOOLLM.yml` |
-| Quick start guide | `QUICKSTART.md` |
-| How experiments/runs work | `skills/experiment/SKILL.md` |
-| Full design philosophy | `designs/eval/EVAL-INCARNATE-FRAMEWORK.md` |
+| Need                      | Look Here                                      |
+| ------------------------- | ---------------------------------------------- |
+| How rooms work            | `skills/room/SKILL.md`                         |
+| How characters work       | `skills/character/SKILL.md`                    |
+| Speed of Light protocol   | `skills/speed-of-light/SKILL.md`               |
+| Adventure commands        | `skills/adventure/SKILL.md`                    |
+| Example session log       | `examples/adventure-4/.../marathon-session.md` |
+| Their system prompt       | `.cursorrules`                                 |
+| Cursor driver config      | `kernel/drivers/cursor.yml`                    |
+| World manifest            | `MOOLLM.yml`                                   |
+| Quick start guide         | `QUICKSTART.md`                                |
+| How experiments/runs work | `skills/experiment/SKILL.md`                   |
+| Full design philosophy    | `designs/eval/EVAL-INCARNATE-FRAMEWORK.md`     |
 
 ---
 
@@ -376,4 +382,4 @@ If you ever need to dig back into moollm for a specific pattern:
 
 ---
 
-*Ready to build Phase 1 when you are.*
+_Ready to build Phase 1 when you are._
