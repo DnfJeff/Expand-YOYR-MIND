@@ -1,0 +1,27 @@
+---
+title: "Eval Incarnate: A Builder's Curriculum"
+subtitle: "From Sitcom Reruns to Living Worlds"
+author: "Dnf_Jeff"
+date: "2026"
+lang: en-US
+description: |
+  How language models become interpreters, filesystems become stages,
+  and judgment becomes gameplay. A curriculum that teaches you how to
+  build living systems — worlds where characters think, objects advertise
+  what they can do, rooms inherit rules from their neighborhoods, and
+  the language model itself becomes the universal interpreter running it all.
+rights: "All rights reserved"
+toc: true
+toc-depth: 3
+number-sections: false
+documentclass: book
+geometry:
+  - margin=1in
+fontsize: 11pt
+linestretch: 1.15
+linkcolor: blue
+urlcolor: blue
+mainfont: "Georgia"
+sansfont: "Helvetica"
+monofont: "Consolas"
+---
