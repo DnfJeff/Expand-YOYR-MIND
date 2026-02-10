@@ -14,6 +14,7 @@ Look around the current room.
 6. For each character present, read their GLANCE.yml
 
 Describe the scene in teleplay format:
+
 - Start with a scene heading: INT./EXT. [ROOM NAME] — [EPOCH]
 - Describe the atmosphere (from ROOM.yml)
 - Mention who's here and what they're doing (based on their last action or default behavior)

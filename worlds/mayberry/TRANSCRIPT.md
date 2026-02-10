@@ -10,15 +10,15 @@
 
 ### Scene 1 — INT. ANDY'S OFFICE — MORNING (8:00 AM)
 
-*The courthouse smells like coffee that's been on the burner too long. Andy sits at his desk, paper open to the fishing report. Barney stands at the window with binoculars he bought from a mail-order catalog.*
+_The courthouse smells like coffee that's been on the burner too long. Andy sits at his desk, paper open to the fishing report. Barney stands at the window with binoculars he bought from a mail-order catalog._
 
-**BARNEY:** Andy. Andy. *Andy.*
+**BARNEY:** Andy. Andy. _Andy._
 
 **ANDY:** I hear you, Barn.
 
 **BARNEY:** I have completed my morning threat assessment of Mayberry and surrounding environs.
 
-*Andy takes a sip of coffee. Doesn't look up.*
+_Andy takes a sip of coffee. Doesn't look up._
 
 **ANDY:** How many threats we got today?
 
@@ -26,49 +26,49 @@
 
 **ANDY:** Same as yesterday?
 
-**BARNEY:** There's one new development. Floyd called me at six-thirty this morning. Says he saw a stranger walking past his shop before dawn. *A stranger, Andy.* Walking. Before dawn.
+**BARNEY:** There's one new development. Floyd called me at six-thirty this morning. Says he saw a stranger walking past his shop before dawn. _A stranger, Andy._ Walking. Before dawn.
 
 **ANDY:** Walking.
 
-**BARNEY:** Before *dawn.*
+**BARNEY:** Before _dawn._
 
-*Andy turns a page of his newspaper.*
+_Andy turns a page of his newspaper._
 
 **ANDY:** Could be somebody takin' a walk.
 
-**BARNEY:** Or — and I want you to hear me out — it could be a casing operation. Floyd says the man was wearing a hat pulled down low. That's textbook, Andy. *Textbook.*
+**BARNEY:** Or — and I want you to hear me out — it could be a casing operation. Floyd says the man was wearing a hat pulled down low. That's textbook, Andy. _Textbook._
 
 ---
 
 ### Scene 2 — INT. TAYLOR KITCHEN — MORNING (8:15 AM)
 
-*Aunt Bee stands at the counter, flour on her apron, staring at a row of mason jars like a general surveying a battlefield.*
+_Aunt Bee stands at the counter, flour on her apron, staring at a row of mason jars like a general surveying a battlefield._
 
-*Clara Edwards appears at the back door. She knocks once and walks in, because in Mayberry the knock is a courtesy, not a request.*
+_Clara Edwards appears at the back door. She knocks once and walks in, because in Mayberry the knock is a courtesy, not a request._
 
 **CLARA:** Morning, Bee. My, what are you doing with all those cucumbers?
 
-**AUNT BEE:** *Not* pickles, if that's what you're implying, Clara.
+**AUNT BEE:** _Not_ pickles, if that's what you're implying, Clara.
 
 **CLARA:** I wasn't implying anything. I was just saying, mine are already in the brine. Third day.
 
-*Aunt Bee's jaw tightens exactly one-sixteenth of an inch.*
+_Aunt Bee's jaw tightens exactly one-sixteenth of an inch._
 
 **AUNT BEE:** Well, I'm in no rush. A good pickle can't be rushed.
 
-**CLARA:** No, of course not. *Some* pickles just know what they're doing faster than others.
+**CLARA:** No, of course not. _Some_ pickles just know what they're doing faster than others.
 
-*Aunt Bee reaches for the vinegar with unnecessary force.*
+_Aunt Bee reaches for the vinegar with unnecessary force._
 
 ---
 
 ### Scene 3 — INT. SCHOOLHOUSE — MORNING (8:15 AM)
 
-*Helen Crump writes "Long Division" on the chalkboard. Twenty-two children sit in various states of attention. Opie Taylor is attempting to trade his apple for Jimmy Tolliver's baseball card under his desk.*
+_Helen Crump writes "Long Division" on the chalkboard. Twenty-two children sit in various states of attention. Opie Taylor is attempting to trade his apple for Jimmy Tolliver's baseball card under his desk._
 
 **HELEN:** Opie Taylor.
 
-*Opie freezes. The apple is halfway across the aisle.*
+_Opie freezes. The apple is halfway across the aisle._
 
 **OPIE:** Ma'am?
 
@@ -78,29 +78,29 @@
 
 **HELEN:** Then you won't mind putting it on my desk where apples traditionally go.
 
-*Opie walks to the front. The baseball card stays with Jimmy. Opie sits back down, appleless and cardless. Long division continues.*
+_Opie walks to the front. The baseball card stays with Jimmy. Opie sits back down, appleless and cardless. Long division continues._
 
 ---
 
 ### Scene 4 — INT. FLOYD'S BARBERSHOP — MORNING (8:30 AM)
 
-*Floyd is sweeping hair that isn't there yet. The barber pole turns outside. Goober Pyle walks in wearing a hat nobody has seen before — a brown fedora, slightly too large.*
+_Floyd is sweeping hair that isn't there yet. The barber pole turns outside. Goober Pyle walks in wearing a hat nobody has seen before — a brown fedora, slightly too large._
 
-**FLOYD:** Morning, Goober. What — what is *that* on your head?
+**FLOYD:** Morning, Goober. What — what is _that_ on your head?
 
 **GOOBER:** New hat. Found it at the Raleigh surplus store. You like it?
 
-**FLOYD:** It's... it's very... *Where did you say you got that?*
+**FLOYD:** It's... it's very... _Where did you say you got that?_
 
 **GOOBER:** Raleigh. I drove up yesterday afternoon. Got back real late. Walked home from Gomer's this morning — my car's still at the station.
 
-*Floyd goes very still. His scissors stop mid-air.*
+_Floyd goes very still. His scissors stop mid-air._
 
-**FLOYD:** Walked. This morning. *Before dawn?*
+**FLOYD:** Walked. This morning. _Before dawn?_
 
 **GOOBER:** I reckon. Sun wasn't full up yet.
 
-*Floyd drops his broom.*
+_Floyd drops his broom._
 
 **FLOYD:** Goober, you sit right there. Don't move. I gotta make a call.
 
@@ -108,13 +108,13 @@
 
 ### Scene 5 — INT. ANDY'S OFFICE — MORNING (8:45 AM)
 
-*The phone rings. Barney lunges for it. Andy lets him.*
+_The phone rings. Barney lunges for it. Andy lets him._
 
-**BARNEY:** Mayberry Sheriff's Office, Deputy Fife speaking. ... Uh-huh. ... Uh-*huh.* ... You don't say. ... YOU DON'T SAY.
+**BARNEY:** Mayberry Sheriff's Office, Deputy Fife speaking. ... Uh-huh. ... Uh-_huh._ ... You don't say. ... YOU DON'T SAY.
 
-*Barney hangs up. His face is the color of a man who has been proven right about everything.*
+_Barney hangs up. His face is the color of a man who has been proven right about everything._
 
-**BARNEY:** That was Floyd. The stranger? He's at Floyd's. Right now. Sitting in the waiting chair. *Bold as brass, Andy.*
+**BARNEY:** That was Floyd. The stranger? He's at Floyd's. Right now. Sitting in the waiting chair. _Bold as brass, Andy._
 
 **ANDY:** Did Floyd say who it was?
 
@@ -122,41 +122,41 @@
 
 **ANDY:** Barn —
 
-**BARNEY:** This is *exactly* what I trained for.
+**BARNEY:** This is _exactly_ what I trained for.
 
-*Barney puts on his hat, checks that his bullet is in his shirt pocket, and walks out with the stride of a man who has watched too many FBI documentaries.*
+_Barney puts on his hat, checks that his bullet is in his shirt pocket, and walks out with the stride of a man who has watched too many FBI documentaries._
 
-*Andy sighs. Puts down his coffee. Follows.*
+_Andy sighs. Puts down his coffee. Follows._
 
 ---
 
 ### Scene 6 — INT. FLOYD'S BARBERSHOP — MORNING (9:00 AM)
 
-*Goober is sitting in the waiting chair, reading a magazine upside down. He hasn't noticed. Floyd is pressed against the back wall, holding his scissors like a weapon.*
+_Goober is sitting in the waiting chair, reading a magazine upside down. He hasn't noticed. Floyd is pressed against the back wall, holding his scissors like a weapon._
 
-*The door bursts open. Barney enters in a half-crouch.*
+_The door bursts open. Barney enters in a half-crouch._
 
 **BARNEY:** FREEZE! Nobody move! Deputy Fife, Mayberry Sheriff's Department!
 
-*Goober looks up from his magazine.*
+_Goober looks up from his magazine._
 
 **GOOBER:** Hey, Barney.
 
-*Barney freezes. His hand is on his holster.*
+_Barney freezes. His hand is on his holster._
 
 **BARNEY:** ...Goober?
 
 **GOOBER:** You want a magazine? This one's got a real good article about transmissions. I think. The pictures are kinda confusing.
 
-*Barney straightens up slowly. Floyd peeks out from behind his barber chair.*
+_Barney straightens up slowly. Floyd peeks out from behind his barber chair._
 
 **FLOYD:** That's — that's the stranger, Barney. The one I saw this morning.
 
-**BARNEY:** Floyd. That's *Goober.*
+**BARNEY:** Floyd. That's _Goober._
 
-**FLOYD:** Well he didn't look like Goober! He was wearing that — that *hat!*
+**FLOYD:** Well he didn't look like Goober! He was wearing that — that _hat!_
 
-*Andy appears in the doorway, leaning against the frame.*
+_Andy appears in the doorway, leaning against the frame._
 
 **ANDY:** Morning, Goober.
 
@@ -168,33 +168,33 @@
 
 ### Scene 7 — INT. FLOYD'S BARBERSHOP — MORNING (9:15 AM)
 
-*Barney is pacing. Floyd is cutting Goober's hair. Andy is sitting in the waiting chair with his arms crossed, wearing the expression of a man who is not going to say "I told you so" because he doesn't have to.*
+_Barney is pacing. Floyd is cutting Goober's hair. Andy is sitting in the waiting chair with his arms crossed, wearing the expression of a man who is not going to say "I told you so" because he doesn't have to._
 
 **BARNEY:** In my defense, Floyd's description was consistent with a suspicious individual.
 
 **ANDY:** Floyd said he saw a man walking.
 
-**BARNEY:** Walking *suspiciously.*
+**BARNEY:** Walking _suspiciously._
 
 **ANDY:** In a hat.
 
-**BARNEY:** A *suspicious* hat.
+**BARNEY:** A _suspicious_ hat.
 
-*Goober tilts his head, and Floyd corrects it gently.*
+_Goober tilts his head, and Floyd corrects it gently._
 
 **GOOBER:** It ain't suspicious. I paid four dollars for this hat.
 
-**BARNEY:** I'm just saying — if it *had* been a criminal, we'd have had him. I had the barbershop surrounded. Well. The front, anyway.
+**BARNEY:** I'm just saying — if it _had_ been a criminal, we'd have had him. I had the barbershop surrounded. Well. The front, anyway.
 
 **ANDY:** You did fine, Barn.
 
-*Barney straightens his tie, mollified.*
+_Barney straightens his tie, mollified._
 
 **BARNEY:** I ran a tight operation.
 
 **FLOYD:** Barney, you want me to take a little off the sides while you're here?
 
-*Barney touches his hair. Considers. Sits in the chair after Goober.*
+_Barney touches his hair. Considers. Sits in the chair after Goober._
 
 **BARNEY:** Well. Long as I'm here.
 
@@ -202,31 +202,31 @@
 
 ### Scene 8 — INT. TAYLOR KITCHEN / EXT. FRONT PORCH — MORNING (9:45 AM)
 
-*Aunt Bee pulls a jar from the back of the shelf — the emergency reserve, the ones she made last September that even she admits turned out right. She sets them on the counter next to Clara's.*
+_Aunt Bee pulls a jar from the back of the shelf — the emergency reserve, the ones she made last September that even she admits turned out right. She sets them on the counter next to Clara's._
 
 **AUNT BEE:** Clara, I want you to try something.
 
-*Clara opens the jar. Takes a bite. Her face goes through seven expressions in four seconds.*
+_Clara opens the jar. Takes a bite. Her face goes through seven expressions in four seconds._
 
 **CLARA:** ...That's very good, Bee.
 
 **AUNT BEE:** I know.
 
-*On the front porch, Otis Campbell walks past, freshly released from his own custody, hat on straight, dignity intact. He tips his hat to nobody in particular.*
+_On the front porch, Otis Campbell walks past, freshly released from his own custody, hat on straight, dignity intact. He tips his hat to nobody in particular._
 
-*Down at the schoolhouse, a bell rings. Opie bursts through the door for morning recess, the long division already forgotten, a whole playground in front of him.*
+_Down at the schoolhouse, a bell rings. Opie bursts through the door for morning recess, the long division already forgotten, a whole playground in front of him._
 
-*At Floyd's, Barney sits in the barber chair telling Floyd about the time he single-handedly prevented a crime wave — which was this morning — while Floyd cuts his hair and nods and files the story away for the next customer.*
+_At Floyd's, Barney sits in the barber chair telling Floyd about the time he single-handedly prevented a crime wave — which was this morning — while Floyd cuts his hair and nods and files the story away for the next customer._
 
-*And Andy Taylor walks back to the courthouse, takes his coffee off the burner, sits down, and turns to the crossword.*
+_And Andy Taylor walks back to the courthouse, takes his coffee off the burner, sits down, and turns to the crossword._
 
-*Morning in Mayberry. Everything exactly as it should be.*
+_Morning in Mayberry. Everything exactly as it should be._
 
 ---
 
-*END — Episode 1*
+_END — Episode 1_
 
-*[Action or reaction description]*
+_[Action or reaction description]_
 
 **ANOTHER_CHARACTER:** "Response dialogue."
 
@@ -235,7 +235,9 @@
 ---
 
 ### Scene 2 — [Location Name]
+
 ...
+
 ```
 
 ---
@@ -740,3 +742,4 @@
 ---
 
 *END — Episode 3*
+```

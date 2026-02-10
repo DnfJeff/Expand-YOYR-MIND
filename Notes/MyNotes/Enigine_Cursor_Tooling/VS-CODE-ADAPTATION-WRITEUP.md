@@ -95,12 +95,12 @@ decoding, re-tokenizing between separate agents.
 
 Every entity (room, character, object) can have up to 4 tiers of detail:
 
-| Tier | File          | Tokens  | When Loaded                     |
-|------|---------------|---------|----------------------------------|
-| 1    | GLANCE.yml    | ~50     | Always (cold start, every tick) |
-| 2    | CARD.yml      | ~200    | When character enters or acts   |
-| 3    | README.md     | ~500    | Deep narrative context on demand|
-| 4    | SKILL.md      | ~300    | Extended capability docs        |
+| Tier | File       | Tokens | When Loaded                      |
+| ---- | ---------- | ------ | -------------------------------- |
+| 1    | GLANCE.yml | ~50    | Always (cold start, every tick)  |
+| 2    | CARD.yml   | ~200   | When character enters or acts    |
+| 3    | README.md  | ~500   | Deep narrative context on demand |
+| 4    | SKILL.md   | ~300   | Extended capability docs         |
 
 This is a token budget system. You don't dump the whole world into context.
 You load GLANCEs for everything, CARDs for what's relevant, and READMEs
@@ -117,14 +117,14 @@ rich up close.
 
 Every critical Cursor feature has a VS Code Copilot equivalent:
 
-| Cursor                    | VS Code Copilot                                          |
-|---------------------------|----------------------------------------------------------|
-| `.cursorrules`            | `.github/copilot-instructions.md` (auto-injected always) |
-| `codebase_search`         | `#codebase` (semantic workspace search)                  |
-| `read_file`               | Agent mode reads files autonomously                      |
-| `run_terminal_command`    | Agent mode runs terminal commands                        |
-| `list_dir`                | Agent mode lists directories                             |
-| `edit_file`               | Agent mode creates/edits files                           |
+| Cursor                 | VS Code Copilot                                          |
+| ---------------------- | -------------------------------------------------------- |
+| `.cursorrules`         | `.github/copilot-instructions.md` (auto-injected always) |
+| `codebase_search`      | `#codebase` (semantic workspace search)                  |
+| `read_file`            | Agent mode reads files autonomously                      |
+| `run_terminal_command` | Agent mode runs terminal commands                        |
+| `list_dir`             | Agent mode lists directories                             |
+| `edit_file`            | Agent mode creates/edits files                           |
 
 VS Code actually has MORE than Cursor in several areas:
 
@@ -230,16 +230,16 @@ simulation runs fine without them.
 
 ### What an Extension Would Actually Provide
 
-| Feature                         | Value            | Effort     |
-|---------------------------------|------------------|------------|
-| `@dm` Chat Participant          | Own the prompt   | Medium     |
-| Sidebar world tree view         | Browse visually  | Medium     |
-| Webview transcript panel        | Rich output      | High       |
-| YAML schema validation          | Authoring QoL    | Medium     |
-| World template scaffolding      | Onboarding       | Low        |
-| State persistence guarantees    | Reliability      | Medium     |
-| `pickDescription(lod)` hover    | Preview entities | Medium     |
-| Language Model API simulation   | Code-driven loop | High       |
+| Feature                       | Value            | Effort |
+| ----------------------------- | ---------------- | ------ |
+| `@dm` Chat Participant        | Own the prompt   | Medium |
+| Sidebar world tree view       | Browse visually  | Medium |
+| Webview transcript panel      | Rich output      | High   |
+| YAML schema validation        | Authoring QoL    | Medium |
+| World template scaffolding    | Onboarding       | Low    |
+| State persistence guarantees  | Reliability      | Medium |
+| `pickDescription(lod)` hover  | Preview entities | Medium |
+| Language Model API simulation | Code-driven loop | High   |
 
 ### Don's Worlds Still Work
 
@@ -261,20 +261,21 @@ instructions that know how to read his format.
 
 Both Mayberry and the Danny Thomas Show have everything the engine needs:
 
-| Component                              | Mayberry | Danny Thomas |
-|----------------------------------------|----------|--------------|
-| WORLD.yml with simulate block          | ✓        | ✓            |
-| .moollm/config.yml (bootstrap)         | ✓        | ✓            |
-| .moollm/prompt.yml (system prompt)     | ✓        | ✓            |
-| .moollm/state.yml (state tracker)      | ✓        | ✓            |
-| ROOM.yml for every room                | ✓ (25)   | ✓ (16)       |
-| CARD.yml with advertisements           | ✓        | ✓            |
-| GLANCE.yml for every entity            | ✓ (1 gap)| ✓            |
-| CHARACTER.yml for all characters       | ✓ (20)   | ✓ (15)       |
-| Abstract prototype archetypes          | ✓ (35)   | ✓ (27)       |
-| LOG.md / TRANSCRIPT.md templates       | ✓        | ✓            |
+| Component                          | Mayberry  | Danny Thomas |
+| ---------------------------------- | --------- | ------------ |
+| WORLD.yml with simulate block      | ✓         | ✓            |
+| .moollm/config.yml (bootstrap)     | ✓         | ✓            |
+| .moollm/prompt.yml (system prompt) | ✓         | ✓            |
+| .moollm/state.yml (state tracker)  | ✓         | ✓            |
+| ROOM.yml for every room            | ✓ (25)    | ✓ (16)       |
+| CARD.yml with advertisements       | ✓         | ✓            |
+| GLANCE.yml for every entity        | ✓ (1 gap) | ✓            |
+| CHARACTER.yml for all characters   | ✓ (20)    | ✓ (15)       |
+| Abstract prototype archetypes      | ✓ (35)    | ✓ (27)       |
+| LOG.md / TRANSCRIPT.md templates   | ✓         | ✓            |
 
 Minor gaps (easily fixed):
+
 - `locations/abstract/` directory referenced by inheritance but never created
 - Object .yml files referenced in rooms but never created
 - 1 missing GLANCE (Andy's office in Mayberry)
@@ -314,6 +315,7 @@ root — or better yet, in a shared config that applies regardless of which
 world folder is open.
 
 If we use a VS Code multi-root workspace:
+
 ```
 ResearchAI.code-workspace
   ├── Research/Mayberry/          (world 1)
@@ -359,6 +361,7 @@ doesn't exist yet, the agent GENERATES IT — creates the directory, writes
 ROOM.yml, CARD.yml, GLANCE.yml based on the world's tone, era, and rules.
 
 This is the power of prototype inheritance + LLM generation:
+
 - WORLD.yml says "1960s small-town America, gentle humor"
 - Exit says "north: general-store/"
 - Player types "GO NORTH"
@@ -369,6 +372,7 @@ This is the power of prototype inheritance + LLM generation:
 ### What the Template World Defines
 
 **WORLD.yml** must have:
+
 - `name`, `era`, `tone`, `population` — enough for the LLM to ground generation
 - `rules` — behavioral constraints (violence level, language, conflict style)
 - `simulate` block — speed_of_light, epochs, tick_config, persistence
@@ -376,6 +380,7 @@ This is the power of prototype inheritance + LLM generation:
 - `generation_hints` — guidelines for on-demand room/character generation
 
 **CHARACTER.yml** must have:
+
 - `name`, `id`, `type`, `location` — identity and where they start
 - `personality` — enough to drive voice and decisions
 - `sims_traits` — 5-axis personality (neat/outgoing/active/playful/nice)
@@ -383,6 +388,7 @@ This is the power of prototype inheritance + LLM generation:
 - `voice` — accent, register, patterns
 
 **ROOM.yml** must have:
+
 - `name`, `type`, `atmosphere` — what it feels and looks like
 - `exits` — at least one (relative directory path)
 - `ambient` — background sounds, smells, lighting

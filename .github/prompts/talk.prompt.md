@@ -22,6 +22,6 @@ The player wants to talk to: {{input}}
    - Reference their relationships with whoever else is present
 8. Format as teleplay dialogue:
    **[CHARACTER NAME]:** [dialogue]
-   *[stage direction]*
+   _[stage direction]_
 9. This is conversational — do NOT advance a tick unless the
    conversation includes an action that changes needs

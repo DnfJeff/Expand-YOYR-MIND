@@ -8,10 +8,12 @@ Source: https://github.com/SimHacker/moollm (MIT License, Don Hopkins, Leela AI)
 ## What's Here
 
 ### cursor-mirror/
+
 The 9,800-line Cursor IDE introspection tool. Cursor-specific — won't run on VS Code directly.
 We're studying it for patterns (introspection, I-Beam familiar, Play-Learn-Lift methodology).
 
 ### adventure/
+
 The adventure game engine. Three-layer architecture: YAML → compiler → browser.
 This is the one with direct relevance to our Danny Thomas Show / Mayberry worlds.
 

@@ -23,39 +23,90 @@ files_loaded:
   config: .moollm/config.yml
   state: .moollm/state.yml
   character_glances: 12
-  character_full: 3  # barney-fife (263 lines), mayor-stoner, otis-campbell
-  room_cards: 6      # andys-office, floyds-barbershop, bluebird-diner, front-porch, courthouse, jail-cell
+  character_full: 3 # barney-fife (263 lines), mayor-stoner, otis-campbell
+  room_cards: 6 # andys-office, floyds-barbershop, bluebird-diner, front-porch, courthouse, jail-cell
   room_glances: 5
   total_files: 28
   estimated_tokens: ~5200
 
 characters_active_this_tick:
-  - { id: barney-fife, location: main-street/floyds-barbershop → main-street, action: "final trunk inspection, checklist in pocket, heading home" }
-  - { id: floyd-lawson, location: main-street/floyds-barbershop, action: "gave Barney free haircut, swept up" }
+  - {
+      id: barney-fife,
+      location: main-street/floyds-barbershop → main-street,
+      action: "final trunk inspection, checklist in pocket, heading home",
+    }
+  - {
+      id: floyd-lawson,
+      location: main-street/floyds-barbershop,
+      action: "gave Barney free haircut, swept up",
+    }
 
 ads_evaluated:
-  - { ad: HAIRCUT, room: floyds-barbershop, score: 80, guard: passed, selected: true, note: "Floyd insists — no charge" }
-  - { ad: SPREAD_NEWS, room: floyds-barbershop, score: 75, guard: passed, selected: false }
-  - { ad: SIT_AND_TALK, room: front-porch, score: 95, guard: failed, note: "Barney too focused on preparation" }
+  - {
+      ad: HAIRCUT,
+      room: floyds-barbershop,
+      score: 80,
+      guard: passed,
+      selected: true,
+      note: "Floyd insists — no charge",
+    }
+  - {
+      ad: SPREAD_NEWS,
+      room: floyds-barbershop,
+      score: 75,
+      guard: passed,
+      selected: false,
+    }
+  - {
+      ad: SIT_AND_TALK,
+      room: front-porch,
+      score: 95,
+      guard: failed,
+      note: "Barney too focused on preparation",
+    }
 
 actions_taken:
-  - { character: barney-fife, action: "accepted free haircut from Floyd", outcome: "hygiene +30, social +10" }
-  - { character: barney-fife, action: "inspected squad car trunk one final time", outcome: "competence +10, comfort +20" }
-  - { character: barney-fife, action: "placed checklist in breast pocket next to bullet", outcome: "readiness secured" }
-  - { character: floyd-lawson, action: "gave Barney free haircut — 'for the commissioner'", outcome: "social +15, barney trust +0.1" }
+  - {
+      character: barney-fife,
+      action: "accepted free haircut from Floyd",
+      outcome: "hygiene +30, social +10",
+    }
+  - {
+      character: barney-fife,
+      action: "inspected squad car trunk one final time",
+      outcome: "competence +10, comfort +20",
+    }
+  - {
+      character: barney-fife,
+      action: "placed checklist in breast pocket next to bullet",
+      outcome: "readiness secured",
+    }
+  - {
+      character: floyd-lawson,
+      action: "gave Barney free haircut — 'for the commissioner'",
+      outcome: "social +15, barney trust +0.1",
+    }
 
 needs_updated:
-  barney-fife: { hunger: "+10", energy: "-20", social: "+10", hygiene: "+30", comfort: "+20", competence: "+25" }
+  barney-fife:
+    {
+      hunger: "+10",
+      energy: "-20",
+      social: "+10",
+      hygiene: "+30",
+      comfort: "+20",
+      competence: "+25",
+    }
   floyd-lawson: { social: "+15", fun: "+10" }
-  otis-campbell: { comfort: "+15", energy: "+10" }  # back in jail cell, familiar
-  thelma-lou: { social: "+10" }  # volunteered for phone demo role
+  otis-campbell: { comfort: "+15", energy: "+10" } # back in jail cell, familiar
+  thelma-lou: { social: "+10" } # volunteered for phone demo role
 
 episode_summary:
   ticks: 8
   characters_active: 10
   rooms_visited: 7
   movements: 9
-  floor_managed_scenes: 3  # andys-office rehearsals, floyds-barbershop ticker, bluebird-diner
+  floor_managed_scenes: 3 # andys-office rehearsals, floyds-barbershop ticker, bluebird-diner
   epochs_crossed: 3
   key_events:
     - "Thelma Lou brings fudge to the courthouse, volunteers for phone demonstration role"

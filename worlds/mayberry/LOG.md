@@ -14,6 +14,7 @@
 **Locations:** andys-office, taylor-kitchen, floyds-barbershop
 
 **Advertisements evaluated:**
+
 - andys-office/DRINK_COFFEE (score: 70, guard: passed) → selected for andy-taylor
 - andys-office/BARNEY_PATROL_BRIEFING (score: 60, guard: passed — morning, both present) → selected for barney-fife
 - taylor-kitchen/COOK (score: 90, guard: passed — aunt-bee present, approaching mealtime) → selected for aunt-bee
@@ -21,12 +22,14 @@
 - floyds-barbershop/SPREAD_NEWS (score: 75, guard: failed — no one to tell) → skipped
 
 **Actions:**
+
 - barney-fife: BARNEY_PATROL_BRIEFING → delivers morning threat assessment to Andy
 - andy-taylor: DRINK_COFFEE → listens to Barney, drinks terrible coffee
 - aunt-bee: COOK → begins prep, notices cucumbers, competitive urge stirs
 - floyd-lawson: (idle — waiting for customers, sweeping)
 
 **Needs updated:**
+
 - andy-taylor: comfort +20, social +15, energy +10
 - barney-fife: duty +15, self_importance +10
 - aunt-bee: nurturing +15, creativity +10
@@ -39,6 +42,7 @@
 **Locations:** schoolhouse, taylor-house, wally-filling-station
 
 **Advertisements evaluated:**
+
 - schoolhouse/TEACH (score: 85, guard: passed) → selected for helen-crump
 - schoolhouse/ATTEND_CLASS (score: 80, guard: passed) → selected for opie-taylor
 - taylor-house/COME_HOME (score: 80, guard: failed — clara is not taylor-family) → skipped
@@ -47,6 +51,7 @@
 - wally-filling-station/HANG_OUT (score: 60, guard: passed) → selected for gomer-pyle
 
 **Actions:**
+
 - helen-crump: TEACH → writes "Long Division" on chalkboard
 - opie-taylor: ATTEND_CLASS → caught trading apple for baseball card
 - clara-edwards: (arrives at Taylor house, COMPETE ad activating)
@@ -54,6 +59,7 @@
 - gomer-pyle: HANG_OUT → wiping windshields, humming
 
 **Needs updated:**
+
 - helen-crump: purpose +25, competence +20
 - opie-taylor: growth +25, fun -10 (apple confiscated)
 - aunt-bee: pride +20, competitive_fire +30
@@ -67,6 +73,7 @@
 **Locations:** floyds-barbershop, andys-office
 
 **Advertisements evaluated:**
+
 - floyds-barbershop/HAIRCUT (score: 80, guard: failed — goober doesn't need haircut yet) → skipped
 - floyds-barbershop/HANG_OUT (score: 65, guard: passed — goober social < 55) → selected for goober-pyle
 - floyds-barbershop/SPREAD_NEWS (score: 75, guard: passed — floyd has "news" about stranger, goober present) → selected for floyd-lawson
@@ -74,12 +81,14 @@
 - andys-office/FILE_REPORT (score: 65, guard: failed — no incident yet) → skipped
 
 **Actions:**
+
 - goober-pyle: HANG_OUT → walks to Floyd's in new hat from Raleigh
 - floyd-lawson: SPREAD_NEWS → recognizes Goober as the "stranger," panics, calls courthouse
 - andy-taylor: DRINK_COFFEE → second cup, crossword
 - barney-fife: (processing morning briefing, organizing threat files)
 
 **Needs updated:**
+
 - goober-pyle: social +20, boredom -25
 - floyd-lawson: social +15, anxiety +40 (stranger identified!)
 
@@ -93,17 +102,20 @@
 **Locations:** andys-office, floyds-barbershop, jail-cell
 
 **Advertisements evaluated:**
+
 - andys-office/REPORT_IN (score: 75, guard: passed — Floyd calls with information) → triggered via phone
 - andys-office/FILE_REPORT (score: 65, guard: passed — Barney perceives incident) → selected for barney-fife
 - jail-cell/SLEEP_IT_OFF (score: 95, guard: partially — Otis still sleeping, not yet morning enough) → continues
 
 **Actions:**
+
 - barney-fife: receives Floyd's call, confirms "stranger" report, mobilizes
 - andy-taylor: overhears, sighs, follows Barney
 - floyd-lawson: pressed against back wall with scissors
 - otis-campbell: still sleeping
 
 **Needs updated:**
+
 - barney-fife: duty +25, importance +30, anxiety +20
 - andy-taylor: fun +5 (bemused), energy -5 (getting up)
 
@@ -117,11 +129,13 @@
 **Location:** floyds-barbershop
 
 **Advertisements evaluated:**
+
 - floyds-barbershop/HAIRCUT (score: 80, guard: passed — goober could use one) → queued
 - BARNEY_OVERREACT (character ad, score: 85, guard: passed — Barney sees "suspect") → selected for barney-fife
 - floyds-barbershop/HANG_OUT (score: 65, guard: passed) → selected for goober-pyle (already sitting)
 
 **Floor management (4 characters, same room):**
+
 1. barney-fife TAKE_FLOOR → "FREEZE! Nobody move!"
 2. goober-pyle TAKE_FLOOR → "Hey, Barney."
 3. floyd-lawson TAKE_FLOOR → "That's the stranger!"
@@ -129,12 +143,14 @@
    All YIELD_FLOOR.
 
 **Actions:**
+
 - barney-fife: OVERREACT → tactical entry, identifies "suspect" as Goober
 - goober-pyle: BE_GENUINE → does not understand the commotion
 - floyd-lawson: SPREAD_NEWS → points at Goober as the stranger
 - andy-taylor: LISTEN → defuses situation by existing
 
 **Needs updated:**
+
 - barney-fife: importance -20 (deflated), embarrassment +30
 - goober-pyle: social +15, confusion +10
 - floyd-lawson: anxiety -20 (mystery solved), embarrassment +15
@@ -148,16 +164,19 @@
 **Location:** floyds-barbershop
 
 **Advertisements evaluated:**
+
 - floyds-barbershop/HAIRCUT (score: 80, guard: passed — goober in chair) → selected for floyd-lawson→goober
 - floyds-barbershop/HANG_OUT (score: 65, guard: passed) → selected for andy-taylor, barney-fife
 
 **Actions:**
+
 - floyd-lawson: HAIRCUT → cuts Goober's hair, conversation restores normalcy
 - goober-pyle: HAIRCUT (recipient) → getting hair cut, talking about transmissions
 - barney-fife: HANG_OUT → pacing, defending his tactical approach
 - andy-taylor: HANG_OUT → sitting, arms crossed, the picture of restraint
 
 **Needs updated:**
+
 - floyd-lawson: competence +20, social +20
 - goober-pyle: hygiene +25, social +20
 - barney-fife: embarrassment -10 (rationalizing), duty +5
@@ -171,17 +190,20 @@
 **Locations:** jail-cell, floyds-barbershop, taylor-kitchen
 
 **Advertisements evaluated:**
+
 - jail-cell/SLEEP_IT_OFF (score: 95, guard: completing — Otis waking) → completing for otis-campbell
 - floyds-barbershop/HAIRCUT (score: 80, guard: passed — Barney sits in chair) → selected for floyd→barney
 - taylor-kitchen/COOK (score: 90, guard: passed — aunt-bee present) → competitive cooking continues
 
 **Actions:**
+
 - otis-campbell: SLEEP_IT_OFF (complete) → wakes, hangs hat, lets himself out, tips hat to nobody
 - barney-fife: HAIRCUT (recipient) → sits in chair, tells Floyd about the morning he "prevented a crime wave"
 - floyd-lawson: HAIRCUT → cuts Barney's hair, files story for next customer
 - aunt-bee: COMPETE_WITH_CLARA → pulls out the emergency reserve pickles from September
 
 **Needs updated:**
+
 - otis-campbell: energy +40, comfort +20, self-governance demonstrated
 - barney-fife: hygiene +25, importance +15 (retelling improves the story)
 - floyd-lawson: social +20, gossip_inventory +1
@@ -197,11 +219,13 @@
 **Locations:** courthouse, schoolhouse, taylor-kitchen, main-street
 
 **Advertisements evaluated:**
+
 - andys-office/DRINK_COFFEE (score: 70, guard: passed — Andy back at desk) → selected
 - schoolhouse/playground/PLAY (score: 80, guard: passed — recess bell) → selected for opie-taylor
 - taylor-kitchen/COOK (score: 90, guard: passed — continuing) → ongoing
 
 **Actions:**
+
 - andy-taylor: DRINK_COFFEE → back at desk, crossword, world in order
 - opie-taylor: PLAY → recess, bursts outside, long division forgotten
 - aunt-bee: COMPETE_WITH_CLARA → Clara concedes on the September pickles ("very good, Bee")
@@ -209,6 +233,7 @@
 - otis-campbell: walks past Taylor house, tips hat
 
 **Needs updated:**
+
 - andy-taylor: comfort +20, energy +10
 - opie-taylor: fun +30, energy -10
 - aunt-bee: pride +20, satisfaction +25
@@ -221,14 +246,17 @@
 **Episode 1 complete. 8 ticks simulated. World time advanced 8:00AM → 10:00AM.**
 
 **Actions taken:**
+
 - character_id: action_description
   - effect: what_changed
   - satisfies: [needs_list]
 
 **State changes:**
+
 - character_id.field: old_value → new_value
 
 **Notes:** [optional LLM reasoning or narrative observations]
+
 ```
 
 ---
@@ -588,3 +616,4 @@
 **Episode 3 complete. 8 ticks simulated. World time advanced 9:15PM Tuesday → 6:00PM Wednesday.**
 **Day transition: Tuesday night → Wednesday (day before commissioner).**
 **Key narrative thread: Barney prepares — checklist refined, arrest rehearsed (4 runs), Goober arrested 3 times, Floyd's free haircut, trunk inspected, checklist next to bullet. Ready.**
+```

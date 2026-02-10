@@ -16,6 +16,7 @@ All file paths below are relative to that world's root directory.
 ### 1. Generate Episode Structure (internal — don't show to user)
 
 Plan these before writing the first scene:
+
 - **Inciting incident** — what kicks it off?
 - **Rising action** — complications, misunderstandings, escalation
 - **Climax** — confrontation or realization
@@ -33,6 +34,7 @@ Plan these before writing the first scene:
 ### 3. Run in Accelerated Narrative Mode
 
 This is NOT tick-by-tick simulation. Instead:
+
 - Jump between **key scenes** (4-6 scenes typical)
 - Each scene is a location + moment that advances the story
 - Write in present tense with full dialogue
@@ -63,12 +65,12 @@ This is NOT tick-by-tick simulation. Instead:
 
 ## User Controls During Scenario
 
-| Command | Effect |
-|---------|--------|
-| `/next` | Advance to next scene |
-| `/rewind` | Return to previous decision point |
-| `/intervene [action]` | Player changes something mid-scenario |
-| `/skip` | Abort scenario, return to normal simulation |
+| Command               | Effect                                      |
+| --------------------- | ------------------------------------------- |
+| `/next`               | Advance to next scene                       |
+| `/rewind`             | Return to previous decision point           |
+| `/intervene [action]` | Player changes something mid-scenario       |
+| `/skip`               | Abort scenario, return to normal simulation |
 
 ## Scene Format
 

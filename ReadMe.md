@@ -12,15 +12,15 @@ So this is an experiment: can we take MOOLLM's ideas and make an **introductory 
 
 ## Repository Structure
 
-| Folder | What's Inside |
-|--------|---------------|
-| [**.github/**](.github/) | The engine adapter — instruction files that teach VS Code Copilot to be a MOOLLM simulation engine |
-| [**worlds/**](worlds/) | Playable simulation worlds (Mayberry, Danny Thomas) — boot one and go |
-| [**OurVersion/**](OurVersion/) | Organized engine skills (121 skills across 10 layers) + reference material |
-| [**Upstream/**](Upstream/) | Pristine upstream MOOLLM files for comparison |
-| [**Notes/**](Notes/) | Design documents, analysis, philosophical grounding |
-| [**Mayberry-A-Moral-Mecca/**](Mayberry-A-Moral-Mecca/) | The book: *Eval Incarnate: A Builder's Curriculum* (EPUB/HTML) |
-| [**Misc/**](Misc/) | Images and supporting material |
+| Folder                                                 | What's Inside                                                                                      |
+| ------------------------------------------------------ | -------------------------------------------------------------------------------------------------- |
+| [**.github/**](.github/)                               | The engine adapter — instruction files that teach VS Code Copilot to be a MOOLLM simulation engine |
+| [**worlds/**](worlds/)                                 | Playable simulation worlds (Mayberry, Danny Thomas) — boot one and go                              |
+| [**OurVersion/**](OurVersion/)                         | Organized engine skills (121 skills across 10 layers) + reference material                         |
+| [**Upstream/**](Upstream/)                             | Pristine upstream MOOLLM files for comparison                                                      |
+| [**Notes/**](Notes/)                                   | Design documents, analysis, philosophical grounding                                                |
+| [**Mayberry-A-Moral-Mecca/**](Mayberry-A-Moral-Mecca/) | The book: _Eval Incarnate: A Builder's Curriculum_ (EPUB/HTML)                                     |
+| [**Misc/**](Misc/)                                     | Images and supporting material                                                                     |
 
 ---
 
@@ -41,15 +41,15 @@ No extension. No runtime. No `npm install`. You open the repo in VS Code, open C
 
 ### Commands
 
-| Command | What It Does |
-|---------|-------------|
-| `/boot mayberry` | Boot a world — load characters, rooms, state |
-| `/episode` | Run 8 autonomous ticks — a full episode emerges |
-| `/scenario [description]` | Scripted scenario with scene-by-scene pacing |
-| `/look` | Describe the current room and who's here |
-| `/talk [character]` | Talk to a character in the current room |
-| `/go [room]` | Move to an adjacent room |
-| `/save` | Persist current state |
+| Command                   | What It Does                                    |
+| ------------------------- | ----------------------------------------------- |
+| `/boot mayberry`          | Boot a world — load characters, rooms, state    |
+| `/episode`                | Run 8 autonomous ticks — a full episode emerges |
+| `/scenario [description]` | Scripted scenario with scene-by-scene pacing    |
+| `/look`                   | Describe the current room and who's here        |
+| `/talk [character]`       | Talk to a character in the current room         |
+| `/go [room]`              | Move to an adjacent room                        |
+| `/save`                   | Persist current state                           |
 
 ---
 
@@ -73,11 +73,11 @@ The simulation has run 3 episodes (24 ticks) in the Mayberry world so far. Here'
 
 > **BARNEY:** FREEZE! Nobody move! Deputy Fife, Mayberry Sheriff's Department!
 >
-> *Goober looks up from his magazine.*
+> _Goober looks up from his magazine._
 >
 > **GOOBER:** Hey, Barney.
 >
-> *Barney freezes. His hand is on his holster.*
+> _Barney freezes. His hand is on his holster._
 >
 > **BARNEY:** ...Goober?
 >
@@ -87,7 +87,7 @@ The simulation has run 3 episodes (24 ticks) in the Mayberry world so far. Here'
 
 > **ANDY:** I'm not saying adopt sumo. I'm saying the man walked in here with a typed proposal, a cover letter, and a budget request, and you didn't read past the title.
 >
-> *The mayor shifts in his chair.*
+> _The mayor shifts in his chair._
 >
 > **ANDY:** You've got that county commissioner coming Thursday. How about instead of sumo, you let Barney put together a departmental readiness demonstration?
 >
@@ -147,7 +147,7 @@ state:
 
   character_locations:
     andy-taylor: taylor-house
-    barney-fife: main-street        # heading home after Floyd's haircut
+    barney-fife: main-street # heading home after Floyd's haircut
     otis-campbell: courthouse/jail-cell
     floyd-lawson: floyds-barbershop
 
@@ -164,18 +164,18 @@ state:
 
 The [OurVersion/engine/](OurVersion/engine/) directory organizes MOOLLM's 121 skills into 10 layers, my attempt at making the skill architecture scannable:
 
-| Layer | Name | Skills | Purpose |
-|-------|------|--------|---------|
-| 0 | core | 18 | Identity, YAML jazz, progressive disclosure, Postel's Law |
-| 1 | boot | 7 | World detection, cold/warm start, config loading |
-| 2 | world | 8 | Room topology, prototype inheritance, world rules |
-| 3 | characters | 20 | Needs model, relationships, voice, personality |
-| 4 | sims | 8 | Advertisements, guards, scoring, need effects |
-| 5 | simulation | 10 | Tick loop, Speed of Light, floor management, epochs |
-| 6 | quality | 16 | Tone, era-appropriate language, narrative coherence |
-| 7 | communication | 10 | Teleplay format, dialogue, stage direction |
-| 8 | memory | 14 | State persistence, transcripts, logs, diagnostics |
-| 9 | programs | — | Adventure engine (Python + web), reference implementations |
+| Layer | Name          | Skills | Purpose                                                    |
+| ----- | ------------- | ------ | ---------------------------------------------------------- |
+| 0     | core          | 18     | Identity, YAML jazz, progressive disclosure, Postel's Law  |
+| 1     | boot          | 7      | World detection, cold/warm start, config loading           |
+| 2     | world         | 8      | Room topology, prototype inheritance, world rules          |
+| 3     | characters    | 20     | Needs model, relationships, voice, personality             |
+| 4     | sims          | 8      | Advertisements, guards, scoring, need effects              |
+| 5     | simulation    | 10     | Tick loop, Speed of Light, floor management, epochs        |
+| 6     | quality       | 16     | Tone, era-appropriate language, narrative coherence        |
+| 7     | communication | 10     | Teleplay format, dialogue, stage direction                 |
+| 8     | memory        | 14     | State persistence, transcripts, logs, diagnostics          |
+| 9     | programs      | —      | Adventure engine (Python + web), reference implementations |
 
 ---
 
@@ -185,9 +185,9 @@ For the full deep dive, see the [Notes/](Notes/) directory. The short version:
 
 **Skills are programs. The LLM is `eval()`. Empathy is the interface.**
 
-- A language model is a *linguistic motherboard* — a universal interpreter with slots for capability cards
+- A language model is a _linguistic motherboard_ — a universal interpreter with slots for capability cards
 - Directories are rooms. YAML files are objects. The filesystem is the world.
-- Objects *advertise* what they can do. Characters choose based on their needs. Behavior emerges.
+- Objects _advertise_ what they can do. Characters choose based on their needs. Behavior emerges.
 - SIM hides its assumptions. EVAL makes them visible, inspectable, and editable.
 - Ethics is architecture, not policy — built into the directory structure, not bolted on after.
 

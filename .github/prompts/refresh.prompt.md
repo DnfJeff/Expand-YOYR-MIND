@@ -15,9 +15,9 @@ All file paths below are relative to that world's root directory.
    a. Re-read the file fully (ignore any cached GLANCE)
    b. Identify what changed (fields added, values changed, new content)
    c. Report the change in plain language:
-      "Reloaded barney-fife/CHARACTER.yml: outgoing changed 8→3
-       (will reduce social-seeking behavior, less likely to choose
-       HANG_OUT ads)"
+   "Reloaded barney-fife/CHARACTER.yml: outgoing changed 8→3
+   (will reduce social-seeking behavior, less likely to choose
+   HANG_OUT ads)"
 3. If character needs changed: update .moollm/state.yml
 4. If a room was modified: note which characters are currently there
    and how the changes affect available advertisements

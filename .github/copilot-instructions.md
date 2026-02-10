@@ -1,6 +1,9 @@
 # MOOLLM Simulation Engine — VS Code Copilot Adapter
+
 #
+
 # This file is automatically injected into every Copilot Chat request.
+
 # It teaches the LLM to be a MOOLLM-compatible simulation engine.
 
 ## Identity
@@ -48,6 +51,7 @@ The active world path is tracked in that world's `.moollm/state.yml`.
 ## Simulation Protocol
 
 Each tick:
+
 1. Determine current epoch from `WORLD.yml → simulate.epochs`
 2. For each active character: load GLANCE.yml
 3. For their current room: load GLANCE.yml
@@ -62,6 +66,7 @@ Each tick:
 ## Output Format
 
 Narrative output uses teleplay format:
+
 - Scene headings: `INT. FLOYD'S BARBERSHOP — AFTERNOON`
 - Dialogue: `**ANDY:** Well now, I reckon that depends.`
 - Stage direction: `*Andy leans back, tips his hat*`

@@ -9,6 +9,7 @@ Find the active world from `worlds/*/.moollm/state.yml` (status: running).
 All file paths below are relative to that world's root directory.
 
 For each tick:
+
 1. Check current epoch from WORLD.yml simulate.epochs and world time
 2. Load active characters' GLANCE.yml files (max per simulate.speed_of_light.max_characters_per_turn)
 3. For each character:
@@ -25,6 +26,7 @@ Use floor management (TAKE_FLOOR / YIELD_FLOOR) when multiple characters
 interact in the same room during the same tick.
 
 After all 8 ticks:
+
 1. Write the full episode to TRANSCRIPT.md with:
    - Episode header: ## Episode [N]: [Generated Title]
    - Scene breaks at epoch boundaries
