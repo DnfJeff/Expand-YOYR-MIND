@@ -1,0 +1,52 @@
+# mcp-builder — Deep Probe + MOOLLM Integration Notes
+
+> IMPORT as new MOOLLM-native skill for MCP server CONSTRUCTION. Cursor runs MCP servers natively and cursor-mirror sees all active ones. mooco is designed to orchestrate MCP servers but is not yet implemented — it's a design for something that would be powerful, enabling MOOLLM to coordinate multiple servers with explicit context control. MOOLLM needs to work on all platforms with fallbacks for when mooco isn't available. What's missing today is a skill for BUILDING new servers — the factory pattern and evaluation harness.
+
+**Trust**: YELLOW (API calls to arbitrary MCP URLs, Anthropic API) | **Scripts**: 2 Python (connections.py, evaluation.py) | **License**: Apache 2.0
+
+## What It Does
+
+Build MCP servers: research → implement (TypeScript or Python) → review → evaluate. Factory pattern for connections (stdio/SSE/HTTP). Evaluation harness runs Claude as test subject against XML test cases, scores exact-match, generates markdown report.
+
+## Code Review
+
+| Script | Lines | Quality | Issues |
+|--------|-------|---------|--------|
+| connections.py | 138 | Excellent | Pure library. ABC + 3 implementations. Thorough type hints. No `__main__` (correct for library). Zero CWD dependency. |
+| evaluation.py | 290 | Good | Rich argparse with argument groups and epilog examples. Async. XML parsing. Markdown report generation. Uses `ANTHROPIC_API_KEY` from env. |
+
+**connections.py is the best-architected script in the Anthropic repo**: Clean strategy pattern. `MCPConnection` ABC with `_create_context()` hook. `MCPConnectionStdio`, `MCPConnectionSSE`, `MCPConnectionHTTP` concrete implementations. `create_connection()` factory. Async context managers with proper cleanup.
+
+**evaluation.py is the most interesting**: The only Anthropic script that uses an LLM at runtime — but as the TEST SUBJECT, not the orchestrator. The script is deterministic infrastructure; Claude is the thing being tested. XML-tagged structured prompts (`<summary>`, `<feedback>`, `<response>`) for reliable extraction.
+
+## MOOLLM-Native Version
+
+**New skill**: `skills/mcp-builder/`
+
+| Feature | Anthropic | MOOLLM-native |
+|---------|-----------|---------------|
+| Server templates | Reference docs | **prototype**: MCP servers inherit from parent templates |
+| Testing | XML test cases with exact-match | **experiment**: Drescher schema (hypothesis → test → result) |
+| Quality | Manual review | **rubric**: measurable criteria for server quality |
+| Deployment | Manual | **github** skill handles deployment (delegation) |
+| Evaluation | Sequential test cases | **speed-of-light**: simulate multiple scenarios in one call |
+| Security | Manual review | **skill-snitch**: auto-scan generated server |
+| Discovery | Manual invocation | **advertisement**: MCP-BUILD activates when building servers |
+
+**connections.py**: Keep as-is. It's perfect. Wrap in MOOLLM CARD.yml.
+
+**evaluation.py**: Integrate with `experiment` skill. The XML test case format maps naturally to Drescher schemas. The agent loop pattern is reusable for any tool-use evaluation.
+
+**sveltekit-site-builder note**: The `web-artifacts-builder` counterpart would be SvelteKit-native, not React. Uses Svelte 5 runes, not React hooks. Tailwind stays. shadcn/ui → bits-ui or skeleton. This is a separate skill from mcp-builder.
+
+## Bigger Vision: Skills as MCP Servers
+
+The mcp-builder skill is about constructing MCP servers. But the deeper opportunity is that MOOLLM entities themselves — skills, characters, rooms, objects — could publish AND consume MCP servers. Each entity exposes its advertisements and methods as MCP tools. Each entity can call other entities' tools.
+
+Two modes of communication:
+
+**Speed-of-light (localhost loopback)**: Within a single LLM call, entities simulate MCP calls to each other. The character in the room "calls" the object's advertised action. The room "calls" the exit's guard check. No actual network — the LLM simulates the protocol. This is speed-of-light applied to MCP: many inter-entity calls in one LLM turn.
+
+**Carrier pigeon (actual MCP)**: Between separate processes, orchestrators, or machines, entities communicate via real MCP protocol. A character running in one Cursor session calls a tool published by an object running in another. mooco (when built) would coordinate this. Cursor can do it today with proper scaffolding — multiple MCP servers, each publishing a skill's methods.
+
+The same advertisement/method interface works at both scales. A skill's CARD.yml advertisements map directly to MCP tool declarations. The `score` and `condition` fields become tool annotations (`readOnlyHint`, `destructiveHint`). The k-line activation pattern maps to MCP tool discovery. This is the iLoci `ioki://` pattern again — entities as servers, addressable by URL, returning structured data. Except now the entities are LLM-powered and the protocol is MCP instead of JSON-over-custom-URL-scheme.

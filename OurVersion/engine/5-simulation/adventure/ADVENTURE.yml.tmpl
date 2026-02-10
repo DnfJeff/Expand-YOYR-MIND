@@ -1,0 +1,181 @@
+# ADVENTURE.yml — Complete Adventure State
+# 
+# This file IS the simulation. Reading it = loading the world.
+# Comments are semantic data. The LLM reads them. They matter.
+# Don't create a separate SIMULATION.yml - this is it!
+#
+# DIRECTORY STRUCTURE:
+#
+# adventure-4/
+#   ADVENTURE.yml     ← This file (world state)
+#   ROOM.yml          ← OPTIONAL: The "outside" room!
+#   player.yml        ← Player character
+#   maze/             ← Sub-rooms (CONTAINER.yml or ROOM.yml)
+#   kitchen/          ← Each is a navigable area
+#   pub/              ← With its own ROOM.yml
+#
+# THE "OUTSIDE" ROOM:
+# The adventure directory can have BOTH ADVENTURE.yml AND ROOM.yml.
+# The ROOM.yml represents the outer world — the overworld, town square,
+# sky, or whatever wraps around the sub-directory rooms.
+#
+# Example:
+#   ADVENTURE.yml: World state, simulation params
+#   ROOM.yml: "The Town Square" — exits lead to maze/, kitchen/, pub/
+#
+# This is the "0,0" of the pie menu topology — the hub!
+
+# SIMULATION PROPERTIES (inherited from simulation skill)
+
+simulation:
+  turn: 0                    # Fresh start. Everything is possible.
+  paused: false              # Time flows. Stories happen.
+  
+parameters:
+  time:
+    advancement: normal      # One tick per room. Enough to feel movement.
+    # Options: none (frozen), slow (half), normal (1:1), fast (double)
+    
+  git:
+    auto_commit: false       # Manual commits until you trust the flow
+    auto_push: false         # Keep it local until ready to share
+    # When true: every turn becomes an undo point
+    
+  display:
+    narration_level: normal  # Describe what matters, skip what doesn't
+    # minimal: Just facts. "You're in the pub."
+    # normal: Atmosphere and action. Default.
+    # verbose: Every detail. For savoring moments.
+    show_mechanics: false    # Hide the gears. Show the magic.
+    
+  # DEBUG MODE — Show the machinery behind the magic
+  # When enabled, logs include collapsible sections with:
+  # - YAML data islands showing state before/after
+  # - Markdown links to all files referenced
+  # - Technical narrative explaining what happened and why
+  
+  debug:
+    enabled: false           # Master switch. Turn on to see everything.
+    
+    # What to show when debug is enabled:
+    show_file_operations: true    # "Created foo.yml", "Edited bar.yml"
+    show_state_changes: true      # "location: start/ → coatroom/"
+    show_yaml_islands: true       # Embedded YAML showing the data
+    show_links: true              # [relative/path](./to/file.yml)
+    show_technical_narrative: true # "Under the hood: The LLM updated..."
+    
+    # Formatting options (natural language, interpret creatively):
+    format: |
+      Use <details open> tags for collapsible sections (open by default).
+      Summary should be descriptive: "Editing CHARACTER.yml to update 
+      player location from start/ to coatroom/" not just "State change".
+      Include relative markdown links to ALL files mentioned.
+      YAML islands should be abbreviated with comments explaining key fields.
+      Technical narrative should explain WHY, not just WHAT.
+      
+    # Collapsible section style:
+    collapsed_by_default: true    # Details start closed
+    section_emoji: "📂"           # Visual indicator for debug sections
+    
+  output:
+    write_to_chat: true         # Talk to me
+    write_to_transcript: true   # Remember everything
+    transcript_path: ./TRANSCRIPT.md  # Pure narration
+    log_path: ./LOG.md          # Summary table
+    session_path: null          # Optional: character-specific session log
+    include_links: true          # Make everything clickable
+    link_format: markdown        # [like this](./path)
+    
+  gameplay:
+    difficulty: normal       # Fair challenges. Earned victories.
+    # easy: Forgiving. Good for exploration.
+    # normal: Balanced. The intended experience.
+    # hard: Demanding. For masochists and masters.
+
+# PARTY & SELECTION
+
+player:
+  character: "{{ player_path }}"   # You. The one reading this.
+  location: "{{ starting_room }}"  # Where your story begins
+  
+party:
+  members:
+    - "{{ player_path }}"    # Just you for now. Friends come later.
+  leader: "{{ player_path }}" # You're in charge. For now.
+  # Companions join through: RECRUIT, asking NPCs, emergent creation
+  
+selection:
+  targets: []                # No one selected. Commands go to you.
+  # SELECT [target] to direct commands elsewhere
+  # Can be characters, rooms, objects, concepts
+
+# WORLD STATE
+
+active_buffs: []
+# Buffs accumulate here. Format:
+# - name: "Caffeinated"
+#   source: pub/coffee.yml
+#   effect: "+1 to focus checks"
+#   remaining_turns: 5
+#   # Wearing off. Better get another cup.
+
+world_state: {}
+# Global state that doesn't fit elsewhere
+# Good for: weather, time_of_day, world events
+
+flags: {}
+# Binary quest flags. Keep it simple.
+# quest_accepted: true
+# dragon_slain: false
+# secret_discovered: false
+
+# ADVENTURE-SPECIFIC
+
+adventure:
+  name: "{{ adventure_name }}"
+  objective: "{{ quest_objective }}"
+  # The objective guides everything. Make it specific enough to complete,
+  # vague enough to surprise. "Find the truth" > "Go to room 5"
+  status: active             # active | completed | abandoned
+  started: "{{ created_date }}"
+
+navigation:
+  starting_room: "{{ starting_room }}"
+  current_room: "{{ starting_room }}"
+  # The LLM updates current_room on every GO command
+  rooms_visited: []
+  # History of exploration. Can't unlearn a place.
+
+evidence:
+  clues: []
+  # - id: clue-001
+  #   found_in: path/to/room
+  #   content: "What you found"
+  #   significance: high  # high | medium | low
+  #   # High significance clues advance the plot
+  
+  items: []
+  # - name: "Brass Key"
+  #   path: path/to/key.yml
+  #   acquired: "timestamp"
+  #   # Keys open doors. What does this one open?
+  
+  characters_met: []
+  # - name: "Marieke"
+  #   path: pub/budtender-marieke.yml
+  #   first_met: "timestamp"
+  #   relationship: friendly
+  #   # She remembers you. What do you remember about her?
+
+quest_log: []
+# Append-only. The story so far.
+# - "Day 1: Woke up in the start room. No memory of how I got here."
+# - "Day 1: Met a friendly cat. It seems to know something."
+
+statistics:
+  rooms_explored: 0          # Places you've been
+  clues_found: 0             # Pieces of the puzzle
+  items_acquired: 0          # Things you carry
+  characters_met: 0          # People (and cats) you know
+  turns_elapsed: 0           # Time spent in this world
+  # Stats tell a story. Low rooms + high turns = thorough. High rooms + low turns = rushing.

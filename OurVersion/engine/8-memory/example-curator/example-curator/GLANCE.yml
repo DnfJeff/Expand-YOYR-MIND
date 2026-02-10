@@ -1,0 +1,47 @@
+# GLANCE.yml — example-curator
+# Full file: CARD.yml (140 lines) | SKILL.md
+# 📚 "Analyze incoming examples, evolve canonical corpus."
+
+what: |
+  Generic worker pattern for corpus evolution.
+  Timestamped examples → cluster → evolve → canonical.
+  Can curate itself. Recursion warning.
+
+why: |
+  - Corpus needs evolution
+  - Pattern recognition
+  - Contributor attribution
+  - Training data quality
+
+when:
+  - '"Timestamped count > 20" → batch analyze'
+  - '"Manual review" → `CURATE skills/*/examples/`'
+  - '"Scheduled" → weekly corpus review'
+
+process: |
+  CONTRIBUTORS → CATCH → SUBMIT (timestamped)
+  CURATOR → ANALYZE → PATTERNS → EVOLVE
+  CORPUS → CANONICAL → TRAINING → BETTER AI
+
+actions:
+  PROMOTE: "Timestamped → timeless (best exemplar)"
+  MERGE: "Multiple timestamps → one richer"
+  ABSTRACT: "Concrete → general schema"
+  REFINE: "Update with new evidence"
+  DEPRECATE: "Mark as outdated"
+  CREDIT: "Attribute contributors"
+
+pattern_finding:
+  - "cluster_similar — Group same anti-pattern"
+  - "identify_unique — Flag novel patterns"
+  - "detect_drift — Notice outdated canonicals"
+  - "spot_gaps — Find gaps in coverage"
+
+worker_modes:
+  interactive: "CURATE <path> → proposals for review"
+  autonomous: "Scheduled → PR for approval"
+  advisory: "On submission → similarity suggestions"
+
+meta: "This skill can curate itself."
+related: [drescher, play-learn-lift, yaml-jazz]
+type: worker-pattern

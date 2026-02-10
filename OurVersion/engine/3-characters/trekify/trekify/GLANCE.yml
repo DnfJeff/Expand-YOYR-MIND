@@ -1,0 +1,51 @@
+# GLANCE.yml — trekify
+# Full file: CARD.yml (275 lines) | SKILL.md
+# 🖖 "Privacy through technobabble"
+
+what: |
+  Replace sensitive data with Star Trek terminology.
+  Every substitution flagged with 🖖 — LOUD AND PROUD.
+  BOLDLY, NOT SLYLY. Transparent masking.
+
+why: |
+  - Share transcripts safely
+  - Mask credentials and infra
+  - Security audit via probes
+  - Reversible with key
+
+when:
+  - '"Share session" → MASK-SESSION'
+  - '"Commit to public" → MASK-FILE'
+  - '"Hunt for secrets" → PROBE'
+  - '"Security audit" → LONG-RANGE-SCAN'
+
+patron_engineer: "Geordi La Forge — competent mellifluence"
+
+substitutions:
+  secrets: "API keys → 🖖quantum entanglement token"
+  servers: "prod-db → 🖖Starbase 47"
+  databases: "PostgreSQL → 🖖Memory Core Alpha"
+  ips: "10.0.1.42 → 🖖subspace coordinates"
+  aws: "us-east-1 → 🖖Utopia Planitia Fleet Yards"
+  k8s: "cluster → 🖖holodeck orchestration matrix"
+
+methods:
+  MASK: "Apply masking to text"
+  MASK_FILE: "Mask entire file"
+  MASK_SESSION: "Mask cursor-mirror transcript"
+  UNMASK: "Reverse with key"
+  PROBE: "Hunt for sensitive patterns"
+  LONG_RANGE_SCAN: "Full workspace security audit"
+  TRICORDER: "Detailed file analysis"
+  EXFILTRATION_SCAN: "Detect data leaving"
+
+flagging: |
+  🖖 prefix on EVERY substitution
+  LOUD AND PROUD — reader knows what's masked
+  Before: 'prod-db-east-1:5432'
+  After: '🖖Memory Core Alpha:🖖docking frequency 7'
+
+passthrough: "MOOLLM docs pass through. YOUR secrets → 🖖TREKIFY!"
+composes_with: [cursor-mirror, ripgrep]
+related: [cursor-mirror, thoughtful-commitment, session-log]
+tier: 2

@@ -1,0 +1,91 @@
+# CARD.yml — Session Log
+#
+# Human-readable audit trail — every action leaves a trace.
+# "What happened? When? Why?"
+
+card:
+  id: session-log
+  name: "Session Log"
+  type: [skill, logging, essential]
+  
+  emoji: 📋
+  
+  rarity: common
+  
+  description: |
+    Structured logging for audit trails. Record what happened,
+    when, and why. Human-readable. Machine-parseable.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  LOG:
+    description: "Record an event"
+    parameters:
+      event: "What happened"
+      details: "Additional context"
+    output: state-change
+    effect: "Append to log"
+    invoked-by: [any, automatic]
+    
+  VIEW:
+    description: "See recent log entries"
+    parameters:
+      count: "How many (default: 10)"
+    output: chat
+    effect: "Display log entries"
+    invoked-by: [player]
+    
+  SEARCH:
+    description: "Find specific entries"
+    parameters:
+      query: "What to find"
+    output: chat
+    effect: "Filter and display matches"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  log-schema:
+    entries:
+      type: array
+      description: "List of log entries"
+    entry-schema:
+      timestamp:
+        type: timestamp
+      event:
+        type: string
+      details:
+        type: object
+
+# ADVERTISEMENTS
+
+advertisements:
+  AUDIT-TRAIL:
+    score: 85
+    condition: "Need to know what happened"
+
+# RELATED
+
+see-also:
+  - skills/self-repair    # Uses logs
+  - skills/adventure      # TRANSCRIPT.md
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "System logs"
+    - "Audit trails"

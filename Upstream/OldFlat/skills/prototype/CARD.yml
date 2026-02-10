@@ -1,0 +1,125 @@
+# CARD.yml — The Prototype Card
+#
+# Philosophy of prototype-based inheritance.
+# "Objects clone from prototypes, not instances from classes."
+
+card:
+  id: prototype
+  name: "Prototype Philosophy"
+  type: [skill, philosophy, inheritance]
+  
+  emoji: 🧬
+  
+  rarity: rare  # Foundational but abstract
+  
+  description: |
+    The Self programming language philosophy applied to MOOLLM.
+    Objects are concrete. Classes don't exist. Everything delegates.
+    
+    Play this card to understand or explain prototype-based inheritance,
+    or when designing new prototype/instance relationships.
+
+# TOOLS REQUIRED
+# This is pure philosophy — no tools needed
+
+tools:
+  required: []
+  optional:
+    - read_file  # To examine prototype chains
+
+tier: 0  # Knowledge only
+
+# METHODS
+# What this card can do when played
+
+methods:
+  
+  EXPLAIN:
+    description: "Explain prototype inheritance to someone"
+    parameters:
+      audience: "Who needs to understand (developer, designer, novice)"
+      context: "What they're trying to build"
+    output: chat
+    effect: |
+      Generate an explanation tailored to the audience,
+      using concrete examples from the current context.
+      
+  DESIGN:
+    description: "Design a prototype relationship"
+    parameters:
+      thing: "What needs prototypes (character, room, skill)"
+      capabilities: "What it should inherit"
+    output: chat + yaml
+    effect: |
+      1. Identify appropriate prototypes
+      2. Design PROTOTYPES.yml structure
+      3. Document what inherits vs overrides
+      
+  TRACE:
+    description: "Trace a delegation chain"
+    parameters:
+      instance-path: "Path to instance"
+      slot-name: "What you're looking for"
+    output: chat
+    effect: |
+      Walk the prototype chain showing where slot-name
+      resolves, or report if unresolved.
+      
+  COMPARE:
+    description: "Compare prototype vs class inheritance"
+    parameters:
+      scenario: "What you're modeling"
+    output: chat
+    effect: |
+      Show how the scenario would work in both paradigms,
+      explaining tradeoffs and why prototype fits MOOLLM.
+
+# STATE
+# This card has no mutable state — it's pure philosophy
+
+state: {}
+
+# ADVERTISEMENTS
+# What this card offers to the room
+
+advertisements:
+  UNDERSTAND-INHERITANCE:
+    score: 90
+    condition: "Confused about how MOOLLM inheritance works"
+    
+  DESIGN-PROTOTYPE:
+    score: 80
+    condition: "Need to create something that inherits from skills"
+    
+  DEBUG-DELEGATION:
+    score: 70
+    condition: "Can't figure out why something isn't inheriting right"
+
+# RELATED
+
+see-also:
+  - skills/skill/delegation-object-protocol.md
+  - skills/skill/skill-instantiation-protocol.md
+  - skills/constructionism
+  - skills/character
+  - skills/card
+
+# CREDITS
+
+credits:
+  creators:
+    - "David Ungar — Self language (1987)"
+    - "Randall Smith — Self language co-creator"
+  influenced-by:
+    - "Smalltalk — Alan Kay, Xerox PARC"
+    - "Actor Model — Carl Hewitt"
+  applied-by:
+    - "Brendan Eich — JavaScript prototypes - but lobotomized"
+    - "Don Hopkins — MOOLLM DOP"
+
+# QUOTES
+
+wisdom:
+  - "The best message is no message."
+  - "Self is a network, not a node."
+  - "Everything is concrete. Nothing is abstract."

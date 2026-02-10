@@ -1,0 +1,181 @@
+# CARD.yml — Bootstrap
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Wake up, orient, warm the context."
+
+card:
+  id: bootstrap
+  name: "Bootstrap"
+  type: [skill, meta, orientation]
+  emoji: 🌅
+  tier: 1
+  protocol: BOOTSTRAP
+  aliases: [BOOT, REBOOT]
+  tagline: "Wake up, orient, warm the context."
+  
+  description: |
+    The first skill to invoke at session start.
+    Gathers environment info, loads driver, warms context,
+    and delegates to adventure or other startup mode.
+
+# FILES INDEX — Activate together for full context
+
+files:
+  docs:
+    - SKILL.md              # Full protocol documentation
+    - README.md             # Human landing page
+    - CONNECTIONS.md        # James Burke style intellectual lineage
+  templates/:
+    - templates/startup.yml      # Startup configuration
+    - templates/hot.yml          # Priority hints
+    - templates/cold.yml         # Archaeology recovery
+    - templates/working-set.yml  # Current focus
+  probe:
+    - PROBE.yml.tmpl        # Probe output template
+
+# K-LINES
+
+k-lines:
+  activates:
+    - BOOTSTRAP
+    - BOOT
+    - REBOOT
+    - ORIENTATION
+    - WARM-CONTEXT
+  related:
+    - { ref: cursor-mirror, relation: "introspection for probes" }
+    - { ref: adventure, relation: "startup delegates to" }
+    - { ref: moollm, relation: "what we're booting into" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Session start"
+  - "Feeling lost or disoriented"
+  - "Context seems cold"
+  - "Asking 'what am I?'"
+  - "Need to understand environment"
+
+# METHODS — signatures only, see SKILL.md for sequences
+
+methods:
+  BOOTSTRAP:
+    signature: "BOOTSTRAP (--no-startup)"
+    aliases: [BOOT, REBOOT]
+    sequence: "PROBE → DETECT-DRIVER → SETUP → WARM-CONTEXT → STARTUP"
+    
+  SETUP:
+    signature: "SETUP"
+    note: "Initialize .moollm/ scratch from templates"
+    
+  STARTUP:
+    signature: "STARTUP"
+    modes: [adventure, development, custom, none]
+    
+  PROBE:
+    signature: "PROBE"
+    note: "Gather environment WITHOUT terminal commands"
+    
+  DEEP-PROBE:
+    signature: "DEEP-PROBE"
+    note: "Extended diagnostics WITH terminal commands"
+    
+  CURSOR-PROBE:
+    signature: "CURSOR-PROBE"
+    note: "Deep Cursor introspection via cursor-mirror"
+    
+  REFLECT:
+    signature: "REFLECT [session]"
+    note: "Analyze past sessions for self-improvement"
+    
+  DEBUG-BOOT:
+    signature: "DEBUG-BOOT [session]"
+    note: "Trace boot sequence for optimization"
+    
+  DETECT-DRIVER:
+    signature: "DETECT-DRIVER"
+    returns: [cursor, claude-code, custom, generic]
+    
+  WARM-CONTEXT:
+    signature: "WARM-CONTEXT [priority]"
+    priorities: [critical, high, medium, all]
+    
+  CONNECTIONS-TOUR:
+    signature: "CONNECTIONS-TOUR"
+    note: "James Burke style intellectual lineage tour"
+    
+  SELF-DESCRIBE:
+    signature: "SELF-DESCRIBE"
+    note: "Answer 'what am I?'"
+
+# ADVERTISEMENTS
+
+advertisements:
+  BOOTSTRAP:
+    score: 100
+    condition: "Session start, need orientation"
+    
+  SELF-DESCRIBE:
+    score: 90
+    condition: "Identity questions, 'what am I?'"
+    
+  REFLECT:
+    score: 85
+    condition: "Want to analyze past sessions"
+    
+  CONNECTIONS-TOUR:
+    score: 80
+    condition: "Want to understand MOOLLM heritage"
+    
+  DEBUG-BOOT:
+    score: 75
+    condition: "Boot seems slow or broken"
+
+# PLATFORM ADAPTATION (brief — see SKILL.md)
+
+drivers:
+  cursor:     { tier: 4, hot_cold: advisory }
+  claude-code: { tier: 5, hot_cold: hybrid }
+  custom:     { tier: 6, hot_cold: magic }
+  generic:    { tier: 1, hot_cold: documentation }
+
+# FILES TO WARM (brief — see SKILL.md)
+
+warming_priorities:
+  critical: [constitution-core.md, PROTOCOLS.yml]
+  high: [skills/INDEX.yml, hot.yml, cold.yml]
+  medium: [kernel/README.md, skills/README.md]
+
+# TOOLS
+
+tools:
+  required: [read_file, write_file, list_dir]
+  optional: [run_terminal_cmd]  # For DEEP-PROBE
+
+# INTROSPECTION
+
+introspection:
+  skill: skills/cursor-mirror
+  use: "CURSOR-PROBE, REFLECT, DEBUG-BOOT"
+  
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ Bootstrap Sequence"
+    - "§ Probe Methods (PROBE, DEEP-PROBE, CURSOR-PROBE)"
+    - "§ Startup Modes"
+    - "§ Platform Drivers"
+    - "§ Context Warming"
+    - "§ Introspection Workflow"
+  CONNECTIONS.md: "James Burke style lineage tour"
+
+# LINEAGE
+
+lineage:
+  - { name: Constructionism, source: "Seymour Papert" }
+  - { name: SimAntics, source: "Will Wright, Don Hopkins" }
+  - { name: Society of Mind, source: "Marvin Minsky" }
+  - { name: Self Language, source: "Dave Ungar" }
+  - { name: Robust-First, source: "Dave Ackley" }
+  - { name: Postel's Law, source: "Jon Postel" }

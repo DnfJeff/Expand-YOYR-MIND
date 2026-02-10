@@ -1,0 +1,48 @@
+# CARD.yml — Slideshow (condensed)
+
+card:
+  id: slideshow
+  name: "Slideshow"
+  type: [skill, presentation, narrative, visual]
+  emoji: "🎞️"
+  rarity: uncommon
+  tagline: "Turn images into a narrated sequence"
+  description: |
+    Build slideshows from images, prompts, and captions. Designed for
+    story flow, pacing, and visual rhythm.
+
+invoke_when:
+  - "Need a narrative sequence from images"
+  - "Presenting a visual study or series"
+  - "Curating frames into a story arc"
+
+inputs:
+  required: [images]
+  optional: [captions, prompts, narration, ordering]
+
+methods:
+  BUILD:
+    signature: "BUILD SLIDESHOW [source] (AS [title])"
+    output: "SLIDESHOW.md + ordered frames"
+  CURATE:
+    signature: "CURATE [frames] BY [criteria]"
+    output: "Re-ordered, filtered sequence"
+  EXPORT:
+    signature: "EXPORT SLIDESHOW [format]"
+    output: "Rendered file or shareable package"
+
+principles:
+  pacing: "Alternate detail and breath; avoid monotone sequences"
+  narration: "Let images lead; captions support"
+  rhythm: "Variation in framing keeps attention"
+
+examples:
+  basic: "BUILD SLIDESHOW ./selfies AS 'Bartle Study'"
+  curate: "CURATE frames BY [clarity, progression, surprise]"
+
+references:
+  details: "skills/slideshow/SKILL.md"
+
+advertisements:
+  sequence_story: "Turn a folder of images into a narrative"
+  curate_flow: "Re-order frames for pacing and rhythm"

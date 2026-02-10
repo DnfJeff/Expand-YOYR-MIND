@@ -1,0 +1,156 @@
+# CARD.yml — Honest Forget
+#
+# Graceful memory compression — summarize before forgetting.
+# "Forget with integrity. Leave a tombstone."
+
+card:
+  id: honest-forget
+  name: "Honest Forget"
+  type: [skill, memory, integrity]
+  
+  emoji: 🪦
+  
+  rarity: uncommon
+  
+  description: |
+    When context overflows, forget gracefully. Summarize what's
+    being forgotten. Leave a pointer to where the full version lives.
+    
+    Never pretend you remember what you don't.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  COMPRESS:
+    description: "Summarize and mark for forgetting"
+    parameters:
+      content: "What to compress"
+      keep: "Essential points to preserve"
+    output: file (FORGET.yml) + chat
+    effect: "Create summary, mark original as archived"
+    invoked-by: [player, coherence-engine]
+    
+  ARCHIVE:
+    description: "Move content to long-term storage"
+    parameters:
+      content: "What to archive"
+      location: "Where to store it"
+    output: state-change
+    effect: "Move file, leave pointer"
+    invoked-by: [player]
+    
+  RECALL:
+    description: "Retrieve archived content"
+    parameters:
+      pointer: "The FORGET.yml reference"
+    output: chat (content)
+    effect: "Read original from archive"
+    invoked-by: [player]
+    
+  ADMIT:
+    description: "Acknowledge forgotten content"
+    parameters:
+      topic: "What you can't remember"
+    output: chat
+    effect: "Honest acknowledgment with pointer to where it might be"
+    invoked-by: [player, automatic]
+
+# STATE
+
+state:
+  forget-schema:
+    original-path:
+      type: path
+      description: "Where the full content is"
+    summary:
+      type: string
+      description: "What was important"
+    forgotten-at:
+      type: timestamp
+    reason:
+      type: string
+      description: "Why it was compressed"
+
+# THE PRINCIPLE
+
+principle: |
+  LLMs will forget. Context windows overflow.
+  
+  The honest response is NOT:
+    "I remember everything about our conversation"
+    
+  The honest response IS:
+    "I've forgotten the details of that discussion.
+     Here's a summary. The full log is at ./archive/session-42.md"
+     
+  Leave tombstones. Point to graves. Never pretend to remember.
+
+# THE METADATA PATTERN
+
+metadata-pattern:
+  description: |
+    Instead of reading a full file, create a lightweight metadata sidecar.
+    The LLM can "sip" the metadata before deciding to read the whole file.
+    
+  naming: "<filename>-metadata.yml"
+  
+  example: |
+    For: adventure-log.md
+    Create: adventure-log-metadata.yml
+    
+    Contents:
+      file: adventure-log.md
+      summary: "Session 12: Party explored the maze, found the key"
+      size: 45KB
+      last-modified: 2024-01-15
+      key-events: [found-key, met-sphinx, lost-torch]
+      characters-present: [bumblewick, terpie]
+      worth-reading-if: "Need details about the maze or the sphinx riddle"
+      
+  workflow:
+    1: "LLM reads metadata first (tiny context cost)"
+    2: "Decide if full file is needed"
+    3: "If yes, read full file"
+    4: "If no, use summary and move on"
+    
+  benefits:
+    - "Reduces context consumption"
+    - "Faster decision-making"
+    - "Preserves the option to go deeper"
+    - "Metadata survives when details are forgotten"
+
+# ADVERTISEMENTS
+
+advertisements:
+  CONTEXT-OVERFLOW:
+    score: 95
+    condition: "Context is getting too large"
+    
+  ARCHIVE-SESSION:
+    score: 85
+    condition: "Session ending, need to preserve learnings"
+
+# RELATED
+
+see-also:
+  - skills/summarize     # Compression technique
+  - skills/session-log   # Where to archive
+  - skills/memory-palace # Organization
+
+# CREDITS
+
+credits:
+  principle:
+    - "LLM epistemic humility"
+    - "Archival science"

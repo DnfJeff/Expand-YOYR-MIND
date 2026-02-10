@@ -1,0 +1,59 @@
+_format:
+  NO_COMMENTS: true
+  NO_HEADERS: true
+  NO_DECORATION: true
+  NO_DIVIDERS: true
+  PURE_DATA_ONLY: true
+  target_lines: 50-80
+  target_tokens: 200-300
+
+name: "{{entity_name}}"
+type: "{{entity_type}}"
+description: "{{one_line_description}}"
+
+{{#if is_directory}}
+directory:
+  {{#each subdirectories}}
+  {{name}}: {{summary}}
+  {{/each}}
+  {{#if files}}
+  files: [{{files}}]
+  {{/if}}
+{{/if}}
+
+{{#if is_character}}
+location: "{{current_location}}"
+home: "{{home_location}}"
+{{/if}}
+
+{{#if has_relationships}}
+relationships:
+  {{#each top_relationships}}
+  - {{name}}: {{relation}}
+  {{/each}}
+{{/if}}
+
+{{#if has_state}}
+state:
+  {{#each state_fields}}
+  {{key}}: {{value}}
+  {{/each}}
+{{/if}}
+
+{{#if is_room}}
+exits:
+  {{#each exits}}
+  {{direction}}: {{destination}}
+  {{/each}}
+{{/if}}
+
+{{#if has_contents}}
+contains: [{{contents}}]
+{{/if}}
+
+{{#if has_actions}}
+can:
+  {{#each key_actions}}
+  - {{action}}
+  {{/each}}
+{{/if}}

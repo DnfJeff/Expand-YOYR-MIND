@@ -1,0 +1,47 @@
+# GLANCE.yml — dog
+# Full file: CARD.yml (269 lines) | SKILL.md
+# 🐕 "Dogs have YOUR agenda."
+
+what: |
+  Canine companion with loyalty dynamics.
+  Dogs give buffs just for existing. Loyalty is free.
+  Starts at 50 (trusting) — you have to TRY to lose it.
+
+why: |
+  - Emotional support as game mechanic
+  - Passive buffs (unconditional-love, pack-strength)
+  - Always succeeds, always available
+  - File-ending culture (dogs mark territory)
+
+when:
+  - '"Pet the dog" → PAT (always succeeds)'
+  - '"Maximum buff" → BELLY-RUB'
+  - '"Feeling down" → dog COMFORTS automatically'
+  - '"Adventure companion" → dog FOLLOWS'
+
+loyalty:
+  range: [0, 100]
+  start: 50  # trusting!
+  thresholds:
+    "0-20": "Abandoned — sad, still hopes"
+    "21-50": "Acquaintance — wags, approaches"
+    "51-80": "Friend — follows, protects"
+    "81-100": "Bonded — would die for you"
+
+buffs:
+  PAT: "+1 Cheerful (always)"
+  BELLY_RUB: "+3 Cheerful, +2 Calm"
+  GOOD_BOY: "+3 Confidence, +5 bond"
+  COMFORT: "+3 Comforted"
+  PRESENCE: "+1 Not-Alone (continuous)"
+
+special_abilities:
+  unconditional_love: "Loyalty 50+ → can't drop below 3 Cheerful"
+  pack_strength: "Dog in party → +1 all social rolls"
+  early_warning: "Dog present → never surprised"
+  therapy_dog: "After COMFORT → faster recovery"
+
+file_marking: "# 🐕 [name] was here [date]"
+inherits: skills/animal
+vs: cat (comparison class)
+tier: 1

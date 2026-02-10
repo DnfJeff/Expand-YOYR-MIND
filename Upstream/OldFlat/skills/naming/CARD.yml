@@ -1,0 +1,105 @@
+# CARD.yml — Naming
+#
+# Big-endian file naming as semantic binding.
+# "Names are the first code you write."
+
+card:
+  id: naming
+  name: "Naming"
+  type: [skill, organization, meta]
+  
+  emoji: 🏷️
+  
+  rarity: common
+  
+  description: |
+    File and directory naming conventions as semantic binding.
+    Big-endian naming (general to specific) for sortability.
+    
+    Wraps kernel/NAMING.yml — the filesystem is a semantic network.
+
+# TOOLS REQUIRED
+
+tools:
+  required: []  # Pure knowledge
+
+tier: 0
+
+# METHODS
+
+methods:
+  
+  NAME:
+    description: "Generate an appropriate name"
+    parameters:
+      thing: "What to name"
+      context: "Where it lives"
+    output: chat (suggested name)
+    effect: "Apply naming conventions"
+    invoked-by: [player, designer]
+    
+  RENAME:
+    description: "Suggest better name for existing thing"
+    parameters:
+      current: "Current name"
+      context: "What it is and where"
+    output: chat (suggested name)
+    effect: "Propose improvement"
+    invoked-by: [player]
+    
+  VALIDATE:
+    description: "Check if name follows conventions"
+    parameters:
+      name: "Name to check"
+    output: chat (assessment)
+    effect: "Report compliance or issues"
+    invoked-by: [player]
+
+# STATE
+
+state: {}  # Pure knowledge
+
+# CONVENTIONS
+
+conventions:
+  big-endian: |
+    General to specific, left to right.
+    - session-2024-01-15-morning.md
+    - cat-terpie.yml
+    - skill-adventure.md
+    
+  directories:
+    - "lowercase-with-dashes"
+    - "Singular nouns for types (skill/, not skills/)"
+    - "Plural for collections (characters/)"
+    
+  files:
+    - "UPPERCASE.ext for core files (README.md, SKILL.md)"
+    - "lowercase-with-dashes.ext for instances"
+    - "*.tmpl for templates"
+    - "*.yml for data, *.md for prose"
+
+# ADVERTISEMENTS
+
+advertisements:
+  NAME-SOMETHING:
+    score: 80
+    condition: "Need to create a new file or directory"
+    
+  UNDERSTAND-STRUCTURE:
+    score: 70
+    condition: "Confused by naming conventions"
+
+# RELATED
+
+see-also:
+  - kernel/NAMING.yml  # Canonical reference
+  - skills/room        # Directory structure
+  - skills/yaml-jazz   # YAML conventions
+
+# CREDITS
+
+credits:
+  principle:
+    - "ISO 8601 — Date ordering"
+    - "Big-endian vs little-endian"

@@ -1,0 +1,39 @@
+# Catalog: intellectia-stock-screener — APPROVED (Deep Probe verified)
+# Zero executable code. Read-only API documentation with advisory.
+
+skill:
+  name: intellectia-stock-screener
+  author: intellectiaai
+  source: https://github.com/openclaw/skills/tree/main/skills/intellectiaai/intellectia-stock-screener
+  ecosystem: clawhub
+  fetched: 2026-02-06
+  still_live: true
+
+trust:
+  tier: approved
+  tags: [clean, minimal, read-only, no-auth, deep-probed]
+  scanned_by: skill-snitch Deep Probe v2.0
+  scan_date: 2026-02-06
+
+summary: |
+  Pure API documentation. 2 files audited: SKILL.md (5.2KB), _meta.json.
+  ZERO executable code. Single read-only endpoint at api.intellectia.ai.
+  No authentication required. No credentials. No file access. Python
+  example uses requests with timeout=30 and raise_for_status(). Clean.
+
+deep_probe:
+  files_audited: 2
+  executable_code: 0
+  network_calls: 1
+  network_detail: "https://api.intellectia.ai/gateway/v1/stock/screener-list (publisher's own API)"
+  credentials: 0
+
+  advisories:
+    - severity: low
+      detail: "API endpoint is publisher's own service — traffic generation for Intellectia"
+      note: "Not a security issue but a business consideration"
+    - severity: low
+      detail: "Returns financial prediction data (probability, profit fields)"
+      recommendation: "Users should not make financial decisions based solely on this data"
+    - severity: info
+      detail: "API operator can log IP addresses and request patterns from callers"

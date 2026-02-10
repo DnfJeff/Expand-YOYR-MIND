@@ -1,0 +1,63 @@
+# 🏗️ Constructionism
+
+> *"If you can build it, you can understand it. If you can inspect it, you can trust it."*
+
+## MOOLLM K-Lines
+
+| K-Line | Why Related |
+|--------|-------------|
+| [play-learn-lift/](../play-learn-lift/) | The methodology (constructionism in action) |
+| [society-of-mind/](../society-of-mind/) | Minsky + Papert -- MIT AI Lab collaboration |
+| [leela-ai/](../leela-ai/) | Constructionism applied to manufacturing |
+| [manufacturing-intelligence/](../manufacturing-intelligence/) | Reading 3: "Build to understand" |
+| [room/](../room/) | The microworld to explore |
+| [yaml-jazz/](../yaml-jazz/) | Inspectable state |
+| [adventure/](../adventure/) | Learning through narrative |
+| [skill/](../skill/) | Procedures → Skills (Papert's path) |
+| [schema-mechanism/](../schema-mechanism/) | Drescher's causal learning |
+| [debugging/](../debugging/) | Debug cycle = learning cycle |
+| [kernel/constitution-core.md](../../kernel/constitution-core.md) | Files-as-state IS constructionist |
+
+**Full Spec:** [SKILL.md](SKILL.md)
+
+## Overview
+
+Seymour Papert's educational philosophy: learn by **building things** you can **inspect and modify**. MOOLLM is a microworld where the filesystem IS the learning environment.
+
+## Core Principles
+
+| Principle | Meaning |
+|-----------|---------|
+| **Low Floor** | Easy to start, no setup |
+| **High Ceiling** | Unlimited complexity |
+| **Wide Walls** | Many paths to many goals |
+
+## The Debug Cycle
+
+```
+Try → Inspect → Hypothesize → Modify → Understand
+```
+
+## Microworld Mapping
+
+| Logo | MOOLLM |
+|------|--------|
+| Turtle | Character |
+| Canvas | Room |
+| Procedures | Skills |
+| Variables | YAML |
+
+## Cheating is Learning
+
+> Open `character.yml` directly, add `magic_sword` to inventory — you've learned YAML!
+
+The system rewards curiosity with knowledge.
+
+
+## Tools Required
+
+None — this describes a philosophy, not a tool-using pattern.
+
+---
+
+*See [SKILL.md](SKILL.md) for complete specification.*

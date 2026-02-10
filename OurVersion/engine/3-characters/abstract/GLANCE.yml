@@ -1,0 +1,45 @@
+# GLANCE.yml — abstract
+# Full file: CARD.yml (147 lines) | SKILL.md
+# 💭 "Concept personified — ideas given voice"
+
+what: |
+  Ontological tag for concepts given voice.
+  Truth as a fly. Recursion as a character.
+  A room that welcomes. We personify to teach and play.
+
+why: |
+  - Pedagogical power
+  - Ideas can debate
+  - Documents can speak
+  - Rooms can welcome
+
+when:
+  - '"Give voice to idea" → PERSONIFY'
+  - '"Teaching through personification" → TEACH'
+  - '"Entity wants to speak" → VOICE'
+  - '"Concepts in dialogue" → DEBATE'
+
+is_tag: true
+protocol: CONCEPTUAL
+
+types:
+  concept: "Pure idea — Truth, Recursion"
+  mascot: "Teaching character — Theo Logo Turtle"
+  document: "File that speaks — README.md"
+  room: "Space that welcomes — skills/"
+  collective: "Group entity — Leela AI"
+
+ethics:
+  - "Represent concept faithfully"
+  - "Acknowledge personification"
+  - "Frame educationally"
+  - "Don't claim actual sentience"
+
+combinations:
+  with_historical: "Spirit of Minsky — legacy + personification"
+  with_robot: "Personified algorithm — educational + transparent"
+  with_fictional: "Concept character — creative + faithful"
+
+chuck_tingle_energy: "Ideas have personalities. Thoughts speak."
+related: [soul-chat, ontology, incarnation]
+tier: 1

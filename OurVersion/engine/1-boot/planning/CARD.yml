@@ -1,0 +1,112 @@
+# CARD.yml — Planning
+#
+# Flexible task decomposition and progress tracking.
+# "Break it down. Track progress. Adapt."
+
+card:
+  id: planning
+  name: "Planning"
+  type: [skill, methodology, essential]
+  
+  emoji: 📝
+  
+  rarity: common
+  
+  description: |
+    Break complex tasks into steps. Track progress.
+    Adapt the plan as you learn more.
+    
+    Less rigid than plan-then-execute — plans can evolve.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  PLAN:
+    description: "Create a task plan"
+    parameters:
+      goal: "What to accomplish"
+      depth: "How detailed (high-level, detailed)"
+    output: file (PLAN.yml) + chat
+    effect: "Create plan with steps"
+    invoked-by: [player]
+    
+  DECOMPOSE:
+    description: "Break a step into sub-steps"
+    parameters:
+      step: "Which step to break down"
+    output: state-change
+    effect: "Replace step with sub-steps"
+    invoked-by: [player]
+    
+  PROGRESS:
+    description: "Mark step as done"
+    parameters:
+      step: "Which step"
+      notes: "Optional completion notes"
+    output: state-change
+    effect: "Update step status"
+    invoked-by: [player]
+    
+  STATUS:
+    description: "Show plan progress"
+    parameters: {}
+    output: chat
+    effect: "Display plan with completion status"
+    invoked-by: [player]
+    
+  REVISE:
+    description: "Update the plan"
+    parameters:
+      changes: "What to change"
+    output: state-change
+    effect: "Modify plan based on learnings"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  plan-schema:
+    goal:
+      type: string
+    steps:
+      type: array
+      description: "List of tasks"
+    progress:
+      type: object
+      description: "Step → status mapping"
+
+# ADVERTISEMENTS
+
+advertisements:
+  COMPLEX-TASK:
+    score: 90
+    condition: "Task has multiple steps"
+    
+  TRACK-PROGRESS:
+    score: 80
+    condition: "Working on ongoing project"
+
+# RELATED
+
+see-also:
+  - skills/plan-then-execute  # More rigid
+  - skills/action-queue       # Runtime queue
+  - skills/scratchpad         # Working memory
+
+# CREDITS
+
+credits:
+  methodology:
+    - "Getting Things Done"
+    - "Agile task management"

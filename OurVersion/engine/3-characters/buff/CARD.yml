@@ -1,0 +1,350 @@
+# CARD.yml — Buff
+#
+# Temporary effects system — curses are just shitty buffs.
+# "All effects are buffs. Some are just shitty."
+#
+# IMPORTANT: Buffs only target CHARACTERS, never rooms directly.
+# If a room needs buffs, create a "room spirit" character for it.
+# This keeps the buff system simple — one target type, one signature.
+
+card:
+  id: buff
+  name: "Buff"
+  type: [skill, effects, game]
+  
+  emoji: ✨
+  
+  rarity: common  # Ubiquitous in games
+  
+  description: |
+    Temporary stat modifiers, semantic effects, or behavior changes.
+    Can be numeric (+2 energy) or semantic ("feeling lucky").
+    Curses are just negative buffs — no separate system needed.
+    
+    TARGET: Characters only. Rooms get buffed via "room spirit" characters.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read character buffs
+    - write_file  # Apply/remove buffs
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises
+
+methods:
+  
+  APPLY:
+    description: "Add a buff to a character"
+    parameters:
+      target: "Character to buff"
+      buff: "Buff definition or reference"
+    output: chat + state-change
+    effect: "Add buff to target.buffs array"
+    invoked-by: [object, character, room, cat]
+    
+  REMOVE:
+    description: "Remove a specific buff"
+    parameters:
+      target: "Character"
+      buff-name: "Which buff to remove"
+    output: chat + state-change
+    effect: "Remove from target.buffs"
+    invoked-by: [healer, item, time-decay]
+    
+  TICK:
+    description: "Advance all buff durations by one turn"
+    parameters:
+      target: "Character or 'all'"
+    output: state-change
+    effect: "Decrement durations, remove expired buffs"
+    invoked-by: [time, simulation, coherence-engine]
+    
+  LIST:
+    description: "Show active buffs on a character"
+    parameters:
+      target: "Character to inspect"
+    output: chat
+    effect: "Display buffs with remaining duration"
+    invoked-by: [player, npc]
+    
+  FIND-BY-TAG:
+    description: "Find all buffs with a specific tag"
+    parameters:
+      target: "Character to search"
+      tag: "Tag to search for (e.g., 'terpene', 'combat', 'curse')"
+    output: list
+    effect: "Return array of matching buffs"
+    invoked-by: [script, llm, ui]
+    
+  REMOVE_BY_TAG:
+    description: "Remove all buffs with a specific tag"
+    parameters:
+      target: "Character"
+      tag: "Tag to match (e.g., 'curse', 'terpene')"
+    output: chat + state-change
+    effect: "Filter out buffs where tags includes tag"
+    invoked-by: [healer, item, dispel]
+    
+  HAS-TAG:
+    description: "Check if character has any buff with tag"
+    parameters:
+      target: "Character"
+      tag: "Tag to check"
+    output: boolean
+    effect: "Return true if any buff has tag"
+    invoked-by: [guard, script, llm]
+    
+  CLEANSE:
+    description: "Remove all negative buffs (curses)"
+    parameters:
+      target: "Character"
+    output: chat + state-change
+    effect: "Filter out buffs where polarity = negative OR tag includes 'curse'"
+    invoked-by: [healer, shrine, item]
+
+# STATE
+# Buff structure (lives on CHARACTERS only, never rooms)
+
+state:
+  buff-schema:
+    name:
+      type: string
+      description: "Display name"
+    source:
+      type: string
+      description: "What granted this buff"
+    effect:
+      type: object | string
+      description: "Stat mods {energy: +2} OR semantic prompt"
+    duration:
+      type: integer | string
+      description: "Turns, or 'forever', or '50% per turn'"
+    stacks:
+      type: boolean
+      default: false
+    max-stacks:
+      type: integer
+      description: "If stacking, limit"
+    polarity:
+      type: enum
+      values: [positive, negative, neutral]
+      description: "Is this a buff, curse, or neutral?"
+    tags:
+      type: array
+      items: string
+      description: "Searchable keywords for filtering buffs"
+      examples:
+        - combat        # Affects combat
+        - social        # Affects social interactions
+        - terpene       # From terpene kittens
+        - consumable    # From eating/drinking
+        - digestion     # Food-related effects
+        - curse         # Negative effect
+        - movement      # Affects speed/position
+        - perception    # Affects what you see/hear
+        - dispellable   # Can be removed by spells
+        - blessed       # From holy source
+        - corrupted     # From dark source
+        - embarrassing  # Social consequences
+    category:
+      type: string
+      description: "Primary category for stacking limits"
+      examples: [terpene, charm, consumable, curse, environmental, digestion]
+    spawns_after:
+      type: array
+      items:
+        buff_id: { type: string, required: true }
+        delay: { type: integer, default: 0 }
+        chance: { type: number, default: 1.0 }
+      description: "Buffs to spawn when this one ends (chains!)"
+    grants_immunity:
+      type: array
+      items: string
+      description: "Events this buff protects against"
+      examples: [GRUE_ATTACK, FEAR, POISON]
+    
+    # LIFECYCLE HOOKS
+    # Natural language prompts compiled to JS closures
+    # Signature: (world, subject, verb, object) => { ... }
+    # subject = the character with the buff
+    
+    start:
+      type: string
+      description: "Natural language: what happens when buff activates"
+    start_js:
+      type: string
+      description: "COMPILED: JavaScript body for start hook"
+      
+    simulate:
+      type: string
+      description: "Natural language: what happens each tick"
+    simulate_js:
+      type: string
+      description: "COMPILED: JavaScript body for simulate hook"
+      
+    is_finished:
+      type: string
+      description: "Natural language: condition for buff to end"
+    is_finished_js:
+      type: string
+      description: "COMPILED: JavaScript body, returns true when buff should end"
+      
+    # BUFF INTERACTIONS
+    # Buffs can look up and modify other buffs by tag
+    
+    cancels:
+      type: array
+      items: string
+      description: "Tags of buffs to REMOVE when this buff is applied"
+      examples: ["curse", "poison", "drunk"]
+      
+    boosts:
+      type: object
+      description: "Tags of buffs to INCREASE when this buff is applied"
+      schema:
+        tags: { type: array, items: string }
+        multiplier: { type: number, default: 1.5 }
+        extend_duration: { type: number, description: "Add N ticks" }
+      examples:
+        - { tags: ["fire"], multiplier: 2.0 }
+        - { tags: ["healing"], extend_duration: 5 }
+        
+    replaces:
+      type: array
+      items: string
+      description: "Tags of buffs to REPLACE (remove old, add this)"
+      examples: ["tipsy"]  # drunk replaces tipsy
+      
+    merges_with:
+      type: object
+      description: "Tags of buffs to MERGE into a new combined buff"
+      schema:
+        tags: { type: array, items: string }
+        result: { type: string, description: "Buff ID of merged result" }
+      examples:
+        - { tags: ["fire", "ice"], result: "steam-burst" }
+        - { tags: ["rage", "focus"], result: "battle-trance" }
+        
+    blocked_by:
+      type: array
+      items: string
+      description: "Tags that PREVENT this buff from being applied"
+      examples: ["immunity-poison", "cleansed"]
+      
+    counters:
+      type: array
+      items: string
+      description: "Buff IDs this buff weakens or shortens"
+      
+    countered_by:
+      type: array
+      items: string
+      description: "Buff IDs that weaken or shorten this buff"
+
+# STANDARD CHARACTER PROPERTIES
+# Buffs modify these standard stats on characters
+
+standard-properties:
+  
+  # Sims-style needs (0-100, decay over time)
+  needs:
+    hunger: { range: [0, 100], decay: -1, unit: "/hr" }
+    energy: { range: [0, 100], decay: -2, unit: "/hr" }
+    social: { range: [0, 100], decay: -1, unit: "/hr" }
+    hygiene: { range: [0, 100], decay: -0.5, unit: "/hr" }
+    bladder: { range: [0, 100], decay: "varies" }
+    fun: { range: [0, 100], decay: -1, unit: "/hr" }
+    comfort: { range: [0, 100], decay: "context" }
+    
+  # Mind-mirror stats (cognitive/emotional)
+  mind:
+    focus: { range: [0, 100], description: "Concentration" }
+    mood: { range: [-100, 100], description: "Emotional valence" }
+    stress: { range: [0, 100], description: "Anxiety level" }
+    creativity: { range: [0, 100], description: "Creative capacity" }
+    confidence: { range: [0, 100], description: "Self-assurance" }
+    patience: { range: [0, 100], description: "Frustration tolerance" }
+    curiosity: { range: [0, 100], description: "Exploration drive" }
+    
+  # Combat/adventure stats
+  combat:
+    hp: { range: [0, "max"], description: "Health points" }
+    damage: { range: "numeric", description: "Attack power" }
+    armor: { range: "numeric", description: "Damage reduction" }
+    speed: { range: "numeric", description: "Movement/action rate" }
+    luck: { range: [-100, 100], description: "Chance modifier" }
+    
+  # Room spirit stats (for room-spirit characters)
+  room-spirit:
+    production_speed: { range: "percent", default: 100, description: "Work rate in room" }
+    error_rate: { range: "percent", default: 5, description: "Mistake probability" }
+    mood_influence: { range: [-100, 100], default: 0, description: "Mood effect on occupants" }
+    comfort_bonus: { range: [-50, 50], default: 0, description: "Comfort granted to visitors" }
+    discovery_chance: { range: "percent", default: 10, description: "Finding hidden things" }
+    danger_level: { range: [0, 100], default: 0, description: "Hazard intensity" }
+
+# BUFF TYPES
+
+buff-types:
+  numeric:
+    description: "Traditional stat modifiers"
+    example: "{ energy: +2, focus: +1 }"
+    
+  semantic:
+    description: "Arbitrary vibes interpreted by LLM"
+    examples:
+      - "feeling lucky"
+      - "cats seem to like you today"
+      - "slightly cursed"
+      - "radiating calm energy"
+      
+  conditional:
+    description: "Effects that trigger on conditions"
+    example: "Next roll is critical success"
+
+# DURATION TYPES
+
+duration-types:
+  turns: "Integer number of simulation turns"
+  forever: "Never expires (permanent buff)"
+  percentage: "'50% per turn' — random decay"
+  condition: "'until you eat' — event-based"
+  natural-language: "'about 5 minutes' — LLM judges"
+
+# ADVERTISEMENTS
+
+advertisements:
+  MODIFY-STATS:
+    score: 90
+    condition: "Need to temporarily change character capabilities"
+    
+  APPLY-CURSE:
+    score: 85
+    condition: "Something bad should happen to a character"
+    hint: "Curses are just negative buffs"
+    
+  GRANT-ABILITY:
+    score: 80
+    condition: "Character needs temporary new capability"
+
+# RELATED
+
+see-also:
+  - skills/character  # Where buffs live
+  - skills/time       # When buffs tick
+  - skills/needs      # Buffs can modify needs
+  - skills/persona    # Personas can grant buffs
+  - skills/cat        # Cats grant buff effects
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "D&D — Buff/debuff spells"
+    - "World of Warcraft — Buff stacking"
+    - "The Sims — Moodlets"

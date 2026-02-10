@@ -1,0 +1,63 @@
+# Code Review State
+# Track review progress and findings
+
+review:
+  name: "{{ review_name }}"
+  status: "in_progress"
+  started: "{{ created_date }}"
+
+focus:
+{{ #each focus }}
+  - {{ this }}
+{{ /each }}
+
+files:
+{{ #each files }}
+  - path: "{{ this }}"
+    status: "pending"
+    issues: 0
+{{ /each }}
+
+findings:
+  blocking: []
+    # - id: "B1"
+    #   file: "path/to/file"
+    #   line: 0
+    #   type: "security|correctness|..."
+    #   summary: "Brief description"
+    #   details: "Full explanation"
+    #   suggestion: "How to fix"
+    
+  important: []
+    # Same structure as blocking
+    
+  minor: []
+    # Same structure as blocking
+    
+  praise: []
+    # - file: "path/to/file"
+    #   note: "What's good about it"
+
+verification:
+  tests:
+    ran: false
+    passed: null
+    command: ""
+    output: ""
+    
+  linter:
+    ran: false
+    passed: null
+    issues: 0
+    command: ""
+    output: ""
+
+notes: |
+  General review notes here.
+
+statistics:
+  files_reviewed: 0
+  files_total: {{ files.length | default 0 }}
+  blocking_issues: 0
+  important_issues: 0
+  minor_issues: 0

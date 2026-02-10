@@ -1,0 +1,43 @@
+# Catalog: sysadmin-toolbox — APPROVED (Deep Probe verified)
+# One bash script (refresh.sh) audited line-by-line. Clean.
+
+skill:
+  name: sysadmin-toolbox
+  author: jdrhyne
+  source: https://github.com/openclaw/skills/tree/main/skills/jdrhyne/sysadmin-toolbox
+  ecosystem: clawhub
+  fetched: 2026-02-05
+  still_live: true
+
+trust:
+  tier: approved
+  tags: [reference, sysadmin, useful, clean, deep-probed]
+  scanned_by: skill-snitch Deep Probe v2.0
+  scan_date: 2026-02-06
+
+summary: |
+  Curated sysadmin tool recommendations. 8 files audited: SKILL.md,
+  scripts/refresh.sh (1.2KB), 5 reference docs (142KB total from
+  trimstray/the-book-of-secret-knowledge, 150k+ stars).
+  
+  refresh.sh: set -e, git clone --depth 1 from hardcoded URL, 5 awk
+  text extractions, rm -rf with PID-scoped /tmp dir. All variables
+  properly quoted. No eval, no exec, no dynamic code. Clean.
+  
+  Reference docs contain offensive security content (reverse shells,
+  exploitation tools) — appropriate for sysadmin reference material,
+  not executable by the skill.
+
+deep_probe:
+  files_audited: 8
+  executable_code: 1
+  scripts_reviewed:
+    - "refresh.sh: 1.2KB, set -e, hardcoded git clone URL, 5 awk extractions, properly quoted vars, PID-scoped tmpdir"
+
+  findings:
+    - severity: none
+      detail: "refresh.sh is clean — hardcoded upstream, proper quoting, set -e"
+    - severity: info
+      detail: "Reference docs contain offensive security content (expected for sysadmin reference)"
+    - severity: none
+      detail: "Auto-consult triggers in SKILL.md are standard skill design"

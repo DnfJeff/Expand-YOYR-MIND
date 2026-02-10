@@ -1,0 +1,45 @@
+# Progress: {{ plan_name }}
+
+## Objective
+{{ objective }}
+
+---
+
+## Success Criteria
+{{ #each success_criteria }}
+- [ ] {{ this }}
+{{ /each }}
+
+---
+
+## Status: NOT STARTED (0/{{ initial_steps.length | default 0 }} steps)
+
+### ✅ Completed
+*None yet*
+
+### 🔄 In Progress
+*None yet*
+
+### ⏳ Pending
+{{ #each initial_steps }}
+{{ @index + 1 }}. [ ] {{ name }}
+{{ /each }}
+
+### 🚫 Blocked
+*None*
+
+---
+
+## Blockers
+*None currently*
+
+---
+
+## Notes
+*Add notes as work progresses*
+
+---
+
+## Timeline
+- **Started:** {{ created_date }}
+- **Est. Completion:** TBD

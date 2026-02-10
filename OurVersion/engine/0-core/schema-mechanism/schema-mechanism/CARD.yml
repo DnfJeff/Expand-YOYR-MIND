@@ -1,0 +1,99 @@
+# CARD.yml — Schema Mechanism
+#
+# Drescher's computational theory of causal learning.
+# "Context → Action → Result"
+
+card:
+  id: schema-mechanism
+  name: "Schema Mechanism"
+  type: [skill, theory, learning]
+  
+  emoji: 🧠
+  
+  rarity: legendary  # Foundational theory
+  
+  description: |
+    Gary Drescher's computational theory of how minds learn causal
+    models of the world. Schemas are Context → Action → Result units
+    that agents discover through experience.
+    
+    Extended by MOOLLM with LLM semantic understanding:
+    - Symbol grounding (items mean something)
+    - Causal reasoning (why patterns hold)
+    - Natural explanation (communicate discoveries)
+    
+  lineage: "Piaget → Minsky → Drescher → MOOLLM"
+
+tools:
+  required: []  # Theory skill, no tools
+  optional: []
+
+tier: 0  # Philosophy/theory
+
+methods:
+  
+  MARGINAL-ATTRIBUTION:
+    description: "Track which items correlate with schema success/failure"
+    parameters:
+      schema: "The schema to analyze"
+      trials: "Number of observations"
+    output: extended_context table
+    
+  SPIN-OFF:
+    description: "Create refined child schema with discovered context"
+    parameters:
+      parent: "Parent schema"
+      item: "Item to add to context"
+    output: new schema with explicit context
+    
+  SYNTHESIZE-ITEM:
+    description: "Invent hidden state hypothesis to explain unpredictable success"
+    parameters:
+      schema: "Unreliable schema"
+    output: synthetic item as probe
+    
+  PLAN-DIJKSTRA:
+    description: "Find shortest schema path from current state to goal"
+    parameters:
+      current: "Current item states"
+      goal: "Desired item states"
+    output: sequence of schemas
+
+state:
+  items:
+    type: object
+    description: "All known items with ON/OFF/UNKNOWN states"
+  schemas:
+    type: array
+    description: "All discovered schemas"
+  extended_context:
+    type: object
+    description: "Statistical tables for context discovery"
+  extended_results:
+    type: object
+    description: "Statistical tables for result discovery"
+
+advertisements:
+  LEARN-CAUSALITY:
+    score: 95
+    condition: "Want to understand why actions succeed or fail"
+    
+  DISCOVER-PREREQUISITES:
+    score: 90
+    condition: "Schema fails unpredictably, need to find hidden conditions"
+    
+  PLAN-ACTIONS:
+    score: 85
+    condition: "Need to chain schemas to achieve goal"
+
+see-also:
+  - skills/constructionism
+  - skills/play-learn-lift
+  - skills/planning
+  - skills/debugging
+
+credits:
+  - "Gary Drescher — Made-Up Minds (1991)"
+  - "Marvin Minsky — Society of Mind (1986)"
+  - "Jean Piaget — Genetic Epistemology"
+  - "Henry Minsky — pyleela.brain implementation"

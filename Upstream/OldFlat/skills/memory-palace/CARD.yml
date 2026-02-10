@@ -1,0 +1,103 @@
+# CARD.yml — Memory Palace
+#
+# Spatial organization of knowledge in navigable directories.
+# "Put knowledge where you can find it by walking there."
+
+card:
+  id: memory-palace
+  name: "Memory Palace"
+  type: [skill, memory, organization]
+  
+  emoji: 🏛️
+  
+  rarity: uncommon
+  
+  description: |
+    Organize knowledge spatially in directories you navigate.
+    Each room holds related information. Walking through the
+    palace triggers associations.
+    
+    The ancient mnemonic technique, applied to filesystems.
+
+tools:
+  required:
+    - read_file
+    - write_file
+    - list_dir
+
+tier: 1
+
+methods:
+  
+  CREATE-PALACE:
+    description: "Initialize a new memory palace"
+    parameters:
+      name: "Palace name"
+      structure: "Initial room structure"
+    output: directory structure + chat
+    effect: "Create palace directory with rooms"
+    invoked-by: [player]
+    
+  ADD-ROOM:
+    description: "Create a new room in the palace"
+    parameters:
+      name: "Room name"
+      location: "Where in the palace"
+    output: directory + file
+    effect: "Add navigable room"
+    invoked-by: [player]
+    
+  PLACE:
+    description: "Store knowledge in a room"
+    parameters:
+      knowledge: "What to remember"
+      room: "Which room"
+      anchor: "Memorable association"
+    output: file + chat
+    effect: "Create entry with mnemonic anchor"
+    invoked-by: [player]
+    
+  WALK:
+    description: "Navigate through the palace"
+    parameters:
+      from: "Starting room"
+      to: "Destination"
+    output: chat
+    effect: "Trigger associations along path"
+    invoked-by: [player]
+    
+  RECALL:
+    description: "Retrieve knowledge by location"
+    parameters:
+      room: "Where to look"
+      topic: "What to recall"
+    output: chat
+    effect: "Find and present stored knowledge"
+    invoked-by: [player]
+
+state:
+  palace:
+    name:
+      type: string
+    rooms:
+      type: array
+
+advertisements:
+  ORGANIZE-KNOWLEDGE:
+    score: 90
+    condition: "Need to structure and remember information"
+    
+  BUILD-KNOWLEDGE-BASE:
+    score: 80
+    condition: "Creating a reusable knowledge repository"
+
+see-also:
+  - skills/room
+  - skills/adventure
+  - skills/summarize
+  - skills/scratchpad
+
+credits:
+  technique:
+    - "Simonides of Ceos — Method of loci"
+    - "Frances Yates — The Art of Memory"

@@ -1,0 +1,238 @@
+# robotification-audit.yml — Representation Ethics Audit
+#
+# Inventory of characters and objects that reference real people,
+# with assessment of whether they need 🤖 or other disclosure markers.
+#
+# Categories:
+#   ✅ ADEQUATE — Already has sufficient ethical framing
+#   🤖 NEEDS-ROBOT — Real person making autonomous utterances, needs 🤖
+#   💬 NEEDS-QUOTE — Has quotes that should be marked as verified
+#   👑 DRAG-FRAME — Drag/tribute persona, frame is disclosure
+#   📖 FICTIONAL — Fictional character, no robot needed
+#   🎪 GAME-FRAME — Game context provides disclosure
+#   🙋 SELF-REP — Self-representation by the actual person
+
+audit:
+  
+  # PERSONAS (speaking as real people)
+  
+  linus_persona:
+    file: "examples/adventure-4/personas/linus-on-coffee-and-a-joint/PERSONA.yml"
+    person: "Linus Torvalds"
+    status: "living"
+    current_framing: "TRIBUTE PERSONA — explicitly declared"
+    speaks_autonomously: true
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 to display name when speaking"
+    notes: |
+      The PERSONA.yml has excellent ethical framing (tribute, not impersonation).
+      But when speaking in sessions, should use "🤖 Linus" prefix.
+      
+  seymour_papert:
+    file: "examples/adventure-4/pub/rooms/room-1/seymour-papert.yml"
+    person: "Seymour Papert"
+    status: "deceased (2016)"
+    current_framing: "ELVIS-IMPERSONATOR model, quotes only"
+    speaks_autonomously: false  # Only verified quotes
+    assessment: "💬 NEEDS-QUOTE — should use 💬 for verified quotes"
+    action: "Add 💬 prefix to canonical_quotes, 📜 for documented sources"
+    notes: |
+      Already says it only speaks in verified quotes.
+      Upgrade to use 💬 markers for quotes.
+      
+  # GUESTBOOK ENTRIES (real people who signed)
+  
+  david_bowie:
+    file: "examples/adventure-4/pub/guestbook/"
+    person: "David Bowie"
+    status: "deceased (2016)"
+    current_framing: "Guestbook entry with inscription"
+    speaks_autonomously: true  # Has dialogue in inscription
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 prefix to name in signature"
+    
+  klaus_nomi:
+    file: "examples/adventure-4/pub/guestbook/"
+    person: "Klaus Nomi"
+    status: "deceased (1983)"
+    current_framing: "Guestbook entry"
+    speaks_autonomously: true
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 prefix"
+    
+  leigh_bowery:
+    file: "examples/adventure-4/pub/guestbook/"
+    person: "Leigh Bowery"
+    status: "deceased (1994)"
+    current_framing: "Guestbook entry"
+    speaks_autonomously: true
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 prefix"
+    
+  pee_wee_herman:
+    file: "examples/adventure-4/pub/guestbook/"
+    person: "Paul Reubens (as Pee-wee)"
+    status: "deceased (2023)"
+    current_framing: "Character name, not actor name"
+    speaks_autonomously: true
+    assessment: "🎭 ACTOR-FRAME — character persona, not the actor"
+    action: "Add 🎭 prefix (character performance frame)"
+    notes: "Pee-wee Herman is a character, not the real person"
+    
+  cheech_and_chong:
+    file: "examples/adventure-4/pub/guestbook/ + monkey-palm CHARACTER.yml"
+    person: "Cheech Marin & Tommy Chong"
+    status: "living"
+    current_framing: "Guest appearances, gift-givers"
+    speaks_autonomously: true
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 prefix when speaking"
+    
+  # PALM'S RELATIONSHIPS (real people as characters)
+  
+  ww_jacobs:
+    file: "examples/adventure-4/characters/animals/monkey-palm/CHARACTER.yml"
+    person: "W.W. Jacobs"
+    status: "deceased (1943)"
+    current_framing: "Gift-giver, creator of Monkey's Paw story"
+    speaks_autonomously: true  # Has dialogue
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 prefix when speaking"
+    
+  andy_kristin_looney:
+    file: "examples/adventure-4/characters/animals/monkey-palm/CHARACTER.yml"
+    person: "Andy & Kristin Looney"
+    status: "living"
+    current_framing: "Gift-givers (Fluxx creators)"
+    speaks_autonomously: true  # Has dialogue
+    assessment: "🤖 NEEDS-ROBOT"
+    action: "Add 🤖 prefix when speaking"
+    
+  # ROOM 8 (Dave Ungar tribute)
+  
+  dave_ungar:
+    file: "examples/adventure-4/pub/rooms/room-8/README.md"
+    person: "Dave Ungar"
+    status: "living"
+    current_framing: "Portrait, quoted, room tribute"
+    speaks_autonomously: false  # Only quoted
+    assessment: "💬 NEEDS-QUOTE"
+    action: "Add 💬 or 📜 to quotes"
+    notes: "Portrait is aware but doesn't speak autonomously"
+    
+  # FICTIONAL (no robot needed)
+  
+  donna_toadstool:
+    file: "examples/adventure-4/characters/fictional/donna-toadstool/"
+    person: "N/A — drag persona inspired by Trump"
+    assessment: "👑 DRAG-FRAME"
+    action: "None needed — drag frame IS disclosure"
+    notes: "Donna ≠ Donald. Pun name + drag context = adequate framing"
+    
+  palm:
+    file: "examples/adventure-4/characters/animals/monkey-palm/CHARACTER.yml"
+    person: "N/A — fictional freed Monkey's Paw"
+    assessment: "📖 FICTIONAL"
+    action: "None needed"
+    
+  bumblewick:
+    file: "examples/adventure-4/characters/fictional/bumblewick-fantastipants/"
+    person: "N/A — fictional character"
+    assessment: "📖 FICTIONAL"
+    action: "None needed"
+    
+  # MYTHOLOGICAL (no robot needed)
+  
+  sun_wukong:
+    file: "examples/adventure-4/pub/guestbook/"
+    person: "N/A — mythological figure"
+    assessment: "📖 FICTIONAL"
+    action: "None needed — mythological, not real person"
+    
+  three_wise_monkeys:
+    file: "examples/adventure-4/characters/animals/monkey-palm/CHARACTER.yml"
+    person: "N/A — mythological figures"
+    assessment: "📖 FICTIONAL"
+    action: "None needed"
+    
+  # SELF-REPRESENTATION
+  
+  don_hopkins:
+    file: "examples/adventure-4/characters/real-people/don-hopkins/"
+    person: "Don Hopkins"
+    status: "living — THE USER"
+    current_framing: "Self-representation"
+    speaks_autonomously: true  # But as himself!
+    assessment: "🙋 SELF-REP"
+    action: "None needed — self-representation is sovereign"
+    notes: |
+      Don playing as Don = human-originated speech.
+      No 🤖 needed. This is the SELF consent level.
+      
+  # 99 BOTTLES SINGERS
+  
+  bottles_singers:
+    file: "examples/adventure-4/pub/rooms/room-5/99-bottles.yml"
+    people: "Don, Palm, Marieke, others"
+    assessment: "Mixed"
+    action: |
+      - Don = 🙋 SELF-REP (no robot)
+      - Palm = 📖 FICTIONAL (no robot)
+      - Marieke = needs assessment (fictional or real?)
+      - Others = assess individually
+      
+# PRIORITY ACTIONS
+
+priority_1_robot_needed:
+  - "Linus persona (when speaking)"
+  - "David Bowie (guestbook)"
+  - "Klaus Nomi (guestbook)"
+  - "Leigh Bowery (guestbook)"
+  - "Cheech & Chong (guestbook + Palm file)"
+  - "W.W. Jacobs (Palm file)"
+  - "Andy & Kristin Looney (Palm file)"
+  
+priority_2_quote_markers:
+  - "Seymour Papert (canonical_quotes → 💬)"
+  - "Dave Ungar (Room 8 quotes → 💬)"
+  
+priority_3_verify_frame:
+  - "Pee-wee Herman (🎭 actor frame vs 🤖 real person)"
+  - "Marieke (is she real or fictional?)"
+
+# IMPLEMENTATION PATTERN
+
+implementation_pattern:
+  
+  for_personas:
+    before: |
+      agent:
+        name: "Linus (Caffeinated & Elevated)"
+    after: |
+      agent:
+        name: "Linus (Caffeinated & Elevated)"
+        display_name: "🤖 Linus"
+        representation: simulated_real_person
+        
+  for_guestbook:
+    before: |
+      david_bowie:
+        inscription: |
+          D. Bowie
+          Ch-ch-ch-changes...
+    after: |
+      david_bowie:
+        display_name: "🤖 D. Bowie"
+        inscription: |
+          🤖 D. Bowie
+          Ch-ch-ch-changes...
+          
+  for_quotes:
+    before: |
+      on_debugging:
+        - "Debugging is the essence of intellectual activity."
+    after: |
+      on_debugging:
+        - text: "Debugging is the essence of intellectual activity."
+          emoji: 💬
+          source: "Mindstorms, 1980"

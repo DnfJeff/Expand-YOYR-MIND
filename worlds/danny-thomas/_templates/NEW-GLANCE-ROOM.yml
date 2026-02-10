@@ -1,0 +1,43 @@
+# Copy this file alongside your ROOM.yml and CARD.yml.
+# A GLANCE is a ~10-line summary for fast loading.
+#
+# The engine reads GLANCEs first (50 tokens each) to get a
+# quick picture of the whole world. It only loads the full
+# ROOM.yml and CARD.yml when a character enters or acts.
+#
+# Think of it as a thumbnail — just enough to decide
+# whether to load the full image.
+
+# One-line comment: what is this place in a sentence?
+glance:
+  id: ""
+  # Unique id, matching the CARD.yml id. kebab-case.
+
+  type: ""
+  # One of: social_hub, domestic, commercial, outdoor,
+  #         public, sacred, entertainment, transit
+
+  name: ""
+  # Display name. Same as ROOM.yml room.name.
+
+  emoji: ""
+  # 5 emoji that capture the essence. Each one should mean
+  # something specific — add inline comments explaining.
+  # Example: "✂️💈📢🪑😰"
+  #   ✂️ The scissors — the ostensible purpose
+  #   💈 The barber pole — the landmark
+  #   📢 The gossip — the real purpose
+  #   🪑 The chair — the confessional
+  #   😰 The anxiety — Floyd's hands shake when he gossips
+
+  function: ""
+  # What this place DOES in one sentence.
+  # Example: "Haircuts, gossip, the town's central nervous system"
+
+  vibe: ""
+  # The feel in one sentence.
+  # Example: "Information enters through the door and exits through every other door"
+
+  top_ads: []
+  # The 2-4 most important advertisements from CARD.yml.
+  # Example: [HAIRCUT, SPREAD_NEWS, HANG_OUT]

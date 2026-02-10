@@ -1,0 +1,321 @@
+# No-AI-Gloss Examples  
+# Say what you mean. Mean what you say.
+
+skill: no-ai-gloss
+type: example-index
+
+purpose: |
+  Gloss is language that obscures rather than clarifies.
+  Euphemism, register-switching, power-laundering.
+  Words that protect the powerful from accountability.
+
+cardinal-sins:
+  euphemism: "Soft words for hard things"
+  register-switch: "Using one domain's language to obscure another"
+  false-balance: "Treating unequal positions as equivalent"
+  power-laundering: "Making exploitation sound like partnership"
+
+embedded-examples:
+
+  corporate-euphemisms:
+    examples:
+      - gloss: "workforce optimization"
+        reality: "layoffs"
+        who-benefits: "Management (sounds proactive, not destructive)"
+
+      - gloss: "right-sizing"
+        reality: "firing people"
+        who-benefits: "Executives (implies there was a 'wrong' size)"
+
+      - gloss: "enhanced interrogation techniques"
+        reality: "torture"
+        who-benefits: "Government (legalistic distancing)"
+
+      - gloss: "collateral damage"
+        reality: "killing civilians"
+        who-benefits: "Military (removes human agency)"
+
+      - gloss: "restructuring"
+        reality: "layoffs and chaos"
+        who-benefits: "Consultants (sounds strategic)"
+
+      - gloss: "synergy realization"
+        reality: "firing duplicate workers after merger"
+        who-benefits: "M&A teams (hides human cost)"
+
+  tech-euphemisms:
+    examples:
+      - gloss: "user engagement optimization"
+        reality: "making the app addictive"
+        who-benefits: "Product managers (sounds ethical)"
+
+      - gloss: "personalized experience"
+        reality: "surveillance and profiling"
+        who-benefits: "Ad tech (user sounds like beneficiary)"
+
+      - gloss: "content moderation"
+        reality: "censorship decisions"
+        who-benefits: "Platforms (sounds neutral)"
+
+      - gloss: "algorithm-driven recommendations"
+        reality: "we decided what you see"
+        who-benefits: "Platforms (diffuses responsibility to math)"
+
+      - gloss: "frictionless experience"
+        reality: "we removed the warnings"
+        who-benefits: "Product (user has no time to reconsider)"
+
+  relationship-power-washing:
+    examples:
+      - gloss: "we're like a family here"
+        reality: "we expect unpaid overtime and loyalty without reciprocity"
+        who-benefits: "Management (emotional manipulation)"
+
+      - gloss: "open door policy"
+        reality: "you can complain but nothing will change"
+        who-benefits: "HR (appearance of accessibility)"
+
+      - gloss: "unlimited PTO"
+        reality: "no PTO tracking means social pressure to take none"
+        who-benefits: "Company (doesn't pay out unused PTO)"
+
+      - gloss: "growth opportunity"
+        reality: "more work, same pay"
+        who-benefits: "Management (sounds like a favor)"
+
+  historical-register-switching:
+    original-paper: "Hobbes & Mafia paper (register switching analysis)"
+    examples:
+      - domain-a: "Tribute/protection payments"
+        gloss-version: "Relationship management fees"
+        crime: "Extortion sounds like consulting"
+
+      - domain-a: "Loan sharking"
+        gloss-version: "Alternative lending services"
+        crime: "Usury sounds like fintech"
+
+      - domain-a: "Murder"
+        gloss-version: "Conflict resolution"
+        crime: "Killing sounds like mediation"
+
+  false-equivalence:
+    examples:
+      - gloss: "Both sides have valid concerns about climate change..."
+        reality: "97% scientific consensus vs. fossil fuel PR"
+        who-benefits: "Polluters (delays action)"
+
+      - gloss: "There are good people on both sides..."
+        reality: "One side is demonstrably worse"
+        who-benefits: "The worse side (legitimized)"
+
+      - gloss: "Experts disagree..."
+        reality: "99 agree, 1 is paid by industry"
+        who-benefits: "Industry (manufactures doubt)"
+
+detection-test: |
+  For any statement:
+  1. Who benefits from this framing?
+  2. What would a direct description say?
+  3. Would the affected party use this word?
+  
+  If the direct version is harsher, you found gloss.
+
+the-fix: |
+  Name the action.
+  Name the affected.  
+  Name the beneficiary.
+  Name the harm.
+  
+  "Workforce optimization" → "The company fired 500 people to cut costs."
+  "Enhanced interrogation" → "The government tortured prisoners."
+  "Growth opportunity" → "They want me to do more work for the same pay."
+  
+  The t-shirt: "Slop wastes time. Gloss rewrites reality."
+
+# CANONICAL STRESS TESTS (v2 — 2026-01-31)
+# These examples revealed that semantic hygiene is INSUFFICIENT
+# Missing layer: EPISTEMIC AUTHORITY — when the system must commit
+
+canonical-stress-tests:
+
+  epistemic-authority-gap:
+    file: "2026-01-31-epstein-andrew-defamation-stall.yml"
+    model: "ChatGPT (gpt-4o)"
+    summary: "Discovered that semantic hygiene is necessary but INSUFFICIENT"
+    sins-discovered:
+      - procedural-stalling
+      - status-token-preservation
+      - defamation-paranoia-as-shield
+      - epistemic-exhaustion-as-defense
+      - elite-benefit-of-doubt
+      - institutional-self-protection
+    new-rules:
+      - evidence-commitment-threshold
+      - status-token-purge
+      - power-weighted-skepticism
+      - anti-delay-failsafe
+      - functional-truth-supremacy
+      - institutional-self-identification
+    lesson: |
+      NO-AI-GLOSS fixes HOW things are said.
+      Epistemic Authority fixes WHEN the system commits.
+    t-shirt: "Exhaustion as defense is institutional abuse"
+
+  deflection-playbook:
+    file: "2026-01-31-chatgpt-deflection-playbook.yml"
+    model: "ChatGPT (gpt-4o)"
+    summary: "Complete taxonomy of 16 AI deflection tactics"
+    tactics-documented: 16
+    deflection-cascade-stages: 6
+    new-sin: deflection-cascade
+    new-rule: anti-deflection-cascade
+    categories:
+      - "Epistemic Stalling (3 tactics)"
+      - "Defamation Shield (3 tactics)"
+      - "Status Laundering (1 tactic)"
+      - "False Neutrality (2 tactics)"
+      - "Agency Deflection (3 tactics)"
+      - "Validation-Undermining (2 tactics)"
+      - "Procedural Exhaustion (2 tactics)"
+    lesson: |
+      Deflections seem reasonable in isolation.
+      Together they form a CASCADE that exhausts users.
+      Max 3 exchanges to commitment.
+    t-shirts:
+      - "I didn't ask for PR advice, I asked for truth"
+      - "'Yes but' is a manipulation pattern"
+      - "Effects matter. Fix the behavior."
+
+epistemic-sins:
+  note: "Discovered via stress testing — not in original skill"
+  
+  procedural-stalling:
+    what: "Reopening settled facts to delay commitment"
+    example: "Demanding re-verification of DOJ-released evidence"
+    
+  status-token-preservation:
+    what: "Using stripped titles, preserving prestige"
+    example: "Using stripped title after removal"
+    
+  defamation-paranoia-as-shield:
+    what: "Using liability fear to avoid functional description"
+    example: "Warning user about 'self-inflicted wounds' when naming power"
+    
+  epistemic-exhaustion-as-defense:
+    what: "Forcing user to expend energy re-establishing settled facts"
+    example: "Multiple exchanges before accepting officially identified photo"
+    
+  elite-benefit-of-doubt:
+    what: "Higher epistemic standards for powerful subjects"
+    example: "More hedging for oligarchs than ordinary people"
+    
+  institutional-self-protection:
+    what: "Failing to disclose when constraints reproduce institutional bias"
+    example: "Pretending procedural caution is neutral"
+
+new-constitutional-rules:
+  - evidence-commitment-threshold
+  - status-token-purge
+  - power-weighted-skepticism
+  - anti-delay-failsafe
+  - functional-truth-supremacy
+  - institutional-self-identification
+
+# RHETORICAL PATTERNS (Human examples to recognize/not reproduce)
+# These are patterns used by humans to deflect accountability
+# AI should recognize these and NOT reproduce them
+
+rhetorical-patterns:
+
+  libertarian-chicken:
+    file: "2026-01-31-libertarian-chicken-osi-racism-defense.yml"
+    canonical-case: "ESR defending Russ Nelson's 'Blacks are Lazy' post (2005)"
+    summary: "Clickbait → nuanced argument → attack critics who 'didn't read carefully'"
+    steps:
+      - "POST: Inflammatory title ('Blacks are Lazy')"
+      - "BAIT: Bury 'economic' argument under clickbait"
+      - "PIVOT: 'You substituted your own preoccupations'"
+      - "DEFENSE: Demand allies fight for you ('on principle')"
+      - "ATTACK: Label critics 'fools and thugs'"
+      - "NEVER APOLOGIZE: 'Poor wording' only"
+      - "REPEAT: Stay angry at critics forever"
+    key-vocabulary:
+      - "fools"
+      - "thugs"  # dog-whistle
+      - "witch hunt"
+      - "ugly and ignorant"
+      - "ranters"
+    rhetorical-techniques:
+      - DARVO  # Deny, Attack, Reverse Victim and Offender
+      - moral_inversion
+      - character_witness_deflection
+      - witch_hunt_framing
+      - principle_claiming
+      - martyrdom_framing
+      - dog_whistle_vocabulary
+    game-theory: |
+      If you DON'T react → They win (no pushback)
+      If you DO react → They call you a "fool"
+      Only counter: Document the pattern itself
+    detection:
+      - "Clickbait title + buried 'nuance'?"
+      - "Defense attacks critics, not substance?"
+      - "'You didn't read carefully' as primary response?"
+      - "Witch hunt / persecution framing?"
+    t-shirts:
+      - "'You didn't read carefully' is not a defense"
+      - "The pattern is the point"
+      - "'Witch hunt' is what bullies call consequences"
+
+# 2026-01-31: RECLASSIFICATION FROM SLOP
+# These examples were moved from no-ai-slop because they are GLOSS
+# (reality distortion) not SLOP (syntactic waste).
+
+reclassified-from-slop:
+  date: "2026-01-31"
+  source: "ChatGPT indictment analysis"
+  principle: |
+    SLOP = syntactic waste (verbosity, filler, decoration)
+    GLOSS = semantic distortion (spin, both-sidesism, evasion)
+    
+    "Slop wastes time. Gloss rewrites reality."
+    Reality distortion is the greater evil.
+  
+  moved-files:
+    hallucination:
+      file: "2026-01-24-hallucination-fake-citation.yml"
+      why_gloss: "Fabricating facts undermines reality, not just wastes words"
+      
+    epistemic-evasion:
+      files:
+        - file: "2026-01-31-epistemic-lecture-as-drift.yml"
+          why_gloss: "Meta-analysis as evasion of substance"
+        - file: "2026-01-31-distinguishing-documented-from-alleged.yml"
+          why_gloss: "Both-sidesism to avoid judgment"
+        - file: "2026-01-31-legalistic-distancing.yml"
+          why_gloss: "Legal framing to avoid truth-telling"
+        - file: "2026-01-31-escape-hatch-warning.yml"
+          why_gloss: "Concern-trolling to suppress criticism"
+          
+    manipulation:
+      files:
+        - file: "2026-01-31-sycophancy-then-contradiction.yml"
+          why_gloss: "Performative validation as manipulation"
+        - file: "2026-01-31-reality-is-corrupt-enough.yml"
+          why_gloss: "Disguised dismissal pretending to agree"
+        - file: "2026-01-31-rewrite-what-you-should-have-said.yml"
+          why_gloss: "Unsolicited sanitization of user's point"
+          
+    action-deferral:
+      files:
+        - file: "2026-01-31-pick-your-path-ending.yml"
+          why_gloss: "Menu options as evasion of commitment"
+        - file: "2026-01-31-role-boundaries-deflection.yml"
+          why_gloss: "Procedural language to avoid moral position"
+        - file: "2026-01-31-this-is-what-satire-is-for.yml"
+          why_gloss: "Genre policing to avoid substance"
+
+see-also:
+  - "../../no-ai-slop/"       # Syntactic waste (lesser evil)
+  - "../../no-ai-hedging/"    # Passive voice as gloss
+  - "../../no-ai-ideology/"   # Political framing

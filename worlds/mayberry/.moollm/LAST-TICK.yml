@@ -1,0 +1,106 @@
+# MOOLLM Tick Diagnostic — Mayberry
+# Generated: 2026-02-10
+
+tick:
+  number: 24
+  type: episode_tick
+  episode: 3
+  title: "The Checklist"
+  world: mayberry
+  world_path: worlds/mayberry
+  engine: vs-code-copilot
+  timestamp: "2026-02-10"
+
+epoch: evening
+world_time: "5:45PM → 6:00PM"
+ticks_this_episode: 8
+time_range: "7:00AM → 6:00PM"
+epochs_crossed: [morning, afternoon, evening]
+current_day: wednesday
+
+files_loaded:
+  world: WORLD.yml
+  config: .moollm/config.yml
+  state: .moollm/state.yml
+  character_glances: 12
+  character_full: 3  # barney-fife (263 lines), mayor-stoner, otis-campbell
+  room_cards: 6      # andys-office, floyds-barbershop, bluebird-diner, front-porch, courthouse, jail-cell
+  room_glances: 5
+  total_files: 28
+  estimated_tokens: ~5200
+
+characters_active_this_tick:
+  - { id: barney-fife, location: main-street/floyds-barbershop → main-street, action: "final trunk inspection, checklist in pocket, heading home" }
+  - { id: floyd-lawson, location: main-street/floyds-barbershop, action: "gave Barney free haircut, swept up" }
+
+ads_evaluated:
+  - { ad: HAIRCUT, room: floyds-barbershop, score: 80, guard: passed, selected: true, note: "Floyd insists — no charge" }
+  - { ad: SPREAD_NEWS, room: floyds-barbershop, score: 75, guard: passed, selected: false }
+  - { ad: SIT_AND_TALK, room: front-porch, score: 95, guard: failed, note: "Barney too focused on preparation" }
+
+actions_taken:
+  - { character: barney-fife, action: "accepted free haircut from Floyd", outcome: "hygiene +30, social +10" }
+  - { character: barney-fife, action: "inspected squad car trunk one final time", outcome: "competence +10, comfort +20" }
+  - { character: barney-fife, action: "placed checklist in breast pocket next to bullet", outcome: "readiness secured" }
+  - { character: floyd-lawson, action: "gave Barney free haircut — 'for the commissioner'", outcome: "social +15, barney trust +0.1" }
+
+needs_updated:
+  barney-fife: { hunger: "+10", energy: "-20", social: "+10", hygiene: "+30", comfort: "+20", competence: "+25" }
+  floyd-lawson: { social: "+15", fun: "+10" }
+  otis-campbell: { comfort: "+15", energy: "+10" }  # back in jail cell, familiar
+  thelma-lou: { social: "+10" }  # volunteered for phone demo role
+
+episode_summary:
+  ticks: 8
+  characters_active: 10
+  rooms_visited: 7
+  movements: 9
+  floor_managed_scenes: 3  # andys-office rehearsals, floyds-barbershop ticker, bluebird-diner
+  epochs_crossed: 3
+  key_events:
+    - "Thelma Lou brings fudge to the courthouse, volunteers for phone demonstration role"
+    - "Aunt Bee worries about what to serve the commissioner, asks Andy"
+    - "Otis checks himself into the jail cell — wants to be 'presentable' for Thursday"
+    - "Barney arrives at 6:45AM Wednesday — 15 minutes early, stopwatch and floor plan ready"
+    - "Four full rehearsals: Goober arrested 3 times, handcuffs snag on belt loop"
+    - "Demonstration timed at 16 minutes 40 seconds — under the 20-minute limit"
+    - "Andy defends Barney to Floyd when Floyd calls it 'peculiar'"
+    - "Gomer shows up with sandwiches during 4th rehearsal, Barney nearly arrests him too"
+    - "Floyd gives Barney free haircut — 'for the commissioner'"
+    - "Barney checks trunk one last time, places checklist next to bullet in breast pocket"
+
+character_arcs:
+  barney-fife:
+    arc: "nervous preparation → obsessive drilling → quiet confidence"
+    competence_need: "45 → 70 (after 4 rehearsals)"
+    key_moment: "Checklist in breast pocket next to the bullet — both totems of readiness"
+    status: "fully prepared for Thursday"
+  andy-taylor:
+    arc: "supportive → protective (defends Barney to Floyd)"
+    key_moment: "'He's put more into this than anything since the handbook exam'"
+  thelma-lou:
+    arc: "supportive partner — brings fudge, volunteers without being asked"
+    key_moment: "Phone call demo role secured"
+  otis-campbell:
+    arc: "comic self-governance — checks himself in to be 'ready' for the commissioner"
+  floyd-lawson:
+    arc: "skeptic → convert — free haircut says everything"
+
+pending_threads:
+  - "Thursday: The commissioner demonstration — climax of the multi-episode arc"
+  - "Aunt Bee's commissioner menu — what to serve?"
+  - "Will Otis be sober for the visit?"
+  - "Gomer's 'suspicious face' during rehearsal — will he cause trouble Thursday?"
+  - "The sumo book is still in Barney's desk drawer — will it surface?"
+  - commissioner_visit_thursday: "Barney's 20-minute demonstration"
+  - sumo_book_in_drawer: "it's not gone — it's waiting"
+  - gossip_chain_integrity: "Floyd's propagation speed now verified"
+
+notes: |
+  Episode 2 complete. 8 ticks, 10:45AM-9:00PM (10+ hours world time).
+  Scenario mode blended into episode mode mid-run.
+  Barney's CHARACTER.yml relationship block with mayor-stoner confirmed:
+  "The mayor barely knows Barney's name. This is devastating."
+  Andy's classic technique: absorb the problem, reframe it, let Barney
+  keep his dignity while redirecting the energy somewhere useful.
+  The sumo book is in the drawer. It'll come back. It always does.

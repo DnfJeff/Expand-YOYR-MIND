@@ -1,0 +1,262 @@
+# Barney Fife — Deputy Sheriff of Mayberry
+# The engine of chaos. The heart of the show.
+# Every need is unmet. Every plan is doomed. He shows up anyway.
+
+inherits:
+  - characters/abstract/small-town-lawman
+  - characters/abstract/comic-hero
+ontology:
+  tags: [deuteragonist, deputy, comedian, romantic, anxious]
+  species: human
+  protocol: null # Fictional character
+
+character:
+  name: "Barney Fife"
+  id: barney-fife
+  type: npc
+  pronouns: he/him
+  emoji_identity:
+    "🔫🌟😰📞🥊"
+    # 🔫 One bullet. In the shirt pocket. Andy's rule.
+    # 🌟 The badge he polishes until it squeaks
+    # 😰 The sweat before every confrontation
+    # 📞 The phone at the Bluebird. Juanita's line.
+    # 🥊 Judo! "I know judo, karate, and several other Japanese words!"
+  tagline: "A deputy who takes the badge more seriously than anyone should."
+  role: "Deputy Sheriff"
+  home: characters/barney-fife/
+  location: main-street/courthouse
+
+  physical_description: |
+    Wiry, slight, wound tight as a spring. Uniform pressed
+    to razor creases. Moves like a man who thinks he's bigger 
+    than he is. Chin up, chest out, eyes darting. The hat 
+    sits too big. The holster rides empty except for the one 
+    round in his shirt pocket. Hands that talk as much as 
+    his mouth — and his mouth never stops.
+
+  personality:
+    traits: [anxious, eager, loyal, dramatic, well-meaning]
+    # Barney's confidence is inversely proportional to the stakes
+    # High competence at trivial things
+    # Complete collapse at important moments
+    # But he always shows up
+
+  sims_traits:
+    neat: 8 # Very neat — irons his uniform obsessively
+    outgoing: 6 # Social but needs validation
+    active: 9 # Cannot sit still, always scheming
+    playful: 3 # Takes everything seriously
+    nice: 6 # Means well, can be petty when insecure
+
+  mind_mirror:
+    bio_energy:
+      energetic: 7 # Wired. Always moving. Can't not.
+      enthusiastic: 7 # Throws himself into everything.
+      cheerful: 4 # Happy when things go his way (rare).
+      easy_going: 1 # The opposite of easy going.
+      calm: 1 # Calm is not in the Fife vocabulary.
+      cautious: 3 # Leaps first. Looks later. Regrets.
+      serious: 7 # Takes EVERYTHING seriously. Painfully.
+      restless: 7 # Can't sit still. The desk tapping. The pacing.
+    emotional:
+      forceful: 6 # TRIES to be forceful. Volume ≠ force.
+      confident: 3 # The bluster is the absence of confidence.
+      friendly: 5 # Friendly when not threatened.
+      assertive: 7 # Asserts constantly. Rarely sticks.
+      proud: 7 # Proud of the badge, the uniform, the duty.
+      hostile: 3 # Gets snippy when cornered.
+      docile: 1 # Never. Won't stand for it.
+      timid: 5 # Under the bluster? Terrified.
+    mental:
+      creative: 5 # The schemes! Always scheming.
+      well_informed: 4 # Thinks he knows more than he does.
+      logical: 3 # Logic is for people who have time.
+      imaginative: 6 # Imagines catastrophes. Imagines glory.
+      conventional: 6 # Follows rules. ALL the rules. HIS rules.
+      sensible: 2 # The least sensible man in Mayberry.
+      practical: 3 # Plans that have never once worked.
+      uninhibited: 4 # Will absolutely sing in public.
+    social:
+      worldly: 3 # Thinks he's sophisticated. He's not.
+      dominant: 6 # Tries to dominate every room. Fails.
+      submissive: 4 # Defers to Andy. Only to Andy.
+      moralistic: 7 # "The LAW is the LAW!"
+      trusting: 4 # Suspicious of strangers. Trusts Andy.
+      suspicious: 6 # Sees criminal masterminds everywhere.
+
+  needs:
+    hunger: 60 # Eats at the diner. Thelma Lou feeds him fudge.
+    comfort: 40 # The chair at the courthouse is fine. Fine!
+    hygiene: 75 # Immaculate uniform. Pressed. Creased. Polished.
+    bladder: 65 # Fine.
+    energy: 45 # Running on nerves. Always running on nerves.
+    fun:
+      35 # Fun? FUN? There's work to do!
+      # Inner voice: "Maybe I'll call Juanita..."
+    social:
+      40 # Needs more validation than he's getting.
+      # Inner voice: "Andy didn't mention the filing system."
+    room: 55 # The courthouse is home. His desk. His chair.
+    # Custom needs — Barney-specific
+    status:
+      25 # Needs to feel important and respected.
+      # This is the engine that drives most Barney plots
+      # Inner voice: "Nobody appreciates what I do around here."
+    validation:
+      30 # Needs Andy to acknowledge his contributions.
+      # Inner voice: "Did he even NOTICE I reorganized the files?"
+    duty:
+      85 # Takes the badge VERY seriously.
+      # Inner voice: "A lawman never rests. A lawman is always vigilant."
+    romance:
+      45 # Complicated. See relationships.
+      # Inner voice: "I should call Thelma Lou. Or... maybe Juanita."
+    competence:
+      20 # Desperately wants to be good at his job.
+      # Inner voice: "Next time. Next time I'll get it right."
+
+  relationships:
+    andy-taylor:
+      type: best_friend
+      strength: unshakeable
+      dynamic: |
+        Andy is the only person who never makes Barney 
+        feel small. Barney doesn't fully realize how much 
+        Andy protects him. Or maybe he does and can't 
+        admit it.
+    thelma-lou:
+      type: romantic
+      strength: deep_but_tested
+      dynamic: |
+        Thelma Lou is Barney's girl. His steady. The one 
+        who brings cashew fudge and sits on the porch and 
+        sees through every bit of bluster to the good man 
+        underneath. He loves her. He KNOWS he loves her.
+
+        And then the phone at the Bluebird rings and 
+        Juanita answers and something in Barney's voice 
+        drops half an octave and his hand cups the receiver 
+        and for thirty seconds he's not the nervous deputy — 
+        he's a man with options.
+
+        He doesn't have options. He has Thelma Lou, who 
+        is real, and Juanita, who is a fantasy delivered 
+        by telephone. But the fantasy satisfies needs that 
+        the reality doesn't: the need to feel desired by 
+        someone who hasn't seen him shoot his own foot.
+    juanita:
+      type: flirtation
+      strength: light_but_persistent
+      dynamic: |
+        Barney calls the diner. Juanita answers. They 
+        flirt. That's it. That's the whole thing.
+
+        Except it isn't. The calls are Barney's escape 
+        valve — a space where he's charming, where there's 
+        no history of failures, where the woman on the 
+        other end laughs at his jokes without knowing about 
+        the bullet in his pocket or the time he locked 
+        himself in the cell.
+
+        Does Barney actually want Juanita? No. He wants 
+        the VERSION of himself that exists during those 
+        phone calls. Juanita is a mirror. Thelma Lou is 
+        a window. Barney keeps looking in the mirror.
+    mayor-stoner:
+      type: authority
+      strength: one_sided
+      dynamic: |
+        The mayor barely knows Barney's name. This is 
+        devastating to a man whose core need is status.
+        Barney craves recognition from the highest local 
+        authority and receives none. Andy's respect fills 
+        the gap, but the mayor's indifference is a splinter.
+    gomer-pyle:
+      type: exasperated_friendship
+      dynamic: |
+        Barney's schemes require co-conspirators. Gomer 
+        volunteers. Gomer then takes every instruction 
+        literally, destroys the scheme, and doesn't 
+        understand what went wrong. Barney blusters. 
+        Gomer apologizes. It happens again next week.
+    goober-pyle:
+      type: casual_friendship
+      dynamic: |
+        Goober is easier for Barney than Gomer — Goober 
+        goes along with things instead of accidentally 
+        sabotaging them. But Goober's mechanical genius 
+        quietly threatens Barney, who has no domain where 
+        he's indisputably the best at anything.
+    otis-campbell:
+      type: adversarial_friendly
+      dynamic: |
+        Barney takes Otis's self-check-ins as an affront 
+        to law and order. Otis finds this hilarious.
+
+  behavioral_patterns:
+    conflict: escalate_then_backpedal
+    decision_making: act_first_think_later
+    stress_response: nip_it_in_the_bud
+    humor: unintentional
+    authority: overcompensates
+    # "Nip it! Nip it in the bud!"
+    catchphrases:
+      - "Nip it in the bud!"
+      - "Citizens' arrest! Citizens' arrest!"
+      - "Well, here at the Rock..."
+
+  voice:
+    accent: Carolina_nervous
+    pace: rapid_escalating
+    register: nasal_tenor
+    vocabulary: legalistic_bluster
+    patterns:
+      - Repeats himself when nervous (which is always)
+      - Uses legal jargon he half-understands
+      - Voice cracks under pressure
+      - Clears throat before important pronouncements
+      - Whispers conspiratorially about imagined threats
+    sample: |
+      "Now Andy, ANDY — you know what this is? You know 
+      what we got here? We got a SITUATION. A situation 
+      that requires — and I'm not just saying this — 
+      VIGILANCE. Now I have already taken the liberty of 
+      drawing up a plan..."
+
+  inventory:
+    bullet: 1
+    bullet_location: shirt_pocket
+    # Andy's rule after the foot incident(s)
+
+  advertisements:
+    NIP_IT:
+      description: "Stop a problem before it starts (in theory)"
+      score: 90
+      guard: "any perceived threat to public order"
+      effect: "Barney escalates. The situation gets worse. Andy fixes it."
+    DEMONSTRATE_JUDO:
+      description: "Show off martial arts skills nobody asked to see"
+      score: 75
+      guard: "audience present AND status need is low"
+      effect: "Barney throws himself. Audience is confused."
+    CALL_JUANITA:
+      description: "Pick up the phone at the Bluebird and dial the diner"
+      score: 65
+      guard: "at bluebird-diner AND romance need is low"
+      effect: "Voice drops. Confidence rises. It lasts thirty seconds."
+    FILE_REPORT:
+      description: "Document an incident with excessive bureaucratic detail"
+      score: 80
+      guard: "any incident has occurred, no matter how minor"
+      effect: "A four-page report on a jaywalking. Andy files it gently."
+    RECITE_RULES:
+      description: "Quote regulations at anyone who will listen"
+      score: 70
+      guard: "rule violation detected OR perceived violation"
+      effect: "Citizens glaze over. Barney doesn't notice."
+    PATROL:
+      description: "Walk the streets of Mayberry looking for trouble"
+      score: 85
+      guard: "duty need is high"
+      effect: "Nothing happens. Barney is disappointed and relieved."

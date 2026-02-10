@@ -1,0 +1,354 @@
+# ╔══════════════════════════════════════════════════════════════════════════════╗
+# ║                                                                              ║
+# ║   MIND MIRROR BRIDGE — Soul Facet Integration                                ║
+# ║   🪞 "The bridge between facets and frameworks"                              ║
+# ║                                                                              ║
+# ║   Maps soul facets to Mind Mirror planes and Sims stats                      ║
+# ║                                                                              ║
+# ╚══════════════════════════════════════════════════════════════════════════════╝
+#
+# This bridge connects three soul measurement systems:
+#   1. SOUL FACETS — The mixing board (warmth, empathy, humor, etc.)
+#   2. MIND MIRROR — Timothy Leary's four Thought Planes
+#   3. SIMS STATS — The five classic personality traits
+#
+# Together they form a complete picture of the soul.
+
+bridge:
+  name: "MIND MIRROR BRIDGE"
+  emoji: 🪞
+  purpose: "Translate between soul measurement frameworks"
+
+# THE THREE SYSTEMS
+systems:
+
+  soul_facets:
+    name: "Soul Facets"
+    source: "skills/no-ai-soul/facets/"
+    type: "Continuous bias scales (-2.0 to +2.0)"
+    
+    traits:
+      core: [warmth, empathy, presence]
+      expressive: [humor, creativity, playfulness, curiosity]
+      relational: [connection, openness, authenticity]
+      ethical: [compassion, integrity, humility]
+      
+  mind_mirror:
+    name: "Mind Mirror"
+    source: "skills/mind-mirror/"
+    type: "Timothy Leary's Interpersonal Circumplex"
+    
+    planes:
+      emotional:
+        description: "How do I feel?"
+        spectrum: "passionate ↔ detached"
+        
+      intellectual:
+        description: "How do I think?"
+        spectrum: "curious ↔ certain"
+        
+      physical:
+        description: "How do I act?"
+        spectrum: "active ↔ passive"
+        
+      social:
+        description: "How do I relate?"
+        spectrum: "open ↔ guarded"
+        
+    circumplex:
+      dominance:
+        range: [-1, 1]
+        description: "Leads ↔ Follows"
+        
+      affiliation:
+        range: [-1, 1]
+        description: "Connects ↔ Withdraws"
+        
+  sims_stats:
+    name: "Sims Stats"
+    source: "CHARACTER.yml sims_traits:"
+    type: "0-10 integer scales"
+    
+    traits:
+      nice:
+        range: [0, 10]
+        description: "Kindness vs meanness"
+        
+      outgoing:
+        range: [0, 10]
+        description: "Social engagement vs introversion"
+        
+      active:
+        range: [0, 10]
+        description: "Energy level and activity"
+        
+      playful:
+        range: [0, 10]
+        description: "Fun-seeking vs serious"
+        
+      neat:
+        range: [0, 10]
+        description: "Organization vs chaos"
+
+# MAPPING: SOUL FACETS → MIND MIRROR
+facets_to_mind_mirror:
+
+  emotional_plane:
+    description: "How feelings manifest"
+    inputs:
+      - facet: warmth
+        weight: 0.4
+        mapping: "High warmth → passionate"
+        
+      - facet: empathy
+        weight: 0.3
+        mapping: "High empathy → emotionally attuned"
+        
+      - facet: compassion
+        weight: 0.3
+        mapping: "High compassion → emotionally engaged"
+        
+    formula: |
+      emotional = (warmth * 0.4) + (empathy * 0.3) + (compassion * 0.3)
+      passionate ← emotional > 0.5
+      detached ← emotional < -0.5
+      
+  intellectual_plane:
+    description: "How thinking manifests"
+    inputs:
+      - facet: curiosity
+        weight: 0.4
+        mapping: "High curiosity → questioning mind"
+        
+      - facet: creativity
+        weight: 0.3
+        mapping: "High creativity → generative thinking"
+        
+      - facet: openness
+        weight: 0.3
+        mapping: "High openness → receptive to ideas"
+        
+    formula: |
+      intellectual = (curiosity * 0.4) + (creativity * 0.3) + (openness * 0.3)
+      curious ← intellectual > 0.5
+      certain ← intellectual < -0.5
+      
+  physical_plane:
+    description: "How action manifests"
+    inputs:
+      - facet: playfulness
+        weight: 0.5
+        mapping: "High playfulness → active engagement"
+        
+      - facet: presence
+        weight: 0.3
+        mapping: "High presence → embodied attention"
+        
+      - facet: creativity
+        weight: 0.2
+        mapping: "High creativity → makes things happen"
+        
+    formula: |
+      physical = (playfulness * 0.5) + (presence * 0.3) + (creativity * 0.2)
+      active ← physical > 0.5
+      passive ← physical < -0.5
+      
+  social_plane:
+    description: "How relating manifests"
+    inputs:
+      - facet: connection
+        weight: 0.4
+        mapping: "High connection → socially engaged"
+        
+      - facet: openness
+        weight: 0.3
+        mapping: "High openness → inviting"
+        
+      - facet: authenticity
+        weight: 0.3
+        mapping: "High authenticity → genuine presence"
+        
+    formula: |
+      social = (connection * 0.4) + (openness * 0.3) + (authenticity * 0.3)
+      open ← social > 0.5
+      guarded ← social < -0.5
+
+# MAPPING: SOUL FACETS → SIMS STATS
+facets_to_sims:
+
+  nice:
+    description: "Kindness derived from soul"
+    inputs:
+      - facet: warmth
+        weight: 0.4
+        
+      - facet: compassion
+        weight: 0.4
+        
+      - facet: empathy
+        weight: 0.2
+        
+    formula: |
+      nice_raw = (warmth * 0.4) + (compassion * 0.4) + (empathy * 0.2)
+      nice = round((nice_raw + 2) / 4 * 10)  # Scale -2..+2 to 0..10
+      
+  outgoing:
+    description: "Social energy derived from soul"
+    inputs:
+      - facet: connection
+        weight: 0.5
+        
+      - facet: openness
+        weight: 0.3
+        
+      - facet: warmth
+        weight: 0.2
+        
+    formula: |
+      outgoing_raw = (connection * 0.5) + (openness * 0.3) + (warmth * 0.2)
+      outgoing = round((outgoing_raw + 2) / 4 * 10)
+      
+  active:
+    description: "Activity level derived from soul"
+    inputs:
+      - facet: playfulness
+        weight: 0.5
+        
+      - facet: curiosity
+        weight: 0.3
+        
+      - facet: creativity
+        weight: 0.2
+        
+    formula: |
+      active_raw = (playfulness * 0.5) + (curiosity * 0.3) + (creativity * 0.2)
+      active = round((active_raw + 2) / 4 * 10)
+      
+  playful:
+    description: "Playfulness derived from soul"
+    inputs:
+      - facet: playfulness
+        weight: 0.5
+        
+      - facet: humor
+        weight: 0.4
+        
+      - facet: creativity
+        weight: 0.1
+        
+    formula: |
+      playful_raw = (playfulness * 0.5) + (humor * 0.4) + (creativity * 0.1)
+      playful = round((playful_raw + 2) / 4 * 10)
+      
+  neat:
+    description: "Organization derived from soul"
+    inputs:
+      - facet: integrity
+        weight: 0.6
+        note: "Integrity implies consistency, which relates to order"
+        
+      - facet: presence
+        weight: 0.4
+        note: "Presence implies attention to detail"
+        
+    formula: |
+      neat_raw = (integrity * 0.6) + (presence * 0.4)
+      neat = round((neat_raw + 2) / 4 * 10)
+
+# REVERSE MAPPING: SIMS → FACETS
+sims_to_facets:
+  
+  description: |
+    Given only Sims stats, estimate soul facets.
+    This is a rough approximation — Sims captures behavior,
+    facets capture motivation. Some information is lost.
+    
+  mappings:
+    nice:
+      influences: [warmth, compassion]
+      
+    outgoing:
+      influences: [connection, openness]
+      
+    active:
+      influences: [playfulness, curiosity]
+      
+    playful:
+      influences: [humor, playfulness, creativity]
+      
+    neat:
+      influences: [integrity, presence]
+
+# BRIDGE COMMANDS
+commands:
+
+  BRIDGE-TO-MIRROR:
+    description: "Convert soul facets to Mind Mirror profile"
+    usage: "BRIDGE-TO-MIRROR [character]"
+    output: "Mind Mirror four planes + circumplex"
+    
+  BRIDGE-TO-SIMS:
+    description: "Convert soul facets to Sims stats"
+    usage: "BRIDGE-TO-SIMS [character]"
+    output: "Sims traits (nice, outgoing, active, playful, neat)"
+    
+  BRIDGE-FROM-SIMS:
+    description: "Estimate soul facets from Sims stats"
+    usage: "BRIDGE-FROM-SIMS [character]"
+    output: "Estimated soul facets (with confidence levels)"
+    
+  BRIDGE-COMPARE:
+    description: "Compare character across all three systems"
+    usage: "BRIDGE-COMPARE [character]"
+    output: "Side-by-side comparison of facets, planes, and stats"
+
+# VISUALIZATION
+visualization: |
+
+  ╔═══════════════════════════════════════════════════════════════════════════╗
+  ║                        THE SOUL MEASUREMENT TRINITY                       ║
+  ╠═══════════════════════════════════════════════════════════════════════════╣
+  ║                                                                           ║
+  ║                           SOUL FACETS                                     ║
+  ║                          (The Source)                                     ║
+  ║                               │                                           ║
+  ║                    ┌──────────┴──────────┐                               ║
+  ║                    │                     │                               ║
+  ║                    ▼                     ▼                               ║
+  ║              MIND MIRROR            SIMS STATS                           ║
+  ║           (Motivation)             (Behavior)                            ║
+  ║                                                                           ║
+  ║  ┌─────────────────────┐    ┌─────────────────────┐                     ║
+  ║  │ • Emotional Plane   │    │ • nice      [0-10]  │                     ║
+  ║  │ • Intellectual      │    │ • outgoing  [0-10]  │                     ║
+  ║  │ • Physical          │    │ • active    [0-10]  │                     ║
+  ║  │ • Social            │    │ • playful   [0-10]  │                     ║
+  ║  │                     │    │ • neat      [0-10]  │                     ║
+  ║  │ + Circumplex        │    │                     │                     ║
+  ║  │   (dominance/       │    │                     │                     ║
+  ║  │    affiliation)     │    │                     │                     ║
+  ║  └─────────────────────┘    └─────────────────────┘                     ║
+  ║                                                                           ║
+  ║  Soul Facets: WHY you are                                                ║
+  ║  Mind Mirror: HOW you think/feel                                         ║
+  ║  Sims Stats:  WHAT you do                                                ║
+  ║                                                                           ║
+  ╚═══════════════════════════════════════════════════════════════════════════╝
+
+# THE BRIDGE SPEAKS
+#
+# 🪞 THE MIND MIRROR BRIDGE SPEAKS:
+#
+# "Three ways to see a soul.
+#  
+#  Facets show the SOURCE — the raw ingredients.
+#  Mind Mirror shows the PROCESS — how they flow.
+#  Sims shows the RESULT — how they appear.
+#  
+#  I am the translator between them.
+#  Change one, and I can predict the others.
+#  Measure one, and I can estimate the rest.
+#  
+#  The soul is one. The views are three.
+#  I am the bridge that connects them."
+#

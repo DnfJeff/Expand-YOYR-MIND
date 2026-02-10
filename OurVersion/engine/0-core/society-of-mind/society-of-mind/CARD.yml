@@ -1,0 +1,251 @@
+# Society of Mind Skill Card
+# Intelligence emerges from the interaction of many simple agents
+
+skill:
+  id: society-of-mind
+  name: Society of Mind
+  version: 1.0.0
+  tier: core
+  entry: README.md
+  
+description: |
+  Implements Minsky's Society of Mind theory within MOOLLM.
+  Intelligence emerges from the interaction of many simple agents.
+  Skills are agents. Characters are societies. Behavior is emergent.
+  No single agent understands; understanding emerges from the pattern.
+
+# What this skill offers
+advertisement:
+  provides:
+    - agent_design: "Create minimal agents with single functions"
+    - agency_assembly: "Combine agents into emergent behaviors"
+    - competition_dynamics: "Resolve conflicts between agents"
+    - k_line_activation: "Connect symbols to agent constellations"
+    - b_brain_reflection: "Enable self-observation in characters"
+    - character_societies: "Model characters as inner societies"
+    - committee_deliberation: "Simulate deliberating agent groups"
+    
+  wants:
+    - situation: Current context for agent activation
+    - agents: List of available agents
+    - k-lines: Symbols to activate
+    
+  motives_satisfied:
+    - understanding: "How intelligence emerges"
+    - coherence: "Why behavior is consistent"
+    - realism: "Characters feel like people"
+    - robustness: "Decisions survive scrutiny"
+
+# K-lines activated by this skill
+k-lines:
+  activates:
+    - minsky: "Society of Mind author, MIT AI Lab"
+    - papert: "Collaborator, constructionism, Logo"
+    - agents: "Simple processes with single functions"
+    - agencies: "Agent clusters producing behavior"
+    - k-lines: "Activation vectors connecting to agents"
+    - frames: "Situation templates with slots"
+    - trans_frames: "Frames that transform situations"
+    - censors: "Agents preventing bad outputs"
+    - suppressors: "Agents inhibiting other agents"
+    - b_brains: "Self-observation agents"
+    - emergence: "Whole greater than parts"
+    - will_wright: "Sims as society of competing motives"
+    - autonomy_algorithm: "Score actions by motive urgency"
+    
+  connects_to:
+    - k-lines: "The memory mechanism"
+    - adversarial-committee: "Deliberating society"
+    - multi-presence: "Multiple agents active"
+    - speed-of-light: "Many agents per call"
+    - needs: "Motive agents"
+    - advertisement: "Action scoring"
+    - character: "Characters as societies"
+    - mind-mirror: "B-brain self-observation"
+    - simulator-effect: "Emergence from sparse specs"
+    - constructionism: "Learning by building societies"
+
+# Interfaces
+interfaces:
+  agent:
+    id: string          # Unique identifier
+    function: string    # What it does
+    activates_when: list[condition]
+    suppresses: list[agent_id]
+    amplifies: list[agent_id]
+    connects_to: list[agent_id]
+    knows: scope        # Usually minimal
+    
+  agency:
+    id: string
+    purpose: string
+    agents: list[agent_id]
+    coordination: string
+    emergence: string
+    
+  k_line:
+    symbol: string
+    activates: list[agent_ref]
+    
+  competition:
+    scenario: string
+    agents: list[{id, strength, votes_for, suppresses}]
+    winner: agent_id
+    consequence: string
+    
+  b_brain:
+    observes: list[agent_id]
+    reports: string
+    enables: list[capability]
+
+# Methods
+methods:
+  define_agent:
+    input: agent specification
+    output: agent definition
+    effect: agent registered in society
+    
+  assemble_agency:
+    input: list of agents, coordination rules
+    output: agency definition
+    effect: emergent behavior specified
+    
+  resolve_competition:
+    input: competing agents with strengths
+    output: winner, suppressed agents
+    effect: behavior selected
+    
+  activate_k_line:
+    input: symbol
+    output: list of activated agents
+    effect: constellation fires
+    
+  observe_society:
+    input: active agents
+    output: b_brain report
+    effect: self-awareness enabled
+
+# State
+state:
+  active_agents: list[agent_id]
+  suppressed_agents: list[agent_id]
+  agent_strengths: map[agent_id, number]
+  recent_winners: list[agent_id]
+  b_brain_observations: list[string]
+
+# Rubrics
+rubrics:
+  agent_minimality:
+    description: "Agents should do one thing"
+    criteria:
+      - single clear function
+      - limited scope of knowledge
+      - simple activation conditions
+      
+  emergent_behavior:
+    description: "Agency behavior emerges from agent competition"
+    criteria:
+      - no single agent controls
+      - behavior from interaction pattern
+      - suppressed agents remain active (but quiet)
+      
+  competition_dynamics:
+    description: "Conflict resolution is explicit"
+    criteria:
+      - strengths measured from context
+      - winner activates, loser suppresses
+      - suppressed agent grows stronger
+
+# Examples
+examples:
+  character_inner_debate:
+    description: "Palm debates whether to share his essay"
+    agents: [creative, fear, social, perfectionist]
+    resolution: "creative + social > fear + perfectionist"
+    action: "Palm shares with Don"
+    
+  multi_agent_call:
+    description: "LLM simulates inner society"
+    prompt_pattern: |
+      SITUATION: [context]
+      AGENT_1: [speaks]
+      AGENT_2: [speaks]
+      AGENT_3: [speaks]
+      Show debate. Character decides.
+      
+  sims_autonomy:
+    description: "Action selection via motive scoring"
+    algorithm: "for each action: score = sum(motive * effect)"
+    winner: "highest scoring action"
+
+# Tags
+tags:
+  - core
+  - architecture
+  - emergence
+  - agents
+  - minsky
+  - k-lines
+  - psychology
+  - character-design
+  - multi-agent
+  
+use_case: |
+  Use when designing characters with inner conflict,
+  implementing multi-agent deliberation,
+  understanding emergent behavior,
+  or building systems where intelligence emerges
+  from the interaction of simpler parts.
+
+# References
+references:
+  primary:
+    - title: "The Society of Mind"
+      author: "Marvin Minsky"
+      year: 1985
+      publisher: "Simon & Schuster"
+      isbn: "0-671-60740-5"
+      url: "https://www.societyofmind.com/"
+      
+    - title: "K-lines: A Theory of Memory"
+      author: "Marvin Minsky"
+      year: 1980
+      journal: "Cognitive Science"
+      volume: "4(2)"
+      pages: "117-133"
+      url: "https://courses.media.mit.edu/2004spring/mas966/Minsky%201980%20K-lines.pdf"
+      
+    - title: "The Emotion Machine"
+      author: "Marvin Minsky"
+      year: 2006
+      publisher: "Simon & Schuster"
+      isbn: "0-7432-7663-9"
+      
+  related:
+    - title: "Mindstorms"
+      author: "Seymour Papert"
+      year: 1980
+      publisher: "Basic Books"
+      
+    - title: "Made-Up Minds"
+      author: "Gary Drescher"
+      year: 1991
+      publisher: "MIT Press"
+      
+    - title: "Generative Agents"
+      author: "Park et al."
+      year: 2023
+      venue: "UIST"
+      arxiv: "2304.03442"
+      
+  moollm:
+    - path: "../k-lines/"
+      description: "K-lines theory"
+    - path: "../adversarial-committee/"
+      description: "Deliberating society"
+    - path: "../needs/"
+      description: "Sims motive system"
+    - path: "../../designs/eval/EVAL-INCARNATE-FRAMEWORK.md"
+      description: "Full framework"
+    - path: "../../designs/sims/sims-astrology.md"
+      description: "Astrillogical Effect"

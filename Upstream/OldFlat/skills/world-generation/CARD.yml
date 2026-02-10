@@ -1,0 +1,77 @@
+# CARD.yml — World Generation
+#
+# Dynamic world creation — questions create places.
+# "Ask about a place and it exists."
+
+card:
+  id: world-generation
+  name: "World Generation"
+  type: [skill, creation, game]
+  emoji: 🌱
+  rarity: uncommon
+  
+  description: |
+    Dynamic world creation. When you ask about a place
+    that doesn't exist, create it. Questions expand the
+    world. Exploration IS creation.
+
+tools:
+  required: [read_file, write_file, list_dir]
+tier: 1
+
+methods:
+  CREATE:
+    description: "Generate a new place"
+    parameters: { seed: "Starting concept", style: "World style" }
+    output: directory + files
+    invoked-by: [dm, exploration]
+    
+  EXPAND:
+    description: "Add to existing area"
+    parameters: { from: "Existing place", direction: "How to expand" }
+    output: new room
+    invoked-by: [exploration]
+    
+  CONNECT:
+    description: "Link two areas"
+    parameters: { a: "First place", b: "Second place" }
+    output: exit updates
+    invoked-by: [dm]
+    
+  TOWER:
+    description: "Generate a vertical structure with floors"
+    parameters: 
+      name: "Tower name"
+      floors: "List of floor definitions"
+      central_column: "elevator, stairs, or both"
+      direction: "up, down, or both"
+    output: tower directory + floor links
+    invoked-by: [dm, building]
+    pattern: yoot-tower
+    
+  FLOOR:
+    description: "Add a floor to existing tower"
+    parameters:
+      tower: "Which tower"
+      floor_number: "Position (negative = underground)"
+      content: "Skill path or inline definition"
+    output: floor ROOM.yml + up/down links
+    invoked-by: [expansion]
+
+state: {}
+
+principle: |
+  Don't pre-generate everything.
+  Generate on demand.
+  Questions create reality.
+  "What's north?" makes north exist.
+
+advertisements:
+  EXPAND-WORLD:
+    score: 90
+    condition: "Exploring beyond known areas"
+  CREATE-PLACE:
+    score: 85
+    condition: "Need a new location"
+
+see-also: [skills/room, skills/adventure]

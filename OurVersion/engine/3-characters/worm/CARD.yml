@@ -1,0 +1,149 @@
+# CARD.yml — Worm
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Every EAT has a POOP. Every CHOMP has a BARF."
+
+card:
+  id: worm
+  name: "Worm"
+  type: [skill, cursor, traversal, pipeline]
+  emoji: 🪱
+  tier: 1
+  tagline: "Two-pointer reversible cursor for traversal and pipelines."
+  config_dir: ".moollm/skills/worm"
+  
+  description: |
+    Two-pointer worm (head/tail) cursor that inchworms through directories
+    and links. Ingest content (tokens become active in its "brain"), carry
+    a buffer, and emit data at head or tail.
+    
+    The EAT/POOP/BARF/STICK-UP-BUM verbs form a reversible basis for
+    undo/redo and serialize/deserialize operations.
+
+# FILES INDEX
+
+files:
+  docs:
+    - SKILL.md    # Full protocol documentation
+    - README.md   # Human landing page
+
+# K-LINES
+
+k-lines:
+  activates:
+    - WORM
+    - CURSOR
+    - TWO-POINTER
+    - EAT-POOP
+    - PIPELINE
+  related:
+    - { ref: data-flow, relation: "streaming data pipelines" }
+    - { ref: room, relation: "directory as room metaphor" }
+    - { ref: adventure, relation: "worms traverse adventures" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Crawl filesystem"
+  - "Span structures"
+  - "Ingest/emit data"
+  - "Pipe between documents"
+  - "Build data pipelines"
+
+# METHODS — signatures only, see SKILL.md
+
+methods:
+  # Movement
+  MOVE-WORM:    { signature: "MOVE-WORM [head] (tail [follow|stay])" }
+  MOVE-HEAD:    { signature: "MOVE-HEAD [path]" }
+  MOVE-ASS:     { signature: "MOVE-ASS [path]", note: "move tail only" }
+  
+  # Unit navigation
+  NEXT-UNIT:    { signature: "NEXT-UNIT [unit] [count]", units: [char, word, sentence, paragraph, section, page] }
+  PREV-UNIT:    { signature: "PREV-UNIT [unit] [count]" }
+  SELECT-RANGE: { signature: "SELECT-RANGE [unit] [count]" }
+  
+  # Tree traversal
+  TREE-UP:      { signature: "TREE-UP" }
+  TREE-DOWN:    { signature: "TREE-DOWN [child]" }
+  TREE-NEXT:    { signature: "TREE-NEXT" }
+  TREE-PREV:    { signature: "TREE-PREV" }
+  TREE-OPEN:    { signature: "TREE-OPEN" }
+  TREE-CLOSE:   { signature: "TREE-CLOSE" }
+  TREE-HIDE:    { signature: "TREE-HIDE" }
+  TREE-SHOW:    { signature: "TREE-SHOW" }
+  
+  # Ingestion/emission (reversible basis)
+  EAT:          { signature: "EAT", note: "ingest at head, parse to brain" }
+  CHOMP:        { signature: "CHOMP [pattern]", note: "scan pattern, then ingest" }
+  POOP:         { signature: "POOP", note: "emit at tail" }
+  BARF:         { signature: "BARF", note: "emit at head" }
+  STICK-UP-BUM: { signature: "STICK-UP-BUM [data]", note: "inject data into worm" }
+
+# ADVERTISEMENTS
+
+advertisements:
+  MOVE-WORM:
+    score: 80
+    condition: "Reposition worm cursor"
+    
+  EAT:
+    score: 80
+    condition: "Ingest content at head"
+    
+  CHOMP:
+    score: 80
+    condition: "Scan for pattern then ingest"
+    
+  POOP:
+    score: 70
+    condition: "Emit buffer at tail"
+    
+  BARF:
+    score: 70
+    condition: "Emit buffer at head"
+    
+  TREE-NAVIGATE:
+    score: 60
+    condition: "Navigate tree structure"
+
+# STATE
+
+state:
+  head: "."
+  tail: "."
+  buffer: []
+  payload: null
+  digestive_format: "neutral"
+  active_tokens: []
+  scan_pattern: ""
+  emit_dir: ".moollm/skills/worm/out"
+  reversible: true
+
+# VARIANTS
+
+variants:
+  bulldozer:   "Moves and overwrites as it goes"
+  link-hopper: "Prefers symlinks; hops like inchworm"
+  mapper:      "Maps directory trees; leaves markers"
+  dream:       "Synthesizes at speed-of-light; ephemeral"
+  tree:        "Climbs hierarchies; parent/child context"
+
+# TOOLS
+
+tools:
+  required: [read_file, write_file, list_dir]
+  optional: []
+
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ Movement Methods"
+    - "§ Tree Traversal"
+    - "§ Reversible Basis (EAT/POOP/BARF)"
+    - "§ Variants (bulldozer, mapper, dream)"
+
+# LINEAGE
+
+lineage: [LLOOOOMM worms, Inchworm cursors]

@@ -1,0 +1,70 @@
+# CARD.yml — Mount (condensed)
+
+card:
+  id: mount
+  name: "Mount"
+  type: [skill, meta, game-mechanics, modification]
+  emoji: "🎭"
+  tier: 1
+  tagline: "Overlay skills on characters and rooms"
+  description: |
+    Attach a skill to a character or room to modify behavior until unmounted.
+    Mounting overlays the base personality or environment without destroying it.
+
+invoke_when:
+  - "Need to change a character's behavior quickly"
+  - "Want a room to enforce a tone or rule"
+  - "Testing a constraint or buff on a target"
+
+concepts:
+  modes:
+    grant: "Target gains the skill's capabilities"
+    afflict: "Target suffers the skill's constraints"
+  targets:
+    character: "Individual personality modification"
+    room: "Environmental effect on all occupants"
+  overlays:
+    principle: "Base personality remains underneath; effects are reversible"
+  global:
+    principle: "A skill can enable/disable itself globally by mounting on itself"
+
+parameters:
+  principle: "Mount parameters are arbitrary; skills interpret what they accept"
+  resolution_order: ["skill defaults", "user profile", "mount-time params", "runtime adjustment"]
+  profile_path: ".moollm/skills/{skill-name}/skill-parameters.yml"
+
+methods:
+  MOUNT:
+    signature: "MOUNT <thing> on <target> [--mode grant|afflict] [--type skill|activity|event|process|zone]"
+    description: "Attach a skill, activity, event, or process to a target"
+
+mount_types:
+  skill_overlay: "Direct behavior modification"
+  activity: "Structured interaction with phases"
+  event: "Time-bounded happening"
+  process: "Multi-step procedure"
+  zone: "Room-wide environmental effect"
+
+examples:
+  character: "MOUNT no-ai-joking on PEE-WEE --mode afflict"
+  room: "MOUNT no-ai-overlord on BOARD-ROOM --type zone"
+  activity: "MOUNT debates/lincoln-vs-douglas.yml on TOWN-SQUARE --type activity"
+
+advertisements:
+  modify_character: "Change a character's behavior via skill overlay"
+  create_zone: "Create a room with special behavioral rules"
+  try_affliction: "Apply a constraint to test narrative consequences"
+
+cure_protocol:
+  direct: "UNMOUNT command"
+  narrative: "Restore memory of the base personality"
+  ironic: "Reclaim the constraint as a tool"
+
+ethics:
+  principle: "Mounting is modification, not destruction"
+  rules:
+    - "Avoid afflicting core-identity characters without consent"
+    - "Afflictions must be curable in-story"
+
+references:
+  details: "skills/mount/SKILL.md"

@@ -1,0 +1,59 @@
+# CARD.yml — Image Mining (condensed)
+
+card:
+  id: image-mining
+  name: "Image Mining"
+  type: [skill, vision, extraction, automation]
+  emoji: "⛏️📷"
+  rarity: uncommon
+  tagline: "Mine pixels for atoms. Your camera is a pickaxe."
+  description: |
+    Extract semantic resources from visual content (photos, screenshots,
+    diagrams, PDFs) and produce YAML Jazz with quantities, observations,
+    and interpretations.
+
+invoke_when:
+  - "Need structured extraction from an image"
+  - "Summarizing visuals into YAML Jazz"
+  - "Comparing multiple images by the same lens"
+
+concepts:
+  mining: "Images are ore; YAML Jazz is refined output"
+  third_eye: "Speculative mining for meaning beyond the pixels"
+  layers: "Multiple passes can append lenses or perspectives"
+
+k_lines:
+  activates: [IMAGE-MINING, VISUAL-EXTRACTION, YAML-JAZZ, THIRD-EYE]
+  related: [visualizer, slideshow]
+
+methods:
+  MINE:
+    signature: "MINE [image] (WITH [shopping-list]) (AT [depth])"
+    output: "YAML extraction"
+  MULTI_LOOK:
+    signature: "MULTI-LOOK [image] FOCUS [lens] (AS [miner-id])"
+    output: "Append lens-specific layer"
+  SCAN:
+    signature: "SCAN [image]"
+    output: "Quick resource preview"
+  PROSPECT:
+    signature: "PROSPECT [direction|DEEP]"
+    output: "List of mining targets"
+  MINE_UNSEEN:
+    signature: "MINE UNSEEN [concept]"
+    output: "Speculative mining without pixels"
+
+outputs:
+  primary: "*-mined.yml"
+  optional: ["PHOTO.yml", "PHOTO.md", "MINING-*.yml"]
+
+examples:
+  basic: "MINE ./photo.png WITH [textures, materials, objects]"
+  lens: "MULTI-LOOK ./diagram.png FOCUS [labels] AS analyst"
+
+references:
+  details: "skills/image-mining/SKILL.md"
+
+advertisements:
+  extract_resources: "Turn pixels into structured observations"
+  multi_lens: "Apply multiple analytical lenses to one image"

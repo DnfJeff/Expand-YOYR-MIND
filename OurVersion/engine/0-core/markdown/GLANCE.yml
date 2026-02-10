@@ -1,0 +1,49 @@
+# GLANCE.yml — markdown
+# Full file: CARD.yml (106 lines) | SKILL.md
+# 📝 "The source IS the destination."
+
+what: |
+  Plain text formatting readable raw AND rendered.
+  No transformation gap.
+  LLM-native — trained on billions of .md files.
+
+why: |
+  - Source is destination (readable both ways)
+  - LLM-native
+  - Git-friendly diffs
+  - No lock-in
+
+when:
+  - "Writing session logs → markdown"
+  - "Creating READMEs → markdown"
+  - "Documenting skills → markdown"
+  - "LLM communication → markdown"
+
+principles:
+  source_is_destination: "Readable raw AND rendered"
+  llm_native: "Trained on billions of .md files"
+  git_friendly: "Meaningful diffs"
+  no_lock_in: "Plain text survives"
+
+gfm_extensions:
+  tables: "Data presentation"
+  task_lists: "Checkboxes"
+  fenced_code: "Syntax highlighting"
+  collapsible: "<details open> for long docs (open by default)"
+  alerts: "NOTE, WARNING, etc."
+  mermaid: "Diagrams as code"
+
+mermaid_types:
+  flowchart: "Process flow, decisions"
+  sequenceDiagram: "Component interactions"
+  stateDiagram: "State machines"
+  erDiagram: "Data models"
+
+collapsible_best_practice: |
+  <summary> tells what's inside WITHOUT opening
+  ❌ "Click to see more"
+  ✓ "🎤 Gary's Talk — Schema + LLM = Flight"
+
+lineage: "John Gruber (2004), Aaron Swartz (beta tester)"
+related: [yaml-jazz, session-log, plain-text, soul-chat]
+tier: 1

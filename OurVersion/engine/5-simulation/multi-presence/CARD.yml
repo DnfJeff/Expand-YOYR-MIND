@@ -1,0 +1,118 @@
+# CARD.yml — Multi-Presence
+#
+# Same card instantiated in multiple rooms simultaneously.
+# "Be in two places at once. Three even."
+
+card:
+  id: multi-presence
+  name: "Multi-Presence"
+  type: [skill, parallel, distributed]
+  
+  emoji: 👥
+  
+  rarity: epic
+  
+  description: |
+    Instantiate the same card in multiple rooms at once.
+    Each instance has its own state but shares identity.
+    
+    Explore multiple branches, distributed work, consensus building.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+    - list_dir
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  SPLIT:
+    description: "Create a presence in another room"
+    parameters:
+      card: "Card to duplicate presence"
+      destination: "Where to create instance"
+    output: file (presence) + chat
+    effect: "Create linked instance in new room"
+    invoked-by: [player, card]
+    
+  SYNC:
+    description: "Synchronize state between presences"
+    parameters:
+      presences: "Which instances to sync"
+    output: state-change
+    effect: "Merge divergent state"
+    invoked-by: [player, coherence-engine]
+    
+  MERGE:
+    description: "Combine multiple presences back into one"
+    parameters:
+      primary: "Which presence becomes the merged result"
+      others: "Presences to absorb"
+    output: state-change
+    effect: "Combine state, remove other presences"
+    invoked-by: [player]
+    
+  STATUS:
+    description: "Show all active presences"
+    parameters:
+      card: "Which card"
+    output: chat
+    effect: "List all rooms where card is present"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  presence-schema:
+    source-card:
+      type: path
+      description: "Original card"
+    location:
+      type: path
+      description: "Where this presence is"
+    local-state:
+      type: object
+      description: "State divergent from source"
+    siblings:
+      type: array
+      description: "Other presences of same card"
+
+# USE CASES
+
+use-cases:
+  parallel-exploration: "Scout multiple dungeon branches"
+  distributed-work: "Work on multiple files simultaneously"
+  consensus-building: "Participate in debates in multiple rooms"
+  hedge-bets: "Try different approaches, see which works"
+
+# ADVERTISEMENTS
+
+advertisements:
+  PARALLEL-WORK:
+    score: 90
+    condition: "Need to do multiple things at once"
+    
+  EXPLORE-BRANCHES:
+    score: 85
+    condition: "Don't want to commit to one path"
+
+# RELATED
+
+see-also:
+  - skills/card    # Cards can have presence
+  - skills/room    # Where presences exist
+  - skills/party   # Group dynamics
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Distributed systems"
+    - "Quantum superposition (metaphorically)"

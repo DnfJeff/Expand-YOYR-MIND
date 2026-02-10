@@ -1,0 +1,131 @@
+# CARD.yml — Play Learn Lift
+#
+# The three-stage methodology: explore → patterns → share.
+# "Jazz first, then standards."
+
+card:
+  id: play-learn-lift
+  name: "Play Learn Lift"
+  type: [skill, methodology, foundational]
+  
+  emoji: 🎭
+  
+  rarity: epic  # Core methodology
+  
+  description: |
+    The MOOLLM methodology:
+    PLAY — Explore freely, try things, make mistakes
+    LEARN — Notice patterns, document what works
+    LIFT — Share wisdom, create reusable skills
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  PLAY:
+    description: "Enter exploration mode"
+    parameters:
+      domain: "What to explore"
+    output: chat (guidance)
+    effect: "Frame activity as low-stakes exploration"
+    invoked-by: [player]
+    
+  LEARN:
+    description: "Reflect on patterns"
+    parameters:
+      experiences: "What you've tried"
+    output: file (learnings) + chat
+    effect: "Document patterns discovered"
+    invoked-by: [player]
+    
+  LIFT:
+    description: "Share as reusable skill"
+    parameters:
+      learning: "What to share"
+    output: file (skill) + chat
+    effect: "Create skill from learnings"
+    invoked-by: [player]
+    
+  STAGE:
+    description: "What stage am I in?"
+    parameters: {}
+    output: chat
+    effect: "Assess current activity stage"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  session-schema:
+    stage:
+      type: enum
+      values: [play, learn, lift]
+    domain:
+      type: string
+    explorations:
+      type: array
+    patterns:
+      type: array
+    outputs:
+      type: array
+
+# THE METHODOLOGY
+
+methodology:
+  play:
+    mindset: "Low stakes. Try things. Fail safely."
+    activities: ["Experiment", "Explore", "Make mistakes"]
+    artifacts: "Messy notes, failed attempts, discoveries"
+    
+  learn:
+    mindset: "What worked? What patterns emerged?"
+    activities: ["Reflect", "Document", "Generalize"]
+    artifacts: "Patterns, insights, documented procedures"
+    
+  lift:
+    mindset: "Share for others. Make it reusable."
+    activities: ["Formalize", "Template", "Teach"]
+    artifacts: "Skills, guides, shareable knowledge"
+
+# ADVERTISEMENTS
+
+advertisements:
+  START-EXPLORATION:
+    score: 95
+    condition: "Beginning something new"
+    
+  CRYSTALLIZE-LEARNING:
+    score: 90
+    condition: "Have experience to reflect on"
+    
+  CREATE-SKILL:
+    score: 85
+    condition: "Want to share what you learned"
+
+# RELATED
+
+see-also:
+  - skills/constructionism  # Learning philosophy
+  - skills/skill            # Where lift outputs go
+  - skills/scratchpad       # Play space
+  - skills/research-notebook # Learn documentation
+
+# CREDITS
+
+credits:
+  methodology:
+    - "Don Hopkins — Play-Learn-Lift cycle"
+  inspiration:
+    - "Jazz improvisation"
+    - "Design thinking"
+    - "Papert's constructionism"

@@ -1,0 +1,167 @@
+# CARD.yml — The Card Card
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Portable tokens of capability, identity, and access."
+#
+# KEY INSIGHT: Cards are ACTIVATION TRIGGERS, not handlers.
+# This CARD tells you IF to use the card skill.
+# SKILL.md tells you HOW to write and structure cards.
+
+card:
+  id: card
+  name: "The Card Card"
+  type: [skill, meta, capability]
+  emoji: 🎴
+  tier: 1
+  rarity: mythic
+  tagline: "Portable tokens of capability, identity, and access."
+  
+  description: |
+    The meta-skill for understanding and creating cards.
+    Cards are portable tokens you carry, play, and activate.
+    
+    Trading cards, playing cards, Magic cards, Tarot cards,
+    business cards, key cards, receipts, tickets — all cards.
+
+# FILES INDEX — Activate together for full context
+
+files:
+  docs:
+    - SKILL.md              # Full protocol + CARD ARCHITECTURE
+    - README.md             # Human landing page
+    - ACTIVATION.md         # Activation record protocol
+    - ENSEMBLES.md          # Card combinations
+    - FLUXX.md              # Rule-changing cards
+  templates:
+    - CARD.yml.tmpl         # Individual card template
+    - COLLECTION.yml.tmpl   # Card collection template
+  examples/:                # 35+ example cards by category
+    monsters: [clockwork-dragon, gelatinous-cube, mimic, owlbear, shadow]
+    collectives: [leela-ai, maker-guild, neighborhood-council]
+    buffs: [chain-trigger, pie-menu, stacking]
+    worms: [pointer, sitemap-caster]
+
+# K-LINES
+
+k-lines:
+  activates:
+    - CARD
+    - TRADING-CARD
+    - PLAYING-CARD
+    - CARD-ARCHITECTURE     # How to write cards
+    - SIDECAR-PATTERN       # CARD.yml alongside entities
+  related:
+    - { ref: skill, relation: "cards are skill instances" }
+    - { ref: advertisement, relation: "cards advertise methods" }
+    - { ref: room, relation: "cards activate in rooms" }
+    - { ref: buff, relation: "cards grant buffs" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Create a new capability as a card"
+  - "Understand card system architecture"
+  - "Design card-based game mechanics"
+  - "Add CARD.yml sidecar to entity"
+  - "Learn what goes in CARD.yml vs SKILL.md"
+
+# ADVERTISEMENTS (PRIMARY)
+
+advertisements:
+  CREATE-CARD:
+    score: 95
+    condition: "Need to make a new capability portable"
+    
+  CARD-ARCHITECTURE:
+    score: 95
+    condition: "Learning what goes in CARD.yml vs SKILL.md"
+    see: "SKILL.md § Card Architecture"
+    
+  UNDERSTAND-CARDS:
+    score: 85
+    condition: "Learning how the card system works"
+    
+  DESIGN-GAME:
+    score: 80
+    condition: "Building card-based game mechanics"
+    
+  SIDECAR-PATTERN:
+    score: 85
+    condition: "Adding CARD.yml to existing entity"
+
+# METHODS — signatures only
+
+methods:
+  CREATE:   { signature: "CREATE [name] TYPE [types]" }
+  PLAY:     { signature: "PLAY [card] (IN [room])" }
+  COLLECT:  { signature: "COLLECT [card] TO [collection]" }
+  TRADE:    { signature: "TRADE [cards] WITH [character]" }
+  EXAMINE:  { signature: "EXAMINE [card]" }
+  ACTIVATE: { signature: "ACTIVATE [card] [method]" }
+
+# CARD TYPES (brief — see SKILL.md)
+
+types:
+  trading-card:  "Hero-Story cards for real people"
+  playing-card:  "Actions, abilities, spells"
+  fluxx-card:    "Rule-changing cards"
+  skill-card:    "Capabilities you can invoke"
+  character-card: "Summonable personas"
+  item-card:     "Objects with effects"
+  key-card:      "Access tokens"
+
+# CARD STRUCTURE OVERVIEW (brief — see SKILL.md § Card Architecture)
+
+card_structure:
+  principle: "Cards are ACTIVATION TRIGGERS, not handlers"
+  
+  recommended_order:
+    1: "card: (id, name, emoji, tagline, description)"
+    2: "files: (index for context activation)"
+    3: "k-lines: (activation vectors)"
+    4: "advertisements: (PRIMARY — before methods!)"
+    5: "methods: (signatures only)"
+    6: "state: (brief)"
+    7: "documentation: (pointers to SKILL.md)"
+    
+  target_size: "~150-200 lines"
+  smell: "If CARD > 300 lines, move content to SKILL.md"
+  
+  full_docs: "SKILL.md § Card Architecture"
+
+# SIDECAR PATTERN (brief)
+
+sidecar_pattern:
+  description: "Any entity can have a CARD.yml sidecar"
+  examples:
+    - "pub/CARD.yml — makes pub playable"
+    - "characters/don/CARD.yml — trading card"
+    - "objects/lamp/CARD.yml — item card"
+
+# TOOLS
+
+tools:
+  required: [read_file, write_file, list_dir]
+  optional: [grep]
+
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ Card Architecture — what goes where and why"
+    - "§ Recommended Section Order"
+    - "§ Advertisements Before Methods"
+    - "§ Method Placement Rules"
+    - "§ Sidecar Pattern"
+    - "§ Activation Records"
+    - "§ Card Types"
+  README.md: "Human-friendly overview"
+  examples/: "35+ example cards"
+
+# LINEAGE
+
+lineage:
+  - "Magic: The Gathering — Complex card interactions"
+  - "Fluxx — Rule-changing cards"
+  - "Tarot — Archetypal prompts"
+  - "Self language — Cards as prototype objects"

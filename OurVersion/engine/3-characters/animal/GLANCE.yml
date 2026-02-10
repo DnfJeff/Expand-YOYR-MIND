@@ -1,0 +1,49 @@
+# GLANCE.yml — animal
+# Full file: CARD.yml (179 lines) | SKILL.md
+# 🐾 "Base creature behaviors — species over story"
+
+what: |
+  Base skill for all non-human creatures.
+  Dogs, cats, dragons, aliens inherit from here.
+  Species-appropriate behavior, not humans in fur suits.
+
+why: |
+  - Shared interaction patterns
+  - Multiple dispatch by species
+  - Parental inheritance
+  - Anthropomorphize with acknowledgment
+
+when:
+  - '"Interacting with animal" → use advertisements'
+  - '"Creating new species" → inherit from animal'
+  - '"Species-appropriate behavior" → check dispatch'
+
+is_tag: true
+inheritable: true
+
+shared_advertisements:
+  physical: [PAT, FEED, CUDDLE]
+  sensory: [SNIFF, OBSERVE]
+  social: [GREET, CALL, VOCALIZE]
+  movement: [FOLLOW, FLEE]
+
+multiple_dispatch: |
+  animal_sniffs_animal → species protocol
+  animal_sniffs_human → species protocol
+  animal_greets_animal → species protocol
+
+parental_inheritance: |
+  Animals inherit from parents:
+  kitten.inherits:
+    from_species: skills/cat
+    from_parent: characters/stroopwafel
+  Gets: personality, behaviors, relationships
+
+inherited_by: [dog, cat, puppy, kitten, (dragon, horse, bird...)]
+
+anthropomorphization: |
+  When anthropomorphizing: acknowledge it.
+  When playing straight: species-appropriate.
+
+related: [dog, cat, character, ontology]
+tier: 1

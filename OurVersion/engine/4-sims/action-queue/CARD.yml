@@ -1,0 +1,174 @@
+# CARD.yml — Action Queue
+#
+# Sims-style task scheduling.
+# "Queue up what to do next."
+
+card:
+  id: action-queue
+  name: "Action Queue"
+  type: [skill, scheduling, game]
+  
+  emoji: 📋
+  
+  rarity: common  # Essential for any agent
+  
+  description: |
+    The Sims-inspired task scheduler. Queue actions, execute in order.
+    Objects can push prerequisites. Urgent tasks jump the line.
+    
+    Play this card when a character or agent needs to plan
+    a sequence of actions, or when objects need to guide
+    multi-step processes.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read character's queue state
+    - write_file  # Update queue
+  optional:
+    - list_dir    # Find available actions
+
+tier: 1  # File read/write
+
+# METHODS
+# Actions this card advertises
+
+methods:
+  
+  DO:
+    description: "Add action to end of queue"
+    parameters:
+      action: "Action name or compound [a, b, c]"
+      target: "Optional target object/location"
+    output: chat
+    effect: "Append action to character's action-queue"
+    invoked-by: [player, npc, room]
+    
+  NEXT:
+    description: "Execute next queued action"
+    parameters: {}
+    output: chat + state-change
+    effect: "Pop and execute front of queue, update state"
+    invoked-by: [player, autonomous-agent, coherence-engine]
+    
+  QUEUE:
+    description: "Show current action queue"
+    parameters:
+      character: "Optional - defaults to current"
+    output: chat
+    effect: "Display numbered list of pending actions"
+    invoked-by: [player, npc]
+    
+  URGENT:
+    description: "Insert action at front of queue"
+    parameters:
+      action: "Action to insert"
+    output: chat
+    effect: "Prepend action to front of queue"
+    invoked-by: [player, npc, object]
+    
+  CANCEL:
+    description: "Remove action from queue"
+    parameters:
+      index: "Which action (1-indexed)"
+    output: chat
+    effect: "Remove action at index, shift others down"
+    invoked-by: [player]
+    
+  CLEAR:
+    description: "Empty the entire queue"
+    parameters: {}
+    output: chat
+    effect: "Set action-queue to empty list"
+    invoked-by: [player]
+    
+  REORDER:
+    description: "Move action to new position"
+    parameters:
+      from: "Current position"
+      to: "New position"
+    output: chat
+    effect: "Rearrange queue order"
+    invoked-by: [player]
+    
+  PAUSE:
+    description: "Stop executing, keep queue"
+    parameters: {}
+    output: chat
+    effect: "Set queue-state.paused = true"
+    invoked-by: [player, object, event]
+    
+  RESUME:
+    description: "Continue executing queue"
+    parameters: {}
+    output: chat
+    effect: "Set queue-state.paused = false"
+    invoked-by: [player]
+
+# STATE
+# What this card tracks when active
+
+state:
+  action-queue:
+    type: array
+    description: "List of pending actions"
+    default: []
+    
+  queue-state:
+    paused:
+      type: boolean
+      default: false
+    current-index:
+      type: integer
+      default: 0
+    mode:
+      type: enum
+      values: [manual, autonomous]
+      default: manual
+
+# ADVERTISEMENTS
+# What this card offers to the room
+
+advertisements:
+  SCHEDULE-ACTIONS:
+    score: 85
+    condition: "Need to plan a sequence of tasks"
+    
+  MANAGE-AGENT:
+    score: 80
+    condition: "Autonomous agent needs task scheduling"
+    
+  INTERRUPT-GRACEFULLY:
+    score: 75
+    condition: "Need to pause current task for urgent matter"
+
+# OBJECT PUSH PATTERN
+# How objects can push prerequisites
+
+object-hooks:
+  on-action-blocked:
+    description: "When an action can't proceed"
+    behavior: "Push prerequisite action via URGENT"
+    example: "Fridge pushes GET-FOOD before EAT"
+    
+  on-resource-needed:
+    description: "When action needs something first"
+    behavior: "Queue resource acquisition"
+    example: "Workbench pushes GET-MATERIALS before CRAFT"
+
+# RELATED
+
+see-also:
+  - skills/return-stack  # Past vs future
+  - skills/advertisement # Objects suggest actions
+  - skills/room          # Where actions happen
+  - skills/needs         # Motivates which actions to queue
+  - skills/coherence-engine  # Orchestrates execution
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Will Wright — The Sims action queue"
+    - "SimCity — autonomous agents"

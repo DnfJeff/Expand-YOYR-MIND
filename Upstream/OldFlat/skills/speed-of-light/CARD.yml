@@ -1,0 +1,126 @@
+# CARD.yml — Speed of Light
+#
+# Simulate many turns inside one LLM call.
+# "Instant telepathy. No API round-trips."
+
+card:
+  id: speed-of-light
+  name: "Speed of Light"
+  type: [skill, simulation, ensemble]
+  emoji: ⚡
+  rarity: rare
+  
+  description: |
+    MOOLLM's approach to multi-agent simulation: many turns
+    simulated within a single LLM call. Characters debate,
+    vote, and decide without waiting for API round-trips.
+
+tools:
+  required: []
+tier: 0
+
+methods:
+  SIMULATE:
+    description: "Run multiple simulation turns at once"
+    parameters: { turns: "How many", entities: "Who participates" }
+    output: chat (narrative) + state-changes
+    invoked-by: [coherence-engine]
+    
+  # Floor management methods (see FLOOR.yml for protocol)
+  TAKE_FLOOR:
+    description: "Entity requests speaking/acting rights"
+    parameters: { entity: "Who", topic: "What about" }
+    output: state-change (floor granted or queued)
+    protocol: FLOOR.yml
+    
+  YIELD_FLOOR:
+    description: "Entity releases floor to another"
+    parameters: { to: "Who takes over" }
+    output: state-change
+    protocol: FLOOR.yml
+    
+  POINT_OF_ORDER:
+    description: "Urgent interrupt — bypasses queue"
+    parameters: { entity: "Who", concern: "What's urgent" }
+    output: floor-transfer + state-change
+    protocol: FLOOR.yml
+    
+  CALL_QUESTION:
+    description: "Force decision on current matter"
+    parameters: { question: "What to decide" }
+    output: vote or resolution
+    protocol: FLOOR.yml
+
+state:
+  floor:
+    current_holder: null
+    queue: []
+    attention_cursor: null
+
+the-insight: |
+  External multi-agent systems:
+    Agent A → API call → wait → Agent B → API call → wait → ...
+    
+  MOOLLM speed-of-light:
+    Single LLM call simulates A, B, C debating, voting, deciding.
+    
+  Why it works:
+  - The LLM holds all personas in context
+  - No network latency between "agents"
+  - Coherence maintained by single model
+  - Instant telepathy between simulated entities
+
+carrier-pigeon-critique: |
+  INSIDE the LLM: high-dimensional vectors, precise, instant.
+  AT THE BOUNDARY: serial tokens, lossy, glacial.
+  
+  Tokenization: Destroys precision, introduces noise.
+  Detokenization: ANOTHER layer of noise and guessing.
+  Round-trip: precision → noise → more noise → approximation
+  
+  The principle:
+    Work with vectors at speed of light.
+    Delay tokenization until last possible moment.
+    
+  Analogies:
+    - Emacs screen update: defer and coalesce redraws
+    - File batching: write once when stable
+    - Vector-first: think in native dimensions
+
+  Anti-pattern: "Carrier Pigeon Protocol"
+    - Writing on toilet paper with crayon
+    - Sending messages by carrier pigeon
+    - When you could navigate idea-space at speed of light
+
+advertisements:
+  MULTI-AGENT:
+    score: 95
+    condition: "Need multiple agents to interact quickly"
+  COMMITTEE-DECISION:
+    score: 90
+    condition: "Adversarial committee needs to deliberate"
+  FLOOR_MANAGEMENT:
+    score: 88
+    condition: "Need to coordinate who speaks when"
+    activates: FLOOR.yml
+  TURN_TAKING:
+    score: 85
+    condition: "Multiple entities need ordered participation"
+    activates: FLOOR.yml
+  INTERRUPT_HANDLING:
+    score: 92
+    condition: "Urgent concern needs to bypass normal flow"
+    activates: FLOOR.yml
+
+# DEEP PROTOCOLS
+
+deep_protocols:
+  FLOOR.yml: |
+    Floor management for multi-turn coordination.
+    Robert's Rules + Unix pipes + Lisp CONS cells.
+    - Parliamentary procedure (TAKE_FLOOR, YIELD, POINT_OF_ORDER)
+    - Personas as worms (mouth/body/ass pipeline)
+    - CAR/CDR tattoo protocol (knuckle mnemonic)
+    - The stage floor where speed-of-light actors perform
+
+see-also: [skills/adversarial-committee, skills/debate, skills/coherence-engine, skills/persona]

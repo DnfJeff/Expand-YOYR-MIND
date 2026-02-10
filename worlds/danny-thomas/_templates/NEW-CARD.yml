@@ -1,0 +1,79 @@
+# Copy this file alongside your ROOM.yml to define what
+# characters can DO in that room.
+#
+# Advertisements are scored actions. Each tick, the engine
+# evaluates all ads available to a character and picks the
+# highest-scoring one whose guard condition passes.
+#
+# Think of it like The Sims: the fridge advertises "Eat"
+# with a high score when you're hungry, and the TV advertises
+# "Watch" with a high score when you're bored.
+
+# --- Inheritance (optional) ---
+inherits: []
+  # Abstract prototypes this room inherits from.
+  # Example: [locations/abstract/social-hub]
+  # Everything in the prototype applies unless overridden here.
+
+ontology:
+  tags: []
+  # Searchable tags. Examples:
+  #   [barbershop, gossip, social-hub, commercial]
+  framing: ""
+  # One-word framing. Examples:
+  #   communal_grooming, domestic_sanctuary, public_commerce
+
+# --- The advertisements ---
+skill:
+  name: ""
+  # Display name. "Floyd's Barbershop Services"
+  id: ""
+  # Unique id. Use kebab-case. "floyds-barbershop"
+  location: ""
+  # Relative path from world root. "main-street/floyds-barbershop"
+
+  advertisements:
+
+    # --- Example advertisement ---
+    EXAMPLE_ACTION:
+      description: "What the character does (one sentence)"
+      score: 70
+      # Score: 1-100. Higher = more likely to be chosen.
+      # Guidelines:
+      #   90-100: Urgent (eating when starving, fleeing danger)
+      #   70-89:  Strong draw (socializing when lonely, work duties)
+      #   50-69:  Moderate (hanging out, browsing, idle activities)
+      #   20-49:  Weak (background activities, killing time)
+      #   1-19:   Ambient (atmospheric, rarely chosen over anything)
+
+      guard: "character.needs.social < 60"
+      # When is this ad valid? Natural language condition.
+      # The LLM evaluates this — it doesn't need to be code.
+      # Examples:
+      #   "character.needs.hunger > 70"
+      #   "character wants information AND floyd-lawson is present"
+      #   "time is evening AND character is not working"
+      #   "true"  (always valid)
+
+      effect: "social +20, fun +15. Character learns town gossip."
+      # What happens when the ad fires. Include:
+      #   - Need changes (need_name +/-N)
+      #   - Narrative effects (what the character learns/does/gains)
+
+      satisfies: [social]
+      # Which need categories this ad addresses.
+      # Common: [hunger, energy, social, fun, hygiene, comfort,
+      #          grooming, information, importance, boredom]
+
+      participants: [any]
+      # Who else is involved. [any] = solo or with whoever's here.
+      # Use character IDs for specific requirements:
+      #   [floyd-lawson, any]  = Floyd must be present
+
+      # Optional fields:
+      # duration: 30_minutes           # How long it takes in world time
+      # side_effects: [gossip_spread]  # Secondary consequences
+      # risk: low                      # Danger level
+
+    # Add more advertisements below. Most rooms have 2-5.
+    # Delete this EXAMPLE_ACTION when you're done.

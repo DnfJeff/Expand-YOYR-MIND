@@ -1,0 +1,126 @@
+# Template for creating a brand new world from scratch.
+#
+# This is the WORLD.yml — the root definition of your world.
+# It tells the engine the era, tone, rules, and simulation
+# parameters for everything underneath it.
+#
+# Minimum viable world:
+#   WORLD.yml          (this file)
+#   .moollm/config.yml (bootstrap config)
+#   .moollm/prompt.yml (system prompt template)
+#   .moollm/state.yml  (state tracker)
+#   characters/[name]/CHARACTER.yml + GLANCE.yml (one character)
+#   [room-name]/ROOM.yml + CARD.yml + GLANCE.yml   (one room)
+#   PLAY.md            (how to play — see _templates/)
+
+world:
+  name: ""
+  # The name of your world. "Mayberry", "Danny's New York"
+
+  # Location context (use what fits):
+  # city: ""
+  # state: ""
+  # country: ""
+  # planet: ""
+
+  era: ""
+  # Time period. "1960s", "2347", "medieval", "modern day"
+
+  population: ""
+  # How many people live here. "~5000", "millions", "a handful"
+
+  tone: ""
+  # The emotional register. Examples:
+  #   gentle_humor, warm_chaos, noir, epic, cozy_mystery,
+  #   dark_comedy, pastoral, gritty_realism
+
+  governance:
+    style: ""
+    # How decisions get made. Examples:
+    #   community_consensus, benevolent_chaos, monarchy,
+    #   democracy, anarchy, corporate, military
+    authority: ""
+    # Character ID of who's in charge (or "" for none).
+    method: ""
+    # How authority works. Examples:
+    #   empathy_not_force, iron_fist, debate, tradition
+
+  rules:
+    violence: minimal
+    # Violence level. minimal, moderate, realistic, fantasy
+    language: clean
+    # Language level. clean, mild, realistic, sailor
+    conflict_resolution: conversation
+    # How conflicts end. conversation, combat, diplomacy, magic
+
+  atmosphere: |
+    # 3-5 sentences describing the FEEL of this world.
+    # Not plot — vibes. What's the air like? The pace?
+    # What makes this place different from everywhere else?
+
+  social_dynamics:
+    # How information and relationships work here.
+    # Add properties that matter for YOUR world. Examples:
+    gossip_speed: moderate
+    community_response: varies
+    outsider_reception: neutral
+
+  delegation:
+    # Properties that cascade to all child directories.
+    # Characters and rooms inherit these unless they override.
+    cascades:
+      - era
+      - tone
+      - rules
+
+  simulate:
+    speed_of_light:
+      max_turns_per_call: 8
+      # How many character actions per LLM call.
+      # 8 is a good default. Lower = more control, higher = faster.
+      max_characters_per_turn: 4
+      # How many characters act simultaneously per tick.
+
+    epochs:
+      # Time periods in your world's daily cycle.
+      # Each epoch has a tone shift and typical locations.
+      # Add/remove/rename epochs to fit your world's rhythm.
+      morning:
+        starts: "6:00AM"
+        ends: "12:00PM"
+        tone_shift: ""
+        typical_locations: []
+      afternoon:
+        starts: "12:00PM"
+        ends: "6:00PM"
+        tone_shift: ""
+        typical_locations: []
+      evening:
+        starts: "6:00PM"
+        ends: "10:00PM"
+        tone_shift: ""
+        typical_locations: []
+      night:
+        starts: "10:00PM"
+        ends: "6:00AM"
+        tone_shift: ""
+        typical_locations: []
+
+    tick_config:
+      duration: 15_minutes_world_time
+      # How much world time passes per tick.
+      # 10-15 min for conversational worlds.
+      # 1 hour for slower, more epic worlds.
+      actions_per_tick: 1
+      evaluation_order: highest_scoring_ad_first
+
+    persistence:
+      log: LOG.md
+      transcript: TRANSCRIPT.md
+      save_frequency: every_epoch_boundary
+
+    reading_protocol:
+      cold_start: GLANCE.yml
+      warm_start: CARD.yml
+      deep_dive: "*.md"
+      order: [GLANCE, CARD, SKILL, README]

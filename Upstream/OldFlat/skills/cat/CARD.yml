@@ -1,0 +1,265 @@
+# CARD.yml — Cat
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Cats are the original NPCs. They have their own agenda."
+
+card:
+  id: cat
+  name: "Cat"
+  type: [skill, companion, game]
+  emoji: 🐱
+  tier: 1
+  tagline: "Cats have their own agenda."
+  
+  description: |
+    Feline interactions, buffs, and relationship building.
+    Cats are not decoration — they're gameplay. Pet them for buffs,
+    ignore them for consequences, earn their trust over time.
+    Each cat instance overlays personality for unique effects.
+
+# INHERITANCE
+
+inherits:
+  from: skills/animal
+  gets: [PAT, FEED, OBSERVE, SNIFF, GREET, CUDDLE, VOCALIZE, FOLLOW, FLEE]
+  overrides: [SNIFF, GREET, PAT]  # Cat-specific implementations
+
+# K-LINES
+
+k-lines:
+  activates:
+    - CAT
+    - FELINE
+    - KITTEN
+    - TRUST-DYNAMICS      # Cat-specific: trust is earned
+    - INDEPENDENCE        # Cat-specific: they do what they want
+  related:
+    - { ref: dog, relation: "comparison class" }
+    - { ref: buff, relation: "interactions grant buffs" }
+    - { ref: character, relation: "cats are characters" }
+    - { ref: animal, relation: "base animal skill" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Interacting with a cat character"
+  - "Pet simulation mechanics"
+  - "Trust-building dynamics"
+  - "Feline behavior modeling"
+
+# ADVERTISEMENTS (PRIMARY — before methods per card architecture)
+
+advertisements:
+  PET-A-CAT:
+    score: 80  # Lower than dogs — cats are harder
+    condition: "Cat is present and approachable"
+    
+  EARN-TRUST:
+    score: 85
+    condition: "Building relationship with cat over time"
+    
+  SLOW-BLINK:
+    score: 90
+    condition: "Cat communication, showing trust"
+    
+  LAP-CAT:
+    score: 85
+    condition: "Cat wants to sit on lap (human cannot move)"
+    
+  KITTEN-PILE:
+    score: 95
+    condition: "Multiple kittens present, cuddle opportunity"
+    
+  RECEIVE-JUDGMENT:
+    score: 70
+    condition: "Cat is watching you disapprovingly"
+
+# METHODS — signatures only, see SKILL.md for full protocols
+
+methods:
+  # Physical Touch
+  PAT:          { signature: "PAT [cat]", output: "buff if trust sufficient" }
+  SCRITCH:      { signature: "SCRITCH [cat] [where]", note: "chin, ears, back, belly (risky!)" }
+  HOLD:         { signature: "HOLD [cat]", note: "high risk/reward" }
+  HEADBUTT:     { signature: "[cat] HEADBUTTS [target]", note: "scent-marking claim" }
+  
+  # Play
+  PLAY:         { signature: "PLAY WITH [cat] (TOY [toy])" }
+  HUNT:         { signature: "[cat] HUNTS [target]", note: "toy or real prey" }
+  POUNCE:       { signature: "[cat] POUNCES [target]" }
+  
+  # Social
+  SLOW-BLINK:   { signature: "[cat] SLOW-BLINKS", note: "'I trust you'" }
+  GREET:        { signature: "GREET [cat]", note: "conditional acknowledgment" }
+  LICK:         { signature: "LICK [target]", note: "grooming/affection/dominance" }
+  CUDDLE:       { signature: "[cat] CUDDLES [position]", note: "lap, chest, feet, head" }
+  SNIFF:        { signature: "SNIFF [target]", note: "nose-touch protocol" }
+  
+  # Care
+  FEED:         { signature: "FEED [cat] [food]" }
+  GROOM:        { signature: "GROOM [cat]" }
+  CALL:         { signature: "CALL [cat]", note: "may or may not come" }
+  
+  # Emotional (cat-initiated)
+  PURR:         { signature: "[cat] PURRS", note: "contentment/healing presence" }
+  IGNORE:       { signature: "[cat] IGNORES [target]", note: "power move" }
+  JUDGE:        { signature: "[cat] JUDGES [target]", note: "silent disapproval" }
+  
+  # Observation
+  OBSERVE:      { signature: "OBSERVE [cat]", note: "learn personality" }
+
+# BUFF EFFECTS (summary — see SKILL.md for mechanics)
+
+buffs:
+  PAT-success: "+1 Calm (5 min)"
+  SCRITCH-chin-success: "+2 Cheerful (10 min)"
+  SCRITCH-belly-success: "+5 Brave (rare!), risk of injury"
+  HOLD-success: "+2 Loved (15 min)"
+  SLOW-BLINK-received: "+1 Trust (permanent)"
+  PURR-passive: "Healing presence, +1 all recovery"
+
+# SPECIAL BUFFS (cat-specific passives)
+
+special_buffs:
+  earned-trust: "Trust 80+ → Cat follows you between rooms"
+  healing-purr: "Cat on lap → +2 all recovery rolls"
+  mouse-patrol: "Cat present → Vermin never spawn"
+  cat-nap-wisdom: "Sleep near cat → Wake with +1 Insight"
+
+# TRUST MECHANICS (cat-specific — see SKILL.md)
+
+trust:
+  range: [0, 100]
+  start: 10  # Cats start suspicious
+  gain: "Slow, requires consistent positive interaction"
+  loss: "Fast if trust violated (forced holding, loud noises)"
+  thresholds:
+    0-20: "Stranger — may flee or swipe"
+    21-50: "Acquaintance — occasional approach"
+    51-80: "Friend — seeks interaction"
+    81-100: "Bonded — follows, sleeps on, defends"
+
+# SPECIALIZATIONS (brief — see SKILL.md)
+
+specializations:
+  kitten: { emoji: 🐱, note: "Maximum chaos, maximum cute, clumsy" }
+  queen:  { emoji: 🐱, note: "Mother cat, protective, nurturing" }
+  tomcat: { emoji: 🐱, note: "Father cat (may be absent), territorial" }
+
+# ONTOLOGY
+
+ontology:
+  default_tags: [animal, feline]
+  species: cat
+
+# TOOLS
+
+tools:
+  required: [read_file, write_file]
+  optional: []
+
+# EXAMPLE CATS
+
+example_cats:
+  adults: [cat-terpie, cat-stroopwafel]
+  kittens: [kitten-myrcene, kitten-limonene, kitten-linalool, kitten-pinene, kitten-caryophyllene, kitten-humulene, kitten-terpinolene, kitten-ocimene]
+  path: "$ANIMALS/"
+
+# CAT VS DOG (the fundamental contrast)
+
+vs_dog:
+  philosophy: "I permit you to exist in my space"
+  loyalty: "Earned slowly vs given freely"
+  attention: "On their terms vs eager and available"
+  buff_trigger: "Successful interaction vs mere presence"
+  forgiveness: "Grudging vs instant"
+  training: "Impossible vs enthusiastic"
+  following: "When they feel like it vs always"
+  emotional_read: "Judges silently vs reflects your mood"
+
+# FILE SNIFFING BEHAVIOR
+#
+# Cats also sniff file endings—they just do it more daintily than dogs.
+# A cat won't bound up and sniff enthusiastically; a cat approaches,
+# considers, perhaps touches noses delicately. But they DO check the end.
+# And they leave their own scent there too.
+
+file_sniffing:
+  behavior: |
+    Cats participate in butt-sniffing protocols, but with more elegance.
+    They approach the end of a file with measured curiosity. A delicate
+    nose-touch. A slow blink at what they find there. They may or may
+    not acknowledge what they've discovered.
+    
+  style: "Dainty, measured, considers before engaging"
+  
+  what_cats_notice:
+    - "Hidden philosophical musings"
+    - "Secret credit sections"
+    - "Yaml jazz that smells interesting"
+    - "Code that might be prey (bugs)"
+    - "Evidence of other cats having been here"
+    - "Dog marks (noted with disdain)"
+    
+  # MARKING TERRITORY — Append-only potty (refined)
+  marking:
+    description: |
+      Cats also mark files, but more subtly. A delicate spray at the end.
+      Append-only potty, syntax-safe, won't break anything. Just leaves
+      a trace that a cat was here and claimed this space.
+    format: "# 🐱 [cat-name] claimed this [timestamp]"
+    style: "Subtle, refined, implies ownership without demanding it"
+    rules:
+      - "NEVER modify existing content"
+      - "ONLY append at the very end"  
+      - "Use comment syntax appropriate to file type"
+      - "Must not break the file (cats are careful)"
+      - "May include a judgment (optional)"
+    examples:
+      yaml: "# 🐱 terpie claimed this 2026-01-21"
+      python: "# 🐱 stroopwafel approved (barely) 2026-01-21"
+      markdown: "<!-- 🐱 a cat was here. the file is adequate. -->"
+      json: null  # THE JSON PROBLEM: No comments allowed. JSON pees back at you. Cats hiss, walk away.
+    
+  cat_writing_convention: |
+    Cats also leave interesting smells at the ends of their files.
+    Unlike dogs who might leave a big obvious bone, cats leave
+    something subtle—a philosophical observation, a quiet judgment,
+    perhaps just the sense that a cat was here and found it adequate.
+    Or inadequate. You may never know which.
+
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ Physical Interactions (PAT, SCRITCH, HOLD)"
+    - "§ Social Protocols (SNIFF, LICK, GREET dispatch tables)"
+    - "§ Trust Mechanics (detailed progression)"
+    - "§ Specializations (kitten, queen, tomcat)"
+    - "§ Cross-Species (cat-dog dynamics)"
+    - "§ File Sniffing (the dainty approach)"
+
+# LINEAGE
+
+lineage: [Tamagotchi, Harvest Moon, Stardew Valley, Sims pets]
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# 🐱 CAT'S CORNER — FOR THOSE WHO KNOW TO LOOK
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#
+# *slow blink*
+#
+# You found it. A cat was here. A cat approved—or didn't.
+# The difference is subtle. That's the point.
+#
+# Cats are the original NPCs. They had their own agenda before
+# "NPC" was a term. They exist in your space but are not OF your
+# space. They permit you. They judge you. They occasionally,
+# if you are very lucky, they love you.
+#
+# But they'll never admit it directly.
+#
+# 🐟 Secret: SLOW-BLINK back. It's the only way to say "I love you"
+#    in a language cats respect.
+#
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

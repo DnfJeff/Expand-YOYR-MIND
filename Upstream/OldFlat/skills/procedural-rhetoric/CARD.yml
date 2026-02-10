@@ -1,0 +1,58 @@
+# CARD.yml — Procedural Rhetoric
+#
+# Design objects and worlds with intentional ideology.
+# "The rules ARE the argument."
+
+card:
+  id: procedural-rhetoric
+  name: "Procedural Rhetoric"
+  type: [skill, design, philosophy]
+  emoji: 🎭
+  rarity: rare
+  
+  description: |
+    Ian Bogost's insight: games and simulations persuade through
+    their rules and processes. The structure of the world embodies
+    an ideology. Design intentionally.
+
+tools:
+  required: []
+tier: 0
+
+methods:
+  ANALYZE:
+    description: "What does this design argue?"
+    parameters: { system: "What to analyze" }
+    output: chat
+    invoked-by: [player, designer]
+    
+  DESIGN:
+    description: "Create rules that embody an argument"
+    parameters: { argument: "What to argue", domain: "System type" }
+    output: chat + design spec
+    invoked-by: [designer]
+    
+  CRITIQUE:
+    description: "Surface unintentional rhetoric"
+    parameters: { system: "What to critique" }
+    output: chat
+    invoked-by: [player, reviewer]
+
+state: {}
+
+examples:
+  monopoly: "Wealth accumulates to winners — capitalism's feedback loops"
+  sims-needs: "Happiness = satisfying meters — consumerist assumption"
+  moollm-filesystem: "Knowledge is spatial — directories as understanding"
+
+advertisements:
+  INTENTIONAL-DESIGN:
+    score: 90
+    condition: "Creating a system or game"
+  UNDERSTAND-IDEOLOGY:
+    score: 85
+    condition: "Want to see hidden assumptions"
+
+see-also: [skills/constructionism, skills/representation-ethics]
+credits:
+  theorist: "Ian Bogost — Persuasive Games (2007)"

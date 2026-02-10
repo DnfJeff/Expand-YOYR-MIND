@@ -1,0 +1,39 @@
+# GLANCE.yml — representation-ethics
+# Full file: CARD.yml (466 lines) | SKILL.md
+# ⚖️ "Activate traditions, don't impersonate."
+
+what: |
+  Ethics of simulating people: dignity, consent, context.
+  80+ K-lines from research (Willer, Shanahan, Lazar, Wang, Park).
+  The Sims proved ethical person-sim is possible.
+
+why: |
+  - Know when representation is ethical vs problematic
+  - Use proper disclosure (🤖 Robot Rule, framing)
+  - Reference wisdom without puppeteering
+  - 'Navigate consent hierarchy (self → explicit → public → private → deceased)'
+
+when:
+  - '"Can I simulate this person?" → consent-hierarchy.yml'
+  - '"Is this impersonation ethical?" → framing-spectrum.yml'
+  - '"How to mark simulated speech?" → emoji-disclosure.yml'
+  - '"Doing celebrity/drag tribute?" → snatch-game.yml'
+  - '"Private fantasy play?" → private-imagination-play.yml'
+
+consent_hierarchy:
+  1_self: "You own your digital self. Full freedom."
+  2_explicit: "Published consent with terms. Honor terms."
+  3_public: "Public figures: public words only. K-line, not persona."
+  4_private: "Private people: explicit consent or fictional wrapper."
+  5_deceased: "Cannot consent. Invoke tradition with reverence."
+
+robot_rule: |
+  🤖 Einstein: "God does not play dice..." (simulated)
+  💬 Einstein: "God does not play dice..." (verified quote)
+  Framing IS disclosure: 👑 drag, 🎭 actor, 🃏 satire, 📖 fiction
+
+the_test: |
+  Would a reasonable person be deceived about whether this is
+  the real person's actual view? If yes → problematic.
+
+tier: 0

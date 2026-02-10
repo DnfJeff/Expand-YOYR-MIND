@@ -1,0 +1,62 @@
+# SLIDESHOW.yml — Machine-Readable Slideshow Definition
+#
+# This is the LEFT EYE — the source of truth.
+# SLIDESHOW.md (the RIGHT EYE) is generated from this file.
+# Run: SYNC SLIDESHOW [directory] to regenerate the MD narrative.
+
+type: slideshow
+name: "{{title}}"
+tagline: "{{tagline}}"
+location: {{room_id}}
+
+nature:
+  physical: false
+  navigable: false
+  browseable: true
+  atmospheric: true
+
+# Photo entries — each is a subdirectory with PHOTO.yml + PHOTO.md
+contents:
+{{#each photos}}
+  - dir: "{{dir}}"
+    subject: "{{subject}}"
+    mood: {{mood}}
+    {{#if role}}role: {{role}}{{/if}}
+    {{#if image}}image: "{{image}}"{{/if}}
+    {{#if status}}status: {{status}}{{/if}}
+{{/each}}
+
+# Narrative hints for SLIDESHOW.md generation
+narrative:
+  opening_quote: "{{opening_quote}}"
+  closing_quote: "{{closing_quote}}"
+  style_notes: |
+    {{style_notes}}
+  overview: |
+    {{overview}}
+
+# Compiled output settings
+compiled:
+  github_links:
+    base: "https://raw.githubusercontent.com/SimHacker/moollm/main"
+  include:
+    - prompt_full
+    - sources_yaml
+    - sources_md
+    - mining_all
+    - simulated_exif
+
+# TEMPLATE INSTRUCTIONS
+#
+# Required: {{title}}, {{room_id}}, {{photos}}
+# Optional: {{tagline}}, {{opening_quote}}, {{closing_quote}}, {{style_notes}}, {{overview}}
+#
+# Photo fields:
+#   dir       — subdirectory name (required)
+#   subject   — what the photo shows
+#   mood      — emotional register
+#   role      — COVER_PHOTO, ESTABLISHING, DETAIL, TRANSITION, CLIMAX, CLOSING
+#   image     — primary image filename
+#   status    — planned, generating, generated, curated
+#
+# After creating: run SYNC SLIDESHOW to generate SLIDESHOW.md

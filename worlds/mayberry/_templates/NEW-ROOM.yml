@@ -1,0 +1,93 @@
+# Copy this file into a new directory to create a room.
+# Example: copy _templates/NEW-ROOM.yml  my-saloon/ROOM.yml
+#
+# A room is a directory. It needs 3 files:
+#   ROOM.yml   — what the place IS (this file)
+#   CARD.yml   — what you can DO here (advertisements)
+#   GLANCE.yml — 8-line summary for fast loading
+#
+# See NEW-CARD.yml and NEW-GLANCE-ROOM.yml in this folder.
+
+# --- Ethical / behavioral framing ---
+# How should characters behave in this space?
+framing:
+  context: ""
+  # What kind of place is this? Examples:
+  #   domestic_sanctuary, commercial_hub, public_square,
+  #   sacred_space, workplace, outdoor_recreation
+  behavioral_expectation: ""
+  # What's the default behavior here? Examples:
+  #   gossip_and_grooming, quiet_reflection, commerce,
+  #   recreation, worship, family_dining
+  conflict_style: ""
+  # How do conflicts play out in this space? Examples:
+  #   rumor_escalation, quiet_tension, loud_argument,
+  #   avoided_entirely, physical_comedy
+
+# --- Background activities (always running) ---
+ambient_ads:
+  - id: ATMOSPHERE
+    description: "Describe the constant background activity"
+    score: 0.3
+    # Ambient scores are low (0.1-0.5) — they set mood,
+    # they don't drive action
+    always_on: true
+    effect: "What this background activity does to people here"
+
+# --- The room itself ---
+room:
+  name: ""
+  # Display name. "Floyd's Barbershop", "The Front Porch"
+
+  type: ""
+  # One of: domestic, commercial, outdoor, public, private,
+  #         sacred, institutional, entertainment, transit
+
+  atmosphere: |
+    # 3-5 sentences. Present tense. Be specific.
+    # What does it LOOK like? SOUND like? SMELL like?
+    # What objects catch the eye? What's the lighting?
+    # The LLM uses this to generate scene descriptions.
+    #
+    # Example (Floyd's Barbershop):
+    #   Two barber chairs face a wall of mirrors, though only
+    #   one chair ever sees use. The air smells of Barbicide
+    #   and aftershave. Floyd's voice fills the room even when
+    #   nobody asked him a question.
+
+  exits:
+    # Relative directory paths. Each exit = a direction players can GO.
+    # "../" = parent location (back to the street/area this room is in)
+    #
+    # Examples:
+    #   out: ../                      # Back to parent location
+    #   north: ../general-store/      # Sibling room
+    #   upstairs: attic/              # Child room
+    #   back: storage/                # Another child room
+    out: ../
+
+  objects: []
+    # List of object filenames in this directory.
+    # Objects don't need to exist as files yet — the LLM treats
+    # missing ones as atmospheric props.
+    #
+    # Examples:
+    #   - barber-chair.yml
+    #   - magazines.yml
+    #   - radio.yml
+
+  ambient:
+    sound: ""
+    # Background noise. Examples:
+    #   radio_murmur, crickets, traffic, silence, crowd_chatter
+
+    # Add any ambient properties you want. These provide context
+    # for how characters behave in this room. Examples:
+    #   privacy: low
+    #   warmth: cozy
+    #   lighting: dim
+    #   social_gravity: high  # Characters with low social needs are drawn here
+
+  capacity: 6
+  # How many characters fit comfortably. When exceeded,
+  # the room feels crowded (which can affect behavior).

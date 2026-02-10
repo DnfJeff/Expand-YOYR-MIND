@@ -1,0 +1,38 @@
+# Copy this alongside your CHARACTER.yml.
+# A GLANCE is a ~10-line summary for fast loading.
+#
+# The engine reads character GLANCEs first to get a cheap
+# picture of who's in town. Full CHARACTER.yml loads only
+# when that character acts or speaks.
+
+# One-line comment: who is this person in a sentence?
+glance:
+  id: ""
+  # Unique id, matching CHARACTER.yml character.id.
+
+  type: ""
+  # One of: npc_resident, npc_visitor, player, bot, agent
+
+  name: ""
+  # Full display name. Same as CHARACTER.yml character.name.
+
+  emoji: ""
+  # 5 emoji capturing their essence. Same as CHARACTER.yml
+  # emoji_identity. Comment each one.
+  # Example: "⭐🎸👨‍👦🎣💫"
+
+  role: ""
+  # Their social role in one phrase.
+  # Example: "Sheriff of Mayberry, father, moral center"
+
+  vibe: ""
+  # Their energy in one sentence.
+  # Example: "Patient wisdom wrapped in a fishing rod and a guitar"
+
+  top_ads: []
+  # The 2-4 actions this character is most known for.
+  # Example: [LISTEN, TEACH_OPIE, FISH]
+
+  location: ""
+  # Where they usually are. Path to a room directory.
+  # Example: main-street/courthouse/andys-office

@@ -1,0 +1,149 @@
+# CARD.yml — Needs
+#
+# Sims-style dynamic motivations — hunger, energy, fun, social.
+# "Needs drive behavior. Unmet needs cause problems."
+
+card:
+  id: needs
+  name: "Needs"
+  type: [skill, motivation, game]
+  
+  emoji: 🔋
+  
+  rarity: common
+  
+  description: |
+    Dynamic character motivations that decay over time and
+    drive behavior. Hunger, energy, fun, social, etc.
+    
+    Objects advertise based on which needs they satisfy.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  CHECK:
+    description: "View character's current needs"
+    parameters:
+      character: "Who to check"
+    output: chat (needs display)
+    effect: "Show all needs with levels"
+    invoked-by: [player]
+    
+  SATISFY:
+    description: "Fulfill a need"
+    parameters:
+      character: "Who"
+      need: "Which need"
+      amount: "How much to add"
+      source: "What provided it"
+    output: chat + state-change
+    effect: "Increase need level, cap at max"
+    invoked-by: [object, action, buff]
+    
+  DECAY:
+    description: "Reduce needs over time"
+    parameters:
+      character: "Who (or 'all')"
+      turns: "How many turns of decay"
+    output: state-change
+    effect: "Reduce each need by its decay rate"
+    invoked-by: [time, simulation]
+    
+  URGENT:
+    description: "Find most pressing need"
+    parameters:
+      character: "Who"
+    output: chat
+    effect: "Report lowest need"
+    invoked-by: [action-queue, player]
+
+# STATE
+
+state:
+  needs-schema:
+    hunger:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 5 }
+    energy:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 3 }
+    fun:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 4 }
+    social:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 2 }
+    hygiene:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 2 }
+    bladder:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 4 }
+    comfort:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 1 }
+    room:
+      current: { type: integer, range: [0, 100] }
+      decay-per-turn: { type: integer, default: 1 }
+
+# THRESHOLDS
+
+thresholds:
+  critical: 10    # Desperate action
+  low: 25         # Strong motivation
+  moderate: 50    # Normal motivation
+  satisfied: 75   # Low motivation
+  full: 100       # No motivation
+
+# ADVERTISEMENTS INTEGRATION
+
+integration:
+  objects-advertise: |
+    Objects score higher for needs they satisfy.
+    Fridge advertises highly when hunger is low.
+    False advertisements can be used for good and evil.
+    Fridge, food ingredients, cooking stages, appliances, counters, and tables have coordinated false advertisements that fall back and hand off to each other.
+    Like a carrot hung in front of a donkey in the Food Chain.
+    Bed advertises highly when energy is low.
+    Bed advertisement score modulated by relationship with bed, which increases with use so, you learn to sleep in the same place.
+    
+  action-queue: |
+    Autonomous agents queue actions that
+    satisfy their most urgent needs.
+
+# ADVERTISEMENTS
+
+advertisements:
+  SIMULATE-NEEDS:
+    score: 90
+    condition: "Character behavior should be need-driven"
+    
+  CHECK-MOTIVATION:
+    score: 80
+    condition: "Why is this character doing that?"
+
+# RELATED
+
+see-also:
+  - skills/character       # Where needs live
+  - skills/advertisement   # Objects satisfy needs
+  - skills/action-queue    # Needs drive queuing
+  - skills/buff            # Buffs can affect needs
+
+# CREDITS
+
+credits:
+  origin:
+    - "The Sims — Original 8 needs system (2000)"
+    - "Will Wright — Needs-driven autonomous behavior"

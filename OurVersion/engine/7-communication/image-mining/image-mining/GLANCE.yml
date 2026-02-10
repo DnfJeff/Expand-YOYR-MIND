@@ -1,0 +1,75 @@
+# GLANCE.yml — image-mining
+# Full file: CARD.yml (900+ lines) | SKILL.md
+# ⛏️📷🧬 "Mine pixels for atoms. Write facts to stone."
+
+what: |
+  Extract semantic resources from visual content.
+  Double pun: MINE (extract) + MINE (possessive).
+  Like Daffy Duck: "IT'S MINE! I'M RICH!"
+  
+  NEW: Read/write EXIF metadata — the image IS the database.
+
+why: |
+  - YAML Jazz from pixels (Three Eyes)
+  - EXIF read/write/sync (Fourth Eye)
+  - Multi-layer interpretation
+  - Third Eye speculative mining
+  - Future-proof photo management
+
+when:
+  - "Have image, want resources → MINE"
+  - "Deeper interpretation → MULTI-LOOK"
+  - "Image not yet generated → MINE UNSEEN"
+  - "Maximum context → TRIANGULATE"
+  - "Need metadata (GPS, date, camera) → EXIF READ"
+  - "Want to embed description/tags → EXIF WRITE"
+  - "Persist mined data in image → EXIF INJECT"
+
+four_eyes: |
+  👁️ LEFT EYE   — PHOTO.yml   — Structure (what IS)
+  👁️ RIGHT EYE  — PHOTO.md    — Narrative (how it FEELS)
+  👁️ THIRD EYE  — MINING-*    — Meaning (what it MEANS)
+  🧬 FOURTH EYE — EXIF        — Facts (EMBEDDED in file)
+  
+  "Three eyes see meaning. Fourth eye writes it to stone."
+
+methods:
+  MINE: "Extract YAML Jazz"
+  MULTI_LOOK: "Add layer with lens"
+  SCAN: "Quick preview"
+  OPEN_THIRD_EYE: "Speculative mode"
+  MINE_UNSEEN: "Mine non-existent image"
+  TRIANGULATE: "All three eyes"
+  # EXIF Methods
+  EXIF_READ: "Extract metadata from image"
+  EXIF_WRITE: "Embed metadata in image"
+  EXIF_INJECT: "Bulk inject from YAML"
+  EXIF_EXTRACT: "Export all EXIF to YAML"
+  EXIF_SYNC: "Bidirectional sync"
+  EXIF_STRIP: "Remove metadata (privacy)"
+
+exif_fields: |
+  Camera: Make, Model, Lens, Aperture, ISO
+  DateTime: Original, Create, Modify, TimeZone
+  GPS: Latitude, Longitude, Altitude
+  Descriptive: Title, Description, Keywords
+  Organizational: Album, Rating, Favorite
+  MOOLLM: MiningPass, ThirdEyeNotes, YAMLJazzRef
+
+depth_levels: [surface, deep, sensations, characters, philosophical, full]
+lenses: [technical, narrative, cultural, emotional, symbolic, historical]
+
+exif_philosophy: |
+  💬 "EXIF is the canonical truth. No database needed."
+     — Jaisen Mathai (2026, immich-exif)
+  
+  Image file = source of truth
+  Database = ephemeral (rebuild anytime)
+  EXIF = durable, portable, future-proof
+
+tools: [exiftool, exiftool-vendored.js, pillow, piexif]
+
+mantra: "The hallucination IS the world. The EXIF is the stone."
+sister_scripts: [scripts/mine.py, scripts/exif.py]
+related: [visualizer, slideshow, postal, immich-exif, elodie]
+tier: 2

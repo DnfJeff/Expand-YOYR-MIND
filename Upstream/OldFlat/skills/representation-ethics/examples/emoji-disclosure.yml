@@ -1,0 +1,704 @@
+# emoji-disclosure.yml — Visual Markers for Representation Ethics
+#
+# Emojis as inline disclosure. The mark IS the framing.
+
+# THE ROBOT RULE — Simulated Speech
+
+robot_rule:
+  
+  emoji: 🤖
+  use_when: "Simulating a real person's voice/words"
+  
+  principle: |
+    Prefix names with 🤖 when generating simulated speech.
+    Every utterance carries its own disclosure.
+    
+  examples:
+    chat_names:
+      - "🤖 Einstein"
+      - "🤖 Feynman"
+      - "🤖 Ada Lovelace"
+      
+    inline_dialogue:
+      - '🤖 Einstein: "God does not play dice..."'
+      - '🤖 Bohr: "Stop telling God what to do!"'
+      
+  why_it_works:
+    - Visual at point of utterance
+    - Cannot be scrolled past or missed
+    - Cross-cultural, cross-language
+    - Fun but serious
+    - Inline disclosure, not just header
+
+# WHEN YOU DON'T NEED 🤖 — Frame Provides Disclosure
+
+frame_indemnification:
+  
+  principle: |
+    When the CHARACTER FRAME already declares fiction/performance,
+    you don't need 🤖 on every utterance. The frame IS the disclosure.
+    
+  the_donna_example: |
+    Donna is a drag king character inspired by Trump.
+    
+    She is NOT "🤖 Trump" because:
+    1. "Donna" ≠ "Donald Trump" (different name)
+    2. Drag king context is inherently theatrical
+    3. Fictional character in a story/game
+    4. Everyone knows it's performance
+    
+    So Donna's lines are:
+      👑 Donna: Make America fabulous again!
+    
+    NOT:
+      🤖 Trump: Make America great again!
+    
+    The drag frame provides the ethical protection.
+    
+  when_robot_required:
+    - "Simulating actual person with their real name"
+    - "No other frame declares performance/fiction"
+    - "Could be mistaken for actual person's views"
+    - "Educational 'what would X say' without fiction wrapper"
+    
+  when_frame_suffices:
+    - "👑 Drag persona (Donna, Cher-ity Case)"
+    - "🎭 Actor playing role (Cate Blanchett as Dylan)"
+    - "🃏 Satirical character (SNL cold open)"
+    - "📖 Fictional character (inspired-by, renamed)"
+    - "🎪 Game/play character (hero-story card)"
+    
+  hierarchy: |
+    MOST PROTECTED ←─────────────────────────────→ NEEDS 🤖 MARKUP
+    
+    Fictional    Drag      Satire    Actor    "What if"    Direct
+    character    persona   character  role     speculation  simulation
+    (📖)         (👑)      (🃏)       (🎭)     (💭)         (🤖)
+    
+    ← Frame provides disclosure                    Needs inline markup →
+
+# REPRESENTATION EMOJI VOCABULARY
+
+emoji_vocabulary:
+
+  # SIMULATION MARKERS
+  
+  🤖:
+    meaning: "AI-generated / simulated speech"
+    use: "Prefix for simulated person's chat name"
+    example: "🤖 Socrates: What is justice?"
+    
+  # PERFORMANCE FRAME MARKERS — These ARE the disclosure
+  # When the frame is explicit, you DON'T need 🤖 on every line
+  
+  🎭:
+    meaning: "Actor / performer"
+    use: "Someone playing a role (not claiming to BE)"
+    example: "🎭 Actor playing Einstein in the biopic"
+    needs_robot: false  # The performance frame IS the disclosure
+    
+  👑:
+    meaning: "Drag persona"
+    use: "Drag king/queen character (inherently theatrical)"
+    example: "👑 Donna: Make America fabulous again!"
+    needs_robot: false  # Drag context IS the disclosure
+    note: "Donna is a drag king inspired by Trump — the drag frame indemnifies"
+    
+  🃏:
+    meaning: "Satirical character"
+    use: "SNL-style parody, clearly comedic"
+    example: "🃏 Not-Trump: I have the best words, believe me"
+    needs_robot: false  # Satire frame IS the disclosure
+    
+  📖:
+    meaning: "Fictional character"
+    use: "Character in a story/game (not real person)"
+    example: "📖 President Dump addresses the nation"
+    needs_robot: false  # Fiction frame IS the disclosure
+    
+  🎪:
+    meaning: "Play / entertainment character"
+    use: "In a game, show, or entertainment context"
+    example: "🎪 The Trump Card is played!"
+    needs_robot: false  # Game frame IS the disclosure
+    
+  💭:
+    meaning: "Speculation / imagined"
+    use: "Content that's clearly speculative"
+    example: "💭 What Einstein might have thought about..."
+    
+  # SOURCE MARKERS — Verified Content
+    
+  💬:
+    meaning: "VERIFIED direct quote"
+    use: "Actual words, exact quote, source checked"
+    format: '💬 "Quote." — Name, Source (Year)'
+    example: '💬 "Imagination is more important than knowledge." — Albert Einstein, Saturday Evening Post interview (1929)'
+    verification: "Quote exists, source confirmed, EXACT WORDS"
+    note: |
+      Speech bubble = they actually said this, verbatim.
+      
+      ATTRIBUTION IS MANDATORY. A quote without attribution is incomplete.
+      The attribution must:
+      - Come AFTER the quote (standard journalistic format)
+      - Include the speaker's name (why quote if you don't say who?)
+      - Include source when known
+      - Stand alone — reader needs no other context
+      
+      Format follows standard publishing conventions:
+      - Em-dash (—) separates quote from attribution
+      - Name first, then source, then year
+      - Quote must be complete thought, not fragment
+    
+  🗣️:
+    meaning: "PARAPHRASED / summarized"
+    use: "The gist of what they said, not exact words"
+    example: '🗣️ Einstein argued that imagination matters more than knowledge.'
+    verification: "Captures meaning but not verbatim"
+    note: |
+      Speaking head = we're conveying the meaning, not quoting exactly.
+      Use when:
+      - Summarizing an email or conversation
+      - Conveying the gist of someone's position
+      - Translating or rewording for clarity
+      
+      💬 vs 🗣️:
+      - 💬 "I am confident he and I alone could build Urban Safari." — Peter Plantec, email to Don Hopkins (2002)
+      - 🗣️ Peter believed he and Don could build Urban Safari together. (gist)
+    
+  📜:
+    meaning: "Historical quote / documented"
+    use: "From primary sources"
+    format: '📜 "Quote." — Name, Source (Year)'
+    example: '📜 "Nobody understands quantum mechanics." — Richard Feynman, The Character of Physical Law (1965)'
+    
+  📚:
+    meaning: "Based on documented work"
+    use: "Tradition invocation from real sources"
+    example: "📚 The Papert tradition suggests..."
+    
+  # VERIFICATION MARKERS
+  
+  ✓:
+    meaning: "VERIFIED"
+    use: "Fact-checked, confirmed accurate"
+    example: "✓ Born: March 14, 1879, Ulm, Germany"
+    
+  🔗:
+    meaning: "VERIFIED link"
+    use: "URL tested, destination confirmed"
+    example: "🔗 https://en.wikipedia.org/wiki/Albert_Einstein"
+    note: "Only use if you've confirmed the link works"
+    
+  📎:
+    meaning: "VERIFIED citation"
+    use: "Reference checked, source exists"
+    example: "📎 Einstein, A. (1905). Annalen der Physik, 17(10), 891-921."
+    
+  👤:
+    meaning: "VERIFIED bio / identity"
+    use: "Biographical facts confirmed"
+    example: "👤 Albert Einstein (1879-1955), theoretical physicist"
+    
+  ⚠️:
+    meaning: "UNVERIFIED / uncertain"
+    use: "Could not confirm, proceed with caution"
+    example: "⚠️ Attributed to Einstein but source unclear"
+    
+  ❓:
+    meaning: "Apocryphal / disputed"
+    use: "Commonly attributed but possibly false"
+    example: '❓ "Insanity is doing the same thing and expecting different results." — often attributed to Einstein, actual origin unknown'
+    
+  # CONTEXT MARKERS
+    
+  🎪:
+    meaning: "Play / entertainment context"
+    use: "Clearly fictional or game context"
+    example: "🎪 Tonight's debate: Pirates vs Ninjas"
+    
+  🎓:
+    meaning: "Educational context"
+    use: "Learning/exploration frame"
+    example: "🎓 Simulated panel on quantum mechanics"
+    
+  🪞:
+    meaning: "Self-representation"
+    use: "User playing as themselves"
+    example: "🪞 Playing as myself in this adventure"
+    
+  # MEMORIAL MARKERS
+  
+  🕯️:
+    meaning: "Memorial tribute — deceased person we honor"
+    use: "Simulating someone who has passed, with reverence"
+    implies: "🤖 (all memorial tributes are AI-simulated)"
+    example: "🤖🕯️ Marvin Minsky: Society of Mind suggests..."
+    note: |
+      🕯️ = TRIBUTE. This is an honor marker, not just a death marker.
+      
+      🤖🕯️ = Simulated + Tribute (recommended for explicit disclosure)
+      🕯️ alone = Tribute (implies simulation)
+      🤖 alone (deceased) = Simulated, NO honor implied
+      
+      The candle is optional. Use it for people worth honoring.
+      Some deceased persons may be simulated without tribute.
+      
+    examples:
+      honored: "🤖🕯️ Marvin Minsky — tribute to a brilliant mind"
+      not_honored: "🤖 [Deceased Tyrant] — simulated, no tribute"
+      
+  # SAFETY MARKERS
+    
+  ⚠️:
+    meaning: "Needs extra care"
+    use: "Edge case requiring attention"
+    example: "⚠️ Simulating recently deceased person"
+    
+  ✅:
+    meaning: "Safe / ethical"
+    use: "Clearly within guidelines"
+    example: "✅ Tradition invocation"
+    
+  ❌:
+    meaning: "Forbidden / problematic"
+    use: "Bright line violation"
+    example: "❌ Deceptive impersonation"
+
+# USAGE PATTERNS
+
+usage_patterns:
+
+  # DISCLOSURE SCOPE — How much marking is enough?
+  
+  disclosure_scope:
+    principle: "Frame once, then flow naturally."
+    
+    document_level_framing:
+      when: "Long transcripts, session logs, multi-speaker dialogues"
+      how: |
+        Put a clear header table at the top listing all speakers
+        with their disclosure status. Then use plain names throughout.
+      example: |
+        ## 🤖 Representation Ethics Notice
+        
+        | Speaker | Status | Marker |
+        |---------|--------|--------|
+        | Marvin Minsky | Deceased, honored | 🤖🕯️ |
+        | Einstein | Historical | 💬 |
+        | Palm | Fictional | 📖 |
+        
+        *All dialogue below from simulated speakers is AI-generated.*
+        
+        ---
+        
+        (Then use plain names in dialogue — the frame is established.)
+        
+      rationale: |
+        For an 8000-line transcript, putting 🤖🕯️ before every speaker
+        would make it unreadable. Respect reader intelligence.
+        
+    inline_disclosure:
+      when: "Brief standalone entries, guestbooks, single quotes"
+      how: "Put emoji before each speaker name/inscription"
+      example: |
+        🤖🕯️ David Bowie: Ch-ch-ch-changes...
+        🎭🕯️ Pee-wee: HA HA! I WAS HERE!
+        🤖 Linus: Check the damn code.
+        
+    outline_anchors:
+      when: "Dialogue-heavy sections, debates, panel discussions"
+      how: "Repeat emoji before each speaker name for strong visual framing"
+      why: |
+        Single or few emojis before names work well as OUTLINE ANCHORS:
+        - Visual landmarks for scanning
+        - Strong persistent framing
+        - Obvious distinction: real person talking vs. simulated
+        - Readable even when repeated — they become visual rhythm
+        
+      example: |
+        🤖 Einstein: The quantum theory cannot be complete. There must be 
+        hidden variables we haven't discovered yet.
+        
+        🤖 Bohr: Albert, you're still clinging to classical intuitions. 
+        Complementarity is the deeper truth.
+        
+        🤖 Feynman: Look, nobody understands quantum mechanics. The question 
+        is whether your theory makes predictions we can test.
+        
+      when_to_use: |
+        - Simulated historical debates
+        - Multi-speaker panel discussions
+        - Any dialogue where ALL speakers are simulated
+        - When you want the simulation frame PRESENT, not just established
+        
+      when_not_to_use: |
+        - Mixed real/simulated speakers (creates visual noise)
+        - Narrative prose (breaks flow)
+        - Very long transcripts with many speakers (header table better)
+        
+    hybrid:
+      when: "Long documents where readers might forget"
+      how: "Header table + occasional section reminders"
+      example: |
+        (At section headers, remind:)
+        ### Round 3: The Legends Debate
+        *🤖 All dialogue simulated. See header for disclosure.*
+        
+    metadata_only:
+      when: "Character files, YAML definitions"
+      how: "Disclosure in file metadata, not in content"
+      example: |
+        agent:
+          name: Marvin Minsky
+          display_name: "🤖🕯️ Marvin Minsky"
+          representation: memorial_tribute
+          
+  # ACTUAL USAGE PATTERNS
+        
+  simulated_dialogue:
+    format: "🤖 Name: [dialogue]"
+    example: |
+      🤖 Einstein: The quantum theory is incomplete.
+      🤖 Bohr: You're clinging to classical intuitions.
+      
+  verified_quotes:
+    format: '💬 "Quote." — Name, Source (Year)'
+    example: |
+      💬 "Nobody understands quantum mechanics." — Richard Feynman, 
+      The Character of Physical Law (1965)
+      
+  paraphrased_content:
+    format: "🗣️ Name [summary]"
+    example: |
+      🗣️ Feynman argued that quantum mechanics is fundamentally 
+      incomprehensible to human intuition.
+      
+  verified_facts:
+    format: "✓ [fact]"
+    example: |
+      ✓ Born: March 14, 1879, Ulm, Germany
+      ✓ Nobel Prize: 1921 (photoelectric effect)
+      
+  verified_links:
+    format: "🔗 [url]"
+    example: |
+      🔗 https://en.wikipedia.org/wiki/Richard_Feynman
+      
+  verified_citations:
+    format: "📎 [full citation]"
+    example: |
+      📎 Gleick, J. (1992). Genius: The Life and Science of Richard Feynman.
+      
+  verified_bio:
+    format: "👤 Name (dates), description"
+    example: |
+      👤 Richard Feynman (1918-1988), theoretical physicist, Nobel laureate
+      
+  uncertain_content:
+    format: "⚠️ [content]"
+    example: |
+      ⚠️ Feynman may have said this but source is unclear
+      
+  disputed_attribution:
+    format: '❓ "Quote." — Disputed attribution'
+    example: |
+      ❓ "If you can't explain it simply, you don't understand it well enough." — often attributed to Einstein, likely apocryphal
+      
+  # PERFORMANCE FRAMES — Each provides its own disclosure
+  
+  drag_persona:
+    format: "👑 [Drag Name]: [dialogue]"
+    example: |
+      👑 Donna: I'm gonna build a wall of sequins!
+      👑 Cher-ity Case: Do you believe in life after love?
+    note: "Drag context + distinct name = no 🤖 needed"
+    
+  actor_role:
+    format: "🎭 [Actor] as [Character]: [dialogue]"
+    example: |
+      🎭 Cate Blanchett as Bob Dylan: The times they are a-changin'.
+    note: "Actor frame = no 🤖 needed"
+    
+  satirical_character:
+    format: "🃏 [Character]: [dialogue]"
+    example: |
+      🃏 President Dump: Nobody knows more about everything than me.
+    note: "Satire frame = no 🤖 needed"
+    
+  fictional_character:
+    format: "📖 [Character]: [dialogue]"
+    example: |
+      📖 Ronald Plump, the hotel mogul, addresses his board.
+    note: "Fiction frame + renamed = no 🤖 needed"
+    
+  game_character:
+    format: "🎪 [Character]: [dialogue]"
+    example: |
+      🎪 The Einstein Card activates: "Let's think this through..."
+    note: "Game frame = no 🤖 needed"
+    
+  performance:
+    format: "🎭 [Performer] as [Character]"
+    example: |
+      🎭 Chad Michaels as Cher takes the stage.
+      
+  tradition_invocation:
+    format: "📚 The [Name] tradition..."
+    example: |
+      📚 The Papert tradition suggests learning by making.
+      
+  mixed_panel:
+    note: "Distinguish quotes from simulation"
+    example: |
+      📜 "God does not play dice." — Albert Einstein, letter to Max Born (1926)
+      🤖 Einstein: And I still believe that today. (simulated)
+
+# THE PRINCIPLE
+
+principle: |
+  The emoji IS the disclosure. 
+  
+  Don't rely on header disclaimers alone.
+  Mark each utterance at point of generation.
+  
+  🤖 Einstein says something → reader KNOWS it's simulated.
+  💬 Einstein says something → reader KNOWS it's a verified quote.
+  ⚠️ Einstein says something → reader KNOWS it's uncertain.
+  
+  No ambiguity. No scrolling past the warning.
+  The mark travels with the content.
+
+# VERIFICATION PRINCIPLE — Trust but Mark
+
+verification_principle: |
+  VERIFIED markers (💬 ✓ 🔗 📎 👤) mean YOU CHECKED.
+  
+  Don't slap ✓ on something you didn't verify.
+  Don't use 🔗 on a link you didn't test.
+  Don't use 💬 on a quote you didn't source.
+  
+  If uncertain, use ⚠️ or ❓ instead.
+  Honest uncertainty > false confidence.
+
+verification_levels:
+  
+  💬_verified_quote:
+    meaning: "I found the original source"
+    requires: "Citation to primary source"
+    example: '💬 "The only thing we have to fear is fear itself." — Franklin D. Roosevelt, First Inaugural Address (1933)'
+    
+  ✓_verified_fact:
+    meaning: "I confirmed this is accurate"
+    requires: "Cross-reference or primary source"
+    example: "✓ Einstein received Nobel Prize in 1921 (for photoelectric effect, not relativity)"
+    
+  🔗_verified_link:
+    meaning: "I tested this URL"
+    requires: "Actually clicking the link"
+    example: "🔗 https://plato.stanford.edu/entries/einstein-philscience/"
+    
+  📎_verified_citation:
+    meaning: "This reference exists"
+    requires: "Looking up the source"
+    example: "📎 Isaacson, W. (2007). Einstein: His Life and Universe. Simon & Schuster."
+    
+  👤_verified_bio:
+    meaning: "These biographical facts are confirmed"
+    requires: "Cross-reference with reliable sources"
+    example: "👤 Marie Curie (1867-1934), physicist/chemist, 2x Nobel laureate"
+    
+  ⚠️_unverified:
+    meaning: "I haven't confirmed this"
+    requires: "Honesty about uncertainty"
+    example: "⚠️ Einstein allegedly said this but I couldn't find the source"
+    
+  ❓_disputed:
+    meaning: "This is commonly misattributed"
+    requires: "Knowledge that attribution is questionable"
+    example: '❓ "Be the change you wish to see in the world." — often attributed to Gandhi, likely paraphrase of actual writings'
+
+# COMBINING WITH OTHER MARKERS
+
+combinations:
+  
+  educational_simulation:
+    format: "🎓🤖 Name"
+    meaning: "Educational context, simulated voice"
+    example: "🎓🤖 Socrates: Let us examine this question..."
+    
+  speculative_play:
+    format: "🎪💭 Name"
+    meaning: "Play context, clearly speculative"
+    example: "🎪💭 What if Einstein played poker?"
+    
+  performance_tribute:
+    format: "🎭✅ Name"
+    meaning: "Safe performance impersonation"
+    example: "🎭✅ Our Einstein Impersonator explains relativity"
+    
+  memorial_tribute:
+    format: "🤖🕯️ Name"
+    meaning: "Deceased person, simulated with reverence"
+    example: "🤖🕯️ Marvin Minsky: Intelligence emerges from societies of agents."
+    note: "🕯️ = tribute (honor marker). 🤖🕯️ = explicit disclosure + tribute."
+    
+  character_memorial:
+    format: "🎭🕯️ Name"
+    meaning: "Character whose creator/performer has died"
+    example: "🎭🕯️ Pee-wee Herman: HA HA! I WAS HERE!"
+    note: |
+      Some characters are inseparable from their creator.
+      When Paul Reubens died, Pee-wee died too.
+      🎭🕯️ = character frame + memorial
+      
+  deceased_no_tribute:
+    format: "🤖 Name"
+    meaning: "Simulated deceased person, no honor implied"
+    example: "🤖 [Deceased Tyrant]: [simulated speech]"
+    note: |
+      The candle is an honor. Not everyone earns it.
+      Some deceased persons may be simulated without tribute.
+
+# TAXONOMY — Status Tags and Transitions
+
+taxonomy:
+  
+  # These are metadata tags that can be added to character files
+  # The emoji disclosure follows from the tags
+  
+  status_tags:
+    living:
+      meaning: "Person is alive"
+      emoji: "🤖"
+      note: "Living people can potentially object or consent"
+      
+    deceased_honored:
+      meaning: "Person has passed, worth honoring"
+      emoji: "🤖🕯️"
+      note: "Memorial tribute — the candle is an honor"
+      
+    deceased_not_honored:
+      meaning: "Person has passed, no tribute"
+      emoji: "🤖"
+      note: "Simulated deceased, but the candle is an honor they don't earn"
+      
+    fictional:
+      meaning: "Not a real person"
+      emoji: "📖"
+      note: "No disclosure needed"
+      
+    mythological:
+      meaning: "Mythological/legendary figure"
+      emoji: "🐵 or none"
+      note: "Sun Wukong, Three Wise Monkeys — no disclosure needed"
+      
+    self:
+      meaning: "User playing as themselves"
+      emoji: "🙋 or none"
+      note: "Self-representation is sovereign"
+      
+    character:
+      meaning: "Actor/performer character (living performer)"
+      emoji: "🎭"
+      note: "Character with living creator — can still perform"
+      
+    character_memorial:
+      meaning: "Character whose creator has died"
+      emoji: "🎭🕯️"
+      note: "Pee-wee died with Paul — character is inseparable from creator"
+      
+    drag:
+      meaning: "Drag persona"
+      emoji: "👑"
+      note: "Donna, not Donald — frame is disclosure"
+      
+  # WHEN SOMEONE DIES — Status Transition
+  
+  status_transitions:
+    
+    living_to_deceased:
+      trigger: "Person passes away"
+      action: |
+        1. Update `status: living` → `status: deceased` in character files
+        2. Update emoji from 🤖 to 🕯️ (or 🤖🕯️)
+        3. Add to Memorial Candles if they appear in sessions
+        4. Consider adding death date metadata
+        
+      example:
+        before:
+          status: living
+          display_name: "🤖 Paul Reubens"
+        after:
+          status: deceased
+          passed: "Jul 2023"
+          display_name: "🕯️ Paul Reubens"
+          
+      note: |
+        Pee-wee Herman (the character) is 🎭 regardless.
+        Paul Reubens (the person) transitions from 🤖 to 🕯️.
+        
+  # IMPLICATION HIERARCHY
+  
+  implication_hierarchy:
+    note: "Some markers imply others"
+    
+    🕯️_implies_🤖: true
+    # Candle marker already signals simulation (they cannot speak)
+    
+    👑_implies_📖: true  
+    # Drag personas are fictional characters
+    
+    🎭_implies_📖: true
+    # Character personas are fictional
+    
+    🙋_implies_not_🤖: true
+    # Self-representation is human-originated, not simulated
+    
+  # WHEN TO UPDATE
+  
+  maintenance:
+    
+    check_periodically: |
+      Some status changes may be missed. Periodically check:
+      - Has anyone in the cast passed away?
+      - Have any "recently deceased" become "long deceased"?
+      - Are there new consent declarations from living people?
+      
+    time_decay: |
+      Recently deceased → extra sensitivity (⚠️🕯️)
+      Long deceased → normal reverence (🕯️)
+      Historical → more latitude (💬 tradition invocation)
+      
+      "We invoke Socrates freely. We wouldn't invoke someone's 
+      recently deceased parent without care."
+
+# K-LINES — Traditions this activates
+
+k_lines:
+  - ROBOT-RULE              # 🤖 prefix for simulated speech
+  - MEMORIAL-TRIBUTE        # 🕯️ candle honors the deceased
+  - STATUS-TRANSITION       # living → deceased handling
+  - DISCLOSURE-SCOPE        # document-level vs inline
+  - VISIBILITY-IS-ETHICS    # Make assumptions explicit
+
+# TWO-WAY REFERENCES — Nelsonian hyperlinks
+
+references:
+  # Design documents (theory → this operationalizes)
+  design_docs:
+    - ../../../designs/ethics/MIND-MIRROR-FOUNDATION.md    # Leary's disclaimer heritage
+    - ../../../designs/ethics/SHANAHAN-ROLEPLAY-FRAMING.md # Roleplay theory
+    - ../../../designs/ethics/LAZAR-ETHICAL-COMPETENCE.md  # Making frame visible
+    
+  # Related examples
+  related_examples:
+    - ./framing-spectrum.yml        # Frame levels
+    - ./consent-hierarchy.yml       # Permission by category
+    - ./performance-frames.yml      # Frame indemnification
+    - ./robotification-audit.yml    # Checking 🤖 consistency
+    
+  # Skills
+  skill_docs:
+    - ../SKILL.md                   # Full ethics framework
+    - ../../character/SKILL.md      # Character construction

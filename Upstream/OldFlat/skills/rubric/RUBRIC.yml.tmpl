@@ -1,0 +1,37 @@
+# RUBRIC.yml — Scoring Criteria Definition
+# Defines measurable criteria for evaluating qualitative decisions
+
+rubric:
+  id: {{rubric_id}}
+  name: "{{rubric_name}}"
+  version: 1.0
+  created: "{{timestamp}}"
+  
+  # What is being evaluated?
+  domain: "{{domain}}"
+  purpose: "{{purpose}}"
+  
+  criteria:
+    {{criterion_1_id}}:
+      weight: {{weight_1}}  # Weights must sum to 1.0
+      scale: [1, 2, 3, 4, 5]
+      description: "{{criterion_1_description}}"
+      anchors:
+        5: "{{anchor_5}}"
+        4: "{{anchor_4}}"
+        3: "{{anchor_3}}"
+        2: "{{anchor_2}}"
+        1: "{{anchor_1}}"
+        
+    # Add more criteria as needed...
+    
+  thresholds:
+    accept: 3.5       # Score to accept
+    reject: 2.0       # Score to reject
+    review: [2.0, 3.5]  # Range requiring human review
+    
+  notes: |
+    # Guidance for evaluators
+    - Score each criterion independently
+    - Provide rationale for each score
+    - Flag any criteria that feel misweighted

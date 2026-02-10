@@ -1,0 +1,80 @@
+# CARD.yml — Scratchpad
+#
+# Working memory for thinking out loud.
+# "Sometimes you just need to write things down."
+
+card:
+  id: scratchpad
+  name: "Scratchpad"
+  type: [skill, memory, essential]
+  
+  emoji: 📝
+  
+  rarity: common
+  
+  description: |
+    Simple working memory file. Think out loud. Draft ideas.
+    No structure required. Just a place to dump thoughts.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  WRITE:
+    description: "Add to scratchpad"
+    parameters:
+      content: "What to write"
+    output: state-change
+    effect: "Append to scratchpad"
+    invoked-by: [player, any]
+    
+  READ:
+    description: "See what's on scratchpad"
+    parameters: {}
+    output: chat
+    effect: "Display scratchpad contents"
+    invoked-by: [player]
+    
+  CLEAR:
+    description: "Empty the scratchpad"
+    parameters: {}
+    output: state-change
+    effect: "Reset to empty"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  scratchpad:
+    type: string
+    description: "Free-form content"
+
+# ADVERTISEMENTS
+
+advertisements:
+  THINK-ALOUD:
+    score: 80
+    condition: "Need to work through something"
+
+# RELATED
+
+see-also:
+  - skills/planning         # More structured
+  - skills/research-notebook # For research
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Emacs *scratch* buffer"
+    - "Sticky notes"

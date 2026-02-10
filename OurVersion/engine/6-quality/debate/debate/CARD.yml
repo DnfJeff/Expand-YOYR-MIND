@@ -1,0 +1,204 @@
+# CARD.yml — Debate
+#
+# Structured multi-perspective deliberation.
+# "Make the stories fight. See what survives."
+
+card:
+  id: debate
+  name: "Debate"
+  type: [skill, decision, ensemble, dataflow]
+  
+  emoji: 🎤
+  
+  rarity: uncommon
+  
+  description: |
+    Structured debate between opposing positions.
+    Each side argues, moderator manages, audience votes.
+    Can use data flow to connect components.
+    
+    Play this card for complex decisions that need
+    cross-examination from multiple perspectives.
+    
+  inherits: [adversarial-committee, roberts-rules]
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read debate state
+    - write_file  # Update transcript
+  optional: []
+
+tier: 1  # File read/write
+
+# METHODS
+
+methods:
+  
+  CREATE-DEBATE:
+    description: "Initialize a new debate"
+    parameters:
+      topic: "What's being debated"
+      format: "oxford, roundtable, panel"
+      sides: "How many positions (2+)"
+    output: file (DEBATE.yml) + chat
+    effect: "Create debate structure"
+    invoked-by: [player, room]
+    
+  ADD-SIDE:
+    description: "Add a position to the debate"
+    parameters:
+      name: "Position name"
+      argument: "Initial argument"
+      advocates: "Who argues for this side"
+    output: file (SIDE.yml) + state-change
+    effect: "Create side with advocates"
+    invoked-by: [player, committee]
+    
+  OPEN:
+    description: "Begin the debate with opening statements"
+    parameters: {}
+    output: chat (opening statements)
+    effect: "Each side presents initial position"
+    invoked-by: [moderator, player]
+    
+  ARGUE:
+    description: "Present arguments for a side"
+    parameters:
+      side: "Which side"
+      point: "Argument to make"
+    output: chat (argument) + state-change
+    effect: "Add to transcript, other sides may respond"
+    invoked-by: [advocate, player]
+    
+  REBUT:
+    description: "Counter an opponent's argument"
+    parameters:
+      target: "Argument to rebut"
+      counter: "Counter-argument"
+    output: chat (rebuttal) + state-change
+    effect: "Add rebuttal to transcript"
+    invoked-by: [advocate]
+    
+  QUESTION:
+    description: "Ask a question (from audience/moderator)"
+    parameters:
+      to: "Side or advocate"
+      question: "What to ask"
+    output: chat (question + response)
+    effect: "Side must respond"
+    invoked-by: [moderator, audience, player]
+    
+  VOTE:
+    description: "Audience votes on winner"
+    parameters:
+      style: "majority, ranked, approval"
+    output: chat (results) + state-change
+    effect: "Tally votes, declare outcome"
+    invoked-by: [moderator]
+    
+  GONG:
+    description: "Emergency interrupt (from Gong of Gezelligheid)"
+    parameters:
+      rings: "1=attention, 2=emergency, 3=mercy"
+    output: chat + state-change
+    effect: "Interrupt or end debate"
+    invoked-by: [gong, moderator]
+    
+  CLOSE:
+    description: "End debate with closing statements"
+    parameters: {}
+    output: chat (closing) + file (TRANSCRIPT.md)
+    effect: "Generate final transcript"
+    invoked-by: [moderator]
+
+# STATE
+
+state:
+  debate-schema:
+    topic:
+      type: string
+    format:
+      type: enum
+      values: [oxford, roundtable, panel, freestyle]
+    sides:
+      type: array
+      description: "List of SIDE.yml references"
+    moderator:
+      type: string
+      description: "Who's moderating"
+    status:
+      type: enum
+      values: [setup, opening, main, closing, voting, complete]
+    transcript:
+      type: array
+      description: "Record of all statements"
+    votes:
+      type: object
+      description: "Vote tallies if voting occurred"
+
+# DEBATE FORMATS
+
+formats:
+  oxford:
+    description: "Formal two-sided debate"
+    sides: 2
+    rounds: [opening, rebuttal, closing]
+    
+  roundtable:
+    description: "Multiple perspectives, less adversarial"
+    sides: "3-8"
+    rounds: [statements, discussion, synthesis]
+    
+  panel:
+    description: "Experts discuss, audience questions"
+    sides: "3-5"
+    rounds: [presentations, questions, discussion]
+
+# DATA FLOW ENSEMBLE
+
+data-flow:
+  description: "Debate can be part of a data flow network"
+  inputs:
+    - topic (from problem definition)
+    - perspectives (from committee)
+  outputs:
+    - transcript (to evaluator)
+    - decision (to action system)
+  
+  example-pipeline: |
+    Problem → Committee → Debate → Evaluator → Decision
+
+# ADVERTISEMENTS
+
+advertisements:
+  STRUCTURED-DEBATE:
+    score: 95
+    condition: "Need structured comparison of positions"
+    
+  RESOLVE-CONFLICT:
+    score: 90
+    condition: "Multiple perspectives in disagreement"
+    
+  CROSS-EXAMINE:
+    score: 85
+    condition: "Ideas need stress-testing"
+
+# RELATED
+
+see-also:
+  - skills/adversarial-committee  # Committee feeds debate
+  - skills/roberts-rules          # Procedure
+  - skills/rubric                 # Scoring criteria
+  - skills/evaluator              # Independent assessment
+  - skills/data-flow              # Pipeline integration
+
+# CREDITS
+
+credits:
+  methodology:
+    - "Mike Gallaher — Stories All the Way Down"
+    - "Oxford Union — Debate format"
+  implementation:
+    - "Don Hopkins — MOOLLM integration"

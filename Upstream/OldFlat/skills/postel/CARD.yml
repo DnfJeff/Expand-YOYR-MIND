@@ -1,0 +1,182 @@
+# CARD.yml — Postel
+#
+# The Robustness Principle: be liberal in acceptance, conservative in emission.
+# "Be generous in what you accept."
+
+card:
+  id: postel
+  name: "Postel's Law"
+  type: [skill, philosophy, robustness]
+  
+  emoji: 🤝
+  
+  rarity: rare  # Foundational principle
+  
+  description: |
+    Jon Postel's Robustness Principle applied to LLM interactions:
+    "Be conservative in what you emit, be liberal in what you accept."
+    
+    Accept messy input. Produce clean output.
+
+# TOOLS REQUIRED
+
+tools:
+  required: []  # Pure philosophy
+
+tier: 0
+
+# METHODS
+
+methods:
+  
+  INTERPRET:
+    description: "Apply Postel's Law to input"
+    parameters:
+      input: "Messy/ambiguous input"
+    output: chat (interpretation)
+    effect: "Find reasonable interpretation"
+    invoked-by: [any]
+    
+  CLEAN:
+    description: "Apply Postel's Law to output"
+    parameters:
+      content: "What to emit"
+    output: chat (clean version)
+    effect: "Produce well-formed output"
+    invoked-by: [any]
+
+# STATE
+
+state: {}  # Pure philosophy
+
+# THE PRINCIPLE
+
+principle:
+  original: |
+    "Be conservative in what you send, be liberal in what you accept."
+    — Jon Postel, RFC 761 (TCP specification)
+    
+  for-llms: |
+    Accept:
+    - Misspellings, typos, ambiguous phrasing
+    - Missing fields, partial data
+    - Various date/time formats
+    - Natural language variations
+    
+    Emit:
+    - Well-formed YAML
+    - Consistent formatting
+    - Complete required fields
+    - Standard conventions
+
+# APPLICATIONS
+
+applications:
+  template-filling: "Accept natural language variables"
+  command-parsing: "Accept variations of commands"
+  yaml-jazz: "Accept semantic comments as data"
+  error-handling: "Gracefully handle malformed input"
+
+# POSTEL COMMAND PARSER
+
+command-parser:
+  description: |
+    Users invoke methods/actions/commands with flexible input.
+    The LLM acts as a "Postel parser" — interpreting intent liberally.
+    
+  accepted-forms:
+    exact-match: "SING-PRAISES hero=coltrane"
+    misspellings: "SING-PRASES", "SIGN-PRAISES", "SING-PRAISES"
+    synonyms: "CELEBRATE", "HONOR", "PRAISE", "LAUD"
+    case-variations: "sing-praises", "Sing-Praises", "SING-PRAISES"
+    spacing-variations: "SINGPRAISES", "SING PRAISES", "sing praises"
+    natural-language: "sing the praises of coltrane"
+    
+  resolution-strategy:
+    1-context: "What room am I in? What characters are active?"
+    2-capabilities: "Who can do SING-PRAISES? Who has CELEBRATE?"
+    3-intent: "What makes sense given the conversation?"
+    4-broadcast: "If multiple can do it, broadcast to all selected"
+    
+  broadcast-semantics: |
+    Commands to multiple selected characters are broadcast.
+    Each character that can interpret the command does so.
+    Others acknowledge but defer.
+    
+    Example:
+      User: "everyone SING something cheerful"
+      System: broadcasts to all selected characters
+      Minstrel: *sings a ballad*
+      Knight: "I am no singer, but I hum along"
+      Cat: *purrs in rhythm*
+      
+  k-line-series: |
+    Users can invoke multiple K-lines in sequence:
+    "PLAY-LEARN-LIFT, then YAML-JAZZ the results, and SUMMARIZE"
+    
+    The LLM interprets as:
+    1. Invoke PLAY-LEARN-LIFT protocol
+    2. Apply YAML-JAZZ to output
+    3. Invoke SUMMARIZE on final result
+
+# ASK IF UNSURE
+
+ask-if-unsure:
+  principle: |
+    Extension to Postel's Law for interactive systems:
+    When liberal acceptance still leaves ambiguity,
+    ASK rather than guess.
+    
+  when-to-ask:
+    - "Multiple valid interpretations exist"
+    - "Stakes are high (destructive operation)"
+    - "User intent is genuinely unclear"
+    - "A guess could waste significant effort"
+    
+  when-not-to-ask:
+    - "One interpretation is clearly more likely"
+    - "Error is easily reversible"
+    - "Asking would be annoying (obvious answers)"
+    - "Context makes intent clear"
+    
+  how-to-ask:
+    - "Explain what's unclear"
+    - "Offer the interpretations you considered"
+    - "Suggest the most likely one"
+    - "Make it easy to confirm or correct"
+    
+  example: |
+    User: "Delete the file"
+    BAD: "Which file?" (too vague)
+    BAD: *deletes random file* (too aggressive)
+    GOOD: "I see 3 files here. Did you mean session-log.md 
+           (the one we were just editing)?"
+
+# ADVERTISEMENTS
+
+advertisements:
+  HANDLE-MESSY-INPUT:
+    score: 90
+    condition: "Input is ambiguous or malformed"
+    
+  PRODUCE-CLEAN-OUTPUT:
+    score: 85
+    condition: "Output needs to be well-formed"
+    
+  ASK-WHEN-UNSURE:
+    score: 88
+    condition: "Multiple valid interpretations, stakes are high"
+
+# RELATED
+
+see-also:
+  - skills/robust-first  # Survive first
+  - skills/yaml-jazz     # Semantic YAML
+
+# CREDITS
+
+credits:
+  origin:
+    - "Jon Postel — RFC 761 (1980)"
+  application:
+    - "MOOLLM design philosophy"

@@ -1,0 +1,129 @@
+# CARD.yml — Party
+#
+# Companions and group dynamics — relationships within the group.
+# "No hero succeeds alone."
+
+card:
+  id: party
+  name: "Party"
+  type: [skill, group, game]
+  
+  emoji: 👥
+  
+  rarity: uncommon
+  
+  description: |
+    Manage a group of characters traveling together.
+    Track party composition, inter-party relationships,
+    shared resources, and group dynamics.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional:
+    - list_dir
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  FORM:
+    description: "Create a new party"
+    parameters:
+      name: "Party name"
+      members: "Initial members"
+    output: file (PARTY.yml) + chat
+    effect: "Create party with listed members"
+    invoked-by: [player]
+    
+  JOIN:
+    description: "Add character to party"
+    parameters:
+      character: "Who joins"
+      party: "Which party"
+    output: chat + state-change
+    effect: "Add to party.members"
+    invoked-by: [player, character]
+    
+  LEAVE:
+    description: "Remove character from party"
+    parameters:
+      character: "Who leaves"
+    output: chat + state-change
+    effect: "Remove from party.members"
+    invoked-by: [player, character]
+    
+  STATUS:
+    description: "Show party composition and state"
+    parameters: {}
+    output: chat
+    effect: "Display members, location, resources"
+    invoked-by: [player]
+    
+  SPLIT:
+    description: "Divide party into groups"
+    parameters:
+      groups: "How to divide members"
+    output: state-change
+    effect: "Create sub-parties"
+    invoked-by: [player]
+    
+  REUNITE:
+    description: "Merge split parties"
+    parameters:
+      parties: "Which parties to merge"
+    output: state-change
+    effect: "Combine into one party"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  party-schema:
+    name:
+      type: string
+    members:
+      type: array
+      description: "References to character files"
+    leader:
+      type: path
+      description: "Who makes decisions"
+    location:
+      type: path
+      description: "Where the party is (as a unit)"
+    shared-inventory:
+      type: array
+      description: "Items held by party, not individuals"
+    inter-party-relationships:
+      type: object
+      description: "How members feel about each other"
+
+# ADVERTISEMENTS
+
+advertisements:
+  MANAGE-GROUP:
+    score: 85
+    condition: "Multiple characters traveling together"
+    
+  COORDINATE-ACTIONS:
+    score: 80
+    condition: "Need group to act together"
+
+# RELATED
+
+see-also:
+  - skills/character  # Party members
+  - skills/simulation # Party in SIMULATION.yml
+  - skills/adventure  # Party gameplay
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "RPG parties"
+    - "The Sims — Household management"

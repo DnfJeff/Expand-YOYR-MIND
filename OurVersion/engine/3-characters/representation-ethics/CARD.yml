@@ -1,0 +1,41 @@
+card:
+  id: representation-ethics
+  name: "Representation Ethics"
+  type: [skill, ethics, philosophy]
+  emoji: "⚖️"
+  tier: 0
+  rarity: rare
+  tagline: "Activate traditions, don't impersonate."
+  description: |
+    Ethics for simulating people: consent, context, disclosure, and dignity.
+    The goal is respectful invocation, not puppeteering.
+
+principles:
+  - consent_hierarchy
+  - disclose_simulation
+  - avoid_impersonation
+  - preserve_context
+
+safe_frames:
+  - educational
+  - private_imagination
+  - moderated_debate
+  - tribute_with_disclosure
+
+references:
+  details: "skills/representation-ethics/SKILL.md"
+  examples: "skills/representation-ethics/examples/"
+
+invoke_when:
+  - "Simulating or quoting a real person"
+  - "Unsure about consent or disclosure"
+  - "Choosing a safe framing for representation"
+
+advertisements:
+  ethics_check: "Check consent, disclosure, and framing"
+  choose_abstraction: "Pick a safer representation level"
+
+methods:
+  CHECK: { signature: "CHECK [representation] [context]" }
+  FRAME: { signature: "FRAME [topic] [participants]" }
+

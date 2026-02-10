@@ -1,0 +1,465 @@
+# CARD.yml — Character
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Characters are BODIES. They have location, inventory, mortality."
+
+card:
+  id: character
+  name: "Character"
+  type: [skill, entity, game]
+  emoji: 🧑
+  tier: 1
+  tagline: "Characters are BODIES. Personas are COSTUMES."
+  
+  description: |
+    The foundational pattern for any entity that has a location,
+    inventory, and relationships. Players, NPCs, creatures, bots —
+    all are characters.
+    
+    Characters are BODIES (actors). Personas are COSTUMES (roles).
+
+# FILES INDEX — Activate together for full context
+
+files:
+  docs:
+    - SKILL.md              # Full protocol documentation
+    - README.md             # Human landing page
+  see_also:
+    - skills/inventory      # Full inventory protocol
+    - skills/persona        # Identity layers
+    - skills/buff           # Temporary effects
+    - skills/mind-mirror    # Personality modeling
+    - skills/incarnation    # Ethical character creation
+    - skills/representation-ethics  # Patron-mascot stack for real people
+
+# K-LINES
+
+k-lines:
+  activates:
+    - CHARACTER
+    - PLAYER-CHARACTER
+    - NPC
+    - COMPANION
+    - INVENTORY
+    # Patron-Mascot Stack (for characters based on real people)
+    - PATRON-MASCOT-STACK    # When character inherits from real person
+    - MASCOT-QUOTES-PATRON   # Mascot cites patron's wisdom
+  related:
+    - { ref: persona, relation: "identity layers" }
+    - { ref: buff, relation: "temporary effects" }
+    - { ref: room, relation: "where characters exist" }
+    - { ref: incarnation, relation: "ethical creation" }
+    - { ref: representation-ethics, relation: "patron-mascot stack pattern" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Create new entity that moves and acts"
+  - "Manage character inventory"
+  - "Move character between locations"
+  - "Track character relationships"
+  - "Need multiple dispatch for interactions"
+
+# METHODS — signatures only, see SKILL.md for protocols
+
+methods:
+  # Lifecycle
+  CREATE:       { signature: "CREATE [name] (archetype) (home)" }
+  STATUS:       { signature: "STATUS [character]" }
+  
+  # Movement & Inventory
+  MOVE:         { signature: "MOVE [character] TO [destination]" }
+  TAKE:         { signature: "TAKE [item]" }
+  DROP:         { signature: "DROP [item] (WHERE [location])" }
+  
+  # Personas
+  WEAR:         { signature: "WEAR [persona]", note: "put on identity layer" }
+  REMOVE-PERSONA: { signature: "REMOVE-PERSONA" }
+  
+  # Relationships
+  RELATE:       { signature: "RELATE TO [other] AS [feeling]" }
+  
+  # Inter-character (multiple dispatch base methods)
+  SNIFF:        { signature: "SNIFF [target]", dispatch: true }
+  LICK:         { signature: "LICK [target]", dispatch: true }
+  GREET:        { signature: "GREET [target]", dispatch: true }
+  CUDDLE:       { signature: "CUDDLE [targets]", dispatch: true }
+
+# MULTIPLE DISPATCH (brief — see SKILL.md)
+
+dispatch:
+  principle: "Most specific method wins"
+  resolution: [CHARACTER.yml, species-skill, target-skill, base-method]
+  example: "dog_sniffs_cat beats character_sniffs_character"
+  see: "SKILL.md § Multiple Dispatch Protocol"
+
+# ADVERTISEMENTS
+
+advertisements:
+  CREATE-CHARACTER:
+    score: 90
+    condition: "Need a new entity that moves and acts"
+    
+  MANAGE-INVENTORY:
+    score: 85
+    condition: "Pick up, drop, or use items"
+    
+  CHANGE-PERSONA:
+    score: 80
+    condition: "Wear or remove an identity layer"
+    
+  INTER-CHARACTER:
+    score: 85
+    condition: "Interaction between characters (sniff, greet, etc.)"
+
+# CHARACTER TYPES
+
+types:
+  player:    "Controlled by human via chat"
+  npc:       "Controlled by DM, responds when addressed"
+  companion: "Follows player, has own personality"
+  bot:       "Autonomous via action queue"
+  agent:     "LLM with own goals and initiative"
+  logistic-bot: "Factorio-style carrier"
+
+# STATE SCHEMA
+
+state:
+  fields: [id, name, home, location, inventory, gold, current-persona, sims, mind-mirror, buffs, relationships]
+  
+  ownership: |
+    CHARACTER.yml is CANONICAL for:
+    location, inventory, gold, sims, mind_mirror, relationships
+    ADVENTURE.yml may mirror for convenience. CHARACTER.yml wins on conflict.
+
+# SIMS 1 COMPATIBLE — Full fidelity transport layer
+#
+# Every field maps 1:1 to SimObliterator's person_data array.
+# Traits/skills: 0-10 (display scale, ×100 for internal 0-1000)
+# Needs: -100 to 100 (Sims internal scale)
+# All sims: fields present in every character. This IS the save file.
+#
+# TRANSPORT PROTOCOL:
+#   BEAM UP (Sims → MOOLLM): SimObliterator reads save → sims: block fills → mind_mirror awaits
+#   BEAM DOWN (MOOLLM → Sims): sims: block writes → SimObliterator patches save → mind_mirror stays
+#   PARALLEL LIFE: Character exists in both. sims: is the sync surface. mind_mirror is MOOLLM-only.
+#   MERGE: Like git. sims: fields have merge semantics. LLM-enriched fields don't conflict.
+#
+# The sims: block replaces the old sims_traits: and needs: fields.
+
+sims_schema:
+  
+  traits:             # person_data[7-12]. Display 0-10 (×100 for internal 0-1000)
+    neat: 5           # 0=sloppy, 10=immaculate
+    outgoing: 5       # 0=shy, 10=party animal
+    active: 5         # 0=lazy, 10=hyperactive
+    playful: 5        # 0=serious, 10=clown
+    nice: 5           # 0=grouchy, 10=saint
+    generous: 5       # 0=stingy, 10=gives everything (internal trait, not in Sims 1 UI)
+
+  skills:             # person_data[0-6]. Display 0-10 (×100 for internal 0-1000)
+    cooking: 0
+    mechanical: 0
+    charisma: 0
+    logic: 0
+    body: 0
+    creativity: 0
+    cleaning: 0       # Hidden/internal skill
+
+  needs:              # person_data[13-20]. Range -100 to 100. Positive=satisfied.
+    hunger: 50
+    comfort: 50
+    hygiene: 50
+    bladder: 50
+    energy: 50
+    fun: 50
+    social: 50
+    room: 50
+
+  career:             # person_data[23-26]
+    track: unemployed # unemployed|cooking|entertainment|law_enforcement|medicine|military|politics|pro_athlete|science|xtreme
+    level: 0          # 1-10 within track
+    experience: 0     # XP points
+    performance: 50   # 0-100 job performance
+
+  identity:           # person_data[21-22] + CHAR chunk
+    age: adult        # child | adult | elder
+    gender: null      # male | female (Sims 1 binary; MOOLLM characters may omit)
+    zodiac: null      # aries|taurus|gemini|cancer|leo|virgo|libra|scorpio|sagittarius|capricorn|aquarius|pisces
+    aspiration: null  # family | popularity | romance | fortune
+
+  family:             # FAMI chunk
+    number: null      # Family ID (-1 for townies)
+    budget: 0         # Household simoleons §
+
+  relationships: {}   # NBRS chunk. target_id → {daily: -100..100, lifetime: -100..100}
+
+# MIND MIRROR — MOOLLM-only personality layer (does NOT exist in Sims 1)
+#
+# FLAT. Not nested. Properties carry their own plane metadata in the registry.
+# Characters define ONLY the properties that shape them. Omitted = neutral (4).
+# Scale: 0-7. YAML Jazz comments ARE the character's inner voice.
+# Full registry with plane tags, gradients, and Leary synonyms: skills/mind-mirror/CARD.yml
+#
+# The mind_mirror block lives ALONGSIDE sims:, not inside it.
+# sims: beams up and down to The Sims 1. mind_mirror: stays in MOOLLM.
+# Together they make a complete personality: sims = behavior, mind_mirror = motivation.
+#
+# EXAMPLE (Henk — 6 properties, you know him):
+#
+#   mind_mirror:
+#     calm: 7             # The still point of the turning pub
+#     analytical: 7       # Sees patterns. Says little.
+#     complex: 7          # More depth than he shows
+#     caring: 6           # Notices who's struggling. Doesn't say.
+#     restless: 1         # Third stool. Why move?
+#     approval_seeking: 1 # Has espresso. Needs nothing else.
+#
+# PEDAGOGICAL NOTE — The 32 properties fall into 4 planes:
+#   bio_energy:  energetic, enthusiastic, cheerful, easy_going, calm, cautious, serious, restless
+#   emotional:   forceful, confident, friendly, assertive, caring, outspoken, open, spontaneous
+#   mental:      analytical, logical, imaginative, idealistic, curious, open_minded, complex, artistic
+#   social:      social, group_oriented, trusting, dominant, intimate, approval_seeking, demonstrative, principled
+#
+# But characters NEVER nest under these categories. They list properties FLAT.
+# The plane grouping is metadata in the registry, for UI and pedagogy only.
+
+
+# CHARACTER LAYER OVERLAYS — Private extensions to public characters
+
+
+character_layers:
+  
+  concept: |
+    Characters can exist as OVERLAY TREES across multiple repositories.
+    A public character can be extended by private layers that add
+    sensitive content while inheriting all public traits.
+    
+  visibility:
+    rule: "One-way inheritance: private sees public, public cannot see private"
+    public_layer: "Shareable, forkable, no references to private layers"
+    private_layer: "Extends via inherits:, adds personal/sensitive content"
+    
+  declaration:
+    principle: "Both layers declare their relationship in CHARACTER.yml"
+    
+    public_declares: |
+      # In public CHARACTER.yml header:
+      # EXTENSIBILITY NOTE:
+      # This character can be extended with private layers via inheritance.
+      # Private layers can add personal details while inheriting public traits.
+      
+    private_declares: |
+      # In private CHARACTER.yml:
+      inherits:
+        - moollm://path/to/public/character/
+      extends:
+        public_character: "moollm://path/to/public/character/"
+        relationship: "private extends public"
+        
+  precedence:
+    principle: "Negotiate precedence per-field in metadata"
+    
+    fields: |
+      Each field can declare its precedence:
+      - public_wins: public layer is canonical (e.g., name, id)
+      - private_wins: private layer overrides (e.g., real_address)
+      - merge: combine both (e.g., inventory, relationships)
+      - private_only: only exists in private (e.g., sensitive_history)
+      
+    example: |
+      private:
+        precedence:
+          name: public_wins       # Keep public name
+          location: private_wins  # Real location is private
+          inventory: merge        # Combine both inventories
+          home_address: private_only  # Only in private layer
+          
+  resolution:
+    success: "Layers merge according to declared precedence"
+    conflict: |
+      If declarations conflict or are missing:
+      - MOOLLM warns about unresolved precedence
+      - Conservative default: public_wins for shared fields
+      - Private-only fields always accepted
+      
+    validation: |
+      On load, verify:
+      1. Public layer exists at declared inherits: path
+      2. Private precedence declarations are complete
+      3. No circular inheritance
+      4. Public layer doesn't reference private (blocked)
+      
+  use_cases:
+    - "Real people with public persona + private details"
+    - "NPCs with public stats + GM-only secrets"
+    - "Shared characters with user-specific customizations"
+    - "Test characters with production + dev variants"
+
+
+# PERSONAS — Society of Mind Internal Actors
+
+#
+# "We need many interacting personas inside our head!" — Minsky
+#
+# Personas are NOT just costumes. They are INTERNAL ACTORS that:
+# - Plug in and PLAY OFF each other
+# - Execute protocols and SOUL CHATS between each other
+# - Form a Society of Mind inside one character
+#
+# See: skills/persona/ for full protocol
+
+personas_society:
+  
+  minsky_insight: |
+    Marvin Minsky's "Society of Mind" says intelligence emerges from
+    many simple agents interacting. A character's mind works the same way:
+    multiple personas inside, each with their own voice, skills, goals,
+    playing off each other, negotiating, sometimes conflicting.
+    
+    This ISN'T multiple personality disorder — it's how minds WORK.
+    The programmer persona, the parent persona, the artist persona,
+    the critic persona — all active, all interacting.
+    
+  what_personas_are:
+    not_just_costumes: "Personas are internal ACTORS, not masks"
+    internal_agents: "Each persona has voice, skills, methods, goals"
+    interactive: "Personas TALK TO EACH OTHER inside the character"
+    modulated: "Each persona individually tuned and transformed"
+    composable: "Personas plug in, combine, play off each other"
+    
+  character_contains:
+    principle: "A character contains a SET of active personas"
+    
+    structure: |
+      personas:
+        active:
+          - id: programmer
+            source: personas/programmer
+            modulation: { intensity: 0.8, voice_weight: 0.6 }
+          - id: rabbit
+            source: personas/rabbit-form
+            modulation: { intensity: 0.4, instinct_weight: 0.3 }
+          - id: mentor
+            source: personas/wise-elder
+            modulation: { intensity: 0.5, patience: 0.9 }
+            
+  persona_interactions:
+    soul_chats: |
+      Personas can have INTERNAL DIALOGUES:
+      
+      [programmer]: "We should refactor this properly."
+      [rabbit]: "But the carrots are RIGHT THERE."
+      [mentor]: "Perhaps we can do both — refactor, then snack."
+      
+    protocol_execution: |
+      Personas execute protocols between each other:
+      - NEGOTIATE: personas debate a decision
+      - DEFER: one persona yields to another
+      - AMPLIFY: personas reinforce each other
+      - CONFLICT: personas disagree (creates tension/drama)
+      
+    emergence: |
+      The character's behavior EMERGES from persona interactions.
+      No single persona is "in charge" — they form a society.
+      
+  vs_character_overlay:
+    overlay: |
+      HEAVY: Full character layered on top
+      IDENTITY-LEVEL: Extends who you ARE
+      RISKY: Can cause "issues" (identity conflicts, confusion)
+      USE CASE: Private shadow of public character
+      
+    persona: |
+      LIGHT: Plug-in actors inside the character
+      ROLE-LEVEL: What you DO, how you THINK
+      SAFE: Designed to coexist and interact
+      USE CASE: Internal society of mind
+      
+    warning: |
+      Full character overlay might cause "issues" —
+      identity conflicts, precedence problems, existential confusion.
+      
+      Personas are DESIGNED to coexist. They PLAY OFF each other.
+      That's the point.
+      
+  methods:
+    SUMMON_PERSONA: "Activate a persona in the internal society"
+    DISMISS_PERSONA: "Deactivate a persona (still available, not active)"
+    PERSONA_CHAT: "Internal dialogue between active personas"
+    MODULATE: "Adjust a persona's intensity/weight"
+    NEGOTIATE: "Personas debate internally about a decision"
+    
+  see_also:
+    - skills/persona/SKILL.md   # Full persona protocol
+    - skills/mind-mirror/       # Personality modeling
+    - skills/k-lines/           # Minsky's activation patterns
+
+# HOME VS LOCATION (brief — see SKILL.md)
+
+location_protocol:
+  home: "Directory where CHARACTER.yml lives (never moves)"
+  location: "Where character currently IS (changes during play)"
+  rule: "Update location field, don't move files"
+
+# CHARACTERS.yml RUNTIME CACHE — Where is everyone?
+
+runtime_cache:
+  file: "CHARACTERS.yml"
+  location: "Adventure root (e.g., examples/adventure-4/CHARACTERS.yml)"
+  template: "skills/adventure/templates/CHARACTERS.yml.tmpl"
+  purpose: |
+    Quick reference for all character locations without reading 52 files.
+    NOT source of truth for souls — just spatial awareness cache.
+    
+  what_it_tracks:
+    - home (character directory)
+    - location (current position)
+    - party (who they're with)
+    - doing (current activity)
+    - mood (current state)
+    - goals (what they want)
+    
+  sync_protocol: |
+    When you update a character's location:
+    1. Update CHARACTERS.yml (the cache)
+    2. Update CHARACTER.yml in their home dir (the truth)
+    
+  turning_off: |
+    Move characters from 'active' to 'inactive' to turn them off.
+    They won't be tracked, won't respond, won't cost attention.
+    
+  derived_index: |
+    by_location section shows who's where — regenerated from active list.
+
+# INVENTORY PROTOCOL — see skills/inventory/ for full protocol
+
+inventory:
+  see: skills/inventory/SKILL.md
+  item_types: [object, ref, fungible]
+  object: "Deep copy with weight/bulk"
+  ref: "Lightweight pointer (weight: 0)"
+  fungible: "Stack with count"
+  capacity: "max_weight (~40-50), max_bulk (~8-12)"
+  note: "Characters embed inventory. Full protocol in skills/inventory/"
+  
+# TOOLS
+
+tools:
+  required: [read_file, write_file, list_dir]
+  optional: []
+
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ Multiple Dispatch Protocol"
+    - "§ Inventory Protocol (object vs ref)"
+    - "§ State Ownership"
+    - "§ Home vs Location"
+    - "§ Logistics Bot Behavior"
+    - "§ Character Types"
+
+# LINEAGE
+
+lineage: [The Sims, D&D character sheets, MUD player characters]

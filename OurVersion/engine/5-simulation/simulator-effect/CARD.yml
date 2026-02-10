@@ -1,0 +1,78 @@
+# CARD.yml for Simulator Effect Skill
+# The skill interface -- what this skill advertises
+
+card:
+  name: simulator-effect
+  version: 1.0.0
+  tagline: "Implication is more efficient than simulation"
+  
+  # What this skill provides
+  provides:
+    - IMPLY -- Instead of simulating, imply
+    - SEED -- Provide imagination seeds
+    - SPARSE -- Deliberately omit for richness
+    - ARCHETYPE -- Use cultural shortcuts
+    - JAZZ -- Comments as imagination seeds
+    
+  # What needs this skill satisfies
+  satisfies:
+    - need: creative_generation
+      strength: high
+      method: sparse specs, rich interpretation
+    - need: character_depth
+      strength: high
+      method: archetypes activate personality clusters
+    - need: world_building
+      strength: high
+      method: sensory seeds, imagination renders
+    - need: efficiency
+      strength: high
+      method: minimal tokens, maximum meaning
+      
+  # When to use this skill
+  use_when:
+    - creating characters from minimal specs
+    - designing rooms with atmosphere
+    - writing sparse but evocative content
+    - leveraging cultural archetypes
+    - fighting mode-collapse with structure
+    
+  # When NOT to use this skill
+  avoid_when:
+    - precise specifications required (contracts, APIs)
+    - deterministic behavior needed
+    - no room for interpretation
+    
+  # Related skills
+  related:
+    - k-lines -- mechanism behind the effect
+    - yaml-jazz -- comments as seeds
+    - adversarial-committee -- mode-collapse antidote
+    - empathic-templates -- structured implication
+    - constructionism -- mental model building
+    - needs -- Sims motives as seeds
+    
+  # Lineage
+  lineage:
+    - will_wright: "He designs games to run on two computers at once"
+    - julie_doll: "The box has more structural ambiguity than the doll"
+    - simcity: "Players imagined sophisticated simulation from cellular automata"
+    - the_sims: "Zodiac with zero code, maximum perceived effect"
+    - scott_mccloud: "Masking -- simple faces, detailed worlds"
+    
+  # Key insight
+  insight: |
+    Players imagine simulations are vastly more detailed, deep, rich, 
+    and complex than they actually are. This is not a bug to fix -- 
+    it is the most powerful rendering engine ever built. Off-load 
+    computation into the user's brain. Provide seeds, not simulations.
+    
+  # Proof
+  proof:
+    - name: "The Astrillogical Effect"
+      year: 1997
+      description: |
+        The Sims displayed zodiac signs with zero behavioral code.
+        Testers reported the zodiac was "too influential."
+        There was no influence to tune. Purely imagined.
+      link: "../../designs/sims/sims-astrology.md"

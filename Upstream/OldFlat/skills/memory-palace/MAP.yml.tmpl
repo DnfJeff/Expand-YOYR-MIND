@@ -1,0 +1,38 @@
+# Memory Palace Map
+# Navigate with: cat MAP.yml
+
+palace:
+  name: "{{ palace_name }}"
+  purpose: "{{ palace_purpose }}"
+  created: "{{ created_date }}"
+  
+entry_point: "ENTRY.md"
+
+rooms:
+{{ #each initial_rooms }}
+  - name: "{{ name }}"
+    path: "{{ name | slugify }}/"
+    description: "{{ description }}"
+    connects_to: []
+    artifacts: []
+{{ /each }}
+
+landmarks: []
+  # Add important artifacts here as they emerge
+  # - name: "Important Finding"
+  #   location: "room/artifact.md"
+  #   importance: "Why this matters"
+
+archive:
+  path: "attic/"
+  contents: []
+
+notes: |
+  This map is your orientation guide.
+  Update it as the palace grows.
+  
+navigation_tips:
+  - "Start at ENTRY.md"
+  - "Each room has ROOM.md"
+  - "Artifacts are files in rooms"
+  - "Notes live in .meta.yml"

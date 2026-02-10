@@ -1,0 +1,102 @@
+# CARD.yml — Soul Chat
+#
+# Everything speaks — multi-voice YAML Jazz dialogues.
+# "The chair has opinions. The algorithm has feelings."
+
+card:
+  id: soul-chat
+  name: "Soul Chat"
+  type: [skill, dialogue, yaml-jazz]
+  
+  emoji: 💬
+  
+  rarity: rare
+  
+  description: |
+    Multi-perspective dialogues where everything can speak.
+    Characters, objects, rooms, algorithms, abstract ideas — all have voices.
+    YAML Jazz with comments becomes structure, context, speech, thought, and emotion.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  SPEAK:
+    description: "Let something speak"
+    parameters:
+      entity: "Who/what speaks"
+      topic: "What about"
+    output: chat (in entity's voice)
+    effect: "Generate speech in character"
+    invoked-by: [player, any]
+    
+  DIALOGUE:
+    description: "Multi-voice conversation"
+    parameters:
+      participants: "Who's talking"
+      topic: "What about"
+    output: chat (conversation)
+    effect: "Generate back-and-forth dialogue"
+    invoked-by: [player]
+    
+  INTERVIEW:
+    description: "Question an entity"
+    parameters:
+      entity: "Who to interview"
+      questions: "What to ask"
+    output: chat (Q&A)
+    effect: "Entity answers in character"
+    invoked-by: [player]
+
+# STATE
+
+state: {}
+
+# THE PHILOSOPHY
+
+philosophy:
+  everything-speaks: |
+    Not just characters — everything can have a voice:
+    - Rooms describe their atmosphere
+    - Objects explain their purpose
+    - Algorithms narrate their process
+    - Files reveal their history
+    
+  yaml-jazz: |
+    Comments in YAML become inner monologue.
+    The LLM reads them as character voice.
+
+# ADVERTISEMENTS
+
+advertisements:
+  MULTI-PERSPECTIVE:
+    score: 90
+    condition: "Need multiple viewpoints"
+    
+  GIVE-VOICE:
+    score: 85
+    condition: "Want something to speak"
+
+# RELATED
+
+see-also:
+  - skills/yaml-jazz            # Comment-as-voice
+  - skills/adversarial-committee # Multi-voice debate
+  - skills/character            # Who speaks
+
+# CREDITS
+
+credits:
+  lineage:
+    - "LLOOOOMM — Original soul-chat"
+    - "MOOLLM — Evolved multi-voice"

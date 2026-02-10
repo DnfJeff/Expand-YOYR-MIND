@@ -1,0 +1,37 @@
+# {{ palace_name }}
+
+## Welcome
+
+{{ palace_purpose }}
+
+---
+
+## Quick Navigation
+
+{{ #each initial_rooms }}
+- [{{ name }}]({{ name | slugify }}/ROOM.md) - {{ description }}
+{{ /each }}
+
+---
+
+## Recent Activity
+
+*Palace created {{ created_date }}*
+
+---
+
+## How to Navigate
+
+1. **Enter a room** — Click a link above or `cd` to a directory
+2. **Look around** — Read ROOM.md to see what's here
+3. **Examine artifacts** — Read individual files
+4. **Leave notes** — Create or update .meta.yml files
+5. **Check the map** — See [MAP.yml](MAP.yml) for the full structure
+
+---
+
+## Status
+
+- **Created:** {{ created_date }}
+- **Last Updated:** {{ created_date }}
+- **Rooms:** {{ initial_rooms.length | default 0 }}

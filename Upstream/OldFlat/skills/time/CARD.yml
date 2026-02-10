@@ -1,0 +1,186 @@
+# CARD.yml — Time
+#
+# Simulation turns vs LLM iterations — narrative time flow.
+# "Time is subjective. The LLM judges."
+
+card:
+  id: time
+  name: "Time"
+  type: [skill, game, simulation]
+  
+  emoji: ⏰
+  
+  rarity: common
+  
+  description: |
+    Simulation turns are NOT LLM iterations. A single LLM response
+    might cover many turns. The LLM judges how time passes based
+    on context and narrative.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file
+    - write_file
+  optional: []
+
+tier: 1
+
+# METHODS
+
+methods:
+  
+  TICK:
+    description: "Advance time by one turn"
+    parameters: {}
+    output: state-change
+    effect: "Increment turn, trigger time-based effects"
+    invoked-by: [simulation, player]
+    
+  WAIT:
+    description: "Pass time intentionally"
+    parameters:
+      turns: "How many (or natural language)"
+    output: chat + state-change
+    effect: "Advance time, describe passage"
+    invoked-by: [player]
+    
+  PAUSE:
+    description: "Stop time advancement"
+    parameters: {}
+    output: state-change
+    effect: "Freeze time"
+    invoked-by: [player]
+    
+  RESUME:
+    description: "Continue time flow"
+    parameters: {}
+    output: state-change
+    effect: "Unfreeze time"
+    invoked-by: [player]
+    
+  STATUS:
+    description: "Show current time"
+    parameters: {}
+    output: chat
+    effect: "Display turn, time of day"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  time-schema:
+    turn:
+      type: integer
+    time-of-day:
+      type: string
+    advancement:
+      type: enum
+      values: [paused, slow, normal, fast]
+
+# THE DISTINCTION
+
+distinction:
+  simulation-turn: |
+    Abstract game time unit.
+    Buffs last "5 turns".
+    One room navigation = one turn.
+    
+  llm-iteration: |
+    One request/response cycle.
+    One LLM response might cover many turns.
+    Or many responses might be one turn (conversation).
+    
+  llm-judges: |
+    "About 5 minutes" — LLM interprets contextually.
+    "Until morning" — LLM advances appropriately.
+    Natural language durations work.
+
+# ADVERTISEMENTS
+
+advertisements:
+  CONTROL-TIME:
+    score: 90
+    condition: "Need to advance or pause time"
+
+# RELATED
+
+see-also:
+  - skills/simulation  # Central state
+  - skills/buff        # Time-based decay
+  - skills/needs       # Time-based decay
+
+# CREDITS
+
+credits:
+  insight:
+    - "Simulation time vs wall time"
+    - "The Sims — Speed controls"
+
+#
+# Simulation turns vs LLM iterations — narrative time flow.
+# "Game time is not real time."
+
+card:
+  id: time
+  name: "Time"
+  type: [skill, game, mechanics]
+  emoji: ⏰
+  rarity: common
+  
+  description: |
+    Simulation time management. Turns are abstract game time,
+    not LLM response iterations. One turn per room navigation
+    is a good default.
+
+tools:
+  required: [read_file, write_file]
+tier: 1
+
+methods:
+  TICK:
+    description: "Advance time by one turn"
+    parameters: {}
+    output: state-changes (buff decay, need decay)
+    invoked-by: [simulation, navigation]
+    
+  PAUSE:
+    description: "Stop time advancement"
+    parameters: {}
+    output: state-change
+    invoked-by: [player]
+    
+  RESUME:
+    description: "Restart time"
+    parameters: {}
+    output: state-change
+    invoked-by: [player]
+    
+  STATUS:
+    description: "Show current time state"
+    parameters: {}
+    output: chat
+    invoked-by: [player]
+    
+  WAIT:
+    description: "Advance time without action"
+    parameters: { turns: "How many" }
+    output: state-changes
+    invoked-by: [player]
+
+state:
+  time:
+    turn: { type: integer }
+    paused: { type: boolean }
+    time-of-day: { type: string }
+
+advertisements:
+  MANAGE-TIME:
+    score: 85
+    condition: "Need to control time flow"
+  BUFF-DECAY:
+    score: 80
+    condition: "Buffs need to tick down"
+
+see-also: [skills/simulation, skills/buff, skills/needs]

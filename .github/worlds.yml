@@ -1,0 +1,35 @@
+# MOOLLM World Registry
+# Auto-discovered and manually curated worlds in this workspace.
+# The DM agent reads this on /boot to find available worlds.
+# Add new worlds here, or let the agent auto-discover them.
+
+worlds:
+  mayberry:
+    path: worlds/mayberry
+    name: "Mayberry, North Carolina"
+    era: 1960s
+    tone: gentle_humor
+    description: "A small Southern town where everybody knows everybody, the doors don't lock, and the biggest crisis is Aunt Bee's pickles."
+    characters: 20
+    rooms: 25
+
+  danny-thomas:
+    path: worlds/danny-thomas
+    name: "Danny Williams' New York"
+    era: 1950s-1960s
+    tone: warm_chaos
+    description: "Manhattan apartment life — the door never stops opening, every conversation is a performance, and Lebanese hospitality meets New York apartment sizes."
+    characters: 15
+    rooms: 16
+
+  # To add a new world:
+  # 1. Create a directory in worlds/ with WORLD.yml
+  # 2. Add an entry here (or run /boot and let the agent discover it)
+  #
+  # Example:
+  #   my-world:
+  #     path: worlds/my-world
+  #     name: "My World"
+  #     era: modern
+  #     tone: cozy_mystery
+  #     description: "A one-line pitch for your world"

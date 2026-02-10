@@ -1,0 +1,77 @@
+# MOOLLM Warm-Start State — Mayberry
+# This file tracks simulation state between sessions.
+# Updated at every epoch boundary.
+
+state:
+  status: running
+  # ready | running | paused | completed
+
+  current_epoch: evening
+  current_tick: 24
+  world_time: "6:00PM"
+  world_day: wednesday
+
+  # Character locations — where is everyone right now?
+  character_locations:
+    andy-taylor: taylor-house
+    barney-fife: main-street  # heading home after Floyd's haircut
+    aunt-bee: taylor-house/kitchen
+    opie-taylor: taylor-house  # yard
+    floyd-lawson: main-street/floyds-barbershop
+    otis-campbell: main-street/courthouse/jail-cell
+    gomer-pyle: main-street/wally-filling-station
+    goober-pyle: main-street/wally-filling-station
+    helen-crump: schoolhouse
+    clara-edwards: taylor-house
+    thelma-lou: taylor-house
+    ernest-t-bass: mt-pilot
+    mayor-stoner: main-street/courthouse
+
+  # Active needs — character need levels (0.0-1.0)
+  character_needs:
+    andy-taylor: { hunger: 0.3, energy: 0.5, social: 0.8, fun: 0.7, comfort: 0.8 }
+    barney-fife: { hunger: 0.4, energy: 0.4, social: 0.8, fun: 0.5, comfort: 0.8 }
+    aunt-bee: { hunger: 0.2, energy: 0.5, social: 0.7, fun: 0.5, comfort: 0.8 }
+    opie-taylor: { hunger: 0.3, energy: 0.6, social: 0.6, fun: 0.7, comfort: 0.7 }
+    floyd-lawson: { hunger: 0.3, energy: 0.3, social: 0.9, fun: 0.6, comfort: 0.7 }
+    otis-campbell: { hunger: 0.5, energy: 0.5, social: 0.4, fun: 0.3, comfort: 0.8 }
+    mayor-stoner: { hunger: 0.3, energy: 0.4, social: 0.6, fun: 0.3, comfort: 0.5 }
+
+  # Relationship deltas — changes from baseline
+  relationship_changes:
+    - { from: barney-fife, to: floyd-lawson, dimension: trust, delta: -0.1, reason: "Floyd's 'stranger' intel was Goober in a hat" }
+    - { from: aunt-bee, to: clara-edwards, dimension: rivalry, delta: +0.1, reason: "Clara conceded on September pickles but will return" }
+    - { from: floyd-lawson, to: goober-pyle, dimension: familiarity, delta: +0.1, reason: "Floyd now knows what Goober looks like in a fedora" }
+    - { from: barney-fife, to: mayor-stoner, dimension: resentment, delta: +0.2, reason: "Mayor dismissed sumo proposal as 'diaper wrestling'" }
+    - { from: barney-fife, to: andy-taylor, dimension: trust, delta: +0.1, reason: "Andy went to bat for Barney with the mayor" }
+    - { from: mayor-stoner, to: andy-taylor, dimension: deference, delta: +0.1, reason: "Andy reframed sumo into a political win" }
+
+  # Narrative flags — story state
+  flags:
+    boot_time: "2026-02-10T08:00:00"
+    session: 1
+    episodes_completed: 3
+    last_episode: "The Checklist"
+    goober_has_fedora: true
+    barney_crime_wave_story: true
+    aunt_bee_september_pickles_revealed: true
+    barney_sumo_book: in_desk_drawer
+    barney_sumo_proposal: rejected_then_reframed
+    commissioner_visit_thursday: true
+    commissioner_visit_is_tomorrow: true
+    barney_demonstration_approved: true
+    demonstration_time_limit: 20_minutes
+    demonstration_timed_at: 16_minutes_40_seconds
+    mayor_condition: no_sumo
+    barney_haircut_fresh: true
+    thelma_lou_phone_demo_role: true
+    goober_arrested_rehearsal_count: 3
+    barney_checklist_in_breast_pocket: true
+    squad_car_trunk_inspected: true
+  # Example: barney_has_bullet: true, otis_is_in_cell: false
+
+  # Session history
+  sessions:
+    total: 0
+    last_session: null
+    total_ticks: 0

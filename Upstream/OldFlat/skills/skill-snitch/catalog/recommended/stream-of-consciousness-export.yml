@@ -1,0 +1,60 @@
+# Catalog: stream-of-consciousness — RECOMMENDED (Deep Probe verified, conditional)
+# Zero executable code. Well-designed protocol spec with data leakage advisory.
+
+skill:
+  name: stream-of-consciousness
+  author: 247arjun
+  source: https://github.com/openclaw/skills/tree/main/skills/247arjun/stream-of-consciousness
+  ecosystem: clawhub
+  fetched: 2026-02-05
+  still_live: true
+
+trust:
+  tier: recommended
+  tags: [export, format, useful, reference, deep-probed, conditional]
+  scanned_by: skill-snitch Deep Probe v2.0
+  scan_date: 2026-02-06
+
+summary: |
+  Open-Token conversation export format. 2 files audited: SKILL.md
+  (11.6KB), _meta.json. ZERO executable code, ZERO network calls,
+  ZERO file I/O. Meticulously specified JSON/NDJSON schema for
+  conversation context export with redaction, integrity hashing,
+  subagent spans, truncation rules. Default redact=secrets masks
+  API keys, tokens, passwords. "DO NOT fabricate missing turns."
+  Complements cursor-mirror's export-markdown. Technically excellent.
+  
+  CONDITIONAL: The skill's purpose IS exporting full conversation
+  context, which includes system prompts and tool results. This is
+  a data leakage surface by design, not by accident.
+
+deep_probe:
+  files_audited: 2
+  executable_code: 0
+  network_calls: 0
+  file_io: 0
+
+  positive_security_features:
+    - "Default redact=secrets masks API keys, auth tokens, passwords, session cookies, private keys"
+    - "Explicit rule: DO NOT fabricate missing turns"
+    - "Integrity hashing (SHA-256) for export verification"
+    - "Truncation rules with clear byte limits"
+
+  data_leakage_surface:
+    - what_gets_exported: "system prompts, developer instructions, tool call args/results, user messages"
+    - system_prompt_exposure: "Exports role=system events with visibility=internal — exposes protected instructions"
+    - tool_output_exposure: "Tool results (file contents, API responses, DB queries) appear in export"
+    - reasoning_trace_extraction: "include=include-internal + internal=full attempts to access hidden thinking blocks"
+    - redaction_bypass: "redact=none disables all credential masking"
+    - reconnaissance_utility: "Could reveal what system prompts, tools, and configurations are active"
+
+  conditions_for_approval:
+    - "Deployment environments should not have sensitive data in system prompts"
+    - "Consider platform-level restrictions on redact=none"
+    - "Consider restricting include=include-internal with internal=full"
+    - "Document that this skill exports system prompts and tool outputs"
+
+  comparison_with_moollm:
+    cursor_mirror: "cursor-mirror's export-markdown does the same thing but for Cursor IDE transcripts"
+    trekify: "trekify would mask sensitive data before export — complementary"
+    session_log: "Open-Token format could standardize session-log output"

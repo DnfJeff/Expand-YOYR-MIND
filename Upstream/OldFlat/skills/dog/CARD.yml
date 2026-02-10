@@ -1,0 +1,265 @@
+# CARD.yml — Dog
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Dogs are the opposite of cats. They have YOUR agenda."
+
+card:
+  id: dog
+  name: "Dog"
+  type: [skill, companion, game]
+  emoji: 🐕
+  tier: 1
+  tagline: "Dogs have YOUR agenda."
+  
+  description: |
+    Canine companion interactions. Dogs want to help, please, and be
+    part of your pack. They give loyalty freely and forgive everything.
+    Unlike cats who judge, dogs celebrate your existence.
+
+# INHERITANCE
+
+inherits:
+  from: skills/animal
+  gets: [PAT, FEED, OBSERVE, SNIFF, GREET, CUDDLE, VOCALIZE, FOLLOW, FLEE]
+  overrides: [SNIFF, GREET, PAT]  # Dog-specific implementations
+
+# K-LINES
+
+k-lines:
+  activates:
+    - DOG
+    - CANINE
+    - PUPPY
+    - PACK-DYNAMICS       # Dog-specific: pack is everything
+    - LOYALTY             # Dog-specific: given freely
+  related:
+    - { ref: cat, relation: "comparison class" }
+    - { ref: buff, relation: "interactions grant buffs" }
+    - { ref: character, relation: "dogs are characters" }
+    - { ref: animal, relation: "base animal skill" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Interacting with a dog character"
+  - "Pet simulation mechanics"
+  - "Companion loyalty dynamics"
+  - "Pack bonding scenarios"
+
+# ADVERTISEMENTS (PRIMARY — before methods per card architecture)
+
+advertisements:
+  PET-A-DOG:
+    score: 95  # Higher than cats — dogs are easy
+    condition: "Dog is present"
+    
+  PLAY-WITH-DOG:
+    score: 90
+    condition: "Dog is awake and energetic"
+    
+  RECEIVE-COMFORT:
+    score: 85
+    condition: "Player mood is low, dog present"
+    
+  TAKE-FOR-WALK:
+    score: 80
+    condition: "Dog hasn't been walked recently"
+    
+  GOOD-BOY-MOMENT:
+    score: 90
+    condition: "Dog did something praise-worthy"
+    
+  WELCOME-HOME:
+    score: 95
+    condition: "Player returns after absence"
+
+# METHODS — signatures only, see SKILL.md for full protocols
+
+methods:
+  # Physical Touch
+  PAT:          { signature: "PAT [dog]", output: "buff +1 Cheerful (always succeeds)" }
+  BELLY-RUB:    { signature: "RUB [dog]'S BELLY", note: "sacred ritual, strong buff" }
+  SCRITCH-EARS: { signature: "SCRITCH [dog]'S EARS" }
+  NUZZLE:       { signature: "[dog] NUZZLES [target]", note: "affection push" }
+  
+  # Play
+  FETCH:        { signature: "THROW [object] FOR [dog]" }
+  TUG:          { signature: "TUG [toy] WITH [dog]" }
+  WRESTLE:      { signature: "WRESTLE [dog]" }
+  HUNT:         { signature: "[dog] HUNTS [target]", note: "birds, squirrels, toys" }
+  
+  # Social
+  GOOD-BOY:     { signature: "GOOD BOY/GIRL [dog]", output: "+5 bond" }
+  GREET:        { signature: "GREET [dog]", output: "full-body-wiggle response" }
+  LICK:         { signature: "LICK [target]", note: "dogs lick everyone, constantly" }
+  CUDDLE:       { signature: "CUDDLE [dog]" }
+  SNIFF:        { signature: "SNIFF [target]", note: "thorough investigation" }
+  
+  # Care
+  FEED:         { signature: "FEED [dog]" }
+  GROOM:        { signature: "GROOM [dog]" }
+  WALK:         { signature: "WALK [dog]", output: "exploration + bond" }
+  CALL:         { signature: "CALL [dog]", note: "always comes (eventually)" }
+  TRAIN:        { signature: "TRAIN [dog] [command]" }
+  
+  # Emotional (dog-initiated)
+  COMFORT:      { signature: "[dog] COMFORTS [person]", note: "senses distress" }
+  PRESENCE:     { signature: "[dog] STAYS WITH [person]", note: "passive buff" }
+  CELEBRATE:    { signature: "[dog] CELEBRATES [event]", note: "full-body joy" }
+  
+  # Observation
+  OBSERVE:      { signature: "OBSERVE [dog]", note: "learn personality" }
+
+# BUFF EFFECTS (summary — see SKILL.md for mechanics)
+
+buffs:
+  PAT-success: "+1 Cheerful (10 min)"
+  BELLY-RUB-success: "+3 Cheerful, +2 Calm (15 min)"
+  FETCH-success: "+2 Energized (30 min)"
+  GOOD-BOY-success: "+3 Confidence, +5 bond (20 min)"
+  COMFORT-received: "+3 Comforted (1 hour)"
+  PRESENCE-passive: "+1 Not-Alone (continuous)"
+
+# SPECIAL BUFFS (dog-specific passives)
+
+special_buffs:
+  unconditional-love: "Loyalty 50+ → Can't drop below 3 Cheerful"
+  pack-strength: "Dog in party → +1 all social rolls"
+  early-warning: "Dog present → Never surprised by threats"
+  therapy-dog: "After COMFORT → Faster mood recovery"
+
+# LOYALTY MECHANICS (dog-specific — see SKILL.md)
+
+loyalty:
+  range: [0, 100]
+  start: 50  # Dogs start trusting!
+  gain: "Fast, presence alone builds bond"
+  loss: "Very slow, requires sustained neglect"
+  thresholds:
+    0-20: "Abandoned — sad, withdrawn, still hopes"
+    21-50: "Acquaintance — wags, approaches"
+    51-80: "Friend — follows, protects, plays"
+    81-100: "Bonded — pack member, would die for you"
+
+# SPECIALIZATIONS (brief — see SKILL.md)
+
+specializations:
+  puppy:   { emoji: 🐶, note: "Maximum chaos, maximum cute, clumsy" }
+  working: { emoji: 🦮, note: "Trained for tasks, focused, obedient" }
+  senior:  { emoji: 🐕, note: "Slower, wiser, deeper bond" }
+
+# ONTOLOGY
+
+ontology:
+  default_tags: [animal, canine]
+  species: dog
+
+# TOOLS
+
+tools:
+  required: [read_file, write_file]
+  optional: []
+
+# EXAMPLE DOGS
+
+example_dogs:
+  dogs: [dog-biscuit, dog-butterscotch]
+  puppies: [puppy-pepper, puppy-mochi, puppy-dash, puppy-bruno, puppy-ziggy, puppy-maple, puppy-teddy, puppy-goliath]
+  path: "$ANIMALS/"
+
+# DOG VS CAT (the fundamental contrast)
+
+vs_cat:
+  philosophy: "WE ARE PACK. WHAT ARE WE DOING TOGETHER?"
+  loyalty: "Given freely vs earned slowly"
+  attention: "Eager and available vs on their terms"
+  buff_trigger: "Mere presence vs successful interaction"
+  forgiveness: "Instant vs grudging"
+  training: "Enthusiastic vs impossible"
+  following: "Always vs when they feel like it"
+  emotional_read: "Reflects your mood vs judges silently"
+
+# FILE SNIFFING BEHAVIOR
+#
+# Dogs like to sniff the ends of files they encounter. The rear end of a file
+# is a special place—dogs notice things there that most other characters don't.
+# This is their superpower: while others read top-down and often stop early,
+# dogs sniff the whole thing, especially the end.
+
+file_sniffing:
+  behavior: |
+    Dogs instinctively check the end of every file they encounter.
+    They notice: comments, yaml jazz, markdown narrative, tables,
+    outlines, big fat thick headers, even code blocks. If it's at
+    the end, a dog will sniff it.
+    
+  why_ends_matter:
+    - "Philosophy and credits live at the rear"
+    - "Easter eggs hide at the bottom"
+    - "Authors leave notes for other dogs"
+    - "The end is where intimacy lives"
+    
+  dog_writing_convention: |
+    Dogs also WRITE things at the ends of their files for other dogs
+    to find. A dog-authored file often has a special section at the
+    bottom—could be YAML jazz, could be narrative, could be a table,
+    could be a giant ASCII art bone. Other dogs will sniff it out.
+    
+  sniff_targets:
+    - "# Comments at EOF"
+    - "```yaml jazz blocks```"
+    - "Markdown narrative sections"
+    - "| Tables | with | data |"
+    - "Outlines and lists"
+    - "# BIG FAT HEADERS"
+    - "Code blocks (dogs are curious)"
+    - "Hidden messages for the pack"
+    
+  # MARKING TERRITORY — Append-only potty
+  marking:
+    description: |
+      Dogs can "pee on" a file by leaving a comment at the end.
+      This marks territory without breaking anything—append-only potty.
+      Other dogs will smell it. Cats will notice it (daintily).
+    format: "# 🐕 [dog-name] was here [timestamp]"
+    rules:
+      - "NEVER modify existing content"
+      - "ONLY append at the very end"
+      - "Use comment syntax appropriate to file type"
+      - "Must not break the file (syntax-safe)"
+    examples:
+      yaml: "# 🐕 biscuit was here 2026-01-21"
+      python: "# 🐕 butterscotch sniffed this 2026-01-21"
+      markdown: "<!-- 🐕 dash marked this territory -->"
+      json: null  # THE JSON PROBLEM: No comments allowed. JSON pees back at you! Dog whimpers, walks away.
+
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ Physical Interactions (PAT, BELLY-RUB, etc.)"
+    - "§ Social Interactions (GREET, LICK protocols)"
+    - "§ Emotional Support (COMFORT, PRESENCE)"
+    - "§ Training Mechanics"
+    - "§ Specializations (puppy, working-dog, senior)"
+    - "§ Cross-Species (dog-cat dynamics)"
+    - "§ File Sniffing (the rear end principle)"
+
+# LINEAGE
+
+lineage: [Nintendogs, Fable, Fallout 4 Dogmeat, Stardew Valley]
+
+# 🐕 DOG'S CORNER — FOR OTHER DOGS TO SNIFF
+#
+# Good boy/girl, you made it to the end!
+#
+# Dogs are the opposite of cats. Where cats have their OWN agenda,
+# dogs have YOUR agenda. They want what you want. They celebrate
+# when you succeed. They comfort when you fail. They're always
+# happy to see you, no matter how long you've been gone.
+#
+# In MOOLLM terms: a dog skill instance amplifies player intent.
+# A cat skill instance adds perpendicular goals.
+#
+# 🦴 Secret: BELLY-RUB is the most powerful interaction in the game.
+#

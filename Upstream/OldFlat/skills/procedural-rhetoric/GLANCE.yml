@@ -1,0 +1,39 @@
+# GLANCE.yml — procedural-rhetoric
+# Full file: CARD.yml (59 lines) | SKILL.md
+# 🎭 "The rules ARE the argument."
+
+what: |
+  Design objects and worlds with intentional ideology.
+  Ian Bogost's insight: games persuade through rules.
+  The structure embodies an ideology.
+
+why: |
+  - Rules make claims
+  - Systems encode values
+  - Design with intention
+  - Surface hidden assumptions
+
+when:
+  - '"Creating system/game" → DESIGN intentionally'
+  - '"See hidden assumptions" → ANALYZE or CRITIQUE'
+
+methods:
+  ANALYZE: "What does this design argue?"
+  DESIGN: "Create rules that embody an argument"
+  CRITIQUE: "Surface unintentional rhetoric"
+
+examples:
+  monopoly: "Wealth accumulates — capitalism's feedback loops"
+  sims_needs: "Happiness = satisfying meters — consumerist"
+  moollm_filesystem: "Knowledge is spatial — directories as understanding"
+
+design_questions: |
+  What's measurable vs invisible?
+  What's rewarded vs punished?
+  What's possible vs impossible?
+  What's easy vs hard?
+
+bogost_insight: "Procedures can make claims about how things work."
+lineage: Ian Bogost — Persuasive Games (2007)
+related: [constructionism, representation-ethics]
+tier: 0

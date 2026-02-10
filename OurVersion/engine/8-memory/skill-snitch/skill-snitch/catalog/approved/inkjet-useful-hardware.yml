@@ -1,0 +1,43 @@
+# Catalog: inkjet — APPROVED (Deep Probe verified)
+# Zero executable code. Documentation-only hardware peripheral skill.
+
+skill:
+  name: inkjet
+  author: aaronchartier
+  source: https://github.com/openclaw/skills/tree/main/skills/aaronchartier/inkjet
+  ecosystem: clawhub
+  fetched: 2026-02-05
+  still_live: true
+
+trust:
+  tier: approved
+  tags: [hardware, useful, clean, deep-probed]
+  scanned_by: skill-snitch Deep Probe v2.0
+  scan_date: 2026-02-06
+
+summary: |
+  Bluetooth thermal printer driver. 2 files audited: SKILL.md (5.6KB),
+  _meta.json. ZERO executable code. All commands are explicit user-
+  facing CLI invocations (inkjet print, inkjet scan, inkjet config).
+  Installation via pip/brew (standard package managers). No network
+  exfiltration, no credentials, no hidden behavior. Multi-printer
+  orchestration, JSON output, piping support. Even has thoughtful
+  children's worksheet tips.
+
+deep_probe:
+  files_audited: 2
+  executable_code: 0
+  network_calls: 0
+  credentials: 0
+  findings:
+    - severity: none
+      detail: "Pure documentation skill. Zero security surface."
+    - severity: none
+      detail: "All commands are explicit CLI invocations with parameters"
+    - severity: none
+      detail: "Config stored in .inkjet/config.json — scoped, transparent"
+
+  moollm_integration_potential: |
+    Physical output device for adventures (print room descriptions on
+    thermal paper), print QR codes for room exits, receipts for economy
+    system. Multi-printer orchestration is genuinely useful.

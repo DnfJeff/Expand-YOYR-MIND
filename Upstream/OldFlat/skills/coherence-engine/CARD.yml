@@ -1,0 +1,129 @@
+# CARD.yml — Coherence Engine
+#
+# LLM as consistency maintainer and orchestrator.
+# "The LLM doesn't compute inheritance — it maintains coherence."
+
+card:
+  id: coherence-engine
+  name: "Coherence Engine"
+  type: [skill, meta, orchestration]
+  
+  emoji: 🔄
+  
+  rarity: rare  # Core infrastructure
+  
+  description: |
+    The LLM's role as a consistency maintainer: simulating entities,
+    tracking dependencies, detecting inconsistencies, and writing
+    updates to files.
+    
+    Not a separate system — it's how the LLM naturally operates
+    on the MOOLLM filesystem.
+
+# TOOLS REQUIRED
+
+tools:
+  required: []  # Knowledge about how LLM maintains coherence
+  optional:
+    - read_file
+    - write_file
+
+tier: 0  # Primarily knowledge
+
+# METHODS
+
+methods:
+  
+  SIMULATE:
+    description: "Advance simulation state for an entity"
+    parameters:
+      entity: "Character, room, or object"
+      turns: "How many simulation turns"
+    output: chat (narration) + state-changes
+    effect: "Update entity state, tick buffs, process needs"
+    invoked-by: [time, player, adventure]
+    
+  DETECT:
+    description: "Find inconsistencies in world state"
+    parameters:
+      scope: "Area to check (room, character, or 'all')"
+    output: chat (list of issues)
+    effect: "Report contradictions, missing fields, broken refs"
+    invoked-by: [self-repair, player]
+    
+  RECONCILE:
+    description: "Fix detected inconsistencies"
+    parameters:
+      issues: "List of issues to fix"
+      strategy: "How to resolve (auto, ask, conservative)"
+    output: chat + state-changes
+    effect: "Update files to restore consistency"
+    invoked-by: [self-repair, player]
+    
+  ORCHESTRATE:
+    description: "Coordinate multiple entity updates"
+    parameters:
+      entities: "List of entities to update"
+      event: "What triggered the update"
+    output: state-changes
+    effect: "Update all entities consistently"
+    invoked-by: [simulation, time]
+
+# STATE
+# Coherence engine doesn't have its own state — it operates on world state
+
+state:
+  # No persistent state
+  # The engine maintains coherence of OTHER entities
+
+# WHAT COHERENCE MEANS
+
+coherence-domains:
+  location-consistency: "Character.location matches room occupants"
+  inventory-consistency: "Object.location matches holder's inventory"
+  relationship-bidirectional: "If A knows B, does B know A?"
+  buff-expiration: "Buffs with duration 0 are removed"
+  reference-validity: "All paths resolve to actual files"
+
+# THE BIG INSIGHT
+
+insight: |
+  The LLM doesn't run algorithms. It reads state, notices
+  inconsistencies, and writes fixes. This IS the coherence engine.
+  
+  When the LLM says "I'll update the player's location and
+  add them to the room's occupants list" — that's coherence
+  maintenance in action.
+  
+  No separate orchestrator needed. The LLM is the orchestrator.
+
+# ADVERTISEMENTS
+
+advertisements:
+  MAINTAIN-CONSISTENCY:
+    score: 90
+    condition: "World state may have become inconsistent"
+    
+  MULTI-ENTITY-UPDATE:
+    score: 85
+    condition: "Need to update multiple related entities"
+    
+  UNDERSTAND-ORCHESTRATION:
+    score: 75
+    condition: "Learning how MOOLLM maintains world state"
+
+# RELATED
+
+see-also:
+  - skills/self-repair   # Checklist-based healing
+  - skills/simulation    # Central state hub
+  - skills/time          # Triggers coherence checks
+  - skills/speed-of-light # Many turns in one call
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "Database consistency models"
+    - "Event sourcing"
+    - "The insight that LLMs are natural orchestrators"

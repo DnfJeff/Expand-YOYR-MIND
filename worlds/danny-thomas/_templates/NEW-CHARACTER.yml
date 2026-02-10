@@ -1,0 +1,205 @@
+# Copy this file into a new character directory.
+# Example: mkdir characters/my-character
+#          copy _templates/NEW-CHARACTER.yml characters/my-character/CHARACTER.yml
+#
+# A character directory needs 2 files:
+#   CHARACTER.yml — full definition (this file)
+#   GLANCE.yml   — 10-line summary (see NEW-GLANCE-CHARACTER.yml)
+
+# --- A comment capturing the character's essence ---
+# One to three lines. Who is this person in their bones?
+# Example: "The gravitational center. Nothing orbits without him."
+
+# --- Inheritance ---
+inherits: []
+  # Abstract archetypes this character inherits from.
+  # Look in characters/abstract/ for available prototypes.
+  # Examples:
+  #   - characters/abstract/small-town-lawman
+  #   - characters/abstract/single-father
+  # The prototype supplies default traits; you override here.
+
+ontology:
+  tags: []
+  # Searchable tags. Examples:
+  #   [protagonist, lawman, father, musician, fisherman]
+  species: human
+  protocol: null
+  # protocol is null for fictional characters.
+
+character:
+  name: ""
+  # Full display name. "Andy Taylor"
+
+  id: ""
+  # Unique id, kebab-case. "andy-taylor"
+  # Used for references in relationships, locations, guards.
+
+  type: npc
+  # One of:
+  #   npc      — LLM-controlled character (most characters)
+  #   player   — Human-controlled (the user's avatar)
+  #   bot      — Runs on action queue, no LLM reasoning
+  #   agent    — LLM with its own goals (autonomous)
+
+  pronouns: ""
+  # he/him, she/her, they/them, etc.
+
+  emoji_identity: ""
+  # 5 emoji that capture who this person IS.
+  # Add a comment for each explaining the meaning.
+  # Example:
+  #   "🤠⭐🎸🐟👦"
+  #   # 🤠 Sheriff hat — the badge sits lightly
+  #   # ⭐ Authority he wears without wearing
+  #   # 🎸 Guitar on the porch — the real Andy
+  #   # 🐟 Myers Lake — where he solves by not solving
+  #   # 👦 Opie — his whole reason
+
+  tagline: ""
+  # One sentence that IS this character.
+  # Example: "The law in Mayberry is a man who listens."
+
+  role: ""
+  # Their social role. "Sheriff of Mayberry", "Barber"
+
+  home: ""
+  # Path to their character directory.
+  # Example: characters/andy-taylor/
+
+  location: ""
+  # Where they start. Path to a room directory.
+  # Example: main-street/courthouse/andys-office
+
+  physical_description: |
+    # 3-5 sentences. Present tense. Be visual.
+    # Body language, clothing, posture, distinguishing features.
+    # What does someone NOTICE about this person?
+
+  personality:
+    traits: []
+    # 3-7 personality traits. Examples:
+    #   [patient, wise, humble, playful, perceptive]
+    # Add a comment explaining how these traits manifest.
+
+  # --- The Sims Personality Model ---
+  # 5 axes, each 0-10. These drive ad selection.
+  sims_traits:
+    neat: 5        # 0=sloppy, 10=obsessively tidy
+    outgoing: 5    # 0=shy/solitary, 10=social butterfly
+    active: 5      # 0=sedentary, 10=can't sit still
+    playful: 5     # 0=deadly serious, 10=everything's a joke
+    nice: 5        # 0=mean-spirited, 10=saintly
+
+  # --- Mind Mirror (Leary Circumplex) ---
+  # 4 domains, each with 8 axes scored 0-7.
+  # This gives the LLM nuanced behavior guidance.
+  # Score meaning: 0=absent, 3-4=moderate, 7=defining trait.
+  mind_mirror:
+    bio_energy:
+      energetic: 4
+      enthusiastic: 4
+      cheerful: 4
+      easy_going: 4
+      calm: 4
+      cautious: 4
+      serious: 4
+      restless: 4
+    emotional:
+      forceful: 4
+      confident: 4
+      friendly: 4
+      assertive: 4
+      proud: 4
+      hostile: 0
+      docile: 4
+      timid: 4
+    mental:
+      creative: 4
+      well_informed: 4
+      logical: 4
+      imaginative: 4
+      conventional: 4
+      sensible: 4
+      practical: 4
+      uninhibited: 4
+    social:
+      worldly: 4
+      dominant: 4
+      sociable: 4
+      generous: 4
+      independent: 4
+      trusting: 4
+      cooperative: 4
+      reserved: 4
+
+  # --- Needs ---
+  # Sims-style needs, 0.0 to 1.0. Lower = more urgent.
+  # The engine uses these to evaluate which ads appeal.
+  needs:
+    hunger:
+      current: 0.7
+      decay_rate: moderate
+      # inner_voice: "What this character thinks when hungry"
+    energy:
+      current: 0.8
+      decay_rate: moderate
+    social:
+      current: 0.6
+      decay_rate: moderate
+    fun:
+      current: 0.5
+      decay_rate: moderate
+    hygiene:
+      current: 0.7
+      decay_rate: slow
+    comfort:
+      current: 0.7
+      decay_rate: slow
+    # Add custom needs for this character. Examples:
+    #   duty: { current: 0.6, decay_rate: slow }
+    #   creativity: { current: 0.5, decay_rate: fast }
+
+  # --- Relationships ---
+  relationships: {}
+    # Keyed by character ID. Examples:
+    #   barney-fife:
+    #     type: best_friend_and_deputy
+    #     strength: 0.9
+    #     dynamic: "Protects Barney from himself"
+    #   opie-taylor:
+    #     type: father_son
+    #     strength: 1.0
+    #     dynamic: "Everything Andy does is ultimately for Opie"
+
+  # --- Behavioral Patterns ---
+  behavioral_patterns:
+    conflict_style: ""
+    # How they handle disagreements. Examples:
+    #   empathetic_redirection, loud_confrontation,
+    #   passive_avoidance, diplomatic_negotiation
+    stress_response: ""
+    # What they do under pressure. Examples:
+    #   goes_fishing, yells_at_ceiling, gets_quiet,
+    #   makes_jokes, seeks_barney
+    humor_style: ""
+    # How they're funny. Examples:
+    #   dry_wit, physical_comedy, storytelling,
+    #   exaggerated_reactions, deadpan
+
+  # --- Voice ---
+  # How this character SOUNDS. Critical for dialogue.
+  voice:
+    accent: ""
+    # Regional speech. Examples: southern_rural, brooklyn, neutral
+    pace: ""
+    # Speaking speed. Examples: unhurried, rapid, measured
+    register: ""
+    # Formality. Examples: casual, formal, shifts_by_audience
+    vocabulary: ""
+    # Word choice. Examples: plain_spoken, educated, theatrical
+    speech_patterns: []
+    # Distinctive patterns. Examples:
+    #   - "Drops g's: talkin', fishin', thinkin'"
+    #   - "Uses 'Well now...' as a stalling phrase"
+    #   - "Addresses the ceiling when frustrated"

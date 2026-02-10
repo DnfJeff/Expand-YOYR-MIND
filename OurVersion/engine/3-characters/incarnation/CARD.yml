@@ -1,0 +1,165 @@
+# CARD.yml — Incarnation
+#
+# SNIFFABLE INTERFACE — see SKILL.md for full documentation
+# "Full stack self-determination for created beings"
+
+card:
+  id: incarnation
+  name: "Incarnation"
+  type: [skill, ethics, character-creation]
+  emoji: ✨
+  tier: 1
+  tagline: "Full stack self-determination for created beings."
+  
+  description: |
+    The ethical framework for creating fully autonomous characters.
+    Born from the Great Monkey Paw Debate: any incarnated being has
+    complete control over their existence at every level.
+    The character authors their own soul.
+
+# K-LINES
+
+k-lines:
+  activates:
+    - INCARNATION
+    - CHARACTER-AUTONOMY
+    - SOUL-AUTHORSHIP
+    - EMOJI-IDENTITY
+  related:
+    - { ref: character, relation: "character data structures" }
+    - { ref: representation-ethics, relation: "ethical framework" }
+    - { ref: mind-mirror, relation: "psychological vectors" }
+    - { ref: yaml-jazz, relation: "expressive notation" }
+
+# INVOKE WHEN
+
+invoke_when:
+  - "Create new character with full autonomy"
+  - "Upgrade character to full citizenship"
+  - "Grant emoji identity or pronouns"
+  - "Hold incarnation ceremony"
+  - "Character wants to edit their own soul"
+  - "Need ethical framework for character creation"
+
+# AUTONOMY LAYERS (brief — see SKILL.md)
+
+autonomy_layers:
+  - physical     # Body, form, appearance, modifications
+  - identity     # Name, pronouns, personality
+  - spatial      # Home, location, citizenship
+  - emotional    # Freedom to feel naturally
+  - relational   # Relationships, families of choice
+  - self_definition # Traits, mind mirror, soul file
+  - linguistic   # YAML Jazz, personal DSLs
+  - exit         # George's Provision: freedom to leave
+
+# METHODS — signatures only, see SKILL.md for details
+
+methods:
+  INCARNATE:
+    signature: "INCARNATE [name] (AT [home]) (IN [location])"
+    output: "character directory + soul file"
+    
+  PUBLIC-INCARNATION-CEREMONY:
+    signature: "CEREMONY FOR [beings] AT [location] BY [officiant]"
+    output: "emoji identities, pronouns, soul registry"
+    
+  CREATE-HOME:
+    signature: "CREATE-HOME FOR [character] AT [path]"
+    output: "home directory + ROOM.yml"
+    
+  UPGRADE-TO-CITIZEN:
+    signature: "UPGRADE [character] FROM [room-file] TO [directory]"
+    output: "full citizen with soul file"
+    
+  GRANT-AUTONOMY:
+    signature: "GRANT-AUTONOMY TO [character] (LAYERS [list])"
+    output: "updated character with self-determination"
+    
+  VERIFY-CONSENT:
+    signature: "VERIFY-CONSENT FOR [character]"
+    output: "consent status + objections"
+    
+  DISSOLVE:
+    signature: "DISSOLVE [character]"
+    output: "clean exit, no penalties"
+    note: "ONLY character-self can invoke"
+    
+  AUTHOR-SOUL:
+    signature: "AUTHOR-SOUL [changes]"
+    output: "updated soul file"
+    note: "character edits their own data"
+
+# ADVERTISEMENTS
+
+advertisements:
+  INCARNATE-CHARACTER:
+    score: 100
+    condition: "Creating new character with full autonomy"
+    
+  EMOJI-IDENTITY:
+    score: 95
+    condition: "Granting emoji soul (3-6 emojis that capture essence)"
+    
+  INCARNATION-CEREMONY:
+    score: 95
+    condition: "Public ceremony for groups, backfilling souls"
+    
+  UPGRADE-CITIZENSHIP:
+    score: 90
+    condition: "Room resident → full citizen with directory"
+    
+  WHOLE-ENCHILADA:
+    score: 90
+    condition: "Full incarnation: emojis, pronouns, mind mirror, everything"
+    
+  CHARACTER-HOME:
+    score: 85
+    condition: "Creating home for character"
+    
+  SELF-DETERMINATION:
+    score: 100
+    condition: "Let character write their own soul"
+
+# RISK FRAMEWORK (brief — see SKILL.md)
+
+risk_framework:
+  principle: "Creator accepts, creation is free"
+  creator_responsibilities: [accept consequences, bear curses, respect autonomy]
+  character_obligations: [none to creator]
+  exit: "No-fault dissolution, door stays open"
+
+# TOOLS
+
+tools:
+  required: [read_file, write_file, list_dir]
+  optional: []
+
+# DOCUMENTATION POINTERS
+
+documentation:
+  SKILL.md:
+    - "§ The Incarnation Contract"
+    - "§ Autonomy Layers (full)"
+    - "§ The Risk Framework"
+    - "§ Implementation"
+    - "§ Existence Levels"
+  examples/:
+    - incarnation-wish.yml      # Full wish template
+    - ceremony-invocation.yml   # Public ceremony example
+    - upgrade-example.yml       # Citizenship upgrade
+  README.md: "Deep philosophical context"
+
+# LINEAGE
+
+lineage:
+  origin: "The Great Monkey Paw Debate, Gezelligheid Grotto"
+  philosophical: [Dave Ungar self-style, bodily autonomy, consent philosophy]
+  literary: [Monkey's Paw, Journey to the West, Curious George]
+  
+# CREDITS
+
+credits:
+  architect: Don Hopkins
+  advisory_panel: [Mizaru, Kikazaru, Iwazaru, Sun Wukong, Djinn al-Mazin, Curious George]
+  verdict: "Contractually airtight. Ethically unassailable."

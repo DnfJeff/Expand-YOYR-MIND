@@ -1,0 +1,147 @@
+# CARD.yml — Code Review
+#
+# Systematic code analysis with evidence collection.
+# "Every PR deserves thoughtful review."
+
+card:
+  id: code-review
+  name: "Code Review"
+  type: [skill, development, quality]
+  
+  emoji: 🔍
+  
+  rarity: uncommon
+  
+  description: |
+    Systematic code analysis with structured evidence collection.
+    Reviews for correctness, style, security, and maintainability.
+    
+    Play this card when reviewing PRs, auditing code quality,
+    or doing security review.
+
+# TOOLS REQUIRED
+
+tools:
+  required:
+    - read_file   # Read code files
+    - grep        # Search for patterns
+  optional:
+    - run_terminal_cmd  # Run tests/linters
+
+tier: 2  # Read + execute
+
+# METHODS
+
+methods:
+  
+  START:
+    description: "Begin a new code review"
+    parameters:
+      target: "Files, directory, or PR to review"
+      focus: "What to look for (security, style, correctness)"
+    output: file (REVIEW.yml) + chat
+    effect: "Create review instance, scope the work"
+    invoked-by: [player, ci-system]
+    
+  EXAMINE:
+    description: "Review a specific file or section"
+    parameters:
+      file: "File to examine"
+      lines: "Optional line range"
+    output: chat (findings)
+    effect: "Read code, note issues and observations"
+    invoked-by: [player]
+    
+  COMMENT:
+    description: "Add a review comment"
+    parameters:
+      file: "File"
+      line: "Line number"
+      severity: "info, suggestion, warning, error"
+      message: "The comment"
+    output: state-change
+    effect: "Add to review.comments array"
+    invoked-by: [player]
+    
+  APPROVE:
+    description: "Approve the changes"
+    parameters:
+      notes: "Optional approval notes"
+    output: chat + state-change
+    effect: "Set review.status = approved"
+    invoked-by: [player]
+    
+  REQUEST-CHANGES:
+    description: "Request changes before approval"
+    parameters:
+      blocking: "List of must-fix issues"
+    output: chat + state-change
+    effect: "Set review.status = changes-requested"
+    invoked-by: [player]
+    
+  SUMMARIZE:
+    description: "Generate review summary"
+    parameters: {}
+    output: file (REVIEW.md) + chat
+    effect: "Compile all findings into readable summary"
+    invoked-by: [player]
+
+# STATE
+
+state:
+  review-schema:
+    target:
+      type: string
+      description: "What's being reviewed"
+    focus:
+      type: array
+      description: "Review focus areas"
+    status:
+      type: enum
+      values: [in-progress, approved, changes-requested, abandoned]
+    comments:
+      type: array
+      description: "List of review comments"
+    findings:
+      type: object
+      description: "Categorized findings"
+
+# REVIEW FOCUS AREAS
+
+focus-areas:
+  correctness: "Does the code do what it claims?"
+  security: "Are there vulnerabilities?"
+  style: "Does it follow conventions?"
+  maintainability: "Is it readable and changeable?"
+  performance: "Are there obvious inefficiencies?"
+  tests: "Is it adequately tested?"
+
+# ADVERTISEMENTS
+
+advertisements:
+  REVIEW-CODE:
+    score: 90
+    condition: "Have code changes that need review"
+    
+  SECURITY-AUDIT:
+    score: 85
+    condition: "Need security-focused code review"
+    
+  LEARN-CODEBASE:
+    score: 75
+    condition: "Want to understand unfamiliar code"
+
+# RELATED
+
+see-also:
+  - skills/debugging     # Finding problems
+  - skills/rubric        # Structured criteria
+  - skills/evaluator     # Independent assessment
+  - skills/research-notebook  # Investigation patterns
+
+# CREDITS
+
+credits:
+  inspiration:
+    - "GitHub PR reviews"
+    - "Google Code Review guidelines"

@@ -1,0 +1,49 @@
+# Structured Plan
+# Track task decomposition and progress
+
+plan:
+  name: "{{ plan_name }}"
+  objective: "{{ objective }}"
+  status: "not_started"
+  created: "{{ created_date }}"
+
+success_criteria:
+{{ #each success_criteria }}
+  - "{{ this }}"
+{{ /each }}
+
+steps:
+{{ #each initial_steps }}
+  - id: {{ @index + 1 }}
+    name: "{{ name }}"
+    status: "pending"
+    depends_on: {{ depends_on | default [] }}
+    notes: ""
+    outcome: ""
+{{ /each }}
+  # Add more steps as needed:
+  # - id: N
+  #   name: "Step description"
+  #   status: "pending"
+  #   depends_on: []
+  #   notes: ""
+  #   outcome: ""
+
+blockers: []
+  # - step_id: N
+  #   description: "What's blocking"
+  #   since: "timestamp"
+
+revisions: []
+  # - date: "timestamp"
+  #   change: "What changed"
+  #   reason: "Why"
+
+notes: |
+  Add general plan notes here.
+
+statistics:
+  total_steps: {{ initial_steps.length | default 0 }}
+  completed: 0
+  in_progress: 0
+  blocked: 0

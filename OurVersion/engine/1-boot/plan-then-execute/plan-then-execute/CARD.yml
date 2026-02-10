@@ -1,0 +1,68 @@
+# CARD.yml — Plan Then Execute
+#
+# Frozen plans with human approval gates.
+# "Plan first. Get approval. Then execute without deviation."
+
+card:
+  id: plan-then-execute
+  name: "Plan Then Execute"
+  type: [skill, security, workflow]
+  emoji: 📋
+  rarity: uncommon
+  
+  description: |
+    Two-phase execution: generate plan, freeze it, get human
+    approval, execute exactly as planned. Prevents tool outputs
+    from altering later actions. Security through separation.
+
+tools:
+  required: [read_file, write_file]
+  optional: [run_terminal_cmd]
+tier: 2
+
+methods:
+  PLAN:
+    description: "Generate execution plan"
+    parameters: { goal: "What to achieve", constraints: "Limits" }
+    output: file (PLAN.yml)
+    invoked-by: [player]
+    
+  REVIEW:
+    description: "Human reviews frozen plan"
+    parameters: { plan: "Which plan" }
+    output: chat
+    invoked-by: [player]
+    
+  APPROVE:
+    description: "Approve plan for execution"
+    parameters: { plan: "Which plan" }
+    output: state-change
+    invoked-by: [player only]
+    
+  EXECUTE:
+    description: "Run approved plan exactly"
+    parameters: { plan: "Approved plan" }
+    output: chat + state-changes
+    invoked-by: [system after approval]
+    
+  ABORT:
+    description: "Stop execution"
+    parameters: { reason: "Why" }
+    output: chat + state-change
+    invoked-by: [player, system on error]
+
+state:
+  plan:
+    steps: { type: array }
+    status: { type: enum, values: [draft, frozen, approved, executing, complete, aborted] }
+    approval: { type: object, description: "Who approved, when" }
+
+advertisements:
+  SAFE-AUTOMATION:
+    score: 95
+    condition: "Multi-step task with untrusted data"
+  AUDIT-TRAIL:
+    score: 85
+    condition: "Need record of what was planned vs done"
+
+see-also: [skills/planning, skills/roberts-rules, skills/action-queue]
