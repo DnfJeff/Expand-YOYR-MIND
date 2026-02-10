@@ -4,13 +4,13 @@ Pandoc-based build pipeline for compiling **Eval Incarnate: A Builder's Curricul
 
 ## Files
 
-| File | Purpose |
-|------|---------|
-| `build-book.ps1` | PowerShell build script — runs Pandoc to produce EPUB/HTML |
-| `metadata.yml` | Book metadata (title, author, formatting options) |
-| `Foreword.md` | Foreword source |
-| `Introduction.md` | Introduction source |
-| `Part_1.md`–`Part_5.md` | Manuscript chapters |
+| File                    | Purpose                                                    |
+| ----------------------- | ---------------------------------------------------------- |
+| `build-book.ps1`        | PowerShell build script — runs Pandoc to produce EPUB/HTML |
+| `metadata.yml`          | Book metadata (title, author, formatting options)          |
+| `Foreword.md`           | Foreword source                                            |
+| `Introduction.md`       | Introduction source                                        |
+| `Part_1.md`–`Part_5.md` | Manuscript chapters                                        |
 
 ## Usage
 
